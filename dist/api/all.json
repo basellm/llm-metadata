@@ -9070,7 +9070,7 @@
           "input": 3,
           "output": 5
         },
-        "description": "DeepSeek-R1-0528 is an AI model provided by huggingface.",
+        "description": "DeepSeek-R1-0528 是一款强化学习（RL）驱动的推理模型，解决了模型中的重复性和可读性问题。在 RL 之前，DeepSeek-R1 引入了冷启动数据，进一步优化了推理性能。它在数学、代码和推理任务中与 OpenAI-o1 表现相当，并且通过精心设计的训练方法，提升了整体效果。",
         "id": "deepseek-ai/DeepSeek-R1-0528",
         "knowledge": "2025-05",
         "last_updated": "2025-05-28",
@@ -10929,6 +10929,46 @@
     },
     "name": "Morph",
     "npm": "@ai-sdk/openai-compatible"
+  },
+  "newapi": {
+    "api": "https://api.example.com",
+    "doc": "https://example.com/newapi/docs",
+    "models": {
+      "new-v0": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.1,
+          "output": 0.2
+        },
+        "description": "A placeholder model manually added via overrides.",
+        "extra": {
+          "note": "Defined both under provider.models and as a qualified key for highest priority overrides"
+        },
+        "id": "new-v0",
+        "knowledge": "2024-12",
+        "last_updated": "2025-01-01",
+        "limit": {
+          "context": 131072,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "New API new-v0",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-01-01",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "New API"
   },
   "openai": {
     "doc": "https://platform.openai.com/docs/models",
