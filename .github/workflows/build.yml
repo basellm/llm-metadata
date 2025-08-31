@@ -66,7 +66,23 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add dist
             DT=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-            git commit -m "📦 chore(dist): update static API [${DT}]"
+            
+            # 根据不同触发事件设置提交信息
+            if [ "${{ github.event_name }}" = "push" ]; then
+              TRIGGER_MSG="triggered by push to ${{ github.ref_name }}"
+            elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+              if [ "${{ inputs.force }}" = "true" ]; then
+                TRIGGER_MSG="triggered by manual dispatch (force rebuild)"
+              else
+                TRIGGER_MSG="triggered by manual dispatch"
+              fi
+            elif [ "${{ github.event_name }}" = "schedule" ]; then
+              TRIGGER_MSG="triggered by scheduled run"
+            else
+              TRIGGER_MSG="triggered by ${{ github.event_name }}"
+            fi
+            
+            git commit -m "📦 chore(dist): update static API - ${TRIGGER_MSG} [${DT}]"
             git push
           else
             echo "No changes to commit"
