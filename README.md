@@ -1,36 +1,63 @@
-## LLM Metadata
+# LLM Metadata
 
-轻量级的 LLM 元数据访问与集成接口，支持：
+> A lightweight static API for discovering and integrating LLM metadata. Live API: [basellm.github.io/llm-metadata](https://basellm.github.io/llm-metadata/)
 
-- 手动编辑仓库文件后，自动构建更新静态接口
-- 定时监测 `models.dev` 源数据，按“模型级开关”增量更新静态接口
+[中文文档](README.zh-CN.md) | English
 
-数据来源：[`https://models.dev/api.json`](https://models.dev/api.json)
+High-throughput friendly, static-by-default interface: rebuild on change; serve static JSON via GitHub Pages.
 
-### 快速开始
+Sources: [models.dev/api.json](https://models.dev/api.json) + basellm community contributions.
 
-1. 安装 Node.js 18+（内置 fetch）
-2. 克隆仓库后执行：
+## Live API
+
+- Base URL: `https://basellm.github.io/llm-metadata/`
+- Endpoints:
+  - `/api/index.json` — Providers and models summary
+  - `/api/all.json` — Complete models data (models.dev-like with descriptions/overrides applied)
+  - `/api/newapi-ratio_config-v1-base.json` — Price ratio of the New API family system
+  - `/api/manifest.json` — Build manifest and stats
+  - `/api/providers/{providerId}.json` — Single provider details
+  - `/api/models/{providerId}/{modelId}.json` — Single model metadata
+
+## Features
+
+- Static generation: only write outputs when content changed
+- Incremental updates with per-model policy
+- Deep-merge overrides from `overrides.json`
+- Descriptions with sensible defaults for missing ones
+- Safe filenames and cleanup of legacy invalid files
+
+## Quick Start
+
+Requirement: Node.js 18+ (with native `fetch`).
 
 ```bash
 npm run build
 ```
 
-生成的静态接口位于 `dist/api/`：
+Outputs: `dist/api/`
 
-- `dist/api/index.json`：模型与提供方摘要索引
-- `dist/api/providers/{providerId}.json`：单个提供方与其模型列表
-- `dist/api/models/{providerId}/{modelId}.json`：单个模型的细粒度元数据
-- `dist/api/manifest.json`：构建清单（源哈希、配置哈希、统计信息）
+Scripts:
 
-### 两种更新模式
+- `npm run build` — Build (no-op if nothing changes)
+- `npm run build:force` — Force rebuild
+- `npm run check` — Dry-run for change detection (CI)
+- `npm run clean` — Remove `.cache` and `dist`
 
-- 手动模式：直接修改 `data/overrides.json` 或 `data/policy.json` 等文件并推送到主分支，GitHub Actions 将自动构建并提交 `dist/` 的变更
-- 自动模式：工作流按计划抓取 [`https://models.dev/api.json`](https://models.dev/api.json)，仅对允许自动更新的模型写入增量更新；若最终无变化，将不产生提交
+## Update Modes
 
-### 模型级开关（自动/跳过）
+- Manual: edit `data/**` and push to main; CI builds and publishes
+- Automatic: scheduled fetch; incremental updates for models allowed by policy
 
-配置文件：`data/policy.json`
+GitHub Actions triggers:
+
+- `push` to `scripts/**`, `data/**`, etc.
+- `workflow_dispatch` manual run
+- `schedule` every 6 hours
+
+## Auto-update Policy
+
+Config: `data/policy.json` (default `auto=true`). Example:
 
 ```json
 {
@@ -45,17 +72,16 @@ npm run build
 }
 ```
 
-- 默认：`auto = true`
-- 如果某模型配置为 `auto = false`，则在自动模式下将保留其现有静态文件（不会被新抓取的数据覆盖）；首次构建仍会从源生成
+If a model sets `auto=false`, automatic builds will not overwrite its existing static file (first build still generates it).
 
-### 元数据覆盖（overrides）
+## Overrides
 
-配置文件：`data/overrides.json`
+Config: `data/overrides.json`
 
 ```json
 {
   "providers": {
-    "deepseek": { "displayName": "DeepSeek（自定义名称）" }
+    "deepseek": { "displayName": "DeepSeek (custom)" }
   },
   "models": {
     "deepseek/deepseek-reasoner": { "tags": ["reasoning", "math"] }
@@ -63,58 +89,45 @@ npm run build
 }
 ```
 
-覆盖策略为“深度合并”，不会移除原始字段，只会覆盖同名字段或追加对象属性。
+Deep-merge: original fields preserved unless explicitly overridden.
 
-### 模型描述（外部或手动）
+## Descriptions
 
-配置文件：`data/descriptions.json`
-
-支持两种格式：
+Config: `data/descriptions.json` (two formats):
 
 ```json
 {
   "models": {
-    "xai/grok-4": "描述文本（简写）",
-    "deepseek/deepseek-reasoner": { "description": "描述文本（对象写法）" }
+    "xai/grok-4": "Description text (short form)",
+    "deepseek/deepseek-reasoner": { "description": "Description text (object form)" }
   }
 }
 ```
 
-合并优先级：`descriptions.json` 写入 `description` 字段 → 再应用 `overrides.json`（若也包含 `description` 则以 overrides 为最终值）。
+Priority: default → `descriptions.json` → `overrides.json` (final).
 
-重复模型名策略：
+Ambiguity with duplicate `modelId` across providers: ignore short keys; use `providerId/modelId`. Warnings are written to `dist/api/manifest.json`.
 
-- 如果多个提供方存在相同 `modelId`，则简写键（仅写 `modelId`）将被忽略，避免歧义；请使用限定键 `providerId/modelId`
-- 若简写键只有全局唯一匹配时才会生效
-- 构建会将冲突信息写入 `dist/api/manifest.json.warnings` 并在日志中输出提醒
+## Pricing Ratios (New API family)
 
-### 常用脚本
+Endpoint: `/api/newapi-ratio_config-v1-base.json`
 
-- `npm run build`：抓取源并构建（如无变化则不改写文件）
-- `npm run build:force`：强制重建
-- `npm run check`：仅检查是否会产生输出变更（退出码可用于 CI 判断）
-- `npm run clean`：清理 `.cache` 与 `dist`
+- Price ratio for the New API family system, based on per-1M token prices:
 
-### GitHub Actions（自动与手动触发）
+- `model_ratio = input_price / 2` (baseline USD 2 per 1M tokens)
+- `cache_ratio = cache_read / input_price`
+- `completion_ratio = output / input_price`
 
-- Push 到主分支/修改 `data/**`、`scripts/**` 等文件会触发构建
-- `workflow_dispatch` 可手动触发
-- `schedule` 定时抓取源，若有变化则提交更新
+Only computed when required fields exist and are > 0.
 
-### 发布到 GitHub Pages
+## Deploy to GitHub Pages
 
-1. 在仓库 Settings → Pages：
-   - Source 选择 “GitHub Actions”
-2. 推送到主分支或手动运行 “Build static API” 工作流
-3. 工作流会：
-   - 构建 `dist/`
-   - 上传 Pages 工件并自动部署
-4. 访问地址：仓库 Pages 域名（例如 `https://<org>.github.io/<repo>/`）
-   - 接口路径示例：
-     - `/api/index.json`
-     - `/api/providers/xai.json`
-     - `/api/models/xai/grok-4.json`
+Settings → Pages → Source: “GitHub Actions”. The workflow will:
 
-### 许可
+1. Build `dist/`
+2. Upload Pages artifact and auto-deploy
+3. Live URL: [basellm.github.io/llm-metadata](https://basellm.github.io/llm-metadata/)
+
+## License
 
 MIT
