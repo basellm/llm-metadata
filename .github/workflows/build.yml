@@ -1,0 +1,62 @@
+name: Build static API
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'scripts/**'
+      - 'data/**'
+      - 'public/**'
+      - 'package.json'
+      - '.github/workflows/build.yml'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force rebuild (ignore auto flags)'
+        required: false
+        default: 'false'
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build (check changes)
+        id: check
+        run: |
+          npm run check || echo "CHANGED=$?" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Build (apply)
+        if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
+            npm run build:force
+          else
+            npm run build
+          fi
+
+      - name: Commit and push changes
+        if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add dist
+            git commit -m "chore(dist): update static API"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+

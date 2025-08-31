@@ -1,0 +1,18 @@
+{
+    "name": "llm-metadata",
+    "version": "0.1.0",
+    "private": true,
+    "description": "轻量级的 LLM 元数据访问与集成接口（静态构建，手动与自动两种模式）",
+    "license": "MIT",
+    "engines": {
+        "node": ">=18.17"
+    },
+    "scripts": {
+        "build": "node scripts/build.js",
+        "build:force": "node scripts/build.js --force",
+        "clean": "node -e \"require('fs').rmSync('.cache',{recursive:true,force:true});require('fs').rmSync('dist',{recursive:true,force:true});\"",
+        "check": "node scripts/build.js --check"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
