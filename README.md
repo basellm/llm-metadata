@@ -101,6 +101,20 @@ npm run build
 - `workflow_dispatch` 可手动触发
 - `schedule` 定时抓取源，若有变化则提交更新
 
+### 发布到 GitHub Pages
+
+1. 在仓库 Settings → Pages：
+   - Source 选择 “GitHub Actions”
+2. 推送到主分支或手动运行 “Build static API” 工作流
+3. 工作流会：
+   - 构建 `dist/`
+   - 上传 Pages 工件并自动部署
+4. 访问地址：仓库 Pages 域名（例如 `https://<org>.github.io/<repo>/`）
+   - 接口路径示例：
+     - `/api/index.json`
+     - `/api/providers/xai.json`
+     - `/api/models/xai/grok-4.json`
+
 ### 许可
 
 MIT
