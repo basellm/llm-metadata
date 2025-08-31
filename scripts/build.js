@@ -215,6 +215,40 @@ async function main() {
 
     if (writeJSONIfChanged(path.join(API_DIR, 'all.json'), allModelsData, { dryRun })) changes += 1;
 
+    // 生成价格换算接口
+    const priceConversionData = {
+        data: {
+            cache_ratio: {},
+            completion_ratio: {},
+            model_ratio: {}
+        },
+        message: "",
+        success: true
+    };
+
+    for (const [providerId, provider] of Object.entries(normalized.providers || {})) {
+        const models = provider.models || {};
+        for (const [modelId, modelData] of Object.entries(models)) {
+            const cost = modelData.cost;
+            if (cost && typeof cost.input === 'number' && cost.input > 0) {
+                // 模型倍率 = 输入价格 ÷ 2 (基准价格2美元/1M tokens)
+                priceConversionData.data.model_ratio[modelId] = cost.input / 2;
+
+                // 缓存倍率 = 缓存读取价格 ÷ 输入价格
+                if (typeof cost.cache_read === 'number' && cost.cache_read > 0) {
+                    priceConversionData.data.cache_ratio[modelId] = cost.cache_read / cost.input;
+                }
+
+                // 补全倍率 = 输出价格 ÷ 输入价格
+                if (typeof cost.output === 'number' && cost.output > 0) {
+                    priceConversionData.data.completion_ratio[modelId] = cost.output / cost.input;
+                }
+            }
+        }
+    }
+
+    if (writeJSONIfChanged(path.join(API_DIR, 'newapi-ratio_config-v1-base.json'), priceConversionData, { dryRun })) changes += 1;
+
     // 写 providers 与 models 详情，且支持 overrides 与 auto 策略
     for (const [providerId, provider] of Object.entries(normalized.providers || {})) {
         const safeProvider = sanitizeFileSegment(providerId);
