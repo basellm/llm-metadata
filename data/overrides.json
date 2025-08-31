@@ -1,4 +1,48 @@
 {
-    "providers": {},
-    "models": {}
+    "providers": {
+        "newapi": {
+            "name": "New API",
+            "doc": "https://example.com/newapi/docs",
+            "api": "https://api.example.com",
+            "models": {
+                "new-v0": {
+                    "id": "new-v0",
+                    "name": "New API new-v0",
+                    "release_date": "2025-01-01",
+                    "last_updated": "2025-01-01",
+                    "description": "A placeholder model manually added via overrides.",
+                    "attachment": false,
+                    "reasoning": false,
+                    "tool_call": true,
+                    "temperature": true,
+                    "open_weights": false,
+                    "knowledge": "2024-12",
+                    "limit": {
+                        "context": 131072,
+                        "output": 4096
+                    },
+                    "modalities": {
+                        "input": [
+                            "text"
+                        ],
+                        "output": [
+                            "text"
+                        ]
+                    },
+                    "cost": {
+                        "input": 0.1,
+                        "output": 0.2,
+                        "cache_read": 0.02
+                    }
+                }
+            }
+        }
+    },
+    "models": {
+        "newapi/new-v0": {
+            "extra": {
+                "note": "Defined both under provider.models and as a qualified key for highest priority overrides"
+            }
+        }
+    }
 }

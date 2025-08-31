@@ -145,6 +145,14 @@ async function main() {
     const descriptions = readJSONSafe(path.join(DATA_DIR, 'descriptions.json'), { models: {} });
 
     const normalized = mapSourceToNormalized(source);
+
+    // 注入 overrides 中新增的 provider/model（用于手动新增模型）
+    for (const [pid, pov] of Object.entries(overrides.providers || {})) {
+        if (!normalized.providers[pid]) {
+            normalized.providers[pid] = deepMerge({ models: {} }, pov);
+        }
+    }
+
     const { providerIndex, modelIndex } = buildIndexes(normalized);
 
     // 统计同名模型在不同 provider 下的出现次数，用于 descriptions 未限定键的歧义判断
