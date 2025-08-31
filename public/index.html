@@ -64,6 +64,34 @@
             display: none;
         }
 
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        th,
+        td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+
+        th {
+            background-color: #f8f8f8;
+            font-weight: 600;
+        }
+
+        td code {
+            background-color: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+
         @media only screen and (-webkit-min-device-pixel-ratio: 2),
         only screen and (min--moz-device-pixel-ratio: 2),
         only screen and (-o-min-device-pixel-ratio: 2/1),
@@ -88,15 +116,38 @@
             A lightweight static API for discovering and integrating LLM metadata.
         </p>
         <p>Endpoints:</p>
-        <div class="links">
-            <a href="./api/index.json">/api/index.json</a>
-            <a href="./api/manifest.json">/api/manifest.json</a>
-        </div>
-        <ul>
-            <li><code>/api/providers/{providerId}.json</code></li>
-            <li><code>/api/models/{providerId}/{modelId}.json</code></li>
-        </ul>
-        <p style="color:#999; font-size: 14px;">Source: <a href="https://models.dev/api.json">models.dev/api.json</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Path</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code><a href="./api/index.json">/api/index.json</a></code></td>
+                    <td>Providers and models summary</td>
+                </tr>
+                <tr>
+                    <td><code><a href="./api/all.json">/api/all.json</a></code></td>
+                    <td>Complete models data (like models.dev)</td>
+                </tr>
+                <tr>
+                    <td><code><a href="./api/manifest.json">/api/manifest.json</a></code></td>
+                    <td>Build manifest and stats</td>
+                </tr>
+                <tr>
+                    <td><code>/api/providers/{providerId}.json</code></td>
+                    <td>Single provider details</td>
+                </tr>
+                <tr>
+                    <td><code>/api/models/{providerId}/{modelId}.json</code></td>
+                    <td>Single model metadata</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="color:#999; font-size: 14px;">
+            Sources: <a href="https://models.dev/api.json">models.dev/api.json</a> + basellm community contributions
         </p>
         <a href="/" class="logo logo-img-1x">
             <img width="32" height="32" alt=""

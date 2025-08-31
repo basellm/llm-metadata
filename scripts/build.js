@@ -49,6 +49,11 @@ function applyOverrides(entity, override) {
     return deepMerge(entity, override);
 }
 
+function generateDefaultDescription(modelName, providerId) {
+    // 为没有描述的模型生成默认描述
+    return `${modelName} is an AI model provided by ${providerId}.`;
+}
+
 function mapSourceToNormalized(source) {
     // Expect a structure similar to models.dev api.json
     // Keep original keys but normalize slices we need
@@ -161,6 +166,55 @@ async function main() {
     // 写索引
     if (writeJSONIfChanged(path.join(API_DIR, 'index.json'), { providers: providerIndex, models: modelIndex }, { dryRun })) changes += 1;
 
+    // 写完整模型信息（类似 models.dev/api.json 格式）
+    const allModelsData = {};
+    for (const [providerId, provider] of Object.entries(normalized.providers || {})) {
+        const providerOut = applyOverrides(provider, overrides.providers?.[providerId]);
+        allModelsData[providerId] = { ...providerOut };
+
+        // 处理模型数据，应用 overrides 但保持原始结构
+        const processedModels = {};
+        const models = provider.models || {};
+        for (const [modelId, modelData] of Object.entries(models)) {
+            const key = modelKey(providerId, modelId);
+            let processed = modelData;
+
+            // 1) 确保所有模型都有 description 字段，先设置默认值
+            if (!processed.description) {
+                processed = deepMerge(processed, { description: generateDefaultDescription(processed.name || modelId, providerId) });
+            }
+
+            // 2) 应用描述覆盖
+            const descModelsMap = descriptions?.models || {};
+            const descQualified = descModelsMap[key];
+            if (descQualified !== undefined) {
+                const descText = typeof descQualified === 'string' ? descQualified : (descQualified && descQualified.description);
+                if (descText) {
+                    processed = deepMerge(processed, { description: descText });
+                }
+            } else {
+                const descUnqualified = descModelsMap[modelId];
+                if (descUnqualified !== undefined) {
+                    const count = modelNameCounts[modelId] || 0;
+                    if (count <= 1) {
+                        const descText = typeof descUnqualified === 'string' ? descUnqualified : (descUnqualified && descUnqualified.description);
+                        if (descText) {
+                            processed = deepMerge(processed, { description: descText });
+                        }
+                    }
+                }
+            }
+
+            // 应用 overrides
+            processed = applyOverrides(processed, overrides.models?.[key]);
+            processedModels[modelId] = processed;
+        }
+
+        allModelsData[providerId].models = processedModels;
+    }
+
+    if (writeJSONIfChanged(path.join(API_DIR, 'all.json'), allModelsData, { dryRun })) changes += 1;
+
     // 写 providers 与 models 详情，且支持 overrides 与 auto 策略
     for (const [providerId, provider] of Object.entries(normalized.providers || {})) {
         const safeProvider = sanitizeFileSegment(providerId);
@@ -182,7 +236,13 @@ async function main() {
             const existing = readJSONIfExists(existingPath);
 
             let next = modelData;
-            // 1) 外部描述源（若存在）
+
+            // 1) 确保所有模型都有 description 字段，先设置默认值
+            if (!next.description) {
+                next = deepMerge(next, { description: generateDefaultDescription(next.name || modelId, providerId) });
+            }
+
+            // 2) 外部描述源覆盖（若存在）
             const descModelsMap = descriptions?.models || {};
             // 优先使用限定键 provider/model
             let descText;
@@ -204,7 +264,7 @@ async function main() {
             if (descText) {
                 next = deepMerge(next, { description: descText });
             }
-            // 2) overrides.json 最高优先级
+            // 3) overrides.json 最高优先级
             next = applyOverrides(next, overrides.models?.[key]);
 
             if (!force && !allowAuto && existing) {
