@@ -450,7 +450,7 @@ This page displays comprehensive information about all LLM providers and models,
     - **Provider Count**: ${stats.providers}
     - **Model Count**: ${stats.models}
     - **Last Updated**: ${lastUpdated}
-\n+**Capabilities Legend**: 🧠 Reasoning &nbsp;&nbsp;🔧 Tools &nbsp;&nbsp;📎 Files &nbsp;&nbsp;🌡️ Temperature
+\n**Capabilities Legend**: 🧠 Reasoning &nbsp;&nbsp;🔧 Tools &nbsp;&nbsp;📎 Files &nbsp;&nbsp;🌡️ Temperature
 `;
 
   // Generate a Markdown table for each provider
