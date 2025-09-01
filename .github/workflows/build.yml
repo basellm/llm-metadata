@@ -16,6 +16,9 @@ on:
       - 'scripts/**'
       - 'data/**'
       - 'public/**'
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - 'requirements.txt'
       - 'package.json'
       - '.github/workflows/build.yml'
   workflow_dispatch:
@@ -43,13 +46,22 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install MkDocs and dependencies
+        run: |
+          pip install -r requirements.txt
+
       - name: Build (check changes)
         id: check
         run: |
           npm run check || echo "CHANGED=$?" >> $GITHUB_OUTPUT
         shell: bash
 
-      - name: Build (apply)
+      - name: Build API data
         if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
@@ -57,6 +69,11 @@ jobs:
           else
             npm run build
           fi
+
+      - name: Build MkDocs documentation
+        if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
+        run: |
+          npm run docs:build
 
       - name: Commit and push changes
         if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}

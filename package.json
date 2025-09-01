@@ -11,7 +11,11 @@
     "build": "node scripts/build.js",
     "build:force": "node scripts/build.js --force",
     "clean": "node -e \"require('fs').rmSync('.cache',{recursive:true,force:true});require('fs').rmSync('dist',{recursive:true,force:true});\"",
-    "check": "node scripts/build.js --check"
+    "check": "node scripts/build.js --check",
+    "docs:install": "pip install -r requirements.txt",
+    "docs:build": "mkdocs build --site-dir dist",
+    "docs:serve": "mkdocs serve",
+    "build:all": "npm run build && npm run docs:build"
   },
   "dependencies": {},
   "devDependencies": {}
