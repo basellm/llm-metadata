@@ -8,25 +8,6 @@
 
 数据来源：[models.dev/api.json](https://models.dev/api.json) + basellm 社区贡献。
 
-## 在线接口（Live API）
-
-- 基础地址：`https://basellm.github.io/llm-metadata/`
-- 端点：
-  - `/api/index.json`：提供方与模型摘要索引
-  - `/api/all.json`：完整模型数据聚合（等价于 models.dev 结构，已应用描述/覆写）
-  - `/api/newapi/ratio_config-v1-base.json`：New API 系统家族的价格倍率配置
-  - `/api/manifest.json`：构建清单与统计
-  - `/api/providers/{providerId}.json`：单个提供方详情
-  - `/api/models/{providerId}/{modelId}.json`：单个模型元数据
-
-## 功能特性
-
-- 静态构建：只在变化时输出，适配大流量静态托管
-- 增量更新：按模型级策略控制是否参与自动更新
-- 元数据覆写：深度合并 `overrides.json`
-- 模型描述：支持外部/手动描述，缺省自动生成默认描述
-- 文件名安全：跨平台文件名清洗与历史无效文件清理
-
 ## 快速开始
 
 要求：Node.js 18+（内置 `fetch`）
@@ -107,29 +88,3 @@ npm run build
 优先级：默认描述 → `descriptions.json` → `overrides.json`（最终）。
 
 重复 `modelId` 的歧义处理：多提供方同名时，简写键（仅 `modelId`）被忽略，请使用 `providerId/modelId`；警告会写入 `dist/api/manifest.json`。
-
-## 价格倍率（Pricing Ratios，New API 系统家族）
-
-端点：`/api/newapi/ratio_config-v1-base.json`
-
-用于 New API 系统家族的价格倍率，按每 1M tokens 价格换算：
-
-- `model_ratio = input_price / 2`（基准价 2 美元/1M）
-- `cache_ratio = cache_read / input_price`
-- `completion_ratio = output / input_price`
-
-仅当字段存在且 > 0 时生成对应倍率。
-
-## 发布到 GitHub Pages
-
-仓库 Settings → Pages 选择 “GitHub Actions”。工作流会：
-
-1. 构建 `dist/`
-2. 上传 Pages 工件并自动部署
-3. 访问地址：[basellm.github.io/llm-metadata](https://basellm.github.io/llm-metadata/)
-
-## 许可协议
-
-MIT
-
-

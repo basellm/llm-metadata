@@ -8,25 +8,6 @@ High-throughput friendly, static-by-default interface: rebuild on change; serve 
 
 Sources: [models.dev/api.json](https://models.dev/api.json) + basellm community contributions.
 
-## Live API
-
-- Base URL: `https://basellm.github.io/llm-metadata/`
-- Endpoints:
-  - `/api/index.json` — Providers and models summary
-  - `/api/all.json` — Complete models data (models.dev-like with descriptions/overrides applied)
-  - `/api/newapi/ratio_config-v1-base.json` — Price ratio of the New API family system
-  - `/api/manifest.json` — Build manifest and stats
-  - `/api/providers/{providerId}.json` — Single provider details
-  - `/api/models/{providerId}/{modelId}.json` — Single model metadata
-
-## Features
-
-- Static generation: only write outputs when content changed
-- Incremental updates with per-model policy
-- Deep-merge overrides from `overrides.json`
-- Descriptions with sensible defaults for missing ones
-- Safe filenames and cleanup of legacy invalid files
-
 ## Quick Start
 
 Requirement: Node.js 18+ (with native `fetch`).
@@ -107,27 +88,3 @@ Config: `data/descriptions.json` (two formats):
 Priority: default → `descriptions.json` → `overrides.json` (final).
 
 Ambiguity with duplicate `modelId` across providers: ignore short keys; use `providerId/modelId`. Warnings are written to `dist/api/manifest.json`.
-
-## Pricing Ratios (New API family)
-
-Endpoint: `/api/newapi/ratio_config-v1-base.json`
-
-- Price ratio for the New API family system, based on per-1M token prices:
-
-- `model_ratio = input_price / 2` (baseline USD 2 per 1M tokens)
-- `cache_ratio = cache_read / input_price`
-- `completion_ratio = output / input_price`
-
-Only computed when required fields exist and are > 0.
-
-## Deploy to GitHub Pages
-
-Settings → Pages → Source: “GitHub Actions”. The workflow will:
-
-1. Build `dist/`
-2. Upload Pages artifact and auto-deploy
-3. Live URL: [basellm.github.io/llm-metadata](https://basellm.github.io/llm-metadata/)
-
-## License
-
-MIT
