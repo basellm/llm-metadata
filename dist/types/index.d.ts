@@ -116,7 +116,7 @@ export interface NewApiModel {
     model_name: string;
     description: string;
     tags: string;
-    vendor_id: null;
+    vendor_name: string;
     endpoints: null;
     status: number;
     name_rule: number;

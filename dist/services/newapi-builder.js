@@ -81,7 +81,7 @@ export class NewApiBuilder {
                     model_name: modelId,
                     description: model.description || '',
                     tags: this.buildModelTags(model),
-                    vendor_id: null, // 由导入器通过名称映射填充
+                    vendor_name: provider.name || providerId,
                     endpoints: null,
                     status: 1,
                     name_rule: 0,
