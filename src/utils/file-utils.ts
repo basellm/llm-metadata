@@ -6,8 +6,8 @@ import {
   statSync,
   unlinkSync,
   writeFileSync,
-} from 'fs';
-import path, { extname, join } from 'path';
+} from 'node:fs';
+import path, { extname, join } from 'node:path';
 
 import { stableStringify } from './object-utils.js';
 

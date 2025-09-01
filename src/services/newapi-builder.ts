@@ -44,8 +44,9 @@ export class NewApiBuilder {
         if (tag) tagSet.add(String(tag).trim());
       }
     } else if (typeof model.tags === 'string') {
-      model.tags.split(/[;,\s]+/g).forEach((tag) => {
-        if (tag.trim()) tagSet.add(tag.trim());
+      model.tags.split(/[;,\s]+/g).forEach((tag: string) => {
+        const t = tag.trim();
+        if (t) tagSet.add(t);
       });
     }
 

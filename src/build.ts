@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { writeFileSync } from 'fs';
-import { join, resolve } from 'path';
+import { writeFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 
 import { DataLoader } from './services/data-loader.js';
 import { DataProcessor } from './services/data-processor.js';
@@ -36,7 +36,7 @@ class Builder {
   private readonly docsGenerator: DocumentationGenerator;
 
   constructor() {
-    this.ROOT = resolve(import.meta.url.replace('file://', ''), '../..');
+    this.ROOT = resolve(process.cwd());
     this.DIST_DIR = join(this.ROOT, 'dist');
     this.API_DIR = join(this.DIST_DIR, 'api');
     this.CACHE_DIR = join(this.ROOT, '.cache');

@@ -1,5 +1,5 @@
 /** 对象工具函数 */
-import { createHash } from 'crypto';
+import { createHash } from 'node:crypto';
 
 /** 深度合并对象 */
 export function deepMerge<T>(target: T, source: Partial<T>): T {
