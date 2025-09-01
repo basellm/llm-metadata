@@ -52,17 +52,12 @@ let filteredData = {};
 
 // 获取正确的 API 基础路径
 function getApiBasePath() {
-  // 获取当前页面的路径
-  const currentPath = window.location.pathname;
-  // 检测是否在子路径部署（如 /llm-metadata/）
-  const pathSegments = currentPath.split('/').filter(Boolean);
-  
-  // 如果在子路径部署，构建正确的基础路径
-  if (pathSegments.length > 0 && pathSegments[0] === 'llm-metadata') {
+  // 检测是否在 GitHub Pages 部署环境
+  if (window.location.hostname === 'basellm.github.io') {
     return '/llm-metadata/api';
   }
   
-  // 本地开发或根路径部署
+  // 本地开发环境
   return './api';
 }
 
