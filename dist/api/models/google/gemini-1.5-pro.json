@@ -1,12 +1,29 @@
 {
   "attachment": true,
-  "cost": {},
+  "cost": {
+    "cache_read": 0.3125,
+    "input": 1.25,
+    "output": 5
+  },
   "description": "Gemini 1.5 Pro is an AI model provided by google.",
   "id": "gemini-1.5-pro",
   "knowledge": "2024-04",
   "last_updated": "2024-02-15",
-  "limit": {},
-  "modalities": {},
+  "limit": {
+    "context": 1000000,
+    "output": 8192
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "audio",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
   "name": "Gemini 1.5 Pro",
   "open_weights": false,
   "reasoning": false,

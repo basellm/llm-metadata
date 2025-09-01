@@ -1,12 +1,28 @@
 {
   "attachment": true,
-  "cost": {},
+  "cost": {
+    "cache_read": 0.03,
+    "cache_write": 0.3,
+    "input": 0.25,
+    "output": 1.25
+  },
   "description": "Claude Haiku 3 is an AI model provided by vercel.",
   "id": "anthropic/claude-3-haiku",
   "knowledge": "2023-08-31",
   "last_updated": "2024-03-13",
-  "limit": {},
-  "modalities": {},
+  "limit": {
+    "context": 200000,
+    "output": 4096
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
   "name": "Claude Haiku 3",
   "open_weights": false,
   "reasoning": false,

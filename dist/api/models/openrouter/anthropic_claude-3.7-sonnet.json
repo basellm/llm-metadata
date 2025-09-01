@@ -1,12 +1,28 @@
 {
   "attachment": true,
-  "cost": {},
+  "cost": {
+    "cache_read": 1.5,
+    "cache_write": 18.75,
+    "input": 15,
+    "output": 75
+  },
   "description": "Claude Sonnet 3.7 is an AI model provided by openrouter.",
   "id": "anthropic/claude-3.7-sonnet",
   "knowledge": "2024-01",
   "last_updated": "2025-02-19",
-  "limit": {},
-  "modalities": {},
+  "limit": {
+    "context": 200000,
+    "output": 128000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
   "name": "Claude Sonnet 3.7",
   "open_weights": false,
   "reasoning": true,
