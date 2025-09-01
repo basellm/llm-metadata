@@ -15,7 +15,7 @@
     "docs:install": "pip install -r requirements.txt",
     "docs:build": "mkdocs build --site-dir dist",
     "docs:serve": "mkdocs serve",
-    "build:all": "npm run docs:build && npm run build"
+    "build:all": "node scripts/build.js --docs-md-only && npm run docs:build && node scripts/build.js --api-only"
   },
   "dependencies": {},
   "devDependencies": {}

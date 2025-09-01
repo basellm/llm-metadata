@@ -117,13 +117,17 @@ async function main() {
   const args = parseArgv(process.argv);
   const dryRun = !!args.check;
   const force = !!args.force;
+  const docsMdOnly = !!args['docs-md-only'] || !!args.docsMdOnly;
+  const apiOnly = !!args['api-only'] || !!args.apiOnly;
 
   ensureDirSync(CACHE_DIR);
-  ensureDirSync(DIST_DIR);
-  ensureDirSync(API_DIR);
   ensureDirSync(DATA_DIR);
-  // 拷贝 public 到 dist 根
-  copyDirSyncIfExists(path.join(ROOT, 'public'), DIST_DIR);
+  if (!docsMdOnly) {
+    ensureDirSync(DIST_DIR);
+    ensureDirSync(API_DIR);
+    // 拷贝 public 到 dist 根
+    copyDirSyncIfExists(path.join(ROOT, 'public'), DIST_DIR);
+  }
 
   const SOURCE_URL = 'https://models.dev/api.json';
   let source;
@@ -171,10 +175,10 @@ async function main() {
   const warnings = [];
 
   // 写索引
-  if (writeJSONIfChanged(path.join(API_DIR, 'index.json'), { providers: providerIndex, models: modelIndex }, { dryRun })) changes += 1;
+  if (!docsMdOnly && writeJSONIfChanged(path.join(API_DIR, 'index.json'), { providers: providerIndex, models: modelIndex }, { dryRun })) changes += 1;
 
   // 写单独的供应商信息接口
-  if (writeJSONIfChanged(path.join(API_DIR, 'providers.json'), { providers: providerIndex }, { dryRun })) changes += 1;
+  if (!docsMdOnly && writeJSONIfChanged(path.join(API_DIR, 'providers.json'), { providers: providerIndex }, { dryRun })) changes += 1;
 
   // 写完整模型信息（类似 models.dev/api.json 格式）
   const allModelsData = {};
@@ -223,7 +227,7 @@ async function main() {
     allModelsData[providerId].models = processedModels;
   }
 
-  if (writeJSONIfChanged(path.join(API_DIR, 'all.json'), allModelsData, { dryRun })) changes += 1;
+  if (!docsMdOnly && writeJSONIfChanged(path.join(API_DIR, 'all.json'), allModelsData, { dryRun })) changes += 1;
 
   // 生成价格换算接口
   const priceConversionData = {
@@ -257,14 +261,14 @@ async function main() {
     }
   }
 
-  if (writeJSONIfChanged(path.join(API_DIR, 'newapi-ratio_config-v1-base.json'), priceConversionData, { dryRun })) changes += 1;
+  if (!docsMdOnly && writeJSONIfChanged(path.join(API_DIR, 'newapi-ratio_config-v1-base.json'), priceConversionData, { dryRun })) changes += 1;
 
   // 写 providers 与 models 详情，且支持 overrides 与 auto 策略
   for (const [providerId, provider] of Object.entries(normalized.providers || {})) {
     const safeProvider = sanitizeFileSegment(providerId);
     const providerOut = applyOverrides(provider, overrides.providers?.[providerId]);
     const providerPath = path.join(API_DIR, 'providers', `${safeProvider}.json`);
-    if (writeJSONIfChanged(providerPath, providerOut, { dryRun })) changes += 1;
+    if (!docsMdOnly && writeJSONIfChanged(providerPath, providerOut, { dryRun })) changes += 1;
 
     const providerModelsDir = path.join(API_DIR, 'models', safeProvider);
     ensureDirSync(providerModelsDir);
@@ -316,7 +320,7 @@ async function main() {
         continue;
       }
 
-      if (writeJSONIfChanged(existingPath, next, { dryRun })) changes += 1;
+      if (!docsMdOnly && writeJSONIfChanged(existingPath, next, { dryRun })) changes += 1;
     }
   }
 
@@ -335,12 +339,14 @@ async function main() {
     manifest.warnings = warnings;
     for (const w of warnings) console.warn('[warn]', w);
   }
-  if (writeJSONIfChanged(path.join(API_DIR, 'manifest.json'), manifest, { dryRun })) changes += 1;
+  if (!docsMdOnly && writeJSONIfChanged(path.join(API_DIR, 'manifest.json'), manifest, { dryRun })) changes += 1;
 
-  // 生成数据浏览页面的 Markdown
-  const dataMarkdown = generateDataMarkdown(allModelsData, providerIndex, modelIndex, manifest);
-  const dataMarkdownPath = path.join(ROOT, 'docs', 'data.md');
-  if (writeMarkdownIfChanged(dataMarkdownPath, dataMarkdown, { dryRun })) changes += 1;
+  // 生成数据浏览页面的 Markdown（当未指定 api-only 时）
+  if (!apiOnly) {
+    const dataMarkdown = generateDataMarkdown(allModelsData, providerIndex, modelIndex, manifest);
+    const dataMarkdownPath = path.join(ROOT, 'docs', 'data.md');
+    if (writeMarkdownIfChanged(dataMarkdownPath, dataMarkdown, { dryRun })) changes += 1;
+  }
 
   if (dryRun) {
     if (changes > 0) {

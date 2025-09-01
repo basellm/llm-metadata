@@ -61,6 +61,11 @@ jobs:
           npm run check || echo "CHANGED=$?" >> $GITHUB_OUTPUT
         shell: bash
 
+      - name: Generate docs markdown from API
+        if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
+        run: |
+          node scripts/build.js --docs-md-only
+
       - name: Build MkDocs documentation
         if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
         run: |
@@ -70,9 +75,9 @@ jobs:
         if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
-            npm run build:force
+            node scripts/build.js --api-only --force
           else
-            npm run build
+            node scripts/build.js --api-only
           fi
 
       - name: Commit and push changes
