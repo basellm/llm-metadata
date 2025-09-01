@@ -49,7 +49,7 @@ function applyOverrides(entity, override) {
 }
 
 function generateDefaultDescription(modelName, providerId) {
-  // 为没有描述的模型生成默认描述
+  // Generate a default description for models without one
   return `${modelName} is an AI model provided by ${providerId}.`;
 }
 
@@ -125,7 +125,7 @@ async function main() {
   if (!docsMdOnly) {
     ensureDirSync(DIST_DIR);
     ensureDirSync(API_DIR);
-    // 拷贝 public 到 dist 根
+    // Copy public directory into dist root
     copyDirSyncIfExists(path.join(ROOT, 'public'), DIST_DIR);
   }
 
@@ -134,14 +134,14 @@ async function main() {
   try {
     source = await fetchJSON(SOURCE_URL);
   } catch (e) {
-    // 离线或网络失败时，允许使用缓存继续构建
+    // Allow using cached source when offline or the network fails
     const cachePath = path.join(CACHE_DIR, 'api.json');
     const cached = readJSONIfExists(cachePath);
     if (!cached) throw e;
     source = cached;
   }
 
-  // 缓存源以便增量对比
+  // Cache source for incremental diffing
   fs.writeFileSync(path.join(CACHE_DIR, 'api.json'), stableStringify(source), 'utf8');
 
   const { overrides, policy } = loadConfigFiles();
@@ -149,7 +149,7 @@ async function main() {
 
   const normalized = mapSourceToNormalized(source);
 
-  // 注入 overrides 中新增的 provider/model（用于手动新增模型）
+  // Inject providers/models added via overrides (allow manual additions)
   for (const [pid, pov] of Object.entries(overrides.providers || {})) {
     if (!normalized.providers[pid]) {
       normalized.providers[pid] = deepMerge({ models: {} }, pov);
@@ -158,7 +158,7 @@ async function main() {
 
   const { providerIndex, modelIndex } = buildIndexes(normalized);
 
-  // 统计同名模型在不同 provider 下的出现次数，用于 descriptions 未限定键的歧义判断
+  // Count duplicate model ids across providers to disambiguate unqualified description keys
   const modelNameCounts = {};
   for (const [, provider] of Object.entries(normalized.providers || {})) {
     const models = provider.models || {};
@@ -174,31 +174,31 @@ async function main() {
   let changes = 0;
   const warnings = [];
 
-  // 写索引
+  // Write indexes
   if (!docsMdOnly && writeJSONIfChanged(path.join(API_DIR, 'index.json'), { providers: providerIndex, models: modelIndex }, { dryRun })) changes += 1;
 
-  // 写单独的供应商信息接口
+  // Write provider summary endpoint
   if (!docsMdOnly && writeJSONIfChanged(path.join(API_DIR, 'providers.json'), { providers: providerIndex }, { dryRun })) changes += 1;
 
-  // 写完整模型信息（类似 models.dev/api.json 格式）
+  // Write complete models dataset (models.dev-like)
   const allModelsData = {};
   for (const [providerId, provider] of Object.entries(normalized.providers || {})) {
     const providerOut = applyOverrides(provider, overrides.providers?.[providerId]);
     allModelsData[providerId] = { ...providerOut };
 
-    // 处理模型数据，应用 overrides 但保持原始结构
+    // Process model data; apply overrides while preserving the original structure
     const processedModels = {};
     const models = provider.models || {};
     for (const [modelId, modelData] of Object.entries(models)) {
       const key = modelKey(providerId, modelId);
       let processed = modelData;
 
-      // 1) 确保所有模型都有 description 字段，先设置默认值
+      // 1) Ensure every model has a description; set a default first
       if (!processed.description) {
         processed = deepMerge(processed, { description: generateDefaultDescription(processed.name || modelId, providerId) });
       }
 
-      // 2) 应用描述覆盖
+      // 2) Apply description override
       const descModelsMap = descriptions?.models || {};
       const descQualified = descModelsMap[key];
       if (descQualified !== undefined) {
@@ -219,7 +219,7 @@ async function main() {
         }
       }
 
-      // 应用 overrides
+      // Apply overrides
       processed = applyOverrides(processed, overrides.models?.[key]);
       processedModels[modelId] = processed;
     }
@@ -229,7 +229,7 @@ async function main() {
 
   if (!docsMdOnly && writeJSONIfChanged(path.join(API_DIR, 'all.json'), allModelsData, { dryRun })) changes += 1;
 
-  // 生成价格换算接口
+  // Generate price conversion endpoints
   const priceConversionData = {
     data: {
       cache_ratio: {},
@@ -245,15 +245,13 @@ async function main() {
     for (const [modelId, modelData] of Object.entries(models)) {
       const cost = modelData.cost;
       if (cost && typeof cost.input === 'number' && cost.input > 0) {
-        // 模型倍率 = 输入价格 ÷ 2 (基准价格2美元/1M tokens)
+        // Model ratio = input price / 2 (baseline $2 per 1M tokens)
         priceConversionData.data.model_ratio[modelId] = cost.input / 2;
-
-        // 缓存倍率 = 缓存读取价格 ÷ 输入价格
+        // Cache ratio = cache_read / input
         if (typeof cost.cache_read === 'number' && cost.cache_read > 0) {
           priceConversionData.data.cache_ratio[modelId] = cost.cache_read / cost.input;
         }
-
-        // 补全倍率 = 输出价格 ÷ 输入价格
+        // Completion ratio = output / input
         if (typeof cost.output === 'number' && cost.output > 0) {
           priceConversionData.data.completion_ratio[modelId] = cost.output / cost.input;
         }
@@ -263,7 +261,7 @@ async function main() {
 
   if (!docsMdOnly && writeJSONIfChanged(path.join(API_DIR, 'newapi-ratio_config-v1-base.json'), priceConversionData, { dryRun })) changes += 1;
 
-  // 写 providers 与 models 详情，且支持 overrides 与 auto 策略
+  // Write provider and models details honoring overrides and auto policy
   for (const [providerId, provider] of Object.entries(normalized.providers || {})) {
     const safeProvider = sanitizeFileSegment(providerId);
     const providerOut = applyOverrides(provider, overrides.providers?.[providerId]);
@@ -285,20 +283,20 @@ async function main() {
 
       let next = modelData;
 
-      // 1) 确保所有模型都有 description 字段，先设置默认值
+      // 1) Ensure every model has a description; set a default first
       if (!next.description) {
         next = deepMerge(next, { description: generateDefaultDescription(next.name || modelId, providerId) });
       }
 
-      // 2) 外部描述源覆盖（若存在）
+      // 2) External description source override (if present)
       const descModelsMap = descriptions?.models || {};
-      // 优先使用限定键 provider/model
+      // Prefer qualified key provider/model
       let descText;
       const descQualified = descModelsMap[key];
       if (descQualified !== undefined) {
         descText = typeof descQualified === 'string' ? descQualified : (descQualified && descQualified.description);
       } else {
-        // 其次尝试未限定键 modelId（仅在该模型名全局唯一时生效）
+        // Otherwise try unqualified key modelId (only when globally unique)
         const descUnqualified = descModelsMap[modelId];
         if (descUnqualified !== undefined) {
           const count = modelNameCounts[modelId] || 0;
@@ -312,11 +310,11 @@ async function main() {
       if (descText) {
         next = deepMerge(next, { description: descText });
       }
-      // 3) overrides.json 最高优先级
+      // 3) overrides.json has the highest precedence
       next = applyOverrides(next, overrides.models?.[key]);
 
       if (!force && !allowAuto && existing) {
-        // 自动模式下跳过；保留现有文件
+        // Skip in non-auto mode; keep existing file
         continue;
       }
 
@@ -341,7 +339,7 @@ async function main() {
   }
   if (!docsMdOnly && writeJSONIfChanged(path.join(API_DIR, 'manifest.json'), manifest, { dryRun })) changes += 1;
 
-  // 生成数据浏览页面的 Markdown（当未指定 api-only 时）
+  // Generate data browser Markdown (unless --api-only)
   if (!apiOnly) {
     const dataMarkdown = generateDataMarkdown(allModelsData, providerIndex, modelIndex, manifest);
     const dataMarkdownPath = path.join(ROOT, 'docs', 'data.md');
@@ -350,41 +348,42 @@ async function main() {
 
   if (dryRun) {
     if (changes > 0) {
-      console.log(`[check] 将会更新 ${changes} 个文件`);
-      process.exit(2); // 非零退出用于 CI 判断有变化
+      console.log(`[check] Will update ${changes} file(s)`);
+      process.exit(2); // Non-zero exit for CI to detect changes
     } else {
-      console.log('[check] 无需更新');
+      console.log('[check] No changes');
       process.exit(0);
     }
   } else {
     if (changes > 0) {
-      console.log(`[build] 已更新 ${changes} 个文件`);
+      console.log(`[build] Updated ${changes} file(s)`);
     } else {
-      console.log('[build] 无需更新');
+      console.log('[build] No changes');
     }
   }
 }
 
-// 生成数据浏览页面的 Markdown
+// Generate data browser page Markdown
 function generateDataMarkdown(allModelsData, providerIndex, modelIndex, manifest) {
   const stats = manifest.stats;
-  const lastUpdated = new Date(manifest.generatedAt).toLocaleString('zh-CN');
+  const lastUpdated = new Date(manifest.generatedAt).toLocaleString('en-US');
 
-  let markdown = `# 数据浏览
+  let markdown = `---
+hide:
+  - navigation
+---
 
-本页面展示了所有 LLM 提供商和模型的详细信息，数据从 API 自动生成。
+# Data Browser
 
-!!! info "数据统计"
-    - **提供商数量**: ${stats.providers}
-    - **模型数量**: ${stats.models}
-    - **最后更新**: ${lastUpdated}
+This page displays comprehensive information about all LLM providers and models, automatically generated from API data.
 
-!!! tip "使用说明"
-    使用 MkDocs 顶部搜索栏可搜索任何提供商、模型名称或描述信息。
-
+!!! info "Statistics"
+    - **Provider Count**: ${stats.providers}
+    - **Model Count**: ${stats.models}
+    - **Last Updated**: ${lastUpdated}
 `;
 
-  // 为每个提供商生成 Markdown 表格
+  // Generate a Markdown table for each provider
   providerIndex.forEach(provider => {
     const providerData = allModelsData[provider.id];
     if (!providerData?.models) return;
@@ -394,36 +393,60 @@ function generateDataMarkdown(allModelsData, providerIndex, modelIndex, manifest
 
     markdown += `## ${provider.name}\n\n`;
 
-    // 添加提供商链接
+    // Add provider links
     const links = [];
-    if (providerData.api) links.push(`[📖 API 文档](${providerData.api})`);
-    if (providerData.doc) links.push(`[📚 官方文档](${providerData.doc})`);
+    if (providerData.api) links.push(`[📖 API Address](${providerData.api})`);
+    if (providerData.doc) links.push(`[📚 Official Documentation](${providerData.doc})`);
     if (links.length > 0) {
       markdown += `${links.join(' | ')}\n\n`;
     }
 
-    // 生成模型表格
-    markdown += `| 模型名称 | 描述 | 定价 | 能力 |\n`;
-    markdown += `|----------|------|------|------|\n`;
+    // Generate comprehensive models table
+    markdown += `| Model | Context | Output | Pricing ($/1M) | Capabilities | Knowledge | Modalities | Details |\n`;
+    markdown += `|-------|---------|--------|----------------|--------------|-----------|------------|----------|\n`;
 
     models.forEach(([modelId, model]) => {
       const name = (model.name || modelId).replace(/\|/g, '\\|');
-      const description = (model.description || '-').replace(/\|/g, '\\|').replace(/\n/g, ' ');
 
+      // Context and output limits
+      const contextLimit = model.limit?.context ? `${(model.limit.context / 1000).toFixed(0)}K` : '-';
+      const outputLimit = model.limit?.output ? `${(model.limit.output / 1000).toFixed(0)}K` : '-';
+
+      // Pricing information
       let pricing = '-';
       if (model.cost?.input) {
-        const input = model.cost.input;
-        const output = model.cost.output || '-';
-        pricing = `输入: $${input}/1M<br/>输出: $${output}/1M`;
+        const input = model.cost.input.toFixed(3);
+        const output = model.cost.output ? model.cost.output.toFixed(3) : '-';
+        const cache = model.cost.cache_read ? `<br/>Cache: ${model.cost.cache_read.toFixed(3)}` : '';
+        pricing = `In: ${input}<br/>Out: ${output}${cache}`;
       }
 
+      // Capabilities
       const capabilities = [];
-      if (model.attachment) capabilities.push('📎');
-      if (model.reasoning) capabilities.push('🧠');
-      if (model.tool_call) capabilities.push('🔧');
-      const capabilityStr = capabilities.length > 0 ? capabilities.join(' ') : '-';
+      if (model.attachment) capabilities.push('📎 Files');
+      if (model.reasoning) capabilities.push('🧠 Reasoning');
+      if (model.tool_call) capabilities.push('🔧 Tools');
+      if (model.temperature) capabilities.push('🌡️ Temp');
+      const capabilityStr = capabilities.length > 0 ? capabilities.join('<br/>') : '-';
 
-      markdown += `| **${name}** | ${description} | ${pricing} | ${capabilityStr} |\n`;
+      // Knowledge cutoff
+      const knowledge = model.knowledge || '-';
+
+      // Modalities
+      const inputMods = model.modalities?.input?.join(', ') || 'text';
+      const outputMods = model.modalities?.output?.join(', ') || 'text';
+      const modalities = `In: ${inputMods}<br/>Out: ${outputMods}`;
+
+      // Additional details
+      const details = [];
+      if (model.open_weights) details.push('Open Weights');
+      if (model.release_date) details.push(`Released: ${model.release_date}`);
+      if (model.last_updated && model.last_updated !== model.release_date) {
+        details.push(`Updated: ${model.last_updated}`);
+      }
+      const detailsStr = details.length > 0 ? details.join('<br/>') : '-';
+
+      markdown += `| **${name}** | ${contextLimit} | ${outputLimit} | ${pricing} | ${capabilityStr} | ${knowledge} | ${modalities} | ${detailsStr} |\n`;
     });
 
     markdown += '\n';
@@ -432,7 +455,7 @@ function generateDataMarkdown(allModelsData, providerIndex, modelIndex, manifest
   return markdown;
 }
 
-// 写入 Markdown 文件（如有变化）
+// Write Markdown file if content has changed
 function writeMarkdownIfChanged(filePath, content, options = {}) {
   const { dryRun = false } = options;
 
@@ -440,17 +463,17 @@ function writeMarkdownIfChanged(filePath, content, options = {}) {
 
   const existing = readFileIfExists(filePath);
   if (existing === content) {
-    return false; // 无变化
+    return false; // No changes
   }
 
   if (!dryRun) {
     fs.writeFileSync(filePath, content, 'utf8');
   }
 
-  return true; // 有变化
+  return true; // Content changed
 }
 
-// 读取文件（如果存在）
+// Read file if it exists
 function readFileIfExists(filePath) {
   try {
     return fs.readFileSync(filePath, 'utf8');

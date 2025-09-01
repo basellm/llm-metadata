@@ -43,7 +43,7 @@ function deepMerge(base, override) {
   if (base === null || typeof base !== 'object') return override;
   if (override === null || typeof override !== 'object') return override;
   if (Array.isArray(base) && Array.isArray(override)) {
-    // Override arrays by replacement (clearer semantics for config)
+    // Replace arrays entirely (clearer semantics for config)
     return override.slice();
   }
   const result = { ...base };
