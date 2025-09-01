@@ -13,6 +13,7 @@ Sources: [models.dev/api.json](https://models.dev/api.json) + basellm community 
 Requirement: Node.js 18+ (with native `fetch`).
 
 ```bash
+npm install
 npm run build
 ```
 
@@ -20,10 +21,12 @@ Outputs: `dist/api/`
 
 Scripts:
 
-- `npm run build` — Build (no-op if nothing changes)
-- `npm run build:force` — Force rebuild
-- `npm run check` — Dry-run for change detection (CI)
+- `npm run build` — Compile TypeScript and build API (no-op if nothing changes)
+- `npm run build:force` — Force rebuild all files
+- `npm run check` — Dry-run for change detection (CI use)
 - `npm run clean` — Remove `.cache` and `dist`
+- `npm run compile` — Compile TypeScript only
+- `npm run dev` — Watch mode compilation
 
 ## Update Modes
 

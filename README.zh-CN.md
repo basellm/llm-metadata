@@ -13,6 +13,7 @@
 要求：Node.js 18+（内置 `fetch`）
 
 ```bash
+npm install
 npm run build
 ```
 
@@ -20,10 +21,12 @@ npm run build
 
 常用脚本：
 
-- `npm run build`：构建（如无变化则不改写文件）
-- `npm run build:force`：强制重建
+- `npm run build`：编译 TypeScript 并构建 API（如无变化则不改写文件）
+- `npm run build:force`：强制重建所有文件
 - `npm run check`：仅检查是否会产生输出变更（CI 可用）
 - `npm run clean`：清理 `.cache` 与 `dist`
+- `npm run compile`：仅编译 TypeScript
+- `npm run dev`：监听模式编译
 
 ## 更新模式
 

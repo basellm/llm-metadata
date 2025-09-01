@@ -1,22 +1,38 @@
 {
   "name": "llm-metadata",
-  "version": "0.1.0",
-  "private": true,
-  "description": "High-throughput friendly, static-by-default interface: rebuild on change; serve static JSON via GitHub Pages.",
-  "license": "MIT",
-  "engines": {
-    "node": ">=18.17"
-  },
+  "version": "1.0.0",
+  "description": "A lightweight static API for discovering and integrating LLM metadata",
+  "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "build": "node scripts/build.js",
-    "build:force": "node scripts/build.js --force",
-    "clean": "node -e \"require('fs').rmSync('.cache',{recursive:true,force:true});require('fs').rmSync('dist',{recursive:true,force:true});\"",
-    "check": "node scripts/build.js --check",
-    "docs:install": "pip install -r requirements.txt",
-    "docs:build": "mkdocs build --site-dir dist",
-    "docs:serve": "mkdocs serve",
-    "build:all": "node scripts/build.js --docs-md-only && npm run docs:build && node scripts/build.js --api-only"
+    "build": "npm run compile && node dist/build.js",
+    "build:force": "npm run compile && node dist/build.js --force",
+    "check": "npm run compile && node dist/build.js --check",
+    "clean": "rimraf .cache dist src/**/*.js src/**/*.d.ts",
+    "compile": "tsc",
+    "compile:watch": "tsc --watch",
+    "dev": "npm run compile:watch",
+    "docs-md-only": "npm run compile && node dist/build.js --docs-md-only",
+    "api-only": "npm run compile && node dist/build.js --api-only",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.0",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "llm",
+    "metadata",
+    "api",
+    "models",
+    "ai"
+  ],
+  "author": "basellm",
+  "license": "MIT"
 }

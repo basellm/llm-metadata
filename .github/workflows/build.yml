@@ -11,9 +11,9 @@ concurrency:
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
     paths:
-      - 'scripts/**'
+      - 'src/**'
       - 'data/**'
       - 'public/**'
       - 'docs/**'
@@ -64,20 +64,20 @@ jobs:
       - name: Generate docs markdown from API
         if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
         run: |
-          node scripts/build.js --docs-md-only
+          npm run docs-md-only
 
       - name: Build MkDocs documentation
         if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
         run: |
-          npm run docs:build
+          mkdocs build -d dist
 
       - name: Build API data
         if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
-            node scripts/build.js --api-only --force
+            npm run api-only -- --force
           else
-            node scripts/build.js --api-only
+            npm run api-only
           fi
 
       - name: Commit and push changes
@@ -122,7 +122,7 @@ jobs:
           # Check if the latest commit message contains release keywords
           LATEST_COMMIT_MSG=$(git log -1 --pretty=format:"%s")
           echo "Latest commit: $LATEST_COMMIT_MSG"
-          
+
           if echo "$LATEST_COMMIT_MSG" | grep -iE '\[release\]|release:|🚀.*release' > /dev/null; then
             echo "Release trigger found in commit message"
             echo "SHOULD_RELEASE=true" >> $GITHUB_OUTPUT
@@ -139,32 +139,32 @@ jobs:
           # Generate timestamp-based version number
           VERSION="v$(date -u +"%Y.%m.%d.%H%M")"
           echo "Generated version: $VERSION"
-          
+
           # Create git tag
           git tag $VERSION
           git push origin $VERSION
-          
+
           # Get recent commit messages for release notes
           RECENT_COMMITS=$(git log --oneline -10 --pretty=format:"- %s" | head -20)
-          
+
           # Create release notes
           cat > release_notes.md << EOF
           ## 🚀 Automated Release $VERSION
-          
+
           **Build Time:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")
           **Triggered By:** ${{ github.event_name }}
-          
+
           ### 📋 Recent Changes
-          
+
           $RECENT_COMMITS
-          
+
           ### 🔗 Usage
-          
+
           For complete API documentation and endpoints, visit: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
-          
+
           > This version is automatically built and released via GitHub Actions
           EOF
-          
+
           # Create release using GitHub CLI
           gh release create $VERSION \
             --title "🚀 LLM Metadata API $VERSION" \
@@ -189,4 +189,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
