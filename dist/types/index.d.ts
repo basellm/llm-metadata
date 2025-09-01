@@ -47,7 +47,7 @@ export interface ProviderBase {
     api?: string;
     doc?: string;
     icon?: string;
-    iconurl?: string;
+    iconURL?: string;
     lobeIcon?: string;
 }
 /** 完整提供商数据 */
@@ -77,6 +77,7 @@ export interface ProviderIndexItem {
     api?: string | undefined;
     doc?: string | undefined;
     icon?: string | undefined;
+    iconURL?: string | undefined;
     lobeIcon?: string | undefined;
     modelCount: number;
 }
@@ -108,7 +109,6 @@ export interface NewApiVendor {
     name: string;
     description: string;
     icon: string;
-    lobeicon: string;
     status: number;
 }
 /** NewAPI 模型数据 */

@@ -74,7 +74,7 @@ export class DataProcessor {
     // 添加图标URL（如果来自源数据）
     if (sourceProviderIds.has(providerId)) {
       processed = deepMerge(processed, {
-        iconurl: `https://models.dev/logos/${providerId}.svg`,
+        iconURL: `https://models.dev/logos/${providerId}.svg`,
       });
     }
 

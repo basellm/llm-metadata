@@ -125,7 +125,7 @@ class Builder {
                 if (sourceProviderIds.has(providerId)) {
                     providerOut = {
                         ...providerOut,
-                        iconurl: `https://models.dev/logos/${providerId}.svg`,
+                        iconURL: `https://models.dev/logos/${providerId}.svg`,
                     };
                 }
                 const providerPath = join(this.API_DIR, 'providers', `${safeProvider}.json`);

@@ -87,7 +87,6 @@ export class NewApiBuilder {
         name: provider.name || providerId,
         description: provider.description || '',
         icon: provider.icon || provider.lobeIcon || '',
-        lobeicon: provider.lobeIcon || '',
         status: 1,
       });
 

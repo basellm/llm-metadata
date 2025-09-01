@@ -192,7 +192,7 @@ class Builder {
         if (sourceProviderIds.has(providerId)) {
           providerOut = {
             ...providerOut,
-            iconurl: `https://models.dev/logos/${providerId}.svg`,
+            iconURL: `https://models.dev/logos/${providerId}.svg`,
           };
         }
 
