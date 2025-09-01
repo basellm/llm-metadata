@@ -173,6 +173,9 @@ async function main() {
   // 写索引
   if (writeJSONIfChanged(path.join(API_DIR, 'index.json'), { providers: providerIndex, models: modelIndex }, { dryRun })) changes += 1;
 
+  // 写单独的供应商信息接口
+  if (writeJSONIfChanged(path.join(API_DIR, 'providers.json'), { providers: providerIndex }, { dryRun })) changes += 1;
+
   // 写完整模型信息（类似 models.dev/api.json 格式）
   const allModelsData = {};
   for (const [providerId, provider] of Object.entries(normalized.providers || {})) {
