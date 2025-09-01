@@ -71,20 +71,3 @@ Config: `data/overrides.json`
 ```
 
 Deep-merge: original fields preserved unless explicitly overridden.
-
-## Descriptions
-
-Config: `data/descriptions.json` (two formats):
-
-```json
-{
-  "models": {
-    "xai/grok-4": "Description text (short form)",
-    "deepseek/deepseek-reasoner": { "description": "Description text (object form)" }
-  }
-}
-```
-
-Priority: default → `descriptions.json` → `overrides.json` (final).
-
-Ambiguity with duplicate `modelId` across providers: ignore short keys; use `providerId/modelId`. Warnings are written to `dist/api/manifest.json`.

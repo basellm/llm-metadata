@@ -55,38 +55,14 @@ function generateDefaultDescription(modelName, providerId) {
   return `${modelName} is an AI model provided by ${providerId}.`;
 }
 
-// Process model description with fallbacks and overrides
-function processModelDescription(modelData, modelId, providerId, descriptions, overrides, modelNameCounts, warnings) {
+// Process model description with default and overrides only
+function processModelDescription(modelData, modelId, providerId, overrides) {
   const key = modelKey(providerId, modelId);
   let processed = { ...modelData };
 
   // 1) Ensure every model has a description; set a default first
   if (!processed.description) {
     processed.description = generateDefaultDescription(processed.name || modelId, providerId);
-  }
-
-  // 2) Apply description override from external sources
-  const descModelsMap = descriptions?.models || {};
-  const descQualified = descModelsMap[key];
-  if (descQualified !== undefined) {
-    const descText = typeof descQualified === 'string' ? descQualified : (descQualified && descQualified.description);
-    if (descText) {
-      processed.description = descText;
-    }
-  } else {
-    // Try unqualified key modelId (only when globally unique)
-    const descUnqualified = descModelsMap[modelId];
-    if (descUnqualified !== undefined) {
-      const count = modelNameCounts[modelId] || 0;
-      if (count <= 1) {
-        const descText = typeof descUnqualified === 'string' ? descUnqualified : (descUnqualified && descUnqualified.description);
-        if (descText) {
-          processed.description = descText;
-        }
-      } else {
-        warnings.push(`Ambiguous description key '${modelId}' matches ${count} models; ignored. Use '${key}'.`);
-      }
-    }
   }
 
   // 3) Apply overrides.json (highest precedence)
@@ -278,9 +254,11 @@ async function main() {
   fs.writeFileSync(path.join(CACHE_DIR, 'api.json'), stableStringify(source), 'utf8');
 
   const { overrides, policy } = loadConfigFiles();
-  const descriptions = readJSONSafe(path.join(DATA_DIR, 'descriptions.json'), { models: {} });
+  // descriptions.json removed; descriptions now rely on defaults and overrides only
 
   const normalized = mapSourceToNormalized(source);
+  // Track provider ids that come from models.dev (exclude manual-only overrides)
+  const sourceProviderIds = new Set(Object.keys(source || {}));
 
   // Inject providers/models added via overrides (allow manual additions)
   for (const [pid, pov] of Object.entries(overrides.providers || {})) {
@@ -290,15 +268,6 @@ async function main() {
   }
 
   const { providerIndex, modelIndex } = buildIndexes(normalized);
-
-  // Count duplicate model ids across providers to disambiguate unqualified description keys
-  const modelNameCounts = {};
-  for (const [, provider] of Object.entries(normalized.providers || {})) {
-    const models = provider.models || {};
-    for (const mid of Object.keys(models)) {
-      modelNameCounts[mid] = (modelNameCounts[mid] || 0) + 1;
-    }
-  }
 
   const sourceHash = sha256OfObject(source);
   const overridesHash = sha256OfObject(overrides);
@@ -316,14 +285,17 @@ async function main() {
   // Write complete models dataset (models.dev-like)
   const allModelsData = {};
   for (const [providerId, provider] of Object.entries(normalized.providers || {})) {
-    const providerOut = applyOverrides(provider, overrides.providers?.[providerId]);
+    let providerOut = applyOverrides(provider, overrides.providers?.[providerId]);
+    if (sourceProviderIds.has(providerId)) {
+      providerOut = deepMerge(providerOut, { iconurl: `https://models.dev/logos/${providerId}.svg` });
+    }
     allModelsData[providerId] = { ...providerOut };
 
     // Process model data; apply overrides while preserving the original structure
     const processedModels = {};
     const models = provider.models || {};
     for (const [modelId, modelData] of Object.entries(models)) {
-      processedModels[modelId] = processModelDescription(modelData, modelId, providerId, descriptions, overrides, modelNameCounts, warnings);
+      processedModels[modelId] = processModelDescription(modelData, modelId, providerId, overrides);
     }
 
     allModelsData[providerId].models = processedModels;
@@ -368,7 +340,10 @@ async function main() {
   // Write provider and models details honoring overrides and auto policy
   for (const [providerId, provider] of Object.entries(normalized.providers || {})) {
     const safeProvider = sanitizeFileSegment(providerId);
-    const providerOut = applyOverrides(provider, overrides.providers?.[providerId]);
+    let providerOut = applyOverrides(provider, overrides.providers?.[providerId]);
+    if (sourceProviderIds.has(providerId)) {
+      providerOut = deepMerge(providerOut, { iconurl: `https://models.dev/logos/${providerId}.svg` });
+    }
     const providerPath = path.join(API_DIR, 'providers', `${safeProvider}.json`);
     if (!docsMdOnly && writeJSONIfChanged(providerPath, providerOut, { dryRun })) changes += 1;
 
@@ -385,7 +360,7 @@ async function main() {
       const existingPath = path.join(providerModelsDir, `${safeModel}.json`);
       const existing = readJSONIfExists(existingPath);
 
-      let next = processModelDescription(modelData, modelId, providerId, descriptions, overrides, modelNameCounts, warnings);
+      let next = processModelDescription(modelData, modelId, providerId, overrides);
 
       if (!force && !allowAuto && existing) {
         // Skip in non-auto mode; keep existing file

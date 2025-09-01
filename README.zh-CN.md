@@ -71,20 +71,3 @@ npm run build
 ```
 
 覆写采用“深度合并”，不移除原字段，仅覆盖同名字段或追加对象属性。
-
-## 描述（Descriptions）
-
-配置文件：`data/descriptions.json`，两种写法：
-
-```json
-{
-  "models": {
-    "xai/grok-4": "描述文本（简写）",
-    "deepseek/deepseek-reasoner": { "description": "描述文本（对象写法）" }
-  }
-}
-```
-
-优先级：默认描述 → `descriptions.json` → `overrides.json`（最终）。
-
-重复 `modelId` 的歧义处理：多提供方同名时，简写键（仅 `modelId`）被忽略，请使用 `providerId/modelId`；警告会写入 `dist/api/manifest.json`。
