@@ -50,19 +50,36 @@
 let allData = {};
 let filteredData = {};
 
+// 获取正确的 API 基础路径
+function getApiBasePath() {
+  // 获取当前页面的路径
+  const currentPath = window.location.pathname;
+  // 检测是否在子路径部署（如 /llm-metadata/）
+  const pathSegments = currentPath.split('/').filter(Boolean);
+  
+  // 如果在子路径部署，构建正确的基础路径
+  if (pathSegments.length > 0 && pathSegments[0] === 'llm-metadata') {
+    return '/llm-metadata/api';
+  }
+  
+  // 本地开发或根路径部署
+  return './api';
+}
+
 // 加载数据
 async function loadData() {
   try {
+    const apiBasePath = getApiBasePath();
     const [indexResponse, manifestResponse] = await Promise.all([
-      fetch('./api/index.json'),
-      fetch('./api/manifest.json')
+      fetch(`${apiBasePath}/index.json`),
+      fetch(`${apiBasePath}/manifest.json`)
     ]);
     
     const indexData = await indexResponse.json();
     const manifestData = await manifestResponse.json();
     
     // 加载完整数据
-    const allResponse = await fetch('./api/all.json');
+    const allResponse = await fetch(`${apiBasePath}/all.json`);
     const allModelsData = await allResponse.json();
     
     allData = {
