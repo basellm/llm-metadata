@@ -328,7 +328,13 @@ async function main() {
 
   if (!docsMdOnly && writeJSONIfChanged(path.join(API_DIR, 'all.json'), allModelsData, { dryRun })) changes += 1;
 
-  // Generate price conversion endpoints
+  // Generate NewAPI endpoints (vendors, models, price ratios)
+  const newapiDir = path.join(API_DIR, 'newapi');
+  ensureDirSync(newapiDir);
+  const newapiSync = buildNewApiSyncPayload(allModelsData);
+  if (!docsMdOnly && writeJSONIfChanged(path.join(newapiDir, 'vendors.json'), { success: true, message: '', data: newapiSync.vendors }, { dryRun })) changes += 1;
+  if (!docsMdOnly && writeJSONIfChanged(path.join(newapiDir, 'models.json'), { success: true, message: '', data: newapiSync.models }, { dryRun })) changes += 1;
+  // Price ratios
   const priceConversionData = {
     data: {
       cache_ratio: {},
@@ -354,8 +360,7 @@ async function main() {
       }
     }
   }
-
-  if (!docsMdOnly && writeJSONIfChanged(path.join(API_DIR, 'newapi-ratio_config-v1-base.json'), priceConversionData, { dryRun })) changes += 1;
+  if (!docsMdOnly && writeJSONIfChanged(path.join(newapiDir, 'ratio_config-v1-base.json'), priceConversionData, { dryRun })) changes += 1;
 
   // Write provider and models details honoring overrides and auto policy
   for (const [providerId, provider] of Object.entries(normalized.providers || {})) {
@@ -511,3 +516,66 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
+
+// --- NewAPI sync helpers (vendors/models) ---
+// Build tags string from model capabilities and optional tags field
+function buildNewApiTags(model) {
+  const tagSet = new Set();
+  // Support array or comma-separated string
+  if (Array.isArray(model.tags)) {
+    for (const t of model.tags) if (t) tagSet.add(String(t).trim());
+  } else if (typeof model.tags === 'string') {
+    model.tags.split(/[;,\s]+/g).forEach((t) => { if (t) tagSet.add(t.trim()); });
+  }
+  if (model.reasoning) tagSet.add('reasoning');
+  if (model.tool_call) tagSet.add('tools');
+  if (model.attachment) tagSet.add('files');
+  const inMods = model.modalities?.input || [];
+  const outMods = model.modalities?.output || [];
+  if ([...inMods, ...outMods].includes('image')) tagSet.add('vision');
+  if ([...inMods, ...outMods].includes('audio')) tagSet.add('audio');
+  if (model.open_weights) tagSet.add('open-weights');
+  return Array.from(tagSet).join(',');
+}
+
+// Create payloads aligned to NewAPI DB schemas
+function buildNewApiSyncPayload(allModelsData) {
+  const now = Math.floor(Date.now() / 1000);
+  const vendors = [];
+  const models = [];
+
+  const providerIds = Object.keys(allModelsData || {}).sort((a, b) => a.localeCompare(b));
+  for (const providerId of providerIds) {
+    const provider = allModelsData[providerId] || {};
+    vendors.push({
+      // vendors table fields
+      name: provider.name || providerId,
+      description: provider.description || '',
+      icon: provider.icon || '',
+      status: 1,
+      created_time: now,
+      updated_time: now,
+      deleted_at: null
+    });
+
+    const mEntries = Object.entries(provider.models || {}).sort((a, b) => a[0].localeCompare(b[0]));
+    for (const [modelId, model] of mEntries) {
+      models.push({
+        // models table fields
+        model_name: modelId,
+        description: model.description || '',
+        tags: buildNewApiTags(model),
+        vendor_id: null, // fill by importer via provider name/id mapping
+        endpoints: null, // reserved; can be JSON string according to NewAPI
+        status: 1,
+        created_time: now,
+        updated_time: now,
+        deleted_at: null,
+        name_rule: 0,
+        icon: model.icon || provider.icon || ''
+      });
+    }
+  }
+
+  return { vendors, models };
+}

@@ -14,7 +14,7 @@ Sources: [models.dev/api.json](https://models.dev/api.json) + basellm community 
 - Endpoints:
   - `/api/index.json` — Providers and models summary
   - `/api/all.json` — Complete models data (models.dev-like with descriptions/overrides applied)
-  - `/api/newapi-ratio_config-v1-base.json` — Price ratio of the New API family system
+  - `/api/newapi/ratio_config-v1-base.json` — Price ratio of the New API family system
   - `/api/manifest.json` — Build manifest and stats
   - `/api/providers/{providerId}.json` — Single provider details
   - `/api/models/{providerId}/{modelId}.json` — Single model metadata
@@ -110,7 +110,7 @@ Ambiguity with duplicate `modelId` across providers: ignore short keys; use `pro
 
 ## Pricing Ratios (New API family)
 
-Endpoint: `/api/newapi-ratio_config-v1-base.json`
+Endpoint: `/api/newapi/ratio_config-v1-base.json`
 
 - Price ratio for the New API family system, based on per-1M token prices:
 

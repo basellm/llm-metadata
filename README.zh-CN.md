@@ -14,7 +14,7 @@
 - 端点：
   - `/api/index.json`：提供方与模型摘要索引
   - `/api/all.json`：完整模型数据聚合（等价于 models.dev 结构，已应用描述/覆写）
-  - `/api/newapi-ratio_config-v1-base.json`：New API 系统家族的价格倍率配置
+  - `/api/newapi/ratio_config-v1-base.json`：New API 系统家族的价格倍率配置
   - `/api/manifest.json`：构建清单与统计
   - `/api/providers/{providerId}.json`：单个提供方详情
   - `/api/models/{providerId}/{modelId}.json`：单个模型元数据
@@ -110,7 +110,7 @@ npm run build
 
 ## 价格倍率（Pricing Ratios，New API 系统家族）
 
-端点：`/api/newapi-ratio_config-v1-base.json`
+端点：`/api/newapi/ratio_config-v1-base.json`
 
 用于 New API 系统家族的价格倍率，按每 1M tokens 价格换算：
 
