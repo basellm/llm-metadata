@@ -60,6 +60,7 @@ jobs:
 
       - name: Commit and push changes
         if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
+        id: commit
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
@@ -67,7 +68,7 @@ jobs:
             git add dist
             DT=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
             
-            # 根据不同触发事件设置提交信息
+            # Set commit message based on trigger event
             if [ "${{ github.event_name }}" = "push" ]; then
               TRIGGER_MSG="triggered by push to ${{ github.ref_name }}"
             elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
@@ -82,11 +83,64 @@ jobs:
               TRIGGER_MSG="triggered by ${{ github.event_name }}"
             fi
             
-            git commit -m "📦 chore(dist): update static API - ${TRIGGER_MSG} [${DT}]"
+            COMMIT_MSG="📦 chore(dist): update static API - ${TRIGGER_MSG} [${DT}]"
+            git commit -m "${COMMIT_MSG}"
             git push
+            echo "COMMITTED=true" >> $GITHUB_OUTPUT
+            echo "COMMIT_MESSAGE=${COMMIT_MSG}" >> $GITHUB_OUTPUT
           else
             echo "No changes to commit"
+            echo "COMMITTED=false" >> $GITHUB_OUTPUT
           fi
+
+      - name: Generate version and create release
+        if: ${{ steps.commit.outputs.COMMITTED == 'true' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Generate timestamp-based version number
+          VERSION="v$(date -u +"%Y.%m.%d.%H%M")"
+          echo "Generated version: $VERSION"
+          
+          # Create git tag
+          git tag $VERSION
+          git push origin $VERSION
+          
+          # Get recent commit messages for release notes
+          RECENT_COMMITS=$(git log --oneline -10 --pretty=format:"- %s" | head -20)
+          
+          # Create release notes
+          cat > release_notes.md << EOF
+          ## 🚀 Automated Release $VERSION
+          
+          **Build Time:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          **Triggered By:** ${{ github.event_name }}
+          
+          ### 📋 Recent Changes
+          
+          $RECENT_COMMITS
+          
+          ### 📦 API Data
+          
+          This release contains the latest LLM model metadata:
+          - Support for multiple AI provider model information
+          - Auto-generated API indexes and detailed information
+          - Price conversion configuration files
+          
+          ### 🔗 Usage
+          
+          - **API Documentation:** https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          - **Model List:** https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/api/index.json
+          - **Complete Data:** https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/api/all.json
+          
+          > This version is automatically built and released via GitHub Actions
+          EOF
+          
+          # Create release using GitHub CLI
+          gh release create $VERSION \
+            --title "🚀 LLM Metadata API $VERSION" \
+            --notes-file release_notes.md \
+            --latest
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
