@@ -119,14 +119,14 @@ function formatNewApiRatios(ratios) {
   if (!ratios) return '-';
 
   const parts = [];
-  parts.push(`Model: ${ratios.model.toFixed(2)}×`);
+  parts.push(`Model: ${ratios.model.toFixed(3)}`);
 
   if (ratios.completion !== null) {
-    parts.push(`Completion: ${ratios.completion.toFixed(2)}×`);
+    parts.push(`Completion: ${ratios.completion.toFixed(3)}`);
   }
 
   if (ratios.cache !== null) {
-    parts.push(`Cache: ${ratios.cache.toFixed(2)}×`);
+    parts.push(`Cache: ${ratios.cache.toFixed(3)}`);
   }
 
   return parts.join('<br/>');
