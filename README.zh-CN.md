@@ -62,12 +62,39 @@ npm run build
 ```json
 {
   "providers": {
-    "deepseek": { "displayName": "DeepSeek（自定义名称）" }
+    "openai": {
+      "name": "OpenAI（自定义）",
+      "api": "https://api.openai.com",
+      "doc": "https://platform.openai.com/docs",
+      "icon": "https://example.com/icons/openai.svg",
+      "lobeIcon": "OpenAI.Color"
+    }
   },
   "models": {
-    "deepseek/deepseek-reasoner": { "tags": ["reasoning", "math"] }
+    "openai/gpt-4o": {
+      "description": "面向多模态、具备较强推理能力的优化模型。",
+      "tags": ["vision", "tools"],
+      "limit": { "context": 131072, "output": 8192 },
+      "modalities": { "input": ["text", "image"], "output": ["text"] },
+      "reasoning": true,
+      "tool_call": true,
+      "attachment": false
+    }
   }
 }
 ```
 
 覆写采用“深度合并”，不移除原字段，仅覆盖同名字段或追加对象属性。
+
+- Provider 级覆写（例如：`providers.deepseek.name`、`providers.deepseek.icon`、`providers.deepseek.lobeIcon`、`providers.deepseek.api`、`providers.deepseek.doc`）
+  - 影响：
+    - `dist/api/providers.json`
+    - `dist/api/providers/<provider>.json`
+    - `dist/api/all.json`
+    - `dist/api/newapi/vendors.json`
+
+- Model 级覆写（例如：`models["deepseek/deepseek-reasoner"].description`、`tags`、`limit`、`modalities`、`cost`、`reasoning`、`tool_call`、`attachment`）
+  - 影响：
+    - `dist/api/all.json`
+    - `dist/api/models/<provider>/<model>.json`
+    - `dist/api/newapi/models.json`

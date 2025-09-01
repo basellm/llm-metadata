@@ -169,16 +169,20 @@ function mapSourceToNormalized(source) {
   return { providers };
 }
 
-function buildIndexes(normalized) {
+function buildIndexes(normalized, overrides) {
   const providers = normalized.providers || {};
   const providerIndex = [];
   const modelIndex = [];
   for (const [pid, provider] of Object.entries(providers)) {
+    const pov = overrides?.providers?.[pid] || {};
+    const providerEffective = { ...provider, ...pov };
     const pInfo = {
       id: pid,
-      name: provider.name || pid,
-      api: provider.api || null,
-      doc: provider.doc || null,
+      name: providerEffective.name || pid,
+      api: providerEffective.api || null,
+      doc: providerEffective.doc || null,
+      icon: providerEffective.icon || null,
+      lobeIcon: providerEffective.lobeIcon || null,
       modelCount: 0,
     };
     const models = provider.models || {};
@@ -267,7 +271,7 @@ async function main() {
     }
   }
 
-  const { providerIndex, modelIndex } = buildIndexes(normalized);
+  const { providerIndex, modelIndex } = buildIndexes(normalized, overrides);
 
   const sourceHash = sha256OfObject(source);
   const overridesHash = sha256OfObject(overrides);
@@ -520,7 +524,8 @@ function buildNewApiSyncPayload(allModelsData) {
       // vendors table fields
       name: provider.name || providerId,
       description: provider.description || '',
-      icon: provider.icon || '',
+      icon: provider.icon || provider.lobeIcon || '',
+      lobeicon: provider.lobeIcon || '',
       status: 1
     });
 

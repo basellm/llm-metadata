@@ -62,12 +62,39 @@ Config: `data/overrides.json`
 ```json
 {
   "providers": {
-    "deepseek": { "displayName": "DeepSeek (custom)" }
+    "openai": {
+      "name": "OpenAI (custom)",
+      "api": "https://api.openai.com",
+      "doc": "https://platform.openai.com/docs",
+      "icon": "https://example.com/icons/openai.svg",
+      "lobeIcon": "OpenAI.Color"
+    }
   },
   "models": {
-    "deepseek/deepseek-reasoner": { "tags": ["reasoning", "math"] }
+    "openai/gpt-4o": {
+      "description": "Optimized multimodal model with strong reasoning.",
+      "tags": ["vision", "tools"],
+      "limit": { "context": 131072, "output": 8192 },
+      "modalities": { "input": ["text", "image"], "output": ["text"] },
+      "reasoning": true,
+      "tool_call": true,
+      "attachment": false
+    }
   }
 }
 ```
 
 Deep-merge: original fields preserved unless explicitly overridden.
+
+- Provider-level overrides (e.g., `providers.deepseek.name`, `providers.deepseek.icon`, `providers.deepseek.lobeIcon`, `providers.deepseek.api`, `providers.deepseek.doc`)
+  - Affects:
+    - `dist/api/providers.json`
+    - `dist/api/providers/<provider>.json`
+    - `dist/api/all.json`
+    - `dist/api/newapi/vendors.json`
+
+- Model-level overrides (e.g., `models["deepseek/deepseek-reasoner"].description`, `tags`, `limit`, `modalities`, `cost`, `reasoning`, `tool_call`, `attachment`)
+  - Affects:
+    - `dist/api/all.json`
+    - `dist/api/models/<provider>/<model>.json`
+    - `dist/api/newapi/models.json`
