@@ -337,6 +337,11 @@ async function main() {
   }
   if (writeJSONIfChanged(path.join(API_DIR, 'manifest.json'), manifest, { dryRun })) changes += 1;
 
+  // 生成数据浏览页面的 Markdown
+  const dataMarkdown = generateDataMarkdown(allModelsData, providerIndex, modelIndex, manifest);
+  const dataMarkdownPath = path.join(ROOT, 'docs', 'data.md');
+  if (writeMarkdownIfChanged(dataMarkdownPath, dataMarkdown, { dryRun })) changes += 1;
+
   if (dryRun) {
     if (changes > 0) {
       console.log(`[check] 将会更新 ${changes} 个文件`);
@@ -351,6 +356,100 @@ async function main() {
     } else {
       console.log('[build] 无需更新');
     }
+  }
+}
+
+// 生成数据浏览页面的 Markdown
+function generateDataMarkdown(allModelsData, providerIndex, modelIndex, manifest) {
+  const stats = manifest.stats;
+  const lastUpdated = new Date(manifest.generatedAt).toLocaleString('zh-CN');
+
+  let markdown = `# 数据浏览
+
+本页面展示了所有 LLM 提供商和模型的详细信息，数据从 API 自动生成。
+
+!!! info "数据统计"
+    - **提供商数量**: ${stats.providers}
+    - **模型数量**: ${stats.models}
+    - **最后更新**: ${lastUpdated}
+
+!!! tip "使用说明"
+    使用 MkDocs 顶部搜索栏可搜索任何提供商、模型名称或描述信息。
+
+`;
+
+  // 为每个提供商生成 Markdown 表格
+  providerIndex.forEach(provider => {
+    const providerData = allModelsData[provider.id];
+    if (!providerData?.models) return;
+
+    const models = Object.entries(providerData.models);
+    if (models.length === 0) return;
+
+    markdown += `## ${provider.name}\n\n`;
+
+    // 添加提供商链接
+    const links = [];
+    if (providerData.api) links.push(`[📖 API 文档](${providerData.api})`);
+    if (providerData.doc) links.push(`[📚 官方文档](${providerData.doc})`);
+    if (links.length > 0) {
+      markdown += `${links.join(' | ')}\n\n`;
+    }
+
+    // 生成模型表格
+    markdown += `| 模型名称 | 描述 | 定价 | 能力 |\n`;
+    markdown += `|----------|------|------|------|\n`;
+
+    models.forEach(([modelId, model]) => {
+      const name = (model.name || modelId).replace(/\|/g, '\\|');
+      const description = (model.description || '-').replace(/\|/g, '\\|').replace(/\n/g, ' ');
+
+      let pricing = '-';
+      if (model.cost?.input) {
+        const input = model.cost.input;
+        const output = model.cost.output || '-';
+        pricing = `输入: $${input}/1M<br/>输出: $${output}/1M`;
+      }
+
+      const capabilities = [];
+      if (model.attachment) capabilities.push('📎');
+      if (model.reasoning) capabilities.push('🧠');
+      if (model.tool_call) capabilities.push('🔧');
+      const capabilityStr = capabilities.length > 0 ? capabilities.join(' ') : '-';
+
+      markdown += `| **${name}** | ${description} | ${pricing} | ${capabilityStr} |\n`;
+    });
+
+    markdown += '\n';
+  });
+
+  return markdown;
+}
+
+// 写入 Markdown 文件（如有变化）
+function writeMarkdownIfChanged(filePath, content, options = {}) {
+  const { dryRun = false } = options;
+
+  ensureDirSync(path.dirname(filePath));
+
+  const existing = readFileIfExists(filePath);
+  if (existing === content) {
+    return false; // 无变化
+  }
+
+  if (!dryRun) {
+    fs.writeFileSync(filePath, content, 'utf8');
+  }
+
+  return true; // 有变化
+}
+
+// 读取文件（如果存在）
+function readFileIfExists(filePath) {
+  try {
+    return fs.readFileSync(filePath, 'utf8');
+  } catch (e) {
+    return null;
   }
 }
 
