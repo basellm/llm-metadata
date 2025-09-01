@@ -533,7 +533,6 @@ function buildNewApiTags(model) {
 
 // Create payloads aligned to NewAPI DB schemas
 function buildNewApiSyncPayload(allModelsData) {
-  const now = Math.floor(Date.now() / 1000);
   const vendors = [];
   const models = [];
 
@@ -545,10 +544,7 @@ function buildNewApiSyncPayload(allModelsData) {
       name: provider.name || providerId,
       description: provider.description || '',
       icon: provider.icon || '',
-      status: 1,
-      created_time: now,
-      updated_time: now,
-      deleted_at: null
+      status: 1
     });
 
     const mEntries = Object.entries(provider.models || {}).sort((a, b) => a[0].localeCompare(b[0]));
@@ -561,9 +557,6 @@ function buildNewApiSyncPayload(allModelsData) {
         vendor_id: null, // fill by importer via provider name/id mapping
         endpoints: null, // reserved; can be JSON string according to NewAPI
         status: 1,
-        created_time: now,
-        updated_time: now,
-        deleted_at: null,
         name_rule: 0,
         icon: model.icon || provider.icon || ''
       });

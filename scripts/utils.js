@@ -171,7 +171,8 @@ function formatTokensToKM(value) {
   if (typeof value !== 'number' || !isFinite(value) || value <= 0) return null;
   if (value >= 1000000) {
     const m = value / 1000000;
-    const out = Number.isInteger(m) ? String(m) : m.toFixed(1);
+    let out = Number.isInteger(m) ? String(m) : (Math.round(m * 10) / 10).toFixed(1);
+    if (out.endsWith('.0')) out = out.slice(0, -2);
     return `${out}M`;
   }
   const k = value / 1000;
