@@ -28,7 +28,19 @@ export function deepMerge(target, source) {
 }
 /** 稳定的 JSON 字符串化 */
 export function stableStringify(obj) {
-    return JSON.stringify(obj, Object.keys(obj).sort(), 2);
+    const sorter = (value) => {
+        if (Array.isArray(value))
+            return value.map(sorter);
+        if (value && typeof value === 'object') {
+            const sorted = {};
+            for (const key of Object.keys(value).sort()) {
+                sorted[key] = sorter(value[key]);
+            }
+            return sorted;
+        }
+        return value;
+    };
+    return JSON.stringify(sorter(obj), null, 2);
 }
 /** 计算对象的 SHA256 哈希 */
 export function sha256OfObject(obj) {

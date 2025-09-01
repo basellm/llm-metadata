@@ -34,7 +34,18 @@ export function deepMerge<T>(target: T, source: Partial<T>): T {
 
 /** 稳定的 JSON 字符串化 */
 export function stableStringify(obj: any): string {
-  return JSON.stringify(obj, Object.keys(obj).sort(), 2);
+  const sorter = (value: any): any => {
+    if (Array.isArray(value)) return value.map(sorter);
+    if (value && typeof value === 'object') {
+      const sorted: Record<string, any> = {};
+      for (const key of Object.keys(value).sort()) {
+        sorted[key] = sorter(value[key]);
+      }
+      return sorted;
+    }
+    return value;
+  };
+  return JSON.stringify(sorter(obj), null, 2);
 }
 
 /** 计算对象的 SHA256 哈希 */
