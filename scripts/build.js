@@ -147,13 +147,13 @@ function formatPricing(cost) {
 
 // Format capabilities for display
 function formatCapabilities(model) {
-  const capabilities = [];
-  if (model.attachment) capabilities.push('📎 Files');
-  if (model.reasoning) capabilities.push('🧠 Reasoning');
-  if (model.tool_call) capabilities.push('🔧 Tools');
-  if (model.temperature) capabilities.push('🌡️ Temp');
+  const emojis = [];
+  if (model.attachment) emojis.push('📎');
+  if (model.reasoning) emojis.push('🧠');
+  if (model.tool_call) emojis.push('🔧');
+  if (model.temperature) emojis.push('🌡️');
 
-  return capabilities.length > 0 ? capabilities.join('<br/>') : '-';
+  return emojis.length > 0 ? emojis.join(' ') : '-';
 }
 
 // Format modalities for display
@@ -415,7 +415,7 @@ async function main() {
 
   // Generate data browser Markdown (unless --api-only)
   if (!apiOnly) {
-    const dataMarkdown = generateDataMarkdown(allModelsData, providerIndex, modelIndex, manifest);
+    const dataMarkdown = generateDataMarkdown(allModelsData, providerIndex, manifest);
     const dataMarkdownPath = path.join(ROOT, 'docs', 'data.md');
     if (writeTextIfChanged(dataMarkdownPath, dataMarkdown, { dryRun })) changes += 1;
   }
@@ -433,7 +433,7 @@ async function main() {
 }
 
 // Generate data browser page Markdown
-function generateDataMarkdown(allModelsData, providerIndex, modelIndex, manifest) {
+function generateDataMarkdown(allModelsData, providerIndex, manifest) {
   const { stats } = manifest;
   const lastUpdated = new Date(manifest.generatedAt).toLocaleString('en-US');
 
@@ -450,6 +450,7 @@ This page displays comprehensive information about all LLM providers and models,
     - **Provider Count**: ${stats.providers}
     - **Model Count**: ${stats.models}
     - **Last Updated**: ${lastUpdated}
+\n+**Capabilities Legend**: 🧠 Reasoning &nbsp;&nbsp;🔧 Tools &nbsp;&nbsp;📎 Files &nbsp;&nbsp;🌡️ Temperature
 `;
 
   // Generate a Markdown table for each provider
@@ -473,8 +474,8 @@ This page displays comprehensive information about all LLM providers and models,
     }
 
     // Generate comprehensive models table
-    const headers = ['Model', 'Context', 'Output', 'Pricing ($/1M)', 'NewAPI Ratios', 'Capabilities', 'Knowledge', 'Modalities', 'Details'];
-    const separators = ['-------', '---------', '--------', '----------------', '---------------', '--------------', '-----------', '------------', '----------'];
+    const headers = ['Model', 'Model ID', 'Context', 'Output', 'Pricing ($/1M)', 'NewAPI Ratios', 'Capabilities', 'Knowledge', 'Modalities', 'Details'];
+    const separators = ['-------', '--------', '---------', '--------', '----------------', '---------------', '--------------', '-----------', '------------', '----------'];
 
     markdown += `| ${headers.join(' | ')} |\n`;
     markdown += `|${separators.join('|')}|\n`;
@@ -482,6 +483,7 @@ This page displays comprehensive information about all LLM providers and models,
     models.forEach(([modelId, model]) => {
       const fields = [
         `**${escapeMarkdownPipes(model.name || modelId)}**`,
+        escapeMarkdownPipes(modelId),
         formatLimit(model.limit?.context),
         formatLimit(model.limit?.output),
         formatPricing(model.cost),
