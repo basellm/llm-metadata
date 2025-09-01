@@ -152,6 +152,33 @@ function removeNonJsonFiles(dirPath, options = {}) {
   return { removed };
 }
 
+// Write text file if content has changed
+function writeTextIfChanged(filePath, content, { dryRun = false } = {}) {
+  ensureDirSync(path.dirname(filePath));
+
+  const existing = fs.existsSync(filePath) ? fs.readFileSync(filePath, 'utf8') : null;
+  const isChanged = existing !== content;
+
+  if (!dryRun && isChanged) {
+    fs.writeFileSync(filePath, content, 'utf8');
+  }
+
+  return isChanged;
+}
+
+// Format numeric token count to K/M string (e.g., 128K, 1M, 1.5M)
+function formatTokensToKM(value) {
+  if (typeof value !== 'number' || !isFinite(value) || value <= 0) return null;
+  if (value >= 1000000) {
+    const m = value / 1000000;
+    const out = Number.isInteger(m) ? String(m) : m.toFixed(1);
+    return `${out}M`;
+  }
+  const k = value / 1000;
+  const out = Math.round(k);
+  return `${out}K`;
+}
+
 module.exports = {
   ensureDirSync,
   readJSONSafe,
@@ -164,6 +191,8 @@ module.exports = {
   copyDirSyncIfExists,
   sanitizeFileSegment,
   removeNonJsonFiles,
+  writeTextIfChanged,
+  formatTokensToKM,
 };
 
 

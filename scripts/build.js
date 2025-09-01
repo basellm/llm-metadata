@@ -14,6 +14,8 @@ const {
   copyDirSyncIfExists,
   sanitizeFileSegment,
   removeNonJsonFiles,
+  writeTextIfChanged,
+  formatTokensToKM,
 } = require('./utils');
 
 const ROOT = path.resolve(__dirname, '..');
@@ -175,7 +177,8 @@ function formatDetails(model) {
 
 // Format context/output limits for display
 function formatLimit(value) {
-  return value ? `${(value / 1000).toFixed(0)}K` : '-';
+  const s = formatTokensToKM(value);
+  return s || '-';
 }
 
 // Escape pipe characters for markdown table safety
@@ -498,20 +501,6 @@ This page displays comprehensive information about all LLM providers and models,
   return markdown;
 }
 
-// Write text file if content has changed
-function writeTextIfChanged(filePath, content, { dryRun = false } = {}) {
-  ensureDirSync(path.dirname(filePath));
-
-  const existing = fs.existsSync(filePath) ? fs.readFileSync(filePath, 'utf8') : null;
-  const isChanged = existing !== content;
-
-  if (!dryRun && isChanged) {
-    fs.writeFileSync(filePath, content, 'utf8');
-  }
-
-  return isChanged;
-}
-
 main().catch((err) => {
   console.error(err);
   process.exit(1);
@@ -535,6 +524,10 @@ function buildNewApiTags(model) {
   if ([...inMods, ...outMods].includes('image')) tagSet.add('vision');
   if ([...inMods, ...outMods].includes('audio')) tagSet.add('audio');
   if (model.open_weights) tagSet.add('open-weights');
+  // Add context window tag: <K/M>
+  const ctx = model.limit?.context;
+  const ctxKM = formatTokensToKM(ctx);
+  if (ctxKM) tagSet.add(ctxKM);
   return Array.from(tagSet).join(',');
 }
 
