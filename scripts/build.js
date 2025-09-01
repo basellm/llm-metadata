@@ -53,6 +53,136 @@ function generateDefaultDescription(modelName, providerId) {
   return `${modelName} is an AI model provided by ${providerId}.`;
 }
 
+// Process model description with fallbacks and overrides
+function processModelDescription(modelData, modelId, providerId, descriptions, overrides, modelNameCounts, warnings) {
+  const key = modelKey(providerId, modelId);
+  let processed = { ...modelData };
+
+  // 1) Ensure every model has a description; set a default first
+  if (!processed.description) {
+    processed.description = generateDefaultDescription(processed.name || modelId, providerId);
+  }
+
+  // 2) Apply description override from external sources
+  const descModelsMap = descriptions?.models || {};
+  const descQualified = descModelsMap[key];
+  if (descQualified !== undefined) {
+    const descText = typeof descQualified === 'string' ? descQualified : (descQualified && descQualified.description);
+    if (descText) {
+      processed.description = descText;
+    }
+  } else {
+    // Try unqualified key modelId (only when globally unique)
+    const descUnqualified = descModelsMap[modelId];
+    if (descUnqualified !== undefined) {
+      const count = modelNameCounts[modelId] || 0;
+      if (count <= 1) {
+        const descText = typeof descUnqualified === 'string' ? descUnqualified : (descUnqualified && descUnqualified.description);
+        if (descText) {
+          processed.description = descText;
+        }
+      } else {
+        warnings.push(`Ambiguous description key '${modelId}' matches ${count} models; ignored. Use '${key}'.`);
+      }
+    }
+  }
+
+  // 3) Apply overrides.json (highest precedence)
+  return applyOverrides(processed, overrides.models?.[key]);
+}
+
+// Calculate NewAPI ratios for a model
+function calculateNewApiRatios(cost) {
+  if (!cost?.input || typeof cost.input !== 'number' || cost.input <= 0) {
+    return null;
+  }
+
+  const ratios = {
+    model: cost.input / 2, // baseline $2 per 1M tokens
+    completion: null,
+    cache: null
+  };
+
+  if (typeof cost.output === 'number' && cost.output > 0) {
+    ratios.completion = cost.output / cost.input;
+  }
+
+  if (typeof cost.cache_read === 'number' && cost.cache_read > 0) {
+    ratios.cache = cost.cache_read / cost.input;
+  }
+
+  return ratios;
+}
+
+// Format NewAPI ratios for display
+function formatNewApiRatios(ratios) {
+  if (!ratios) return '-';
+
+  const parts = [];
+  parts.push(`Model: ${ratios.model.toFixed(2)}×`);
+
+  if (ratios.completion !== null) {
+    parts.push(`Completion: ${ratios.completion.toFixed(2)}×`);
+  }
+
+  if (ratios.cache !== null) {
+    parts.push(`Cache: ${ratios.cache.toFixed(2)}×`);
+  }
+
+  return parts.join('<br/>');
+}
+
+// Format pricing information for display
+function formatPricing(cost) {
+  if (!cost?.input) return '-';
+
+  const input = cost.input;
+  const output = cost.output || '-';
+  const cache = cost.cache_read ? `<br/>Cache: ${cost.cache_read}` : '';
+
+  return `In: ${input}<br/>Out: ${output}${cache}`;
+}
+
+// Format capabilities for display
+function formatCapabilities(model) {
+  const capabilities = [];
+  if (model.attachment) capabilities.push('📎 Files');
+  if (model.reasoning) capabilities.push('🧠 Reasoning');
+  if (model.tool_call) capabilities.push('🔧 Tools');
+  if (model.temperature) capabilities.push('🌡️ Temp');
+
+  return capabilities.length > 0 ? capabilities.join('<br/>') : '-';
+}
+
+// Format modalities for display
+function formatModalities(modalities) {
+  const inputMods = modalities?.input?.join(', ') || 'text';
+  const outputMods = modalities?.output?.join(', ') || 'text';
+  return `In: ${inputMods}<br/>Out: ${outputMods}`;
+}
+
+// Format additional details for display
+function formatDetails(model) {
+  const details = [];
+  if (model.open_weights) details.push('Open Weights');
+  if (model.release_date) details.push(`Released: ${model.release_date}`);
+  if (model.last_updated && model.last_updated !== model.release_date) {
+    details.push(`Updated: ${model.last_updated}`);
+  }
+
+  return details.length > 0 ? details.join('<br/>') : '-';
+}
+
+// Format context/output limits for display
+function formatLimit(value) {
+  return value ? `${(value / 1000).toFixed(0)}K` : '-';
+}
+
+// Escape pipe characters for markdown table safety
+function escapeMarkdownPipes(text) {
+  return (text || '').replace(/\|/g, '\\|');
+}
+
 function mapSourceToNormalized(source) {
   // Expect a structure similar to models.dev api.json
   // Keep original keys but normalize slices we need
@@ -190,38 +320,7 @@ async function main() {
     const processedModels = {};
     const models = provider.models || {};
     for (const [modelId, modelData] of Object.entries(models)) {
-      const key = modelKey(providerId, modelId);
-      let processed = modelData;
-
-      // 1) Ensure every model has a description; set a default first
-      if (!processed.description) {
-        processed = deepMerge(processed, { description: generateDefaultDescription(processed.name || modelId, providerId) });
-      }
-
-      // 2) Apply description override
-      const descModelsMap = descriptions?.models || {};
-      const descQualified = descModelsMap[key];
-      if (descQualified !== undefined) {
-        const descText = typeof descQualified === 'string' ? descQualified : (descQualified && descQualified.description);
-        if (descText) {
-          processed = deepMerge(processed, { description: descText });
-        }
-      } else {
-        const descUnqualified = descModelsMap[modelId];
-        if (descUnqualified !== undefined) {
-          const count = modelNameCounts[modelId] || 0;
-          if (count <= 1) {
-            const descText = typeof descUnqualified === 'string' ? descUnqualified : (descUnqualified && descUnqualified.description);
-            if (descText) {
-              processed = deepMerge(processed, { description: descText });
-            }
-          }
-        }
-      }
-
-      // Apply overrides
-      processed = applyOverrides(processed, overrides.models?.[key]);
-      processedModels[modelId] = processed;
+      processedModels[modelId] = processModelDescription(modelData, modelId, providerId, descriptions, overrides, modelNameCounts, warnings);
     }
 
     allModelsData[providerId].models = processedModels;
@@ -240,20 +339,17 @@ async function main() {
     success: true
   };
 
-  for (const [providerId, provider] of Object.entries(normalized.providers || {})) {
+  for (const provider of Object.values(normalized.providers || {})) {
     const models = provider.models || {};
     for (const [modelId, modelData] of Object.entries(models)) {
-      const cost = modelData.cost;
-      if (cost && typeof cost.input === 'number' && cost.input > 0) {
-        // Model ratio = input price / 2 (baseline $2 per 1M tokens)
-        priceConversionData.data.model_ratio[modelId] = cost.input / 2;
-        // Cache ratio = cache_read / input
-        if (typeof cost.cache_read === 'number' && cost.cache_read > 0) {
-          priceConversionData.data.cache_ratio[modelId] = cost.cache_read / cost.input;
+      const ratios = calculateNewApiRatios(modelData.cost);
+      if (ratios) {
+        priceConversionData.data.model_ratio[modelId] = ratios.model;
+        if (ratios.completion !== null) {
+          priceConversionData.data.completion_ratio[modelId] = ratios.completion;
         }
-        // Completion ratio = output / input
-        if (typeof cost.output === 'number' && cost.output > 0) {
-          priceConversionData.data.completion_ratio[modelId] = cost.output / cost.input;
+        if (ratios.cache !== null) {
+          priceConversionData.data.cache_ratio[modelId] = ratios.cache;
         }
       }
     }
@@ -281,37 +377,7 @@ async function main() {
       const existingPath = path.join(providerModelsDir, `${safeModel}.json`);
       const existing = readJSONIfExists(existingPath);
 
-      let next = modelData;
-
-      // 1) Ensure every model has a description; set a default first
-      if (!next.description) {
-        next = deepMerge(next, { description: generateDefaultDescription(next.name || modelId, providerId) });
-      }
-
-      // 2) External description source override (if present)
-      const descModelsMap = descriptions?.models || {};
-      // Prefer qualified key provider/model
-      let descText;
-      const descQualified = descModelsMap[key];
-      if (descQualified !== undefined) {
-        descText = typeof descQualified === 'string' ? descQualified : (descQualified && descQualified.description);
-      } else {
-        // Otherwise try unqualified key modelId (only when globally unique)
-        const descUnqualified = descModelsMap[modelId];
-        if (descUnqualified !== undefined) {
-          const count = modelNameCounts[modelId] || 0;
-          if (count <= 1) {
-            descText = typeof descUnqualified === 'string' ? descUnqualified : (descUnqualified && descUnqualified.description);
-          } else {
-            warnings.push(`Ambiguous description key '${modelId}' matches ${count} models; ignored. Use '${key}'.`);
-          }
-        }
-      }
-      if (descText) {
-        next = deepMerge(next, { description: descText });
-      }
-      // 3) overrides.json has the highest precedence
-      next = applyOverrides(next, overrides.models?.[key]);
+      let next = processModelDescription(modelData, modelId, providerId, descriptions, overrides, modelNameCounts, warnings);
 
       if (!force && !allowAuto && existing) {
         // Skip in non-auto mode; keep existing file
@@ -343,29 +409,24 @@ async function main() {
   if (!apiOnly) {
     const dataMarkdown = generateDataMarkdown(allModelsData, providerIndex, modelIndex, manifest);
     const dataMarkdownPath = path.join(ROOT, 'docs', 'data.md');
-    if (writeMarkdownIfChanged(dataMarkdownPath, dataMarkdown, { dryRun })) changes += 1;
+    if (writeTextIfChanged(dataMarkdownPath, dataMarkdown, { dryRun })) changes += 1;
   }
 
+  const mode = dryRun ? 'check' : 'build';
+  const hasChanges = changes > 0;
+  const action = dryRun ? (hasChanges ? 'Will update' : 'No changes') : (hasChanges ? 'Updated' : 'No changes');
+  const message = hasChanges ? `${action} ${changes} file(s)` : action;
+
+  console.log(`[${mode}] ${message}`);
+
   if (dryRun) {
-    if (changes > 0) {
-      console.log(`[check] Will update ${changes} file(s)`);
-      process.exit(2); // Non-zero exit for CI to detect changes
-    } else {
-      console.log('[check] No changes');
-      process.exit(0);
-    }
-  } else {
-    if (changes > 0) {
-      console.log(`[build] Updated ${changes} file(s)`);
-    } else {
-      console.log('[build] No changes');
-    }
+    process.exit(hasChanges ? 2 : 0); // Non-zero exit for CI to detect changes
   }
 }
 
 // Generate data browser page Markdown
 function generateDataMarkdown(allModelsData, providerIndex, modelIndex, manifest) {
-  const stats = manifest.stats;
+  const { stats } = manifest;
   const lastUpdated = new Date(manifest.generatedAt).toLocaleString('en-US');
 
   let markdown = `---
@@ -393,60 +454,37 @@ This page displays comprehensive information about all LLM providers and models,
 
     markdown += `## ${provider.name}\n\n`;
 
-    // Add provider links
-    const links = [];
-    if (providerData.api) links.push(`[📖 API Address](${providerData.api})`);
-    if (providerData.doc) links.push(`[📚 Official Documentation](${providerData.doc})`);
+    // Add provider links if available
+    const links = [
+      providerData.api && `[📖 API Address](${providerData.api})`,
+      providerData.doc && `[📚 Official Documentation](${providerData.doc})`
+    ].filter(Boolean);
+
     if (links.length > 0) {
       markdown += `${links.join(' | ')}\n\n`;
     }
 
     // Generate comprehensive models table
-    markdown += `| Model | Context | Output | Pricing ($/1M) | Capabilities | Knowledge | Modalities | Details |\n`;
-    markdown += `|-------|---------|--------|----------------|--------------|-----------|------------|----------|\n`;
+    const headers = ['Model', 'Context', 'Output', 'Pricing ($/1M)', 'NewAPI Ratios', 'Capabilities', 'Knowledge', 'Modalities', 'Details'];
+    const separators = ['-------', '---------', '--------', '----------------', '---------------', '--------------', '-----------', '------------', '----------'];
+
+    markdown += `| ${headers.join(' | ')} |\n`;
+    markdown += `|${separators.join('|')}|\n`;
 
     models.forEach(([modelId, model]) => {
-      const name = (model.name || modelId).replace(/\|/g, '\\|');
+      const fields = [
+        `**${escapeMarkdownPipes(model.name || modelId)}**`,
+        formatLimit(model.limit?.context),
+        formatLimit(model.limit?.output),
+        formatPricing(model.cost),
+        formatNewApiRatios(calculateNewApiRatios(model.cost)),
+        formatCapabilities(model),
+        model.knowledge || '-',
+        formatModalities(model.modalities),
+        formatDetails(model)
+      ];
 
-      // Context and output limits
-      const contextLimit = model.limit?.context ? `${(model.limit.context / 1000).toFixed(0)}K` : '-';
-      const outputLimit = model.limit?.output ? `${(model.limit.output / 1000).toFixed(0)}K` : '-';
-
-      // Pricing information
-      let pricing = '-';
-      if (model.cost?.input) {
-        const input = model.cost.input.toFixed(3);
-        const output = model.cost.output ? model.cost.output.toFixed(3) : '-';
-        const cache = model.cost.cache_read ? `<br/>Cache: ${model.cost.cache_read.toFixed(3)}` : '';
-        pricing = `In: ${input}<br/>Out: ${output}${cache}`;
-      }
-
-      // Capabilities
-      const capabilities = [];
-      if (model.attachment) capabilities.push('📎 Files');
-      if (model.reasoning) capabilities.push('🧠 Reasoning');
-      if (model.tool_call) capabilities.push('🔧 Tools');
-      if (model.temperature) capabilities.push('🌡️ Temp');
-      const capabilityStr = capabilities.length > 0 ? capabilities.join('<br/>') : '-';
-
-      // Knowledge cutoff
-      const knowledge = model.knowledge || '-';
-
-      // Modalities
-      const inputMods = model.modalities?.input?.join(', ') || 'text';
-      const outputMods = model.modalities?.output?.join(', ') || 'text';
-      const modalities = `In: ${inputMods}<br/>Out: ${outputMods}`;
-
-      // Additional details
-      const details = [];
-      if (model.open_weights) details.push('Open Weights');
-      if (model.release_date) details.push(`Released: ${model.release_date}`);
-      if (model.last_updated && model.last_updated !== model.release_date) {
-        details.push(`Updated: ${model.last_updated}`);
-      }
-      const detailsStr = details.length > 0 ? details.join('<br/>') : '-';
-
-      markdown += `| **${name}** | ${contextLimit} | ${outputLimit} | ${pricing} | ${capabilityStr} | ${knowledge} | ${modalities} | ${detailsStr} |\n`;
+      markdown += `| ${fields.join(' | ')} |\n`;
     });
 
     markdown += '\n';
@@ -455,31 +493,18 @@ This page displays comprehensive information about all LLM providers and models,
   return markdown;
 }
 
-// Write Markdown file if content has changed
-function writeMarkdownIfChanged(filePath, content, options = {}) {
-  const { dryRun = false } = options;
-
+// Write text file if content has changed
+function writeTextIfChanged(filePath, content, { dryRun = false } = {}) {
   ensureDirSync(path.dirname(filePath));
 
-  const existing = readFileIfExists(filePath);
-  if (existing === content) {
-    return false; // No changes
-  }
+  const existing = fs.existsSync(filePath) ? fs.readFileSync(filePath, 'utf8') : null;
+  const isChanged = existing !== content;
 
-  if (!dryRun) {
+  if (!dryRun && isChanged) {
     fs.writeFileSync(filePath, content, 'utf8');
   }
 
-  return true; // Content changed
-}
-
-// Read file if it exists
-function readFileIfExists(filePath) {
-  try {
-    return fs.readFileSync(filePath, 'utf8');
-  } catch (e) {
-    return null;
-  }
+  return isChanged;
 }
 
 main().catch((err) => {
