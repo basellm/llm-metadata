@@ -2,7 +2,7 @@
 
 > A lightweight static API for discovering and integrating LLM metadata. Live API: [basellm.github.io/llm-metadata](https://basellm.github.io/llm-metadata/)
 
-[中文文档](README.zh-CN.md) | English
+English | [中文文档](README.zh-CN.md) | [日本語](README.ja.md)
 
 High-throughput friendly, static-by-default interface: rebuild on change; serve static JSON via GitHub Pages.
 

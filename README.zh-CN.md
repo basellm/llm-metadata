@@ -2,7 +2,7 @@
 
 > 轻量级的 LLM 元数据“静态 API”。线上地址：[basellm.github.io/llm-metadata →](https://basellm.github.io/llm-metadata/)
 
-中文文档 | [English](README.md)
+[中文文档](README.zh-CN.md) | [English](README.md) | [日本語](README.ja.md)
 
 面向高并发的静态接口：仅在源数据或配置变化时重建，其余时间通过 GitHub Pages 提供静态 JSON。
 
