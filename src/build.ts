@@ -317,7 +317,12 @@ class Builder {
           } as Record<string, string>;
           const outDir = join(i18nBase, locale, 'newapi');
           ensureDirSync(outDir);
-          const payload = this.newApiBuilder.buildSyncPayload(allModelsData, tagMap);
+          const localized = this.dataProcessor.localizeNormalizedData(
+            allModelsData,
+            overrides,
+            locale,
+          );
+          const payload = this.newApiBuilder.buildSyncPayload(localized, tagMap);
           if (
             writeJSONIfChanged(
               join(outDir, 'vendors.json'),
