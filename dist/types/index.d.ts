@@ -69,6 +69,29 @@ export interface PolicyConfig {
 export interface OverrideConfig {
     providers?: Record<string, Partial<ProviderBase>>;
     models?: Record<string, Partial<Model>>;
+    /** 可选的文案本地化覆写 */
+    i18n?: {
+        providers?: Record<string, I18nOverrideEntity>;
+        models?: Record<ModelKey, I18nOverrideEntity>;
+    };
+}
+/** 本地化文本映射 */
+export interface I18nTextMap {
+    [locale: string]: string | undefined;
+}
+/** 本地化覆写实体（仅支持 name/description） */
+export interface I18nOverrideEntity {
+    name?: I18nTextMap;
+    description?: I18nTextMap;
+}
+export interface I18nLocaleConfig {
+    locale: string;
+    name?: string;
+    default?: boolean;
+    site_name?: string;
+}
+export interface I18nConfig {
+    locales: I18nLocaleConfig[];
 }
 /** 提供商索引项 */
 export interface ProviderIndexItem {
@@ -102,8 +125,6 @@ export interface IndexOutput {
 export interface ProvidersOutput {
     providers: ProviderIndexItem[];
 }
-/** 完整数据输出 (models.dev 格式) */
-export type AllModelsOutput = Record<string, Provider>;
 /** NewAPI 供应商数据 */
 export interface NewApiVendor {
     name: string;
@@ -173,12 +194,4 @@ export interface BuildConfig {
 }
 /** 模型键 */
 export type ModelKey = `${string}/${string}`;
-/** 工具函数类型 */
-export interface ModelKeyHelper {
-    create: (providerId: string, modelId: string) => ModelKey;
-    parse: (key: ModelKey) => {
-        providerId: string;
-        modelId: string;
-    };
-}
 //# sourceMappingURL=index.d.ts.map

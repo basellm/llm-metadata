@@ -81,6 +81,53 @@ export interface PolicyConfig {
 export interface OverrideConfig {
   providers?: Record<string, Partial<ProviderBase>>;
   models?: Record<string, Partial<Model>>;
+  /** 可选的文案本地化覆写 */
+  i18n?: {
+    providers?: Record<string, I18nOverrideEntity>;
+    models?: Record<ModelKey, I18nOverrideEntity>;
+  };
+}
+
+/** 本地化文本映射 */
+export interface I18nTextMap {
+  [locale: string]: string | undefined;
+}
+
+/** 本地化覆写实体（仅支持 name/description） */
+export interface I18nOverrideEntity {
+  name?: I18nTextMap;
+  description?: I18nTextMap;
+}
+
+// === i18n 配置类型 ===
+
+export interface I18nLocaleConfig {
+  locale: string;
+  name?: string;
+  default?: boolean;
+  site_name?: string;
+}
+
+export interface I18nConfig {
+  locales: I18nLocaleConfig[];
+}
+
+// === API i18n 词典类型 ===
+
+export interface ApiI18nCapabilityLabels {
+  tools?: string;
+  files?: string;
+  reasoning?: string;
+  temperature?: string;
+}
+
+export interface ApiI18nDefaults {
+  model_description?: string; // 模板：例如 "${modelName} is an AI model provided by ${providerId}."
+}
+
+export interface ApiI18nMessages {
+  capability_labels?: ApiI18nCapabilityLabels;
+  defaults?: ApiI18nDefaults;
 }
 
 // === 输出接口类型 ===
@@ -120,9 +167,6 @@ export interface IndexOutput {
 export interface ProvidersOutput {
   providers: ProviderIndexItem[];
 }
-
-/** 完整数据输出 (models.dev 格式) */
-export type AllModelsOutput = Record<string, Provider>;
 
 // === NewAPI 相关类型 ===
 
@@ -208,9 +252,3 @@ export interface BuildConfig {
 
 /** 模型键 */
 export type ModelKey = `${string}/${string}`;
-
-/** 工具函数类型 */
-export interface ModelKeyHelper {
-  create: (providerId: string, modelId: string) => ModelKey;
-  parse: (key: ModelKey) => { providerId: string; modelId: string };
-}

@@ -1,4 +1,5 @@
 import type {
+  I18nOverrideEntity,
   Model,
   ModelKey,
   NormalizedData,
@@ -7,10 +8,17 @@ import type {
   Provider,
   SourceData,
 } from '../types/index.js';
+import { I18nService } from './i18n-service.js';
 import { deepMerge } from '../utils/object-utils.js';
 
 /** 数据处理服务 */
 export class DataProcessor {
+  private readonly i18n: I18nService;
+  constructor() {
+    // 使用项目根默认：运行时由 build.ts 实例化 DataProcessor 后，不会传 root；
+    // 这里在需要 API i18n 时，读取 "i18n/api/*.json" 的英文兜底模板。
+    this.i18n = new I18nService(process.cwd());
+  }
   /** 创建模型键 */
   private createModelKey(providerId: string, modelId: string): ModelKey {
     return `${providerId}/${modelId}` as ModelKey;
@@ -18,7 +26,25 @@ export class DataProcessor {
 
   /** 生成默认描述 */
   private generateDefaultDescription(modelName: string, providerId: string): string {
-    return `${modelName} is an AI model provided by ${providerId}.`;
+    const apiMsg = this.i18n.getApiMessages('en');
+    const tpl =
+      apiMsg.defaults?.model_description ||
+      '${modelName} is an AI model provided by ${providerId}.';
+    return tpl.replace('${modelName}', modelName).replace('${providerId}', providerId);
+  }
+
+  /** 按 locale 生成默认描述（fallback 到英文模板） */
+  private generateDefaultDescriptionForLocale(
+    locale: string,
+    modelName: string,
+    providerId: string,
+  ): string {
+    const msg = this.i18n.getApiMessages(locale);
+    const tpl =
+      msg.defaults?.model_description ||
+      this.i18n.getApiMessages('en').defaults?.model_description ||
+      '${modelName} is an AI model provided by ${providerId}.';
+    return tpl.replace('${modelName}', modelName).replace('${providerId}', providerId);
   }
 
   /** 检查是否允许自动更新 */
@@ -47,7 +73,7 @@ export class DataProcessor {
     overrides: OverrideConfig,
   ): Model {
     const modelKey = this.createModelKey(providerId, modelId);
-    const processed = { ...modelData };
+    let processed = { ...modelData };
 
     // 确保每个模型都有描述
     if (!processed.description) {
@@ -58,7 +84,16 @@ export class DataProcessor {
     }
 
     // 应用模型级覆写
-    return this.applyOverrides(processed, overrides.models?.[modelKey]);
+    processed = this.applyOverrides(processed, overrides.models?.[modelKey]);
+
+    // 应用 i18n 文案（若存在，将默认英文写回 name/description；其它语言在 JSON i18n 时再切换）
+    const i18nModel: I18nOverrideEntity | undefined = overrides.i18n?.models?.[modelKey];
+    if (i18nModel) {
+      if (i18nModel.name?.en) processed.name = i18nModel.name.en;
+      if (i18nModel.description?.en) processed.description = i18nModel.description.en;
+    }
+
+    return processed;
   }
 
   /** 处理单个提供商数据 */
@@ -131,5 +166,66 @@ export class DataProcessor {
     }
 
     return { providers: processed };
+  }
+
+  /** 根据 locale 应用 i18n 文案到标准化数据（返回深拷贝后的新对象） */
+  localizeNormalizedData(
+    data: NormalizedData,
+    overrides: OverrideConfig,
+    locale: string,
+  ): NormalizedData {
+    const localizedProviders: Record<string, Provider> = {};
+    const apiMsg = this.i18n.getApiMessages(locale);
+    const capLabels = apiMsg.capability_labels || {};
+
+    for (const [providerId, provider] of Object.entries(data.providers)) {
+      const provI18n: I18nOverrideEntity | undefined = overrides.i18n?.providers?.[providerId];
+      const name = provI18n?.name?.[locale] ?? provider.name;
+      const description = provI18n?.description?.[locale] ?? provider.description;
+
+      const localizedModels: Record<string, Model> = {};
+      for (const [modelId, model] of Object.entries(provider.models || {})) {
+        const key = this.createModelKey(providerId, modelId);
+        const modI18n: I18nOverrideEntity | undefined = overrides.i18n?.models?.[key];
+        const modelName = modI18n?.name?.[locale];
+        const modelDesc = modI18n?.description?.[locale];
+        const newModel: Model = { ...model };
+        if (modelName !== undefined) newModel.name = modelName;
+        if (modelDesc !== undefined) {
+          newModel.description = modelDesc;
+        } else {
+          // 若原描述等于英文默认描述，则替换为对应语言模板
+          const baseName = newModel.name || modelId;
+          const enDefault = this.generateDefaultDescription(baseName, providerId);
+          if (newModel.description === enDefault) {
+            newModel.description = this.generateDefaultDescriptionForLocale(
+              locale,
+              baseName,
+              providerId,
+            );
+          }
+        }
+
+        const abilityLabels: string[] = [];
+        if (newModel.tool_call && capLabels.tools) abilityLabels.push(capLabels.tools);
+        if (newModel.attachment && capLabels.files) abilityLabels.push(capLabels.files);
+        if (newModel.reasoning && capLabels.reasoning) abilityLabels.push(capLabels.reasoning);
+        if (newModel.temperature && capLabels.temperature)
+          abilityLabels.push(capLabels.temperature);
+        if (abilityLabels.length > 0) {
+          (newModel as any).capabilities_label = abilityLabels.join(', ');
+        }
+        localizedModels[modelId] = newModel;
+      }
+
+      localizedProviders[providerId] = {
+        ...provider,
+        ...(name ? { name } : {}),
+        ...(description ? { description } : {}),
+        models: localizedModels,
+      };
+    }
+
+    return { providers: localizedProviders };
   }
 }

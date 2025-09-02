@@ -28,6 +28,73 @@ npm run build
 - `npm run compile`：仅编译 TypeScript
 - `npm run dev`：监听模式编译
 
+## 国际化（文档与 API）
+
+文档 i18n 由 `i18n/docs/*.json` 与 `i18n/locales.json` 驱动，并通过 mkdocs-static-i18n 发布；API i18n 由 `i18n/api/*.json` 与 `data/overrides.json` 驱动。
+
+### 目录与配置
+
+```
+i18n/
+  locales.json          # 语言清单（唯一真相来源）
+  docs/
+    en.json             # 文档 UI 词条（兜底）
+    zh.json
+    ja.json
+  api/
+    en.json             # 能力标签 + 默认描述模板
+    zh.json
+    ja.json
+docs/
+  en/ index.md data.md
+  zh/ index.md data.md
+  ja/ index.md data.md
+```
+
+### 新增语言（以 `fr` 为例）
+
+1）在 `i18n/locales.json` 增加：
+
+```json
+{
+  "locales": [
+    { "locale": "en", "default": true },
+    { "locale": "zh" },
+    { "locale": "ja" },
+    { "locale": "fr" }
+  ]
+}
+```
+
+2）复制 `i18n/docs/en.json` 为 `i18n/docs/fr.json` 并翻译
+3）复制 `i18n/api/en.json` 为 `i18n/api/fr.json` 并翻译（包含 capability labels 与默认描述模板）
+4）添加 `docs/fr/index.md` 与空白 `docs/fr/data.md`（构建时自动生成）
+5）可选：在 `mkdocs.yml` 为 `fr` 添加 `nav_translations`
+6）构建：`npm run build`
+
+### API i18n 细节
+
+- 能力标签来自 `i18n/api/<locale>.json`，应用于：
+  - 显式 `model.tags`
+  - 布尔能力：tools/files/reasoning/temperature/open_weights
+  - 模态衍生标签：vision/audio
+- 本地化 API 数据输出：
+  - `dist/api/i18n/<locale>/all.json`
+  - `dist/api/i18n/<locale>/providers.json`、`index.json`
+  - 拆分文件：`dist/api/i18n/<locale>/{providers,models}/...`
+- NewAPI 载荷：
+  - 英文（稳定）：`dist/api/newapi/{vendors.json,models.json}`
+  - 本地化：`dist/api/i18n/<locale>/newapi/{vendors.json,models.json}`
+- 默认描述模板（支持占位符）：
+  - `i18n/api/<locale>.json` → `defaults.model_description`，占位 `${modelName}`、`${providerId}`
+  - 若某模型描述等于英文默认描述，本地化构建将自动替换为对应语言模板
+
+### 文档 i18n（mkdocs）
+
+- 词条来自 `i18n/docs/<locale>.json`；缺失键自动回退英文
+- `npm run build` 自动输出 `docs/<locale>/data.md`
+- 预览文档：`pip install -r requirements.txt` 后执行 `mkdocs serve`
+
 ## 更新模式
 
 - 手动模式：直接编辑 `data/**`，推送到主分支后 CI 自动构建与发布

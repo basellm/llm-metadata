@@ -30,13 +30,22 @@ export class DataProcessor {
     /** 处理单个模型数据 */
     processModel(modelData, modelId, providerId, overrides) {
         const modelKey = this.createModelKey(providerId, modelId);
-        const processed = { ...modelData };
+        let processed = { ...modelData };
         // 确保每个模型都有描述
         if (!processed.description) {
             processed.description = this.generateDefaultDescription(processed.name || modelId, providerId);
         }
         // 应用模型级覆写
-        return this.applyOverrides(processed, overrides.models?.[modelKey]);
+        processed = this.applyOverrides(processed, overrides.models?.[modelKey]);
+        // 应用 i18n 文案（若存在，将默认英文写回 name/description；其它语言在 JSON i18n 时再切换）
+        const i18nModel = overrides.i18n?.models?.[modelKey];
+        if (i18nModel) {
+            if (i18nModel.name?.en)
+                processed.name = i18nModel.name.en;
+            if (i18nModel.description?.en)
+                processed.description = i18nModel.description.en;
+        }
+        return processed;
     }
     /** 处理单个提供商数据 */
     processProvider(provider, providerId, overrides, sourceProviderIds) {
@@ -84,6 +93,35 @@ export class DataProcessor {
             processed[providerId] = this.processProvider(provider, providerId, overrides, sourceProviderIds);
         }
         return { providers: processed };
+    }
+    /** 根据 locale 应用 i18n 文案到标准化数据（返回深拷贝后的新对象） */
+    localizeNormalizedData(data, overrides, locale) {
+        const localizedProviders = {};
+        for (const [providerId, provider] of Object.entries(data.providers)) {
+            const provI18n = overrides.i18n?.providers?.[providerId];
+            const name = provI18n?.name?.[locale] ?? provider.name;
+            const description = provI18n?.description?.[locale] ?? provider.description;
+            const localizedModels = {};
+            for (const [modelId, model] of Object.entries(provider.models || {})) {
+                const key = this.createModelKey(providerId, modelId);
+                const modI18n = overrides.i18n?.models?.[key];
+                const modelName = modI18n?.name?.[locale];
+                const modelDesc = modI18n?.description?.[locale];
+                const newModel = { ...model };
+                if (modelName !== undefined)
+                    newModel.name = modelName;
+                if (modelDesc !== undefined)
+                    newModel.description = modelDesc;
+                localizedModels[modelId] = newModel;
+            }
+            localizedProviders[providerId] = {
+                ...provider,
+                ...(name ? { name } : {}),
+                ...(description ? { description } : {}),
+                models: localizedModels,
+            };
+        }
+        return { providers: localizedProviders };
     }
 }
 //# sourceMappingURL=data-processor.js.map

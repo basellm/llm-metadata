@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
 import { DataLoader } from './services/data-loader.js';
@@ -8,7 +8,8 @@ import { DataProcessor } from './services/data-processor.js';
 import { DocumentationGenerator } from './services/docs-generator.js';
 import { IndexBuilder } from './services/index-builder.js';
 import { NewApiBuilder } from './services/newapi-builder.js';
-import type { BuildConfig, BuildManifest } from './types/index.js';
+import { I18nService } from './services/i18n-service.js';
+import type { BuildConfig, BuildManifest, NormalizedData, PolicyConfig } from './types/index.js';
 import { parseArgv } from './utils/cli-utils.js';
 import {
   copyDirSyncIfExists,
@@ -34,6 +35,7 @@ class Builder {
   private readonly indexBuilder: IndexBuilder;
   private readonly newApiBuilder: NewApiBuilder;
   private readonly docsGenerator: DocumentationGenerator;
+  private readonly i18nService: I18nService;
 
   constructor() {
     this.ROOT = resolve(process.cwd());
@@ -47,6 +49,95 @@ class Builder {
     this.indexBuilder = new IndexBuilder();
     this.newApiBuilder = new NewApiBuilder();
     this.docsGenerator = new DocumentationGenerator(this.ROOT);
+    this.i18nService = new I18nService(this.ROOT);
+  }
+
+  /** 校验 mkdocs.yml 中的语言与 i18n/locales.json 一致性，返回警告 */
+  private validateMkdocsLocales(expectedLocales: string[]): string[] {
+    const warnings: string[] = [];
+    try {
+      const mkdocsPath = join(this.ROOT, 'mkdocs.yml');
+      const content = readFileSync(mkdocsPath, 'utf8');
+
+      const pluginLocales = Array.from(content.matchAll(/-\s*locale:\s*([A-Za-z0-9_-]+)/g)).map(
+        (m) => m[1],
+      );
+      const altLocales = Array.from(content.matchAll(/\blang:\s*([A-Za-z0-9_-]+)/g)).map(
+        (m) => m[1],
+      );
+
+      const uniq = (arr: string[]) => Array.from(new Set(arr));
+      const expected = new Set(expectedLocales);
+      const plugin = new Set(uniq(pluginLocales));
+      const alternate = new Set(uniq(altLocales));
+
+      const diff = (a: Set<string>, b: Set<string>) => Array.from(a).filter((x) => !b.has(x));
+
+      const missingInPlugin = diff(expected, plugin);
+      const extraInPlugin = diff(plugin, expected);
+      const missingInAlternate = diff(expected, alternate);
+      const extraInAlternate = diff(alternate, expected);
+
+      if (missingInPlugin.length)
+        warnings.push(`mkdocs i18n.languages missing: ${missingInPlugin.join(', ')}`);
+      if (extraInPlugin.length)
+        warnings.push(`mkdocs i18n.languages extra: ${extraInPlugin.join(', ')}`);
+      if (missingInAlternate.length)
+        warnings.push(`mkdocs extra.alternate missing: ${missingInAlternate.join(', ')}`);
+      if (extraInAlternate.length)
+        warnings.push(`mkdocs extra.alternate extra: ${extraInAlternate.join(', ')}`);
+    } catch (e) {
+      warnings.push(`Failed to validate mkdocs.yml locales: ${(e as Error).message}`);
+    }
+    return warnings;
+  }
+
+  /** 写入提供商和模型文件（返回变更数） */
+  private writeProvidersAndModels(
+    baseDir: string,
+    dataset: NormalizedData,
+    policy: PolicyConfig,
+    sourceProviderIds: Set<string>,
+    options: { dryRun?: boolean },
+  ): number {
+    let changes = 0;
+    for (const [providerId, provider] of Object.entries(dataset.providers)) {
+      const safeProvider = sanitizeFileSegment(providerId);
+
+      // 提供商文件
+      let providerOut = { ...provider } as any;
+      if (sourceProviderIds.has(providerId)) {
+        providerOut = {
+          ...providerOut,
+          iconURL: `https://models.dev/logos/${providerId}.svg`,
+        };
+      }
+      const providerPath = join(baseDir, 'providers', `${safeProvider}.json`);
+      if (writeJSONIfChanged(providerPath, providerOut, options)) {
+        changes++;
+      }
+
+      // 模型文件
+      const providerModelsDir = join(baseDir, 'models', safeProvider);
+      ensureDirSync(providerModelsDir);
+      removeNonJsonFiles(providerModelsDir, options);
+
+      for (const [modelId, modelData] of Object.entries(provider.models || {})) {
+        const allowAuto = this.dataProcessor.shouldAutoUpdate(policy, providerId, modelId);
+        const existing = this.dataLoader.readJSONSafe(
+          join(providerModelsDir, `${sanitizeFileSegment(modelId)}.json`),
+          null as any,
+        );
+        if (!options.dryRun && !allowAuto && existing) {
+          continue;
+        }
+        const modelPath = join(providerModelsDir, `${sanitizeFileSegment(modelId)}.json`);
+        if (writeJSONIfChanged(modelPath, modelData, options)) {
+          changes++;
+        }
+      }
+    }
+    return changes;
   }
 
   /** 计算构建清单 */
@@ -149,12 +240,44 @@ class Builder {
         changes++;
       }
 
+      // 写入 i18n 版本的完整数据与索引（按配置 locales 循环）
+      {
+        const i18nDir = join(this.API_DIR, 'i18n');
+        ensureDirSync(i18nDir);
+        const locales = this.i18nService.getLocales().map((l: { locale: string }) => l.locale);
+        for (const locale of locales) {
+          const allLocalized = this.dataProcessor.localizeNormalizedData(
+            allModelsData,
+            overrides,
+            locale,
+          );
+          const outDir = join(i18nDir, locale);
+          ensureDirSync(outDir);
+          if (writeJSONIfChanged(join(outDir, 'all.json'), allLocalized.providers, { dryRun })) {
+            changes++;
+          }
+          const indexesLoc = this.indexBuilder.buildIndexes(allLocalized, overrides);
+          const providersOutLoc = this.indexBuilder.buildProvidersOutput(indexesLoc);
+          if (writeJSONIfChanged(join(outDir, 'index.json'), indexesLoc, { dryRun })) {
+            changes++;
+          }
+          if (writeJSONIfChanged(join(outDir, 'providers.json'), providersOutLoc, { dryRun })) {
+            changes++;
+          }
+        }
+      }
+
       // 生成 NewAPI 接口
       console.log('Generating NewAPI endpoints...');
       const newapiDir = join(this.API_DIR, 'newapi');
       ensureDirSync(newapiDir);
 
-      const newapiSync = this.newApiBuilder.buildSyncPayload(allModelsData);
+      // 基于默认英文映射生成 tags（保持 NewAPI 输出稳定性）
+      const apiI18nEn = this.i18nService.getApiMessages('en');
+      const tagMapEn: Record<string, string> = {
+        ...(apiI18nEn.capability_labels || {}),
+      } as Record<string, string>;
+      const newapiSync = this.newApiBuilder.buildSyncPayload(allModelsData, tagMapEn);
       if (
         writeJSONIfChanged(
           join(newapiDir, 'vendors.json'),
@@ -180,6 +303,40 @@ class Builder {
         writeJSONIfChanged(join(newapiDir, 'ratio_config-v1-base.json'), priceConfig, { dryRun })
       ) {
         changes++;
+      }
+
+      // 生成多语言 NewAPI（按 locales 输出至 api/i18n/<locale>/newapi）
+      {
+        const locales = this.i18nService.getLocales().map((l: { locale: string }) => l.locale);
+        const i18nBase = join(this.API_DIR, 'i18n');
+        ensureDirSync(i18nBase);
+        for (const locale of locales) {
+          const apiMsg = this.i18nService.getApiMessages(locale);
+          const tagMap: Record<string, string> = {
+            ...(apiMsg.capability_labels || {}),
+          } as Record<string, string>;
+          const outDir = join(i18nBase, locale, 'newapi');
+          ensureDirSync(outDir);
+          const payload = this.newApiBuilder.buildSyncPayload(allModelsData, tagMap);
+          if (
+            writeJSONIfChanged(
+              join(outDir, 'vendors.json'),
+              { success: true, message: '', data: payload.vendors },
+              { dryRun },
+            )
+          ) {
+            changes++;
+          }
+          if (
+            writeJSONIfChanged(
+              join(outDir, 'models.json'),
+              { success: true, message: '', data: payload.models },
+              { dryRun },
+            )
+          ) {
+            changes++;
+          }
+        }
       }
 
       // 写入单独的提供商和模型文件
@@ -224,6 +381,25 @@ class Builder {
           }
         }
       }
+
+      // 写入 i18n 的提供商与模型文件
+      {
+        console.log('Writing i18n provider and model files...');
+        const locales = this.i18nService.getLocales().map((l: { locale: string }) => l.locale);
+        const i18nDir = join(this.API_DIR, 'i18n');
+        for (const locale of locales) {
+          const outDir = join(i18nDir, locale);
+          ensureDirSync(outDir);
+          const localized = this.dataProcessor.localizeNormalizedData(
+            allModelsData,
+            overrides,
+            locale,
+          );
+          changes += this.writeProvidersAndModels(outDir, localized, policy, sourceProviderIds, {
+            dryRun,
+          });
+        }
+      }
     }
 
     // 生成构建清单
@@ -249,14 +425,18 @@ class Builder {
     // 生成文档
     if (!apiOnly) {
       console.log('Generating documentation...');
-      const dataMarkdown = this.docsGenerator.generateDataMarkdown(
-        allModelsData,
-        indexes.providers,
-        manifest,
-      );
-      const dataMarkdownPath = join(this.ROOT, 'docs', 'data.md');
-      if (writeTextIfChanged(dataMarkdownPath, dataMarkdown, { dryRun })) {
-        changes++;
+      const locales = this.i18nService.getLocales().map((l: { locale: string }) => l.locale);
+      for (const locale of locales) {
+        const md = this.docsGenerator.generateDataMarkdown(
+          allModelsData,
+          indexes.providers,
+          manifest,
+          locale,
+        );
+        const outPath = join(this.ROOT, 'docs', locale, 'data.md');
+        if (writeTextIfChanged(outPath, md, { dryRun })) {
+          changes++;
+        }
       }
     }
 
@@ -270,6 +450,15 @@ class Builder {
       : hasChanges
         ? 'Updated'
         : 'No changes';
+    // i18n 文档词条与 mkdocs 语言一致性校验（警告不影响结果）
+    {
+      const locales = this.i18nService.getLocales().map((l: { locale: string }) => l.locale);
+      const i18nWarnings = this.i18nService.validateDocMessages(locales);
+      if (i18nWarnings.length > 0) warnings.push(...i18nWarnings);
+      const mkdocsWarnings = this.validateMkdocsLocales(locales);
+      if (mkdocsWarnings.length > 0) warnings.push(...mkdocsWarnings);
+    }
+
     const message = hasChanges ? `${action} ${changes} file(s)` : action;
 
     console.log(`[${mode}] ${message}`);

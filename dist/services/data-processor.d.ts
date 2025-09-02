@@ -19,5 +19,7 @@ export declare class DataProcessor {
     injectManualProviders(normalized: NormalizedData, overrides: OverrideConfig): NormalizedData;
     /** 处理所有数据 */
     processAllData(normalized: NormalizedData, overrides: OverrideConfig, sourceProviderIds: Set<string>): NormalizedData;
+    /** 根据 locale 应用 i18n 文案到标准化数据（返回深拷贝后的新对象） */
+    localizeNormalizedData(data: NormalizedData, overrides: OverrideConfig, locale: string): NormalizedData;
 }
 //# sourceMappingURL=data-processor.d.ts.map

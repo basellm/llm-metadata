@@ -4,6 +4,7 @@ import type {
   NormalizedData,
   ProviderIndexItem,
 } from '../types/index.js';
+import { I18nService } from './i18n-service.js';
 import {
   escapeMarkdownPipes,
   formatCapabilities,
@@ -15,8 +16,9 @@ import {
 
 /** 文档生成服务 */
 export class DocumentationGenerator {
-  constructor(_rootDir: string) {
-    // rootDir 保留以备将来使用
+  private readonly i18n: I18nService;
+  constructor(rootDir: string) {
+    this.i18n = new I18nService(rootDir);
   }
 
   /** 计算 NewAPI 比率（文档用） */
@@ -69,25 +71,33 @@ export class DocumentationGenerator {
     allModelsData: NormalizedData,
     providerIndex: ProviderIndexItem[],
     manifest: BuildManifest,
+    locale: string = 'en',
   ): string {
     const { stats } = manifest;
-    const lastUpdated = new Date(manifest.generatedAt).toLocaleString('en-US');
+    const lastUpdated = new Date(manifest.generatedAt).toLocaleString(
+      this.i18n.getDateLocale(locale),
+    );
+
+    const messages = this.i18n.getDocMessages(locale);
+    const tr = (key: string): string => messages[key] || key;
 
     let markdown = `---
 hide:
   - navigation
 ---
 
-# Data Browser
+# ${tr('title.data')}
 
-This page displays comprehensive information about all LLM providers and models, automatically generated from API data.
+${tr('intro.data')}
 
-!!! info "Statistics"
-    - **Provider Count**: ${stats.providers}
-    - **Model Count**: ${stats.models}
-    - **Last Updated**: ${lastUpdated}
+!!! info "${tr('stats.title')}"
+    - **${tr('stats.providers')}**: ${stats.providers}
+    - **${tr('stats.models')}**: ${stats.models}
+    - **${tr('stats.updated')}**: ${lastUpdated}
 
-**Capabilities Legend**: 🧠 Reasoning &nbsp;&nbsp;🔧 Tools &nbsp;&nbsp;📎 Files &nbsp;&nbsp;🌡️ Temperature
+**${tr('legend.title')}**: 🧠 ${tr('legend.reasoning')} &nbsp;&nbsp;🔧 ${tr(
+      'legend.tools',
+    )} &nbsp;&nbsp;📎 ${tr('legend.files')} &nbsp;&nbsp;🌡️ ${tr('legend.temperature')}
 
 `;
 
@@ -103,8 +113,8 @@ This page displays comprehensive information about all LLM providers and models,
 
       // 添加提供商链接
       const links = [
-        providerData.api && `[📖 API Address](${providerData.api})`,
-        providerData.doc && `[📚 Official Documentation](${providerData.doc})`,
+        providerData.api && `[${tr('link.api')}](${providerData.api})`,
+        providerData.doc && `[${tr('link.doc')}](${providerData.doc})`,
       ].filter(Boolean);
 
       if (links.length > 0) {
@@ -113,16 +123,16 @@ This page displays comprehensive information about all LLM providers and models,
 
       // 生成综合模型表格
       const headers = [
-        'Model',
-        'Model ID',
-        'Context',
-        'Output',
-        'Pricing ($/1M)',
-        'NewAPI Ratios',
-        'Capabilities',
-        'Knowledge',
-        'Modalities',
-        'Details',
+        tr('table.model'),
+        tr('table.modelId'),
+        tr('table.context'),
+        tr('table.output'),
+        tr('table.pricing'),
+        tr('table.ratios'),
+        tr('table.capabilities'),
+        tr('table.knowledge'),
+        tr('table.modalities'),
+        tr('table.details'),
       ];
       const separators = [
         '-------',
