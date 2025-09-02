@@ -1,13 +1,31 @@
+import { I18nService } from './i18n-service.js';
 import { deepMerge } from '../utils/object-utils.js';
 /** 数据处理服务 */
 export class DataProcessor {
+    i18n;
+    constructor() {
+        // 使用项目根默认：运行时由 build.ts 实例化 DataProcessor 后，不会传 root；
+        // 这里在需要 API i18n 时，读取 "i18n/api/*.json" 的英文兜底模板。
+        this.i18n = new I18nService(process.cwd());
+    }
     /** 创建模型键 */
     createModelKey(providerId, modelId) {
         return `${providerId}/${modelId}`;
     }
     /** 生成默认描述 */
     generateDefaultDescription(modelName, providerId) {
-        return `${modelName} is an AI model provided by ${providerId}.`;
+        const apiMsg = this.i18n.getApiMessages('en');
+        const tpl = apiMsg.defaults?.model_description ||
+            '${modelName} is an AI model provided by ${providerId}.';
+        return tpl.replace('${modelName}', modelName).replace('${providerId}', providerId);
+    }
+    /** 按 locale 生成默认描述（fallback 到英文模板） */
+    generateDefaultDescriptionForLocale(locale, modelName, providerId) {
+        const msg = this.i18n.getApiMessages(locale);
+        const tpl = msg.defaults?.model_description ||
+            this.i18n.getApiMessages('en').defaults?.model_description ||
+            '${modelName} is an AI model provided by ${providerId}.';
+        return tpl.replace('${modelName}', modelName).replace('${providerId}', providerId);
     }
     /** 检查是否允许自动更新 */
     shouldAutoUpdate(policy, providerId, modelId) {
@@ -97,6 +115,8 @@ export class DataProcessor {
     /** 根据 locale 应用 i18n 文案到标准化数据（返回深拷贝后的新对象） */
     localizeNormalizedData(data, overrides, locale) {
         const localizedProviders = {};
+        const apiMsg = this.i18n.getApiMessages(locale);
+        const capLabels = apiMsg.capability_labels || {};
         for (const [providerId, provider] of Object.entries(data.providers)) {
             const provI18n = overrides.i18n?.providers?.[providerId];
             const name = provI18n?.name?.[locale] ?? provider.name;
@@ -110,8 +130,29 @@ export class DataProcessor {
                 const newModel = { ...model };
                 if (modelName !== undefined)
                     newModel.name = modelName;
-                if (modelDesc !== undefined)
+                if (modelDesc !== undefined) {
                     newModel.description = modelDesc;
+                }
+                else {
+                    // 若原描述等于英文默认描述，则替换为对应语言模板
+                    const baseName = newModel.name || modelId;
+                    const enDefault = this.generateDefaultDescription(baseName, providerId);
+                    if (newModel.description === enDefault) {
+                        newModel.description = this.generateDefaultDescriptionForLocale(locale, baseName, providerId);
+                    }
+                }
+                const abilityLabels = [];
+                if (newModel.tool_call && capLabels.tools)
+                    abilityLabels.push(capLabels.tools);
+                if (newModel.attachment && capLabels.files)
+                    abilityLabels.push(capLabels.files);
+                if (newModel.reasoning && capLabels.reasoning)
+                    abilityLabels.push(capLabels.reasoning);
+                if (newModel.temperature && capLabels.temperature)
+                    abilityLabels.push(capLabels.temperature);
+                if (abilityLabels.length > 0) {
+                    newModel.capabilities_label = abilityLabels.join(', ');
+                }
                 localizedModels[modelId] = newModel;
             }
             localizedProviders[providerId] = {

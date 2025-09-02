@@ -1,0 +1,76 @@
+{
+  "api": "https://api.deepseek.com",
+  "doc": "https://platform.deepseek.com/api-docs/pricing",
+  "env": [
+    "DEEPSEEK_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/deepseek.svg",
+  "id": "deepseek",
+  "lobeIcon": "DeepSeek.Color",
+  "models": {
+    "deepseek-chat": {
+      "attachment": true,
+      "capabilities_label": "Tools, Files, Temperature",
+      "cost": {
+        "cache_read": 0.07,
+        "input": 0.57,
+        "output": 1.68
+      },
+      "description": "DeepSeek Chat is an AI model provided by deepseek.",
+      "id": "deepseek-chat",
+      "knowledge": "2024-07",
+      "last_updated": "2025-08-21",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek Chat",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-12-26",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-reasoner": {
+      "attachment": true,
+      "capabilities_label": "Tools, Files, Reasoning, Temperature",
+      "cost": {
+        "cache_read": 0.07,
+        "input": 0.57,
+        "output": 1.68
+      },
+      "description": "DeepSeek Reasoner is an AI model provided by deepseek.",
+      "id": "deepseek-reasoner",
+      "knowledge": "2024-07",
+      "last_updated": "2025-08-21",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek Reasoner",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-01-20",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "DeepSeek",
+  "npm": "@ai-sdk/openai-compatible"
+}

@@ -93,6 +93,19 @@ export interface I18nLocaleConfig {
 export interface I18nConfig {
     locales: I18nLocaleConfig[];
 }
+export interface ApiI18nCapabilityLabels {
+    tools?: string;
+    files?: string;
+    reasoning?: string;
+    temperature?: string;
+}
+export interface ApiI18nDefaults {
+    model_description?: string;
+}
+export interface ApiI18nMessages {
+    capability_labels?: ApiI18nCapabilityLabels;
+    defaults?: ApiI18nDefaults;
+}
 /** 提供商索引项 */
 export interface ProviderIndexItem {
     id: string;

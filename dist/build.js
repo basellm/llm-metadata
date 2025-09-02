@@ -196,7 +196,12 @@ class Builder {
             console.log('Generating NewAPI endpoints...');
             const newapiDir = join(this.API_DIR, 'newapi');
             ensureDirSync(newapiDir);
-            const newapiSync = this.newApiBuilder.buildSyncPayload(allModelsData);
+            // 基于默认英文映射生成 tags（保持 NewAPI 输出稳定性）
+            const apiI18nEn = this.i18nService.getApiMessages('en');
+            const tagMapEn = {
+                ...(apiI18nEn.capability_labels || {}),
+            };
+            const newapiSync = this.newApiBuilder.buildSyncPayload(allModelsData, tagMapEn);
             if (writeJSONIfChanged(join(newapiDir, 'vendors.json'), { success: true, message: '', data: newapiSync.vendors }, { dryRun })) {
                 changes++;
             }
@@ -206,6 +211,27 @@ class Builder {
             const priceConfig = this.newApiBuilder.buildPriceConfig(allModelsData);
             if (writeJSONIfChanged(join(newapiDir, 'ratio_config-v1-base.json'), priceConfig, { dryRun })) {
                 changes++;
+            }
+            // 生成多语言 NewAPI（按 locales 输出至 api/i18n/<locale>/newapi）
+            {
+                const locales = this.i18nService.getLocales().map((l) => l.locale);
+                const i18nBase = join(this.API_DIR, 'i18n');
+                ensureDirSync(i18nBase);
+                for (const locale of locales) {
+                    const apiMsg = this.i18nService.getApiMessages(locale);
+                    const tagMap = {
+                        ...(apiMsg.capability_labels || {}),
+                    };
+                    const outDir = join(i18nBase, locale, 'newapi');
+                    ensureDirSync(outDir);
+                    const payload = this.newApiBuilder.buildSyncPayload(allModelsData, tagMap);
+                    if (writeJSONIfChanged(join(outDir, 'vendors.json'), { success: true, message: '', data: payload.vendors }, { dryRun })) {
+                        changes++;
+                    }
+                    if (writeJSONIfChanged(join(outDir, 'models.json'), { success: true, message: '', data: payload.models }, { dryRun })) {
+                        changes++;
+                    }
+                }
             }
             // 写入单独的提供商和模型文件
             console.log('Writing individual provider and model files...');

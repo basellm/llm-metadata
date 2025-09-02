@@ -71,5 +71,13 @@ export class I18nService {
         }
         return warnings;
     }
+    /** 获取 API i18n 词典（按 locale，英文兜底） */
+    getApiMessages(locale) {
+        const en = readJSONIfExists(join(this.i18nDir, 'api', 'en.json')) || {};
+        if (!locale || locale === 'en')
+            return en;
+        const loc = readJSONIfExists(join(this.i18nDir, 'api', `${locale}.json`)) || {};
+        return { ...en, ...loc };
+    }
 }
 //# sourceMappingURL=i18n-service.js.map

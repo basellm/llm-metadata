@@ -1,4 +1,4 @@
-import type { I18nLocaleConfig } from '../types/index.js';
+import type { ApiI18nMessages, I18nLocaleConfig } from '../types/index.js';
 /** i18n 配置加载服务 */
 export declare class I18nService {
     private readonly rootDir;
@@ -12,5 +12,7 @@ export declare class I18nService {
     getDateLocale(locale: string): string;
     /** 校验 i18n/docs 下各语言词条的完整性（与英文对齐），返回警告列表 */
     validateDocMessages(locales: string[]): string[];
+    /** 获取 API i18n 词典（按 locale，英文兜底） */
+    getApiMessages(locale: string): ApiI18nMessages;
 }
 //# sourceMappingURL=i18n-service.d.ts.map

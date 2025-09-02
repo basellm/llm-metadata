@@ -20,48 +20,49 @@ export class NewApiBuilder {
         return ratios;
     }
     /** 构建模型标签字符串 */
-    buildModelTags(model) {
+    buildModelTags(model, map) {
         const tagSet = new Set();
+        const translate = (key) => (map && map[key]) || key;
         // 处理显式标签
         if (Array.isArray(model.tags)) {
             for (const tag of model.tags) {
                 if (tag)
-                    tagSet.add(String(tag).trim());
+                    tagSet.add(translate(String(tag).trim()));
             }
         }
         else if (typeof model.tags === 'string') {
             model.tags.split(/[;,\s]+/g).forEach((tag) => {
                 const t = tag.trim();
                 if (t)
-                    tagSet.add(t);
+                    tagSet.add(translate(t));
             });
         }
         // 基于能力添加标签
         if (model.reasoning)
-            tagSet.add('reasoning');
+            tagSet.add(translate('reasoning'));
         if (model.tool_call)
-            tagSet.add('tools');
+            tagSet.add(translate('tools'));
         if (model.attachment)
-            tagSet.add('files');
+            tagSet.add(translate('files'));
         if (model.open_weights)
-            tagSet.add('open-weights');
+            tagSet.add(translate('open_weights'));
         // 基于模态添加标签
         const inputMods = model.modalities?.input || [];
         const outputMods = model.modalities?.output || [];
         const allMods = [...inputMods, ...outputMods];
         if (allMods.includes('image'))
-            tagSet.add('vision');
+            tagSet.add(translate('vision'));
         if (allMods.includes('audio'))
-            tagSet.add('audio');
+            tagSet.add(translate('audio'));
         // 添加上下文窗口标签
         const contextLimit = model.limit?.context;
         const contextTag = formatTokensToKM(contextLimit);
         if (contextTag)
-            tagSet.add(contextTag);
+            tagSet.add(translate(contextTag));
         return Array.from(tagSet).join(',');
     }
     /** 构建 NewAPI 同步载荷 */
-    buildSyncPayload(allModelsData) {
+    buildSyncPayload(allModelsData, tagMap) {
         const vendors = [];
         const models = [];
         const providerIds = Object.keys(allModelsData.providers).sort();
@@ -80,7 +81,7 @@ export class NewApiBuilder {
                 models.push({
                     model_name: modelId,
                     description: model.description || '',
-                    tags: this.buildModelTags(model),
+                    tags: this.buildModelTags(model, tagMap),
                     vendor_name: provider.name || providerId,
                     endpoints: null,
                     status: 1,

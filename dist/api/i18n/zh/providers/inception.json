@@ -1,0 +1,78 @@
+{
+  "api": "https://api.inceptionlabs.ai/v1/",
+  "doc": "https://platform.inceptionlabs.ai/docs",
+  "env": [
+    "INCEPTION_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/inception.svg",
+  "id": "inception",
+  "lobeIcon": "Inception",
+  "models": {
+    "mercury": {
+      "attachment": false,
+      "capabilities_label": "工具, 温度",
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 1,
+        "input": 0.25,
+        "output": 1
+      },
+      "description": "Mercury 是由 inception 提供的人工智能模型。",
+      "id": "mercury",
+      "knowledge": "2023-10",
+      "last_updated": "2025-07-31",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mercury",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-06-26",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mercury-coder": {
+      "attachment": false,
+      "capabilities_label": "工具, 温度",
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 1,
+        "input": 0.25,
+        "output": 1
+      },
+      "description": "Mercury Coder 是由 inception 提供的人工智能模型。",
+      "id": "mercury-coder",
+      "knowledge": "2023-10",
+      "last_updated": "2025-07-31",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mercury Coder",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-02-26",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Inception",
+  "npm": "@ai-sdk/openai-compatible"
+}
