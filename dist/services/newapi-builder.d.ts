@@ -3,6 +3,8 @@ import type { NewApiPriceConfig, NewApiSyncPayload, NormalizedData } from '../ty
 export declare class NewApiBuilder {
     /** 计算 NewAPI 价格比率 */
     private calculateRatios;
+    /** 计算每百万 tokens 的美元价格与倍率字段 */
+    private buildPricingFields;
     /** 构建模型标签字符串 */
     private buildModelTags;
     /** 构建 NewAPI 同步载荷 */

@@ -19,6 +19,21 @@ export class NewApiBuilder {
         }
         return ratios;
     }
+    /** 计算每百万 tokens 的美元价格与倍率字段 */
+    buildPricingFields(cost) {
+        const input = typeof cost?.input === 'number' && cost.input > 0 ? cost.input : null;
+        const output = typeof cost?.output === 'number' && cost.output > 0 ? cost.output : null;
+        const cache = typeof cost?.cache_read === 'number' && cost.cache_read > 0 ? cost.cache_read : null;
+        const ratios = this.calculateRatios(cost);
+        return {
+            price_per_m_input: input,
+            price_per_m_output: output,
+            price_per_m_cache: cache,
+            ratio_model: ratios ? ratios.model : null,
+            ratio_completion: ratios ? ratios.completion : null,
+            ratio_cache: ratios ? ratios.cache : null,
+        };
+    }
     /** 构建模型标签字符串 */
     buildModelTags(model, map) {
         const tagSet = new Set();
@@ -78,6 +93,7 @@ export class NewApiBuilder {
             // 构建模型数据
             const modelEntries = Object.entries(provider.models || {}).sort(([a], [b]) => a.localeCompare(b));
             for (const [modelId, model] of modelEntries) {
+                const pricing = this.buildPricingFields(model.cost);
                 models.push({
                     model_name: modelId,
                     description: model.description || '',
@@ -87,6 +103,12 @@ export class NewApiBuilder {
                     status: 1,
                     name_rule: 0,
                     icon: model.icon || provider.icon || provider.lobeIcon || '',
+                    price_per_m_input: pricing.price_per_m_input,
+                    price_per_m_output: pricing.price_per_m_output,
+                    price_per_m_cache: pricing.price_per_m_cache,
+                    ratio_model: pricing.ratio_model,
+                    ratio_completion: pricing.ratio_completion,
+                    ratio_cache: pricing.ratio_cache,
                 });
             }
         }
