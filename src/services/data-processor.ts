@@ -175,8 +175,6 @@ export class DataProcessor {
     locale: string,
   ): NormalizedData {
     const localizedProviders: Record<string, Provider> = {};
-    const apiMsg = this.i18n.getApiMessages(locale);
-    const capLabels = apiMsg.capability_labels || {};
 
     for (const [providerId, provider] of Object.entries(data.providers)) {
       const provI18n: I18nOverrideEntity | undefined = overrides.i18n?.providers?.[providerId];
@@ -206,15 +204,6 @@ export class DataProcessor {
           }
         }
 
-        const abilityLabels: string[] = [];
-        if (newModel.tool_call && capLabels.tools) abilityLabels.push(capLabels.tools);
-        if (newModel.attachment && capLabels.files) abilityLabels.push(capLabels.files);
-        if (newModel.reasoning && capLabels.reasoning) abilityLabels.push(capLabels.reasoning);
-        if (newModel.temperature && capLabels.temperature)
-          abilityLabels.push(capLabels.temperature);
-        if (abilityLabels.length > 0) {
-          (newModel as any).capabilities_label = abilityLabels.join(', ');
-        }
         localizedModels[modelId] = newModel;
       }
 
