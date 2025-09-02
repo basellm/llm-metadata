@@ -155,6 +155,12 @@ export interface NewApiModel {
     status: number;
     name_rule: number;
     icon: string;
+    price_per_m_input?: number | null;
+    price_per_m_output?: number | null;
+    price_per_m_cache?: number | null;
+    ratio_model?: number | null;
+    ratio_completion?: number | null;
+    ratio_cache?: number | null;
 }
 /** NewAPI 价格比率 */
 export interface NewApiRatios {
