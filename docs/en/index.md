@@ -10,7 +10,7 @@ A lightweight static API for discovering and integrating large language model (L
 ## 📡 API Endpoints
 
 !!! info "Note"
-Available locales include `en`, `zh`, `ja` by default.
+    Available locales include `en`, `zh`, `ja` by default.
 
 | Endpoint                                                                                                               | Description                   | Example                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------------------------- |

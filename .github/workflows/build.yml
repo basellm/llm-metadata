@@ -40,6 +40,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -123,15 +125,16 @@ jobs:
         if: ${{ steps.commit.outputs.COMMITTED == 'true' }}
         id: release_check
         run: |
-          # Check if the latest commit message contains release keywords
-          LATEST_COMMIT_MSG=$(git log -1 --pretty=format:"%s")
-          echo "Latest commit: $LATEST_COMMIT_MSG"
+          # Trigger release if any of recent commit messages contains 'release' (case-insensitive)
+          RECENT_MSGS=$(git log --pretty=format:"%s" -n 50)
+          echo "Scanning recent commit messages for 'release'..."
+          echo "$RECENT_MSGS" | sed -n '1,5p'
 
-          if echo "$LATEST_COMMIT_MSG" | grep -iE '\[release\]|release:|🚀.*release' > /dev/null; then
-            echo "Release trigger found in commit message"
+          if echo "$RECENT_MSGS" | grep -i 'release' > /dev/null; then
+            echo "Release trigger found"
             echo "SHOULD_RELEASE=true" >> $GITHUB_OUTPUT
           else
-            echo "No release trigger found in commit message"
+            echo "No release trigger found"
             echo "SHOULD_RELEASE=false" >> $GITHUB_OUTPUT
           fi
 
