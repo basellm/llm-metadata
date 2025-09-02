@@ -115,8 +115,6 @@ export class DataProcessor {
     /** 根据 locale 应用 i18n 文案到标准化数据（返回深拷贝后的新对象） */
     localizeNormalizedData(data, overrides, locale) {
         const localizedProviders = {};
-        const apiMsg = this.i18n.getApiMessages(locale);
-        const capLabels = apiMsg.capability_labels || {};
         for (const [providerId, provider] of Object.entries(data.providers)) {
             const provI18n = overrides.i18n?.providers?.[providerId];
             const name = provI18n?.name?.[locale] ?? provider.name;
@@ -140,18 +138,6 @@ export class DataProcessor {
                     if (newModel.description === enDefault) {
                         newModel.description = this.generateDefaultDescriptionForLocale(locale, baseName, providerId);
                     }
-                }
-                const abilityLabels = [];
-                if (newModel.tool_call && capLabels.tools)
-                    abilityLabels.push(capLabels.tools);
-                if (newModel.attachment && capLabels.files)
-                    abilityLabels.push(capLabels.files);
-                if (newModel.reasoning && capLabels.reasoning)
-                    abilityLabels.push(capLabels.reasoning);
-                if (newModel.temperature && capLabels.temperature)
-                    abilityLabels.push(capLabels.temperature);
-                if (abilityLabels.length > 0) {
-                    newModel.capabilities_label = abilityLabels.join(', ');
                 }
                 localizedModels[modelId] = newModel;
             }
