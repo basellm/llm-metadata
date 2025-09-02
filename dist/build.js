@@ -224,7 +224,6 @@ class Builder {
                     };
                     const outDir = join(i18nBase, locale, 'newapi');
                     ensureDirSync(outDir);
-                    // 使用本地化后的数据集，确保描述等字段为目标语言
                     const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale);
                     const payload = this.newApiBuilder.buildSyncPayload(localized, tagMap);
                     if (writeJSONIfChanged(join(outDir, 'vendors.json'), { success: true, message: '', data: payload.vendors }, { dryRun })) {
