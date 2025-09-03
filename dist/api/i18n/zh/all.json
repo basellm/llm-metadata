@@ -4949,6 +4949,39 @@
     "name": "DeepSeek",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "examplecorp": {
+    "id": "examplecorp",
+    "models": {
+      "novus-1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 3.5,
+          "output": 10
+        },
+        "description": "This is a fictional model used only as an override example.",
+        "icon": "https://cdn.example.com/icons/examplecorp/novus-1.svg",
+        "id": "novus-1",
+        "limit": {
+          "context": 64000,
+          "output": 2048
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Novus 1 (Override Example)",
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": false
+      }
+    }
+  },
   "fastrouter": {
     "api": "https://go.fastrouter.ai/api/v1",
     "doc": "https://fastrouter.ai/models",
