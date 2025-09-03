@@ -30,7 +30,7 @@ npm run build
 
 ## 国际化（文档与 API）
 
-文档 i18n 由 `i18n/docs/*.json` 与 `i18n/locales.json` 驱动，并通过 mkdocs-static-i18n 发布；API i18n 由 `i18n/api/*.json` 与 `data/overrides.json` 驱动。
+文档 i18n 由 `i18n/docs/*.json` 与 `i18n/locales.json` 驱动，并通过 mkdocs-static-i18n 发布；API i18n 由 `i18n/api/*.json` 与 `data/overrides/**` 驱动。
 
 ### 目录与配置
 
@@ -125,46 +125,46 @@ docs/
 
 当某模型 `auto=false` 时，自动模式不会覆盖其现有静态文件（首次构建仍会生成）。
 
-## 覆写（Overrides）
+## 覆写（Overrides，目录化）
 
-配置文件：`data/overrides.json`
+已从单一 `data/overrides.json` 迁移为目录化结构，避免多人同时修改时的冲突。将小型 JSON 片段放入如下目录，构建时会深度合并：
+
+```
+data/
+  overrides/
+    providers/
+      <providerId>.json            # 提供商级覆写（如 lobeIcon、iconURL、name、api、doc）
+    models/
+      <providerId>/<modelId>.json  # 模型级覆写（description、tags、limit、modalities、cost、能力标记等）
+    i18n/
+      providers/<providerId>.json  # 可选：提供商名称/描述本地化
+      models/<providerId>/<modelId>.json  # 可选：模型名称/描述本地化
+```
+
+示例：
+
+提供商图标（`data/overrides/providers/openai.json`）：
+
+```json
+{ "lobeIcon": "OpenAI.Color" }
+```
+
+模型覆写（`data/overrides/models/openai/gpt-4o.json`）：
 
 ```json
 {
-  "providers": {
-    "openai": {
-      "name": "OpenAI（自定义）",
-      "api": "https://api.openai.com",
-      "doc": "https://platform.openai.com/docs",
-      "icon": "https://example.com/icons/openai.svg",
-      "lobeIcon": "OpenAI.Color"
-    }
-  },
-  "models": {
-    "openai/gpt-4o": {
-      "description": "面向多模态、具备较强推理能力的优化模型。",
-      "tags": ["vision", "tools"],
-      "limit": { "context": 131072, "output": 8192 },
-      "modalities": { "input": ["text", "image"], "output": ["text"] },
-      "reasoning": true,
-      "tool_call": true,
-      "attachment": false
-    }
-  }
+  "description": "面向多模态、具备较强推理能力的优化模型。",
+  "tags": ["vision", "tools"],
+  "limit": { "context": 131072, "output": 8192 },
+  "modalities": { "input": ["text", "image"], "output": ["text"] },
+  "reasoning": true,
+  "tool_call": true,
+  "attachment": false
 }
 ```
 
-覆写采用“深度合并”，不移除原字段，仅覆盖同名字段或追加对象属性。
+说明：
 
-- Provider 级覆写（例如：`providers.deepseek.name`、`providers.deepseek.icon`、`providers.deepseek.lobeIcon`、`providers.deepseek.api`、`providers.deepseek.doc`）
-  - 影响：
-    - `dist/api/providers.json`
-    - `dist/api/providers/<provider>.json`
-    - `dist/api/all.json`
-    - `dist/api/newapi/vendors.json`
-
-- Model 级覆写（例如：`models["deepseek/deepseek-reasoner"].description`、`tags`、`limit`、`modalities`、`cost`、`reasoning`、`tool_call`、`attachment`）
-  - 影响：
-    - `dist/api/all.json`
-    - `dist/api/models/<provider>/<model>.json`
-    - `dist/api/newapi/models.json`
+- 使用深度合并；未声明字段会保持原值。
+- 模型覆写字段白名单（会进行清洗）：`id`、`name`、`description`、`tags`、`icon`、`iconURL`、`reasoning`、`tool_call`、`attachment`、`temperature`、`modalities`、`limit`、`cost`。
+- 仅从 `data/overrides/**` 读取。

@@ -30,7 +30,7 @@ Scripts:
 
 ## Internationalization (Docs & API)
 
-Docs i18n is driven by `i18n/docs/*.json` and `i18n/locales.json` with mkdocs-static-i18n; API i18n is driven by `i18n/api/*.json` and overrides in `data/overrides.json`.
+Docs i18n is driven by `i18n/docs/*.json` and `i18n/locales.json` with mkdocs-static-i18n; API i18n is driven by `i18n/api/*.json` and overrides in `data/overrides/**`.
 
 ### Folder & config
 
@@ -125,46 +125,48 @@ Config: `data/policy.json` (default `auto=true`). Example:
 
 If a model sets `auto=false`, automatic builds will not overwrite its existing static file (first build still generates it).
 
-## Overrides
+## Overrides (directory-based)
 
-Config: `data/overrides.json`
+Use a directory-based layout. Put small JSON fragments under the following paths and they will be deep-merged during build:
+
+```
+data/
+  overrides/
+    providers/
+      <providerId>.json            # provider-level overrides (e.g., lobeIcon, iconURL, name, api, doc)
+    models/
+      <providerId>/<modelId>.json  # model-level overrides (description, tags, limit, modalities, cost, flags)
+    i18n/
+      providers/<providerId>.json  # optional: localized name/description for providers
+      models/<providerId>/<modelId>.json  # optional: localized name/description for models
+```
+
+Examples
+
+Provider icon override (`data/overrides/providers/openai.json`):
 
 ```json
 {
-  "providers": {
-    "openai": {
-      "name": "OpenAI (custom)",
-      "api": "https://api.openai.com",
-      "doc": "https://platform.openai.com/docs",
-      "icon": "https://example.com/icons/openai.svg",
-      "lobeIcon": "OpenAI.Color"
-    }
-  },
-  "models": {
-    "openai/gpt-4o": {
-      "description": "Optimized multimodal model with strong reasoning.",
-      "tags": ["vision", "tools"],
-      "limit": { "context": 131072, "output": 8192 },
-      "modalities": { "input": ["text", "image"], "output": ["text"] },
-      "reasoning": true,
-      "tool_call": true,
-      "attachment": false
-    }
-  }
+  "lobeIcon": "OpenAI.Color"
 }
 ```
 
-Deep-merge: original fields preserved unless explicitly overridden.
+Model override (`data/overrides/models/openai/gpt-4o.json`):
 
-- Provider-level overrides (e.g., `providers.deepseek.name`, `providers.deepseek.icon`, `providers.deepseek.lobeIcon`, `providers.deepseek.api`, `providers.deepseek.doc`)
-  - Affects:
-    - `dist/api/providers.json`
-    - `dist/api/providers/<provider>.json`
-    - `dist/api/all.json`
-    - `dist/api/newapi/vendors.json`
+```json
+{
+  "description": "Optimized multimodal model with strong reasoning.",
+  "tags": ["vision", "tools"],
+  "limit": { "context": 131072, "output": 8192 },
+  "modalities": { "input": ["text", "image"], "output": ["text"] },
+  "reasoning": true,
+  "tool_call": true,
+  "attachment": false
+}
+```
 
-- Model-level overrides (e.g., `models["deepseek/deepseek-reasoner"].description`, `tags`, `limit`, `modalities`, `cost`, `reasoning`, `tool_call`, `attachment`)
-  - Affects:
-    - `dist/api/all.json`
-    - `dist/api/models/<provider>/<model>.json`
-    - `dist/api/newapi/models.json`
+Notes
+
+- Deep-merge applies; unspecified fields are preserved.
+- Model override allowlist (sanitization): `id`, `name`, `description`, `tags`, `icon`, `iconURL`, `reasoning`, `tool_call`, `attachment`, `temperature`, `modalities`, `limit`, `cost`.
+- Build reads overrides from `data/overrides/**`.

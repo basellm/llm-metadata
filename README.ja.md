@@ -30,7 +30,7 @@ npm run build
 
 ## 国際化（ドキュメントと API）
 
-ドキュメント i18n は `i18n/docs/*.json` と `i18n/locales.json`（mkdocs-static-i18n）で管理し、API i18n は `i18n/api/*.json` と `data/overrides.json` で管理します。
+ドキュメント i18n は `i18n/docs/*.json` と `i18n/locales.json`（mkdocs-static-i18n）で管理し、API i18n は `i18n/api/*.json` と `data/overrides/**` で管理します。
 
 ### ディレクトリ構成
 
@@ -126,46 +126,46 @@ GitHub Actions トリガー:
 
 モデルが `auto=false` の場合、自動モードは既存の静的ファイルを上書きしません（初回生成は行われます）。
 
-## オーバーライド（Overrides）
+## オーバーライド（Overrides、ディレクトリ構成）
 
-設定ファイル: `data/overrides.json`
+単一の `data/overrides.json` から、競合に強いディレクトリ構成へ移行しました。以下の場所に小さな JSON を置くと、ビルド時に深いマージで統合されます:
+
+```
+data/
+  overrides/
+    providers/
+      <providerId>.json            # プロバイダーの上書き（lobeIcon、iconURL、name、api、doc など）
+    models/
+      <providerId>/<modelId>.json  # モデルの上書き（description、tags、limit、modalities、cost、各種フラグ）
+    i18n/
+      providers/<providerId>.json  # 任意: プロバイダーの名前/説明のローカライズ
+      models/<providerId>/<modelId>.json  # 任意: モデルの名前/説明のローカライズ
+```
+
+例:
+
+プロバイダーアイコン（`data/overrides/providers/openai.json`）:
+
+```json
+{ "lobeIcon": "OpenAI.Color" }
+```
+
+モデル上書き（`data/overrides/models/openai/gpt-4o.json`）:
 
 ```json
 {
-  "providers": {
-    "openai": {
-      "name": "OpenAI（カスタム）",
-      "api": "https://api.openai.com",
-      "doc": "https://platform.openai.com/docs",
-      "icon": "https://example.com/icons/openai.svg",
-      "lobeIcon": "OpenAI.Color"
-    }
-  },
-  "models": {
-    "openai/gpt-4o": {
-      "description": "強力な推論を備えたマルチモーダル最適化モデル。",
-      "tags": ["vision", "tools"],
-      "limit": { "context": 131072, "output": 8192 },
-      "modalities": { "input": ["text", "image"], "output": ["text"] },
-      "reasoning": true,
-      "tool_call": true,
-      "attachment": false
-    }
-  }
+  "description": "強力な推論を備えたマルチモーダル最適化モデル。",
+  "tags": ["vision", "tools"],
+  "limit": { "context": 131072, "output": 8192 },
+  "modalities": { "input": ["text", "image"], "output": ["text"] },
+  "reasoning": true,
+  "tool_call": true,
+  "attachment": false
 }
 ```
 
-オーバーライドは「深いマージ」を行い、元のフィールドを削除せずに上書きまたは追加します。
+注意:
 
-- プロバイダーの上書き（例: `providers.deepseek.name`, `icon`, `lobeIcon`, `api`, `doc`）
-  - 影響範囲:
-    - `dist/api/providers.json`
-    - `dist/api/providers/<provider>.json`
-    - `dist/api/all.json`
-    - `dist/api/newapi/vendors.json`
-
-- モデルの上書き（例: `models["deepseek/deepseek-reasoner"].description`, `tags`, `limit`, `modalities`, `cost`, `reasoning`, `tool_call`, `attachment`）
-  - 影響範囲:
-    - `dist/api/all.json`
-    - `dist/api/models/<provider>/<model>.json`
-    - `dist/api/newapi/models.json`
+- 深いマージを適用。未指定のフィールドは保持されます。
+- モデル上書きの許可キー（サニタイズ対象）: `id`, `name`, `description`, `tags`, `icon`, `iconURL`, `reasoning`, `tool_call`, `attachment`, `temperature`, `modalities`, `limit`, `cost`。
+- 参照元は `data/overrides/**` のみ。

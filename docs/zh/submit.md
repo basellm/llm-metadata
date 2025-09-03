@@ -296,8 +296,12 @@ hide:
           <input id="name" class="ui-input" type="text" placeholder="可选展示名" />
         </div>
         <div class="ui-field">
-          <label for="icon">图标 URL</label>
-          <input id="icon" class="ui-input" type="url" placeholder="https://..." />
+          <label for="icon">LobeIcon 字符串 <a href="https://icons.lobehub.com/components/lobe-hub" target="_blank" class="ui-muted">查看</a></label>
+          <input id="icon" class="ui-input" type="text" placeholder="如 AzureAI.Color" />
+        </div>
+        <div class="ui-field">
+          <label for="iconURL">图标 URL</label>
+          <input id="iconURL" class="ui-input" type="url" placeholder="https://..." />
         </div>
         <div class="ui-field full">
           <label for="description">描述</label>
@@ -439,6 +443,7 @@ hide:
         attachment: checked('cap-files') || undefined,
         temperature: checked('cap-temp') || undefined,
         icon: value('icon') || undefined,
+        iconURL: value('iconURL') || undefined,
         modalities: { input: gather('mod-in'), output: gather('mod-out') },
         limit: { context: num('limit-context'), output: num('limit-output') },
         cost: { input: num('cost-input'), output: num('cost-output'), cache_read: num('cost-cache') },
@@ -578,7 +583,8 @@ hide:
 
         setValue('name', pick(data, ['name', 'displayName', 'title']));
         setValue('description', pick(data, ['description', 'desc', 'summary']));
-        setValue('icon', pick(data, ['icon', 'icon_url', 'logo']));
+        setValue('icon', pick(data, ['icon', 'lobeIcon']));
+        setValue('iconURL', pick(data, ['iconURL', 'icon_url', 'logo']));
 
         const inMods = pick(data, ['modalities.input', 'input_modalities', 'input']);
         const outMods = pick(data, ['modalities.output', 'output_modalities', 'output']);
