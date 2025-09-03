@@ -619,18 +619,17 @@ hide:
       const modelInput = document.getElementById('modelId');
       const modelSelect = document.getElementById('modelSelect');
 
+      // プロバイダーは常にドロップダウンを使用
+      providerInput.classList.add('is-hidden');
+      providerSelect.classList.remove('is-hidden');
+      loadProviders();
+
       if (isUpdate) {
-        providerInput.classList.add('is-hidden');
         modelInput.classList.add('is-hidden');
-        providerSelect.classList.remove('is-hidden');
         modelSelect.classList.remove('is-hidden');
-        loadProviders();
       } else {
-        providerInput.classList.remove('is-hidden');
         modelInput.classList.remove('is-hidden');
-        providerSelect.classList.add('is-hidden');
         modelSelect.classList.add('is-hidden');
-        providerSelect.innerHTML = '';
         modelSelect.innerHTML = '';
       }
     }

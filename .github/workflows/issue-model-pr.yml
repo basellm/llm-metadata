@@ -82,16 +82,14 @@ jobs:
             if [ "$CREATE_COUNT" -gt 0 ] && [ "$UPDATE_COUNT" -eq 0 ]; then
               BRANCH="feat/model-batch-add-${COUNT}-$(date -u +%Y%m%d%H%M%S)"
               COMMIT_TITLE="✨ feat(models): add ${COUNT} models (${PROVIDERS_SHORT})"
-              PR_TITLE="feat(models): add ${COUNT} models (${PROVIDERS_SHORT})"
             elif [ "$UPDATE_COUNT" -gt 0 ] && [ "$CREATE_COUNT" -eq 0 ]; then
               BRANCH="chore/model-batch-update-${COUNT}-$(date -u +%Y%m%d%H%M%S)"
               COMMIT_TITLE="✏️ chore(models): update ${COUNT} models (${PROVIDERS_SHORT})"
-              PR_TITLE="chore(models): update ${COUNT} models (${PROVIDERS_SHORT})"
             else
               BRANCH="chore/model-batch-mixed-${COUNT}-$(date -u +%Y%m%d%H%M%S)"
               COMMIT_TITLE="📦 chore(models): batch ${COUNT} models (create ${CREATE_COUNT}, update ${UPDATE_COUNT})"
-              PR_TITLE="chore(models): batch ${COUNT} models (create ${CREATE_COUNT}, update ${UPDATE_COUNT})"
             fi
+            PR_TITLE="$COMMIT_TITLE"
           else
             ACTION=$(jq -r '.action // "create"' payload.json)
             PROVIDER=$(jq -r '.providerId' payload.json)
@@ -101,12 +99,11 @@ jobs:
             if [ "$ACTION" = "update" ]; then
               BRANCH="chore/model-update-${PROVIDER_SAFE}-${MODEL_SAFE}-$(date -u +%Y%m%d%H%M%S)"
               COMMIT_TITLE="✏️ chore(models): update ${PROVIDER}/${MODEL}"
-              PR_TITLE="chore(models): update ${PROVIDER}/${MODEL}"
             else
               BRANCH="feat/model-add-${PROVIDER_SAFE}-${MODEL_SAFE}-$(date -u +%Y%m%d%H%M%S)"
               COMMIT_TITLE="✨ feat(models): add ${PROVIDER}/${MODEL}"
-              PR_TITLE="feat(models): add ${PROVIDER}/${MODEL}"
             fi
+            PR_TITLE="$COMMIT_TITLE"
           fi
           echo "action=$ACTION" >> $GITHUB_OUTPUT
           echo "provider=$PROVIDER" >> $GITHUB_OUTPUT
