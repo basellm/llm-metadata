@@ -46,19 +46,24 @@ jobs:
         id: payload
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          DISPATCH_ISSUE_NUMBER: ${{ inputs.issue_number }}
+          EVENT_ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           set -euo pipefail
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            ISSUE_NUM="${{ inputs.issue_number }}"
-            ISSUE_BODY=$(gh issue view "$ISSUE_NUM" --json body -q .body)
-            ISSUE_NUMBER_OUT="$ISSUE_NUM"
+            ISSUE_NUM="${DISPATCH_ISSUE_NUMBER}"
           else
-            ISSUE_BODY=$(printf "%s" "${{ github.event.issue.body }}")
-            ISSUE_NUMBER_OUT="${{ github.event.issue.number }}"
+            ISSUE_NUM="${EVENT_ISSUE_NUMBER}"
           fi
 
+          # Always fetch body via GH CLI to avoid script injection from raw interpolation
+          ISSUE_BODY=$(gh issue view "$ISSUE_NUM" -R "$REPO" --json body -q .body)
+          ISSUE_NUMBER_OUT="$ISSUE_NUM"
+
           echo "Extract JSON payload from issue body"
-          PAYLOAD=$(printf "%s" "$ISSUE_BODY" | awk '/```json/{flag=1;next}/```/{flag=0}flag')
+          # Extract fenced JSON block
+          PAYLOAD=$(printf '%s\n' "$ISSUE_BODY" | sed -n '/^```json[[:space:]]*$/,/^```[[:space:]]*$/p' | sed '1d;$d')
           if [ -z "$PAYLOAD" ]; then
             echo "No JSON payload found in issue body" >&2
             exit 1
