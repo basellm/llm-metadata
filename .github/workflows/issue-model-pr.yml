@@ -85,32 +85,12 @@ jobs:
         run: |
           git checkout -b "${{ steps.payload.outputs.branch }}"
 
-      - name: Apply overrides change
+      - name: Apply overrides change (scoped file)
         run: |
           set -euo pipefail
-          jq \
-            --arg prov "${{ steps.payload.outputs.provider }}" \
-            --arg model "${{ steps.payload.outputs.model }}" \
-            --slurpfile p payload.json \
-            '
-            .models[$prov + "/" + $model] = (
-              .models[$prov + "/" + $model] // {} | . as $orig | ($p[0] | {
-                id: .modelId,
-                name: .name,
-                description: .description,
-                tags: .tags,
-                icon: .icon,
-                reasoning: .reasoning,
-                tool_call: .tool_call,
-                attachment: .attachment,
-                temperature: .temperature,
-                modalities: .modalities,
-                limit: .limit,
-                cost: .cost
-              } | with_entries(select(.value != null)))
-            )
-            ' data/overrides.json > data/overrides.json.tmp
-          mv data/overrides.json.tmp data/overrides.json
+          mkdir -p "data/overrides/models/${{ steps.payload.outputs.provider }}"
+          jq 'with_entries(select(.value != null))' payload.json > \
+            "data/overrides/models/${{ steps.payload.outputs.provider }}/${{ steps.payload.outputs.model }}.json"
 
       - name: Install dependencies
         run: |
@@ -134,7 +114,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             # Stage overrides; stage dist/api only if it exists
-            git add data/overrides.json || true
+            git add -A data/overrides || true
             if [ -d dist/api ]; then
               git add -A dist/api || true
             fi
