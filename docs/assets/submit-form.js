@@ -373,8 +373,8 @@
     setStatus('');
 
     const items = models.map((m, i) => {
-      const prov = m.providerId || '?';
-      const model = m.id || m.modelId || '?';
+      const prov = m.providerId || '';
+      const model = m.id || m.modelId || '';
       const action = m.action || t('create');
       const name = m.name || '';
       return `<div style="margin-bottom: 4px;"><strong>${i + 1}.</strong> ${action} <code>${prov}/${model}</code> ${name ? `(${name})` : ''}</div>`;
@@ -389,7 +389,7 @@
 
   const buildSingleTitle = (single) => {
     const actionModel = single.action === 'update' ? t('updateModel') : t('createModel');
-    return `[${actionModel}] ${single.providerId ?? t('unknown')}/${single.id ?? t('unknown')}`;
+    return `[${actionModel}] ${single.providerId ?? ''}/${single.id ?? ''}`;
   };
 
   const buildProviderList = (providers) => {
@@ -400,8 +400,8 @@
 
   const buildModelListForBatch = (models) => {
     return models.map((m, i) => {
-      const prov = m.providerId || t('unknown');
-      const model = m.id || m.modelId || t('unknown');
+      const prov = m.providerId || '';
+      const model = m.id || m.modelId || '';
       const action = m.action === 'update' ? t('update') : t('create');
       const name = m.name ? ` - ${m.name}` : '';
       return `${i + 1}. **${action}** \`${prov}/${model}\`${name}`;
@@ -459,8 +459,8 @@
         t('issueIntroSingle'),
         '',
         `## 📋 ${t('modelInfo')}`,
-        `- **${t('provider')}**: \`${single.providerId ?? t('notSpecified')}\``,
-        `- **${t('modelId')}**: \`${single.id ?? t('notSpecified')}\``,
+        `- **${t('provider')}**: \`${single.providerId ?? ''}\``,
+        `- **${t('modelId')}**: \`${single.id ?? ''}\``,
         single.name ? `- **${t('displayName')}**: ${single.name}` : '',
         single.description ? `- **${t('description')}**: ${single.description}` : '',
         `- **${t('actionType')}**: ${action}`,
