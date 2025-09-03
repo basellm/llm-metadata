@@ -93,7 +93,7 @@ jobs:
           else
             ACTION=$(jq -r '.action // "create"' payload.json)
             PROVIDER=$(jq -r '.providerId' payload.json)
-            MODEL=$(jq -r '.modelId' payload.json)
+            MODEL=$(jq -r '.modelId // .id' payload.json)
             PROVIDER_SAFE=$(echo "$PROVIDER" | sed 's/[^A-Za-z0-9._-]/-/g')
             MODEL_SAFE=$(echo "$MODEL" | sed 's/[^A-Za-z0-9._-]/-/g')
             if [ "$ACTION" = "update" ]; then
@@ -124,7 +124,7 @@ jobs:
           if [ "$IS_ARRAY" = "1" ]; then
             jq -c '.[] | with_entries(select(.value != null))' payload.json | while read -r item; do
               prov=$(echo "$item" | jq -r '.providerId')
-              model=$(echo "$item" | jq -r '.modelId')
+              model=$(echo "$item" | jq -r '.modelId // .id')
               model_safe=${model//:/_}
               test -n "$prov" && test -n "$model" || continue
               mkdir -p "data/overrides/models/$prov"
@@ -132,7 +132,7 @@ jobs:
             done
           else
             prov=$(jq -r '.providerId' payload.json)
-            model=$(jq -r '.modelId' payload.json)
+            model=$(jq -r '.modelId // .id' payload.json)
             model_safe=${model//:/_}
             mkdir -p "data/overrides/models/$prov"
             jq 'with_entries(select(.value != null))' payload.json > "data/overrides/models/$prov/$model_safe.json"

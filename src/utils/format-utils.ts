@@ -29,14 +29,16 @@ export function formatPricing(cost?: {
   input?: number;
   output?: number;
   cache_read?: number;
+  cache_write?: number;
 }): string {
   if (!cost?.input) return '-';
 
   const input = cost.input;
   const output = cost.output || '-';
-  const cache = cost.cache_read ? `<br/>Cache: $${cost.cache_read}` : '';
+  const cacheRead = cost.cache_read ? `<br/>Cache Read: $${cost.cache_read}` : '';
+  const cacheWrite = cost.cache_write ? `<br/>Cache Write: $${cost.cache_write}` : '';
 
-  return `In: $${input}<br/>Out: $${output}${cache}`;
+  return `In: $${input}<br/>Out: $${output}${cacheRead}${cacheWrite}`;
 }
 
 /** 格式化能力标志 */

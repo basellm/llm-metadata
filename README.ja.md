@@ -136,7 +136,7 @@ data/
     providers/
       <providerId>.json            # プロバイダーの上書き（lobeIcon、iconURL、name、api、doc など）
     models/
-      <providerId>/<modelId>.json  # モデルの上書き（description、tags、limit、modalities、cost、各種フラグ）
+      <providerId>/<modelId>.json  # モデルの上書き（description、limit、modalities、cost、各種フラグ）
     i18n/
       providers/<providerId>.json  # 任意: プロバイダーの名前/説明のローカライズ
       models/<providerId>/<modelId>.json  # 任意: モデルの名前/説明のローカライズ
@@ -155,7 +155,6 @@ data/
 ```json
 {
   "description": "強力な推論を備えたマルチモーダル最適化モデル。",
-  "tags": ["vision", "tools"],
   "limit": { "context": 131072, "output": 8192 },
   "modalities": { "input": ["text", "image"], "output": ["text"] },
   "reasoning": true,
@@ -167,5 +166,5 @@ data/
 注意:
 
 - 深いマージを適用。未指定のフィールドは保持されます。
-- モデル上書きの許可キー（サニタイズ対象）: `id`, `name`, `description`, `tags`, `icon`, `iconURL`, `reasoning`, `tool_call`, `attachment`, `temperature`, `modalities`, `limit`, `cost`。
+- モデル上書きの許可キー（サニタイズ対象）: `id`, `name`, `description`, `reasoning`, `tool_call`, `attachment`, `temperature`, `knowledge`, `release_date`, `last_updated`, `open_weights`, `modalities`, `limit`, `cost`。
 - 参照元は `data/overrides/**` のみ。

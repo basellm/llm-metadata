@@ -135,7 +135,7 @@ data/
     providers/
       <providerId>.json            # 提供商级覆写（如 lobeIcon、iconURL、name、api、doc）
     models/
-      <providerId>/<modelId>.json  # 模型级覆写（description、tags、limit、modalities、cost、能力标记等）
+      <providerId>/<modelId>.json  # 模型级覆写（description、limit、modalities、cost、能力标记等）
     i18n/
       providers/<providerId>.json  # 可选：提供商名称/描述本地化
       models/<providerId>/<modelId>.json  # 可选：模型名称/描述本地化
@@ -154,7 +154,6 @@ data/
 ```json
 {
   "description": "面向多模态、具备较强推理能力的优化模型。",
-  "tags": ["vision", "tools"],
   "limit": { "context": 131072, "output": 8192 },
   "modalities": { "input": ["text", "image"], "output": ["text"] },
   "reasoning": true,
@@ -166,5 +165,5 @@ data/
 说明：
 
 - 使用深度合并；未声明字段会保持原值。
-- 模型覆写字段白名单（会进行清洗）：`id`、`name`、`description`、`tags`、`icon`、`iconURL`、`reasoning`、`tool_call`、`attachment`、`temperature`、`modalities`、`limit`、`cost`。
+- 模型覆写字段白名单（会进行清洗）：`id`、`name`、`description`、`reasoning`、`tool_call`、`attachment`、`temperature`、`knowledge`、`release_date`、`last_updated`、`open_weights`、`modalities`、`limit`、`cost`。
 - 仅从 `data/overrides/**` 读取。

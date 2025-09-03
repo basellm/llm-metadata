@@ -2,21 +2,17 @@
   "schema": "model-submission",
   "action": "create",
   "providerId": "examplecorp",
-  "modelId": "novus-1",
   "id": "novus-1",
   "name": "Novus 1",
   "description": "Fictional example multimodal model.",
-  "tags": [
-    "example",
-    "fictional",
-    "demo"
-  ],
-  "icon": "Novus.Color",
-  "iconURL": "https://example.com/novus.png",
   "reasoning": true,
   "tool_call": true,
   "attachment": true,
   "temperature": true,
+  "knowledge": "2024-07",
+  "release_date": "2025-01-20",
+  "last_updated": "2025-08-21",
+  "open_weights": false,
   "modalities": {
     "input": [
       "text",
@@ -40,6 +36,7 @@
   "cost": {
     "input": 5,
     "output": 15,
-    "cache_read": 0.3
+    "cache_read": 0.075,
+    "cache_write": 0.5
   }
 }

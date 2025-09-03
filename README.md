@@ -135,7 +135,7 @@ data/
     providers/
       <providerId>.json            # provider-level overrides (e.g., lobeIcon, iconURL, name, api, doc)
     models/
-      <providerId>/<modelId>.json  # model-level overrides (description, tags, limit, modalities, cost, flags)
+      <providerId>/<modelId>.json  # model-level overrides (description, limit, modalities, cost, flags)
     i18n/
       providers/<providerId>.json  # optional: localized name/description for providers
       models/<providerId>/<modelId>.json  # optional: localized name/description for models
@@ -156,7 +156,6 @@ Model override (`data/overrides/models/openai/gpt-4o.json`):
 ```json
 {
   "description": "Optimized multimodal model with strong reasoning.",
-  "tags": ["vision", "tools"],
   "limit": { "context": 131072, "output": 8192 },
   "modalities": { "input": ["text", "image"], "output": ["text"] },
   "reasoning": true,
@@ -168,5 +167,5 @@ Model override (`data/overrides/models/openai/gpt-4o.json`):
 Notes
 
 - Deep-merge applies; unspecified fields are preserved.
-- Model override allowlist (sanitization): `id`, `name`, `description`, `tags`, `icon`, `iconURL`, `reasoning`, `tool_call`, `attachment`, `temperature`, `modalities`, `limit`, `cost`.
+- Model override allowlist (sanitization): `id`, `name`, `description`, `reasoning`, `tool_call`, `attachment`, `temperature`, `knowledge`, `release_date`, `last_updated`, `open_weights`, `modalities`, `limit`, `cost`.
 - Build reads overrides from `data/overrides/**`.
