@@ -19,7 +19,8 @@ hide:
 | [`/api/all.json`](https://basellm.github.io/llm-metadata/api/all.json)                                                 | 完整模型数据集       | 获取所有模型的详细信息                                                              |
 | [`/api/newapi/ratio_config-v1-base.json`](https://basellm.github.io/llm-metadata/api/newapi/ratio_config-v1-base.json) | New API 价格比率     | New API 系统用于价格计算的比率配置                                                  |
 | [`/api/newapi/vendors.json`](https://basellm.github.io/llm-metadata/api/newapi/vendors.json)                           | New API 供应商数据   | 适配 New API 系统的供应商数据行                                                     |
-| [`/api/newapi/models.json`](https://basellm.github.io/llm-metadata/api/newapi/models.json)                             | New API 模型数据     | 适配 New API 系统的模型数据行                                                       |
+| [`/api/newapi/models.json`](https://basellm.github.io/llm-metadata/api/newapi/models.json)                             | New API 模型数据     | 适配 New API 系统的模型数据行                                                     |
+| [`/api/voapi/firms.json`](https://basellm.github.io/llm-metadata/api/voapi/firms.json)                             | VoAPI 供应商数据     | 适配 VoAPI 系统的供应商数据行                                                    |
 | [`/api/manifest.json`](https://basellm.github.io/llm-metadata/api/manifest.json)                                       | 构建清单与统计       | 构建信息与数据统计                                                                  |
 | `/api/providers/{providerId}.json`                                                                                     | 单个提供商详情       | 示例：`/api/providers/openai.json`                                                  |
 | `/api/models/{providerId}/{modelId}.json`                                                                              | 单个模型元数据       | 示例：`/api/models/openai/gpt-4.json`                                               |

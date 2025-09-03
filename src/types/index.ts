@@ -221,6 +221,14 @@ export interface NewApiSyncPayload {
   models: NewApiModel[];
 }
 
+// === VoAPI 相关类型 ===
+export interface VoAPIFirm {
+  name: string;
+  description: string;
+  icon: string;
+  status: number;
+}
+
 // === 构建清单类型 ===
 
 /** 构建统计 */

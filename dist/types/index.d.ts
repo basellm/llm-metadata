@@ -183,6 +183,12 @@ export interface NewApiSyncPayload {
     vendors: NewApiVendor[];
     models: NewApiModel[];
 }
+export interface VoAPIFirm {
+    name: string;
+    description: string;
+    icon: string;
+    status: number;
+}
 /** 构建统计 */
 export interface BuildStats {
     providers: number;

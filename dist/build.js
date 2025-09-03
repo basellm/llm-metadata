@@ -10,6 +10,7 @@ import { I18nService } from './services/i18n-service.js';
 import { parseArgv } from './utils/cli-utils.js';
 import { copyDirSyncIfExists, ensureDirSync, removeNonJsonFiles, sanitizeFileSegment, writeJSONIfChanged, writeTextIfChanged, } from './utils/file-utils.js';
 import { sha256OfObject, stableStringify } from './utils/object-utils.js';
+import { VoAPIBuilder } from './services/voapi-builder.js';
 /** 主构建类 */
 class Builder {
     ROOT;
@@ -22,6 +23,7 @@ class Builder {
     dataProcessor;
     indexBuilder;
     newApiBuilder;
+    voApiBuilder;
     docsGenerator;
     i18nService;
     constructor() {
@@ -34,6 +36,8 @@ class Builder {
         this.dataProcessor = new DataProcessor();
         this.indexBuilder = new IndexBuilder();
         this.newApiBuilder = new NewApiBuilder();
+        this.newApiBuilder = new NewApiBuilder();
+        this.voApiBuilder = new VoAPIBuilder();
         this.docsGenerator = new DocumentationGenerator(this.ROOT);
         this.i18nService = new I18nService(this.ROOT);
     }
@@ -192,12 +196,20 @@ class Builder {
                     }
                 }
             }
+            const apiI18nEn = this.i18nService.getApiMessages('en');
+            // 生成 VoAPI 接口
+            console.log('Generating VoAPI endpoints...');
+            const voapiDir = join(this.API_DIR, 'voapi');
+            ensureDirSync(voapiDir);
+            const voapiFirms = this.voApiBuilder.buildFirms(allModelsData);
+            if (writeJSONIfChanged(join(voapiDir, 'firms.json'), { success: true, message: '', data: voapiFirms }, { dryRun })) {
+                changes++;
+            }
             // 生成 NewAPI 接口
             console.log('Generating NewAPI endpoints...');
             const newapiDir = join(this.API_DIR, 'newapi');
             ensureDirSync(newapiDir);
             // 基于默认英文映射生成 tags（保持 NewAPI 输出稳定性）
-            const apiI18nEn = this.i18nService.getApiMessages('en');
             const tagMapEn = {
                 ...(apiI18nEn.capability_labels || {}),
             };
