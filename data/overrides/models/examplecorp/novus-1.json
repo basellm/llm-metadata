@@ -1,24 +1,45 @@
 {
+  "schema": "model-submission",
+  "action": "create",
+  "providerId": "examplecorp",
+  "modelId": "novus-1",
   "id": "novus-1",
-  "name": "Novus 1 (Override Example)",
-  "description": "This is a fictional model used only as an override example.",
-  "icon": "https://cdn.example.com/icons/examplecorp/novus-1.svg",
+  "name": "Novus 1",
+  "description": "Fictional example multimodal model.",
+  "tags": [
+    "example",
+    "fictional",
+    "demo"
+  ],
+  "icon": "Novus.Color",
+  "iconURL": "https://example.com/novus.png",
   "reasoning": true,
-  "tool_call": false,
-  "attachment": false,
+  "tool_call": true,
+  "attachment": true,
   "temperature": true,
   "modalities": {
-    "input": ["text", "image"],
-    "output": ["text"]
+    "input": [
+      "text",
+      "image",
+      "audio",
+      "video",
+      "pdf"
+    ],
+    "output": [
+      "text",
+      "image",
+      "audio",
+      "video",
+      "pdf"
+    ]
   },
   "limit": {
-    "context": 64000,
-    "output": 2048
+    "context": 128000,
+    "output": 4096
   },
   "cost": {
-    "input": 3.5,
-    "output": 10,
-    "cache_read": 0.2
+    "input": 5,
+    "output": 15,
+    "cache_read": 0.3
   }
 }
-
