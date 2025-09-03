@@ -24,8 +24,8 @@ export function formatPricing(cost) {
         return '-';
     const input = cost.input;
     const output = cost.output || '-';
-    const cache = cost.cache_read ? `<br/>Cache: ${cost.cache_read}` : '';
-    return `In: ${input}<br/>Out: ${output}${cache}`;
+    const cache = cost.cache_read ? `<br/>Cache: $${cost.cache_read}` : '';
+    return `In: $${input}<br/>Out: $${output}${cache}`;
 }
 /** 格式化能力标志 */
 export function formatCapabilities(model) {

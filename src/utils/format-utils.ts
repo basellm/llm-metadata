@@ -34,9 +34,9 @@ export function formatPricing(cost?: {
 
   const input = cost.input;
   const output = cost.output || '-';
-  const cache = cost.cache_read ? `<br/>Cache: ${cost.cache_read}` : '';
+  const cache = cost.cache_read ? `<br/>Cache: $${cost.cache_read}` : '';
 
-  return `In: ${input}<br/>Out: ${output}${cache}`;
+  return `In: $${input}<br/>Out: $${output}${cache}`;
 }
 
 /** 格式化能力标志 */
@@ -45,6 +45,7 @@ export function formatCapabilities(model: {
   reasoning?: boolean;
   tool_call?: boolean;
   temperature?: boolean;
+  image?: boolean;
 }): string {
   const emojis = [];
   if (model.attachment) emojis.push('📎');
