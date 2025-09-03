@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, extname, basename } from 'node:path';
 import { deepMerge } from '../utils/object-utils.js';
+import { ALLOWED_MODEL_OVERRIDE_KEY_SET } from '../constants/override-keys.js';
 /** 数据加载服务 */
 export class DataLoader {
     dataDir;
@@ -100,6 +101,16 @@ export class DataLoader {
                 return undefined;
             }
         };
+        const sanitizeModelOverride = (obj) => {
+            if (!obj || typeof obj !== 'object')
+                return {};
+            const out = {};
+            for (const k of Object.keys(obj)) {
+                if (ALLOWED_MODEL_OVERRIDE_KEY_SET.has(k))
+                    out[k] = obj[k];
+            }
+            return out;
+        };
         const walk = (dir) => {
             if (!existsSync(dir))
                 return [];
@@ -136,7 +147,7 @@ export class DataLoader {
                     const modelId = basename(full, '.json');
                     const obj = readJSON(full);
                     if (obj)
-                        mergeModelOverride(provider, modelId, obj);
+                        mergeModelOverride(provider, modelId, sanitizeModelOverride(obj));
                 }
             }
         }

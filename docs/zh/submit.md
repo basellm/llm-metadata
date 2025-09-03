@@ -230,6 +230,16 @@ hide:
 <div id="model-submit" data-repo="basellm/llm-metadata">
   <form onsubmit="return false" class="ui-card">
     <div class="ui-section">
+      <h3 class="ui-section-title">操作模式</h3>
+      <div class="ui-segment" role="group" aria-label="操作模式">
+        <input type="radio" name="mode" id="mode-single" value="single" checked />
+        <label for="mode-single">单个模型</label>
+        <input type="radio" name="mode" id="mode-batch" value="batch" />
+        <label for="mode-batch">批量模型</label>
+      </div>
+    </div>
+
+    <div id="single-mode" class="ui-section">
       <h3 class="ui-section-title">操作</h3>
       <div class="ui-segment" role="group" aria-label="操作">
         <input type="radio" name="action" id="action-create" value="create" checked />
@@ -239,7 +249,36 @@ hide:
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="batch-mode" class="ui-section is-hidden">
+      <h3 class="ui-section-title">批量模型 JSON</h3>
+      <div class="ui-field" style="margin-bottom: var(--spacing-3);">
+        <label for="batch-json">模型数组（JSON 格式）</label>
+        <button id="batch-template" type="button" class="ui-btn" style="margin: 0 0 var(--spacing-1) 0; width: max-content;">填入模板</button>
+        <textarea id="batch-json" class="ui-textarea" rows="12" placeholder='[
+  {
+    "schema": "model-submission",
+    "action": "create",
+    "providerId": "deepseek",
+    "modelId": "deepseek-chat",
+    "name": "DeepSeek Chat",
+    "modalities": { "input": ["text"], "output": ["text"] }
+  },
+  {
+    "schema": "model-submission", 
+    "action": "create",
+    "providerId": "examplecorp",
+    "modelId": "novus-1",
+    "name": "Novus 1"
+  }
+]'></textarea>
+      </div>
+      <div id="batch-preview" class="ui-field">
+        <label>预览（将提交 <span id="batch-count">0</span> 个模型）</label>
+        <div id="batch-list" class="ui-muted" style="font-size: 12px; max-height: 200px; overflow-y: auto; border: 1px solid var(--md-default-fg-color--lightest); border-radius: var(--radius-sm); padding: var(--spacing-2);"></div>
+      </div>
+    </div>
+
+    <div id="single-fields" class="ui-section">
       <h3 class="ui-section-title">基础信息</h3>
       <div class="ui-grid cols-3">
         <div class="ui-field">
@@ -267,7 +306,7 @@ hide:
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="single-capabilities" class="ui-section">
       <h3 class="ui-section-title">能力</h3>
       <div class="ui-chips">
         <input id="cap-reasoning" type="checkbox" />
@@ -281,7 +320,7 @@ hide:
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="single-modalities" class="ui-section">
       <h3 class="ui-section-title">模态</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
@@ -317,7 +356,7 @@ hide:
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="single-limits" class="ui-section">
       <h3 class="ui-section-title">限制</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
@@ -331,7 +370,7 @@ hide:
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="single-pricing" class="ui-section">
       <h3 class="ui-section-title">价格（美元/百万 tokens）</h3>
       <div class="ui-grid cols-3">
         <div class="ui-field">
@@ -373,6 +412,20 @@ hide:
     }
 
     function buildPayload() {
+      const mode = document.querySelector('input[name="mode"]:checked')?.value || 'single';
+      
+      if (mode === 'batch') {
+        try {
+          const batchText = value('batch-json');
+          if (!batchText) return [];
+          const parsed = JSON.parse(batchText);
+          return Array.isArray(parsed) ? parsed : [parsed];
+        } catch (e) {
+          console.error('Batch JSON parse error:', e);
+          return [];
+        }
+      }
+      
       const providerId = value('providerId') || undefined;
       const modelId = value('modelId') || undefined;
       const payload = {
@@ -593,24 +646,179 @@ hide:
       loadModelDetail(providerId, modelId);
     });
 
+    // 模式切换
+    function toggleMode() {
+      const mode = document.querySelector('input[name="mode"]:checked')?.value || 'single';
+      const isBatch = mode === 'batch';
+      
+      document.getElementById('single-mode').classList.toggle('is-hidden', isBatch);
+      document.getElementById('batch-mode').classList.toggle('is-hidden', !isBatch);
+      document.getElementById('single-fields').classList.toggle('is-hidden', isBatch);
+      document.getElementById('single-capabilities').classList.toggle('is-hidden', isBatch);
+      document.getElementById('single-modalities').classList.toggle('is-hidden', isBatch);
+      document.getElementById('single-limits').classList.toggle('is-hidden', isBatch);
+      document.getElementById('single-pricing').classList.toggle('is-hidden', isBatch);
+      
+      if (isBatch) {
+        updateBatchPreview();
+      }
+    }
+    
+    // 批量预览更新
+    function updateBatchPreview() {
+      try {
+        const batchText = value('batch-json');
+        const countEl = document.getElementById('batch-count');
+        const listEl = document.getElementById('batch-list');
+        
+        if (!batchText.trim()) {
+          countEl.textContent = '0';
+          listEl.innerHTML = '<div style="color: #9ca3af;">请输入 JSON 数组</div>';
+          return;
+        }
+        
+        const parsed = JSON.parse(batchText);
+        const models = Array.isArray(parsed) ? parsed : [parsed];
+        countEl.textContent = String(models.length);
+        
+        const items = models.map((m, i) => {
+          const prov = m.providerId || '?';
+          const model = m.modelId || '?';
+          const action = m.action || 'create';
+          const name = m.name || '';
+          return `<div style="margin-bottom: 4px;"><strong>${i+1}.</strong> ${action} <code>${prov}/${model}</code> ${name ? `(${name})` : ''}</div>`;
+        }).join('');
+        
+        listEl.innerHTML = items || '<div style="color: #9ca3af;">无有效模型</div>';
+      } catch (e) {
+        const countEl = document.getElementById('batch-count');
+        const listEl = document.getElementById('batch-list');
+        countEl.textContent = '0';
+        listEl.innerHTML = `<div style="color: #ef4444;">JSON 格式错误: ${e.message}</div>`;
+      }
+    }
+    
+    document.getElementById('mode-single')?.addEventListener('change', toggleMode);
+    document.getElementById('mode-batch')?.addEventListener('change', toggleMode);
+    document.getElementById('batch-json')?.addEventListener('input', updateBatchPreview);
+    document.getElementById('batch-template')?.addEventListener('click', function(){
+      const template = [
+        {
+          schema: 'model-submission',
+          action: 'create',
+          providerId: 'examplecorp',
+          modelId: 'novus-1',
+          id: 'novus-1',
+          name: 'Novus 1',
+          description: 'Fictional example multimodal model.',
+          tags: ['example', 'fictional', 'demo'],
+          icon: 'Novus.Color',
+          iconURL: 'https://example.com/novus.png',
+          reasoning: true,
+          tool_call: true,
+          attachment: true,
+          temperature: true,
+          modalities: { input: ['text', 'image', 'audio', 'video', 'pdf'], output: ['text', 'image', 'audio', 'video', 'pdf'] },
+          limit: { context: 128000, output: 4096 },
+          cost: { input: 5, output: 15, cache_read: 0.3 }
+        },
+        {
+          schema: 'model-submission',
+          action: 'update',
+          providerId: 'deepseek',
+          modelId: 'deepseek-chat',
+          name: 'DeepSeek Chat',
+          modalities: { input: ['text'], output: ['text'] }
+        }
+      ];
+      const el = document.getElementById('batch-json');
+      if (el) el.value = JSON.stringify(template, null, 2);
+      updateBatchPreview();
+    });
+    
     document.getElementById('action-create')?.addEventListener('change', function(){ if (this.checked) setMode('create'); });
     document.getElementById('action-update')?.addEventListener('change', function(){ if (this.checked) setMode('update'); });
+    
+    toggleMode();
     setMode(document.querySelector('input[name="action"]:checked')?.value || 'create');
 
     function buildIssue() {
       const p = buildPayload();
-      const title = `[Model Submission] ${p.action === 'update' ? 'Update' : 'Create'}: ${p.providerId ?? 'unknown'}/${p.modelId ?? 'unknown'}`;
-      const body = [
-        `此 Issue 由网站表单生成。机器人会把它转换为 PR。`,
-        ``,
-        `<details><summary>Payload</summary>`,
-        '',
-        '```json',
-        JSON.stringify(p, null, 2),
-        '```',
-        '',
-        `</details>`,
-      ].join('\n');
+      const mode = document.querySelector('input[name="mode"]:checked')?.value || 'single';
+      
+      let title, body;
+      if (mode === 'batch' && Array.isArray(p)) {
+        const count = p.length;
+        const providers = [...new Set(p.map(m => m.providerId).filter(Boolean))];
+        const providerList = providers.length > 3 ? `${providers.slice(0, 3).join(', ')} 等 ${providers.length} 个提供商` : providers.join(', ');
+        
+        title = `[批量提交] ${count} 个模型 (${providerList})`;
+        
+        const modelList = p.map((m, i) => {
+          const prov = m.providerId || '未知';
+          const model = m.modelId || '未知';
+          const action = m.action === 'update' ? '更新' : '新增';
+          const name = m.name ? ` - ${m.name}` : '';
+          return `${i + 1}. **${action}** \`${prov}/${model}\`${name}`;
+        }).join('\n');
+        
+        body = [
+          `🚀 **批量模型提交请求**`,
+          ``,
+          `此 Issue 由网站表单生成（批量模式），机器人将自动处理并创建 PR。`,
+          ``,
+          `## 📋 提交概要`,
+          `- **总数量**: ${count} 个模型`,
+          `- **涉及提供商**: ${providerList}`,
+          `- **提交模式**: 批量处理`,
+          ``,
+          `## 📝 模型详情`,
+          modelList,
+          ``,
+          `## 🔧 技术信息`,
+          `<details><summary>完整 JSON 数据</summary>`,
+          '',
+          '```json',
+          JSON.stringify(p, null, 2),
+          '```',
+          '',
+          `</details>`,
+          ``,
+          `---`,
+          `*此 Issue 将被自动处理，每个模型会生成独立的覆盖文件*`,
+        ].join('\n');
+      } else {
+        const single = Array.isArray(p) ? p[0] || {} : p;
+        const action = single.action === 'update' ? '更新' : '新增';
+        const actionIcon = single.action === 'update' ? '✏️' : '➕';
+        
+        title = `[${action}模型] ${single.providerId ?? 'unknown'}/${single.modelId ?? 'unknown'}`;
+        
+        body = [
+          `${actionIcon} **${action}模型请求**`,
+          ``,
+          `此 Issue 由网站表单生成，机器人将自动处理并创建 PR。`,
+          ``,
+          `## 📋 模型信息`,
+          `- **提供商**: \`${single.providerId ?? '未指定'}\``,
+          `- **模型 ID**: \`${single.modelId ?? '未指定'}\``,
+          single.name ? `- **显示名称**: ${single.name}` : '',
+          single.description ? `- **描述**: ${single.description}` : '',
+          `- **操作类型**: ${action}`,
+          ``,
+          `## 🔧 技术信息`,
+          `<details><summary>完整配置数据</summary>`,
+          '',
+          '```json',
+          JSON.stringify(single, null, 2),
+          '```',
+          '',
+          `</details>`,
+          ``,
+          `---`,
+          `*此 Issue 将被自动处理并生成对应的模型覆盖文件*`,
+        ].filter(Boolean).join('\n');
+      }
       return { title, body };
     }
 
