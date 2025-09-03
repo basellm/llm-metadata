@@ -3,6 +3,7 @@ import { join, extname, basename } from 'node:path';
 
 import type { OverrideConfig, PolicyConfig, SourceData, I18nOverrideEntity, ModelKey } from '../types/index.js';
 import { deepMerge } from '../utils/object-utils.js';
+import { ALLOWED_MODEL_OVERRIDE_KEY_SET } from '../constants/override-keys.js';
 
 /** 数据加载服务 */
 export class DataLoader {
@@ -116,6 +117,15 @@ export class DataLoader {
       }
     };
 
+    const sanitizeModelOverride = (obj: any): any => {
+      if (!obj || typeof obj !== 'object') return {};
+      const out: any = {};
+      for (const k of Object.keys(obj)) {
+        if (ALLOWED_MODEL_OVERRIDE_KEY_SET.has(k)) out[k] = obj[k];
+      }
+      return out;
+    };
+
     const walk = (dir: string) => {
       if (!existsSync(dir)) return [] as string[];
       const out: string[] = [];
@@ -147,7 +157,7 @@ export class DataLoader {
           if (!statSync(full).isFile() || extname(full) !== '.json') continue;
           const modelId = basename(full, '.json');
           const obj = readJSON(full);
-          if (obj) mergeModelOverride(provider, modelId, obj);
+          if (obj) mergeModelOverride(provider, modelId, sanitizeModelOverride(obj));
         }
       }
     }

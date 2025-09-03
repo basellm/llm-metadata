@@ -11,19 +11,19 @@ hide:
 作成し、overrides を通じてモデルを追加/更新し、API ファイルを生成します。
 
 <style>
-  /* 8px 基础设计系统 */
+  /* 8px デザインシステム */
   :root {
-    --spacing-1: 8px;   /* 基础间距 */
-    --spacing-2: 16px;  /* 小间距 */
-    --spacing-3: 24px;  /* 中间距 */
-    --spacing-4: 32px;  /* 大间距 */
-    --radius-sm: 8px;   /* 小圆角 */
-    --radius-md: 12px;  /* 中圆角 */
+    --spacing-1: 8px;   /* 基本間隔 */
+    --spacing-2: 16px;  /* 小間隔 */
+    --spacing-3: 24px;  /* 中間隔 */
+    --spacing-4: 32px;  /* 大間隔 */
+    --radius-sm: 8px;   /* 小角丸 */
+    --radius-md: 12px;  /* 中角丸 */
     --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
     --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
   }
 
-  /* 卡片容器 */
+  /* カードコンテナ */
   .ui-card {
     background: var(--md-default-bg-color, #fff);
     border: 1px solid var(--md-default-fg-color--lightest, #e5e7eb);
@@ -34,7 +34,7 @@ hide:
     margin: 0 auto;
   }
 
-  /* 标题样式 */
+  /* タイトルスタイル */
   .ui-section {
     margin-bottom: var(--spacing-4);
   }
@@ -50,7 +50,7 @@ hide:
     border-bottom: 1px solid var(--md-default-fg-color--lightest, #f3f4f6);
   }
 
-  /* 网格布局 */
+  /* グリッドレイアウト */
   .ui-grid {
     display: grid;
     gap: var(--spacing-2);
@@ -75,7 +75,7 @@ hide:
     }
   }
 
-  /* 表单字段 */
+  /* フォームフィールド */
   .ui-field {
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@ hide:
     margin-bottom: var(--spacing-1);
   }
 
-  /* 输入框样式 */
+  /* 入力スタイル */
   .ui-input,
   .ui-textarea,
   .ui-select {
@@ -117,7 +117,7 @@ hide:
   }
   .is-hidden { display: none !important; }
 
-  /* 芯片组件 */
+  /* チップコンポーネント */
   .ui-chips {
     display: grid;
     gap: var(--spacing-1);
@@ -153,7 +153,7 @@ hide:
     border-color: var(--md-primary-fg-color, #4051b5);
   }
 
-  /* 分段控制器 */
+  /* セグメント制御 */
   .ui-segment {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -184,7 +184,7 @@ hide:
     color: #fff;
   }
 
-  /* 按钮组 */
+  /* ボタングループ */
   .ui-actions {
     display: grid;
     grid-auto-flow: column;
@@ -231,34 +231,73 @@ hide:
 <div id="model-submit" data-repo="basellm/llm-metadata">
   <form onsubmit="return false" class="ui-card">
     <div class="ui-section">
-      <h3 class="ui-section-title">操作</h3>
-      <div class="ui-segment" role="group" aria-label="操作">
+      <h3 class="ui-section-title">モード</h3>
+      <div class="ui-segment" role="group" aria-label="モード">
+        <input type="radio" name="mode" id="mode-single" value="single" checked />
+        <label for="mode-single">単一モデル</label>
+        <input type="radio" name="mode" id="mode-batch" value="batch" />
+        <label for="mode-batch">バッチモデル</label>
+      </div>
+    </div>
+
+    <div id="single-mode" class="ui-section">
+      <h3 class="ui-section-title">アクション</h3>
+      <div class="ui-segment" role="group" aria-label="アクション">
         <input type="radio" name="action" id="action-create" value="create" checked />
-        <label for="action-create">追加</label>
+        <label for="action-create">作成</label>
         <input type="radio" name="action" id="action-update" value="update" />
         <label for="action-update">更新</label>
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="batch-mode" class="ui-section is-hidden">
+      <h3 class="ui-section-title">バッチモデル JSON</h3>
+      <div class="ui-field" style="margin-bottom: var(--spacing-3);">
+        <label for="batch-json">モデル配列（JSON 形式）</label>
+        <button id="batch-template" type="button" class="ui-btn" style="margin: 0 0 var(--spacing-1) 0; width: max-content;">テンプレートを挿入</button>
+        <textarea id="batch-json" class="ui-textarea" rows="12" placeholder='[
+  {
+    "schema": "model-submission",
+    "action": "create",
+    "providerId": "deepseek",
+    "modelId": "deepseek-chat",
+    "name": "DeepSeek Chat",
+    "modalities": { "input": ["text"], "output": ["text"] }
+  },
+  {
+    "schema": "model-submission", 
+    "action": "create",
+    "providerId": "examplecorp",
+    "modelId": "novus-1",
+    "name": "Novus 1"
+  }
+]'></textarea>
+      </div>
+      <div id="batch-preview" class="ui-field">
+        <label>プレビュー（<span id="batch-count">0</span> 個のモデルを送信します）</label>
+        <div id="batch-list" class="ui-muted" style="font-size: 12px; max-height: 200px; overflow-y: auto; border: 1px solid var(--md-default-fg-color--lightest); border-radius: var(--radius-sm); padding: var(--spacing-2);"></div>
+      </div>
+    </div>
+
+    <div id="single-fields" class="ui-section">
       <h3 class="ui-section-title">基本情報</h3>
       <div class="ui-grid cols-3">
         <div class="ui-field">
-          <label for="providerId">Provider ID</label>
+          <label for="providerId">プロバイダー ID</label>
           <input id="providerId" class="ui-input" type="text" required placeholder="例: openai" />
           <select id="providerSelect" class="ui-select is-hidden"></select>
         </div>
         <div class="ui-field">
-          <label for="modelId">Model ID</label>
+          <label for="modelId">モデル ID</label>
           <input id="modelId" class="ui-input" type="text" required placeholder="例: gpt-4o" />
           <select id="modelSelect" class="ui-select is-hidden"></select>
         </div>
         <div class="ui-field">
           <label for="name">表示名</label>
-          <input id="name" class="ui-input" type="text" placeholder="表示名（任意）" />
+          <input id="name" class="ui-input" type="text" placeholder="オプションの表示名" />
         </div>
         <div class="ui-field">
-          <label for="icon">Icon URL</label>
+          <label for="icon">アイコン URL</label>
           <input id="icon" class="ui-input" type="url" placeholder="https://..." />
         </div>
         <div class="ui-field full">
@@ -268,7 +307,7 @@ hide:
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="single-capabilities" class="ui-section">
       <h3 class="ui-section-title">機能</h3>
       <div class="ui-chips">
         <input id="cap-reasoning" type="checkbox" />
@@ -282,7 +321,7 @@ hide:
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="single-modalities" class="ui-section">
       <h3 class="ui-section-title">モダリティ</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
@@ -318,33 +357,33 @@ hide:
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="single-limits" class="ui-section">
       <h3 class="ui-section-title">制限</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
-          <label for="limit-context">コンテキスト（tokens）</label>
+          <label for="limit-context">コンテキストウィンドウ（トークン）</label>
           <input id="limit-context" class="ui-input" type="number" min="0" placeholder="例: 128000" />
         </div>
         <div class="ui-field">
-          <label for="limit-output">最大出力（tokens）</label>
+          <label for="limit-output">最大出力（トークン）</label>
           <input id="limit-output" class="ui-input" type="number" min="0" placeholder="例: 4096" />
         </div>
       </div>
     </div>
 
-    <div class="ui-section">
-      <h3 class="ui-section-title">価格（USD / 100万 tokens）</h3>
+    <div id="single-pricing" class="ui-section">
+      <h3 class="ui-section-title">価格（USD/100万トークン）</h3>
       <div class="ui-grid cols-3">
         <div class="ui-field">
-          <label for="cost-input">入力単価</label>
+          <label for="cost-input">入力価格</label>
           <input id="cost-input" class="ui-input" type="number" min="0" step="0.0001" placeholder="例: 5" />
         </div>
         <div class="ui-field">
-          <label for="cost-output">出力単価</label>
+          <label for="cost-output">出力価格</label>
           <input id="cost-output" class="ui-input" type="number" min="0" step="0.0001" placeholder="例: 15" />
         </div>
         <div class="ui-field">
-          <label for="cost-cache">キャッシュ読み出し単価</label>
+          <label for="cost-cache">キャッシュ読み取り価格</label>
           <input id="cost-cache" class="ui-input" type="number" min="0" step="0.0001" placeholder="例: 0.3" />
         </div>
       </div>
@@ -352,7 +391,7 @@ hide:
 
     <div class="ui-actions">
       <button id="open-issue" type="button" class="ui-btn primary">GitHub Issue を開く</button>
-      <button id="copy-body" type="button" class="ui-btn">Issue 本文をコピー</button>
+      <button id="copy-body" type="button" class="ui-btn">Issue 内容をコピー</button>
       <span id="status" class="ui-muted"></span>
     </div>
   </form>
@@ -374,6 +413,20 @@ hide:
     }
 
     function buildPayload() {
+      const mode = document.querySelector('input[name="mode"]:checked')?.value || 'single';
+      
+      if (mode === 'batch') {
+        try {
+          const batchText = value('batch-json');
+          if (!batchText) return [];
+          const parsed = JSON.parse(batchText);
+          return Array.isArray(parsed) ? parsed : [parsed];
+        } catch (e) {
+          console.error('Batch JSON parse error:', e);
+          return [];
+        }
+      }
+      
       const providerId = value('providerId') || undefined;
       const modelId = value('modelId') || undefined;
       const payload = {
@@ -553,7 +606,7 @@ hide:
         document.getElementById('cap-temp').checked = hasTemp;
 
         const status = document.getElementById('status');
-        if (status) status.textContent = 'モデル情報を読み込みました';
+        if (status) status.textContent = '現在のモデル詳細を読み込みました。';
       } catch (e) {
         console.error('loadModelDetail failed', e);
       }
@@ -594,24 +647,179 @@ hide:
       loadModelDetail(providerId, modelId);
     });
 
+    // モード切り替え
+    function toggleMode() {
+      const mode = document.querySelector('input[name="mode"]:checked')?.value || 'single';
+      const isBatch = mode === 'batch';
+      
+      document.getElementById('single-mode').classList.toggle('is-hidden', isBatch);
+      document.getElementById('batch-mode').classList.toggle('is-hidden', !isBatch);
+      document.getElementById('single-fields').classList.toggle('is-hidden', isBatch);
+      document.getElementById('single-capabilities').classList.toggle('is-hidden', isBatch);
+      document.getElementById('single-modalities').classList.toggle('is-hidden', isBatch);
+      document.getElementById('single-limits').classList.toggle('is-hidden', isBatch);
+      document.getElementById('single-pricing').classList.toggle('is-hidden', isBatch);
+      
+      if (isBatch) {
+        updateBatchPreview();
+      }
+    }
+    
+    // バッチプレビュー更新
+    function updateBatchPreview() {
+      try {
+        const batchText = value('batch-json');
+        const countEl = document.getElementById('batch-count');
+        const listEl = document.getElementById('batch-list');
+        
+        if (!batchText.trim()) {
+          countEl.textContent = '0';
+          listEl.innerHTML = '<div style="color: #9ca3af;">JSON 配列を入力してください</div>';
+          return;
+        }
+        
+        const parsed = JSON.parse(batchText);
+        const models = Array.isArray(parsed) ? parsed : [parsed];
+        countEl.textContent = String(models.length);
+        
+        const items = models.map((m, i) => {
+          const prov = m.providerId || '?';
+          const model = m.modelId || '?';
+          const action = m.action || 'create';
+          const name = m.name || '';
+          return `<div style="margin-bottom: 4px;"><strong>${i+1}.</strong> ${action} <code>${prov}/${model}</code> ${name ? `(${name})` : ''}</div>`;
+        }).join('');
+        
+        listEl.innerHTML = items || '<div style="color: #9ca3af;">有効なモデルがありません</div>';
+      } catch (e) {
+        const countEl = document.getElementById('batch-count');
+        const listEl = document.getElementById('batch-list');
+        countEl.textContent = '0';
+        listEl.innerHTML = `<div style="color: #ef4444;">JSON 形式エラー: ${e.message}</div>`;
+      }
+    }
+    
+    document.getElementById('mode-single')?.addEventListener('change', toggleMode);
+    document.getElementById('mode-batch')?.addEventListener('change', toggleMode);
+    document.getElementById('batch-json')?.addEventListener('input', updateBatchPreview);
+    document.getElementById('batch-template')?.addEventListener('click', function(){
+      const template = [
+        {
+          schema: 'model-submission',
+          action: 'create',
+          providerId: 'examplecorp',
+          modelId: 'novus-1',
+          id: 'novus-1',
+          name: 'Novus 1',
+          description: 'Fictional example multimodal model.',
+          tags: ['example', 'fictional', 'demo'],
+          icon: 'Novus.Color',
+          iconURL: 'https://example.com/novus.png',
+          reasoning: true,
+          tool_call: true,
+          attachment: true,
+          temperature: true,
+          modalities: { input: ['text', 'image', 'audio', 'video', 'pdf'], output: ['text', 'image', 'audio', 'video', 'pdf'] },
+          limit: { context: 128000, output: 4096 },
+          cost: { input: 5, output: 15, cache_read: 0.3 }
+        },
+        {
+          schema: 'model-submission',
+          action: 'update',
+          providerId: 'deepseek',
+          modelId: 'deepseek-chat',
+          name: 'DeepSeek Chat',
+          modalities: { input: ['text'], output: ['text'] }
+        }
+      ];
+      const el = document.getElementById('batch-json');
+      if (el) el.value = JSON.stringify(template, null, 2);
+      updateBatchPreview();
+    });
+    
     document.getElementById('action-create')?.addEventListener('change', function(){ if (this.checked) setMode('create'); });
     document.getElementById('action-update')?.addEventListener('change', function(){ if (this.checked) setMode('update'); });
+    
+    toggleMode();
     setMode(document.querySelector('input[name="action"]:checked')?.value || 'create');
 
     function buildIssue() {
       const p = buildPayload();
-      const title = `[Model Submission] ${p.action === 'update' ? 'Update' : 'Create'}: ${p.providerId ?? 'unknown'}/${p.modelId ?? 'unknown'}`;
-      const body = [
-        `この Issue はウェブサイトのフォームから生成されました。ボットが PR に変換します。`,
-        ``,
-        `<details><summary>Payload</summary>`,
-        '',
-        '```json',
-        JSON.stringify(p, null, 2),
-        '```',
-        '',
-        `</details>`,
-      ].join('\n');
+      const mode = document.querySelector('input[name="mode"]:checked')?.value || 'single';
+      
+      let title, body;
+      if (mode === 'batch' && Array.isArray(p)) {
+        const count = p.length;
+        const providers = [...new Set(p.map(m => m.providerId).filter(Boolean))];
+        const providerList = providers.length > 3 ? `${providers.slice(0, 3).join(', ')} など ${providers.length} プロバイダー` : providers.join(', ');
+        
+        title = `[バッチ送信] ${count} モデル (${providerList})`;
+        
+        const modelList = p.map((m, i) => {
+          const prov = m.providerId || '不明';
+          const model = m.modelId || '不明';
+          const action = m.action === 'update' ? '更新' : '作成';
+          const name = m.name ? ` - ${m.name}` : '';
+          return `${i + 1}. **${action}** \`${prov}/${model}\`${name}`;
+        }).join('\n');
+        
+        body = [
+          `🚀 **バッチモデル送信リクエスト**`,
+          ``,
+          `この Issue はウェブサイトフォーム（バッチモード）から生成されました。ボットが自動的に処理して PR を作成します。`,
+          ``,
+          `## 📋 送信概要`,
+          `- **総数**: ${count} モデル`,
+          `- **プロバイダー**: ${providerList}`,
+          `- **モード**: バッチ処理`,
+          ``,
+          `## 📝 モデル詳細`,
+          modelList,
+          ``,
+          `## 🔧 技術情報`,
+          `<details><summary>完全な JSON データ</summary>`,
+          '',
+          '```json',
+          JSON.stringify(p, null, 2),
+          '```',
+          '',
+          `</details>`,
+          ``,
+          `---`,
+          `*この Issue は自動的に処理され、各モデルの個別のオーバーライドファイルが作成されます*`,
+        ].join('\n');
+      } else {
+        const single = Array.isArray(p) ? p[0] || {} : p;
+        const action = single.action === 'update' ? '更新' : '作成';
+        const actionIcon = single.action === 'update' ? '✏️' : '➕';
+        
+        title = `[${action}モデル] ${single.providerId ?? 'unknown'}/${single.modelId ?? 'unknown'}`;
+        
+        body = [
+          `${actionIcon} **${action}モデルリクエスト**`,
+          ``,
+          `この Issue はウェブサイトフォームから生成されました。ボットが自動的に処理して PR を作成します。`,
+          ``,
+          `## 📋 モデル情報`,
+          `- **プロバイダー**: \`${single.providerId ?? '未指定'}\``,
+          `- **モデル ID**: \`${single.modelId ?? '未指定'}\``,
+          single.name ? `- **表示名**: ${single.name}` : '',
+          single.description ? `- **説明**: ${single.description}` : '',
+          `- **アクションタイプ**: ${action}`,
+          ``,
+          `## 🔧 技術情報`,
+          `<details><summary>完全な設定データ</summary>`,
+          '',
+          '```json',
+          JSON.stringify(single, null, 2),
+          '```',
+          '',
+          `</details>`,
+          ``,
+          `---`,
+          `*この Issue は自動的に処理され、対応するモデルオーバーライドファイルが生成されます*`,
+        ].filter(Boolean).join('\n');
+      }
       return { title, body };
     }
 
@@ -623,7 +831,7 @@ hide:
       const full = url.toString();
       if (full.length > 7500) {
         navigator.clipboard?.writeText(body);
-        document.getElementById('status').textContent = '本文をコピーしました。ページが開いたら貼り付けてください。';
+        document.getElementById('status').textContent = '内容をクリップボードにコピーしました。ページが開いた後に貼り付けてください。';
         const u = new URL(`https://github.com/${repo}/issues/new`);
         u.search = new URLSearchParams({ title, labels: 'model-submission' }).toString();
         window.open(u.toString(), '_blank');
@@ -636,7 +844,7 @@ hide:
     document.getElementById('copy-body').addEventListener('click', function(){
       const { body } = buildIssue();
       navigator.clipboard?.writeText(body);
-      document.getElementById('status').textContent = 'コピーしました';
+      document.getElementById('status').textContent = 'クリップボードにコピーしました';
     });
   })();
 </script>

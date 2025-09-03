@@ -18,9 +18,8 @@ permissions:
 jobs:
   issue_to_pr:
     if: |
-      (github.event_name == 'workflow_dispatch') || (
+      github.event_name == 'workflow_dispatch' || (
         github.event.issue.state == 'open' && (
-          contains(github.event.issue.title, '[Model Submission]') ||
           contains(github.event.issue.body, '"schema": "model-submission"') ||
           contains(github.event.issue.labels.*.name, 'model-submission')
         )
@@ -71,15 +70,51 @@ jobs:
           echo "$PAYLOAD" > payload.json
           cat payload.json
 
-          ACTION=$(jq -r '.action // "create"' payload.json)
-          PROVIDER=$(jq -r '.providerId' payload.json)
-          MODEL=$(jq -r '.modelId' payload.json)
-          BRANCH="feat/model-${PROVIDER}-${MODEL}-$(date -u +%Y%m%d%H%M%S)"
+          IS_ARRAY=$(jq -r 'if type=="array" then "1" else "0" end' payload.json)
+          if [ "$IS_ARRAY" = "1" ]; then
+            COUNT=$(jq 'length' payload.json)
+            ACTION="batch"
+            PROVIDER="batch"
+            MODEL="${COUNT}-models"
+            CREATE_COUNT=$(jq '[ .[] | select((.action // "create") == "create") ] | length' payload.json)
+            UPDATE_COUNT=$(jq '[ .[] | select((.action // "create") == "update") ] | length' payload.json)
+            PROVIDERS_SHORT=$(jq -r '[ .[] | .providerId ] | unique | .[:3] | join(", ")' payload.json)
+            if [ "$CREATE_COUNT" -gt 0 ] && [ "$UPDATE_COUNT" -eq 0 ]; then
+              BRANCH="feat/model-batch-add-${COUNT}-$(date -u +%Y%m%d%H%M%S)"
+              COMMIT_TITLE="✨ feat(models): add ${COUNT} models (${PROVIDERS_SHORT})"
+              PR_TITLE="feat(models): add ${COUNT} models (${PROVIDERS_SHORT})"
+            elif [ "$UPDATE_COUNT" -gt 0 ] && [ "$CREATE_COUNT" -eq 0 ]; then
+              BRANCH="chore/model-batch-update-${COUNT}-$(date -u +%Y%m%d%H%M%S)"
+              COMMIT_TITLE="✏️ chore(models): update ${COUNT} models (${PROVIDERS_SHORT})"
+              PR_TITLE="chore(models): update ${COUNT} models (${PROVIDERS_SHORT})"
+            else
+              BRANCH="chore/model-batch-mixed-${COUNT}-$(date -u +%Y%m%d%H%M%S)"
+              COMMIT_TITLE="📦 chore(models): batch ${COUNT} models (create ${CREATE_COUNT}, update ${UPDATE_COUNT})"
+              PR_TITLE="chore(models): batch ${COUNT} models (create ${CREATE_COUNT}, update ${UPDATE_COUNT})"
+            fi
+          else
+            ACTION=$(jq -r '.action // "create"' payload.json)
+            PROVIDER=$(jq -r '.providerId' payload.json)
+            MODEL=$(jq -r '.modelId' payload.json)
+            PROVIDER_SAFE=$(echo "$PROVIDER" | sed 's/[^A-Za-z0-9._-]/-/g')
+            MODEL_SAFE=$(echo "$MODEL" | sed 's/[^A-Za-z0-9._-]/-/g')
+            if [ "$ACTION" = "update" ]; then
+              BRANCH="chore/model-update-${PROVIDER_SAFE}-${MODEL_SAFE}-$(date -u +%Y%m%d%H%M%S)"
+              COMMIT_TITLE="✏️ chore(models): update ${PROVIDER}/${MODEL}"
+              PR_TITLE="chore(models): update ${PROVIDER}/${MODEL}"
+            else
+              BRANCH="feat/model-add-${PROVIDER_SAFE}-${MODEL_SAFE}-$(date -u +%Y%m%d%H%M%S)"
+              COMMIT_TITLE="✨ feat(models): add ${PROVIDER}/${MODEL}"
+              PR_TITLE="feat(models): add ${PROVIDER}/${MODEL}"
+            fi
+          fi
           echo "action=$ACTION" >> $GITHUB_OUTPUT
           echo "provider=$PROVIDER" >> $GITHUB_OUTPUT
           echo "model=$MODEL" >> $GITHUB_OUTPUT
           echo "branch=$BRANCH" >> $GITHUB_OUTPUT
           echo "issue_number=$ISSUE_NUMBER_OUT" >> $GITHUB_OUTPUT
+          echo "commit_title=$COMMIT_TITLE" >> $GITHUB_OUTPUT
+          echo "pr_title=$PR_TITLE" >> $GITHUB_OUTPUT
 
       - name: Create branch
         run: |
@@ -88,24 +123,40 @@ jobs:
       - name: Apply overrides change (scoped file)
         run: |
           set -euo pipefail
-          mkdir -p "data/overrides/models/${{ steps.payload.outputs.provider }}"
-          jq 'with_entries(select(.value != null))' payload.json > \
-            "data/overrides/models/${{ steps.payload.outputs.provider }}/${{ steps.payload.outputs.model }}.json"
+          IS_ARRAY=$(jq -r 'if type=="array" then "1" else "0" end' payload.json)
+          if [ "$IS_ARRAY" = "1" ]; then
+            jq -c '.[] | with_entries(select(.value != null))' payload.json | while read -r item; do
+              prov=$(echo "$item" | jq -r '.providerId')
+              model=$(echo "$item" | jq -r '.modelId')
+              model_safe=${model//:/_}
+              test -n "$prov" && test -n "$model" || continue
+              mkdir -p "data/overrides/models/$prov"
+              echo "$item" | jq 'with_entries(select(.value != null))' > "data/overrides/models/$prov/$model_safe.json"
+            done
+          else
+            prov=$(jq -r '.providerId' payload.json)
+            model=$(jq -r '.modelId' payload.json)
+            model_safe=${model//:/_}
+            mkdir -p "data/overrides/models/$prov"
+            jq 'with_entries(select(.value != null))' payload.json > "data/overrides/models/$prov/$model_safe.json"
+          fi
 
       - name: Install dependencies
         run: |
-          npm ci
-          pip install -r requirements.txt
+          npm ci || npm i --no-audit --no-fund
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Build API (check changes)
         run: |
           npm run check || true
 
       - name: Commit changes
+        id: commit
         env:
           PROVIDER: ${{ steps.payload.outputs.provider }}
           MODEL: ${{ steps.payload.outputs.model }}
           ISSUE_NUM: ${{ steps.payload.outputs.issue_number }}
+          COMMIT_TITLE: ${{ steps.payload.outputs.commit_title }}
         run: |
           set -euo pipefail
           # Remove temporary files from working tree (not committed)
@@ -118,24 +169,29 @@ jobs:
             if [ -d dist/api ]; then
               git add -A dist/api || true
             fi
-            git commit -m "✨ feat(models): ${PROVIDER}/${MODEL} via issue #${ISSUE_NUM}"
+            git commit -m "${COMMIT_TITLE} via issue #${ISSUE_NUM}"
             git push --set-upstream origin "${{ steps.payload.outputs.branch }}"
+            echo "has_changes=1" >> $GITHUB_OUTPUT
           else
             echo "No changes to commit"
+            echo "has_changes=0" >> $GITHUB_OUTPUT
           fi
 
       - name: Open Pull Request
+        if: steps.commit.outputs.has_changes == '1'
         env:
           GH_TOKEN: ${{ secrets.GH_PAT || secrets.AUTOMATION_ISSUE2PR || secrets.GITHUB_TOKEN }}
         run: |
           BASE_BRANCH=${{ github.event.repository.default_branch }}
+          TITLE="${{ steps.payload.outputs.pr_title }}"
           gh pr create \
-            --title "feat(models): ${{ steps.payload.outputs.provider }}/${{ steps.payload.outputs.model }}" \
+            --title "$TITLE" \
             --body "This PR was automatically generated from issue #${{ steps.payload.outputs.issue_number }}." \
             --base "$BASE_BRANCH" \
             --head "${{ steps.payload.outputs.branch }}"
 
       - name: Comment back to issue
+        if: steps.commit.outputs.has_changes == '1'
         env:
           GH_TOKEN: ${{ secrets.GH_PAT || secrets.AUTOMATION_ISSUE2PR || secrets.GITHUB_TOKEN }}
         run: |

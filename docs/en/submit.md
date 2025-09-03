@@ -6,24 +6,24 @@ hide:
 
 ## Submit a model (auto-PR)
 
-Fill the form below and click “Open GitHub Issue”. A pre-filled issue will open
+Fill the form below and click "Open GitHub Issue". A pre-filled issue will open
 in a new tab. After you submit that issue, a bot will automatically create a PR
 adding/updating the model via overrides, and generate API files.
 
 <style>
-  /* 8px 基础设计系统 */
+  /* 8px design system */
   :root {
-    --spacing-1: 8px;   /* 基础间距 */
-    --spacing-2: 16px;  /* 小间距 */
-    --spacing-3: 24px;  /* 中间距 */
-    --spacing-4: 32px;  /* 大间距 */
-    --radius-sm: 8px;   /* 小圆角 */
-    --radius-md: 12px;  /* 中圆角 */
+    --spacing-1: 8px;   /* base spacing */
+    --spacing-2: 16px;  /* small spacing */
+    --spacing-3: 24px;  /* medium spacing */
+    --spacing-4: 32px;  /* large spacing */
+    --radius-sm: 8px;   /* small radius */
+    --radius-md: 12px;  /* medium radius */
     --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
     --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
   }
 
-  /* 卡片容器 */
+  /* Card container */
   .ui-card {
     background: var(--md-default-bg-color, #fff);
     border: 1px solid var(--md-default-fg-color--lightest, #e5e7eb);
@@ -34,7 +34,7 @@ adding/updating the model via overrides, and generate API files.
     margin: 0 auto;
   }
 
-  /* 标题样式 */
+  /* Title styles */
   .ui-section {
     margin-bottom: var(--spacing-4);
   }
@@ -50,7 +50,7 @@ adding/updating the model via overrides, and generate API files.
     border-bottom: 1px solid var(--md-default-fg-color--lightest, #f3f4f6);
   }
 
-  /* 网格布局 */
+  /* Grid layout */
   .ui-grid {
     display: grid;
     gap: var(--spacing-2);
@@ -75,7 +75,7 @@ adding/updating the model via overrides, and generate API files.
     }
   }
 
-  /* 表单字段 */
+  /* Form fields */
   .ui-field {
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@ adding/updating the model via overrides, and generate API files.
     margin-bottom: var(--spacing-1);
   }
 
-  /* 输入框样式 */
+  /* Input styles */
   .ui-input,
   .ui-textarea,
   .ui-select {
@@ -117,7 +117,7 @@ adding/updating the model via overrides, and generate API files.
   }
   .is-hidden { display: none !important; }
 
-  /* 芯片组件 */
+  /* Chip components */
   .ui-chips {
     display: grid;
     gap: var(--spacing-1);
@@ -153,7 +153,7 @@ adding/updating the model via overrides, and generate API files.
     border-color: var(--md-primary-fg-color, #4051b5);
   }
 
-  /* 分段控制器 */
+  /* Segmented control */
   .ui-segment {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -184,7 +184,7 @@ adding/updating the model via overrides, and generate API files.
     color: #fff;
   }
 
-  /* 按钮组 */
+  /* Button group */
   .ui-actions {
     display: grid;
     grid-auto-flow: column;
@@ -231,6 +231,16 @@ adding/updating the model via overrides, and generate API files.
 <div id="model-submit" data-repo="basellm/llm-metadata">
   <form onsubmit="return false" class="ui-card">
     <div class="ui-section">
+      <h3 class="ui-section-title">Mode</h3>
+      <div class="ui-segment" role="group" aria-label="Mode">
+        <input type="radio" name="mode" id="mode-single" value="single" checked />
+        <label for="mode-single">Single Model</label>
+        <input type="radio" name="mode" id="mode-batch" value="batch" />
+        <label for="mode-batch">Batch Models</label>
+      </div>
+    </div>
+
+    <div id="single-mode" class="ui-section">
       <h3 class="ui-section-title">Action</h3>
       <div class="ui-segment" role="group" aria-label="Action">
         <input type="radio" name="action" id="action-create" value="create" checked />
@@ -240,7 +250,36 @@ adding/updating the model via overrides, and generate API files.
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="batch-mode" class="ui-section is-hidden">
+      <h3 class="ui-section-title">Batch Models JSON</h3>
+      <div class="ui-field" style="margin-bottom: var(--spacing-3);">
+        <label for="batch-json">Model Array (JSON format)</label>
+        <button id="batch-template" type="button" class="ui-btn" style="margin: 0 0 var(--spacing-1) 0; width: max-content;">Fill template</button>
+        <textarea id="batch-json" class="ui-textarea" rows="12" placeholder='[
+  {
+    "schema": "model-submission",
+    "action": "create",
+    "providerId": "deepseek",
+    "modelId": "deepseek-chat",
+    "name": "DeepSeek Chat",
+    "modalities": { "input": ["text"], "output": ["text"] }
+  },
+  {
+    "schema": "model-submission", 
+    "action": "create",
+    "providerId": "examplecorp",
+    "modelId": "novus-1",
+    "name": "Novus 1"
+  }
+]'></textarea>
+      </div>
+      <div id="batch-preview" class="ui-field">
+        <label>Preview (will submit <span id="batch-count">0</span> models)</label>
+        <div id="batch-list" class="ui-muted" style="font-size: 12px; max-height: 200px; overflow-y: auto; border: 1px solid var(--md-default-fg-color--lightest); border-radius: var(--radius-sm); padding: var(--spacing-2);"></div>
+      </div>
+    </div>
+
+    <div id="single-fields" class="ui-section">
       <h3 class="ui-section-title">Basic Information</h3>
       <div class="ui-grid cols-3">
         <div class="ui-field">
@@ -268,7 +307,7 @@ adding/updating the model via overrides, and generate API files.
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="single-capabilities" class="ui-section">
       <h3 class="ui-section-title">Capabilities</h3>
       <div class="ui-chips">
         <input id="cap-reasoning" type="checkbox" />
@@ -282,7 +321,7 @@ adding/updating the model via overrides, and generate API files.
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="single-modalities" class="ui-section">
       <h3 class="ui-section-title">Modalities</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
@@ -318,7 +357,7 @@ adding/updating the model via overrides, and generate API files.
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="single-limits" class="ui-section">
       <h3 class="ui-section-title">Limits</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
@@ -332,7 +371,7 @@ adding/updating the model via overrides, and generate API files.
       </div>
     </div>
 
-    <div class="ui-section">
+    <div id="single-pricing" class="ui-section">
       <h3 class="ui-section-title">Pricing (USD per 1M tokens)</h3>
       <div class="ui-grid cols-3">
         <div class="ui-field">
@@ -374,6 +413,20 @@ adding/updating the model via overrides, and generate API files.
     }
 
     function buildPayload() {
+      const mode = document.querySelector('input[name="mode"]:checked')?.value || 'single';
+      
+      if (mode === 'batch') {
+        try {
+          const batchText = value('batch-json');
+          if (!batchText) return [];
+          const parsed = JSON.parse(batchText);
+          return Array.isArray(parsed) ? parsed : [parsed];
+        } catch (e) {
+          console.error('Batch JSON parse error:', e);
+          return [];
+        }
+      }
+      
       const providerId = value('providerId') || undefined;
       const modelId = value('modelId') || undefined;
       const payload = {
@@ -387,21 +440,10 @@ adding/updating the model via overrides, and generate API files.
         attachment: checked('cap-files') || undefined,
         temperature: checked('cap-temp') || undefined,
         icon: value('icon') || undefined,
-        modalities: {
-          input: gather('mod-in'),
-          output: gather('mod-out'),
-        },
-        limit: {
-          context: num('limit-context'),
-          output: num('limit-output'),
-        },
-        cost: {
-          input: num('cost-input'),
-          output: num('cost-output'),
-          cache_read: num('cost-cache'),
-        },
+        modalities: { input: gather('mod-in'), output: gather('mod-out') },
+        limit: { context: num('limit-context'), output: num('limit-output') },
+        cost: { input: num('cost-input'), output: num('cost-output'), cache_read: num('cost-cache') },
       };
-      // prune undefined, empty strings, empty arrays/objects
       const prune = (obj) => {
         if (!obj || typeof obj !== 'object') return obj;
         const out = Array.isArray(obj) ? [] : {};
@@ -605,26 +647,179 @@ adding/updating the model via overrides, and generate API files.
       loadModelDetail(providerId, modelId);
     });
 
+    // Mode switching
+    function toggleMode() {
+      const mode = document.querySelector('input[name="mode"]:checked')?.value || 'single';
+      const isBatch = mode === 'batch';
+      
+      document.getElementById('single-mode').classList.toggle('is-hidden', isBatch);
+      document.getElementById('batch-mode').classList.toggle('is-hidden', !isBatch);
+      document.getElementById('single-fields').classList.toggle('is-hidden', isBatch);
+      document.getElementById('single-capabilities').classList.toggle('is-hidden', isBatch);
+      document.getElementById('single-modalities').classList.toggle('is-hidden', isBatch);
+      document.getElementById('single-limits').classList.toggle('is-hidden', isBatch);
+      document.getElementById('single-pricing').classList.toggle('is-hidden', isBatch);
+      
+      if (isBatch) {
+        updateBatchPreview();
+      }
+    }
+    
+    // Batch preview update
+    function updateBatchPreview() {
+      try {
+        const batchText = value('batch-json');
+        const countEl = document.getElementById('batch-count');
+        const listEl = document.getElementById('batch-list');
+        
+        if (!batchText.trim()) {
+          countEl.textContent = '0';
+          listEl.innerHTML = '<div style="color: #9ca3af;">Please enter JSON array</div>';
+          return;
+        }
+        
+        const parsed = JSON.parse(batchText);
+        const models = Array.isArray(parsed) ? parsed : [parsed];
+        countEl.textContent = String(models.length);
+        
+        const items = models.map((m, i) => {
+          const prov = m.providerId || '?';
+          const model = m.modelId || '?';
+          const action = m.action || 'create';
+          const name = m.name || '';
+          return `<div style="margin-bottom: 4px;"><strong>${i+1}.</strong> ${action} <code>${prov}/${model}</code> ${name ? `(${name})` : ''}</div>`;
+        }).join('');
+        
+        listEl.innerHTML = items || '<div style="color: #9ca3af;">No valid models</div>';
+      } catch (e) {
+        const countEl = document.getElementById('batch-count');
+        const listEl = document.getElementById('batch-list');
+        countEl.textContent = '0';
+        listEl.innerHTML = `<div style="color: #ef4444;">JSON format error: ${e.message}</div>`;
+      }
+    }
+    
+    document.getElementById('mode-single')?.addEventListener('change', toggleMode);
+    document.getElementById('mode-batch')?.addEventListener('change', toggleMode);
+    document.getElementById('batch-json')?.addEventListener('input', updateBatchPreview);
+    document.getElementById('batch-template')?.addEventListener('click', function(){
+      const template = [
+        {
+          schema: 'model-submission',
+          action: 'create',
+          providerId: 'examplecorp',
+          modelId: 'novus-1',
+          id: 'novus-1',
+          name: 'Novus 1',
+          description: 'Fictional example multimodal model.',
+          tags: ['example', 'fictional', 'demo'],
+          icon: 'Novus.Color',
+          iconURL: 'https://example.com/novus.png',
+          reasoning: true,
+          tool_call: true,
+          attachment: true,
+          temperature: true,
+          modalities: { input: ['text', 'image', 'audio', 'video', 'pdf'], output: ['text', 'image', 'audio', 'video', 'pdf'] },
+          limit: { context: 128000, output: 4096 },
+          cost: { input: 5, output: 15, cache_read: 0.3 }
+        },
+        {
+          schema: 'model-submission',
+          action: 'update',
+          providerId: 'deepseek',
+          modelId: 'deepseek-chat',
+          name: 'DeepSeek Chat',
+          modalities: { input: ['text'], output: ['text'] }
+        }
+      ];
+      const el = document.getElementById('batch-json');
+      if (el) el.value = JSON.stringify(template, null, 2);
+      updateBatchPreview();
+    });
+    
     document.getElementById('action-create')?.addEventListener('change', function(){ if (this.checked) setMode('create'); });
     document.getElementById('action-update')?.addEventListener('change', function(){ if (this.checked) setMode('update'); });
-    // init
+    
+    toggleMode();
     setMode(document.querySelector('input[name="action"]:checked')?.value || 'create');
 
     function buildIssue() {
       const p = buildPayload();
-      const title = `[Model Submission] ${p.action === 'update' ? 'Update' : 'Create'}: ${p.providerId ?? 'unknown'}/${p.modelId ?? 'unknown'}`;
-      const marker = 'MODEL_SUBMISSION';
-      const body = [
-        `This issue was generated from the website form. A bot will turn it into a PR.`,
-        ``,
-        `<details><summary>Payload</summary>`,
-        '',
-        '```json',
-        JSON.stringify(p, null, 2),
-        '```',
-        '',
-        `</details>`,
-      ].join('\n');
+      const mode = document.querySelector('input[name="mode"]:checked')?.value || 'single';
+      
+      let title, body;
+      if (mode === 'batch' && Array.isArray(p)) {
+        const count = p.length;
+        const providers = [...new Set(p.map(m => m.providerId).filter(Boolean))];
+        const providerList = providers.length > 3 ? `${providers.slice(0, 3).join(', ')} & ${providers.length - 3} more` : providers.join(', ');
+        
+        title = `[Batch Submission] ${count} models (${providerList})`;
+        
+        const modelList = p.map((m, i) => {
+          const prov = m.providerId || 'unknown';
+          const model = m.modelId || 'unknown';
+          const action = m.action === 'update' ? 'Update' : 'Create';
+          const name = m.name ? ` - ${m.name}` : '';
+          return `${i + 1}. **${action}** \`${prov}/${model}\`${name}`;
+        }).join('\n');
+        
+        body = [
+          `🚀 **Batch Model Submission Request**`,
+          ``,
+          `This issue was generated from the website form (batch mode). A bot will automatically process and create a PR.`,
+          ``,
+          `## 📋 Submission Summary`,
+          `- **Total Count**: ${count} models`,
+          `- **Providers**: ${providerList}`,
+          `- **Mode**: Batch Processing`,
+          ``,
+          `## 📝 Model Details`,
+          modelList,
+          ``,
+          `## 🔧 Technical Information`,
+          `<details><summary>Complete JSON Data</summary>`,
+          '',
+          '```json',
+          JSON.stringify(p, null, 2),
+          '```',
+          '',
+          `</details>`,
+          ``,
+          `---`,
+          `*This issue will be automatically processed, creating individual override files for each model*`,
+        ].join('\n');
+      } else {
+        const single = Array.isArray(p) ? p[0] || {} : p;
+        const action = single.action === 'update' ? 'Update' : 'Create';
+        const actionIcon = single.action === 'update' ? '✏️' : '➕';
+        
+        title = `[${action} Model] ${single.providerId ?? 'unknown'}/${single.modelId ?? 'unknown'}`;
+        
+        body = [
+          `${actionIcon} **${action} Model Request**`,
+          ``,
+          `This issue was generated from the website form. A bot will automatically process and create a PR.`,
+          ``,
+          `## 📋 Model Information`,
+          `- **Provider**: \`${single.providerId ?? 'Not specified'}\``,
+          `- **Model ID**: \`${single.modelId ?? 'Not specified'}\``,
+          single.name ? `- **Display Name**: ${single.name}` : '',
+          single.description ? `- **Description**: ${single.description}` : '',
+          `- **Action Type**: ${action}`,
+          ``,
+          `## 🔧 Technical Information`,
+          `<details><summary>Complete Configuration Data</summary>`,
+          '',
+          '```json',
+          JSON.stringify(single, null, 2),
+          '```',
+          '',
+          `</details>`,
+          ``,
+          `---`,
+          `*This issue will be automatically processed and generate the corresponding model override file*`,
+        ].filter(Boolean).join('\n');
+      }
       return { title, body };
     }
 
