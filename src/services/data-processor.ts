@@ -119,6 +119,34 @@ export class DataProcessor {
       processedModels[modelId] = this.processModel(modelData, modelId, providerId, overrides);
     }
 
+    // 基于 overrides 注入不存在的模型（允许仅通过 overrides.models 新增模型）
+    const overrideModels = overrides.models || {};
+    for (const [modelKey, override] of Object.entries(overrideModels)) {
+      const [provId, modId] = modelKey.split('/') as [string, string];
+      if (provId !== providerId) continue;
+      if (processedModels[modId]) continue;
+
+      // 从 override 创建基础模型，并应用默认描述与 i18n 英文兜底
+      const baseName = (override.name as string | undefined) || modId;
+      const created: Model = {
+        id: modId,
+        name: baseName,
+        description: this.generateDefaultDescription(baseName, providerId),
+        // 其余字段通过覆写合入
+      } as unknown as Model;
+
+      const withOverride = this.applyOverrides(created, override as Partial<Model>);
+
+      // 应用 i18n 覆写（英文写回）
+      const i18nModel: I18nOverrideEntity | undefined = overrides.i18n?.models?.[modelKey as any];
+      if (i18nModel) {
+        if (i18nModel.name?.en) withOverride.name = i18nModel.name.en;
+        if (i18nModel.description?.en) withOverride.description = i18nModel.description.en;
+      }
+
+      processedModels[modId] = withOverride;
+    }
+
     return {
       ...processed,
       models: processedModels,
@@ -142,6 +170,17 @@ export class DataProcessor {
           ...providerOverride,
         };
         result.providers[providerId] = baseProvider;
+      }
+    }
+
+    // 若 overrides.models 中引用了新的 provider，也需要注入一个占位提供商
+    for (const modelKey of Object.keys(overrides.models || {})) {
+      const [provId] = modelKey.split('/') as [string, string];
+      if (!result.providers[provId]) {
+        result.providers[provId] = {
+          id: provId,
+          models: {},
+        } as Provider;
       }
     }
 
