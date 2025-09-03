@@ -127,5 +127,33 @@
       "lobeIcon": "Zhipu.Color"
     }
   },
-  "models": {}
+  "models": {
+    "newapi/newapi-v0": {
+      "id": "newapi-v0",
+      "name": "New API",
+      "description": "New API测试提交模型",
+      "reasoning": true,
+      "attachment": true,
+      "temperature": true,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "audio"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 8096
+      },
+      "cost": {
+        "input": 32,
+        "output": 15,
+        "cache_read": 8
+      }
+    }
+  }
 }
