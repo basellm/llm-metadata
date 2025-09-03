@@ -184,10 +184,14 @@ export interface NewApiSyncPayload {
     models: NewApiModel[];
 }
 export interface VoAPIFirm {
+    id: string;
     name: string;
     description: string;
     icon: string;
     status: number;
+    modelCount: number;
+    api: string;
+    doc: string;
 }
 /** 构建统计 */
 export interface BuildStats {

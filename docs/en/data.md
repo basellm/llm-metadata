@@ -8,9 +8,9 @@ hide:
 This page displays comprehensive information about all LLM providers and models, automatically generated from API data.
 
 !!! info "Statistics"
-    - **Provider Count**: 42
-    - **Model Count**: 633
-    - **Last Updated**: 9/3/2025, 6:44:15 PM
+    - **Provider Count**: 43
+    - **Model Count**: 634
+    - **Last Updated**: 9/3/2025, 7:09:06 PM
 
 **Capabilities Legend**: 🧠 Reasoning &nbsp;&nbsp;🔧 Tools &nbsp;&nbsp;📎 Attachment &nbsp;&nbsp;🌡️ Temperature
 ## Alibaba
@@ -241,6 +241,12 @@ This page displays comprehensive information about all LLM providers and models,
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
 | **DeepSeek Reasoner** | deepseek-reasoner | 128K | 128K | In: $0.57<br/>Out: $1.68<br/>Cache: $0.07 | Model: 0.285<br/>Completion: 2.947<br/>Cache: 0.123 | 📎 🧠 🔧 🌡️ | 2024-07 | In: text<br/>Out: text | Released: 2025-01-20<br/>Updated: 2025-08-21 |
 | **DeepSeek Chat** | deepseek-chat | 128K | 128K | In: $0.57<br/>Out: $1.68<br/>Cache: $0.07 | Model: 0.285<br/>Completion: 2.947<br/>Cache: 0.123 | 📎 🔧 🌡️ | 2024-07 | In: text<br/>Out: text | Released: 2024-12-26<br/>Updated: 2025-08-21 |
+
+## examplecorp
+
+| Model | Model ID | Context | Output | Pricing ($/1M) | NewAPI Ratios | Capabilities | Knowledge | Modalities | Details |
+|-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
+| **Novus 1 (Override Example)** | novus-1 | 64K | 2K | In: $3.5<br/>Out: $10<br/>Cache: $0.2 | Model: 1.750<br/>Completion: 2.857<br/>Cache: 0.057 | 🧠 🌡️ | - | In: text, image<br/>Out: text | - |
 
 ## FastRouter
 
