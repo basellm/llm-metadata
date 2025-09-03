@@ -513,12 +513,14 @@
         '<summary>Complete JSON Data</summary>',
         '',
         '```json',
-        JSON.stringify(p, null, 2).replace(/\r\n/g, '\n'),
+        JSON.stringify(p, null, 2),
         '```',
         '',
         '</details>',
         '',
+        '',
         '---',
+        '',
         `*${t('issueFooterBatch')}*`,
       ]);
     } else {
@@ -545,12 +547,14 @@
         '<summary>Complete Configuration Data</summary>',
         '',
         '```json',
-        JSON.stringify(single, null, 2).replace(/\r\n/g, '\n'),
+        JSON.stringify(single, null, 2),
         '```',
         '',
         '</details>',
         '',
+        '',
         '---',
+        '',
         `*${t('issueFooterSingle')}*`,
       ]);
     }
@@ -560,7 +564,7 @@
   const createGitHubUrl = (title, body) => {
     const url = new URL(`https://github.com/${repo}/issues/new`);
     // Ensure consistent line endings for better URL encoding
-    const normalizedBody = body.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    const normalizedBody = body.replace(/\r/g, '\n');
     const params = new URLSearchParams({ title, body: normalizedBody, labels: 'model-submission' });
     url.search = params.toString();
     return url.toString();
@@ -586,7 +590,7 @@
     if (!ensureValidBeforeSubmit()) return;
     const { body } = buildIssue();
     // Normalize line endings for clipboard consistency
-    const normalizedBody = body.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    const normalizedBody = body.replace(/\r/g, '\n');
     navigator.clipboard?.writeText(normalizedBody);
     setStatus(t('copied'));
   };
@@ -644,7 +648,7 @@
         modalities: { input: ['text'], output: ['text'] }
       }
     ];
-    setValue('batch-json', JSON.stringify(template, null, 2).replace(/\r\n/g, '\n'));
+    setValue('batch-json', JSON.stringify(template, null, 2));
     updateBatchPreview();
   };
 
