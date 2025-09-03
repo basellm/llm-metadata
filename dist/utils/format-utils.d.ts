@@ -8,6 +8,7 @@ export declare function formatPricing(cost?: {
     input?: number;
     output?: number;
     cache_read?: number;
+    cache_write?: number;
 }): string;
 /** 格式化能力标志 */
 export declare function formatCapabilities(model: {

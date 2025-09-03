@@ -23,12 +23,14 @@ export class NewApiBuilder {
     buildPricingFields(cost) {
         const input = typeof cost?.input === 'number' && cost.input > 0 ? cost.input : null;
         const output = typeof cost?.output === 'number' && cost.output > 0 ? cost.output : null;
-        const cache = typeof cost?.cache_read === 'number' && cost.cache_read > 0 ? cost.cache_read : null;
+        const cacheRead = typeof cost?.cache_read === 'number' && cost.cache_read > 0 ? cost.cache_read : null;
+        const cacheWrite = typeof cost?.cache_write === 'number' && cost.cache_write > 0 ? cost.cache_write : null;
         const ratios = this.calculateRatios(cost);
         return {
             price_per_m_input: input,
             price_per_m_output: output,
-            price_per_m_cache: cache,
+            price_per_m_cache_read: cacheRead,
+            price_per_m_cache_write: cacheWrite,
             ratio_model: ratios ? ratios.model : null,
             ratio_completion: ratios ? ratios.completion : null,
             ratio_cache: ratios ? ratios.cache : null,
@@ -105,7 +107,8 @@ export class NewApiBuilder {
                     icon: model.icon || provider.icon || provider.lobeIcon || '',
                     price_per_m_input: pricing.price_per_m_input,
                     price_per_m_output: pricing.price_per_m_output,
-                    price_per_m_cache: pricing.price_per_m_cache,
+                    price_per_m_cache_read: pricing.price_per_m_cache_read,
+                    price_per_m_cache_write: pricing.price_per_m_cache_write,
                     ratio_model: pricing.ratio_model,
                     ratio_completion: pricing.ratio_completion,
                     ratio_cache: pricing.ratio_cache,

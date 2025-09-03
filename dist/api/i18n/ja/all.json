@@ -4955,14 +4955,15 @@
       "novus-1": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3,
+          "cache_read": 0.075,
+          "cache_write": 0.5,
           "input": 5,
           "output": 15
         },
         "description": "Fictional example multimodal model.",
-        "icon": "Novus.Color",
-        "iconURL": "https://example.com/novus.png",
         "id": "novus-1",
+        "knowledge": "2024-07",
+        "last_updated": "2025-08-21",
         "limit": {
           "context": 128000,
           "output": 4096
@@ -4984,12 +4985,9 @@
           ]
         },
         "name": "Novus 1",
+        "open_weights": false,
         "reasoning": true,
-        "tags": [
-          "example",
-          "fictional",
-          "demo"
-        ],
+        "release_date": "2025-01-20",
         "temperature": true,
         "tool_call": true
       }
@@ -11755,6 +11753,37 @@
     "id": "opencode",
     "lobeIcon": "OpenCode",
     "models": {
+      "grok-code": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Grok Code Fast 1 は opencode によって提供される AI モデルです。",
+        "id": "grok-code",
+        "last_updated": "2025-08-20",
+        "limit": {
+          "context": 256000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok Code Fast 1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-20",
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen/qwen3-coder": {
         "attachment": false,
         "cost": {
@@ -11781,37 +11810,6 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-23",
-        "temperature": true,
-        "tool_call": true
-      },
-      "x-ai/grok-code-fast-1": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "Grok Code Fast 1 は opencode によって提供される AI モデルです。",
-        "id": "x-ai/grok-code-fast-1",
-        "last_updated": "2025-08-20",
-        "limit": {
-          "context": 256000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Grok Code Fast 1",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-08-20",
         "temperature": true,
         "tool_call": true
       }
