@@ -205,6 +205,21 @@ class Builder {
             if (writeJSONIfChanged(join(voapiDir, 'firms.json'), { success: true, message: '', data: voapiFirms }, { dryRun })) {
                 changes++;
             }
+            // 生成多语言 VoAPI locales 输出至 api/i18n/<locale>/voapi）
+            {
+                const locales = this.i18nService.getLocales().map((l) => l.locale);
+                const i18nBase = join(this.API_DIR, 'i18n');
+                ensureDirSync(i18nBase);
+                for (const locale of locales) {
+                    const outDir = join(i18nBase, locale, 'voapi');
+                    ensureDirSync(outDir);
+                    const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale);
+                    const voapiFirms = this.voApiBuilder.buildFirms(localized);
+                    if (writeJSONIfChanged(join(outDir, 'firms.json'), { success: true, message: '', data: voapiFirms }, { dryRun })) {
+                        changes++;
+                    }
+                }
+            }
             // 生成 NewAPI 接口
             console.log('Generating NewAPI endpoints...');
             const newapiDir = join(this.API_DIR, 'newapi');
