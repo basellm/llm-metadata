@@ -4892,7 +4892,7 @@
           "input": 0.57,
           "output": 1.68
         },
-        "description": "China DeepSeek Chat is an AI model provided by deepseek.",
+        "description": "DeepSeek Chat は deepseek によって提供される AI モデルです。",
         "id": "deepseek-chat",
         "knowledge": "2024-07",
         "last_updated": "2025-08-21",
@@ -4953,32 +4953,45 @@
     "id": "examplecorp",
     "models": {
       "novus-1": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
-          "cache_read": 0.2,
-          "input": 3.5,
-          "output": 10
+          "cache_read": 0.3,
+          "input": 5,
+          "output": 15
         },
-        "description": "This is a fictional model used only as an override example.",
-        "icon": "https://cdn.example.com/icons/examplecorp/novus-1.svg",
+        "description": "Fictional example multimodal model.",
+        "icon": "Novus.Color",
+        "iconURL": "https://example.com/novus.png",
         "id": "novus-1",
         "limit": {
-          "context": 64000,
-          "output": 2048
+          "context": 128000,
+          "output": 4096
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "audio",
+            "video",
+            "pdf"
           ],
           "output": [
-            "text"
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
           ]
         },
-        "name": "Novus 1 (Override Example)",
+        "name": "Novus 1",
         "reasoning": true,
+        "tags": [
+          "example",
+          "fictional",
+          "demo"
+        ],
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       }
     }
   },
