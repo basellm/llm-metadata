@@ -509,10 +509,11 @@
         buildModelListForBatch(p),
         '',
         `## 🔧 ${t('techInfo')}`,
-        '<details><summary>Complete JSON Data</summary>',
+        '<details>',
+        '<summary>Complete JSON Data</summary>',
         '',
         '```json',
-        JSON.stringify(p, null, 2),
+        JSON.stringify(p, null, 2).replace(/\r\n/g, '\n'),
         '```',
         '',
         '</details>',
@@ -540,10 +541,11 @@
         `- **${t('actionType')}**: ${action}`,
         '',
         `## 🔧 ${t('techInfo')}`,
-        '<details><summary>Complete Configuration Data</summary>',
+        '<details>',
+        '<summary>Complete Configuration Data</summary>',
         '',
         '```json',
-        JSON.stringify(single, null, 2),
+        JSON.stringify(single, null, 2).replace(/\r\n/g, '\n'),
         '```',
         '',
         '</details>',
@@ -557,7 +559,9 @@
 
   const createGitHubUrl = (title, body) => {
     const url = new URL(`https://github.com/${repo}/issues/new`);
-    const params = new URLSearchParams({ title, body, labels: 'model-submission' });
+    // Ensure consistent line endings for better URL encoding
+    const normalizedBody = body.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    const params = new URLSearchParams({ title, body: normalizedBody, labels: 'model-submission' });
     url.search = params.toString();
     return url.toString();
   };
@@ -581,7 +585,9 @@
   const copyBody = () => {
     if (!ensureValidBeforeSubmit()) return;
     const { body } = buildIssue();
-    navigator.clipboard?.writeText(body);
+    // Normalize line endings for clipboard consistency
+    const normalizedBody = body.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    navigator.clipboard?.writeText(normalizedBody);
     setStatus(t('copied'));
   };
 
@@ -638,7 +644,7 @@
         modalities: { input: ['text'], output: ['text'] }
       }
     ];
-    setValue('batch-json', JSON.stringify(template, null, 2));
+    setValue('batch-json', JSON.stringify(template, null, 2).replace(/\r\n/g, '\n'));
     updateBatchPreview();
   };
 

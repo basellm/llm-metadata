@@ -127,15 +127,33 @@ jobs:
               model=$(echo "$item" | jq -r '.modelId // .id')
               model_safe=${model//:/_}
               test -n "$prov" && test -n "$model" || continue
+
+              # 1) 写入模型覆写（剔除无关字段与 i18n）
               mkdir -p "data/overrides/models/$prov"
-              echo "$item" | jq 'with_entries(select(.value != null))' > "data/overrides/models/$prov/$model_safe.json"
+              echo "$item" | jq 'del(.i18n, .schema, .action, .providerId, .modelId) | with_entries(select(.value != null))' > "data/overrides/models/$prov/$model_safe.json"
+
+              # 2) 写入模型 i18n（仅当存在 name/description 时）
+              i18n_json=$(echo "$item" | jq -c '.i18n | {name, description} | del(.. | nulls) | select((.name // {} | length) + (.description // {} | length) > 0)') || true
+              if [ -n "${i18n_json:-}" ]; then
+                mkdir -p "data/overrides/i18n/models/$prov"
+                echo "$i18n_json" > "data/overrides/i18n/models/$prov/$model_safe.json"
+              fi
             done
           else
             prov=$(jq -r '.providerId' payload.json)
             model=$(jq -r '.modelId // .id' payload.json)
             model_safe=${model//:/_}
+
+            # 1) 写入模型覆写（剔除无关字段与 i18n）
             mkdir -p "data/overrides/models/$prov"
-            jq 'with_entries(select(.value != null))' payload.json > "data/overrides/models/$prov/$model_safe.json"
+            jq 'del(.i18n, .schema, .action, .providerId, .modelId) | with_entries(select(.value != null))' payload.json > "data/overrides/models/$prov/$model_safe.json"
+
+            # 2) 写入模型 i18n（仅当存在 name/description 时）
+            i18n_json=$(jq -c '.i18n | {name, description} | del(.. | nulls) | select((.name // {} | length) + (.description // {} | length) > 0)' payload.json) || true
+            if [ -n "${i18n_json:-}" ]; then
+              mkdir -p "data/overrides/i18n/models/$prov"
+              echo "$i18n_json" > "data/overrides/i18n/models/$prov/$model_safe.json"
+            fi
           fi
 
       - name: Install dependencies
