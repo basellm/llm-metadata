@@ -97,8 +97,7 @@ ${tr('intro.data')}
 
 **${tr('legend.title')}**: 🧠 ${tr('legend.reasoning')} &nbsp;&nbsp;🔧 ${tr(
       'legend.tools',
-    )} &nbsp;&nbsp;📎 ${tr('legend.files')} &nbsp;&nbsp;🌡️ ${tr('legend.temperature')}
-
+    )} &nbsp;&nbsp;📎 ${tr('legend.attachment')} &nbsp;&nbsp;🌡️ ${tr('legend.temperature')}
 `;
 
     // 为每个提供商生成 Markdown 表格

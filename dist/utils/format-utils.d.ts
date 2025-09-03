@@ -15,6 +15,7 @@ export declare function formatCapabilities(model: {
     reasoning?: boolean;
     tool_call?: boolean;
     temperature?: boolean;
+    image?: boolean;
 }): string;
 /** 格式化模态信息 */
 export declare function formatModalities(modalities?: {

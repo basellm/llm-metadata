@@ -58,8 +58,7 @@ ${tr('intro.data')}
     - **${tr('stats.models')}**: ${stats.models}
     - **${tr('stats.updated')}**: ${lastUpdated}
 
-**${tr('legend.title')}**: 🧠 ${tr('legend.reasoning')} &nbsp;&nbsp;🔧 ${tr('legend.tools')} &nbsp;&nbsp;📎 ${tr('legend.files')} &nbsp;&nbsp;🌡️ ${tr('legend.temperature')}
-
+**${tr('legend.title')}**: 🧠 ${tr('legend.reasoning')} &nbsp;&nbsp;🔧 ${tr('legend.tools')} &nbsp;&nbsp;📎 ${tr('legend.attachment')} &nbsp;&nbsp;🌡️ ${tr('legend.temperature')}
 `;
         // 为每个提供商生成 Markdown 表格
         providerIndex.forEach((provider) => {
