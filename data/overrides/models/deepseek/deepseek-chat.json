@@ -1,0 +1,28 @@
+{
+  "schema": "model-submission",
+  "action": "update",
+  "providerId": "deepseek",
+  "modelId": "deepseek-chat",
+  "name": "DeepSeek Chat",
+  "description": "China DeepSeek Chat is an AI model provided by deepseek.",
+  "tool_call": true,
+  "attachment": true,
+  "temperature": true,
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "limit": {
+    "context": 128000,
+    "output": 128000
+  },
+  "cost": {
+    "input": 0.57,
+    "output": 1.68,
+    "cache_read": 0.07
+  }
+}
