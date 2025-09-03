@@ -4,288 +4,172 @@
 テンプレート済みの Issue が開きます。Issue を送信すると、ボットが自動的に PR を
 作成し、overrides を通じてモデルを追加/更新し、API ファイルを生成します。
 
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-  .submit-form {
-    max-width: 800px;
-    margin: 0 auto;
-    background: var(--md-default-bg-color, #ffffff);
-    border: 1px solid var(--md-default-fg-color--lightest, #e4e4e7);
-    border-radius: 8px;
-    padding: 24px;
-  }
-  .form-section {
-    margin-bottom: 32px;
-  }
-  .form-section:last-child {
-    margin-bottom: 0;
-  }
-  .section-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 16px;
-    color: var(--md-default-fg-color, #09090b);
-  }
-  .form-grid {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: 1fr;
-  }
-  @media (min-width: 640px) {
-    .form-grid.cols-2 { grid-template-columns: 1fr 1fr; }
-    .form-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
-  }
-  .form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .form-label {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--md-default-fg-color, #09090b);
-  }
-  .form-input, .form-textarea {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid var(--md-default-fg-color--lightest, #e4e4e7);
-    border-radius: 6px;
-    background: var(--md-default-bg-color, #ffffff);
-    font-size: 14px;
-    color: var(--md-default-fg-color, #09090b);
-    box-sizing: border-box;
-  }
-  .form-input:focus, .form-textarea:focus {
-    outline: none;
-    border-color: var(--md-primary-fg-color, #18181b);
-    box-shadow: 0 0 0 2px var(--md-primary-fg-color--light, rgba(24, 24, 27, 0.1));
-  }
-  .form-textarea {
-    min-height: 80px;
-    resize: vertical;
-  }
-  .form-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .form-tag {
-    position: relative;
-  }
-  .form-tag input {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-  }
-  .form-tag label {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 12px;
-    border: 1px solid var(--md-default-fg-color--lightest, #e4e4e7);
-    border-radius: 6px;
-    background: var(--md-default-bg-color, #ffffff);
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--md-default-fg-color--light, #71717a);
-    cursor: pointer;
-    user-select: none;
-  }
-  .form-tag input:checked + label {
-    background: var(--md-default-fg-color, #18181b);
-    color: var(--md-default-bg-color, #ffffff);
-    border-color: var(--md-default-fg-color, #18181b);
-  }
-  .form-actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 32px;
-  }
-  .form-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 16px;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  .form-button.primary {
-    background: var(--md-default-fg-color, #18181b);
-    color: var(--md-default-bg-color, #ffffff);
-  }
-  .form-button.secondary {
-    background: var(--md-default-bg-color, #ffffff);
-    color: var(--md-default-fg-color, #18181b);
-    border-color: var(--md-default-fg-color--lightest, #e4e4e7);
-  }
-  .form-status {
-    font-size: 14px;
-    color: var(--md-default-fg-color--light, #71717a);
-  }
+  .tag-input { position: absolute; opacity: 0; pointer-events: none; }
+  .tag-label { transition: none; }
+  .tag-input:checked + .tag-label { @apply bg-gray-900 text-white border-gray-900; }
 </style>
 
 <div id="model-submit" data-repo="basellm/llm-metadata">
-  <form onsubmit="return false" class="submit-form">
-    <div class="form-section">
-      <h3 class="section-title">基本情報</h3>
-      <div class="form-grid cols-2">
-        <div class="form-field">
-          <label class="form-label" for="providerId">Provider ID</label>
-          <input id="providerId" class="form-input" type="text" required placeholder="例: openai" />
+  <form onsubmit="return false" class="max-w-4xl mx-auto bg-white border border-gray-200 rounded-lg p-6 space-y-8">
+    
+    <div class="space-y-4">
+      <h3 class="text-lg font-semibold text-gray-900">基本情報</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="space-y-2">
+          <label class="block text-sm font-medium text-gray-700" for="providerId">プロバイダー ID</label>
+          <input id="providerId" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent" type="text" required placeholder="例: openai" />
         </div>
-        <div class="form-field">
-          <label class="form-label" for="modelId">Model ID</label>
-          <input id="modelId" class="form-input" type="text" required placeholder="例: gpt-4o" />
-        </div>
-      </div>
-      <div class="form-grid cols-2">
-        <div class="form-field">
-          <label class="form-label" for="name">表示名</label>
-          <input id="name" class="form-input" type="text" placeholder="表示名（任意）" />
-        </div>
-        <div class="form-field">
-          <label class="form-label" for="icon">Icon URL</label>
-          <input id="icon" class="form-input" type="url" placeholder="https://..." />
+        <div class="space-y-2">
+          <label class="block text-sm font-medium text-gray-700" for="modelId">モデル ID</label>
+          <input id="modelId" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent" type="text" required placeholder="例: gpt-4o" />
         </div>
       </div>
-      <div class="form-field">
-        <label class="form-label" for="description">説明</label>
-        <textarea id="description" class="form-textarea" placeholder="モデルの短い説明"></textarea>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="space-y-2">
+          <label class="block text-sm font-medium text-gray-700" for="name">表示名</label>
+          <input id="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent" type="text" placeholder="表示名（任意）" />
+        </div>
+        <div class="space-y-2">
+          <label class="block text-sm font-medium text-gray-700" for="icon">アイコン URL</label>
+          <input id="icon" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent" type="url" placeholder="https://..." />
+        </div>
       </div>
-    </div>
-
-    <div class="form-section">
-      <h3 class="section-title">機能</h3>
-      <div class="form-tags">
-        <div class="form-tag">
-          <input id="cap-reasoning" type="checkbox" />
-          <label for="cap-reasoning">推論</label>
-        </div>
-        <div class="form-tag">
-          <input id="cap-tools" type="checkbox" />
-          <label for="cap-tools">ツール呼び出し</label>
-        </div>
-        <div class="form-tag">
-          <input id="cap-files" type="checkbox" />
-          <label for="cap-files">ファイル添付</label>
-        </div>
-        <div class="form-tag">
-          <input id="cap-temp" type="checkbox" />
-          <label for="cap-temp">温度制御</label>
-        </div>
+      <div class="space-y-2">
+        <label class="block text-sm font-medium text-gray-700" for="description">説明</label>
+        <textarea id="description" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent resize-vertical" rows="3" placeholder="モデルの短い説明"></textarea>
       </div>
     </div>
 
-    <div class="form-section">
-      <h3 class="section-title">モダリティ</h3>
-      <div class="form-grid cols-2">
-        <div class="form-field">
-          <label class="form-label">入力</label>
-          <div class="form-tags">
-            <div class="form-tag">
-              <input class="mod-in" type="checkbox" id="in-text" value="text" checked />
-              <label for="in-text">text</label>
+    <div class="space-y-4">
+      <h3 class="text-lg font-semibold text-gray-900">機能</h3>
+      <div class="flex flex-wrap gap-2">
+        <div class="relative">
+          <input id="cap-reasoning" type="checkbox" class="tag-input" />
+          <label for="cap-reasoning" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">推論</label>
+        </div>
+        <div class="relative">
+          <input id="cap-tools" type="checkbox" class="tag-input" />
+          <label for="cap-tools" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">ツール呼び出し</label>
+        </div>
+        <div class="relative">
+          <input id="cap-files" type="checkbox" class="tag-input" />
+          <label for="cap-files" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">ファイル添付</label>
+        </div>
+        <div class="relative">
+          <input id="cap-temp" type="checkbox" class="tag-input" />
+          <label for="cap-temp" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">温度制御</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <h3 class="text-lg font-semibold text-gray-900">モダリティ</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <label class="block text-sm font-medium text-gray-700">入力</label>
+          <div class="flex flex-wrap gap-2">
+            <div class="relative">
+              <input class="mod-in tag-input" type="checkbox" id="in-text" value="text" checked />
+              <label for="in-text" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">text</label>
             </div>
-            <div class="form-tag">
-              <input class="mod-in" type="checkbox" id="in-image" value="image" />
-              <label for="in-image">image</label>
+            <div class="relative">
+              <input class="mod-in tag-input" type="checkbox" id="in-image" value="image" />
+              <label for="in-image" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">image</label>
             </div>
-            <div class="form-tag">
-              <input class="mod-in" type="checkbox" id="in-audio" value="audio" />
-              <label for="in-audio">audio</label>
+            <div class="relative">
+              <input class="mod-in tag-input" type="checkbox" id="in-audio" value="audio" />
+              <label for="in-audio" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">audio</label>
             </div>
-            <div class="form-tag">
-              <input class="mod-in" type="checkbox" id="in-video" value="video" />
-              <label for="in-video">video</label>
+            <div class="relative">
+              <input class="mod-in tag-input" type="checkbox" id="in-video" value="video" />
+              <label for="in-video" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">video</label>
             </div>
-            <div class="form-tag">
-              <input class="mod-in" type="checkbox" id="in-pdf" value="pdf" />
-              <label for="in-pdf">pdf</label>
+            <div class="relative">
+              <input class="mod-in tag-input" type="checkbox" id="in-pdf" value="pdf" />
+              <label for="in-pdf" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">pdf</label>
             </div>
           </div>
         </div>
-        <div class="form-field">
-          <label class="form-label">出力</label>
-          <div class="form-tags">
-            <div class="form-tag">
-              <input class="mod-out" type="checkbox" id="out-text" value="text" checked />
-              <label for="out-text">text</label>
+        <div class="space-y-2">
+          <label class="block text-sm font-medium text-gray-700">出力</label>
+          <div class="flex flex-wrap gap-2">
+            <div class="relative">
+              <input class="mod-out tag-input" type="checkbox" id="out-text" value="text" checked />
+              <label for="out-text" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">text</label>
             </div>
-            <div class="form-tag">
-              <input class="mod-out" type="checkbox" id="out-image" value="image" />
-              <label for="out-image">image</label>
+            <div class="relative">
+              <input class="mod-out tag-input" type="checkbox" id="out-image" value="image" />
+              <label for="out-image" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">image</label>
             </div>
-            <div class="form-tag">
-              <input class="mod-out" type="checkbox" id="out-audio" value="audio" />
-              <label for="out-audio">audio</label>
+            <div class="relative">
+              <input class="mod-out tag-input" type="checkbox" id="out-audio" value="audio" />
+              <label for="out-audio" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">audio</label>
             </div>
-            <div class="form-tag">
-              <input class="mod-out" type="checkbox" id="out-video" value="video" />
-              <label for="out-video">video</label>
+            <div class="relative">
+              <input class="mod-out tag-input" type="checkbox" id="out-video" value="video" />
+              <label for="out-video" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">video</label>
             </div>
-            <div class="form-tag">
-              <input class="mod-out" type="checkbox" id="out-pdf" value="pdf" />
-              <label for="out-pdf">pdf</label>
+            <div class="relative">
+              <input class="mod-out tag-input" type="checkbox" id="out-pdf" value="pdf" />
+              <label for="out-pdf" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">pdf</label>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="form-section">
-      <h3 class="section-title">制限</h3>
-      <div class="form-grid cols-2">
-        <div class="form-field">
-          <label class="form-label" for="limit-context">コンテキスト（tokens）</label>
-          <input id="limit-context" class="form-input" type="number" min="0" placeholder="例: 128000" />
+    <div class="space-y-4">
+      <h3 class="text-lg font-semibold text-gray-900">制限</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="space-y-2">
+          <label class="block text-sm font-medium text-gray-700" for="limit-context">コンテキスト（tokens）</label>
+          <input id="limit-context" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent" type="number" min="0" placeholder="例: 128000" />
         </div>
-        <div class="form-field">
-          <label class="form-label" for="limit-output">最大出力（tokens）</label>
-          <input id="limit-output" class="form-input" type="number" min="0" placeholder="例: 4096" />
-        </div>
-      </div>
-    </div>
-
-    <div class="form-section">
-      <h3 class="section-title">価格（USD / 100万 tokens）</h3>
-      <div class="form-grid cols-3">
-        <div class="form-field">
-          <label class="form-label" for="cost-input">入力単価</label>
-          <input id="cost-input" class="form-input" type="number" min="0" step="0.0001" placeholder="例: 5" />
-        </div>
-        <div class="form-field">
-          <label class="form-label" for="cost-output">出力単価</label>
-          <input id="cost-output" class="form-input" type="number" min="0" step="0.0001" placeholder="例: 15" />
-        </div>
-        <div class="form-field">
-          <label class="form-label" for="cost-cache">キャッシュ読み出し単価</label>
-          <input id="cost-cache" class="form-input" type="number" min="0" step="0.0001" placeholder="例: 0.3" />
+        <div class="space-y-2">
+          <label class="block text-sm font-medium text-gray-700" for="limit-output">最大出力（tokens）</label>
+          <input id="limit-output" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent" type="number" min="0" placeholder="例: 4096" />
         </div>
       </div>
     </div>
 
-    <div class="form-section">
-      <h3 class="section-title">操作</h3>
-      <div class="form-tags">
-        <div class="form-tag">
-          <input type="radio" name="action" id="action-create" value="create" checked />
-          <label for="action-create">追加</label>
+    <div class="space-y-4">
+      <h3 class="text-lg font-semibold text-gray-900">価格（USD / 100万 tokens）</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="space-y-2">
+          <label class="block text-sm font-medium text-gray-700" for="cost-input">入力単価</label>
+          <input id="cost-input" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent" type="number" min="0" step="0.0001" placeholder="例: 5" />
         </div>
-        <div class="form-tag">
-          <input type="radio" name="action" id="action-update" value="update" />
-          <label for="action-update">更新</label>
+        <div class="space-y-2">
+          <label class="block text-sm font-medium text-gray-700" for="cost-output">出力単価</label>
+          <input id="cost-output" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent" type="number" min="0" step="0.0001" placeholder="例: 15" />
+        </div>
+        <div class="space-y-2">
+          <label class="block text-sm font-medium text-gray-700" for="cost-cache">キャッシュ読み出し単価</label>
+          <input id="cost-cache" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent" type="number" min="0" step="0.0001" placeholder="例: 0.3" />
         </div>
       </div>
     </div>
 
-    <div class="form-actions">
-      <button id="open-issue" type="button" class="form-button primary">GitHub Issue を開く</button>
-      <button id="copy-body" type="button" class="form-button secondary">Issue 本文をコピー</button>
-      <span id="status" class="form-status"></span>
+    <div class="space-y-4">
+      <h3 class="text-lg font-semibold text-gray-900">操作</h3>
+      <div class="flex flex-wrap gap-2">
+        <div class="relative">
+          <input type="radio" name="action" id="action-create" value="create" checked class="tag-input" />
+          <label for="action-create" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">追加</label>
+        </div>
+        <div class="relative">
+          <input type="radio" name="action" id="action-update" value="update" class="tag-input" />
+          <label for="action-update" class="tag-label inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white cursor-pointer select-none">更新</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-3 items-center pt-4">
+      <button id="open-issue" type="button" class="inline-flex items-center px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2">GitHub Issue を開く</button>
+      <button id="copy-body" type="button" class="inline-flex items-center px-4 py-2 bg-white text-gray-700 text-sm font-medium border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2">Issue 本文をコピー</button>
+      <span id="status" class="text-sm text-gray-500"></span>
     </div>
 
   </form>
