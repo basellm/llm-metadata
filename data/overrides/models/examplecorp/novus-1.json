@@ -1,15 +1,27 @@
 {
-  "id": "novus-1",
+  "schema": "model-submission",
+  "action": "update",
+  "providerId": "examplecorp",
+  "modelId": "novus-1",
   "name": "Novus 1 (Override Example)",
-  "description": "This is a fictional model used only as an override example.",
-  "icon": "https://cdn.example.com/icons/examplecorp/novus-1.svg",
+  "description": "这是自动化覆盖测试。 This is a fictional model used only as an override example.",
   "reasoning": true,
-  "tool_call": false,
-  "attachment": false,
   "temperature": true,
+  "icon": "https://cdn.example.com/icons/examplecorp/novus-1.svg",
   "modalities": {
-    "input": ["text", "image"],
-    "output": ["text"]
+    "input": [
+      "text",
+      "image",
+      "audio",
+      "video",
+      "pdf"
+    ],
+    "output": [
+      "text",
+      "image",
+      "audio",
+      "video"
+    ]
   },
   "limit": {
     "context": 64000,
@@ -21,4 +33,3 @@
     "cache_read": 0.2
   }
 }
-
