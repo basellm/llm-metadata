@@ -11733,7 +11733,7 @@
     "npm": "@ai-sdk/openai"
   },
   "opencode": {
-    "api": "https://gateway.opencode.ai/v1",
+    "api": "https://opencode.ai/gateway/v1",
     "doc": "https://opencode.ai/docs",
     "env": [
       "OPENCODE_API_KEY"
@@ -11742,7 +11742,36 @@
     "id": "opencode",
     "lobeIcon": "OpenCode",
     "models": {
-      "grok-code": {
+      "qwen/qwen3-coder": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "Qwen3 Coder 是由 opencode 提供的人工智能模型。",
+        "id": "qwen/qwen3-coder",
+        "knowledge": "2025-04",
+        "last_updated": "2025-07-23",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-07-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "x-ai/grok-code-fast-1": {
         "attachment": true,
         "cost": {
           "cache_read": 0,
@@ -11751,7 +11780,7 @@
           "output": 0
         },
         "description": "Grok Code Fast 1 是由 opencode 提供的人工智能模型。",
-        "id": "grok-code",
+        "id": "x-ai/grok-code-fast-1",
         "last_updated": "2025-08-20",
         "limit": {
           "context": 256000,
@@ -11774,7 +11803,7 @@
         "tool_call": true
       }
     },
-    "name": "opencode",
+    "name": "opencode zen",
     "npm": "@ai-sdk/openai-compatible"
   },
   "openrouter": {
