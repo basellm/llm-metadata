@@ -89,7 +89,7 @@ export class NewApiBuilder {
             vendors.push({
                 name: provider.name || providerId,
                 description: provider.description || '',
-                icon: provider.icon || provider.lobeIcon || '',
+                icon: provider.lobeIcon || '',
                 status: 1,
             });
             // 构建模型数据
@@ -104,7 +104,7 @@ export class NewApiBuilder {
                     endpoints: null,
                     status: 1,
                     name_rule: 0,
-                    icon: model.icon || provider.icon || provider.lobeIcon || '',
+                    icon: model.icon || provider.lobeIcon || '',
                     price_per_m_input: pricing.price_per_m_input,
                     price_per_m_output: pricing.price_per_m_output,
                     price_per_m_cache_read: pricing.price_per_m_cache_read,
