@@ -155,10 +155,10 @@
   };
   const modelIdVariants = (modelId) => {
     const v = String(modelId || '');
-    const underscore = v.replace(/:/g, '_');
+    const underscore = v.replace(/[:/]/g, '_');
     return Array.from(new Set([underscore, v].filter(Boolean)));
   };
-  const normalizeId = (id) => String(id || '').replace(/:/g, '_');
+  const normalizeId = (id) => String(id || '').replace(/[:/]/g, '_');
 
   const extractProviderList = (data) => {
     if (Array.isArray(data)) return data.map(x => x.id || x.name || x.providerId || x.key).filter(Boolean);
@@ -561,10 +561,23 @@
     return { title, body };
   }
 
+  // Ensure CRLF -> LF and force blank lines around fences/details/hr for reliable GH rendering
+  const normalizeIssueBody = (content) => {
+    let s = String(content || '').replace(/\r\n?|\u000d/gi, '\n');
+    // code fences
+    s = s.replace(/\n```/g, '\n\n```');
+    s = s.replace(/```\n(?!\n)/g, '```\n\n');
+    // details blocks
+    s = s.replace(/<details>\n(?!\n)/g, '<details>\n\n');
+    s = s.replace(/\n<\/details>/g, '\n\n</details>');
+    // horizontal rules
+    s = s.replace(/\n---\n?/g, '\n\n---\n\n');
+    return s;
+  };
+
   const createGitHubUrl = (title, body) => {
     const url = new URL(`https://github.com/${repo}/issues/new`);
-    // Ensure consistent line endings for better URL encoding
-    const normalizedBody = body.replace(/\r/g, '\n');
+    const normalizedBody = normalizeIssueBody(body);
     const params = new URLSearchParams({ title, body: normalizedBody, labels: 'model-submission' });
     url.search = params.toString();
     return url.toString();
@@ -589,8 +602,7 @@
   const copyBody = () => {
     if (!ensureValidBeforeSubmit()) return;
     const { body } = buildIssue();
-    // Normalize line endings for clipboard consistency
-    const normalizedBody = body.replace(/\r/g, '\n');
+    const normalizedBody = normalizeIssueBody(body);
     navigator.clipboard?.writeText(normalizedBody);
     setStatus(t('copied'));
   };
