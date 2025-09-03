@@ -5,7 +5,7 @@ export const ALLOWED_MODEL_OVERRIDE_KEYS = [
     'name',
     'description',
     'tags',
-    'icon',
+    'icon', // Usually a string for lobeicon
     'iconURL',
     'reasoning',
     'tool_call',
