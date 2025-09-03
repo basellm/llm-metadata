@@ -7,10 +7,15 @@ export class VoAPIBuilder {
         for (const providerId of providerIds) {
             const provider = allModelsData.providers[providerId];
             // 构建供应商数据
+            const tagIcon = (provider.icon || provider.lobeIcon || '').toLowerCase().replaceAll('.', '-');
             firms.push({
+                id: providerId,
                 name: provider.name || providerId,
                 description: provider.description || '',
-                icon: (provider.icon || provider.lobeIcon || '').toLowerCase().replaceAll('.', '-'),
+                icon: tagIcon || provider.iconURL || '',
+                modelCount: Object.entries(provider.models || {}).length || 0,
+                api: provider.api || '',
+                doc: provider.doc || '',
                 status: 1,
             });
         }
