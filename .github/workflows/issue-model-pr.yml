@@ -2,7 +2,13 @@ name: Issue to PR (model submission)
 
 on:
   issues:
-    types: [opened, edited]
+    types: [opened, edited, labeled, reopened]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Issue number to convert'
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -12,9 +18,13 @@ permissions:
 jobs:
   issue_to_pr:
     if: |
-      github.event.issue.state == 'open' &&
-      (contains(github.event.issue.labels.*.name, 'model-submission') ||
-       contains(github.event.issue.title, '[Model Submission]'))
+      (github.event_name == 'workflow_dispatch') || (
+        github.event.issue.state == 'open' && (
+          contains(github.event.issue.title, '[Model Submission]') ||
+          contains(github.event.issue.body, '"schema": "model-submission"') ||
+          contains(github.event.issue.labels.*.name, 'model-submission')
+        )
+      )
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,11 +32,31 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
       - name: Prepare payload
         id: payload
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          ISSUE_BODY=$(printf "%s" "${{ github.event.issue.body }}")
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            ISSUE_NUM="${{ inputs.issue_number }}"
+            ISSUE_BODY=$(gh issue view "$ISSUE_NUM" --json body -q .body)
+            ISSUE_NUMBER_OUT="$ISSUE_NUM"
+          else
+            ISSUE_BODY=$(printf "%s" "${{ github.event.issue.body }}")
+            ISSUE_NUMBER_OUT="${{ github.event.issue.number }}"
+          fi
+
           echo "Extract JSON payload from issue body"
           PAYLOAD=$(printf "%s" "$ISSUE_BODY" | awk '/```json/{flag=1;next}/```/{flag=0}flag')
           if [ -z "$PAYLOAD" ]; then
@@ -44,6 +74,7 @@ jobs:
           echo "provider=$PROVIDER" >> $GITHUB_OUTPUT
           echo "model=$MODEL" >> $GITHUB_OUTPUT
           echo "branch=$BRANCH" >> $GITHUB_OUTPUT
+          echo "issue_number=$ISSUE_NUMBER_OUT" >> $GITHUB_OUTPUT
 
       - name: Create branch
         run: |
@@ -86,17 +117,17 @@ jobs:
           npm run check || true
 
       - name: Commit changes
+        env:
+          PROVIDER: ${{ steps.payload.outputs.provider }}
+          MODEL: ${{ steps.payload.outputs.model }}
+          ISSUE_NUM: ${{ steps.payload.outputs.issue_number }}
         run: |
           set -euo pipefail
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/overrides.json dist/api dist/docs || true
-            git commit -m "
-            ✨ feat(models): ${
-              { echo "${{ steps.payload.outputs.provider }}/${{ steps.payload.outputs.model }}"; }
-            } via issue #${{ github.event.issue.number }}
-            "
+            git commit -m "✨ feat(models): ${PROVIDER}/${MODEL} via issue #${ISSUE_NUM}"
             git push --set-upstream origin "${{ steps.payload.outputs.branch }}"
           else
             echo "No changes to commit"
@@ -106,10 +137,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          BASE_BRANCH=${{ github.event.repository.default_branch }}
           gh pr create \
             --title "feat(models): ${{ steps.payload.outputs.provider }}/${{ steps.payload.outputs.model }}" \
-            --body "This PR was automatically generated from issue #${{ github.event.issue.number }}." \
-            --base ${{ github.event.repository.default_branch }} \
+            --body "This PR was automatically generated from issue #${{ steps.payload.outputs.issue_number }}." \
+            --base "$BASE_BRANCH" \
             --head "${{ steps.payload.outputs.branch }}"
 
       - name: Comment back to issue
@@ -117,4 +149,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           PR_URL=$(gh pr view --json url -q .url)
-          gh issue comment ${{ github.event.issue.number }} --body "PR created: $PR_URL"
+          gh issue comment "${{ steps.payload.outputs.issue_number }}" --body "PR created: $PR_URL"

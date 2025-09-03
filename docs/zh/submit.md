@@ -3,94 +3,138 @@
 在下方表单填写模型信息并点击「打开 GitHub Issue」。浏览器会打开一个带有预填内容的 Issue 页面。
 提交 Issue 后，机器人会自动创建一个 PR，通过 overrides 写入/更新模型，并生成 API 文件。
 
+<style>
+  .ms-card {background: var(--md-default-bg-color, #fff); border: 1px solid var(--md-default-fg-color--lightest, #e5e7eb); border-radius: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.04); padding: 18px;}
+  .ms-grid-2 {display:grid; grid-template-columns: 1fr; gap:12px;}
+  @media (min-width: 720px){ .ms-grid-2 {grid-template-columns: 1fr 1fr;} }
+  .ms-field label {display:block; font-weight:600; margin-bottom:6px;}
+  .ms-input, .ms-textarea {width:100%; padding:10px 12px; border:1px solid var(--md-default-fg-color--lightest, #e5e7eb); background: var(--md-code-bg-color, #f6f8fa); border-radius:8px;}
+  .ms-textarea {min-height: 96px;}
+  .ms-chips {display:flex; flex-wrap: wrap; gap:8px;}
+  .ms-chips input {position:absolute; opacity:0; pointer-events:none;}
+  .ms-chips label {padding:6px 12px; border-radius:999px; border:1px solid var(--md-default-fg-color--lightest,#e5e7eb); cursor:pointer; user-select:none;}
+  .ms-chips input:checked + label {background: var(--md-primary-fg-color,#4051b5); color: var(--md-primary-bg-color,#fff); border-color: var(--md-primary-fg-color,#4051b5);} 
+  .ms-actions {margin-top:16px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;}
+  .ms-btn {appearance:none; border:1px solid transparent; border-radius:10px; padding:10px 14px; font-weight:600; cursor:pointer;}
+  .ms-btn.primary {background: var(--md-primary-fg-color,#4051b5); color: var(--md-primary-bg-color,#fff);} 
+  .ms-btn.secondary {background: var(--md-code-bg-color,#f6f8fa);} 
+  .ms-muted {opacity:.85;}
+</style>
+
 <div id="model-submit" data-repo="basellm/llm-metadata">
-  <form onsubmit="return false" style="max-width: 880px">
+  <form onsubmit="return false" style="max-width: 880px" class="ms-card">
     <h3>基础信息</h3>
-    <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-      <label>
-        提供商 ID
-        <input id="providerId" type="text" required placeholder="如 openai" />
-      </label>
-      <label>
-        模型 ID
-        <input id="modelId" type="text" required placeholder="如 gpt-4o" />
-      </label>
+    <div class="ms-grid-2">
+      <div class="ms-field">
+        <label for="providerId">提供商 ID</label>
+        <input id="providerId" class="ms-input" type="text" required placeholder="如 openai" />
+      </div>
+      <div class="ms-field">
+        <label for="modelId">模型 ID</label>
+        <input id="modelId" class="ms-input" type="text" required placeholder="如 gpt-4o" />
+      </div>
     </div>
-    <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-      <label>
-        名称
-        <input id="name" type="text" placeholder="可选展示名" />
-      </label>
-      <label>
-        图标 URL
-        <input id="icon" type="url" placeholder="https://..." />
-      </label>
+    <div class="ms-grid-2">
+      <div class="ms-field">
+        <label for="name">名称</label>
+        <input id="name" class="ms-input" type="text" placeholder="可选展示名" />
+      </div>
+      <div class="ms-field">
+        <label for="icon">图标 URL</label>
+        <input id="icon" class="ms-input" type="url" placeholder="https://..." />
+      </div>
     </div>
-    <label>
-      描述
-      <textarea id="description" rows="4" placeholder="简短说明"></textarea>
-    </label>
+    <div class="ms-field">
+      <label for="description">描述</label>
+      <textarea id="description" class="ms-textarea" placeholder="简短说明"></textarea>
+    </div>
 
     <h3>能力</h3>
-    <div style="display:flex;gap:16px;flex-wrap:wrap;">
-      <label><input id="cap-reasoning" type="checkbox" /> 推理</label>
-      <label><input id="cap-tools" type="checkbox" /> 工具调用</label>
-      <label><input id="cap-files" type="checkbox" /> 文件附件</label>
-      <label><input id="cap-temp" type="checkbox" /> 温度控制</label>
+    <div class="ms-chips">
+      <input id="cap-reasoning" type="checkbox" />
+      <label for="cap-reasoning">推理</label>
+      <input id="cap-tools" type="checkbox" />
+      <label for="cap-tools">工具调用</label>
+      <input id="cap-files" type="checkbox" />
+      <label for="cap-files">文件附件</label>
+      <input id="cap-temp" type="checkbox" />
+      <label for="cap-temp">温度控制</label>
     </div>
 
     <h3>模态</h3>
-    <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-      <div>
-        <div>输入</div>
-        <label><input class="mod-in" type="checkbox" value="text" checked /> text</label>
-        <label><input class="mod-in" type="checkbox" value="image" /> image</label>
-        <label><input class="mod-in" type="checkbox" value="audio" /> audio</label>
+    <div class="ms-grid-2">
+      <div class="ms-field">
+        <label>输入</label>
+        <div class="ms-chips">
+          <input class="mod-in" type="checkbox" id="in-text" value="text" checked />
+          <label for="in-text">text</label>
+          <input class="mod-in" type="checkbox" id="in-image" value="image" />
+          <label for="in-image">image</label>
+          <input class="mod-in" type="checkbox" id="in-audio" value="audio" />
+          <label for="in-audio">audio</label>
+          <input class="mod-in" type="checkbox" id="in-video" value="video" />
+          <label for="in-video">video</label>
+          <input class="mod-in" type="checkbox" id="in-pdf" value="pdf" />
+          <label for="in-pdf">pdf</label>
+        </div>
       </div>
-      <div>
-        <div>输出</div>
-        <label><input class="mod-out" type="checkbox" value="text" checked /> text</label>
-        <label><input class="mod-out" type="checkbox" value="image" /> image</label>
-        <label><input class="mod-out" type="checkbox" value="audio" /> audio</label>
+      <div class="ms-field">
+        <label>输出</label>
+        <div class="ms-chips">
+          <input class="mod-out" type="checkbox" id="out-text" value="text" checked />
+          <label for="out-text">text</label>
+          <input class="mod-out" type="checkbox" id="out-image" value="image" />
+          <label for="out-image">image</label>
+          <input class="mod-out" type="checkbox" id="out-audio" value="audio" />
+          <label for="out-audio">audio</label>
+          <input class="mod-out" type="checkbox" id="out-video" value="video" />
+          <label for="out-video">video</label>
+          <input class="mod-out" type="checkbox" id="out-pdf" value="pdf" />
+          <label for="out-pdf">pdf</label>
+        </div>
       </div>
     </div>
 
     <h3>限制</h3>
-    <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-      <label>
-        上下文窗口（tokens）
-        <input id="limit-context" type="number" min="0" placeholder="如 128000" />
-      </label>
-      <label>
-        最大输出（tokens）
-        <input id="limit-output" type="number" min="0" placeholder="如 4096" />
-      </label>
+    <div class="ms-grid-2">
+      <div class="ms-field">
+        <label for="limit-context">上下文窗口（tokens）</label>
+        <input id="limit-context" class="ms-input" type="number" min="0" placeholder="如 128000" />
+      </div>
+      <div class="ms-field">
+        <label for="limit-output">最大输出（tokens）</label>
+        <input id="limit-output" class="ms-input" type="number" min="0" placeholder="如 4096" />
+      </div>
     </div>
 
     <h3>价格（美元/百万 tokens）</h3>
-    <div class="grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
-      <label>
-        输入价格
-        <input id="cost-input" type="number" min="0" step="0.0001" placeholder="如 5" />
-      </label>
-      <label>
-        输出价格
-        <input id="cost-output" type="number" min="0" step="0.0001" placeholder="如 15" />
-      </label>
-      <label>
-        缓存读取价格
-        <input id="cost-cache" type="number" min="0" step="0.0001" placeholder="如 0.3" />
-      </label>
+    <div class="ms-grid-2" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div class="ms-field">
+        <label for="cost-input">输入价格</label>
+        <input id="cost-input" class="ms-input" type="number" min="0" step="0.0001" placeholder="如 5" />
+      </div>
+      <div class="ms-field">
+        <label for="cost-output">输出价格</label>
+        <input id="cost-output" class="ms-input" type="number" min="0" step="0.0001" placeholder="如 15" />
+      </div>
+      <div class="ms-field">
+        <label for="cost-cache">缓存读取价格</label>
+        <input id="cost-cache" class="ms-input" type="number" min="0" step="0.0001" placeholder="如 0.3" />
+      </div>
     </div>
 
     <h3>操作</h3>
-    <label><input type="radio" name="action" value="create" checked /> 新增</label>
-    <label><input type="radio" name="action" value="update" /> 修改</label>
+    <div class="ms-chips" role="group" aria-label="操作">
+      <input type="radio" name="action" id="action-create" value="create" checked />
+      <label for="action-create">新增</label>
+      <input type="radio" name="action" id="action-update" value="update" />
+      <label for="action-update">修改</label>
+    </div>
 
-    <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
-      <button id="open-issue" type="button">打开 GitHub Issue</button>
-      <button id="copy-body" type="button">复制 Issue 内容</button>
-      <span id="status" style="opacity:.8;"></span>
+    <div class="ms-actions">
+      <button id="open-issue" type="button" class="ms-btn primary">打开 GitHub Issue</button>
+      <button id="copy-body" type="button" class="ms-btn secondary">复制 Issue 内容</button>
+      <span id="status" class="ms-muted"></span>
     </div>
 
   </form>
