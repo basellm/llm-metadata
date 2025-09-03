@@ -39,4 +39,4 @@ A lightweight static API for discovering and integrating large language model (L
 
 ## 📄 License
 
-MIT License - See [LICENSE](https://github.com/basellm/llm-metadata/blob/main/LICENSE)
+ AGPL-3.0 license - See [LICENSE](https://github.com/basellm/llm-metadata/blob/main/LICENSE)
