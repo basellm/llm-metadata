@@ -128,10 +128,16 @@ jobs:
           ISSUE_NUM: ${{ steps.payload.outputs.issue_number }}
         run: |
           set -euo pipefail
+          # Remove temporary files from working tree (not committed)
+          rm -f payload.json || true
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/overrides.json dist/api dist/docs || true
+            # Stage overrides; stage dist/api only if it exists
+            git add data/overrides.json || true
+            if [ -d dist/api ]; then
+              git add -A dist/api || true
+            fi
             git commit -m "✨ feat(models): ${PROVIDER}/${MODEL} via issue #${ISSUE_NUM}"
             git push --set-upstream origin "${{ steps.payload.outputs.branch }}"
           else
