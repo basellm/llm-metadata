@@ -122,12 +122,14 @@ jobs:
           fi
 
       - name: Check for release trigger in commit message
-        if: ${{ steps.commit.outputs.COMMITTED == 'true' }}
+        if: ${{ github.event_name == 'push' }}
         id: release_check
         run: |
-          # Trigger release if any of recent commit messages contains 'release' (case-insensitive)
-          RECENT_MSGS=$(git log --pretty=format:"%s" -n 50)
-          echo "Scanning recent commit messages for 'release'..."
+          # Trigger release only if messages in THIS push contain 'release' (case-insensitive)
+          BEFORE_SHA="${{ github.event.before }}"
+          AFTER_SHA="${{ github.event.after }}"
+          echo "Scanning push range ${BEFORE_SHA}..${AFTER_SHA} for 'release'..."
+          RECENT_MSGS=$(git log --pretty=format:"%B" ${BEFORE_SHA}..${AFTER_SHA})
           echo "$RECENT_MSGS" | sed -n '1,5p'
 
           if echo "$RECENT_MSGS" | grep -i 'release' > /dev/null; then
@@ -139,7 +141,7 @@ jobs:
           fi
 
       - name: Generate version and create release
-        if: ${{ steps.commit.outputs.COMMITTED == 'true' && steps.release_check.outputs.SHOULD_RELEASE == 'true' }}
+        if: ${{ github.event_name == 'push' && steps.release_check.outputs.SHOULD_RELEASE == 'true' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -147,12 +149,14 @@ jobs:
           VERSION="v$(date -u +"%Y.%m.%d.%H%M")"
           echo "Generated version: $VERSION"
 
-          # Create git tag
-          git tag $VERSION
+          # Tag the user commit (not the bot commit)
+          BEFORE_SHA="${{ github.event.before }}"
+          AFTER_SHA="${{ github.event.after }}"
+          git tag $VERSION ${AFTER_SHA}
           git push origin $VERSION
 
-          # Get recent commit messages for release notes
-          RECENT_COMMITS=$(git log --oneline -10 --pretty=format:"- %s" | head -20)
+          # Build release notes from this push only, exclude github-actions[bot]
+          RECENT_COMMITS=$(git log --pretty=format:"%an%x09%s" ${BEFORE_SHA}..${AFTER_SHA} | awk -F'\t' '$1!="github-actions[bot]" {print "- "$2}' | head -20)
 
           # Create release notes
           cat > release_notes.md << EOF
