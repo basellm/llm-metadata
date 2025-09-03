@@ -116,8 +116,19 @@
       action: getAction(),
       providerId: value('providerId') || undefined,
       id: value('id') || undefined,
-      name: value('name') || undefined,
-      description: value('description') || undefined,
+      // name/description removed in favor of i18n-only inputs
+      i18n: {
+        name: {
+          en: value('i18n-name-en') || undefined,
+          zh: value('i18n-name-zh') || undefined,
+          ja: value('i18n-name-ja') || undefined,
+        },
+        description: {
+          en: value('i18n-desc-en') || undefined,
+          zh: value('i18n-desc-zh') || undefined,
+          ja: value('i18n-desc-ja') || undefined,
+        }
+      },
       reasoning: checked('cap-reasoning') || undefined,
       tool_call: checked('cap-tools') || undefined,
       attachment: checked('cap-files') || undefined,
@@ -196,10 +207,7 @@
       let models = extractModelList(data, providerId);
 
       if (!models.length) {
-        const all = await fetchFirstOk([
-          `${API_BASE}/newapi/models.json`,
-          `${API_BASE}/i18n/${lang}/newapi/models.json`
-        ]);
+        const all = await fetchNewApiModels();
         if (Array.isArray(all)) {
           models = all
             .filter(x => (x.providerId || x.provider || x.vendor) === providerId)
@@ -235,24 +243,79 @@
     return undefined;
   };
 
-  const buildModelUrls = (providerId, variants) => {
+  // Optimized: Universal URL builder to eliminate code duplication
+  const buildApiUrls = (providerId, variants, pathTemplates) => {
     const encProv = encodeURIComponent(providerId);
     const urls = [];
     for (const v of variants) {
       const enc = encodeURIComponent(v);
-      urls.push(
-        `${API_BASE}/models/${encProv}/${enc}.json`,
-        `${API_BASE}/i18n/${lang}/models/${encProv}/${enc}.json`
-      );
+      for (const template of pathTemplates) {
+        urls.push(template.replace('{provider}', encProv).replace('{model}', enc));
+      }
     }
     return urls;
   };
 
-  const findModelInAll = async (providerId, variants) => {
-    const all = await fetchFirstOk([
+  // Specific URL builders using the universal function
+  const buildModelUrls = (providerId, variants) => buildApiUrls(providerId, variants, [
+    `${API_BASE}/models/{provider}/{model}.json`,
+    `${API_BASE}/i18n/${lang}/models/{provider}/{model}.json`
+  ]);
+
+  const buildI18nModelUrls = (providerId, variants, locale) => buildApiUrls(providerId, variants, [
+    `${API_BASE}/i18n/${locale}/models/{provider}/{model}.json`
+  ]);
+
+  // Optimized: Centralized NewAPI data fetching
+  const fetchNewApiModels = async () => {
+    return await fetchFirstOk([
       `${API_BASE}/newapi/models.json`,
-      `${API_BASE}/i18n/${lang}/newapi/models.json`,
+      `${API_BASE}/i18n/${lang}/newapi/models.json`
     ]).catch(() => []);
+  };
+
+  // Optimized: Encapsulated i18n field setter
+  const setI18nFields = (locale, data) => {
+    setValue(`i18n-name-${locale}`, pick(data, ['name', 'displayName', 'title']));
+    setValue(`i18n-desc-${locale}`, pick(data, ['description', 'desc', 'summary']));
+  };
+
+  // Field default states configuration - the most scientific approach
+  const FIELD_DEFAULTS = {
+    values: {
+      // Text/number/date inputs default to empty
+      'i18n-name-en': '', 'i18n-name-zh': '', 'i18n-name-ja': '',
+      'i18n-desc-en': '', 'i18n-desc-zh': '', 'i18n-desc-ja': '',
+      'knowledge': '', 'release-date': '', 'last-updated': '',
+      'limit-context': '', 'limit-output': '',
+      'cost-input': '', 'cost-output': '', 'cost-cache-read': '', 'cost-cache-write': ''
+    },
+    checkboxes: {
+      // Capabilities default to false
+      'cap-reasoning': false, 'cap-tools': false, 'cap-files': false,
+      'cap-temp': false, 'cap-open-weights': false,
+      // Modalities default to text only
+      'in-text': true, 'in-image': false, 'in-audio': false, 'in-video': false, 'in-pdf': false,
+      'out-text': true, 'out-image': false, 'out-audio': false, 'out-video': false, 'out-pdf': false
+    }
+  };
+
+  // Clear all form fields to prevent data residue when switching models
+  const clearAllFields = () => {
+    // Restore all fields to their default states
+    Object.entries(FIELD_DEFAULTS.values).forEach(([id, defaultValue]) => {
+      const el = $(id);
+      if (el) el.value = defaultValue;
+    });
+
+    Object.entries(FIELD_DEFAULTS.checkboxes).forEach(([id, defaultChecked]) => {
+      const el = $(id);
+      if (el) el.checked = defaultChecked;
+    });
+  };
+
+  const findModelInAll = async (providerId, variants) => {
+    const all = await fetchNewApiModels();
 
     if (Array.isArray(all)) {
       const normVariants = new Set(variants.map(normalizeId));
@@ -268,15 +331,26 @@
     try {
       if (!providerId || !modelId) return;
 
+      // Clear all fields first to prevent data residue from previous model
+      clearAllFields();
+
       const variants = modelIdVariants(modelId);
       const candidateUrls = buildModelUrls(providerId, variants);
 
       const data = await fetchFirstOk(candidateUrls)
         .catch(() => findModelInAll(providerId, variants));
 
-      // Set basic info
-      setValue('name', pick(data, ['name', 'displayName', 'title']));
-      setValue('description', pick(data, ['description', 'desc', 'summary']));
+      // Set basic info - prefill i18n fields from main data
+      setI18nFields('en', data);
+
+      // Prefill i18n for en/zh/ja in parallel
+      const locales = ['en', 'zh', 'ja'];
+      await Promise.all(locales.map(async (lc) => {
+        try {
+          const ld = await fetchFirstOk(buildI18nModelUrls(providerId, variants, lc));
+          setI18nFields(lc, ld);
+        } catch (_) { }
+      }));
       setValue('knowledge', pick(data, ['knowledge', 'knowledge_cutoff', 'knowledgeCutoff']));
       setValue('release-date', pick(data, ['release_date', 'releaseDate', 'released']));
       setValue('last-updated', pick(data, ['last_updated', 'lastUpdated', 'updated_at', 'updatedAt']));
@@ -342,7 +416,7 @@
     // Toggle all single mode sections
     const singleSections = [
       'single-mode', 'single-fields', 'single-capabilities',
-      'single-metadata', 'single-modalities', 'single-limits', 'single-pricing'
+      'single-i18n', 'single-metadata', 'single-modalities', 'single-limits', 'single-pricing'
     ];
 
     singleSections.forEach(id => toggleVisibility(id, isBatch));
@@ -376,7 +450,7 @@
       const prov = m.providerId || '';
       const model = m.id || m.modelId || '';
       const action = m.action || t('create');
-      const name = m.name || '';
+      const name = m.i18n?.name?.en || '';
       return `<div style="margin-bottom: 4px;"><strong>${i + 1}.</strong> ${action} <code>${prov}/${model}</code> ${name ? `(${name})` : ''}</div>`;
     }).join('');
 
@@ -403,7 +477,7 @@
       const prov = m.providerId || '';
       const model = m.id || m.modelId || '';
       const action = m.action === 'update' ? t('update') : t('create');
-      const name = m.name ? ` - ${m.name}` : '';
+      const name = m.i18n?.name?.[lang] || m.i18n?.name?.en ? ` - ${m.i18n.name[lang] || m.i18n.name.en}` : '';
       return `${i + 1}. **${action}** \`${prov}/${model}\`${name}`;
     }).join('\n');
   };
@@ -461,8 +535,8 @@
         `## 📋 ${t('modelInfo')}`,
         `- **${t('provider')}**: \`${single.providerId ?? ''}\``,
         `- **${t('modelId')}**: \`${single.id ?? ''}\``,
-        single.name ? `- **${t('displayName')}**: ${single.name}` : '',
-        single.description ? `- **${t('description')}**: ${single.description}` : '',
+        single.i18n?.name?.en ? `- **${t('displayName')}**: ${single.i18n.name.en}` : '',
+        single.i18n?.description?.en ? `- **${t('description')}**: ${single.i18n.description.en}` : '',
         `- **${t('actionType')}**: ${action}`,
         '',
         `## 🔧 ${t('techInfo')}`,
@@ -536,8 +610,10 @@
         action: 'create',
         providerId: 'examplecorp',
         id: 'novus-1',
-        name: 'Novus 1',
-        description: 'Fictional example multimodal model.',
+        i18n: {
+          name: { en: 'Novus 1', zh: 'Novus 1', ja: 'Novus 1' },
+          description: { en: 'Fictional example multimodal model.', zh: '虚构示例多模态模型。', ja: '架空のマルチモーダルモデル例。' }
+        },
         reasoning: true,
         tool_call: true,
         attachment: true,
@@ -555,7 +631,10 @@
         action: 'update',
         providerId: 'deepseek',
         id: 'deepseek-chat',
-        name: 'DeepSeek Chat',
+        i18n: {
+          name: { en: 'DeepSeek Chat', zh: 'DeepSeek Chat', ja: 'DeepSeek Chat' },
+          description: { en: 'Advanced conversational AI model for natural language processing.', zh: '用于自然语言处理的先进对话AI模型。', ja: '自然言語処理のための高度な対話AIモデル。' }
+        },
         modalities: { input: ['text'], output: ['text'] }
       }
     ];

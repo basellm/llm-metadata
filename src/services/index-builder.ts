@@ -26,7 +26,6 @@ export class IndexBuilder {
         name: effectiveProvider.name || providerId,
         api: effectiveProvider.api || undefined,
         doc: effectiveProvider.doc || undefined,
-        icon: effectiveProvider.icon || undefined,
         iconURL: effectiveProvider.iconURL || undefined,
         lobeIcon: effectiveProvider.lobeIcon || undefined,
         modelCount: 0,

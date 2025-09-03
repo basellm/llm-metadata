@@ -1,6 +1,7 @@
 ---
 hide:
   - navigation
+  - toc
 ---
 
 ## モデルを提出（自動 PR）
@@ -43,17 +44,22 @@ hide:
   {
     "schema": "model-submission",
     "action": "create",
-    "providerId": "deepseek",
-    "id": "deepseek-chat",
-    "name": "DeepSeek Chat",
-    "modalities": { "input": ["text"], "output": ["text"] }
-  },
-  {
-    "schema": "model-submission", 
-    "action": "create",
     "providerId": "examplecorp",
     "id": "novus-1",
-    "name": "Novus 1"
+    "i18n": {
+      "name": { "en": "Novus 1", "zh": "Novus 1", "ja": "Novus 1" },
+      "description": { "en": "Fictional example multimodal model.", "zh": "虚构示例多模态模型。", "ja": "架空のマルチモーダルモデル例。" }
+    }
+  },
+  {
+    "schema": "model-submission",
+    "action": "update",
+    "providerId": "deepseek",
+    "id": "deepseek-chat",
+    "i18n": {
+      "name": { "en": "DeepSeek Chat", "zh": "DeepSeek Chat", "ja": "DeepSeek Chat" },
+      "description": { "en": "Advanced conversational AI model for natural language processing.", "zh": "用于自然语言处理的先进对话AI模型。", "ja": "自然言語処理のための高度な対話AIモデル。" }
+    }
   }
 ]'></textarea>
       </div>
@@ -65,7 +71,7 @@ hide:
 
     <div id="single-fields" class="ui-section">
       <h3 class="ui-section-title">基本情報</h3>
-      <div class="ui-grid cols-3">
+      <div class="ui-grid cols-2">
         <div class="ui-field">
           <label for="providerId" class="required">プロバイダー ID</label>
           <input id="providerId" class="ui-input" type="text" required placeholder="例: openai" />
@@ -76,15 +82,39 @@ hide:
           <input id="id" class="ui-input" type="text" required placeholder="例: gpt-4o" />
           <select id="modelSelect" class="ui-select is-hidden"></select>
         </div>
-        <div class="ui-field">
-          <label for="name">表示名</label>
-          <input id="name" class="ui-input" type="text" placeholder="オプションの表示名" />
-        </div>
-        <div class="ui-field full">
-          <label for="description">説明</label>
-          <textarea id="description" class="ui-textarea" placeholder="モデルの簡単な説明"></textarea>
-        </div>
       </div>
+    </div>
+
+    <div id="single-i18n" class="ui-section">
+      <h3 class="ui-section-title">i18n</h3>
+      <details class="ui-field" open><summary>ローカライズされた名称と説明</summary>
+        <div class="ui-grid cols-3">
+          <div class="ui-field">
+            <label for="i18n-name-en">Name (en)</label>
+            <input id="i18n-name-en" class="ui-input" type="text" placeholder="English name" />
+          </div>
+          <div class="ui-field">
+            <label for="i18n-name-zh">名称 (zh)</label>
+            <input id="i18n-name-zh" class="ui-input" type="text" placeholder="中文名称" />
+          </div>
+          <div class="ui-field">
+            <label for="i18n-name-ja">名前 (ja)</label>
+            <input id="i18n-name-ja" class="ui-input" type="text" placeholder="日本語の名前" />
+          </div>
+          <div class="ui-field full">
+            <label for="i18n-desc-en">Description (en)</label>
+            <textarea id="i18n-desc-en" class="ui-textarea" placeholder="English description"></textarea>
+          </div>
+          <div class="ui-field full">
+            <label for="i18n-desc-zh">描述 (zh)</label>
+            <textarea id="i18n-desc-zh" class="ui-textarea" placeholder="中文描述"></textarea>
+          </div>
+          <div class="ui-field full">
+            <label for="i18n-desc-ja">説明 (ja)</label>
+            <textarea id="i18n-desc-ja" class="ui-textarea" placeholder="日本語の説明"></textarea>
+          </div>
+        </div>
+      </details>
     </div>
 
     <div id="single-metadata" class="ui-section">
