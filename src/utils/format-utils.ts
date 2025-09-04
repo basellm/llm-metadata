@@ -131,7 +131,9 @@ export function buildModelTags(model: any, map?: Record<string, string>): string
 export function buildModelPriceInfo(cost?: ModelCost) {
   const input = typeof cost?.input === 'number' && cost!.input > 0 ? cost!.input : null;
   const output = typeof cost?.output === 'number' && cost!.output > 0 ? cost!.output : null;
-  const cache =
+  const cacheRead =
     typeof cost?.cache_read === 'number' && cost!.cache_read > 0 ? cost!.cache_read : null;
-  return { input, output, cache };
+  const cacheWrite =
+    typeof cost?.cache_write === 'number' && cost!.cache_write > 0 ? cost!.cache_write : null;
+  return { input, output, cacheRead, cacheWrite };
 }

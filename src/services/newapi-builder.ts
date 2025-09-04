@@ -44,13 +44,7 @@ export class NewApiBuilder {
     ratio_completion: number | null;
     ratio_cache: number | null;
   } {
-    const input = typeof cost?.input === 'number' && cost!.input > 0 ? cost!.input : null;
-    const output = typeof cost?.output === 'number' && cost!.output > 0 ? cost!.output : null;
-    const cacheRead =
-      typeof cost?.cache_read === 'number' && cost!.cache_read > 0 ? cost!.cache_read : null;
-    const cacheWrite =
-      typeof cost?.cache_write === 'number' && cost!.cache_write > 0 ? cost!.cache_write : null;
-
+    const { input, output, cacheRead, cacheWrite } = buildModelPriceInfo(cost);
     const ratios = this.calculateRatios(cost);
 
     return {
