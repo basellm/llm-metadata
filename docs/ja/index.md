@@ -21,6 +21,7 @@ hide:
 | [`/api/newapi/vendors.json`](https://basellm.github.io/llm-metadata/api/newapi/vendors.json)                           | New API ベンダーデータ       | New API システム向けのベンダーデータ                                              |
 | [`/api/newapi/models.json`](https://basellm.github.io/llm-metadata/api/newapi/models.json)                             | New API モデルデータ         | New API システム向けのモデルデータ                                                |
 | [`/api/voapi/firms.json`](https://basellm.github.io/llm-metadata/api/voapi/firms.json)                             | VoAPI 企業データ            | VoAPI システム向けの企業データ                                                  |
+| [`/api/voapi/models.json`](https://basellm.github.io/llm-metadata/api/voapi/models.json)                             | VoAPI モデルデータ         | VoAPI システム向けのモデルデータ                                                |
 | [`/api/manifest.json`](https://basellm.github.io/llm-metadata/api/manifest.json)                                       | ビルド情報と統計             | ビルド情報およびデータ統計                                                        |
 | `/api/providers/{providerId}.json`                                                                                     | 個別プロバイダー詳細         | 例：`/api/providers/openai.json`                                                  |
 | `/api/models/{providerId}/{modelId}.json`                                                                              | 個別モデルメタデータ         | 例：`/api/models/openai/gpt-4.json`                                               |
