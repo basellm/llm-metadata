@@ -73,7 +73,10 @@ export class DataLoader {
         };
         const ensureI18n = () => {
             if (!base.i18n) {
-                base.i18n = { providers: {}, models: {} };
+                base.i18n = {
+                    providers: {},
+                    models: {},
+                };
             }
             else {
                 if (!base.i18n.providers)
