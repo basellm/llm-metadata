@@ -10,8 +10,7 @@ Fill the form below and click "Open GitHub Issue". A pre-filled issue will open
 in a new tab. After you submit that issue, a bot will automatically create a PR
 adding/updating the model via overrides, and generate API files.
 
-<link rel="stylesheet" href="../assets/submit-form.css" />
-<script src="../assets/submit-form-i18n.js"></script>
+<link rel="stylesheet" href="../assets/styles/submit-form.css" />
 
 <div id="model-submit" data-repo="basellm/llm-metadata" data-lang="en">
   <form onsubmit="return false" class="ui-card">
@@ -19,9 +18,19 @@ adding/updating the model via overrides, and generate API files.
       <h3 class="ui-section-title">Mode</h3>
       <div class="ui-segment" role="group" aria-label="Mode">
         <input type="radio" name="mode" id="mode-single" value="single" checked />
-        <label for="mode-single">Single Model</label>
+        <label for="mode-single">Single Item</label>
         <input type="radio" name="mode" id="mode-batch" value="batch" />
-        <label for="mode-batch">Batch Models</label>
+        <label for="mode-batch">Batch Items</label>
+      </div>
+    </div>
+
+    <div id="submission-type-section" class="ui-section">
+      <h3 class="ui-section-title">Submission Type</h3>
+      <div class="ui-segment" role="group" aria-label="Submission Type">
+        <input type="radio" name="submission-type" id="type-model" value="model" checked />
+        <label for="type-model">Model</label>
+        <input type="radio" name="submission-type" id="type-provider" value="provider" />
+        <label for="type-provider">Provider</label>
       </div>
     </div>
 
@@ -36,9 +45,9 @@ adding/updating the model via overrides, and generate API files.
     </div>
 
     <div id="batch-mode" class="ui-section is-hidden">
-      <h3 class="ui-section-title">Batch Models JSON</h3>
+      <h3 class="ui-section-title">Batch Items JSON</h3>
       <div class="ui-field" style="margin-bottom: var(--spacing-3);">
-        <label for="batch-json">Model Array (JSON format)</label>
+        <label for="batch-json">Item Array (JSON format)</label>
         <button id="batch-template" type="button" class="ui-btn" style="margin: 0 0 var(--spacing-1) 0; width: max-content;">Fill template</button>
         <textarea id="batch-json" class="ui-textarea" rows="12" placeholder='[
 
@@ -63,15 +72,74 @@ adding/updating the model via overrides, and generate API files.
 }
 }
 ]'></textarea>
+
 </div>
 <div id="batch-preview" class="ui-field">
-<label>Preview (will submit <span id="batch-count">0</span> models)</label>
+<label>Preview (will submit <span id="batch-count">0</span> items)</label>
 <div id="batch-list" class="ui-muted" style="font-size: 12px; max-height: 200px; overflow-y: auto; border: 1px solid var(--md-default-fg-color--lightest); border-radius: var(--radius-sm); padding: var(--spacing-2);"></div>
 </div>
 </div>
 
-    <div id="single-fields" class="ui-section">
-      <h3 class="ui-section-title">Basic Information</h3>
+    <!-- Provider Fields -->
+    <div id="provider-fields" class="ui-section is-hidden">
+      <h3 class="ui-section-title">Provider Information</h3>
+      <div class="ui-grid cols-2">
+        <div class="ui-field">
+          <label for="provider-id" class="required">Provider ID</label>
+          <input id="provider-id" class="ui-input" type="text" required placeholder="e.g. openai" />
+          <select id="provider-select" class="ui-select is-hidden"></select>
+        </div>
+        <div class="ui-field">
+          <label for="provider-api">API Documentation URL</label>
+          <input id="provider-api" class="ui-input" type="url" placeholder="e.g. https://platform.openai.com/docs" />
+        </div>
+        <div class="ui-field">
+          <label for="provider-icon-url">Icon URL</label>
+          <input id="provider-icon-url" class="ui-input" type="url" placeholder="e.g. https://..." />
+        </div>
+        <div class="ui-field">
+          <label for="provider-lobe-icon">Lobe Icon</label>
+          <input id="provider-lobe-icon" class="ui-input" type="text" placeholder="e.g. OpenAI.Color" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Provider i18n -->
+    <div id="provider-i18n" class="ui-section is-hidden">
+      <h3 class="ui-section-title">Provider i18n</h3>
+      <details class="ui-field" open><summary>Localized provider name and description</summary>
+        <div class="ui-grid cols-3">
+          <div class="ui-field">
+            <label for="provider-i18n-name-en">Name (en)</label>
+            <input id="provider-i18n-name-en" class="ui-input" type="text" placeholder="English name" />
+          </div>
+          <div class="ui-field">
+            <label for="provider-i18n-name-zh">名称 (zh)</label>
+            <input id="provider-i18n-name-zh" class="ui-input" type="text" placeholder="中文名称" />
+          </div>
+          <div class="ui-field">
+            <label for="provider-i18n-name-ja">名前 (ja)</label>
+            <input id="provider-i18n-name-ja" class="ui-input" type="text" placeholder="日本語の名前" />
+          </div>
+          <div class="ui-field full">
+            <label for="provider-i18n-desc-en">Description (en)</label>
+            <textarea id="provider-i18n-desc-en" class="ui-textarea" placeholder="English description"></textarea>
+          </div>
+          <div class="ui-field full">
+            <label for="provider-i18n-desc-zh">描述 (zh)</label>
+            <textarea id="provider-i18n-desc-zh" class="ui-textarea" placeholder="中文描述"></textarea>
+          </div>
+          <div class="ui-field full">
+            <label for="provider-i18n-desc-ja">説明 (ja)</label>
+            <textarea id="provider-i18n-desc-ja" class="ui-textarea" placeholder="日本語の説明"></textarea>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Model Fields -->
+    <div id="model-fields" class="ui-section">
+      <h3 class="ui-section-title">Model Information</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
           <label for="providerId" class="required">Provider ID</label>
@@ -86,9 +154,10 @@ adding/updating the model via overrides, and generate API files.
       </div>
     </div>
 
-    <div id="single-i18n" class="ui-section">
-      <h3 class="ui-section-title">i18n</h3>
-      <details class="ui-field" open><summary>Localized name and description</summary>
+    <!-- Model-specific sections (hidden when provider is selected) -->
+    <div id="model-i18n" class="ui-section">
+      <h3 class="ui-section-title">Model i18n</h3>
+      <details class="ui-field" open><summary>Localized model name and description</summary>
         <div class="ui-grid cols-3">
           <div class="ui-field">
             <label for="i18n-name-en">Name (en)</label>
@@ -118,8 +187,8 @@ adding/updating the model via overrides, and generate API files.
       </details>
     </div>
 
-    <div id="single-metadata" class="ui-section">
-      <h3 class="ui-section-title">Metadata</h3>
+    <div id="model-metadata" class="ui-section">
+      <h3 class="ui-section-title">Model Metadata</h3>
       <div class="ui-grid cols-3">
         <div class="ui-field">
           <label for="knowledge">Knowledge cutoff</label>
@@ -136,8 +205,8 @@ adding/updating the model via overrides, and generate API files.
       </div>
     </div>
 
-    <div id="single-capabilities" class="ui-section">
-      <h3 class="ui-section-title">Capabilities</h3>
+    <div id="model-capabilities" class="ui-section">
+      <h3 class="ui-section-title">Model Capabilities</h3>
       <div class="ui-chips">
         <input id="cap-reasoning" type="checkbox" />
         <label for="cap-reasoning">Reasoning</label>
@@ -152,8 +221,8 @@ adding/updating the model via overrides, and generate API files.
       </div>
     </div>
 
-    <div id="single-modalities" class="ui-section">
-      <h3 class="ui-section-title">Modalities</h3>
+    <div id="model-modalities" class="ui-section">
+      <h3 class="ui-section-title">Model Modalities</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
           <label>Input</label>
@@ -188,8 +257,8 @@ adding/updating the model via overrides, and generate API files.
       </div>
     </div>
 
-    <div id="single-limits" class="ui-section">
-      <h3 class="ui-section-title">Limits</h3>
+    <div id="model-limits" class="ui-section">
+      <h3 class="ui-section-title">Model Limits</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
           <label for="limit-context">Context window (tokens)</label>
@@ -202,8 +271,8 @@ adding/updating the model via overrides, and generate API files.
       </div>
     </div>
 
-    <div id="single-pricing" class="ui-section">
-      <h3 class="ui-section-title">Pricing (USD per 1M tokens)</h3>
+    <div id="model-pricing" class="ui-section">
+      <h3 class="ui-section-title">Model Pricing (USD per 1M tokens)</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
           <label for="cost-input">Input price</label>
@@ -233,4 +302,5 @@ adding/updating the model via overrides, and generate API files.
   </form>
 </div>
 
-<script src="../assets/submit-form.js"></script>
+<!-- Modular Submit Form Scripts -->
+<script type="module" src="../assets/index.js"></script>

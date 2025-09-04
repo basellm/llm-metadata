@@ -9,8 +9,7 @@ hide:
 在下方表单填写模型信息并点击「打开 GitHub Issue」。浏览器会打开一个带有预填内容的 Issue 页面。
 提交 Issue 后，机器人会自动创建一个 PR，通过 overrides 写入/更新模型，并生成 API 文件。
 
-<link rel="stylesheet" href="../../assets/submit-form.css" />
-<script src="../../assets/submit-form-i18n.js"></script>
+<link rel="stylesheet" href="../../assets/styles/submit-form.css" />
 
 <div id="model-submit" data-repo="basellm/llm-metadata" data-lang="zh">
   <form onsubmit="return false" class="ui-card">
@@ -18,9 +17,19 @@ hide:
       <h3 class="ui-section-title">操作模式</h3>
       <div class="ui-segment" role="group" aria-label="操作模式">
         <input type="radio" name="mode" id="mode-single" value="single" checked />
-        <label for="mode-single">单个模型</label>
+        <label for="mode-single">单个项目</label>
         <input type="radio" name="mode" id="mode-batch" value="batch" />
-        <label for="mode-batch">批量模型</label>
+        <label for="mode-batch">批量项目</label>
+      </div>
+    </div>
+
+    <div id="submission-type-section" class="ui-section">
+      <h3 class="ui-section-title">提交类型</h3>
+      <div class="ui-segment" role="group" aria-label="提交类型">
+        <input type="radio" name="submission-type" id="type-model" value="model" checked />
+        <label for="type-model">模型</label>
+        <input type="radio" name="submission-type" id="type-provider" value="provider" />
+        <label for="type-provider">供应商</label>
       </div>
     </div>
 
@@ -35,9 +44,9 @@ hide:
     </div>
 
     <div id="batch-mode" class="ui-section is-hidden">
-      <h3 class="ui-section-title">批量模型 JSON</h3>
+      <h3 class="ui-section-title">批量项目 JSON</h3>
       <div class="ui-field" style="margin-bottom: var(--spacing-3);">
-        <label for="batch-json">模型数组（JSON 格式）</label>
+        <label for="batch-json">项目数组（JSON 格式）</label>
         <button id="batch-template" type="button" class="ui-btn" style="margin: 0 0 var(--spacing-1) 0; width: max-content;">填入模板</button>
         <textarea id="batch-json" class="ui-textarea" rows="12" placeholder='[
 
@@ -62,15 +71,74 @@ hide:
 }
 }
 ]'></textarea>
+
 </div>
 <div id="batch-preview" class="ui-field">
-<label>预览（将提交 <span id="batch-count">0</span> 个模型）</label>
+<label>预览（将提交 <span id="batch-count">0</span> 个项目）</label>
 <div id="batch-list" class="ui-muted" style="font-size: 12px; max-height: 200px; overflow-y: auto; border: 1px solid var(--md-default-fg-color--lightest); border-radius: var(--radius-sm); padding: var(--spacing-2);"></div>
 </div>
 </div>
 
-    <div id="single-fields" class="ui-section">
-      <h3 class="ui-section-title">基础信息</h3>
+    <!-- 供应商字段 -->
+    <div id="provider-fields" class="ui-section is-hidden">
+      <h3 class="ui-section-title">供应商信息</h3>
+      <div class="ui-grid cols-2">
+        <div class="ui-field">
+          <label for="provider-id" class="required">供应商 ID</label>
+          <input id="provider-id" class="ui-input" type="text" required placeholder="如 openai" />
+          <select id="provider-select" class="ui-select is-hidden"></select>
+        </div>
+        <div class="ui-field">
+          <label for="provider-api">API 文档 URL</label>
+          <input id="provider-api" class="ui-input" type="url" placeholder="如 https://platform.openai.com/docs" />
+        </div>
+        <div class="ui-field">
+          <label for="provider-icon-url">图标 URL</label>
+          <input id="provider-icon-url" class="ui-input" type="url" placeholder="如 https://..." />
+        </div>
+        <div class="ui-field">
+          <label for="provider-lobe-icon">Lobe 图标</label>
+          <input id="provider-lobe-icon" class="ui-input" type="text" placeholder="如 OpenAI.Color" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 供应商多语言 -->
+    <div id="provider-i18n" class="ui-section is-hidden">
+      <h3 class="ui-section-title">供应商多语言</h3>
+      <details class="ui-field" open><summary>供应商名称与描述的多语言版本</summary>
+        <div class="ui-grid cols-3">
+          <div class="ui-field">
+            <label for="provider-i18n-name-en">Name (en)</label>
+            <input id="provider-i18n-name-en" class="ui-input" type="text" placeholder="English name" />
+          </div>
+          <div class="ui-field">
+            <label for="provider-i18n-name-zh">名称 (zh)</label>
+            <input id="provider-i18n-name-zh" class="ui-input" type="text" placeholder="中文名称" />
+          </div>
+          <div class="ui-field">
+            <label for="provider-i18n-name-ja">名前 (ja)</label>
+            <input id="provider-i18n-name-ja" class="ui-input" type="text" placeholder="日本語の名前" />
+          </div>
+          <div class="ui-field full">
+            <label for="provider-i18n-desc-en">Description (en)</label>
+            <textarea id="provider-i18n-desc-en" class="ui-textarea" placeholder="English description"></textarea>
+          </div>
+          <div class="ui-field full">
+            <label for="provider-i18n-desc-zh">描述 (zh)</label>
+            <textarea id="provider-i18n-desc-zh" class="ui-textarea" placeholder="中文描述"></textarea>
+          </div>
+          <div class="ui-field full">
+            <label for="provider-i18n-desc-ja">説明 (ja)</label>
+            <textarea id="provider-i18n-desc-ja" class="ui-textarea" placeholder="日本語の説明"></textarea>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 模型字段 -->
+    <div id="model-fields" class="ui-section">
+      <h3 class="ui-section-title">模型信息</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
           <label for="providerId" class="required">提供商 ID</label>
@@ -85,9 +153,10 @@ hide:
       </div>
     </div>
 
-    <div id="single-i18n" class="ui-section">
-      <h3 class="ui-section-title">多语言</h3>
-      <details class="ui-field" open><summary>名称与描述的多语言版本</summary>
+    <!-- 模型专用区域（选择供应商时隐藏） -->
+    <div id="model-i18n" class="ui-section">
+      <h3 class="ui-section-title">模型多语言</h3>
+      <details class="ui-field" open><summary>模型名称与描述的多语言版本</summary>
         <div class="ui-grid cols-3">
           <div class="ui-field">
             <label for="i18n-name-en">Name (en)</label>
@@ -117,8 +186,8 @@ hide:
       </details>
     </div>
 
-    <div id="single-metadata" class="ui-section">
-      <h3 class="ui-section-title">元信息</h3>
+    <div id="model-metadata" class="ui-section">
+      <h3 class="ui-section-title">模型元信息</h3>
       <div class="ui-grid cols-3">
         <div class="ui-field">
           <label for="knowledge">知识截止</label>
@@ -135,8 +204,8 @@ hide:
       </div>
     </div>
 
-    <div id="single-capabilities" class="ui-section">
-      <h3 class="ui-section-title">能力</h3>
+    <div id="model-capabilities" class="ui-section">
+      <h3 class="ui-section-title">模型能力</h3>
       <div class="ui-chips">
         <input id="cap-reasoning" type="checkbox" />
         <label for="cap-reasoning">推理</label>
@@ -151,8 +220,8 @@ hide:
       </div>
     </div>
 
-    <div id="single-modalities" class="ui-section">
-      <h3 class="ui-section-title">模态</h3>
+    <div id="model-modalities" class="ui-section">
+      <h3 class="ui-section-title">模型模态</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
           <label>输入</label>
@@ -187,8 +256,8 @@ hide:
       </div>
     </div>
 
-    <div id="single-limits" class="ui-section">
-      <h3 class="ui-section-title">限制</h3>
+    <div id="model-limits" class="ui-section">
+      <h3 class="ui-section-title">模型限制</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
           <label for="limit-context">上下文窗口（tokens）</label>
@@ -201,8 +270,8 @@ hide:
       </div>
     </div>
 
-    <div id="single-pricing" class="ui-section">
-      <h3 class="ui-section-title">价格（美元/百万 tokens）</h3>
+    <div id="model-pricing" class="ui-section">
+      <h3 class="ui-section-title">模型价格（美元/百万 tokens）</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
           <label for="cost-input">输入价格</label>
@@ -232,4 +301,5 @@ hide:
   </form>
 </div>
 
-<script src="../../assets/submit-form.js"></script>
+<!-- 模块化提交表单脚本 -->
+<script type="module" src="../../assets/index.js"></script>

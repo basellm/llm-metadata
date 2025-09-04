@@ -1,0 +1,276 @@
+name: Issue to PR (submission)
+
+on:
+  issues:
+    types: [opened, edited, labeled, reopened]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Issue number to convert'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  issue_to_pr:
+    if: |
+      github.event_name == 'workflow_dispatch' || (
+        github.event.issue.state == 'open' && (
+          contains(github.event.issue.body, '"schema": "model-submission"') ||
+          contains(github.event.issue.body, '"schema": "provider-submission"') ||
+          contains(github.event.issue.labels.*.name, 'model-submission') ||
+          contains(github.event.issue.labels.*.name, 'provider-submission')
+        )
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Prepare payload
+        id: payload
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          DISPATCH_ISSUE_NUMBER: ${{ inputs.issue_number }}
+          EVENT_ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            ISSUE_NUM="${DISPATCH_ISSUE_NUMBER}"
+          else
+            ISSUE_NUM="${EVENT_ISSUE_NUMBER}"
+          fi
+
+          # Always fetch body via GH CLI to avoid script injection from raw interpolation
+          ISSUE_BODY=$(gh issue view "$ISSUE_NUM" -R "$REPO" --json body -q .body)
+          ISSUE_NUMBER_OUT="$ISSUE_NUM"
+
+          echo "Extract JSON payload from issue body"
+          # Extract fenced JSON block
+          PAYLOAD=$(printf '%s\n' "$ISSUE_BODY" | sed -n '/^```json[[:space:]]*$/,/^```[[:space:]]*$/p' | sed '1d;$d')
+          if [ -z "$PAYLOAD" ]; then
+            echo "No JSON payload found in issue body" >&2
+            exit 1
+          fi
+          echo "$PAYLOAD" > payload.json
+          cat payload.json
+
+          IS_ARRAY=$(jq -r 'if type=="array" then "1" else "0" end' payload.json)
+          if [ "$IS_ARRAY" = "1" ]; then
+            COUNT=$(jq 'length' payload.json)
+            MODEL_COUNT=$(jq '[ .[] | select(.schema != "provider-submission") ] | length' payload.json)
+            PROVIDER_COUNT=$(jq '[ .[] | select(.schema == "provider-submission") ] | length' payload.json)
+            CREATE_COUNT=$(jq '[ .[] | select((.action // "create") == "create") ] | length' payload.json)
+            UPDATE_COUNT=$(jq '[ .[] | select((.action // "create") == "update") ] | length' payload.json)
+            if [ "$UPDATE_COUNT" -eq 0 ]; then KIND="feat"; else KIND="chore"; fi
+            if [ "$MODEL_COUNT" -gt 0 ] && [ "$PROVIDER_COUNT" -gt 0 ]; then
+              BRANCH="${KIND}/submission-batch-mixed-${COUNT}-$(date -u +%Y%m%d%H%M%S)"
+              COMMIT_TITLE="📦 ${KIND}(submissions): batch ${COUNT} items (models ${MODEL_COUNT}, providers ${PROVIDER_COUNT}; create ${CREATE_COUNT}, update ${UPDATE_COUNT})"
+            elif [ "$MODEL_COUNT" -gt 0 ]; then
+              BRANCH="${KIND}/model-batch-${COUNT}-$(date -u +%Y%m%d%H%M%S)"
+              COMMIT_TITLE="📦 ${KIND}(models): batch ${COUNT} models (create ${CREATE_COUNT}, update ${UPDATE_COUNT})"
+            else
+              BRANCH="${KIND}/provider-batch-${COUNT}-$(date -u +%Y%m%d%H%M%S)"
+              COMMIT_TITLE="📦 ${KIND}(providers): batch ${COUNT} providers (create ${CREATE_COUNT}, update ${UPDATE_COUNT})"
+            fi
+            ACTION="batch"
+            PR_TITLE="$COMMIT_TITLE"
+          else
+            SCHEMA=$(jq -r '.schema // "model-submission"' payload.json)
+            ACTION=$(jq -r '.action // "create"' payload.json)
+            if [ "$SCHEMA" = "provider-submission" ]; then
+              PROVIDER_ID=$(jq -r '.id' payload.json)
+              PROVIDER_SAFE=$(echo "$PROVIDER_ID" | sed 's/[^A-Za-z0-9._-]/-/g')
+              if [ "$ACTION" = "update" ]; then
+                BRANCH="chore/provider-update-${PROVIDER_SAFE}-$(date -u +%Y%m%d%H%M%S)"
+                COMMIT_TITLE="✏️ chore(provider): update ${PROVIDER_ID}"
+              else
+                BRANCH="feat/provider-add-${PROVIDER_SAFE}-$(date -u +%Y%m%d%H%M%S)"
+                COMMIT_TITLE="✨ feat(provider): add ${PROVIDER_ID}"
+              fi
+            else
+              PROVIDER=$(jq -r '.providerId' payload.json)
+              MODEL=$(jq -r '.modelId // .id' payload.json)
+              PROVIDER_SAFE=$(echo "$PROVIDER" | sed 's/[^A-Za-z0-9._-]/-/g')
+              MODEL_SAFE=$(echo "$MODEL" | sed 's/[^A-Za-z0-9._-]/-/g')
+              if [ "$ACTION" = "update" ]; then
+                BRANCH="chore/model-update-${PROVIDER_SAFE}-${MODEL_SAFE}-$(date -u +%Y%m%d%H%M%S)"
+                COMMIT_TITLE="✏️ chore(models): update ${PROVIDER}/${MODEL}"
+              else
+                BRANCH="feat/model-add-${PROVIDER_SAFE}-${MODEL_SAFE}-$(date -u +%Y%m%d%H%M%S)"
+                COMMIT_TITLE="✨ feat(models): add ${PROVIDER}/${MODEL}"
+              fi
+            fi
+            PR_TITLE="$COMMIT_TITLE"
+          fi
+          echo "action=$ACTION" >> $GITHUB_OUTPUT
+          echo "branch=$BRANCH" >> $GITHUB_OUTPUT
+          echo "issue_number=$ISSUE_NUMBER_OUT" >> $GITHUB_OUTPUT
+          echo "commit_title=$COMMIT_TITLE" >> $GITHUB_OUTPUT
+          echo "pr_title=$PR_TITLE" >> $GITHUB_OUTPUT
+
+      - name: Create branch
+        run: |
+          git checkout -b "${{ steps.payload.outputs.branch }}"
+
+      - name: Apply overrides change (scoped file)
+        run: |
+          set -euo pipefail
+          IS_ARRAY=$(jq -r 'if type=="array" then "1" else "0" end' payload.json)
+          if [ "$IS_ARRAY" = "1" ]; then
+            jq -c '.[] | with_entries(select(.value != null))' payload.json | while read -r item; do
+              schema=$(echo "$item" | jq -r '.schema // "model-submission"')
+              if [ "$schema" = "provider-submission" ]; then
+                pid=$(echo "$item" | jq -r '.id')
+                pid_safe=${pid//[:\\/]/_}
+                test -n "$pid" || continue
+
+                # 写入供应商覆写
+                mkdir -p "data/overrides/providers"
+                echo "$item" \
+                  | jq -M -S 'del(.i18n, .schema, .action, .id) | with_entries(select(.value != null))' \
+                  > "data/overrides/providers/$pid_safe.json"
+
+                # 写入供应商 i18n
+                i18n_json=$(echo "$item" | jq -c '.i18n | {name, description} | del(.. | nulls) | select((.name // {} | length) + (.description // {} | length) > 0)') || true
+                if [ -n "${i18n_json:-}" ]; then
+                  mkdir -p "data/overrides/i18n/providers"
+                  echo "$i18n_json" \
+                    | jq -M -S '.' \
+                    > "data/overrides/i18n/providers/$pid_safe.json"
+                fi
+              else
+                prov=$(echo "$item" | jq -r '.providerId')
+                model=$(echo "$item" | jq -r '.modelId // .id')
+                model_safe=${model//:/_}
+                test -n "$prov" && test -n "$model" || continue
+
+                # 写入模型覆写
+                mkdir -p "data/overrides/models/$prov"
+                echo "$item" \
+                  | jq -M -S 'del(.i18n, .schema, .action, .providerId, .modelId) | with_entries(select(.value != null))' \
+                  > "data/overrides/models/$prov/$model_safe.json"
+
+                # 写入模型 i18n
+                i18n_json=$(echo "$item" | jq -c '.i18n | {name, description} | del(.. | nulls) | select((.name // {} | length) + (.description // {} | length) > 0)') || true
+                if [ -n "${i18n_json:-}" ]; then
+                  mkdir -p "data/overrides/i18n/models/$prov"
+                  echo "$i18n_json" \
+                    | jq -M -S '.' \
+                    > "data/overrides/i18n/models/$prov/$model_safe.json"
+                fi
+              fi
+            done
+          else
+            SCHEMA=$(jq -r '.schema // "model-submission"' payload.json)
+            if [ "$SCHEMA" = "provider-submission" ]; then
+              pid=$(jq -r '.id' payload.json)
+              pid_safe=${pid//[:\\/]/_}
+
+              # 写入供应商覆写
+              mkdir -p "data/overrides/providers"
+              jq -M -S 'del(.i18n, .schema, .action, .id) | with_entries(select(.value != null))' payload.json \
+                > "data/overrides/providers/$pid_safe.json"
+
+              # 写入供应商 i18n
+              i18n_json=$(jq -c '.i18n | {name, description} | del(.. | nulls) | select((.name // {} | length) + (.description // {} | length) > 0)' payload.json) || true
+              if [ -n "${i18n_json:-}" ]; then
+                mkdir -p "data/overrides/i18n/providers"
+                echo "$i18n_json" \
+                  | jq -M -S '.' \
+                  > "data/overrides/i18n/providers/$pid_safe.json"
+              fi
+            else
+              prov=$(jq -r '.providerId' payload.json)
+              model=$(jq -r '.modelId // .id' payload.json)
+              model_safe=${model//:/_}
+
+              # 写入模型覆写
+              mkdir -p "data/overrides/models/$prov"
+              jq -M -S 'del(.i18n, .schema, .action, .providerId, .modelId) | with_entries(select(.value != null))' payload.json \
+                > "data/overrides/models/$prov/$model_safe.json"
+
+              # 写入模型 i18n
+              i18n_json=$(jq -c '.i18n | {name, description} | del(.. | nulls) | select((.name // {} | length) + (.description // {} | length) > 0)' payload.json) || true
+              if [ -n "${i18n_json:-}" ]; then
+                mkdir -p "data/overrides/i18n/models/$prov"
+                echo "$i18n_json" \
+                  | jq -M -S '.' \
+                  > "data/overrides/i18n/models/$prov/$model_safe.json"
+              fi
+            fi
+          fi
+
+      - name: Install dependencies
+        run: |
+          npm ci || npm i --no-audit --no-fund
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Build API (check changes)
+        run: |
+          npm run check || true
+
+      - name: Commit changes
+        id: commit
+        env:
+          PROVIDER: ${{ steps.payload.outputs.provider }}
+          MODEL: ${{ steps.payload.outputs.model }}
+          ISSUE_NUM: ${{ steps.payload.outputs.issue_number }}
+          COMMIT_TITLE: ${{ steps.payload.outputs.commit_title }}
+        run: |
+          set -euo pipefail
+          # Remove temporary files from working tree (not committed)
+          rm -f payload.json || true
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            # Stage overrides; stage dist/api only if it exists
+            git add -A data/overrides || true
+            if [ -d dist/api ]; then
+              git add -A dist/api || true
+            fi
+            git commit -m "${COMMIT_TITLE} via issue #${ISSUE_NUM}"
+            git push --set-upstream origin "${{ steps.payload.outputs.branch }}"
+            echo "has_changes=1" >> $GITHUB_OUTPUT
+          else
+            echo "No changes to commit"
+            echo "has_changes=0" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Open Pull Request
+        if: steps.commit.outputs.has_changes == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.AUTOMATION_ISSUE2PR || secrets.GITHUB_TOKEN }}
+        run: |
+          BASE_BRANCH=${{ github.event.repository.default_branch }}
+          TITLE="${{ steps.payload.outputs.pr_title }}"
+          gh pr create \
+            --title "$TITLE" \
+            --body "This PR was automatically generated from issue #${{ steps.payload.outputs.issue_number }}." \
+            --base "$BASE_BRANCH" \
+            --head "${{ steps.payload.outputs.branch }}"
+
+      - name: Comment back to issue
+        if: steps.commit.outputs.has_changes == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.AUTOMATION_ISSUE2PR || secrets.GITHUB_TOKEN }}
+        run: |
+          PR_URL=$(gh pr view --json url -q .url)
+          gh issue comment "${{ steps.payload.outputs.issue_number }}" --body "PR created: $PR_URL"

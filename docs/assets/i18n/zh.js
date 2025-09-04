@@ -1,0 +1,71 @@
+/**
+ * Chinese Translations
+ */
+
+export const zh = {
+  // Form validation
+  providerRequired: '必须填写提供商 ID',
+  modelRequired: '必须填写模型 ID',
+  providerIdRequired: '必须填写提供商 ID',
+  batchInvalidItem: '非法项',
+  batchMissingProvider: '缺少 providerId',
+  batchMissingId: '缺少 id',
+  batchCannotBeEmpty: '不能为空',
+  batchValidateFailed: '批量校验失败',
+  batchParseFailed: '批量 JSON 解析失败',
+  batchEnterArray: '请输入 JSON 数组',
+  batchNoValid: '无有效模型',
+  batchJsonError: 'JSON 格式错误',
+
+  // UI elements
+  providersSelect: '选择提供商…',
+  modelsSelect: '选择模型…',
+  noData: '暂无数据',
+  loadedModel: '已载入当前模型信息',
+  loadedProvider: '已载入当前供应商信息',
+  loadProviderFailed: '载入供应商信息失败',
+  copied: '已复制',
+  copyHint: '已复制内容，请在页面打开后粘贴',
+
+  // Issue generation
+  unknown: '未知',
+  notSpecified: '未指定',
+  create: '新增',
+  update: '更新',
+  createModel: '新增模型',
+  updateModel: '更新模型',
+  createProvider: '新增提供商',
+  updateProvider: '更新提供商',
+  batchSubmission: '批量提交',
+  batchSubmissionRequest: '批量提交请求',
+  createModelRequest: '新增模型请求',
+  updateModelRequest: '更新模型请求',
+  createProviderRequest: '新增提供商请求',
+  updateProviderRequest: '更新提供商请求',
+
+  // Issue content
+  issueIntroSingle: '此 Issue 由网站表单生成，机器人将自动处理并创建 PR。',
+  issueIntroBatch: '此 Issue 由网站表单生成（批量模式），机器人将自动处理并创建 PR。',
+  modelInfo: '模型信息',
+  providerInfo: '提供商信息',
+  techInfo: '技术信息',
+  submissionSummary: '提交概要',
+  modelDetails: '模型详情',
+  providerDetails: '提供商详情',
+  provider: '提供商',
+  model: '模型',
+  providerId: '提供商 ID',
+  modelId: '模型 ID',
+  displayName: '显示名称',
+  description: '描述',
+  actionType: '操作类型',
+  totalCount: '总数量',
+  providers: '涉及提供商',
+  mode: '提交模式',
+  batchProcessing: '批量处理',
+  modelsCount: '个模型',
+  providersCount: '个提供商',
+  moreProviders: '等',
+  issueFooterSingle: '此 Issue 将被自动处理并生成对应的覆盖文件',
+  issueFooterBatch: '此 Issue 将被自动处理，每项会生成独立的覆盖文件',
+};

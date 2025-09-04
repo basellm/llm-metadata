@@ -10,8 +10,7 @@ hide:
 テンプレート済みの Issue が開きます。Issue を送信すると、ボットが自動的に PR を
 作成し、overrides を通じてモデルを追加/更新し、API ファイルを生成します。
 
-<link rel="stylesheet" href="../../assets/submit-form.css" />
-<script src="../../assets/submit-form-i18n.js"></script>
+<link rel="stylesheet" href="../../assets/styles/submit-form.css" />
 
 <div id="model-submit" data-repo="basellm/llm-metadata" data-lang="ja">
   <form onsubmit="return false" class="ui-card">
@@ -19,9 +18,19 @@ hide:
       <h3 class="ui-section-title">モード</h3>
       <div class="ui-segment" role="group" aria-label="モード">
         <input type="radio" name="mode" id="mode-single" value="single" checked />
-        <label for="mode-single">単一モデル</label>
+        <label for="mode-single">単一項目</label>
         <input type="radio" name="mode" id="mode-batch" value="batch" />
-        <label for="mode-batch">バッチモデル</label>
+        <label for="mode-batch">バッチ項目</label>
+      </div>
+    </div>
+
+    <div id="submission-type-section" class="ui-section">
+      <h3 class="ui-section-title">提出タイプ</h3>
+      <div class="ui-segment" role="group" aria-label="提出タイプ">
+        <input type="radio" name="submission-type" id="type-model" value="model" checked />
+        <label for="type-model">モデル</label>
+        <input type="radio" name="submission-type" id="type-provider" value="provider" />
+        <label for="type-provider">プロバイダー</label>
       </div>
     </div>
 
@@ -36,9 +45,9 @@ hide:
     </div>
 
     <div id="batch-mode" class="ui-section is-hidden">
-      <h3 class="ui-section-title">バッチモデル JSON</h3>
+      <h3 class="ui-section-title">バッチ項目 JSON</h3>
       <div class="ui-field" style="margin-bottom: var(--spacing-3);">
-        <label for="batch-json">モデル配列（JSON 形式）</label>
+        <label for="batch-json">項目配列（JSON 形式）</label>
         <button id="batch-template" type="button" class="ui-btn" style="margin: 0 0 var(--spacing-1) 0; width: max-content;">テンプレートを挿入</button>
         <textarea id="batch-json" class="ui-textarea" rows="12" placeholder='[
 
@@ -63,15 +72,74 @@ hide:
 }
 }
 ]'></textarea>
+
 </div>
 <div id="batch-preview" class="ui-field">
-<label>プレビュー（<span id="batch-count">0</span> 個のモデルを送信します）</label>
+<label>プレビュー（<span id="batch-count">0</span> 個の項目を送信します）</label>
 <div id="batch-list" class="ui-muted" style="font-size: 12px; max-height: 200px; overflow-y: auto; border: 1px solid var(--md-default-fg-color--lightest); border-radius: var(--radius-sm); padding: var(--spacing-2);"></div>
 </div>
 </div>
 
-    <div id="single-fields" class="ui-section">
-      <h3 class="ui-section-title">基本情報</h3>
+    <!-- プロバイダーフィールド -->
+    <div id="provider-fields" class="ui-section is-hidden">
+      <h3 class="ui-section-title">プロバイダー情報</h3>
+      <div class="ui-grid cols-2">
+        <div class="ui-field">
+          <label for="provider-id" class="required">プロバイダー ID</label>
+          <input id="provider-id" class="ui-input" type="text" required placeholder="例: openai" />
+          <select id="provider-select" class="ui-select is-hidden"></select>
+        </div>
+        <div class="ui-field">
+          <label for="provider-api">API ドキュメント URL</label>
+          <input id="provider-api" class="ui-input" type="url" placeholder="例: https://platform.openai.com/docs" />
+        </div>
+        <div class="ui-field">
+          <label for="provider-icon-url">アイコン URL</label>
+          <input id="provider-icon-url" class="ui-input" type="url" placeholder="例: https://..." />
+        </div>
+        <div class="ui-field">
+          <label for="provider-lobe-icon">Lobe アイコン</label>
+          <input id="provider-lobe-icon" class="ui-input" type="text" placeholder="例: OpenAI.Color" />
+        </div>
+      </div>
+    </div>
+
+    <!-- プロバイダー i18n -->
+    <div id="provider-i18n" class="ui-section is-hidden">
+      <h3 class="ui-section-title">プロバイダー i18n</h3>
+      <details class="ui-field" open><summary>プロバイダー名称と説明の多言語版</summary>
+        <div class="ui-grid cols-3">
+          <div class="ui-field">
+            <label for="provider-i18n-name-en">Name (en)</label>
+            <input id="provider-i18n-name-en" class="ui-input" type="text" placeholder="English name" />
+          </div>
+          <div class="ui-field">
+            <label for="provider-i18n-name-zh">名称 (zh)</label>
+            <input id="provider-i18n-name-zh" class="ui-input" type="text" placeholder="中文名称" />
+          </div>
+          <div class="ui-field">
+            <label for="provider-i18n-name-ja">名前 (ja)</label>
+            <input id="provider-i18n-name-ja" class="ui-input" type="text" placeholder="日本語の名前" />
+          </div>
+          <div class="ui-field full">
+            <label for="provider-i18n-desc-en">Description (en)</label>
+            <textarea id="provider-i18n-desc-en" class="ui-textarea" placeholder="English description"></textarea>
+          </div>
+          <div class="ui-field full">
+            <label for="provider-i18n-desc-zh">描述 (zh)</label>
+            <textarea id="provider-i18n-desc-zh" class="ui-textarea" placeholder="中文描述"></textarea>
+          </div>
+          <div class="ui-field full">
+            <label for="provider-i18n-desc-ja">説明 (ja)</label>
+            <textarea id="provider-i18n-desc-ja" class="ui-textarea" placeholder="日本語の説明"></textarea>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- モデルフィールド -->
+    <div id="model-fields" class="ui-section">
+      <h3 class="ui-section-title">モデル情報</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
           <label for="providerId" class="required">プロバイダー ID</label>
@@ -86,9 +154,10 @@ hide:
       </div>
     </div>
 
-    <div id="single-i18n" class="ui-section">
-      <h3 class="ui-section-title">i18n</h3>
-      <details class="ui-field" open><summary>ローカライズされた名称と説明</summary>
+    <!-- モデル専用エリア（プロバイダー選択時は非表示） -->
+    <div id="model-i18n" class="ui-section">
+      <h3 class="ui-section-title">モデル i18n</h3>
+      <details class="ui-field" open><summary>モデル名称と説明の多言語版</summary>
         <div class="ui-grid cols-3">
           <div class="ui-field">
             <label for="i18n-name-en">Name (en)</label>
@@ -118,8 +187,8 @@ hide:
       </details>
     </div>
 
-    <div id="single-metadata" class="ui-section">
-      <h3 class="ui-section-title">メタ情報</h3>
+    <div id="model-metadata" class="ui-section">
+      <h3 class="ui-section-title">モデルメタ情報</h3>
       <div class="ui-grid cols-3">
         <div class="ui-field">
           <label for="knowledge">ナレッジカットオフ</label>
@@ -136,8 +205,8 @@ hide:
       </div>
     </div>
 
-    <div id="single-capabilities" class="ui-section">
-      <h3 class="ui-section-title">機能</h3>
+    <div id="model-capabilities" class="ui-section">
+      <h3 class="ui-section-title">モデル機能</h3>
       <div class="ui-chips">
         <input id="cap-reasoning" type="checkbox" />
         <label for="cap-reasoning">推論</label>
@@ -152,8 +221,8 @@ hide:
       </div>
     </div>
 
-    <div id="single-modalities" class="ui-section">
-      <h3 class="ui-section-title">モダリティ</h3>
+    <div id="model-modalities" class="ui-section">
+      <h3 class="ui-section-title">モデルモダリティ</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
           <label>入力</label>
@@ -188,8 +257,8 @@ hide:
       </div>
     </div>
 
-    <div id="single-limits" class="ui-section">
-      <h3 class="ui-section-title">制限</h3>
+    <div id="model-limits" class="ui-section">
+      <h3 class="ui-section-title">モデル制限</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
           <label for="limit-context">コンテキストウィンドウ（トークン）</label>
@@ -202,8 +271,8 @@ hide:
       </div>
     </div>
 
-    <div id="single-pricing" class="ui-section">
-      <h3 class="ui-section-title">価格（USD/100万トークン）</h3>
+    <div id="model-pricing" class="ui-section">
+      <h3 class="ui-section-title">モデル価格（USD/100万トークン）</h3>
       <div class="ui-grid cols-2">
         <div class="ui-field">
           <label for="cost-input">入力価格</label>
@@ -233,4 +302,5 @@ hide:
   </form>
 </div>
 
-<script src="../../assets/submit-form.js"></script>
+<!-- モジュラー送信フォームスクリプト -->
+<script type="module" src="../../assets/index.js"></script>
