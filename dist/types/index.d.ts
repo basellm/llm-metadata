@@ -213,7 +213,8 @@ export interface VoAPIModel {
     price?: {
         input?: number | null;
         output?: number | null;
-        cache?: number | null;
+        cacheRead?: number | null;
+        cacheWrite?: number | null;
     };
 }
 export interface VoAPIApiSyncPayload {

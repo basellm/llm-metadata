@@ -37,6 +37,7 @@ export declare function buildModelTags(model: any, map?: Record<string, string>)
 export declare function buildModelPriceInfo(cost?: ModelCost): {
     input: number | null;
     output: number | null;
-    cache: number | null;
+    cacheRead: number | null;
+    cacheWrite: number | null;
 };
 //# sourceMappingURL=format-utils.d.ts.map
