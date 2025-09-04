@@ -342,7 +342,13 @@ class Builder {
       const tagMapEn: Record<string, string> = {
         ...(apiI18nEn.capability_labels || {}),
       } as Record<string, string>;
-      const newapiSync = this.newApiBuilder.buildSyncPayload(allModelsData, tagMapEn);
+      // 使用英文本地化数据集，以便提供商的国际化信息（如描述）应用于基础 NewAPI 输出
+      const allModelsDataEn = this.dataProcessor.localizeNormalizedData(
+        allModelsData,
+        overrides,
+        'en',
+      );
+      const newapiSync = this.newApiBuilder.buildSyncPayload(allModelsDataEn, tagMapEn);
       if (
         writeJSONIfChanged(
           join(newapiDir, 'vendors.json'),
