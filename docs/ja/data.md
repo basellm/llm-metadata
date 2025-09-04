@@ -9,8 +9,8 @@ hide:
 
 !!! info "統計"
     - **プロバイダー数**: 43
-    - **モデル数**: 635
-    - **最終更新**: 2025/9/4 10:30:02
+    - **モデル数**: 636
+    - **最終更新**: 2025/9/4 11:17:23
 
 **機能凡例**: 🧠 推論 &nbsp;&nbsp;🔧 ツール &nbsp;&nbsp;📎 添付ファイル &nbsp;&nbsp;🌡️ 温度
 ## Alibaba
@@ -20,6 +20,7 @@ hide:
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
 | **Qwen3 Coder Plus** | qwen3-coder-plus | 1M | 65.5K | In: $1<br/>Out: $5 | Model: 0.500<br/>Completion: 5.000 | 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-23 |
+| **DeepSeek R1** | deepseek-r1 | - | - | In: $4<br/>Out: $16 | Model: 2.000<br/>Completion: 4.000 | - | - | In: text<br/>Out: text | - |
 
 ## Amazon Bedrock
 
@@ -27,34 +28,34 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **Claude Sonnet 3.5 v2** | anthropic.claude-3-5-sonnet-20241022-v2:0 | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2024-10-22 |
+| **Claude Sonnet 3.5 v2** | anthropic.claude-3-5-sonnet-20241022-v2:0 | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2024-10-22 |
 | **Command Light** | cohere.command-light-text-v14 | 4.1K | 4.1K | In: $0.3<br/>Out: $0.6 | Model: 0.150<br/>Completion: 2.000 | 🌡️ | 2023-08 | In: text<br/>Out: text | Open Weights<br/>Released: 2023-11-01 |
-| **Claude Opus 4.1** | anthropic.claude-opus-4-1-20250805-v1:0 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-08-05 |
+| **Claude Opus 4.1** | anthropic.claude-opus-4-1-20250805-v1:0 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-08-05 |
 | **Llama 3.1 70B Instruct** | meta.llama3-1-70b-instruct-v1:0 | 128K | 4.1K | In: $0.72<br/>Out: $0.72 | Model: 0.360<br/>Completion: 1.000 | 🔧 🌡️ | 2023-12 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-07-23 |
 | **Claude Haiku 3** | anthropic.claude-3-haiku-20240307-v1:0 | 200K | 4.1K | In: $0.25<br/>Out: $1.25 | Model: 0.125<br/>Completion: 5.000 | 📎 🔧 🌡️ | 2024-02 | In: text, image<br/>Out: text | Released: 2024-03-13 |
 | **Llama 3.2 3B Instruct** | meta.llama3-2-3b-instruct-v1:0 | 131K | 4.1K | In: $0.15<br/>Out: $0.15 | Model: 0.075<br/>Completion: 1.000 | 🔧 🌡️ | 2023-12 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-09-25 |
 | **Claude Opus 3** | anthropic.claude-3-opus-20240229-v1:0 | 200K | 4.1K | In: $15<br/>Out: $75 | Model: 7.500<br/>Completion: 5.000 | 📎 🔧 🌡️ | 2023-08 | In: text, image<br/>Out: text | Released: 2024-02-29 |
 | **Command** | cohere.command-text-v14 | 4.1K | 4.1K | In: $1.5<br/>Out: $2 | Model: 0.750<br/>Completion: 1.333 | 🌡️ | 2023-08 | In: text<br/>Out: text | Open Weights<br/>Released: 2023-11-01 |
 | **Llama 4 Scout 17B Instruct** | meta.llama4-scout-17b-instruct-v1:0 | 3.5M | 16.4K | In: $0.17<br/>Out: $0.66 | Model: 0.085<br/>Completion: 3.882 | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Open Weights<br/>Released: 2025-04-05 |
-| **Nova Micro** | amazon.nova-micro-v1:0 | 128K | 8.2K | In: $0.035<br/>Out: $0.14<br/>Cache: $0.00875 | Model: 0.018<br/>Completion: 4.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Released: 2024-12-03 |
+| **Nova Micro** | amazon.nova-micro-v1:0 | 128K | 8.2K | In: $0.035<br/>Out: $0.14<br/>Cache Read: $0.00875 | Model: 0.018<br/>Completion: 4.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Released: 2024-12-03 |
 | **Nova Premier** | amazon.nova-premier-v1:0 | 1M | 16.4K | In: $2.5<br/>Out: $12.5 | Model: 1.250<br/>Completion: 5.000 | 📎 🧠 🔧 🌡️ | 2024-10 | In: text, image, video<br/>Out: text | Released: 2024-12-03 |
 | **Claude 2** | anthropic.claude-v2 | 100K | 4.1K | In: $8<br/>Out: $24 | Model: 4.000<br/>Completion: 3.000 | 🌡️ | 2023-08 | In: text<br/>Out: text | Released: 2023-07-11 |
-| **Claude Sonnet 3.7** | anthropic.claude-3-7-sonnet-20250219-v1:0 | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-02-19 |
+| **Claude Sonnet 3.7** | anthropic.claude-3-7-sonnet-20250219-v1:0 | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-02-19 |
 | **Jamba 1.5 Mini** | ai21.jamba-1-5-mini-v1:0 | 256K | 4.1K | In: $0.2<br/>Out: $0.4 | Model: 0.100<br/>Completion: 2.000 | 🔧 🌡️ | 2024-08 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-08-15 |
 | **Llama 3 8B Instruct** | meta.llama3-8b-instruct-v1:0 | 8.2K | 2K | In: $0.3<br/>Out: $0.6 | Model: 0.150<br/>Completion: 2.000 | 🌡️ | 2023-03 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-07-23 |
 | **Jamba 1.5 Large** | ai21.jamba-1-5-large-v1:0 | 256K | 4.1K | In: $2<br/>Out: $8 | Model: 1.000<br/>Completion: 4.000 | 🔧 🌡️ | 2024-08 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-08-15 |
-| **Claude Opus 4** | anthropic.claude-opus-4-20250514-v1:0 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Opus 4** | anthropic.claude-opus-4-20250514-v1:0 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-05-22 |
 | **Llama 3 70B Instruct** | meta.llama3-70b-instruct-v1:0 | 8.2K | 2K | In: $2.65<br/>Out: $3.5 | Model: 1.325<br/>Completion: 1.321 | 🌡️ | 2023-12 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-07-23 |
 | **Llama 4 Maverick 17B Instruct** | meta.llama4-maverick-17b-instruct-v1:0 | 1M | 16.4K | In: $0.24<br/>Out: $0.97 | Model: 0.120<br/>Completion: 4.042 | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Open Weights<br/>Released: 2025-04-05 |
-| **Nova Pro** | amazon.nova-pro-v1:0 | 300K | 8.2K | In: $0.8<br/>Out: $3.2<br/>Cache: $0.2 | Model: 0.400<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-10 | In: text, image, video<br/>Out: text | Released: 2024-12-03 |
-| **Claude Sonnet 4** | anthropic.claude-sonnet-4-20250514-v1:0 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-05-22 |
-| **Claude Haiku 3.5** | anthropic.claude-3-5-haiku-20241022-v1:0 | 200K | 8.2K | In: $0.8<br/>Out: $4<br/>Cache: $0.08 | Model: 0.400<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-07 | In: text<br/>Out: text | Released: 2024-10-22 |
-| **Nova Lite** | amazon.nova-lite-v1:0 | 300K | 8.2K | In: $0.06<br/>Out: $0.24<br/>Cache: $0.015 | Model: 0.030<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-10 | In: text, image, video<br/>Out: text | Released: 2024-12-03 |
+| **Nova Pro** | amazon.nova-pro-v1:0 | 300K | 8.2K | In: $0.8<br/>Out: $3.2<br/>Cache Read: $0.2 | Model: 0.400<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-10 | In: text, image, video<br/>Out: text | Released: 2024-12-03 |
+| **Claude Sonnet 4** | anthropic.claude-sonnet-4-20250514-v1:0 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Haiku 3.5** | anthropic.claude-3-5-haiku-20241022-v1:0 | 200K | 8.2K | In: $0.8<br/>Out: $4<br/>Cache Read: $0.08<br/>Cache Write: $1 | Model: 0.400<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-07 | In: text<br/>Out: text | Released: 2024-10-22 |
+| **Nova Lite** | amazon.nova-lite-v1:0 | 300K | 8.2K | In: $0.06<br/>Out: $0.24<br/>Cache Read: $0.015 | Model: 0.030<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-10 | In: text, image, video<br/>Out: text | Released: 2024-12-03 |
 | **Llama 3.2 1B Instruct** | meta.llama3-2-1b-instruct-v1:0 | 131K | 4.1K | In: $0.1<br/>Out: $0.1 | Model: 0.050<br/>Completion: 1.000 | 🔧 🌡️ | 2023-12 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-09-25 |
 | **Command R+** | cohere.command-r-plus-v1:0 | 128K | 4.1K | In: $3<br/>Out: $15 | Model: 1.500<br/>Completion: 5.000 | 🔧 🌡️ | 2024-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-04-04 |
 | **Claude Instant** | anthropic.claude-instant-v1 | 100K | 4.1K | In: $0.8<br/>Out: $2.4 | Model: 0.400<br/>Completion: 3.000 | 🌡️ | 2023-08 | In: text<br/>Out: text | Released: 2023-03-01 |
 | **Llama 3.1 8B Instruct** | meta.llama3-1-8b-instruct-v1:0 | 128K | 4.1K | In: $0.22<br/>Out: $0.22 | Model: 0.110<br/>Completion: 1.000 | 🔧 🌡️ | 2023-12 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-07-23 |
-| **Claude Sonnet 3.5** | anthropic.claude-3-5-sonnet-20240620-v1:0 | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2024-06-20 |
+| **Claude Sonnet 3.5** | anthropic.claude-3-5-sonnet-20240620-v1:0 | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2024-06-20 |
 | **Command R** | cohere.command-r-v1:0 | 128K | 4.1K | In: $0.5<br/>Out: $1.5 | Model: 0.250<br/>Completion: 3.000 | 🔧 🌡️ | 2024-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-03-11 |
 | **Llama 3.3 70B Instruct** | meta.llama3-3-70b-instruct-v1:0 | 128K | 4.1K | In: $0.72<br/>Out: $0.72 | Model: 0.360<br/>Completion: 1.000 | 🔧 🌡️ | 2023-12 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-12-06 |
 | **Llama 3.2 11B Instruct** | meta.llama3-2-11b-instruct-v1:0 | 128K | 4.1K | In: $0.16<br/>Out: $0.16 | Model: 0.080<br/>Completion: 1.000 | 📎 🔧 🌡️ | 2023-12 | In: text, image<br/>Out: text | Open Weights<br/>Released: 2024-09-25 |
@@ -69,16 +70,16 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **Claude Sonnet 3.7** | claude-3-7-sonnet-20250219 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-10-31 | In: text, image<br/>Out: text | Released: 2025-02-19 |
-| **Claude Opus 4.1** | claude-opus-4-1-20250805 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-08-05 |
-| **Claude Haiku 3** | claude-3-haiku-20240307 | 200K | 4.1K | In: $0.25<br/>Out: $1.25<br/>Cache: $0.03 | Model: 0.125<br/>Completion: 5.000<br/>Cache: 0.120 | 📎 🔧 🌡️ | 2023-08-31 | In: text, image<br/>Out: text | Released: 2024-03-13 |
-| **Claude Haiku 3.5** | claude-3-5-haiku-20241022 | 200K | 8.2K | In: $0.8<br/>Out: $4<br/>Cache: $0.08 | Model: 0.400<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-07-31 | In: text, image<br/>Out: text | Released: 2024-10-22 |
-| **Claude Opus 4** | claude-opus-4-20250514 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
-| **Claude Sonnet 3.5 v2** | claude-3-5-sonnet-20241022 | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04-30 | In: text, image<br/>Out: text | Released: 2024-10-22 |
-| **Claude Sonnet 3.5** | claude-3-5-sonnet-20240620 | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04-30 | In: text, image<br/>Out: text | Released: 2024-06-20 |
-| **Claude Sonnet 3** | claude-3-sonnet-20240229 | 200K | 4.1K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2023-08-31 | In: text, image<br/>Out: text | Released: 2024-03-04 |
-| **Claude Sonnet 4** | claude-sonnet-4-20250514 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
-| **Claude Opus 3** | claude-3-opus-20240229 | 200K | 4.1K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2023-08-31 | In: text, image<br/>Out: text | Released: 2024-02-29 |
+| **Claude Sonnet 3.7** | claude-3-7-sonnet-20250219 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-10-31 | In: text, image<br/>Out: text | Released: 2025-02-19 |
+| **Claude Opus 4.1** | claude-opus-4-1-20250805 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-08-05 |
+| **Claude Haiku 3** | claude-3-haiku-20240307 | 200K | 4.1K | In: $0.25<br/>Out: $1.25<br/>Cache Read: $0.03<br/>Cache Write: $0.3 | Model: 0.125<br/>Completion: 5.000<br/>Cache: 0.120 | 📎 🔧 🌡️ | 2023-08-31 | In: text, image<br/>Out: text | Released: 2024-03-13 |
+| **Claude Haiku 3.5** | claude-3-5-haiku-20241022 | 200K | 8.2K | In: $0.8<br/>Out: $4<br/>Cache Read: $0.08<br/>Cache Write: $1 | Model: 0.400<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-07-31 | In: text, image<br/>Out: text | Released: 2024-10-22 |
+| **Claude Opus 4** | claude-opus-4-20250514 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Sonnet 3.5 v2** | claude-3-5-sonnet-20241022 | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04-30 | In: text, image<br/>Out: text | Released: 2024-10-22 |
+| **Claude Sonnet 3.5** | claude-3-5-sonnet-20240620 | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04-30 | In: text, image<br/>Out: text | Released: 2024-06-20 |
+| **Claude Sonnet 3** | claude-3-sonnet-20240229 | 200K | 4.1K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2023-08-31 | In: text, image<br/>Out: text | Released: 2024-03-04 |
+| **Claude Sonnet 4** | claude-sonnet-4-20250514 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Opus 3** | claude-3-opus-20240229 | 200K | 4.1K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2023-08-31 | In: text, image<br/>Out: text | Released: 2024-02-29 |
 
 ## Azure
 
@@ -86,31 +87,31 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **GPT-5 Nano** | gpt-5-nano | 272K | 128K | In: $0.05<br/>Out: $0.4<br/>Cache: $0.01 | Model: 0.025<br/>Completion: 8.000<br/>Cache: 0.200 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **GPT-5 Nano** | gpt-5-nano | 272K | 128K | In: $0.05<br/>Out: $0.4<br/>Cache Read: $0.01 | Model: 0.025<br/>Completion: 8.000<br/>Cache: 0.200 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
 | **GPT-3.5 Turbo 0613** | gpt-3.5-turbo-0613 | 16.4K | 16.4K | In: $3<br/>Out: $4 | Model: 1.500<br/>Completion: 1.333 | 🌡️ | 2021-08 | In: text<br/>Out: text | Released: 2023-06-13 |
 | **GPT-3.5 Turbo 0301** | gpt-3.5-turbo-0301 | 4.1K | 4.1K | In: $1.5<br/>Out: $2 | Model: 0.750<br/>Completion: 1.333 | 🌡️ | 2021-08 | In: text<br/>Out: text | Released: 2023-03-01 |
-| **GPT-4.1** | gpt-4.1 | 1M | 32.8K | In: $2<br/>Out: $8<br/>Cache: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **GPT-4.1** | gpt-4.1 | 1M | 32.8K | In: $2<br/>Out: $8<br/>Cache Read: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-14 |
 | **GPT-4 Turbo** | gpt-4-turbo | 128K | 4.1K | In: $10<br/>Out: $30 | Model: 5.000<br/>Completion: 3.000 | 📎 🔧 🌡️ | 2023-11 | In: text, image<br/>Out: text | Released: 2023-11-06<br/>Updated: 2024-04-09 |
-| **o1** | o1 | 200K | 100K | In: $15<br/>Out: $60<br/>Cache: $7.5 | Model: 7.500<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🔧 | 2023-09 | In: text, image<br/>Out: text | Released: 2024-12-05 |
-| **GPT-5** | gpt-5 | 272K | 128K | In: $1.25<br/>Out: $10<br/>Cache: $0.13 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.104 | 📎 🧠 🔧 | 2024-09-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
-| **o3** | o3 | 200K | 100K | In: $2<br/>Out: $8<br/>Cache: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-16 |
-| **GPT-5 Chat** | gpt-5-chat | 128K | 16.4K | In: $1.25<br/>Out: $10<br/>Cache: $0.13 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.104 | 📎 🧠 | 2024-10-24 | In: text, image<br/>Out: text | Released: 2025-08-07 |
-| **Codex Mini** | codex-mini | 200K | 100K | In: $1.5<br/>Out: $6<br/>Cache: $0.375 | Model: 0.750<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-04 | In: text<br/>Out: text | Released: 2025-05-16 |
+| **o1** | o1 | 200K | 100K | In: $15<br/>Out: $60<br/>Cache Read: $7.5 | Model: 7.500<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🔧 | 2023-09 | In: text, image<br/>Out: text | Released: 2024-12-05 |
+| **GPT-5** | gpt-5 | 272K | 128K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.13 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.104 | 📎 🧠 🔧 | 2024-09-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **o3** | o3 | 200K | 100K | In: $2<br/>Out: $8<br/>Cache Read: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-16 |
+| **GPT-5 Chat** | gpt-5-chat | 128K | 16.4K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.13 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.104 | 📎 🧠 | 2024-10-24 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **Codex Mini** | codex-mini | 200K | 100K | In: $1.5<br/>Out: $6<br/>Cache Read: $0.375 | Model: 0.750<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-04 | In: text<br/>Out: text | Released: 2025-05-16 |
 | **GPT-4 Turbo Vision** | gpt-4-turbo-vision | 128K | 4.1K | In: $10<br/>Out: $30 | Model: 5.000<br/>Completion: 3.000 | 📎 🔧 🌡️ | 2023-11 | In: text, image<br/>Out: text | Released: 2023-11-06<br/>Updated: 2024-04-09 |
-| **GPT-5 Mini** | gpt-5-mini | 272K | 128K | In: $0.25<br/>Out: $2<br/>Cache: $0.03 | Model: 0.125<br/>Completion: 8.000<br/>Cache: 0.120 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
-| **o1-preview** | o1-preview | 128K | 32.8K | In: $16.5<br/>Out: $66<br/>Cache: $8.25 | Model: 8.250<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🔧 | 2023-09 | In: text<br/>Out: text | Released: 2024-09-12 |
+| **GPT-5 Mini** | gpt-5-mini | 272K | 128K | In: $0.25<br/>Out: $2<br/>Cache Read: $0.03 | Model: 0.125<br/>Completion: 8.000<br/>Cache: 0.120 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **o1-preview** | o1-preview | 128K | 32.8K | In: $16.5<br/>Out: $66<br/>Cache Read: $8.25 | Model: 8.250<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🔧 | 2023-09 | In: text<br/>Out: text | Released: 2024-09-12 |
 | **GPT-3.5 Turbo 1106** | gpt-3.5-turbo-1106 | 16.4K | 16.4K | In: $1<br/>Out: $2 | Model: 0.500<br/>Completion: 2.000 | 🌡️ | 2021-08 | In: text<br/>Out: text | Released: 2023-11-06 |
-| **GPT-4o mini** | gpt-4o-mini | 128K | 16.4K | In: $0.15<br/>Out: $0.6<br/>Cache: $0.08 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.533 | 📎 🔧 🌡️ | 2023-09 | In: text, image<br/>Out: text | Released: 2024-07-18 |
-| **GPT-4.1 nano** | gpt-4.1-nano | 1M | 32.8K | In: $0.1<br/>Out: $0.4<br/>Cache: $0.03 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.300 | 📎 🔧 🌡️ | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-14 |
-| **GPT-4.1 mini** | gpt-4.1-mini | 1M | 32.8K | In: $0.4<br/>Out: $1.6<br/>Cache: $0.1 | Model: 0.200<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-14 |
-| **o1-mini** | o1-mini | 128K | 65.5K | In: $1.1<br/>Out: $4.4<br/>Cache: $0.55 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🔧 | 2023-09 | In: text<br/>Out: text | Released: 2024-09-12 |
+| **GPT-4o mini** | gpt-4o-mini | 128K | 16.4K | In: $0.15<br/>Out: $0.6<br/>Cache Read: $0.08 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.533 | 📎 🔧 🌡️ | 2023-09 | In: text, image<br/>Out: text | Released: 2024-07-18 |
+| **GPT-4.1 nano** | gpt-4.1-nano | 1M | 32.8K | In: $0.1<br/>Out: $0.4<br/>Cache Read: $0.03 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.300 | 📎 🔧 🌡️ | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **GPT-4.1 mini** | gpt-4.1-mini | 1M | 32.8K | In: $0.4<br/>Out: $1.6<br/>Cache Read: $0.1 | Model: 0.200<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **o1-mini** | o1-mini | 128K | 65.5K | In: $1.1<br/>Out: $4.4<br/>Cache Read: $0.55 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🔧 | 2023-09 | In: text<br/>Out: text | Released: 2024-09-12 |
 | **GPT-3.5 Turbo 0125** | gpt-3.5-turbo-0125 | 16.4K | 16.4K | In: $0.5<br/>Out: $1.5 | Model: 0.250<br/>Completion: 3.000 | 🌡️ | 2021-08 | In: text<br/>Out: text | Released: 2024-01-25 |
 | **GPT-4 32K** | gpt-4-32k | 32.8K | 32.8K | In: $60<br/>Out: $120 | Model: 30.000<br/>Completion: 2.000 | 🔧 🌡️ | 2023-11 | In: text<br/>Out: text | Released: 2023-03-14 |
 | **GPT-3.5 Turbo Instruct** | gpt-3.5-turbo-instruct | 4.1K | 4.1K | In: $1.5<br/>Out: $2 | Model: 0.750<br/>Completion: 1.333 | 🌡️ | 2021-08 | In: text<br/>Out: text | Released: 2023-09-21 |
-| **GPT-4o** | gpt-4o | 128K | 16.4K | In: $2.5<br/>Out: $10<br/>Cache: $1.25 | Model: 1.250<br/>Completion: 4.000<br/>Cache: 0.500 | 📎 🔧 🌡️ | 2023-09 | In: text, image<br/>Out: text | Released: 2024-05-13 |
+| **GPT-4o** | gpt-4o | 128K | 16.4K | In: $2.5<br/>Out: $10<br/>Cache Read: $1.25 | Model: 1.250<br/>Completion: 4.000<br/>Cache: 0.500 | 📎 🔧 🌡️ | 2023-09 | In: text, image<br/>Out: text | Released: 2024-05-13 |
 | **GPT-4** | gpt-4 | 8.2K | 8.2K | In: $60<br/>Out: $120 | Model: 30.000<br/>Completion: 2.000 | 🔧 🌡️ | 2023-11 | In: text<br/>Out: text | Released: 2023-03-14 |
-| **o4-mini** | o4-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache: $0.28 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.255 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-16 |
-| **o3-mini** | o3-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache: $0.55 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🔧 | 2024-05 | In: text<br/>Out: text | Released: 2024-12-20<br/>Updated: 2025-01-29 |
+| **o4-mini** | o4-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache Read: $0.28 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.255 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-16 |
+| **o3-mini** | o3-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache Read: $0.55 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🔧 | 2024-05 | In: text<br/>Out: text | Released: 2024-12-20<br/>Updated: 2025-01-29 |
 
 ## Cerebras
 
@@ -239,14 +240,16 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **DeepSeek Reasoner** | deepseek-reasoner | 128K | 128K | In: $0.57<br/>Out: $1.68<br/>Cache: $0.07 | Model: 0.285<br/>Completion: 2.947<br/>Cache: 0.123 | 📎 🧠 🔧 🌡️ | 2024-07 | In: text<br/>Out: text | Released: 2025-01-20<br/>Updated: 2025-08-21 |
-| **DeepSeek Chat** | deepseek-chat | 128K | 128K | In: $0.57<br/>Out: $1.68<br/>Cache: $0.07 | Model: 0.285<br/>Completion: 2.947<br/>Cache: 0.123 | 📎 🔧 🌡️ | 2024-07 | In: text<br/>Out: text | Released: 2024-12-26<br/>Updated: 2025-08-21 |
+| **DeepSeek Reasoner** | deepseek-reasoner | 128K | 128K | In: $0.57<br/>Out: $1.68<br/>Cache Read: $0.07 | Model: 0.285<br/>Completion: 2.947<br/>Cache: 0.123 | 📎 🧠 🔧 🌡️ | 2024-07 | In: text<br/>Out: text | Released: 2025-01-20<br/>Updated: 2025-08-21 |
+| **DeepSeek Chat** | deepseek-chat | 128K | 8.2K | In: $0.57<br/>Out: $1.68<br/>Cache Read: $0.07 | Model: 0.285<br/>Completion: 2.947<br/>Cache: 0.123 | 📎 🔧 🌡️ | 2024-07 | In: text<br/>Out: text | Released: 2024-12-26<br/>Updated: 2025-08-21 |
 
-## examplecorp
+## ExampleCorp AI
+
+[📖 API アドレス](https://api.examplecorp.com) | [📚 公式ドキュメント](https://docs.examplecorp.com)
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **Novus 1 (Override Example)** | novus-1 | 64K | 2K | In: $3.5<br/>Out: $10<br/>Cache: $0.2 | Model: 1.750<br/>Completion: 2.857<br/>Cache: 0.057 | 🧠 🌡️ | - | In: text, image<br/>Out: text | - |
+| **Novus 1** | novus-1 | 128K | 4.1K | In: $5<br/>Out: $15<br/>Cache Read: $0.075<br/>Cache Write: $0.5 | Model: 2.500<br/>Completion: 3.000<br/>Cache: 0.015 | 📎 🧠 🔧 🌡️ | 2024-07 | In: text, image, audio, video, pdf<br/>Out: text, image, audio, video, pdf | Released: 2025-01-20<br/>Updated: 2025-08-21 |
 
 ## FastRouter
 
@@ -255,17 +258,17 @@ hide:
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
 | **DeepSeek R1 Distill Llama 70B** | deepseek-ai/deepseek-r1-distill-llama-70b | 131.1K | 131.1K | In: $0.03<br/>Out: $0.14 | Model: 0.015<br/>Completion: 4.667 | 🧠 🌡️ | 2024-10 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-01-23 |
-| **Claude Sonnet 4** | anthropic/claude-sonnet-4 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
-| **Claude Opus 4.1** | anthropic/claude-opus-4.1 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-08-05 |
-| **GPT-5 Nano** | openai/gpt-5-nano | 400K | 128K | In: $0.05<br/>Out: $0.4<br/>Cache: $0.005 | Model: 0.025<br/>Completion: 8.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-10-01 | In: text, image<br/>Out: text | Released: 2025-08-07 |
-| **GPT-4.1** | openai/gpt-4.1 | 1M | 32.8K | In: $2<br/>Out: $8<br/>Cache: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **Claude Sonnet 4** | anthropic/claude-sonnet-4 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Opus 4.1** | anthropic/claude-opus-4.1 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-08-05 |
+| **GPT-5 Nano** | openai/gpt-5-nano | 400K | 128K | In: $0.05<br/>Out: $0.4<br/>Cache Read: $0.005 | Model: 0.025<br/>Completion: 8.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-10-01 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **GPT-4.1** | openai/gpt-4.1 | 1M | 32.8K | In: $2<br/>Out: $8<br/>Cache Read: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
 | **GPT OSS 20B** | openai/gpt-oss-20b | 131.1K | 65.5K | In: $0.05<br/>Out: $0.2 | Model: 0.025<br/>Completion: 4.000 | 🧠 🔧 🌡️ | - | In: text<br/>Out: text | Open Weights<br/>Released: 2025-08-05 |
-| **GPT-5** | openai/gpt-5 | 400K | 128K | In: $1.25<br/>Out: $10<br/>Cache: $0.125 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-10-01 | In: text, image<br/>Out: text | Released: 2025-08-07 |
-| **GPT-5 Mini** | openai/gpt-5-mini | 400K | 128K | In: $0.25<br/>Out: $2<br/>Cache: $0.025 | Model: 0.125<br/>Completion: 8.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-10-01 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **GPT-5** | openai/gpt-5 | 400K | 128K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.125 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-10-01 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **GPT-5 Mini** | openai/gpt-5-mini | 400K | 128K | In: $0.25<br/>Out: $2<br/>Cache Read: $0.025 | Model: 0.125<br/>Completion: 8.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-10-01 | In: text, image<br/>Out: text | Released: 2025-08-07 |
 | **GPT OSS 120B** | openai/gpt-oss-120b | 131.1K | 32.8K | In: $0.15<br/>Out: $0.6 | Model: 0.075<br/>Completion: 4.000 | 🧠 🔧 🌡️ | - | In: text<br/>Out: text | Open Weights<br/>Released: 2025-08-05 |
-| **Grok 4** | x-ai/grok-4 | 256K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2025-07 | In: text<br/>Out: text | Released: 2025-07-09 |
-| **Gemini 2.5 Pro** | google/gemini-2.5-pro | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, pdf<br/>Out: text | Released: 2025-06-17 |
-| **Gemini 2.5 Flash** | google/gemini-2.5-flash | 1M | 65.5K | In: $0.3<br/>Out: $2.5<br/>Cache: $0.0375 | Model: 0.150<br/>Completion: 8.333<br/>Cache: 0.125 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, pdf<br/>Out: text | Released: 2025-06-17 |
+| **Grok 4** | x-ai/grok-4 | 256K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.75<br/>Cache Write: $15 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2025-07 | In: text<br/>Out: text | Released: 2025-07-09 |
+| **Gemini 2.5 Pro** | google/gemini-2.5-pro | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, pdf<br/>Out: text | Released: 2025-06-17 |
+| **Gemini 2.5 Flash** | google/gemini-2.5-flash | 1M | 65.5K | In: $0.3<br/>Out: $2.5<br/>Cache Read: $0.0375 | Model: 0.150<br/>Completion: 8.333<br/>Cache: 0.125 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, pdf<br/>Out: text | Released: 2025-06-17 |
 | **Qwen3 Coder** | qwen/qwen3-coder | 262.1K | 66.5K | In: $0.3<br/>Out: $1.2 | Model: 0.150<br/>Completion: 4.000 | 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-23 |
 | **Kimi K2** | moonshotai/kimi-k2 | 131.1K | 32.8K | In: $0.55<br/>Out: $2.2 | Model: 0.275<br/>Completion: 4.000 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-11 |
 
@@ -372,18 +375,18 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **Gemini 2.5 Flash Preview 05-20** | gemini-2.5-flash-preview-05-20 | 1M | 65.5K | In: $0.15<br/>Out: $0.6<br/>Cache: $0.0375 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-05-20 |
-| **Gemini 2.5 Pro** | gemini-2.5-pro | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-03-20<br/>Updated: 2025-06-05 |
-| **Gemini 1.5 Flash** | gemini-1.5-flash | 1M | 8.2K | In: $0.075<br/>Out: $0.3<br/>Cache: $0.01875 | Model: 0.037<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image, audio, video<br/>Out: text | Released: 2024-05-14 |
+| **Gemini 2.5 Flash Preview 05-20** | gemini-2.5-flash-preview-05-20 | 1M | 65.5K | In: $0.15<br/>Out: $0.6<br/>Cache Read: $0.0375 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-05-20 |
+| **Gemini 2.5 Pro** | gemini-2.5-pro | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-03-20<br/>Updated: 2025-06-05 |
+| **Gemini 1.5 Flash** | gemini-1.5-flash | 1M | 8.2K | In: $0.075<br/>Out: $0.3<br/>Cache Read: $0.01875 | Model: 0.037<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image, audio, video<br/>Out: text | Released: 2024-05-14 |
 | **Gemini 2.0 Flash Lite** | gemini-2.0-flash-lite | 1M | 8.2K | In: $0.075<br/>Out: $0.3 | Model: 0.037<br/>Completion: 4.000 | 📎 🔧 🌡️ | 2024-06 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2024-12-11 |
-| **Gemini 1.5 Pro** | gemini-1.5-pro | 1M | 8.2K | In: $1.25<br/>Out: $5<br/>Cache: $0.3125 | Model: 0.625<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image, audio, video<br/>Out: text | Released: 2024-02-15 |
-| **Gemini 1.5 Flash-8B** | gemini-1.5-flash-8b | 1M | 8.2K | In: $0.0375<br/>Out: $0.15<br/>Cache: $0.01 | Model: 0.019<br/>Completion: 4.000<br/>Cache: 0.267 | 📎 🔧 🌡️ | 2024-04 | In: text, image, audio, video<br/>Out: text | Released: 2024-10-03 |
-| **Gemini 2.5 Flash** | gemini-2.5-flash | 1M | 65.5K | In: $0.3<br/>Out: $2.5<br/>Cache: $0.075 | Model: 0.150<br/>Completion: 8.333<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-03-20<br/>Updated: 2025-06-05 |
-| **Gemini 2.5 Pro Preview 06-05** | gemini-2.5-pro-preview-06-05 | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-05 |
-| **Gemini 2.5 Pro Preview 05-06** | gemini-2.5-pro-preview-05-06 | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-05-06 |
-| **Gemini 2.0 Flash** | gemini-2.0-flash | 1M | 8.2K | In: $0.1<br/>Out: $0.4<br/>Cache: $0.025 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-06 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2024-12-11 |
-| **Gemini 2.5 Flash Lite Preview 06-17** | gemini-2.5-flash-lite-preview-06-17 | 65.5K | 65.5K | In: $0.1<br/>Out: $0.4<br/>Cache: $0.025 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-17 |
-| **Gemini 2.5 Flash Preview 04-17** | gemini-2.5-flash-preview-04-17 | 1M | 65.5K | In: $0.15<br/>Out: $0.6<br/>Cache: $0.0375 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-04-17 |
+| **Gemini 1.5 Pro** | gemini-1.5-pro | 1M | 8.2K | In: $1.25<br/>Out: $5<br/>Cache Read: $0.3125 | Model: 0.625<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image, audio, video<br/>Out: text | Released: 2024-02-15 |
+| **Gemini 1.5 Flash-8B** | gemini-1.5-flash-8b | 1M | 8.2K | In: $0.0375<br/>Out: $0.15<br/>Cache Read: $0.01 | Model: 0.019<br/>Completion: 4.000<br/>Cache: 0.267 | 📎 🔧 🌡️ | 2024-04 | In: text, image, audio, video<br/>Out: text | Released: 2024-10-03 |
+| **Gemini 2.5 Flash** | gemini-2.5-flash | 1M | 65.5K | In: $0.3<br/>Out: $2.5<br/>Cache Read: $0.075 | Model: 0.150<br/>Completion: 8.333<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-03-20<br/>Updated: 2025-06-05 |
+| **Gemini 2.5 Pro Preview 06-05** | gemini-2.5-pro-preview-06-05 | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-05 |
+| **Gemini 2.5 Pro Preview 05-06** | gemini-2.5-pro-preview-05-06 | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-05-06 |
+| **Gemini 2.0 Flash** | gemini-2.0-flash | 1M | 8.2K | In: $0.1<br/>Out: $0.4<br/>Cache Read: $0.025 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-06 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2024-12-11 |
+| **Gemini 2.5 Flash Lite Preview 06-17** | gemini-2.5-flash-lite-preview-06-17 | 65.5K | 65.5K | In: $0.1<br/>Out: $0.4<br/>Cache Read: $0.025 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-17 |
+| **Gemini 2.5 Flash Preview 04-17** | gemini-2.5-flash-preview-04-17 | 1M | 65.5K | In: $0.15<br/>Out: $0.6<br/>Cache Read: $0.0375 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-04-17 |
 
 ## Vertex
 
@@ -391,15 +394,15 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **Gemini 2.5 Flash Preview 05-20** | gemini-2.5-flash-preview-05-20 | 1M | 65.5K | In: $0.15<br/>Out: $0.6<br/>Cache: $0.0375 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-05-20 |
-| **Gemini 2.5 Pro** | gemini-2.5-pro | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-03-20<br/>Updated: 2025-06-05 |
+| **Gemini 2.5 Flash Preview 05-20** | gemini-2.5-flash-preview-05-20 | 1M | 65.5K | In: $0.15<br/>Out: $0.6<br/>Cache Read: $0.0375 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-05-20 |
+| **Gemini 2.5 Pro** | gemini-2.5-pro | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-03-20<br/>Updated: 2025-06-05 |
 | **Gemini 2.0 Flash Lite** | gemini-2.0-flash-lite | 1M | 8.2K | In: $0.075<br/>Out: $0.3 | Model: 0.037<br/>Completion: 4.000 | 📎 🔧 🌡️ | 2024-06 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2024-12-11 |
-| **Gemini 2.5 Flash** | gemini-2.5-flash | 1M | 65.5K | In: $0.3<br/>Out: $2.5<br/>Cache: $0.075 | Model: 0.150<br/>Completion: 8.333<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-17 |
-| **Gemini 2.5 Pro Preview 06-05** | gemini-2.5-pro-preview-06-05 | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-05 |
-| **Gemini 2.5 Pro Preview 05-06** | gemini-2.5-pro-preview-05-06 | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-05-06 |
-| **Gemini 2.0 Flash** | gemini-2.0-flash | 1M | 8.2K | In: $0.1<br/>Out: $0.4<br/>Cache: $0.025 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-06 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2024-12-11 |
-| **Gemini 2.5 Flash Lite Preview 06-17** | gemini-2.5-flash-lite-preview-06-17 | 65.5K | 65.5K | In: $0.1<br/>Out: $0.4<br/>Cache: $0.025 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-17 |
-| **Gemini 2.5 Flash Preview 04-17** | gemini-2.5-flash-preview-04-17 | 1M | 65.5K | In: $0.15<br/>Out: $0.6<br/>Cache: $0.0375 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-04-17 |
+| **Gemini 2.5 Flash** | gemini-2.5-flash | 1M | 65.5K | In: $0.3<br/>Out: $2.5<br/>Cache Read: $0.075<br/>Cache Write: $0.383 | Model: 0.150<br/>Completion: 8.333<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-17 |
+| **Gemini 2.5 Pro Preview 06-05** | gemini-2.5-pro-preview-06-05 | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-05 |
+| **Gemini 2.5 Pro Preview 05-06** | gemini-2.5-pro-preview-05-06 | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-05-06 |
+| **Gemini 2.0 Flash** | gemini-2.0-flash | 1M | 8.2K | In: $0.1<br/>Out: $0.4<br/>Cache Read: $0.025 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-06 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2024-12-11 |
+| **Gemini 2.5 Flash Lite Preview 06-17** | gemini-2.5-flash-lite-preview-06-17 | 65.5K | 65.5K | In: $0.1<br/>Out: $0.4<br/>Cache Read: $0.025 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-17 |
+| **Gemini 2.5 Flash Preview 04-17** | gemini-2.5-flash-preview-04-17 | 1M | 65.5K | In: $0.15<br/>Out: $0.6<br/>Cache Read: $0.0375 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-04-17 |
 
 ## Vertex
 
@@ -407,12 +410,12 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **Claude Haiku 3.5** | claude-3-5-haiku@20241022 | 200K | 8.2K | In: $0.8<br/>Out: $4<br/>Cache: $0.08 | Model: 0.400<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-07-31 | In: text, image<br/>Out: text | Released: 2024-10-22 |
-| **Claude Opus 4** | claude-opus-4@20250514 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
-| **Claude Sonnet 3.5 v2** | claude-3-5-sonnet@20241022 | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04-30 | In: text, image<br/>Out: text | Released: 2024-10-22 |
-| **Claude Opus 4.1** | claude-opus-4-1@20250805 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-08-05 |
-| **Claude Sonnet 3.7** | claude-3-7-sonnet@20250219 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-10-31 | In: text, image<br/>Out: text | Released: 2025-02-19 |
-| **Claude Sonnet 4** | claude-sonnet-4@20250514 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Haiku 3.5** | claude-3-5-haiku@20241022 | 200K | 8.2K | In: $0.8<br/>Out: $4<br/>Cache Read: $0.08<br/>Cache Write: $1 | Model: 0.400<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-07-31 | In: text, image<br/>Out: text | Released: 2024-10-22 |
+| **Claude Opus 4** | claude-opus-4@20250514 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Sonnet 3.5 v2** | claude-3-5-sonnet@20241022 | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04-30 | In: text, image<br/>Out: text | Released: 2024-10-22 |
+| **Claude Opus 4.1** | claude-opus-4-1@20250805 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-08-05 |
+| **Claude Sonnet 3.7** | claude-3-7-sonnet@20250219 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-10-31 | In: text, image<br/>Out: text | Released: 2025-02-19 |
+| **Claude Sonnet 4** | claude-sonnet-4@20250514 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
 
 ## Groq
 
@@ -457,8 +460,8 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **Mercury Coder** | mercury-coder | 128K | 16.4K | In: $0.25<br/>Out: $1<br/>Cache: $0.25 | Model: 0.125<br/>Completion: 4.000<br/>Cache: 1.000 | 🔧 🌡️ | 2023-10 | In: text<br/>Out: text | Released: 2025-02-26<br/>Updated: 2025-07-31 |
-| **Mercury** | mercury | 128K | 16.4K | In: $0.25<br/>Out: $1<br/>Cache: $0.25 | Model: 0.125<br/>Completion: 4.000<br/>Cache: 1.000 | 🔧 🌡️ | 2023-10 | In: text<br/>Out: text | Released: 2025-06-26<br/>Updated: 2025-07-31 |
+| **Mercury Coder** | mercury-coder | 128K | 16.4K | In: $0.25<br/>Out: $1<br/>Cache Read: $0.25<br/>Cache Write: $1 | Model: 0.125<br/>Completion: 4.000<br/>Cache: 1.000 | 🔧 🌡️ | 2023-10 | In: text<br/>Out: text | Released: 2025-02-26<br/>Updated: 2025-07-31 |
+| **Mercury** | mercury | 128K | 16.4K | In: $0.25<br/>Out: $1<br/>Cache Read: $0.25<br/>Cache Write: $1 | Model: 0.125<br/>Completion: 4.000<br/>Cache: 1.000 | 🔧 🌡️ | 2023-10 | In: text<br/>Out: text | Released: 2025-06-26<br/>Updated: 2025-07-31 |
 
 ## Inference
 
@@ -547,8 +550,8 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **Kimi K2 Turbo** | kimi-k2-turbo-preview | 131.1K | 16.4K | In: $2.4<br/>Out: $10<br/>Cache: $0.6 | Model: 1.200<br/>Completion: 4.167<br/>Cache: 0.250 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-14 |
-| **Kimi K2** | kimi-k2-0711-preview | 131.1K | 16.4K | In: $0.6<br/>Out: $2.5<br/>Cache: $0.15 | Model: 0.300<br/>Completion: 4.167<br/>Cache: 0.250 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-14 |
+| **Kimi K2 Turbo** | kimi-k2-turbo-preview | 131.1K | 16.4K | In: $2.4<br/>Out: $10<br/>Cache Read: $0.6 | Model: 1.200<br/>Completion: 4.167<br/>Cache: 0.250 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-14 |
+| **Kimi K2** | kimi-k2-0711-preview | 131.1K | 16.4K | In: $0.6<br/>Out: $2.5<br/>Cache Read: $0.15 | Model: 0.300<br/>Completion: 4.167<br/>Cache: 0.250 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-14 |
 
 ## Moonshot AI (China)
 
@@ -556,8 +559,8 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **Kimi K2** | kimi-k2-0711-preview | 131.1K | 16.4K | In: $0.6<br/>Out: $2.5<br/>Cache: $0.15 | Model: 0.300<br/>Completion: 4.167<br/>Cache: 0.250 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-14 |
-| **Kimi K2 Turbo** | kimi-k2-turbo-preview | 131.1K | 16.4K | In: $2.4<br/>Out: $10<br/>Cache: $0.6 | Model: 1.200<br/>Completion: 4.167<br/>Cache: 0.250 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-14 |
+| **Kimi K2** | kimi-k2-0711-preview | 131.1K | 16.4K | In: $0.6<br/>Out: $2.5<br/>Cache Read: $0.15 | Model: 0.300<br/>Completion: 4.167<br/>Cache: 0.250 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-14 |
+| **Kimi K2 Turbo** | kimi-k2-turbo-preview | 131.1K | 16.4K | In: $2.4<br/>Out: $10<br/>Cache Read: $0.6 | Model: 1.200<br/>Completion: 4.167<br/>Cache: 0.250 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-14 |
 
 ## Morph
 
@@ -575,29 +578,29 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **GPT-5 Nano** | gpt-5-nano | 400K | 128K | In: $0.05<br/>Out: $0.4<br/>Cache: $0.01 | Model: 0.025<br/>Completion: 8.000<br/>Cache: 0.200 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **GPT-5 Nano** | gpt-5-nano | 400K | 128K | In: $0.05<br/>Out: $0.4<br/>Cache Read: $0.01 | Model: 0.025<br/>Completion: 8.000<br/>Cache: 0.200 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
 | **o3-pro** | o3-pro | 200K | 100K | In: $20<br/>Out: $80 | Model: 10.000<br/>Completion: 4.000 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-06-10 |
-| **Codex Mini** | codex-mini-latest | 200K | 100K | In: $1.5<br/>Out: $6<br/>Cache: $0.375 | Model: 0.750<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-04 | In: text<br/>Out: text | Released: 2025-05-16 |
-| **GPT-4.1** | gpt-4.1 | 1M | 32.8K | In: $2<br/>Out: $8<br/>Cache: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **Codex Mini** | codex-mini-latest | 200K | 100K | In: $1.5<br/>Out: $6<br/>Cache Read: $0.375 | Model: 0.750<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-04 | In: text<br/>Out: text | Released: 2025-05-16 |
+| **GPT-4.1** | gpt-4.1 | 1M | 32.8K | In: $2<br/>Out: $8<br/>Cache Read: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
 | **GPT-4 Turbo** | gpt-4-turbo | 128K | 4.1K | In: $10<br/>Out: $30 | Model: 5.000<br/>Completion: 3.000 | 📎 🔧 🌡️ | 2023-12 | In: text, image<br/>Out: text | Released: 2023-11-06<br/>Updated: 2024-04-09 |
-| **o1** | o1 | 200K | 100K | In: $15<br/>Out: $60<br/>Cache: $7.5 | Model: 7.500<br/>Completion: 4.000<br/>Cache: 0.500 | 📎 🧠 🔧 | 2023-09 | In: text, image<br/>Out: text | Released: 2024-12-05 |
-| **o3-deep-research** | o3-deep-research | 200K | 100K | In: $10<br/>Out: $40<br/>Cache: $2.5 | Model: 5.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2024-06-26 |
-| **GPT-5** | gpt-5 | 400K | 128K | In: $1.25<br/>Out: $10<br/>Cache: $0.13 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.104 | 📎 🧠 🔧 | 2024-09-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **o1** | o1 | 200K | 100K | In: $15<br/>Out: $60<br/>Cache Read: $7.5 | Model: 7.500<br/>Completion: 4.000<br/>Cache: 0.500 | 📎 🧠 🔧 | 2023-09 | In: text, image<br/>Out: text | Released: 2024-12-05 |
+| **o3-deep-research** | o3-deep-research | 200K | 100K | In: $10<br/>Out: $40<br/>Cache Read: $2.5 | Model: 5.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2024-06-26 |
+| **GPT-5** | gpt-5 | 400K | 128K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.13 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.104 | 📎 🧠 🔧 | 2024-09-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
 | **o1-pro** | o1-pro | 200K | 100K | In: $150<br/>Out: $600 | Model: 75.000<br/>Completion: 4.000 | 📎 🧠 🔧 | 2023-09 | In: text, image<br/>Out: text | Released: 2025-03-19 |
-| **o3** | o3 | 200K | 100K | In: $2<br/>Out: $8<br/>Cache: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-16 |
+| **o3** | o3 | 200K | 100K | In: $2<br/>Out: $8<br/>Cache Read: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-16 |
 | **GPT-5 Chat (latest)** | gpt-5-chat-latest | 400K | 128K | In: $1.25<br/>Out: $10 | Model: 0.625<br/>Completion: 8.000 | 📎 🧠 🌡️ | 2024-09-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
-| **GPT-5 Mini** | gpt-5-mini | 400K | 128K | In: $0.25<br/>Out: $2<br/>Cache: $0.03 | Model: 0.125<br/>Completion: 8.000<br/>Cache: 0.120 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
-| **o1-preview** | o1-preview | 128K | 32.8K | In: $15<br/>Out: $60<br/>Cache: $7.5 | Model: 7.500<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🌡️ | 2023-09 | In: text<br/>Out: text | Released: 2024-09-12 |
-| **o4-mini-deep-research** | o4-mini-deep-research | 200K | 100K | In: $2<br/>Out: $8<br/>Cache: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2024-06-26 |
-| **GPT-4o mini** | gpt-4o-mini | 128K | 16.4K | In: $0.15<br/>Out: $0.6<br/>Cache: $0.08 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.533 | 📎 🔧 🌡️ | 2023-09 | In: text, image<br/>Out: text | Released: 2024-07-18 |
-| **GPT-4.1 nano** | gpt-4.1-nano | 1M | 32.8K | In: $0.1<br/>Out: $0.4<br/>Cache: $0.03 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.300 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
-| **GPT-4.1 mini** | gpt-4.1-mini | 1M | 32.8K | In: $0.4<br/>Out: $1.6<br/>Cache: $0.1 | Model: 0.200<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
-| **o1-mini** | o1-mini | 128K | 65.5K | In: $1.1<br/>Out: $4.4<br/>Cache: $0.55 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 | 2023-09 | In: text<br/>Out: text | Released: 2024-09-12 |
-| **GPT-4o** | gpt-4o | 128K | 16.4K | In: $2.5<br/>Out: $10<br/>Cache: $1.25 | Model: 1.250<br/>Completion: 4.000<br/>Cache: 0.500 | 📎 🔧 🌡️ | 2023-09 | In: text, image<br/>Out: text | Released: 2024-05-13 |
+| **GPT-5 Mini** | gpt-5-mini | 400K | 128K | In: $0.25<br/>Out: $2<br/>Cache Read: $0.03 | Model: 0.125<br/>Completion: 8.000<br/>Cache: 0.120 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **o1-preview** | o1-preview | 128K | 32.8K | In: $15<br/>Out: $60<br/>Cache Read: $7.5 | Model: 7.500<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🌡️ | 2023-09 | In: text<br/>Out: text | Released: 2024-09-12 |
+| **o4-mini-deep-research** | o4-mini-deep-research | 200K | 100K | In: $2<br/>Out: $8<br/>Cache Read: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2024-06-26 |
+| **GPT-4o mini** | gpt-4o-mini | 128K | 16.4K | In: $0.15<br/>Out: $0.6<br/>Cache Read: $0.08 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.533 | 📎 🔧 🌡️ | 2023-09 | In: text, image<br/>Out: text | Released: 2024-07-18 |
+| **GPT-4.1 nano** | gpt-4.1-nano | 1M | 32.8K | In: $0.1<br/>Out: $0.4<br/>Cache Read: $0.03 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.300 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **GPT-4.1 mini** | gpt-4.1-mini | 1M | 32.8K | In: $0.4<br/>Out: $1.6<br/>Cache Read: $0.1 | Model: 0.200<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **o1-mini** | o1-mini | 128K | 65.5K | In: $1.1<br/>Out: $4.4<br/>Cache Read: $0.55 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 | 2023-09 | In: text<br/>Out: text | Released: 2024-09-12 |
+| **GPT-4o** | gpt-4o | 128K | 16.4K | In: $2.5<br/>Out: $10<br/>Cache Read: $1.25 | Model: 1.250<br/>Completion: 4.000<br/>Cache: 0.500 | 📎 🔧 🌡️ | 2023-09 | In: text, image<br/>Out: text | Released: 2024-05-13 |
 | **GPT-4** | gpt-4 | 8.2K | 8.2K | In: $30<br/>Out: $60 | Model: 15.000<br/>Completion: 2.000 | 📎 🔧 🌡️ | 2023-11 | In: text<br/>Out: text | Released: 2023-11-06<br/>Updated: 2024-04-09 |
-| **GPT-3.5-turbo** | gpt-3.5-turbo | 16.4K | 4.1K | In: $0.5<br/>Out: $1.5<br/>Cache: $1.25 | Model: 0.250<br/>Completion: 3.000<br/>Cache: 2.500 | 🌡️ | 2021-09-01 | In: text<br/>Out: text | Released: 2023-03-01<br/>Updated: 2023-11-06 |
-| **o4-mini** | o4-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache: $0.28 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.255 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-16 |
-| **o3-mini** | o3-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache: $0.55 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🔧 | 2024-05 | In: text<br/>Out: text | Released: 2024-12-20<br/>Updated: 2025-01-29 |
+| **GPT-3.5-turbo** | gpt-3.5-turbo | 16.4K | 4.1K | In: $0.5<br/>Out: $1.5<br/>Cache Read: $1.25 | Model: 0.250<br/>Completion: 3.000<br/>Cache: 2.500 | 🌡️ | 2021-09-01 | In: text<br/>Out: text | Released: 2023-03-01<br/>Updated: 2023-11-06 |
+| **o4-mini** | o4-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache Read: $0.28 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.255 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-16 |
+| **o3-mini** | o3-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache Read: $0.55 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🔧 | 2024-05 | In: text<br/>Out: text | Released: 2024-12-20<br/>Updated: 2025-01-29 |
 
 ## opencode
 
@@ -627,28 +630,28 @@ hide:
 | **Horizon Beta** | openrouter/horizon-beta | 256K | 128K | - | - | 📎 🔧 | 2025-07 | In: text, image<br/>Out: text | Released: 2025-08-01 |
 | **Cypher Alpha (free)** | openrouter/cypher-alpha:free | 1M | 1M | - | - | 🔧 🌡️ | 2025-07 | In: text<br/>Out: text | Released: 2025-07-01 |
 | **Horizon Alpha** | openrouter/horizon-alpha | 256K | 128K | - | - | 📎 🔧 | 2025-07 | In: text, image<br/>Out: text | Released: 2025-07-30 |
-| **Claude Sonnet 4** | anthropic/claude-sonnet-4 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
-| **Claude Opus 4** | anthropic/claude-opus-4 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
-| **Claude Haiku 3.5** | anthropic/claude-3.5-haiku | 200K | 8.2K | In: $0.8<br/>Out: $4<br/>Cache: $0.08 | Model: 0.400<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-07-31 | In: text, image<br/>Out: text | Released: 2024-10-22 |
-| **Claude Opus 4.1** | anthropic/claude-opus-4.1 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-08-05 |
-| **Claude Sonnet 3.7** | anthropic/claude-3.7-sonnet | 200K | 128K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-01 | In: text, image<br/>Out: text | Released: 2025-02-19 |
+| **Claude Sonnet 4** | anthropic/claude-sonnet-4 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Opus 4** | anthropic/claude-opus-4 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Haiku 3.5** | anthropic/claude-3.5-haiku | 200K | 8.2K | In: $0.8<br/>Out: $4<br/>Cache Read: $0.08<br/>Cache Write: $1 | Model: 0.400<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-07-31 | In: text, image<br/>Out: text | Released: 2024-10-22 |
+| **Claude Opus 4.1** | anthropic/claude-opus-4.1 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-08-05 |
+| **Claude Sonnet 3.7** | anthropic/claude-3.7-sonnet | 200K | 128K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-01 | In: text, image<br/>Out: text | Released: 2025-02-19 |
 | **GPT-5 Nano** | openai/gpt-5-nano | 400K | 128K | In: $0.05<br/>Out: $0.4 | Model: 0.025<br/>Completion: 8.000 | 📎 🧠 🔧 🌡️ | 2024-10-01 | In: text, image<br/>Out: text | Released: 2025-08-07 |
-| **GPT-4.1** | openai/gpt-4.1 | 1M | 32.8K | In: $2<br/>Out: $8<br/>Cache: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **GPT-4.1** | openai/gpt-4.1 | 1M | 32.8K | In: $2<br/>Out: $8<br/>Cache Read: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
 | **GPT OSS 20B** | openai/gpt-oss-20b | 131.1K | 32.8K | In: $0.05<br/>Out: $0.2 | Model: 0.025<br/>Completion: 4.000 | 🧠 🔧 🌡️ | - | In: text<br/>Out: text | Open Weights<br/>Released: 2025-08-05 |
 | **GPT-5** | openai/gpt-5 | 400K | 128K | In: $1.25<br/>Out: $10 | Model: 0.625<br/>Completion: 8.000 | 📎 🧠 🔧 🌡️ | 2024-10-01 | In: text, image<br/>Out: text | Released: 2025-08-07 |
 | **GPT-5 Chat (latest)** | openai/gpt-5-chat | 400K | 128K | In: $1.25<br/>Out: $10 | Model: 0.625<br/>Completion: 8.000 | 📎 🧠 🌡️ | 2024-09-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
 | **GPT-5 Mini** | openai/gpt-5-mini | 400K | 128K | In: $0.25<br/>Out: $2 | Model: 0.125<br/>Completion: 8.000 | 📎 🧠 🔧 🌡️ | 2024-10-01 | In: text, image<br/>Out: text | Released: 2025-08-07 |
-| **GPT-4o-mini** | openai/gpt-4o-mini | 128K | 16.4K | In: $0.15<br/>Out: $0.6<br/>Cache: $0.08 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.533 | 📎 🔧 🌡️ | 2024-10 | In: text, image<br/>Out: text | Released: 2024-07-18 |
-| **GPT-4.1 Mini** | openai/gpt-4.1-mini | 1M | 32.8K | In: $0.4<br/>Out: $1.6<br/>Cache: $0.1 | Model: 0.200<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **GPT-4o-mini** | openai/gpt-4o-mini | 128K | 16.4K | In: $0.15<br/>Out: $0.6<br/>Cache Read: $0.08 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.533 | 📎 🔧 🌡️ | 2024-10 | In: text, image<br/>Out: text | Released: 2024-07-18 |
+| **GPT-4.1 Mini** | openai/gpt-4.1-mini | 1M | 32.8K | In: $0.4<br/>Out: $1.6<br/>Cache Read: $0.1 | Model: 0.200<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
 | **GPT OSS 120B** | openai/gpt-oss-120b | 131.1K | 32.8K | In: $0.15<br/>Out: $0.6 | Model: 0.075<br/>Completion: 4.000 | 🧠 🔧 🌡️ | - | In: text<br/>Out: text | Open Weights<br/>Released: 2025-08-05 |
-| **o4 Mini** | openai/o4-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache: $0.28 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.255 | 📎 🧠 🔧 🌡️ | 2024-06 | In: text, image<br/>Out: text | Released: 2025-04-16 |
+| **o4 Mini** | openai/o4-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache Read: $0.28 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.255 | 📎 🧠 🔧 🌡️ | 2024-06 | In: text, image<br/>Out: text | Released: 2025-04-16 |
 | **GLM Z1 32B (free)** | thudm/glm-z1-32b:free | 32.8K | 32.8K | - | - | 🧠 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-04-17 |
 | **Sarvam-M (free)** | sarvamai/sarvam-m:free | 32.8K | 32.8K | - | - | 🧠 🔧 🌡️ | 2025-05 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-05-25 |
-| **Grok 3 Mini Beta** | x-ai/grok-3-mini-beta | 131.1K | 8.2K | In: $0.3<br/>Out: $0.5<br/>Cache: $0.075 | Model: 0.150<br/>Completion: 1.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok 3** | x-ai/grok-3 | 131.1K | 8.2K | In: $3<br/>Out: $15<br/>Cache: $0.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok 3 Mini** | x-ai/grok-3-mini | 131.1K | 8.2K | In: $0.3<br/>Out: $0.5<br/>Cache: $0.075 | Model: 0.150<br/>Completion: 1.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok 4** | x-ai/grok-4 | 256K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2025-07 | In: text<br/>Out: text | Released: 2025-07-09 |
-| **Grok 3 Beta** | x-ai/grok-3-beta | 131.1K | 8.2K | In: $3<br/>Out: $15<br/>Cache: $0.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 3 Mini Beta** | x-ai/grok-3-mini-beta | 131.1K | 8.2K | In: $0.3<br/>Out: $0.5<br/>Cache Read: $0.075<br/>Cache Write: $0.5 | Model: 0.150<br/>Completion: 1.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 3** | x-ai/grok-3 | 131.1K | 8.2K | In: $3<br/>Out: $15<br/>Cache Read: $0.75<br/>Cache Write: $15 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 3 Mini** | x-ai/grok-3-mini | 131.1K | 8.2K | In: $0.3<br/>Out: $0.5<br/>Cache Read: $0.075<br/>Cache Write: $0.5 | Model: 0.150<br/>Completion: 1.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 4** | x-ai/grok-4 | 256K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.75<br/>Cache Write: $15 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2025-07 | In: text<br/>Out: text | Released: 2025-07-09 |
+| **Grok 3 Beta** | x-ai/grok-3-beta | 131.1K | 8.2K | In: $3<br/>Out: $15<br/>Cache Read: $0.75<br/>Cache Write: $15 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
 | **Codestral 2508** | mistralai/codestral-2508 | 256K | 256K | In: $0.3<br/>Out: $0.9 | Model: 0.150<br/>Completion: 3.000 | 🔧 🌡️ | 2025-05 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-08-01 |
 | **Mistral Medium 3** | mistralai/mistral-medium-3 | 131.1K | 131.1K | In: $0.4<br/>Out: $2 | Model: 0.200<br/>Completion: 5.000 | 📎 🔧 🌡️ | 2025-05 | In: text, image<br/>Out: text | Released: 2025-05-07 |
 | **Devstral Small** | mistralai/devstral-small-2505 | 128K | 128K | In: $0.06<br/>Out: $0.12 | Model: 0.030<br/>Completion: 2.000 | 🔧 🌡️ | 2025-05 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-05-07 |
@@ -664,15 +667,15 @@ hide:
 | **Llama 4 Scout (free)** | meta-llama/llama-4-scout:free | 64K | 64K | - | - | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Open Weights<br/>Released: 2025-04-05 |
 | **Llama 3.2 11B Vision Instruct** | meta-llama/llama-3.2-11b-vision-instruct | 131.1K | 8.2K | - | - | 📎 🌡️ | 2023-12 | In: text, image<br/>Out: text | Open Weights<br/>Released: 2024-09-25 |
 | **Llama 3.3 70B Instruct (free)** | meta-llama/llama-3.3-70b-instruct:free | 65.5K | 65.5K | - | - | 🔧 🌡️ | 2024-12 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-12-06 |
-| **Gemini 2.5 Pro** | google/gemini-2.5-pro | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-03-20<br/>Updated: 2025-06-05 |
+| **Gemini 2.5 Pro** | google/gemini-2.5-pro | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-03-20<br/>Updated: 2025-06-05 |
 | **Gemma 3 12B IT** | google/gemma-3-12b-it | 96K | 8.2K | - | - | 📎 🔧 🌡️ | 2024-10 | In: text, image<br/>Out: text | Open Weights<br/>Released: 2025-03-13 |
-| **Gemini 2.0 Flash** | google/gemini-2.0-flash-001 | 1M | 8.2K | In: $0.1<br/>Out: $0.4<br/>Cache: $0.025 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-06 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2024-12-11 |
+| **Gemini 2.0 Flash** | google/gemini-2.0-flash-001 | 1M | 8.2K | In: $0.1<br/>Out: $0.4<br/>Cache Read: $0.025 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-06 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2024-12-11 |
 | **Gemini 2.0 Flash Experimental (free)** | google/gemini-2.0-flash-exp:free | 1M | 1M | - | - | 📎 🔧 🌡️ | 2024-12 | In: text, image<br/>Out: text | Released: 2024-12-11 |
 | **Gemma 3n 4B (free)** | google/gemma-3n-e4b-it:free | 8.2K | 8.2K | - | - | 📎 🔧 🌡️ | 2025-05 | In: text, image, audio<br/>Out: text | Open Weights<br/>Released: 2025-05-20 |
 | **Gemma 2 9B (free)** | google/gemma-2-9b-it:free | 8.2K | 8.2K | - | - | 🔧 🌡️ | 2024-06 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-06-28 |
-| **Gemini 2.5 Flash** | google/gemini-2.5-flash | 1M | 65.5K | In: $0.3<br/>Out: $2.5<br/>Cache: $0.0375 | Model: 0.150<br/>Completion: 8.333<br/>Cache: 0.125 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-07-17 |
-| **Gemini 2.5 Pro Preview 06-05** | google/gemini-2.5-pro-preview-06-05 | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-05 |
-| **Gemini 2.5 Pro Preview 05-06** | google/gemini-2.5-pro-preview-05-06 | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-05-06 |
+| **Gemini 2.5 Flash** | google/gemini-2.5-flash | 1M | 65.5K | In: $0.3<br/>Out: $2.5<br/>Cache Read: $0.0375 | Model: 0.150<br/>Completion: 8.333<br/>Cache: 0.125 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-07-17 |
+| **Gemini 2.5 Pro Preview 06-05** | google/gemini-2.5-pro-preview-06-05 | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-05 |
+| **Gemini 2.5 Pro Preview 05-06** | google/gemini-2.5-pro-preview-05-06 | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-05-06 |
 | **Gemma 3n E4B IT** | google/gemma-3n-e4b-it | 8.2K | 8.2K | - | - | 📎 🌡️ | 2024-10 | In: text, image, audio<br/>Out: text | Open Weights<br/>Released: 2025-05-20 |
 | **Gemma 3 27B IT** | google/gemma-3-27b-it | 96K | 8.2K | - | - | 📎 🔧 🌡️ | 2024-10 | In: text, image<br/>Out: text | Open Weights<br/>Released: 2025-03-12 |
 | **MAI DS R1 (free)** | microsoft/mai-ds-r1:free | 163.8K | 163.8K | - | - | 🧠 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-04-21 |
@@ -710,19 +713,19 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **Claude Opus 4** | anthropic/claude-opus-4 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
-| **Claude Opus 4.1** | anthropic/claude-opus-4-1-20250805 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-08-05 |
-| **Claude Sonnet 3.7** | anthropic/claude-3-7-sonnet | 200K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-01 | In: text, image<br/>Out: text | Released: 2025-02-19 |
-| **Claude Sonnet 4** | anthropic/claude-4-sonnet-20250522 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
-| **GPT-5 Nano** | openai/gpt-5-nano | 16K | 4K | In: $0.05<br/>Out: $0.4<br/>Cache: $0.01 | Model: 0.025<br/>Completion: 8.000<br/>Cache: 0.200 | 📎 🧠 🔧 | 2024-05-30 | In: text<br/>Out: text | Released: 2025-08-07 |
-| **GPT-4.1** | openai/gpt-4.1 | 1M | 32.8K | In: $2<br/>Out: $8<br/>Cache: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
-| **GPT-5** | openai/gpt-5 | 400K | 128K | In: $1.25<br/>Out: $10<br/>Cache: $0.13 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.104 | 📎 🧠 🔧 | 2024-09-30 | In: text, audio, image, video<br/>Out: text, audio, image | Released: 2025-08-07 |
-| **GPT-5 Mini** | openai/gpt-5-mini | 128K | 32K | In: $0.25<br/>Out: $2<br/>Cache: $0.03 | Model: 0.125<br/>Completion: 8.000<br/>Cache: 0.120 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
-| **GPT-4o Mini** | openai/gpt-4o-mini | 128K | 16.4K | In: $0.15<br/>Out: $0.6<br/>Cache: $0.08 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.533 | 📎 🔧 🌡️ | 2024-10 | In: text, image<br/>Out: text | Released: 2024-07-18 |
-| **GPT-4.1 Mini** | openai/gpt-4.1-mini | 1M | 32.8K | In: $0.4<br/>Out: $1.6<br/>Cache: $0.1 | Model: 0.200<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
-| **o4 Mini** | openai/o4-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache: $0.28 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.255 | 📎 🧠 🔧 🌡️ | 2024-06 | In: text, image<br/>Out: text | Released: 2025-04-16 |
-| **Gemini 2.5 Pro** | google/gemini-2.5-pro | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-17 |
-| **Gemini 2.5 Flash** | google/gemini-2.5-flash | 1M | 65.5K | In: $0.3<br/>Out: $2.5<br/>Cache: $0.075 | Model: 0.150<br/>Completion: 8.333<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-17 |
+| **Claude Opus 4** | anthropic/claude-opus-4 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Opus 4.1** | anthropic/claude-opus-4-1-20250805 | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-08-05 |
+| **Claude Sonnet 3.7** | anthropic/claude-3-7-sonnet | 200K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-01 | In: text, image<br/>Out: text | Released: 2025-02-19 |
+| **Claude Sonnet 4** | anthropic/claude-4-sonnet-20250522 | 200K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **GPT-5 Nano** | openai/gpt-5-nano | 16K | 4K | In: $0.05<br/>Out: $0.4<br/>Cache Read: $0.01 | Model: 0.025<br/>Completion: 8.000<br/>Cache: 0.200 | 📎 🧠 🔧 | 2024-05-30 | In: text<br/>Out: text | Released: 2025-08-07 |
+| **GPT-4.1** | openai/gpt-4.1 | 1M | 32.8K | In: $2<br/>Out: $8<br/>Cache Read: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **GPT-5** | openai/gpt-5 | 400K | 128K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.13 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.104 | 📎 🧠 🔧 | 2024-09-30 | In: text, audio, image, video<br/>Out: text, audio, image | Released: 2025-08-07 |
+| **GPT-5 Mini** | openai/gpt-5-mini | 128K | 32K | In: $0.25<br/>Out: $2<br/>Cache Read: $0.03 | Model: 0.125<br/>Completion: 8.000<br/>Cache: 0.120 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **GPT-4o Mini** | openai/gpt-4o-mini | 128K | 16.4K | In: $0.15<br/>Out: $0.6<br/>Cache Read: $0.08 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.533 | 📎 🔧 🌡️ | 2024-10 | In: text, image<br/>Out: text | Released: 2024-07-18 |
+| **GPT-4.1 Mini** | openai/gpt-4.1-mini | 1M | 32.8K | In: $0.4<br/>Out: $1.6<br/>Cache Read: $0.1 | Model: 0.200<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **o4 Mini** | openai/o4-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache Read: $0.28 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.255 | 📎 🧠 🔧 🌡️ | 2024-06 | In: text, image<br/>Out: text | Released: 2025-04-16 |
+| **Gemini 2.5 Pro** | google/gemini-2.5-pro | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.31<br/>Cache Write: $2.375 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-17 |
+| **Gemini 2.5 Flash** | google/gemini-2.5-flash | 1M | 65.5K | In: $0.3<br/>Out: $2.5<br/>Cache Read: $0.075<br/>Cache Write: $0.55 | Model: 0.150<br/>Completion: 8.333<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-06-17 |
 
 ## submodel
 
@@ -830,37 +833,37 @@ hide:
 | **Llama-4-Scout-17B-16E-Instruct-FP8** | meta/llama-4-scout | 128K | 4.1K | - | - | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Open Weights<br/>Released: 2025-04-05 |
 | **Llama-3.3-70B-Instruct** | meta/llama-3.3-70b | 128K | 4.1K | - | - | 📎 🔧 🌡️ | 2023-12 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-12-06 |
 | **Llama-4-Maverick-17B-128E-Instruct-FP8** | meta/llama-4-maverick | 128K | 4.1K | - | - | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Open Weights<br/>Released: 2025-04-05 |
-| **Grok 3 Mini Fast** | xai/grok-3-mini-fast | 131.1K | 8.2K | In: $0.6<br/>Out: $4<br/>Cache: $0.15 | Model: 0.300<br/>Completion: 6.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok 4** | xai/grok-4 | 256K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2025-07 | In: text<br/>Out: text | Released: 2025-07-09 |
-| **Grok 3 Fast** | xai/grok-3-fast | 131.1K | 8.2K | In: $5<br/>Out: $25<br/>Cache: $1.25 | Model: 2.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok 2 Vision** | xai/grok-2-vision | 8.2K | 4.1K | In: $2<br/>Out: $10<br/>Cache: $2 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Released: 2024-08-20 |
-| **Grok 2** | xai/grok-2 | 131.1K | 8.2K | In: $2<br/>Out: $10<br/>Cache: $2 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 🔧 🌡️ | 2024-08 | In: text<br/>Out: text | Released: 2024-08-20 |
-| **Grok 3 Mini** | xai/grok-3-mini | 131.1K | 8.2K | In: $0.3<br/>Out: $0.5<br/>Cache: $0.075 | Model: 0.150<br/>Completion: 1.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok 3** | xai/grok-3 | 131.1K | 8.2K | In: $3<br/>Out: $15<br/>Cache: $0.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 3 Mini Fast** | xai/grok-3-mini-fast | 131.1K | 8.2K | In: $0.6<br/>Out: $4<br/>Cache Read: $0.15<br/>Cache Write: $4 | Model: 0.300<br/>Completion: 6.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 4** | xai/grok-4 | 256K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.75<br/>Cache Write: $15 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2025-07 | In: text<br/>Out: text | Released: 2025-07-09 |
+| **Grok 3 Fast** | xai/grok-3-fast | 131.1K | 8.2K | In: $5<br/>Out: $25<br/>Cache Read: $1.25<br/>Cache Write: $25 | Model: 2.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 2 Vision** | xai/grok-2-vision | 8.2K | 4.1K | In: $2<br/>Out: $10<br/>Cache Read: $2<br/>Cache Write: $10 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Released: 2024-08-20 |
+| **Grok 2** | xai/grok-2 | 131.1K | 8.2K | In: $2<br/>Out: $10<br/>Cache Read: $2<br/>Cache Write: $10 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 🔧 🌡️ | 2024-08 | In: text<br/>Out: text | Released: 2024-08-20 |
+| **Grok 3 Mini** | xai/grok-3-mini | 131.1K | 8.2K | In: $0.3<br/>Out: $0.5<br/>Cache Read: $0.075<br/>Cache Write: $0.5 | Model: 0.150<br/>Completion: 1.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 3** | xai/grok-3 | 131.1K | 8.2K | In: $3<br/>Out: $15<br/>Cache Read: $0.75<br/>Cache Write: $15 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
 | **Qwen 3 Coder 480B** | cerebras/qwen3-coder | 131K | 32K | In: $2<br/>Out: $2 | Model: 1.000<br/>Completion: 1.000 | 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-23 |
-| **Claude Opus 4** | anthropic/claude-4-opus | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
-| **Claude Sonnet 3.5 v2** | anthropic/claude-3.5-sonnet | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04-30 | In: text, image<br/>Out: text | Released: 2024-10-22 |
-| **Claude Sonnet 3.7** | anthropic/claude-3.7-sonnet | 200K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-10-31 | In: text, image<br/>Out: text | Released: 2025-02-19 |
-| **Claude Sonnet 4** | anthropic/claude-4-sonnet | 200K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.3 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
-| **Claude Haiku 3** | anthropic/claude-3-haiku | 200K | 4.1K | In: $0.25<br/>Out: $1.25<br/>Cache: $0.03 | Model: 0.125<br/>Completion: 5.000<br/>Cache: 0.120 | 📎 🔧 🌡️ | 2023-08-31 | In: text, image<br/>Out: text | Released: 2024-03-13 |
-| **Claude Opus 3** | anthropic/claude-3-opus | 200K | 4.1K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2023-08-31 | In: text, image<br/>Out: text | Released: 2024-02-29 |
-| **Claude Opus 4** | anthropic/claude-4-1-opus | 200K | 32K | In: $15<br/>Out: $75<br/>Cache: $1.5 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
-| **Claude Haiku 3.5** | anthropic/claude-3-5-haiku | 200K | 8.2K | In: $0.8<br/>Out: $4<br/>Cache: $0.08 | Model: 0.400<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-07-31 | In: text, image<br/>Out: text | Released: 2024-10-22 |
+| **Claude Opus 4** | anthropic/claude-4-opus | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Sonnet 3.5 v2** | anthropic/claude-3.5-sonnet | 200K | 8.2K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-04-30 | In: text, image<br/>Out: text | Released: 2024-10-22 |
+| **Claude Sonnet 3.7** | anthropic/claude-3.7-sonnet | 200K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2024-10-31 | In: text, image<br/>Out: text | Released: 2025-02-19 |
+| **Claude Sonnet 4** | anthropic/claude-4-sonnet | 200K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.3<br/>Cache Write: $3.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Haiku 3** | anthropic/claude-3-haiku | 200K | 4.1K | In: $0.25<br/>Out: $1.25<br/>Cache Read: $0.03<br/>Cache Write: $0.3 | Model: 0.125<br/>Completion: 5.000<br/>Cache: 0.120 | 📎 🔧 🌡️ | 2023-08-31 | In: text, image<br/>Out: text | Released: 2024-03-13 |
+| **Claude Opus 3** | anthropic/claude-3-opus | 200K | 4.1K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2023-08-31 | In: text, image<br/>Out: text | Released: 2024-02-29 |
+| **Claude Opus 4** | anthropic/claude-4-1-opus | 200K | 32K | In: $15<br/>Out: $75<br/>Cache Read: $1.5<br/>Cache Write: $18.75 | Model: 7.500<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🧠 🔧 🌡️ | 2025-03-31 | In: text, image<br/>Out: text | Released: 2025-05-22 |
+| **Claude Haiku 3.5** | anthropic/claude-3-5-haiku | 200K | 8.2K | In: $0.8<br/>Out: $4<br/>Cache Read: $0.08<br/>Cache Write: $1 | Model: 0.400<br/>Completion: 5.000<br/>Cache: 0.100 | 📎 🔧 🌡️ | 2024-07-31 | In: text, image<br/>Out: text | Released: 2024-10-22 |
 | **GPT OSS 20B** | openai/gpt-oss-20b | 131.1K | 32.8K | In: $0.07<br/>Out: $0.3 | Model: 0.035<br/>Completion: 4.286 | 🧠 🔧 🌡️ | - | In: text<br/>Out: text | Open Weights<br/>Released: 2025-08-05 |
 | **GPT OSS 120B** | openai/gpt-oss-120b | 131.1K | 32.8K | In: $0.1<br/>Out: $0.5 | Model: 0.050<br/>Completion: 5.000 | 🧠 🔧 🌡️ | - | In: text<br/>Out: text | Open Weights<br/>Released: 2025-08-05 |
-| **o3-mini** | openai/o3-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache: $0.55 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🔧 | 2024-05 | In: text<br/>Out: text | Released: 2024-12-20<br/>Updated: 2025-01-29 |
-| **o4-mini** | openai/o4-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache: $0.28 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.255 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-16 |
-| **GPT-4o** | openai/gpt-4o | 128K | 16.4K | In: $2.5<br/>Out: $10<br/>Cache: $1.25 | Model: 1.250<br/>Completion: 4.000<br/>Cache: 0.500 | 📎 🔧 🌡️ | 2023-09 | In: text, image<br/>Out: text | Released: 2024-05-13 |
-| **GPT-4.1 mini** | openai/gpt-4.1-mini | 1M | 32.8K | In: $0.4<br/>Out: $1.6<br/>Cache: $0.1 | Model: 0.200<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
-| **GPT-4.1 nano** | openai/gpt-4.1-nano | 1M | 32.8K | In: $0.1<br/>Out: $0.4<br/>Cache: $0.03 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.300 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
-| **GPT-4o mini** | openai/gpt-4o-mini | 128K | 16.4K | In: $0.15<br/>Out: $0.6<br/>Cache: $0.08 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.533 | 📎 🔧 🌡️ | 2023-09 | In: text, image<br/>Out: text | Released: 2024-07-18 |
-| **GPT-5 Mini** | openai/gpt-5-mini | 400K | 128K | In: $0.25<br/>Out: $2<br/>Cache: $0.03 | Model: 0.125<br/>Completion: 8.000<br/>Cache: 0.120 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
-| **o3** | openai/o3 | 200K | 100K | In: $2<br/>Out: $8<br/>Cache: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-16 |
-| **GPT-5** | openai/gpt-5 | 400K | 128K | In: $1.25<br/>Out: $10<br/>Cache: $0.13 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.104 | 📎 🧠 🔧 | 2024-09-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
-| **o1** | openai/o1 | 200K | 100K | In: $15<br/>Out: $60<br/>Cache: $7.5 | Model: 7.500<br/>Completion: 4.000<br/>Cache: 0.500 | 📎 🧠 🔧 | 2023-09 | In: text, image<br/>Out: text | Released: 2024-12-05 |
+| **o3-mini** | openai/o3-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache Read: $0.55 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.500 | 🧠 🔧 | 2024-05 | In: text<br/>Out: text | Released: 2024-12-20<br/>Updated: 2025-01-29 |
+| **o4-mini** | openai/o4-mini | 200K | 100K | In: $1.1<br/>Out: $4.4<br/>Cache Read: $0.28 | Model: 0.550<br/>Completion: 4.000<br/>Cache: 0.255 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-16 |
+| **GPT-4o** | openai/gpt-4o | 128K | 16.4K | In: $2.5<br/>Out: $10<br/>Cache Read: $1.25 | Model: 1.250<br/>Completion: 4.000<br/>Cache: 0.500 | 📎 🔧 🌡️ | 2023-09 | In: text, image<br/>Out: text | Released: 2024-05-13 |
+| **GPT-4.1 mini** | openai/gpt-4.1-mini | 1M | 32.8K | In: $0.4<br/>Out: $1.6<br/>Cache Read: $0.1 | Model: 0.200<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **GPT-4.1 nano** | openai/gpt-4.1-nano | 1M | 32.8K | In: $0.1<br/>Out: $0.4<br/>Cache Read: $0.03 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.300 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **GPT-4o mini** | openai/gpt-4o-mini | 128K | 16.4K | In: $0.15<br/>Out: $0.6<br/>Cache Read: $0.08 | Model: 0.075<br/>Completion: 4.000<br/>Cache: 0.533 | 📎 🔧 🌡️ | 2023-09 | In: text, image<br/>Out: text | Released: 2024-07-18 |
+| **GPT-5 Mini** | openai/gpt-5-mini | 400K | 128K | In: $0.25<br/>Out: $2<br/>Cache Read: $0.03 | Model: 0.125<br/>Completion: 8.000<br/>Cache: 0.120 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **o3** | openai/o3 | 200K | 100K | In: $2<br/>Out: $8<br/>Cache Read: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🧠 🔧 | 2024-05 | In: text, image<br/>Out: text | Released: 2025-04-16 |
+| **GPT-5** | openai/gpt-5 | 400K | 128K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.13 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.104 | 📎 🧠 🔧 | 2024-09-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **o1** | openai/o1 | 200K | 100K | In: $15<br/>Out: $60<br/>Cache Read: $7.5 | Model: 7.500<br/>Completion: 4.000<br/>Cache: 0.500 | 📎 🧠 🔧 | 2023-09 | In: text, image<br/>Out: text | Released: 2024-12-05 |
 | **GPT-4 Turbo** | openai/gpt-4-turbo | 128K | 4.1K | In: $10<br/>Out: $30 | Model: 5.000<br/>Completion: 3.000 | 📎 🔧 🌡️ | 2023-12 | In: text, image<br/>Out: text | Released: 2023-11-06<br/>Updated: 2024-04-09 |
-| **GPT-4.1** | openai/gpt-4.1 | 1M | 32.8K | In: $2<br/>Out: $8<br/>Cache: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
-| **GPT-5 Nano** | openai/gpt-5-nano | 400K | 128K | In: $0.05<br/>Out: $0.4<br/>Cache: $0.01 | Model: 0.025<br/>Completion: 8.000<br/>Cache: 0.200 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
+| **GPT-4.1** | openai/gpt-4.1 | 1M | 32.8K | In: $2<br/>Out: $8<br/>Cache Read: $0.5 | Model: 1.000<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-04 | In: text, image<br/>Out: text | Released: 2025-04-14 |
+| **GPT-5 Nano** | openai/gpt-5-nano | 400K | 128K | In: $0.05<br/>Out: $0.4<br/>Cache Read: $0.01 | Model: 0.025<br/>Completion: 8.000<br/>Cache: 0.200 | 📎 🧠 🔧 | 2024-05-30 | In: text, image<br/>Out: text | Released: 2025-08-07 |
 | **Mixtral 8x22B** | mistral/mixtral-8x22b-instruct | 64K | 64K | In: $2<br/>Out: $6 | Model: 1.000<br/>Completion: 3.000 | 🔧 🌡️ | 2024-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-04-17 |
 | **Mistral Small** | mistral/mistral-small | 128K | 16.4K | In: $0.1<br/>Out: $0.3 | Model: 0.050<br/>Completion: 3.000 | 🔧 🌡️ | 2025-03 | In: text, image<br/>Out: text | Open Weights<br/>Released: 2024-09-01<br/>Updated: 2024-09-04 |
 | **Pixtral Large** | mistral/pixtral-large | 128K | 128K | In: $2<br/>Out: $6 | Model: 1.000<br/>Completion: 3.000 | 📎 🔧 🌡️ | 2024-11 | In: text, image<br/>Out: text | Open Weights<br/>Released: 2024-11-01<br/>Updated: 2024-11-04 |
@@ -873,13 +876,13 @@ hide:
 | **Mistral Large** | mistral/mistral-large | 131.1K | 16.4K | In: $2<br/>Out: $6 | Model: 1.000<br/>Completion: 3.000 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Open Weights<br/>Released: 2024-11-01<br/>Updated: 2024-11-04 |
 | **v0-1.0-md** | vercel/v0-1.0-md | 128K | 32K | In: $3<br/>Out: $15 | Model: 1.500<br/>Completion: 5.000 | 📎 🧠 🔧 🌡️ | - | In: text, image<br/>Out: text | Released: 2025-05-22 |
 | **v0-1.5-md** | vercel/v0-1.5-md | 128K | 32K | In: $3<br/>Out: $15 | Model: 1.500<br/>Completion: 5.000 | 📎 🧠 🔧 🌡️ | - | In: text, image<br/>Out: text | Released: 2025-06-09 |
-| **Gemini 2.0 Flash** | google/gemini-2.0-flash | 1M | 8.2K | In: $0.1<br/>Out: $0.4<br/>Cache: $0.025 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-06 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2024-12-11 |
-| **Gemini 2.5 Flash** | google/gemini-2.5-flash | 1M | 65.5K | In: $0.3<br/>Out: $2.5<br/>Cache: $0.075 | Model: 0.150<br/>Completion: 8.333<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-03-20<br/>Updated: 2025-06-05 |
+| **Gemini 2.0 Flash** | google/gemini-2.0-flash | 1M | 8.2K | In: $0.1<br/>Out: $0.4<br/>Cache Read: $0.025 | Model: 0.050<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-06 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2024-12-11 |
+| **Gemini 2.5 Flash** | google/gemini-2.5-flash | 1M | 65.5K | In: $0.3<br/>Out: $2.5<br/>Cache Read: $0.075 | Model: 0.150<br/>Completion: 8.333<br/>Cache: 0.250 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-03-20<br/>Updated: 2025-06-05 |
 | **Gemini 2.0 Flash Lite** | google/gemini-2.0-flash-lite | 1M | 8.2K | In: $0.075<br/>Out: $0.3 | Model: 0.037<br/>Completion: 4.000 | 📎 🔧 🌡️ | 2024-06 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2024-12-11 |
-| **Gemini 2.5 Pro** | google/gemini-2.5-pro | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-03-20<br/>Updated: 2025-06-05 |
-| **Nova Micro** | amazon/nova-micro | 128K | 8.2K | In: $0.035<br/>Out: $0.14<br/>Cache: $0.00875 | Model: 0.018<br/>Completion: 4.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Released: 2024-12-03 |
-| **Nova Lite** | amazon/nova-lite | 300K | 8.2K | In: $0.06<br/>Out: $0.24<br/>Cache: $0.015 | Model: 0.030<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-10 | In: text, image, video<br/>Out: text | Released: 2024-12-03 |
-| **Nova Pro** | amazon/nova-pro | 300K | 8.2K | In: $0.8<br/>Out: $3.2<br/>Cache: $0.2 | Model: 0.400<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-10 | In: text, image, video<br/>Out: text | Released: 2024-12-03 |
+| **Gemini 2.5 Pro** | google/gemini-2.5-pro | 1M | 65.5K | In: $1.25<br/>Out: $10<br/>Cache Read: $0.31 | Model: 0.625<br/>Completion: 8.000<br/>Cache: 0.248 | 📎 🧠 🔧 🌡️ | 2025-01 | In: text, image, audio, video, pdf<br/>Out: text | Released: 2025-03-20<br/>Updated: 2025-06-05 |
+| **Nova Micro** | amazon/nova-micro | 128K | 8.2K | In: $0.035<br/>Out: $0.14<br/>Cache Read: $0.00875 | Model: 0.018<br/>Completion: 4.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Released: 2024-12-03 |
+| **Nova Lite** | amazon/nova-lite | 300K | 8.2K | In: $0.06<br/>Out: $0.24<br/>Cache Read: $0.015 | Model: 0.030<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-10 | In: text, image, video<br/>Out: text | Released: 2024-12-03 |
+| **Nova Pro** | amazon/nova-pro | 300K | 8.2K | In: $0.8<br/>Out: $3.2<br/>Cache Read: $0.2 | Model: 0.400<br/>Completion: 4.000<br/>Cache: 0.250 | 📎 🔧 🌡️ | 2024-10 | In: text, image, video<br/>Out: text | Released: 2024-12-03 |
 | **Morph v3 Large** | morph/morph-v3-large | 32K | 32K | In: $0.9<br/>Out: $1.9 | Model: 0.450<br/>Completion: 2.111 | - | - | In: text<br/>Out: text | Released: 2024-08-15 |
 | **Morph v3 Fast** | morph/morph-v3-fast | 16K | 16K | In: $0.8<br/>Out: $1.2 | Model: 0.400<br/>Completion: 1.500 | - | - | In: text<br/>Out: text | Released: 2024-08-15 |
 | **Kimi K2 Instruct** | moonshotai/kimi-k2 | 131.1K | 16.4K | In: $1<br/>Out: $3 | Model: 0.500<br/>Completion: 3.000 | 🔧 🌡️ | 2024-10 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-14 |
@@ -907,23 +910,23 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **Grok 3 Mini Fast Latest** | grok-3-mini-fast-latest | 131.1K | 8.2K | In: $0.6<br/>Out: $4<br/>Cache: $0.15 | Model: 0.300<br/>Completion: 6.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok 3 Mini Latest** | grok-3-mini-latest | 131.1K | 8.2K | In: $0.3<br/>Out: $0.5<br/>Cache: $0.075 | Model: 0.150<br/>Completion: 1.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok Beta** | grok-beta | 131.1K | 4.1K | In: $5<br/>Out: $15<br/>Cache: $5 | Model: 2.500<br/>Completion: 3.000<br/>Cache: 1.000 | 🔧 🌡️ | 2024-08 | In: text<br/>Out: text | Released: 2024-11-01 |
-| **Grok 3 Fast Latest** | grok-3-fast-latest | 131.1K | 8.2K | In: $5<br/>Out: $25<br/>Cache: $1.25 | Model: 2.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok 3** | grok-3 | 131.1K | 8.2K | In: $3<br/>Out: $15<br/>Cache: $0.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok 3 Mini** | grok-3-mini | 131.1K | 8.2K | In: $0.3<br/>Out: $0.5<br/>Cache: $0.075 | Model: 0.150<br/>Completion: 1.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok 2 Vision (1212)** | grok-2-vision-1212 | 8.2K | 4.1K | In: $2<br/>Out: $10<br/>Cache: $2 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Released: 2024-08-20<br/>Updated: 2024-12-12 |
-| **Grok 2** | grok-2 | 131.1K | 8.2K | In: $2<br/>Out: $10<br/>Cache: $2 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 🔧 🌡️ | 2024-08 | In: text<br/>Out: text | Released: 2024-08-20 |
-| **Grok 2 Vision Latest** | grok-2-vision-latest | 8.2K | 4.1K | In: $2<br/>Out: $10<br/>Cache: $2 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Released: 2024-08-20<br/>Updated: 2024-12-12 |
-| **Grok 3 Latest** | grok-3-latest | 131.1K | 8.2K | In: $3<br/>Out: $15<br/>Cache: $0.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok 2 Vision** | grok-2-vision | 8.2K | 4.1K | In: $2<br/>Out: $10<br/>Cache: $2 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Released: 2024-08-20 |
-| **Grok 2 Latest** | grok-2-latest | 131.1K | 8.2K | In: $2<br/>Out: $10<br/>Cache: $2 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 🔧 🌡️ | 2024-08 | In: text<br/>Out: text | Released: 2024-08-20<br/>Updated: 2024-12-12 |
-| **Grok 3 Fast** | grok-3-fast | 131.1K | 8.2K | In: $5<br/>Out: $25<br/>Cache: $1.25 | Model: 2.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
-| **Grok 2 (1212)** | grok-2-1212 | 131.1K | 8.2K | In: $2<br/>Out: $10<br/>Cache: $2 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 🔧 🌡️ | 2024-08 | In: text<br/>Out: text | Released: 2024-12-12 |
-| **Grok 4** | grok-4 | 256K | 64K | In: $3<br/>Out: $15<br/>Cache: $0.75 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2025-07 | In: text<br/>Out: text | Released: 2025-07-09 |
-| **Grok Vision Beta** | grok-vision-beta | 8.2K | 4.1K | In: $5<br/>Out: $15<br/>Cache: $5 | Model: 2.500<br/>Completion: 3.000<br/>Cache: 1.000 | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Released: 2024-11-01 |
-| **Grok 3 Mini Fast** | grok-3-mini-fast | 131.1K | 8.2K | In: $0.6<br/>Out: $4<br/>Cache: $0.15 | Model: 0.300<br/>Completion: 6.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 3 Mini Fast Latest** | grok-3-mini-fast-latest | 131.1K | 8.2K | In: $0.6<br/>Out: $4<br/>Cache Read: $0.15<br/>Cache Write: $4 | Model: 0.300<br/>Completion: 6.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 3 Mini Latest** | grok-3-mini-latest | 131.1K | 8.2K | In: $0.3<br/>Out: $0.5<br/>Cache Read: $0.075<br/>Cache Write: $0.5 | Model: 0.150<br/>Completion: 1.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok Beta** | grok-beta | 131.1K | 4.1K | In: $5<br/>Out: $15<br/>Cache Read: $5<br/>Cache Write: $15 | Model: 2.500<br/>Completion: 3.000<br/>Cache: 1.000 | 🔧 🌡️ | 2024-08 | In: text<br/>Out: text | Released: 2024-11-01 |
+| **Grok 3 Fast Latest** | grok-3-fast-latest | 131.1K | 8.2K | In: $5<br/>Out: $25<br/>Cache Read: $1.25<br/>Cache Write: $25 | Model: 2.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 3** | grok-3 | 131.1K | 8.2K | In: $3<br/>Out: $15<br/>Cache Read: $0.75<br/>Cache Write: $15 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 3 Mini** | grok-3-mini | 131.1K | 8.2K | In: $0.3<br/>Out: $0.5<br/>Cache Read: $0.075<br/>Cache Write: $0.5 | Model: 0.150<br/>Completion: 1.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 2 Vision (1212)** | grok-2-vision-1212 | 8.2K | 4.1K | In: $2<br/>Out: $10<br/>Cache Read: $2<br/>Cache Write: $10 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Released: 2024-08-20<br/>Updated: 2024-12-12 |
+| **Grok 2** | grok-2 | 131.1K | 8.2K | In: $2<br/>Out: $10<br/>Cache Read: $2<br/>Cache Write: $10 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 🔧 🌡️ | 2024-08 | In: text<br/>Out: text | Released: 2024-08-20 |
+| **Grok 2 Vision Latest** | grok-2-vision-latest | 8.2K | 4.1K | In: $2<br/>Out: $10<br/>Cache Read: $2<br/>Cache Write: $10 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Released: 2024-08-20<br/>Updated: 2024-12-12 |
+| **Grok 3 Latest** | grok-3-latest | 131.1K | 8.2K | In: $3<br/>Out: $15<br/>Cache Read: $0.75<br/>Cache Write: $15 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 2 Vision** | grok-2-vision | 8.2K | 4.1K | In: $2<br/>Out: $10<br/>Cache Read: $2<br/>Cache Write: $10 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Released: 2024-08-20 |
+| **Grok 2 Latest** | grok-2-latest | 131.1K | 8.2K | In: $2<br/>Out: $10<br/>Cache Read: $2<br/>Cache Write: $10 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 🔧 🌡️ | 2024-08 | In: text<br/>Out: text | Released: 2024-08-20<br/>Updated: 2024-12-12 |
+| **Grok 3 Fast** | grok-3-fast | 131.1K | 8.2K | In: $5<br/>Out: $25<br/>Cache Read: $1.25<br/>Cache Write: $25 | Model: 2.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
+| **Grok 2 (1212)** | grok-2-1212 | 131.1K | 8.2K | In: $2<br/>Out: $10<br/>Cache Read: $2<br/>Cache Write: $10 | Model: 1.000<br/>Completion: 5.000<br/>Cache: 1.000 | 🔧 🌡️ | 2024-08 | In: text<br/>Out: text | Released: 2024-12-12 |
+| **Grok 4** | grok-4 | 256K | 64K | In: $3<br/>Out: $15<br/>Cache Read: $0.75<br/>Cache Write: $15 | Model: 1.500<br/>Completion: 5.000<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2025-07 | In: text<br/>Out: text | Released: 2025-07-09 |
+| **Grok Vision Beta** | grok-vision-beta | 8.2K | 4.1K | In: $5<br/>Out: $15<br/>Cache Read: $5<br/>Cache Write: $15 | Model: 2.500<br/>Completion: 3.000<br/>Cache: 1.000 | 📎 🔧 🌡️ | 2024-08 | In: text, image<br/>Out: text | Released: 2024-11-01 |
+| **Grok 3 Mini Fast** | grok-3-mini-fast | 131.1K | 8.2K | In: $0.6<br/>Out: $4<br/>Cache Read: $0.15<br/>Cache Write: $4 | Model: 0.300<br/>Completion: 6.667<br/>Cache: 0.250 | 🧠 🔧 🌡️ | 2024-11 | In: text<br/>Out: text | Released: 2025-02-17 |
 
 ## Z.AI
 
@@ -931,10 +934,10 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **GLM-4.5-Air** | glm-4.5-air | 131.1K | 98.3K | In: $0.2<br/>Out: $1.1<br/>Cache: $0.03 | Model: 0.100<br/>Completion: 5.500<br/>Cache: 0.150 | 🧠 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-28 |
+| **GLM-4.5-Air** | glm-4.5-air | 131.1K | 98.3K | In: $0.2<br/>Out: $1.1<br/>Cache Read: $0.03 | Model: 0.100<br/>Completion: 5.500<br/>Cache: 0.150 | 🧠 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-28 |
 | **GLM 4.5V** | glm-4.5v | 64K | 16.4K | In: $0.6<br/>Out: $1.8 | Model: 0.300<br/>Completion: 3.000 | 📎 🧠 🔧 🌡️ | 2025-04 | In: text, image, video<br/>Out: text | Open Weights<br/>Released: 2025-08-11 |
 | **GLM-4.5-Flash** | glm-4.5-flash | 131.1K | 98.3K | - | - | 🧠 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-28 |
-| **GLM-4.5** | glm-4.5 | 131.1K | 98.3K | In: $0.6<br/>Out: $2.2<br/>Cache: $0.11 | Model: 0.300<br/>Completion: 3.667<br/>Cache: 0.183 | 🧠 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-28 |
+| **GLM-4.5** | glm-4.5 | 131.1K | 98.3K | In: $0.6<br/>Out: $2.2<br/>Cache Read: $0.11 | Model: 0.300<br/>Completion: 3.667<br/>Cache: 0.183 | 🧠 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-28 |
 
 ## Zhipu AI
 
@@ -942,8 +945,8 @@ hide:
 
 | モデル | モデル ID | コンテキスト | 出力 | 価格 ($/1M) | NewAPI 比率 | 機能 | ナレッジ | モダリティ | 詳細 |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
-| **GLM-4.5** | glm-4.5 | 131.1K | 98.3K | In: $0.6<br/>Out: $2.2<br/>Cache: $0.11 | Model: 0.300<br/>Completion: 3.667<br/>Cache: 0.183 | 🧠 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-28 |
+| **GLM-4.5** | glm-4.5 | 131.1K | 98.3K | In: $0.6<br/>Out: $2.2<br/>Cache Read: $0.11 | Model: 0.300<br/>Completion: 3.667<br/>Cache: 0.183 | 🧠 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-28 |
 | **GLM-4.5-Flash** | glm-4.5-flash | 131.1K | 98.3K | - | - | 🧠 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-28 |
 | **GLM 4.5V** | glm-4.5v | 64K | 16.4K | In: $0.6<br/>Out: $1.8 | Model: 0.300<br/>Completion: 3.000 | 📎 🧠 🔧 🌡️ | 2025-04 | In: text, image, video<br/>Out: text | Open Weights<br/>Released: 2025-08-11 |
-| **GLM-4.5-Air** | glm-4.5-air | 131.1K | 98.3K | In: $0.2<br/>Out: $1.1<br/>Cache: $0.03 | Model: 0.100<br/>Completion: 5.500<br/>Cache: 0.150 | 🧠 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-28 |
+| **GLM-4.5-Air** | glm-4.5-air | 131.1K | 98.3K | In: $0.2<br/>Out: $1.1<br/>Cache Read: $0.03 | Model: 0.100<br/>Completion: 5.500<br/>Cache: 0.150 | 🧠 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-28 |
 
