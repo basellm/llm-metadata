@@ -155,8 +155,22 @@ jobs:
           git tag $VERSION ${AFTER_SHA}
           git push origin $VERSION
 
-          # Build release notes from this push only, exclude github-actions[bot]
-          RECENT_COMMITS=$(git log --pretty=format:"%an%x09%s" ${BEFORE_SHA}..${AFTER_SHA} | awk -F'\t' '$1!="github-actions[bot]" {print "- "$2}' | head -20)
+          # Build release notes from last version to this version, exclude github-actions[bot]
+          # Get the previous version tag
+          PREV_VERSION=$(git tag --sort=-version:refname | grep -E "^v[0-9]{4}\.[0-9]{2}\.[0-9]{2}\.[0-9]{4}$" | grep -v "^$VERSION$" | head -1)
+          
+          if [ -n "$PREV_VERSION" ]; then
+            echo "Previous version found: $PREV_VERSION"
+            RECENT_COMMITS=$(git log --pretty=format:"%an%x09%s" ${PREV_VERSION}..${AFTER_SHA} | awk -F'\t' '$1!="github-actions[bot]" {print "- "$2}')
+          else
+            echo "No previous version found, using recent commits"
+            RECENT_COMMITS=$(git log --pretty=format:"%an%x09%s" --max-count=50 ${AFTER_SHA} | awk -F'\t' '$1!="github-actions[bot]" {print "- "$2}')
+          fi
+
+          # Fallback when no commits were found in the computed range
+          if [ -z "$RECENT_COMMITS" ]; then
+            RECENT_COMMITS="- No changes found"
+          fi
 
           # Create release notes
           cat > release_notes.md << EOF

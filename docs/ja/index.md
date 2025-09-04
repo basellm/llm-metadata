@@ -39,4 +39,4 @@ hide:
 
 ## 📄 ライセンス
 
-MIT License - 参照 [LICENSE](https://github.com/basellm/llm-metadata/blob/main/LICENSE)
+ AGPL-3.0 license - 参照 [LICENSE](https://github.com/basellm/llm-metadata/blob/main/LICENSE)

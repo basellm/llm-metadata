@@ -9,6 +9,23 @@
     "id": "alibaba",
     "lobeIcon": "Qwen.Color",
     "models": {
+      "deepseek-r1": {
+        "cost": {
+          "input": 4,
+          "output": 16
+        },
+        "description": "DeepSeek-R1 在后训练阶段大规模使用了强化学习技术，在仅有极少标注数据的情况下，极大提升了模型推理能力。在数学、代码、自然语言推理等任务上，性能较高，能力较强。",
+        "id": "deepseek-r1",
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek R1"
+      },
       "qwen3-coder-plus": {
         "attachment": false,
         "cost": {
@@ -4892,13 +4909,13 @@
           "input": 0.57,
           "output": 1.68
         },
-        "description": "China DeepSeek Chat is an AI model provided by deepseek.",
+        "description": "DeepSeek Chat 是由 deepseek 提供的人工智能模型。",
         "id": "deepseek-chat",
         "knowledge": "2024-07",
         "last_updated": "2025-08-21",
         "limit": {
           "context": 128000,
-          "output": 128000
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -4950,37 +4967,54 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "examplecorp": {
+    "api": "https://api.examplecorp.com",
+    "description": "用于演示和测试的虚构供应商。",
+    "doc": "https://docs.examplecorp.com",
+    "iconURL": "https://cdn.examplecorp.com/icons/examplecorp.svg",
     "id": "examplecorp",
+    "lobeIcon": "ExampleCorp.Color",
     "models": {
       "novus-1": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
-          "cache_read": 0.2,
-          "input": 3.5,
-          "output": 10
+          "cache_read": 0.075,
+          "cache_write": 0.5,
+          "input": 5,
+          "output": 15
         },
-        "description": "This is a fictional model used only as an override example.",
-        "icon": "https://cdn.example.com/icons/examplecorp/novus-1.svg",
+        "description": "Fictional example multimodal model.",
         "id": "novus-1",
+        "knowledge": "2024-07",
+        "last_updated": "2025-08-21",
         "limit": {
-          "context": 64000,
-          "output": 2048
+          "context": 128000,
+          "output": 4096
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "audio",
+            "video",
+            "pdf"
           ],
           "output": [
-            "text"
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
           ]
         },
-        "name": "Novus 1 (Override Example)",
+        "name": "Novus 1",
+        "open_weights": false,
         "reasoning": true,
+        "release_date": "2025-01-20",
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       }
-    }
+    },
+    "name": "示例公司 AI"
   },
   "fastrouter": {
     "api": "https://go.fastrouter.ai/api/v1",

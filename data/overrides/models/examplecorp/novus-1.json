@@ -1,24 +1,39 @@
 {
   "id": "novus-1",
-  "name": "Novus 1 (Override Example)",
-  "description": "This is a fictional model used only as an override example.",
-  "icon": "https://cdn.example.com/icons/examplecorp/novus-1.svg",
+  "name": "Novus 1",
+  "description": "Fictional example multimodal model.",
   "reasoning": true,
-  "tool_call": false,
-  "attachment": false,
+  "tool_call": true,
+  "attachment": true,
   "temperature": true,
+  "knowledge": "2024-07",
+  "release_date": "2025-01-20",
+  "last_updated": "2025-08-21",
+  "open_weights": false,
   "modalities": {
-    "input": ["text", "image"],
-    "output": ["text"]
+    "input": [
+      "text",
+      "image",
+      "audio",
+      "video",
+      "pdf"
+    ],
+    "output": [
+      "text",
+      "image",
+      "audio",
+      "video",
+      "pdf"
+    ]
   },
   "limit": {
-    "context": 64000,
-    "output": 2048
+    "context": 128000,
+    "output": 4096
   },
   "cost": {
-    "input": 3.5,
-    "output": 10,
-    "cache_read": 0.2
+    "input": 5,
+    "output": 15,
+    "cache_read": 0.075,
+    "cache_write": 0.5
   }
 }
-

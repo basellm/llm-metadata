@@ -82,31 +82,28 @@ jobs:
             if [ "$CREATE_COUNT" -gt 0 ] && [ "$UPDATE_COUNT" -eq 0 ]; then
               BRANCH="feat/model-batch-add-${COUNT}-$(date -u +%Y%m%d%H%M%S)"
               COMMIT_TITLE="✨ feat(models): add ${COUNT} models (${PROVIDERS_SHORT})"
-              PR_TITLE="feat(models): add ${COUNT} models (${PROVIDERS_SHORT})"
             elif [ "$UPDATE_COUNT" -gt 0 ] && [ "$CREATE_COUNT" -eq 0 ]; then
               BRANCH="chore/model-batch-update-${COUNT}-$(date -u +%Y%m%d%H%M%S)"
               COMMIT_TITLE="✏️ chore(models): update ${COUNT} models (${PROVIDERS_SHORT})"
-              PR_TITLE="chore(models): update ${COUNT} models (${PROVIDERS_SHORT})"
             else
               BRANCH="chore/model-batch-mixed-${COUNT}-$(date -u +%Y%m%d%H%M%S)"
               COMMIT_TITLE="📦 chore(models): batch ${COUNT} models (create ${CREATE_COUNT}, update ${UPDATE_COUNT})"
-              PR_TITLE="chore(models): batch ${COUNT} models (create ${CREATE_COUNT}, update ${UPDATE_COUNT})"
             fi
+            PR_TITLE="$COMMIT_TITLE"
           else
             ACTION=$(jq -r '.action // "create"' payload.json)
             PROVIDER=$(jq -r '.providerId' payload.json)
-            MODEL=$(jq -r '.modelId' payload.json)
+            MODEL=$(jq -r '.modelId // .id' payload.json)
             PROVIDER_SAFE=$(echo "$PROVIDER" | sed 's/[^A-Za-z0-9._-]/-/g')
             MODEL_SAFE=$(echo "$MODEL" | sed 's/[^A-Za-z0-9._-]/-/g')
             if [ "$ACTION" = "update" ]; then
               BRANCH="chore/model-update-${PROVIDER_SAFE}-${MODEL_SAFE}-$(date -u +%Y%m%d%H%M%S)"
               COMMIT_TITLE="✏️ chore(models): update ${PROVIDER}/${MODEL}"
-              PR_TITLE="chore(models): update ${PROVIDER}/${MODEL}"
             else
               BRANCH="feat/model-add-${PROVIDER_SAFE}-${MODEL_SAFE}-$(date -u +%Y%m%d%H%M%S)"
               COMMIT_TITLE="✨ feat(models): add ${PROVIDER}/${MODEL}"
-              PR_TITLE="feat(models): add ${PROVIDER}/${MODEL}"
             fi
+            PR_TITLE="$COMMIT_TITLE"
           fi
           echo "action=$ACTION" >> $GITHUB_OUTPUT
           echo "provider=$PROVIDER" >> $GITHUB_OUTPUT
@@ -127,18 +124,43 @@ jobs:
           if [ "$IS_ARRAY" = "1" ]; then
             jq -c '.[] | with_entries(select(.value != null))' payload.json | while read -r item; do
               prov=$(echo "$item" | jq -r '.providerId')
-              model=$(echo "$item" | jq -r '.modelId')
+              model=$(echo "$item" | jq -r '.modelId // .id')
               model_safe=${model//:/_}
               test -n "$prov" && test -n "$model" || continue
+
+              # 1) 写入模型覆写（剔除无关字段与 i18n）
               mkdir -p "data/overrides/models/$prov"
-              echo "$item" | jq 'with_entries(select(.value != null))' > "data/overrides/models/$prov/$model_safe.json"
+              echo "$item" \
+                | jq -M -S 'del(.i18n, .schema, .action, .providerId, .modelId) | with_entries(select(.value != null))' \
+                > "data/overrides/models/$prov/$model_safe.json"
+
+              # 2) 写入模型 i18n（仅当存在 name/description 时）
+              i18n_json=$(echo "$item" | jq -c '.i18n | {name, description} | del(.. | nulls) | select((.name // {} | length) + (.description // {} | length) > 0)') || true
+              if [ -n "${i18n_json:-}" ]; then
+                mkdir -p "data/overrides/i18n/models/$prov"
+                echo "$i18n_json" \
+                  | jq -M -S '.' \
+                  > "data/overrides/i18n/models/$prov/$model_safe.json"
+              fi
             done
           else
             prov=$(jq -r '.providerId' payload.json)
-            model=$(jq -r '.modelId' payload.json)
+            model=$(jq -r '.modelId // .id' payload.json)
             model_safe=${model//:/_}
+
+            # 1) 写入模型覆写（剔除无关字段与 i18n）
             mkdir -p "data/overrides/models/$prov"
-            jq 'with_entries(select(.value != null))' payload.json > "data/overrides/models/$prov/$model_safe.json"
+            jq -M -S 'del(.i18n, .schema, .action, .providerId, .modelId) | with_entries(select(.value != null))' payload.json \
+              > "data/overrides/models/$prov/$model_safe.json"
+
+            # 2) 写入模型 i18n（仅当存在 name/description 时）
+            i18n_json=$(jq -c '.i18n | {name, description} | del(.. | nulls) | select((.name // {} | length) + (.description // {} | length) > 0)' payload.json) || true
+            if [ -n "${i18n_json:-}" ]; then
+              mkdir -p "data/overrides/i18n/models/$prov"
+              echo "$i18n_json" \
+                | jq -M -S '.' \
+                > "data/overrides/i18n/models/$prov/$model_safe.json"
+            fi
           fi
 
       - name: Install dependencies

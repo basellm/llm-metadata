@@ -13,7 +13,7 @@ export class VoAPIBuilder {
     for (const providerId of providerIds) {
       // 构建供应商数据
       const provider = allModelsData.providers[providerId];
-      let tagIcon = (provider.icon || provider.lobeIcon || '').toLowerCase().replaceAll('.', '-');
+      let tagIcon = (provider.lobeIcon || '').toLowerCase().replaceAll('.', '-');
       if (tagIcon != '') {
         tagIcon = `lb:${tagIcon}`;
       }

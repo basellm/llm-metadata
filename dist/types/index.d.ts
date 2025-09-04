@@ -27,6 +27,7 @@ export interface ModelCost {
     input?: number;
     output?: number;
     cache_read?: number;
+    cache_write?: number;
 }
 /** 模型支持的模态 */
 export interface ModelModalities {
@@ -157,7 +158,8 @@ export interface NewApiModel {
     icon: string;
     price_per_m_input?: number | null;
     price_per_m_output?: number | null;
-    price_per_m_cache?: number | null;
+    price_per_m_cache_read?: number | null;
+    price_per_m_cache_write?: number | null;
     ratio_model?: number | null;
     ratio_completion?: number | null;
     ratio_cache?: number | null;

@@ -26,6 +26,7 @@ export class DocumentationGenerator {
     input?: number;
     output?: number;
     cache_read?: number;
+    cache_write?: number;
   }): NewApiRatios | null {
     if (!cost?.input || typeof cost.input !== 'number' || cost.input <= 0) {
       return null;

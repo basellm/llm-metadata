@@ -4,6 +4,16 @@
       "flags": {
         "attachment": false,
         "reasoning": false,
+        "tool_call": false
+      },
+      "id": "deepseek-r1",
+      "name": "DeepSeek R1",
+      "providerId": "alibaba"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": false,
         "tool_call": true
       },
       "id": "qwen3-coder-plus",
@@ -1828,13 +1838,14 @@
     },
     {
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "reasoning": true,
-        "tool_call": false
+        "tool_call": true
       },
       "id": "novus-1",
-      "name": "Novus 1 (Override Example)",
-      "providerId": "examplecorp"
+      "name": "Novus 1",
+      "providerId": "examplecorp",
+      "updated": "2025-08-21"
     },
     {
       "flags": {
@@ -6992,7 +7003,7 @@
       "iconURL": "https://models.dev/logos/alibaba.svg",
       "id": "alibaba",
       "lobeIcon": "Qwen.Color",
-      "modelCount": 1,
+      "modelCount": 2,
       "name": "Alibaba"
     },
     {
@@ -7062,9 +7073,13 @@
       "name": "DeepSeek"
     },
     {
+      "api": "https://api.examplecorp.com",
+      "doc": "https://docs.examplecorp.com",
+      "iconURL": "https://cdn.examplecorp.com/icons/examplecorp.svg",
       "id": "examplecorp",
+      "lobeIcon": "ExampleCorp.Color",
       "modelCount": 1,
-      "name": "examplecorp"
+      "name": "ExampleCorp AI"
     },
     {
       "api": "https://go.fastrouter.ai/api/v1",
