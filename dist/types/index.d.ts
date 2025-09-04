@@ -210,6 +210,8 @@ export interface VoAPIModel {
         audio: boolean;
     };
     firm: string;
+    maxCtxTokens?: number | null;
+    maxOutputTokens?: number | null;
     price?: {
         input?: number | null;
         output?: number | null;
