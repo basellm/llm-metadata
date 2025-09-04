@@ -7,7 +7,7 @@ hide:
 
 A lightweight static API for discovering and integrating large language model (LLM) metadata.
 
-## Base URL
+## 🌐 Base URL
 
 | Site             | Base URL                                  |
 | ---------------- | ----------------------------------------- |

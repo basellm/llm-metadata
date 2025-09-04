@@ -159,30 +159,30 @@ hide:
           <label>入力</label>
           <div class="ui-chips">
             <input class="mod-in" type="checkbox" id="in-text" value="text" checked />
-            <label for="in-text">text</label>
+            <label for="in-text">テキスト</label>
             <input class="mod-in" type="checkbox" id="in-image" value="image" />
-            <label for="in-image">image</label>
+            <label for="in-image">画像</label>
             <input class="mod-in" type="checkbox" id="in-audio" value="audio" />
-            <label for="in-audio">audio</label>
+            <label for="in-audio">音声</label>
             <input class="mod-in" type="checkbox" id="in-video" value="video" />
-            <label for="in-video">video</label>
+            <label for="in-video">動画</label>
             <input class="mod-in" type="checkbox" id="in-pdf" value="pdf" />
-            <label for="in-pdf">pdf</label>
+            <label for="in-pdf">PDF</label>
           </div>
         </div>
         <div class="ui-field">
           <label>出力</label>
           <div class="ui-chips">
             <input class="mod-out" type="checkbox" id="out-text" value="text" checked />
-            <label for="out-text">text</label>
+            <label for="out-text">テキスト</label>
             <input class="mod-out" type="checkbox" id="out-image" value="image" />
-            <label for="out-image">image</label>
+            <label for="out-image">画像</label>
             <input class="mod-out" type="checkbox" id="out-audio" value="audio" />
-            <label for="out-audio">audio</label>
+            <label for="out-audio">音声</label>
             <input class="mod-out" type="checkbox" id="out-video" value="video" />
-            <label for="out-video">video</label>
+            <label for="out-video">動画</label>
             <input class="mod-out" type="checkbox" id="out-pdf" value="pdf" />
-            <label for="out-pdf">pdf</label>
+            <label for="out-pdf">PDF</label>
           </div>
         </div>
       </div>
