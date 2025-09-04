@@ -55,6 +55,8 @@ export class VoAPIBuilder {
             image: modalities.includes('image'),
             audio: modalities.includes('audio'),
           },
+          maxCtxTokens: model.limit?.context || 0,
+          maxOutputTokens: model.limit?.output || 0,
           firm: providerId,
           icon: tagIcon,
           price: price,
