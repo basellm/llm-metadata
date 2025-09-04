@@ -3,7 +3,7 @@
  * Main issue generation and management
  */
 
-import { ValueUtils, ObjectUtils } from '../utils/index.js';
+import { ValueUtils, ObjectUtils, IDUtils } from '../utils/index.js';
 import { CONSTANTS } from '../config/constants.js';
 import { TitleGenerator } from './titles.js';
 import { ContentGenerator } from './content.js';
@@ -25,7 +25,21 @@ export const IssueManager = {
         const batchText = ValueUtils.value('batch-json');
         if (!batchText) return [];
         const parsed = JSON.parse(batchText);
-        return Array.isArray(parsed) ? parsed : [parsed];
+        const items = Array.isArray(parsed) ? parsed : [parsed];
+        // Normalize IDs for all batch items
+        const normalized = items.map((item) => {
+          if (!item || typeof item !== 'object') return item;
+          const out = { ...item };
+          if (out.schema === CONSTANTS.SCHEMAS.PROVIDER_SUBMISSION) {
+            if (out.id !== undefined) out.id = IDUtils.normalizeSubmissionId(out.id);
+          } else {
+            if (out.providerId !== undefined)
+              out.providerId = IDUtils.normalizeSubmissionId(out.providerId);
+            if (out.id !== undefined) out.id = IDUtils.normalizeSubmissionId(out.id);
+          }
+          return out;
+        });
+        return normalized;
       } catch (_) {
         return [];
       }
@@ -35,7 +49,7 @@ export const IssueManager = {
       return ObjectUtils.prune({
         schema: CONSTANTS.SCHEMAS.PROVIDER_SUBMISSION,
         action: ValueUtils.getAction(),
-        id: ValueUtils.value('provider-id') || undefined,
+        id: IDUtils.normalizeSubmissionId(ValueUtils.value('provider-id')) || undefined,
         api: ValueUtils.value('provider-api') || undefined,
         iconURL: ValueUtils.value('provider-icon-url') || undefined,
         lobeIcon: ValueUtils.value('provider-lobe-icon') || undefined,
@@ -53,11 +67,13 @@ export const IssueManager = {
         },
       });
     } else {
+      const providerIdRaw = ValueUtils.value('providerId');
+      const modelIdRaw = ValueUtils.value('id');
       return ObjectUtils.prune({
         schema: CONSTANTS.SCHEMAS.MODEL_SUBMISSION,
         action: ValueUtils.getAction(),
-        providerId: ValueUtils.value('providerId') || undefined,
-        id: ValueUtils.value('id') || undefined,
+        providerId: IDUtils.normalizeSubmissionId(providerIdRaw) || undefined,
+        id: IDUtils.normalizeSubmissionId(modelIdRaw) || undefined,
         i18n: {
           name: {
             en: ValueUtils.value('i18n-name-en') || undefined,

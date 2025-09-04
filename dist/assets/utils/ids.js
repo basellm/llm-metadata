@@ -19,4 +19,16 @@ export const IDUtils = {
     const underscore = v.replace(/[:/]/g, '_');
     return Array.from(new Set([underscore, v].filter(Boolean)));
   },
+
+  /**
+   * Normalize submission IDs: lowercase and use '-' as the only separator
+   */
+  normalizeSubmissionId(id) {
+    return String(id || '')
+      .trim()
+      .toLowerCase()
+      .replace(/[:\/_\.\s]+/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  },
 };
