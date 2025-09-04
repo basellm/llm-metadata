@@ -11,7 +11,7 @@ import {
   StatusManager,
   BatchPreview,
 } from '../ui/index.js';
-import { ValueUtils, ObjectUtils, DOMUtils } from '../utils/index.js';
+import { ValueUtils, ObjectUtils, DOMUtils, IDUtils } from '../utils/index.js';
 import { I18N } from '../i18n/index.js';
 import { IssueManager } from '../issue/index.js';
 import { CoreActions } from './actions.js';
@@ -193,21 +193,22 @@ export const Controller = {
 
   // Event Handlers
   handleProviderChange() {
-    const providerId = this.value;
+    const providerId = IDUtils.normalizeSubmissionId(this.value);
     FieldManager.setValue('providerId', providerId);
     Controller.populateModelDropdown(providerId);
   },
 
   handleProviderSelectChange() {
-    const providerId = this.value || '';
+    const providerId = IDUtils.normalizeSubmissionId(this.value || '');
     FieldManager.setValue('provider-id', providerId);
     Controller.loadAndFillProviderDetail(providerId);
   },
 
   handleModelChange() {
-    const modelId = this.value || '';
+    const modelId = IDUtils.normalizeSubmissionId(this.value || '');
     FieldManager.setValue('id', modelId);
-    const providerId = ValueUtils.value('providerId') || ValueUtils.value('providerSelect');
+    const providerId =
+      ValueUtils.value('providerId') || ValueUtils.value('providerSelect');
     Controller.loadAndFillModelDetail(providerId, modelId);
   },
 
