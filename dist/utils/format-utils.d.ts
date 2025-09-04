@@ -1,4 +1,5 @@
 /** 格式化工具函数 */
+import { ModelCost } from '../types/index.js';
 /** 将 token 数量格式化为 K/M 形式 */
 export declare function formatTokensToKM(tokens?: number): string | null;
 /** 转义 Markdown 管道符 */
@@ -30,4 +31,11 @@ export declare function formatDetails(model: {
 }): string;
 /** 格式化限制信息 */
 export declare function formatLimit(value?: number): string;
+/** 构建模型标签字符串 */
+export declare function buildModelTags(model: any, map?: Record<string, string>): string[];
+export declare function buildModelPriceInfo(cost?: ModelCost): {
+    input: number | null;
+    output: number | null;
+    cache: number | null;
+};
 //# sourceMappingURL=format-utils.d.ts.map

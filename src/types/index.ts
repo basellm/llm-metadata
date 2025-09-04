@@ -233,6 +233,33 @@ export interface VoAPIFirm {
   doc: string;
 }
 
+export interface VoAPIModel {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  tags: string[];
+  flags: {
+    attachment: boolean;
+    reasoning: boolean;
+    tool_call: boolean;
+    temperature: boolean;
+    image: boolean;
+    audio: boolean;
+  }
+  firm: string;
+  price?: {
+    input?: number | null;
+    output?: number | null;
+    cache?: number | null;
+  };
+}
+
+export interface VoAPIApiSyncPayload {
+  firms: VoAPIFirm[];
+  models: VoAPIModel[];
+}
+
 // === 构建清单类型 ===
 
 /** 构建统计 */

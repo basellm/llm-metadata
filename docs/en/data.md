@@ -9,8 +9,8 @@ This page displays comprehensive information about all LLM providers and models,
 
 !!! info "Statistics"
     - **Provider Count**: 43
-    - **Model Count**: 634
-    - **Last Updated**: 9/3/2025, 8:30:24 PM
+    - **Model Count**: 635
+    - **Last Updated**: 9/4/2025, 10:30:02 AM
 
 **Capabilities Legend**: 🧠 Reasoning &nbsp;&nbsp;🔧 Tools &nbsp;&nbsp;📎 Attachment &nbsp;&nbsp;🌡️ Temperature
 ## Alibaba
@@ -601,11 +601,12 @@ This page displays comprehensive information about all LLM providers and models,
 
 ## opencode
 
-[📖 API Address](https://gateway.opencode.ai/v1) | [📚 Official Documentation](https://opencode.ai/docs)
+[📖 API Address](https://opencode.ai/zen/v1) | [📚 Official Documentation](https://opencode.ai/docs)
 
 | Model | Model ID | Context | Output | Pricing ($/1M) | NewAPI Ratios | Capabilities | Knowledge | Modalities | Details |
 |-------|--------|---------|--------|----------------|---------------|--------------|-----------|------------|----------|
 | **Grok Code Fast 1** | grok-code | 256K | 32K | - | - | 📎 🧠 🔧 🌡️ | - | In: text, image<br/>Out: text | Released: 2025-08-20 |
+| **Qwen3 Coder** | qwen/qwen3-coder | 262.1K | 65.5K | In: $0.3<br/>Out: $1.2 | Model: 0.150<br/>Completion: 4.000 | 🔧 🌡️ | 2025-04 | In: text<br/>Out: text | Open Weights<br/>Released: 2025-07-23 |
 
 ## OpenRouter
 

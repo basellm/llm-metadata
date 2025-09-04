@@ -5,8 +5,6 @@ export declare class NewApiBuilder {
     private calculateRatios;
     /** 计算每百万 tokens 的美元价格与倍率字段 */
     private buildPricingFields;
-    /** 构建模型标签字符串 */
-    private buildModelTags;
     /** 构建 NewAPI 同步载荷 */
     buildSyncPayload(allModelsData: NormalizedData, tagMap?: Record<string, string>): NewApiSyncPayload;
     /** 构建 NewAPI 价格配置 */

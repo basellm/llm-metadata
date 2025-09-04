@@ -1,5 +1,5 @@
 {
-  "api": "https://gateway.opencode.ai/v1",
+  "api": "https://opencode.ai/zen/v1",
   "doc": "https://opencode.ai/docs",
   "env": [
     "OPENCODE_API_KEY"
@@ -36,6 +36,35 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-08-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-coder": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Qwen3 Coder は opencode によって提供される AI モデルです。",
+      "id": "qwen/qwen3-coder",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-23",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-23",
       "temperature": true,
       "tool_call": true
     }

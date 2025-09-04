@@ -1,4 +1,4 @@
-import { formatTokensToKM } from '../utils/format-utils.js';
+import { buildModelPriceInfo, buildModelTags } from '../utils/format-utils.js';
 /** NewAPI 构建服务 */
 export class NewApiBuilder {
     /** 计算 NewAPI 价格比率 */
@@ -21,60 +21,16 @@ export class NewApiBuilder {
     }
     /** 计算每百万 tokens 的美元价格与倍率字段 */
     buildPricingFields(cost) {
-        const input = typeof cost?.input === 'number' && cost.input > 0 ? cost.input : null;
-        const output = typeof cost?.output === 'number' && cost.output > 0 ? cost.output : null;
-        const cache = typeof cost?.cache_read === 'number' && cost.cache_read > 0 ? cost.cache_read : null;
+        const price = buildModelPriceInfo(cost);
         const ratios = this.calculateRatios(cost);
         return {
-            price_per_m_input: input,
-            price_per_m_output: output,
-            price_per_m_cache: cache,
+            price_per_m_input: price.input,
+            price_per_m_output: price.output,
+            price_per_m_cache: price.cache,
             ratio_model: ratios ? ratios.model : null,
             ratio_completion: ratios ? ratios.completion : null,
             ratio_cache: ratios ? ratios.cache : null,
         };
-    }
-    /** 构建模型标签字符串 */
-    buildModelTags(model, map) {
-        const tagSet = new Set();
-        const translate = (key) => (map && map[key]) || key;
-        // 处理显式标签
-        if (Array.isArray(model.tags)) {
-            for (const tag of model.tags) {
-                if (tag)
-                    tagSet.add(translate(String(tag).trim()));
-            }
-        }
-        else if (typeof model.tags === 'string') {
-            model.tags.split(/[;,\s]+/g).forEach((tag) => {
-                const t = tag.trim();
-                if (t)
-                    tagSet.add(translate(t));
-            });
-        }
-        // 基于能力添加标签
-        if (model.reasoning)
-            tagSet.add(translate('reasoning'));
-        if (model.tool_call)
-            tagSet.add(translate('tools'));
-        if (model.attachment)
-            tagSet.add(translate('files'));
-        if (model.open_weights)
-            tagSet.add(translate('open_weights'));
-        // 基于模态添加标签
-        const inputMods = model.modalities?.input || [];
-        const outputMods = model.modalities?.output || [];
-        const allMods = [...inputMods, ...outputMods];
-        if (allMods.includes('image'))
-            tagSet.add(translate('vision'));
-        if (allMods.includes('audio'))
-            tagSet.add(translate('audio'));
-        // 添加上下文窗口标签
-        const contextLimit = model.limit?.context;
-        const contextTag = formatTokensToKM(contextLimit);
-        if (contextTag)
-            tagSet.add(translate(contextTag));
-        return Array.from(tagSet).join(',');
     }
     /** 构建 NewAPI 同步载荷 */
     buildSyncPayload(allModelsData, tagMap) {
@@ -97,7 +53,7 @@ export class NewApiBuilder {
                 models.push({
                     model_name: modelId,
                     description: model.description || '',
-                    tags: this.buildModelTags(model, tagMap),
+                    tags: buildModelTags(model, tagMap).join(','),
                     vendor_name: provider.name || providerId,
                     endpoints: null,
                     status: 1,

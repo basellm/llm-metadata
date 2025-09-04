@@ -51,7 +51,7 @@ class Builder {
     this.indexBuilder = new IndexBuilder();
     this.newApiBuilder = new NewApiBuilder();
     this.newApiBuilder = new NewApiBuilder();
-    this.voApiBuilder = new VoAPIBuilder()
+    this.voApiBuilder = new VoAPIBuilder();
     this.docsGenerator = new DocumentationGenerator(this.ROOT);
     this.i18nService = new I18nService(this.ROOT);
   }
@@ -277,11 +277,21 @@ class Builder {
       console.log('Generating VoAPI endpoints...');
       const voapiDir = join(this.API_DIR, 'voapi');
       ensureDirSync(voapiDir);
-      const voapiFirms = this.voApiBuilder.buildFirms(allModelsData);
+      const voapiPayload = this.voApiBuilder.buildFirms(allModelsData);
       if (
         writeJSONIfChanged(
           join(voapiDir, 'firms.json'),
-          { success: true, message: '', data: voapiFirms },
+          { success: true, message: '', data: voapiPayload.firms },
+          { dryRun },
+        )
+      ) {
+        changes++;
+      }
+
+      if (
+        writeJSONIfChanged(
+          join(voapiDir, 'models.json'),
+          { success: true, message: '', data: voapiPayload.models },
           { dryRun },
         )
       ) {
@@ -301,11 +311,20 @@ class Builder {
             overrides,
             locale,
           );
-          const voapiFirms = this.voApiBuilder.buildFirms(localized);
+          const voapiPayload = this.voApiBuilder.buildFirms(localized);
           if (
             writeJSONIfChanged(
               join(outDir, 'firms.json'),
-              { success: true, message: '', data: voapiFirms },
+              { success: true, message: '', data: voapiPayload.firms },
+              { dryRun },
+            )
+          ) {
+            changes++;
+          }
+          if (
+            writeJSONIfChanged(
+              join(outDir, 'models.json'),
+              { success: true, message: '', data: voapiPayload.models },
               { dryRun },
             )
           ) {

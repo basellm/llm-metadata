@@ -201,8 +201,11 @@ class Builder {
             console.log('Generating VoAPI endpoints...');
             const voapiDir = join(this.API_DIR, 'voapi');
             ensureDirSync(voapiDir);
-            const voapiFirms = this.voApiBuilder.buildFirms(allModelsData);
-            if (writeJSONIfChanged(join(voapiDir, 'firms.json'), { success: true, message: '', data: voapiFirms }, { dryRun })) {
+            const voapiPayload = this.voApiBuilder.buildFirms(allModelsData);
+            if (writeJSONIfChanged(join(voapiDir, 'firms.json'), { success: true, message: '', data: voapiPayload.firms }, { dryRun })) {
+                changes++;
+            }
+            if (writeJSONIfChanged(join(voapiDir, 'models.json'), { success: true, message: '', data: voapiPayload.models }, { dryRun })) {
                 changes++;
             }
             // 生成多语言 VoAPI locales 输出至 api/i18n/<locale>/voapi）
@@ -214,8 +217,11 @@ class Builder {
                     const outDir = join(i18nBase, locale, 'voapi');
                     ensureDirSync(outDir);
                     const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale);
-                    const voapiFirms = this.voApiBuilder.buildFirms(localized);
-                    if (writeJSONIfChanged(join(outDir, 'firms.json'), { success: true, message: '', data: voapiFirms }, { dryRun })) {
+                    const voapiPayload = this.voApiBuilder.buildFirms(localized);
+                    if (writeJSONIfChanged(join(outDir, 'firms.json'), { success: true, message: '', data: voapiPayload.firms }, { dryRun })) {
+                        changes++;
+                    }
+                    if (writeJSONIfChanged(join(outDir, 'models.json'), { success: true, message: '', data: voapiPayload.models }, { dryRun })) {
                         changes++;
                     }
                 }
