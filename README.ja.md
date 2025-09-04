@@ -1,6 +1,7 @@
 # LLM Metadata
 
-> LLM メタデータを発見・統合するための軽量な「静的 API」。ライブ: [basellm.github.io/llm-metadata](https://basellm.github.io/llm-metadata/)
+> LLM メタデータを発見・統合するための軽量な「静的 API」。ライブ:
+> [GitHub Pages](https://basellm.github.io/llm-metadata/) · [Cloudflare Pages](https://llm-metadata.pages.dev/)
 
 [English](README.md) | [简体中文](README.zh-CN.md) | 日本語
 

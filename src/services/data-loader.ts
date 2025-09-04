@@ -1,7 +1,13 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, extname, basename } from 'node:path';
 
-import type { OverrideConfig, PolicyConfig, SourceData, I18nOverrideEntity, ModelKey } from '../types/index.js';
+import type {
+  OverrideConfig,
+  PolicyConfig,
+  SourceData,
+  I18nOverrideEntity,
+  ModelKey,
+} from '../types/index.js';
 import { deepMerge } from '../utils/object-utils.js';
 import { ALLOWED_MODEL_OVERRIDE_KEY_SET } from '../constants/override-keys.js';
 
@@ -71,7 +77,10 @@ export class DataLoader {
 
     const mergeProviderOverride = (providerId: string, override: any) => {
       base.providers = base.providers || {};
-      base.providers[providerId] = safeDeepMerge(base.providers[providerId] || ({} as any), override || {});
+      base.providers[providerId] = safeDeepMerge(
+        base.providers[providerId] || ({} as any),
+        override || {},
+      );
     };
 
     const mergeModelOverride = (providerId: string, modelId: string, override: any) => {
@@ -80,13 +89,20 @@ export class DataLoader {
       base.models[key] = safeDeepMerge(base.models[key] || ({} as any), override || {});
     };
 
-    type I18nBag = NonNullable<OverrideConfig['i18n']> & { models: Record<ModelKey, I18nOverrideEntity> };
+    type I18nBag = NonNullable<OverrideConfig['i18n']> & {
+      models: Record<ModelKey, I18nOverrideEntity>;
+    };
     const ensureI18n = (): I18nBag => {
       if (!base.i18n) {
-        (base as any).i18n = { providers: {}, models: {} as Record<ModelKey, I18nOverrideEntity> } as I18nBag;
+        (base as any).i18n = {
+          providers: {},
+          models: {} as Record<ModelKey, I18nOverrideEntity>,
+        } as I18nBag;
       } else {
-        if (!base.i18n.providers) (base.i18n as any).providers = {} as Record<string, I18nOverrideEntity>;
-        if (!base.i18n.models) (base.i18n as any).models = {} as Record<ModelKey, I18nOverrideEntity>;
+        if (!base.i18n.providers)
+          (base.i18n as any).providers = {} as Record<string, I18nOverrideEntity>;
+        if (!base.i18n.models)
+          (base.i18n as any).models = {} as Record<ModelKey, I18nOverrideEntity>;
       }
       return base.i18n as unknown as I18nBag;
     };
@@ -94,7 +110,9 @@ export class DataLoader {
     const mergeProviderI18n = (providerId: string, override: I18nOverrideEntity) => {
       const i18n = ensureI18n();
       (i18n.providers as Record<string, I18nOverrideEntity>)[providerId] = safeDeepMerge(
-        ((i18n.providers as Record<string, I18nOverrideEntity>)[providerId] as I18nOverrideEntity) || ({} as I18nOverrideEntity),
+        ((i18n.providers as Record<string, I18nOverrideEntity>)[
+          providerId
+        ] as I18nOverrideEntity) || ({} as I18nOverrideEntity),
         override || ({} as I18nOverrideEntity),
       );
     };

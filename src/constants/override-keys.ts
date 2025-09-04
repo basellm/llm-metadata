@@ -18,7 +18,7 @@ export const ALLOWED_MODEL_OVERRIDE_KEYS = [
   'cost',
 ] as const;
 
-export type AllowedModelOverrideKey = typeof ALLOWED_MODEL_OVERRIDE_KEYS[number];
+export type AllowedModelOverrideKey = (typeof ALLOWED_MODEL_OVERRIDE_KEYS)[number];
 
 export const ALLOWED_MODEL_OVERRIDE_KEY_SET: ReadonlySet<string> = new Set(
   ALLOWED_MODEL_OVERRIDE_KEYS as readonly string[],

@@ -248,7 +248,7 @@ export interface VoAPIModel {
     temperature: boolean;
     image: boolean;
     audio: boolean;
-  }
+  };
   firm: string;
   maxCtxTokens?: number | null;
   maxOutputTokens?: number | null;

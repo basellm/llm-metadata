@@ -40,33 +40,34 @@ hide:
         <label for="batch-json">模型数组（JSON 格式）</label>
         <button id="batch-template" type="button" class="ui-btn" style="margin: 0 0 var(--spacing-1) 0; width: max-content;">填入模板</button>
         <textarea id="batch-json" class="ui-textarea" rows="12" placeholder='[
-  {
-    "schema": "model-submission",
-    "action": "create",
-    "providerId": "examplecorp",
-    "id": "novus-1",
-    "i18n": {
-      "name": { "en": "Novus 1", "zh": "Novus 1", "ja": "Novus 1" },
-      "description": { "en": "Fictional example multimodal model.", "zh": "虚构示例多模态模型。", "ja": "架空のマルチモーダルモデル例。" }
-    }
-  },
-  {
-    "schema": "model-submission",
-    "action": "update",
-    "providerId": "deepseek",
-    "id": "deepseek-chat",
-    "i18n": {
-      "name": { "en": "DeepSeek Chat", "zh": "DeepSeek Chat", "ja": "DeepSeek Chat" },
-      "description": { "en": "Advanced conversational AI model for natural language processing.", "zh": "用于自然语言处理的先进对话AI模型。", "ja": "自然言語処理のための高度な対話AIモデル。" }
-    }
-  }
+
+{
+"schema": "model-submission",
+"action": "create",
+"providerId": "examplecorp",
+"id": "novus-1",
+"i18n": {
+"name": { "en": "Novus 1", "zh": "Novus 1", "ja": "Novus 1" },
+"description": { "en": "Fictional example multimodal model.", "zh": "虚构示例多模态模型。", "ja": "架空のマルチモーダルモデル例。" }
+}
+},
+{
+"schema": "model-submission",
+"action": "update",
+"providerId": "deepseek",
+"id": "deepseek-chat",
+"i18n": {
+"name": { "en": "DeepSeek Chat", "zh": "DeepSeek Chat", "ja": "DeepSeek Chat" },
+"description": { "en": "Advanced conversational AI model for natural language processing.", "zh": "用于自然语言处理的先进对话AI模型。", "ja": "自然言語処理のための高度な対話AIモデル。" }
+}
+}
 ]'></textarea>
-      </div>
-      <div id="batch-preview" class="ui-field">
-        <label>预览（将提交 <span id="batch-count">0</span> 个模型）</label>
-        <div id="batch-list" class="ui-muted" style="font-size: 12px; max-height: 200px; overflow-y: auto; border: 1px solid var(--md-default-fg-color--lightest); border-radius: var(--radius-sm); padding: var(--spacing-2);"></div>
-      </div>
-    </div>
+</div>
+<div id="batch-preview" class="ui-field">
+<label>预览（将提交 <span id="batch-count">0</span> 个模型）</label>
+<div id="batch-list" class="ui-muted" style="font-size: 12px; max-height: 200px; overflow-y: auto; border: 1px solid var(--md-default-fg-color--lightest); border-radius: var(--radius-sm); padding: var(--spacing-2);"></div>
+</div>
+</div>
 
     <div id="single-fields" class="ui-section">
       <h3 class="ui-section-title">基础信息</h3>
@@ -227,6 +228,7 @@ hide:
       <button id="copy-body" type="button" class="ui-btn">复制 Issue 内容</button>
       <span id="status" class="ui-muted"></span>
     </div>
+
   </form>
 </div>
 

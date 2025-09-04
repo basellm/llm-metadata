@@ -1,6 +1,7 @@
 # LLM Metadata
 
-> A lightweight static API for discovering and integrating LLM metadata. Live API: [basellm.github.io/llm-metadata](https://basellm.github.io/llm-metadata/)
+> A lightweight static API for discovering and integrating LLM metadata. Live:
+> [GitHub Pages](https://basellm.github.io/llm-metadata/) · [Cloudflare Pages](https://llm-metadata.pages.dev/)
 
 English | [中文文档](README.zh-CN.md) | [日本語](README.ja.md)
 

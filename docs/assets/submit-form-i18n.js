@@ -35,8 +35,10 @@ window.SubmitFormI18N = {
     updateModelRequest: 'Update Model Request',
 
     // Issue content
-    issueIntroSingle: 'This issue was generated from the website form. A bot will automatically process and create a PR.',
-    issueIntroBatch: 'This issue was generated from the website form (batch mode). A bot will automatically process and create a PR.',
+    issueIntroSingle:
+      'This issue was generated from the website form. A bot will automatically process and create a PR.',
+    issueIntroBatch:
+      'This issue was generated from the website form (batch mode). A bot will automatically process and create a PR.',
     modelInfo: 'Model Information',
     techInfo: 'Technical Information',
     submissionSummary: 'Submission Summary',
@@ -52,8 +54,10 @@ window.SubmitFormI18N = {
     batchProcessing: 'Batch Processing',
     modelsCount: 'models',
     moreProviders: 'more',
-    issueFooterSingle: 'This issue will be automatically processed and generate the corresponding model override file',
-    issueFooterBatch: 'This issue will be automatically processed, creating individual override files for each model',
+    issueFooterSingle:
+      'This issue will be automatically processed and generate the corresponding model override file',
+    issueFooterBatch:
+      'This issue will be automatically processed, creating individual override files for each model',
   },
   zh: {
     // Form validation
@@ -145,8 +149,10 @@ window.SubmitFormI18N = {
     updateModelRequest: '更新モデルリクエスト',
 
     // Issue content
-    issueIntroSingle: 'この Issue はウェブサイトフォームから生成されました。ボットが自動的に処理して PR を作成します。',
-    issueIntroBatch: 'この Issue はウェブサイトフォーム（バッチモード）から生成されました。ボットが自動的に処理して PR を作成します。',
+    issueIntroSingle:
+      'この Issue はウェブサイトフォームから生成されました。ボットが自動的に処理して PR を作成します。',
+    issueIntroBatch:
+      'この Issue はウェブサイトフォーム（バッチモード）から生成されました。ボットが自動的に処理して PR を作成します。',
     modelInfo: 'モデル情報',
     techInfo: '技術情報',
     submissionSummary: '送信概要',
@@ -162,7 +168,9 @@ window.SubmitFormI18N = {
     batchProcessing: 'バッチ処理',
     modelsCount: 'モデル',
     moreProviders: 'プロバイダー',
-    issueFooterSingle: 'この Issue は自動的に処理され、対応するモデルオーバーライドファイルが生成されます',
-    issueFooterBatch: 'この Issue は自動的に処理され、各モデルの個別のオーバーライドファイルが作成されます',
-  }
+    issueFooterSingle:
+      'この Issue は自動的に処理され、対応するモデルオーバーライドファイルが生成されます',
+    issueFooterBatch:
+      'この Issue は自動的に処理され、各モデルの個別のオーバーライドファイルが作成されます',
+  },
 };

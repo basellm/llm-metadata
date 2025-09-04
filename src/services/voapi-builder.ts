@@ -41,13 +41,16 @@ export class VoAPIBuilder {
           tagIcon = `lb:${tagIcon}`;
         }
         const price = buildModelPriceInfo(model.cost);
-        const modalities = [...(model.modalities?.input || []), ...(model.modalities?.output || [])];
+        const modalities = [
+          ...(model.modalities?.input || []),
+          ...(model.modalities?.output || []),
+        ];
         models.push({
           id: modelId,
           name: model.name || modelId,
           description: model.description || '',
           tags: buildModelTags(model, tagMap),
-          flags:{
+          flags: {
             attachment: !!model.attachment,
             reasoning: !!model.reasoning,
             tool_call: !!model.tool_call,
