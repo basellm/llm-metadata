@@ -27,7 +27,8 @@ export const IDUtils = {
     return String(id || '')
       .trim()
       .toLowerCase()
-      .replace(/[:\/_\.\s]+/g, '-')
+      // Preserve '.'; replace colon, slash, underscore and whitespace with '-'
+      .replace(/[:\/_\s]+/g, '-')
       .replace(/-+/g, '-')
       .replace(/^-+|-+$/g, '');
   },

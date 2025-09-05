@@ -205,7 +205,8 @@ export const Controller = {
   },
 
   handleModelChange() {
-    const modelId = IDUtils.normalizeSubmissionId(this.value || '');
+    // Preserve original model id as selected (keep dots), do not normalize here
+    const modelId = String(this.value || '').trim();
     FieldManager.setValue('id', modelId);
     const providerId =
       ValueUtils.value('providerId') || ValueUtils.value('providerSelect');
