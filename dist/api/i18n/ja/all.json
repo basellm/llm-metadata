@@ -2230,6 +2230,48 @@
     "name": "Azure",
     "npm": "@ai-sdk/azure"
   },
+  "baseten": {
+    "api": "https://inference.baseten.co/v1",
+    "doc": "https://docs.baseten.co/development/model-apis/overview",
+    "env": [
+      "BASETEN_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/baseten.svg",
+    "id": "baseten",
+    "models": {
+      "Qwen-Qwen3-Coder-480B-A35B-Instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.38,
+          "output": 1.53
+        },
+        "description": "Qwen3-Coder-480B-A35B-Instruct は baseten によって提供される AI モデルです。",
+        "id": "Qwen-Qwen3-Coder-480B-A35B-Instruct",
+        "knowledge": "2025-04",
+        "last_updated": "2025-07-23",
+        "limit": {
+          "context": 262144,
+          "output": 66536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-Coder-480B-A35B-Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-07-23",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Baseten",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "cerebras": {
     "doc": "https://inference-docs.cerebras.ai/models/overview",
     "env": [
@@ -5583,6 +5625,93 @@
         "temperature": true,
         "tool_call": true
       },
+      "accounts/fireworks/models/deepseek-v3p1": {
+        "attachment": false,
+        "cost": {
+          "input": 0.56,
+          "output": 1.68
+        },
+        "description": "DeepSeek V3.1 は fireworks-ai によって提供される AI モデルです。",
+        "id": "accounts/fireworks/models/deepseek-v3p1",
+        "knowledge": "2025-07",
+        "last_updated": "2025-08-21",
+        "limit": {
+          "context": 163840,
+          "output": 163840
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-21",
+        "temperature": true,
+        "tool_call": true
+      },
+      "accounts/fireworks/models/glm-4p5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.55,
+          "output": 2.19
+        },
+        "description": "GLM 4.5 は fireworks-ai によって提供される AI モデルです。",
+        "id": "accounts/fireworks/models/glm-4p5",
+        "knowledge": "2025-04",
+        "last_updated": "2025-07-29",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-07-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "accounts/fireworks/models/glm-4p5-air": {
+        "attachment": false,
+        "cost": {
+          "input": 0.22,
+          "output": 0.88
+        },
+        "description": "GLM 4.5 Air は fireworks-ai によって提供される AI モデルです。",
+        "id": "accounts/fireworks/models/glm-4p5-air",
+        "knowledge": "2025-04",
+        "last_updated": "2025-08-01",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.5 Air",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-01",
+        "temperature": true,
+        "tool_call": true
+      },
       "accounts/fireworks/models/kimi-k2-instruct": {
         "attachment": false,
         "cost": {
@@ -5638,6 +5767,34 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-04-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "accounts/fireworks/models/qwen3-coder-480b-a35b-instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.45,
+          "output": 1.8
+        },
+        "description": "Qwen3 Coder 480B A35B Instruct は fireworks-ai によって提供される AI モデルです。",
+        "id": "accounts/fireworks/models/qwen3-coder-480b-a35b-instruct",
+        "last_updated": "2025-07-22",
+        "limit": {
+          "context": 256000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder 480B A35B Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-07-22",
         "temperature": true,
         "tool_call": true
       }
@@ -5968,6 +6125,31 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-08-13",
+        "temperature": true,
+        "tool_call": true
+      },
+      "grok-code-fast-1": {
+        "attachment": false,
+        "description": "Grok Code Fast 1 は github-copilot によって提供される AI モデルです。",
+        "id": "grok-code-fast-1",
+        "knowledge": "2025-08",
+        "last_updated": "2025-08-27",
+        "limit": {
+          "context": 256000,
+          "output": 10000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok Code Fast 1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-27",
         "temperature": true,
         "tool_call": true
       },
@@ -10832,7 +11014,7 @@
           "input": 0.6,
           "output": 2.5
         },
-        "description": "Kimi K2 は moonshotai によって提供される AI モデルです。",
+        "description": "Kimi K2 0711 は moonshotai によって提供される AI モデルです。",
         "id": "kimi-k2-0711-preview",
         "knowledge": "2024-10",
         "last_updated": "2025-07-14",
@@ -10848,10 +11030,40 @@
             "text"
           ]
         },
-        "name": "Kimi K2",
+        "name": "Kimi K2 0711",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-14",
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2-0905-preview": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 0.6,
+          "output": 2.5
+        },
+        "description": "Kimi K2 0905 は moonshotai によって提供される AI モデルです。",
+        "id": "kimi-k2-0905-preview",
+        "knowledge": "2024-10",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 0905",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-05",
         "temperature": true,
         "tool_call": true
       },
@@ -10906,7 +11118,7 @@
           "input": 0.6,
           "output": 2.5
         },
-        "description": "Kimi K2 は moonshotai-cn によって提供される AI モデルです。",
+        "description": "Kimi K2 0711 は moonshotai-cn によって提供される AI モデルです。",
         "id": "kimi-k2-0711-preview",
         "knowledge": "2024-10",
         "last_updated": "2025-07-14",
@@ -10922,10 +11134,40 @@
             "text"
           ]
         },
-        "name": "Kimi K2",
+        "name": "Kimi K2 0711",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-14",
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2-0905-preview": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 0.6,
+          "output": 2.5
+        },
+        "description": "Kimi K2 0905 は moonshotai-cn によって提供される AI モデルです。",
+        "id": "kimi-k2-0905-preview",
+        "knowledge": "2024-10",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 0905",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-05",
         "temperature": true,
         "tool_call": true
       },
@@ -13220,6 +13462,35 @@
         "temperature": true,
         "tool_call": true
       },
+      "moonshotai/kimi-k2-0905": {
+        "attachment": false,
+        "cost": {
+          "input": 0.6,
+          "output": 2.5
+        },
+        "description": "Kimi K2 Instruct 0905 は openrouter によって提供される AI モデルです。",
+        "id": "moonshotai/kimi-k2-0905",
+        "knowledge": "2024-10",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 262144,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 Instruct 0905",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-05",
+        "temperature": true,
+        "tool_call": true
+      },
       "moonshotai/kimi-k2:free": {
         "attachment": false,
         "cost": {
@@ -13275,6 +13546,64 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-02-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "nousresearch/hermes-4-405b": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 3
+        },
+        "description": "Hermes 4 405B は openrouter によって提供される AI モデルです。",
+        "id": "nousresearch/hermes-4-405b",
+        "knowledge": "2023-12",
+        "last_updated": "2025-08-25",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hermes 4 405B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-25",
+        "temperature": true,
+        "tool_call": true
+      },
+      "nousresearch/hermes-4-70b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.13,
+          "output": 0.4
+        },
+        "description": "Hermes 4 70B は openrouter によって提供される AI モデルです。",
+        "id": "nousresearch/hermes-4-70b",
+        "knowledge": "2023-12",
+        "last_updated": "2025-08-25",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hermes 4 70B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-25",
         "temperature": true,
         "tool_call": true
       },
@@ -14403,6 +14732,36 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-07-09",
+        "temperature": true,
+        "tool_call": true
+      },
+      "x-ai/grok-code-fast-1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.2,
+          "output": 1.5
+        },
+        "description": "Grok Code Fast 1 は openrouter によって提供される AI モデルです。",
+        "id": "x-ai/grok-code-fast-1",
+        "knowledge": "2025-08",
+        "last_updated": "2025-08-26",
+        "limit": {
+          "context": 256000,
+          "output": 10000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok Code Fast 1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-26",
         "temperature": true,
         "tool_call": true
       },
