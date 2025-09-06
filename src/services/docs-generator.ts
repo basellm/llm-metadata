@@ -192,7 +192,7 @@ ${tr('intro.data')}
     return markdown;
   }
 
-  /** 生成“最新发布” Markdown（全站按 release_date 降序） */
+  /** 生成"最新发布" Markdown（全站按 release_date 降序） */
   generateReleasesMarkdown(
     allModelsData: NormalizedData,
     manifest: BuildManifest,
@@ -206,20 +206,28 @@ ${tr('intro.data')}
 
     const messages = this.i18n.getDocMessages(locale);
     const tr = (key: string): string => messages[key] || key;
+    const trWith = (key: string, vars: Record<string, string | number>): string => {
+      let text = messages[key] || key;
+      for (const [k, v] of Object.entries(vars)) {
+        text = text.replace(new RegExp(`\\{${k}\\}`, 'g'), String(v));
+      }
+      return text;
+    };
 
     let markdown = `---
 hide:
   - navigation
+  - toc
 ---
 
-# ${tr('title.releases')}
+# :material-rocket-launch: ${tr('title.releases')}
 
 ${tr('intro.releases')}
 
-!!! info "${tr('stats.title')}"
-    - **${tr('stats.providers')}**: ${stats.providers}
-    - **${tr('stats.models')}**: ${stats.models}
-    - **${tr('stats.updated')}**: ${lastUpdated}
+!!! tip "📊 ${tr('stats.title')}"
+    **${tr('stats.providers')}**: ${stats.providers} &nbsp;&nbsp;
+    **${tr('stats.models')}**: ${stats.models} &nbsp;&nbsp;
+    **${tr('stats.updated')}**: ${lastUpdated}
 
 `;
 
@@ -276,51 +284,92 @@ ${tr('intro.releases')}
       return bt - at; // 降序（新 → 旧 → 未知）
     });
 
-    const headers = [
-      tr('table.model'),
-      tr('table.provider'),
-      tr('table.modelId'),
-      tr('table.released'),
-      tr('table.pricing'),
-      tr('table.ratios'),
-      tr('table.capabilities'),
-      tr('table.knowledge'),
-      tr('table.modalities'),
-      tr('table.details'),
-    ];
-    const separators = [
-      '-------',
-      '--------',
-      '--------',
-      '--------',
-      '----------------',
-      '---------------',
-      '--------------',
-      '-----------',
-      '------------',
-      '----------',
-    ];
+    // 按时间段分组
+    const now = Date.now();
+    const oneWeekAgo = now - 7 * 24 * 60 * 60 * 1000;
+    const oneMonthAgo = now - 30 * 24 * 60 * 60 * 1000;
+    const threeMonthsAgo = now - 90 * 24 * 60 * 60 * 1000;
 
-    markdown += `| ${headers.join(' | ')} |\n`;
-    markdown += `|${separators.join('|')}|\n`;
+    const recentRows = rows.filter(r => r.releaseTs && r.releaseTs > oneWeekAgo);
+    const thisMonthRows = rows.filter(r => r.releaseTs && r.releaseTs <= oneWeekAgo && r.releaseTs > oneMonthAgo);
+    const lastThreeMonthRows = rows.filter(r => r.releaseTs && r.releaseTs <= oneMonthAgo && r.releaseTs > threeMonthsAgo);
+    const olderRows = rows.filter(r => !r.releaseTs || r.releaseTs <= threeMonthsAgo);
 
-    for (const r of rows) {
-      const fields = [
-        `**${escapeMarkdownPipes(r.modelName)}**`,
-        escapeMarkdownPipes(r.providerName),
-        escapeMarkdownPipes(r.modelId),
-        escapeMarkdownPipes(r.releaseRaw || '-'),
-        r.pricing,
-        r.ratios,
-        r.capabilities,
-        r.knowledge || '-',
-        r.modalities,
-        r.details,
+    const renderModelCards = (models: Row[], sectionTitle: string, icon: string) => {
+      if (models.length === 0) return '';
+
+      let section = `\n## ${icon} ${sectionTitle}\n\n`;
+
+      // 使用网格布局展示模型卡片
+      section += `<div class="grid cards" markdown>\n\n`;
+
+      for (const model of models.slice(0, 20)) { // 限制每个分组最多20个
+        section += `-   **${escapeMarkdownPipes(model.modelName)}**\n\n`;
+        section += `    ---\n\n`;
+        section += `    :material-factory: **${escapeMarkdownPipes(model.providerName)}**\n\n`;
+        section += `    :material-identifier: \`${escapeMarkdownPipes(model.modelId)}\`\n\n`;
+        if (model.releaseRaw) {
+          section += `    :material-calendar: ${escapeMarkdownPipes(model.releaseRaw)}\n\n`;
+        }
+        if (model.pricing !== '-') {
+          section += `    :material-currency-usd: ${model.pricing}\n\n`;
+        }
+        if (model.capabilities !== '-') {
+          section += `    ${model.capabilities}\n\n`;
+        }
+        section += `\n`;
+      }
+
+      section += `</div>\n\n`;
+
+      if (models.length > 20) {
+        section += `!!! note "${tr('note.showing_first')}"\n`;
+        section += `    ${trWith('note.total_models', { count: models.length })}\n\n`;
+      }
+
+      return section;
+    };
+
+    // 生成各个时间段的模型卡片
+    markdown += renderModelCards(recentRows, tr('section.this_week'), ':material-new-box:');
+    markdown += renderModelCards(thisMonthRows, tr('section.this_month'), ':material-clock-outline:');
+    markdown += renderModelCards(lastThreeMonthRows, tr('section.last_3_months'), ':material-history:');
+
+    // 对于更老的模型，使用紧凑的表格格式
+    if (olderRows.length > 0) {
+      markdown += `\n## :material-archive: ${tr('section.earlier')}\n\n`;
+      markdown += `!!! info "${tr('note.compact_list')}"\n`;
+      markdown += `    ${trWith('note.older_models', { count: olderRows.length })}\n\n`;
+
+      const headers = [
+        tr('table.model'),
+        tr('table.provider'),
+        tr('table.released'),
+        tr('table.capabilities'),
+        tr('table.pricing'),
       ];
-      markdown += `| ${fields.join(' | ')} |\n`;
+      const separators = ['-------', '--------', '--------', '--------------', '----------------'];
+
+      markdown += `| ${headers.join(' | ')} |\n`;
+      markdown += `|${separators.join('|')}|\n`;
+
+      for (const r of olderRows.slice(0, 50)) { // 限制较老模型最多50个
+        const fields = [
+          `**${escapeMarkdownPipes(r.modelName)}**`,
+          escapeMarkdownPipes(r.providerName),
+          escapeMarkdownPipes(r.releaseRaw || '-'),
+          r.capabilities,
+          r.pricing,
+        ];
+        markdown += `| ${fields.join(' | ')} |\n`;
+      }
+
+      if (olderRows.length > 50) {
+        markdown += `\n!!! tip "${tr('note.more_models')}"\n`;
+        markdown += `    ${trWith('note.visit_full_list', { count: olderRows.length - 50, title: tr('title.data') })}\n\n`;
+      }
     }
 
-    markdown += '\n';
     return markdown;
   }
 }

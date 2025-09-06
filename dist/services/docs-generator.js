@@ -151,6 +151,7 @@ ${tr('intro.data')}
         let markdown = `---
 hide:
   - navigation
+  - toc
 ---
 
 # ${tr('title.releases')}
