@@ -77,6 +77,7 @@ export class DocumentationGenerator {
     const { stats } = manifest;
     const lastUpdated = new Date(manifest.generatedAt).toLocaleString(
       this.i18n.getDateLocale(locale),
+      { timeZone: this.i18n.getTimeZone(locale) },
     );
 
     const messages = this.i18n.getDocMessages(locale);

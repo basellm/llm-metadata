@@ -107,6 +107,8 @@ export interface I18nLocaleConfig {
   name?: string;
   default?: boolean;
   site_name?: string;
+  /** 可选：该语言对应展示用的 IANA 时区，例如 "Asia/Shanghai" */
+  timeZone?: string;
 }
 
 export interface I18nConfig {

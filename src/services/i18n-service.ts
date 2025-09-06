@@ -54,6 +54,32 @@ export class I18nService {
     return 'en-US';
   }
 
+  /**
+   * 获取用于日期显示的 IANA 时区
+   * 优先读取 i18n/locales.json 中每个 locale 的 timeZone 字段；
+   * 若未配置，则按常见语言提供一个合理默认；
+   * 最终兜底使用 'UTC'。
+   */
+  getTimeZone(locale: string): string {
+    // 尝试从配置获取
+    try {
+      const configPath = join(this.i18nDir, 'locales.json');
+      const config = readJSONIfExists<I18nConfig>(configPath);
+      const configured = config?.locales?.find((l) => l.locale === locale)?.timeZone;
+      if (configured) return configured;
+    } catch {
+      // ignore
+    }
+
+    // 语言推断
+    const base = (locale || 'en').toLowerCase();
+    if (base.startsWith('zh')) return 'Asia/Shanghai';
+    if (base.startsWith('ja')) return 'Asia/Tokyo';
+    if (base.startsWith('en')) return 'America/Los_Angeles';
+
+    return 'UTC';
+  }
+
   /** 校验 i18n/docs 下各语言词条的完整性（与英文对齐），返回警告列表 */
   validateDocMessages(locales: string[]): string[] {
     const warnings: string[] = [];
