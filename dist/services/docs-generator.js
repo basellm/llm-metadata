@@ -6,6 +6,25 @@ export class DocumentationGenerator {
     constructor(rootDir) {
         this.i18n = new I18nService(rootDir);
     }
+    /** 将 YYYY 或 YYYY-MM 或 YYYY-MM-DD 字符串解析为时间戳（不可解析返回 null） */
+    parseDateToTimestamp(dateStr) {
+        if (!dateStr || typeof dateStr !== 'string')
+            return null;
+        // 规范化为完整日期，优先使用原字符串可被 Date 解析
+        const direct = Date.parse(dateStr);
+        if (!Number.isNaN(direct))
+            return direct;
+        // 补全到月初/日：支持 "YYYY"、"YYYY-MM"
+        if (/^\d{4}$/.test(dateStr)) {
+            const ts = Date.parse(`${dateStr}-01-01`);
+            return Number.isNaN(ts) ? null : ts;
+        }
+        if (/^\d{4}-\d{2}$/.test(dateStr)) {
+            const ts = Date.parse(`${dateStr}-01`);
+            return Number.isNaN(ts) ? null : ts;
+        }
+        return null;
+    }
     /** 计算 NewAPI 比率（文档用） */
     calculateNewApiRatios(cost) {
         if (!cost?.input || typeof cost.input !== 'number' || cost.input <= 0) {
@@ -121,6 +140,105 @@ ${tr('intro.data')}
             });
             markdown += '\n';
         });
+        return markdown;
+    }
+    /** 生成“最新发布” Markdown（全站按 release_date 降序） */
+    generateReleasesMarkdown(allModelsData, manifest, locale = 'en') {
+        const { stats } = manifest;
+        const lastUpdated = new Date(manifest.generatedAt).toLocaleString(this.i18n.getDateLocale(locale), { timeZone: this.i18n.getTimeZone(locale) });
+        const messages = this.i18n.getDocMessages(locale);
+        const tr = (key) => messages[key] || key;
+        let markdown = `---
+hide:
+  - navigation
+---
+
+# ${tr('title.releases')}
+
+${tr('intro.releases')}
+
+!!! info "${tr('stats.title')}"
+    - **${tr('stats.providers')}**: ${stats.providers}
+    - **${tr('stats.models')}**: ${stats.models}
+    - **${tr('stats.updated')}**: ${lastUpdated}
+
+`;
+        const rows = [];
+        for (const [providerId, provider] of Object.entries(allModelsData.providers)) {
+            const providerName = provider.name || providerId;
+            for (const [modelId, model] of Object.entries(provider.models || {})) {
+                const releaseRaw = model.release_date || undefined;
+                const releaseTs = this.parseDateToTimestamp(releaseRaw);
+                const row = {
+                    providerId,
+                    providerName,
+                    modelId,
+                    modelName: model.name || modelId,
+                    releaseRaw,
+                    releaseTs,
+                    pricing: formatPricing(model.cost),
+                    ratios: this.formatNewApiRatios(this.calculateNewApiRatios(model.cost)),
+                    capabilities: formatCapabilities(model),
+                    knowledge: model.knowledge,
+                    modalities: formatModalities(model.modalities),
+                    details: formatDetails(model),
+                };
+                if (typeof model.limit?.context === 'number') {
+                    row.context = model.limit.context;
+                }
+                if (typeof model.limit?.output === 'number') {
+                    row.output = model.limit.output;
+                }
+                rows.push(row);
+            }
+        }
+        rows.sort((a, b) => {
+            const at = a.releaseTs ?? -Infinity;
+            const bt = b.releaseTs ?? -Infinity;
+            return bt - at; // 降序（新 → 旧 → 未知）
+        });
+        const headers = [
+            tr('table.model'),
+            tr('table.provider'),
+            tr('table.modelId'),
+            tr('table.released'),
+            tr('table.pricing'),
+            tr('table.ratios'),
+            tr('table.capabilities'),
+            tr('table.knowledge'),
+            tr('table.modalities'),
+            tr('table.details'),
+        ];
+        const separators = [
+            '-------',
+            '--------',
+            '--------',
+            '--------',
+            '----------------',
+            '---------------',
+            '--------------',
+            '-----------',
+            '------------',
+            '----------',
+        ];
+        markdown += `| ${headers.join(' | ')} |\n`;
+        markdown += `|${separators.join('|')}|\n`;
+        for (const r of rows) {
+            const fields = [
+                `**${escapeMarkdownPipes(r.modelName)}**`,
+                escapeMarkdownPipes(r.providerName),
+                escapeMarkdownPipes(r.modelId),
+                escapeMarkdownPipes(r.releaseRaw || '-'),
+                r.pricing,
+                r.ratios,
+                r.capabilities,
+                r.knowledge || '-',
+                r.modalities,
+                r.details,
+            ];
+            markdown += `| ${fields.join(' | ')} |\n`;
+        }
+        markdown += '\n';
         return markdown;
     }
 }
