@@ -24,12 +24,14 @@ export const IDUtils = {
    * Normalize submission IDs: lowercase and use '-' as the only separator
    */
   normalizeSubmissionId(id) {
-    return String(id || '')
-      .trim()
-      .toLowerCase()
-      // Preserve '.'; replace colon, slash, underscore and whitespace with '-'
-      .replace(/[:\/_\s]+/g, '-')
-      .replace(/-+/g, '-')
-      .replace(/^-+|-+$/g, '');
+    return (
+      String(id || '')
+        .trim()
+        .toLowerCase()
+        // Preserve '.'; replace colon, slash, underscore and whitespace with '-'
+        .replace(/[:\/_\s]+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-+|-+$/g, '')
+    );
   },
 };

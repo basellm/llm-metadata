@@ -177,7 +177,10 @@ export const Controller = {
       'provider-api',
       ObjectUtils.pick(data, ['api', 'apiUrl', 'documentation']),
     );
-    FieldManager.setValue('provider-icon-url', ObjectUtils.pick(data, ['iconURL', 'iconUrl', 'icon']));
+    FieldManager.setValue(
+      'provider-icon-url',
+      ObjectUtils.pick(data, ['iconURL', 'iconUrl', 'icon']),
+    );
     FieldManager.setValue('provider-lobe-icon', ObjectUtils.pick(data, ['lobeIcon']));
 
     // Set provider i18n fields from main data
@@ -208,8 +211,7 @@ export const Controller = {
     // Preserve original model id as selected (keep dots), do not normalize here
     const modelId = String(this.value || '').trim();
     FieldManager.setValue('id', modelId);
-    const providerId =
-      ValueUtils.value('providerId') || ValueUtils.value('providerSelect');
+    const providerId = ValueUtils.value('providerId') || ValueUtils.value('providerSelect');
     Controller.loadAndFillModelDetail(providerId, modelId);
   },
 
