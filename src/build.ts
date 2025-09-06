@@ -503,14 +503,24 @@ class Builder {
       console.log('Generating documentation...');
       const locales = this.i18nService.getLocales().map((l: { locale: string }) => l.locale);
       for (const locale of locales) {
-        const md = this.docsGenerator.generateDataMarkdown(
+        const dataMd = this.docsGenerator.generateDataMarkdown(
           allModelsData,
           indexes.providers,
           manifest,
           locale,
         );
-        const outPath = join(this.ROOT, 'docs', locale, 'data.md');
-        if (writeTextIfChanged(outPath, md, { dryRun })) {
+        const dataOut = join(this.ROOT, 'docs', locale, 'data.md');
+        if (writeTextIfChanged(dataOut, dataMd, { dryRun })) {
+          changes++;
+        }
+
+        const releasesMd = this.docsGenerator.generateReleasesMarkdown(
+          this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale),
+          manifest,
+          locale,
+        );
+        const releasesOut = join(this.ROOT, 'docs', locale, 'releases.md');
+        if (writeTextIfChanged(releasesOut, releasesMd, { dryRun })) {
           changes++;
         }
       }
