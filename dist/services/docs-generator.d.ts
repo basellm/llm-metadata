@@ -11,7 +11,7 @@ export declare class DocumentationGenerator {
     private formatNewApiRatios;
     /** 生成数据浏览器 Markdown */
     generateDataMarkdown(allModelsData: NormalizedData, providerIndex: ProviderIndexItem[], manifest: BuildManifest, locale?: string): string;
-    /** 生成“最新发布” Markdown（全站按 release_date 降序） */
+    /** 生成"最新发布" Markdown（全站按 release_date 降序） */
     generateReleasesMarkdown(allModelsData: NormalizedData, manifest: BuildManifest, locale?: string): string;
 }
 //# sourceMappingURL=docs-generator.d.ts.map
