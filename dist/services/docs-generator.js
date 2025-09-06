@@ -41,7 +41,7 @@ export class DocumentationGenerator {
     /** 生成数据浏览器 Markdown */
     generateDataMarkdown(allModelsData, providerIndex, manifest, locale = 'en') {
         const { stats } = manifest;
-        const lastUpdated = new Date(manifest.generatedAt).toLocaleString(this.i18n.getDateLocale(locale));
+        const lastUpdated = new Date(manifest.generatedAt).toLocaleString(this.i18n.getDateLocale(locale), { timeZone: this.i18n.getTimeZone(locale) });
         const messages = this.i18n.getDocMessages(locale);
         const tr = (key) => messages[key] || key;
         let markdown = `---
