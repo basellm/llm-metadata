@@ -2250,8 +2250,8 @@
         "knowledge": "2025-08",
         "last_updated": "2025-09-05",
         "limit": {
-          "context": 131000,
-          "output": 131000
+          "context": 262144,
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -11944,6 +11944,68 @@
         "temperature": false,
         "tool_call": true
       },
+      "dall-e-2": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.01,
+          "cache_write": 0.05,
+          "input": 0.02,
+          "output": 0.1
+        },
+        "description": "An AI model that generates images from textual descriptions.",
+        "id": "dall-e-2",
+        "knowledge": "2021-04",
+        "last_updated": "2022-06-15",
+        "limit": {
+          "context": 1024,
+          "output": 1
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "DALL-E 2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2022-04-06",
+        "temperature": false,
+        "tool_call": true
+      },
+      "dall-e-3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.01,
+          "cache_write": 0.05,
+          "input": 0.03,
+          "output": 0.15
+        },
+        "description": "The latest version of DALL-E for generating images from text.",
+        "id": "dall-e-3",
+        "knowledge": "2024-04",
+        "last_updated": "2024-08-15",
+        "limit": {
+          "context": 2048,
+          "output": 1
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "DALL-E 3",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-03-01",
+        "temperature": false,
+        "tool_call": true
+      },
       "gpt-3.5-turbo": {
         "attachment": false,
         "cost": {
@@ -12311,6 +12373,37 @@
         "temperature": false,
         "tool_call": true
       },
+      "gpt-image-1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.1,
+          "cache_write": 0.6,
+          "input": 10,
+          "output": 20
+        },
+        "description": "An advanced AI model for generating images from textual descriptions.",
+        "id": "gpt-image-1",
+        "knowledge": "2023-10",
+        "last_updated": "2024-10-01",
+        "limit": {
+          "context": 1000,
+          "output": 512
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "GPT-IMAGE-1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2024-01-15",
+        "temperature": true,
+        "tool_call": true
+      },
       "o1": {
         "attachment": true,
         "cost": {
@@ -12630,6 +12723,38 @@
     "id": "opencode",
     "lobeIcon": "OpenCode",
     "models": {
+      "gpt-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5 is an AI model provided by opencode.",
+        "experimental": true,
+        "id": "gpt-5",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "temperature": false,
+        "tool_call": true
+      },
       "grok-code": {
         "attachment": true,
         "cost": {
@@ -12661,14 +12786,44 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen/qwen3-coder": {
+      "kimi-k2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.6,
+          "output": 2.5
+        },
+        "description": "Kimi K2 is an AI model provided by opencode.",
+        "experimental": true,
+        "id": "kimi-k2",
+        "knowledge": "2024-10",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-coder": {
         "attachment": false,
         "cost": {
           "input": 0.3,
           "output": 1.2
         },
         "description": "Qwen3 Coder is an AI model provided by opencode.",
-        "id": "qwen/qwen3-coder",
+        "id": "qwen3-coder",
         "knowledge": "2025-04",
         "last_updated": "2025-07-23",
         "limit": {

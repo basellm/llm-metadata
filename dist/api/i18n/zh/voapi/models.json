@@ -2062,8 +2062,8 @@
       },
       "icon": "",
       "id": "Moonshotai-Kimi-K2-Instruct-0905",
-      "maxCtxTokens": 131000,
-      "maxOutputTokens": 131000,
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
       "name": "moonshotai/Kimi-K2-Instruct-0905",
       "price": {
         "cacheRead": null,
@@ -2074,7 +2074,7 @@
       "tags": [
         "tools",
         "open_weights",
-        "131K"
+        "262.1K"
       ]
     },
     {
@@ -11188,6 +11188,64 @@
       ]
     },
     {
+      "description": "一个根据文本描述生成图像的AI模型。",
+      "firm": "openai",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:openai-color",
+      "id": "dall-e-2",
+      "maxCtxTokens": 1024,
+      "maxOutputTokens": 1,
+      "name": "DALL-E 2",
+      "price": {
+        "cacheRead": 0.01,
+        "cacheWrite": 0.05,
+        "input": 0.02,
+        "output": 0.1
+      },
+      "tags": [
+        "tools",
+        "files",
+        "vision",
+        "1K"
+      ]
+    },
+    {
+      "description": "生成图像的新版本DALL-E。",
+      "firm": "openai",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:openai-color",
+      "id": "dall-e-3",
+      "maxCtxTokens": 2048,
+      "maxOutputTokens": 1,
+      "name": "DALL-E 3",
+      "price": {
+        "cacheRead": 0.01,
+        "cacheWrite": 0.05,
+        "input": 0.03,
+        "output": 0.15
+      },
+      "tags": [
+        "tools",
+        "files",
+        "vision",
+        "2K"
+      ]
+    },
+    {
       "description": "GPT-3.5-turbo 是由 openai 提供的人工智能模型。",
       "firm": "openai",
       "flags": {
@@ -11535,6 +11593,37 @@
       ]
     },
     {
+      "description": "用于根据文本描述生成图像的先进AI模型。",
+      "firm": "openai",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:openai-color",
+      "id": "gpt-image-1",
+      "maxCtxTokens": 1000,
+      "maxOutputTokens": 512,
+      "name": "GPT-IMAGE-1",
+      "price": {
+        "cacheRead": 0.1,
+        "cacheWrite": 0.6,
+        "input": 10,
+        "output": 20
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "files",
+        "open_weights",
+        "vision",
+        "1K"
+      ]
+    },
+    {
       "description": "o1 是由 openai 提供的人工智能模型。",
       "firm": "openai",
       "flags": {
@@ -11827,6 +11916,36 @@
       ]
     },
     {
+      "description": "GPT-5 是由 opencode 提供的人工智能模型。",
+      "firm": "opencode",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:opencode",
+      "id": "gpt-5",
+      "maxCtxTokens": 400000,
+      "maxOutputTokens": 128000,
+      "name": "GPT-5",
+      "price": {
+        "cacheRead": 0.125,
+        "cacheWrite": null,
+        "input": 1.25,
+        "output": 10
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "files",
+        "vision",
+        "400K"
+      ]
+    },
+    {
       "description": "Grok Code Fast 1 是由 opencode 提供的人工智能模型。",
       "firm": "opencode",
       "flags": {
@@ -11857,6 +11976,34 @@
       ]
     },
     {
+      "description": "Kimi K2 是由 opencode 提供的人工智能模型。",
+      "firm": "opencode",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:opencode",
+      "id": "kimi-k2",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "name": "Kimi K2",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.6,
+        "output": 2.5
+      },
+      "tags": [
+        "tools",
+        "open_weights",
+        "262.1K"
+      ]
+    },
+    {
       "description": "Qwen3 Coder 是由 opencode 提供的人工智能模型。",
       "firm": "opencode",
       "flags": {
@@ -11868,7 +12015,7 @@
         "tool_call": true
       },
       "icon": "lb:opencode",
-      "id": "qwen/qwen3-coder",
+      "id": "qwen3-coder",
       "maxCtxTokens": 262144,
       "maxOutputTokens": 65536,
       "name": "Qwen3 Coder",
