@@ -3576,6 +3576,17 @@
     {
       "flags": {
         "attachment": false,
+        "reasoning": false,
+        "tool_call": true
+      },
+      "id": "moonshotai/Kimi-K2-Instruct-0905",
+      "name": "Kimi-K2-Instruct-0905",
+      "providerId": "huggingface",
+      "updated": "2025-09-04"
+    },
+    {
+      "flags": {
+        "attachment": false,
         "reasoning": true,
         "tool_call": true
       },
@@ -3594,6 +3605,28 @@
       "name": "Qwen3-Coder-480B-A35B-Instruct",
       "providerId": "huggingface",
       "updated": "2025-07-23"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": false,
+        "tool_call": true
+      },
+      "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+      "name": "Qwen3-Next-80B-A3B-Instruct",
+      "providerId": "huggingface",
+      "updated": "2025-09-11"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": false,
+        "tool_call": true
+      },
+      "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
+      "name": "Qwen3-Next-80B-A3B-Thinking",
+      "providerId": "huggingface",
+      "updated": "2025-09-11"
     },
     {
       "flags": {
@@ -4543,6 +4576,17 @@
     },
     {
       "flags": {
+        "attachment": false,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "gpt-5-codex",
+      "name": "GPT-5-Codex",
+      "providerId": "openai",
+      "updated": "2025-09-15"
+    },
+    {
+      "flags": {
         "attachment": true,
         "reasoning": true,
         "tool_call": true
@@ -4969,6 +5013,17 @@
       "name": "DeepSeek V3 Base (free)",
       "providerId": "openrouter",
       "updated": "2025-03-29"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "deepseek/deepseek-v3.1-terminus",
+      "name": "DeepSeek V3.1 Terminus",
+      "providerId": "openrouter",
+      "updated": "2025-09-22"
     },
     {
       "flags": {
@@ -7557,6 +7612,28 @@
     },
     {
       "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "grok-4-fast",
+      "name": "Grok 4 Fast",
+      "providerId": "xai",
+      "updated": "2025-09-19"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": false,
+        "tool_call": true
+      },
+      "id": "grok-4-fast-non-reasoning",
+      "name": "Grok 4 Fast (Non-Reasoning)",
+      "providerId": "xai",
+      "updated": "2025-09-19"
+    },
+    {
+      "flags": {
         "attachment": false,
         "reasoning": false,
         "tool_call": true
@@ -7707,6 +7784,50 @@
       "id": "glm-4.5v",
       "name": "GLM 4.5V",
       "providerId": "zhipuai",
+      "updated": "2025-08-11"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "glm-4.5",
+      "name": "GLM-4.5",
+      "providerId": "zhipuai-coding-plan",
+      "updated": "2025-07-28"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "glm-4.5-air",
+      "name": "GLM-4.5-Air",
+      "providerId": "zhipuai-coding-plan",
+      "updated": "2025-07-28"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "glm-4.5-flash",
+      "name": "GLM-4.5-Flash",
+      "providerId": "zhipuai-coding-plan",
+      "updated": "2025-07-28"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "glm-4.5v",
+      "name": "GLM 4.5V",
+      "providerId": "zhipuai-coding-plan",
       "updated": "2025-08-11"
     }
   ],
@@ -7892,7 +8013,7 @@
       "iconURL": "https://models.dev/logos/huggingface.svg",
       "id": "huggingface",
       "lobeIcon": "HuggingFace.Color",
-      "modelCount": 7,
+      "modelCount": 10,
       "name": "Hugging Face"
     },
     {
@@ -8002,7 +8123,7 @@
       "iconURL": "https://models.dev/logos/openai.svg",
       "id": "openai",
       "lobeIcon": "OpenAI.Color",
-      "modelCount": 29,
+      "modelCount": 30,
       "name": "OpenAI"
     },
     {
@@ -8020,7 +8141,7 @@
       "iconURL": "https://models.dev/logos/openrouter.svg",
       "id": "openrouter",
       "lobeIcon": "OpenRouter.Color",
-      "modelCount": 98,
+      "modelCount": 99,
       "name": "OpenRouter"
     },
     {
@@ -8031,6 +8152,7 @@
       "name": "Perplexity"
     },
     {
+      "api": "https://router.requesty.ai/v1",
       "doc": "https://requesty.ai/solution/llm-routing/models",
       "iconURL": "https://models.dev/logos/requesty.svg",
       "id": "requesty",
@@ -8112,7 +8234,7 @@
       "iconURL": "https://models.dev/logos/xai.svg",
       "id": "xai",
       "lobeIcon": "XAI.Color",
-      "modelCount": 17,
+      "modelCount": 19,
       "name": "xAI"
     },
     {
@@ -8140,6 +8262,14 @@
       "lobeIcon": "Zhipu.Color",
       "modelCount": 4,
       "name": "Zhipu AI"
+    },
+    {
+      "api": "https://open.bigmodel.cn/api/coding/paas/v4",
+      "doc": "https://docs.bigmodel.cn/cn/coding-plan/overview",
+      "iconURL": "https://models.dev/logos/zhipuai-coding-plan.svg",
+      "id": "zhipuai-coding-plan",
+      "modelCount": 4,
+      "name": "Zhipu AI Coding Plan"
     }
   ]
 }

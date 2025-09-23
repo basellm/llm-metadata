@@ -9785,6 +9785,64 @@
         "temperature": true,
         "tool_call": true
       },
+      "Qwen/Qwen3-Next-80B-A3B-Instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.25,
+          "output": 1
+        },
+        "description": "Qwen3-Next-80B-A3B-Instruct is an AI model provided by huggingface.",
+        "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+        "knowledge": "2025-04",
+        "last_updated": "2025-09-11",
+        "limit": {
+          "context": 262144,
+          "output": 66536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-Next-80B-A3B-Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen/Qwen3-Next-80B-A3B-Thinking": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 2
+        },
+        "description": "Qwen3-Next-80B-A3B-Thinking is an AI model provided by huggingface.",
+        "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
+        "knowledge": "2025-04",
+        "last_updated": "2025-09-11",
+        "limit": {
+          "context": 262144,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-Next-80B-A3B-Thinking",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-11",
+        "temperature": true,
+        "tool_call": true
+      },
       "deepseek-ai/DeepSeek-R1-0528": {
         "attachment": false,
         "cost": {
@@ -9869,6 +9927,35 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-14",
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/Kimi-K2-Instruct-0905": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 3
+        },
+        "description": "Kimi-K2-Instruct-0905 is an AI model provided by huggingface.",
+        "id": "moonshotai/Kimi-K2-Instruct-0905",
+        "knowledge": "2024-10",
+        "last_updated": "2025-09-04",
+        "limit": {
+          "context": 262144,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi-K2-Instruct-0905",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-04",
         "temperature": true,
         "tool_call": true
       },
@@ -12572,6 +12659,32 @@
         "temperature": true,
         "tool_call": false
       },
+      "gpt-5-codex": {
+        "attachment": false,
+        "description": "GPT-5-Codex is an AI model provided by openai.",
+        "id": "gpt-5-codex",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-09-15",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5-Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-15",
+        "temperature": false,
+        "tool_call": true
+      },
       "gpt-5-mini": {
         "attachment": true,
         "cost": {
@@ -13801,6 +13914,35 @@
         "release_date": "2025-03-29",
         "temperature": true,
         "tool_call": false
+      },
+      "deepseek/deepseek-v3.1-terminus": {
+        "attachment": false,
+        "cost": {
+          "input": 0.27,
+          "output": 1
+        },
+        "description": "DeepSeek V3.1 Terminus is an AI model provided by openrouter.",
+        "id": "deepseek/deepseek-v3.1-terminus",
+        "knowledge": "2025-07",
+        "last_updated": "2025-09-22",
+        "limit": {
+          "context": 131072,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.1 Terminus",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-09-22",
+        "temperature": true,
+        "tool_call": true
       },
       "featherless/qwerky-72b": {
         "attachment": false,
@@ -16414,6 +16556,7 @@
     "npm": "@perplexity-ai/sdk"
   },
   "requesty": {
+    "api": "https://router.requesty.ai/v1",
     "doc": "https://requesty.ai/solution/llm-routing/models",
     "env": [
       "REQUESTY_API_KEY"
@@ -16842,7 +16985,7 @@
       }
     },
     "name": "Requesty",
-    "npm": "@requesty/ai-sdk"
+    "npm": "@ai-sdk/openai-compatible"
   },
   "submodel": {
     "api": "https://llm.submodel.ai/v1",
@@ -20977,6 +21120,68 @@
         "temperature": true,
         "tool_call": true
       },
+      "grok-4-fast": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok 4 Fast is an AI model provided by xai.",
+        "id": "grok-4-fast",
+        "knowledge": "2025-07",
+        "last_updated": "2025-09-19",
+        "limit": {
+          "context": 2000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4 Fast",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-19",
+        "temperature": true,
+        "tool_call": true
+      },
+      "grok-4-fast-non-reasoning": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok 4 Fast (Non-Reasoning) is an AI model provided by xai.",
+        "id": "grok-4-fast-non-reasoning",
+        "knowledge": "2025-07",
+        "last_updated": "2025-09-19",
+        "limit": {
+          "context": 2000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4 Fast (Non-Reasoning)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09-19",
+        "temperature": true,
+        "tool_call": true
+      },
       "grok-beta": {
         "attachment": false,
         "cost": {
@@ -21453,6 +21658,143 @@
       }
     },
     "name": "Zhipu AI",
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "zhipuai-coding-plan": {
+    "api": "https://open.bigmodel.cn/api/coding/paas/v4",
+    "doc": "https://docs.bigmodel.cn/cn/coding-plan/overview",
+    "env": [
+      "ZHIPU_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/zhipuai-coding-plan.svg",
+    "id": "zhipuai-coding-plan",
+    "models": {
+      "glm-4.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-4.5 is an AI model provided by zhipuai-coding-plan.",
+        "id": "glm-4.5",
+        "knowledge": "2025-04",
+        "last_updated": "2025-07-28",
+        "limit": {
+          "context": 131072,
+          "output": 98304
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-07-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-4.5-air": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-4.5-Air is an AI model provided by zhipuai-coding-plan.",
+        "id": "glm-4.5-air",
+        "knowledge": "2025-04",
+        "last_updated": "2025-07-28",
+        "limit": {
+          "context": 131072,
+          "output": 98304
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.5-Air",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-07-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-4.5-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-4.5-Flash is an AI model provided by zhipuai-coding-plan.",
+        "id": "glm-4.5-flash",
+        "knowledge": "2025-04",
+        "last_updated": "2025-07-28",
+        "limit": {
+          "context": 131072,
+          "output": 98304
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.5-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-07-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-4.5v": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM 4.5V is an AI model provided by zhipuai-coding-plan.",
+        "id": "glm-4.5v",
+        "knowledge": "2025-04",
+        "last_updated": "2025-08-11",
+        "limit": {
+          "context": 64000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.5V",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-11",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Zhipu AI Coding Plan",
     "npm": "@ai-sdk/openai-compatible"
   }
 }
