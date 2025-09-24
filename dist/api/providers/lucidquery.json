@@ -1,0 +1,71 @@
+{
+  "api": "https://lucidquery.com/api/v1",
+  "doc": "https://lucidquery.com/api/docs",
+  "env": [
+    "LUCIDQUERY_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/lucidquery.svg",
+  "id": "lucidquery",
+  "models": {
+    "lucidnova-rf1-100b": {
+      "attachment": true,
+      "cost": {
+        "input": 2,
+        "output": 5
+      },
+      "description": "LucidNova RF1 100B is an AI model provided by lucidquery.",
+      "id": "lucidnova-rf1-100b",
+      "knowledge": "2025-09-16",
+      "last_updated": "2025-09-10",
+      "limit": {
+        "context": 120000,
+        "output": 8000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LucidNova RF1 100B",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2024-12-28",
+      "temperature": false,
+      "tool_call": true
+    },
+    "lucidquery-nexus-coder": {
+      "attachment": true,
+      "cost": {
+        "input": 2,
+        "output": 5
+      },
+      "description": "LucidQuery Nexus Coder is an AI model provided by lucidquery.",
+      "id": "lucidquery-nexus-coder",
+      "knowledge": "2025-08-01",
+      "last_updated": "2025-09-01",
+      "limit": {
+        "context": 250000,
+        "output": 60000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LucidQuery Nexus Coder",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-01",
+      "temperature": false,
+      "tool_call": true
+    }
+  },
+  "name": "LucidQuery AI",
+  "npm": "@ai-sdk/openai-compatible"
+}

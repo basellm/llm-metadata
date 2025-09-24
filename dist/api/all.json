@@ -2023,6 +2023,32 @@
         "temperature": false,
         "tool_call": false
       },
+      "gpt-5-codex": {
+        "attachment": false,
+        "description": "GPT-5-Codex is an AI model provided by azure.",
+        "id": "gpt-5-codex",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-09-15",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5-Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-15",
+        "temperature": false,
+        "tool_call": true
+      },
       "gpt-5-mini": {
         "attachment": true,
         "cost": {
@@ -6477,6 +6503,32 @@
         "temperature": true,
         "tool_call": true
       },
+      "gpt-5-codex": {
+        "attachment": false,
+        "description": "GPT-5-Codex is an AI model provided by github-copilot.",
+        "id": "gpt-5-codex",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-09-15",
+        "limit": {
+          "context": 128000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5-Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-15",
+        "temperature": false,
+        "tool_call": true
+      },
       "gpt-5-mini": {
         "attachment": true,
         "description": "GPT-5-mini is an AI model provided by github-copilot.",
@@ -10694,6 +10746,77 @@
     "name": "LMStudio",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "lucidquery": {
+    "api": "https://lucidquery.com/api/v1",
+    "doc": "https://lucidquery.com/api/docs",
+    "env": [
+      "LUCIDQUERY_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/lucidquery.svg",
+    "id": "lucidquery",
+    "models": {
+      "lucidnova-rf1-100b": {
+        "attachment": true,
+        "cost": {
+          "input": 2,
+          "output": 5
+        },
+        "description": "LucidNova RF1 100B is an AI model provided by lucidquery.",
+        "id": "lucidnova-rf1-100b",
+        "knowledge": "2025-09-16",
+        "last_updated": "2025-09-10",
+        "limit": {
+          "context": 120000,
+          "output": 8000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "LucidNova RF1 100B",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2024-12-28",
+        "temperature": false,
+        "tool_call": true
+      },
+      "lucidquery-nexus-coder": {
+        "attachment": true,
+        "cost": {
+          "input": 2,
+          "output": 5
+        },
+        "description": "LucidQuery Nexus Coder is an AI model provided by lucidquery.",
+        "id": "lucidquery-nexus-coder",
+        "knowledge": "2025-08-01",
+        "last_updated": "2025-09-01",
+        "limit": {
+          "context": 250000,
+          "output": 60000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "LucidQuery Nexus Coder",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-01",
+        "temperature": false,
+        "tool_call": true
+      }
+    },
+    "name": "LucidQuery AI",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "midjourney": {
     "id": "midjourney",
     "lobeIcon": "Midjourney",
@@ -11488,35 +11611,6 @@
         "release_date": "2025-07-28",
         "temperature": true,
         "tool_call": true
-      },
-      "moonshotai/Kimi-K2-Instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Kimi-K2-Instruct is an AI model provided by modelscope.",
-        "id": "moonshotai/Kimi-K2-Instruct",
-        "knowledge": "2024-10",
-        "last_updated": "2025-07-14",
-        "limit": {
-          "context": 128000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi-K2-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-07-14",
-        "temperature": true,
-        "tool_call": true
       }
     },
     "name": "ModelScope",
@@ -11837,14 +11931,162 @@
     "iconURL": "https://models.dev/logos/nvidia.svg",
     "id": "nvidia",
     "models": {
-      "cosmos-nemotron-34b": {
+      "black-forest-labs/flux.1-dev": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "FLUX.1-dev is an AI model provided by nvidia.",
+        "id": "black-forest-labs/flux.1-dev",
+        "knowledge": "2024-08",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 4096,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "FLUX.1-dev",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-08-01",
+        "temperature": true,
+        "tool_call": false
+      },
+      "deepseek-ai/deepseek-v3.1": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "DeepSeek V3.1 is an AI model provided by nvidia.",
+        "id": "deepseek-ai/deepseek-v3.1",
+        "knowledge": "2024-07",
+        "last_updated": "2025-08-26",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemma-3-27b-it": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemma-3-27B-IT is an AI model provided by nvidia.",
+        "id": "google/gemma-3-27b-it",
+        "knowledge": "2024-12",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 131072,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma-3-27B-IT",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2024-12-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "microsoft/phi-4-mini-instruct": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Phi-4-Mini is an AI model provided by nvidia.",
+        "id": "microsoft/phi-4-mini-instruct",
+        "knowledge": "2024-12",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 131072,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Phi-4-Mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2024-12-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/kimi-k2-instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Kimi K2 Instruct is an AI model provided by nvidia.",
+        "id": "moonshotai/kimi-k2-instruct",
+        "knowledge": "2024-01",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 Instruct",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-01-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia/cosmos-nemotron-34b": {
         "attachment": false,
         "cost": {
           "input": 0,
           "output": 0
         },
         "description": "Cosmos Nemotron 34B is an AI model provided by nvidia.",
-        "id": "cosmos-nemotron-34b",
+        "id": "nvidia/cosmos-nemotron-34b",
         "knowledge": "2024-01",
         "last_updated": "2025-09-05",
         "limit": {
@@ -11868,131 +12110,14 @@
         "temperature": true,
         "tool_call": false
       },
-      "deepseek-r1": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "DeepSeek R1 is an AI model provided by nvidia.",
-        "id": "deepseek-r1",
-        "knowledge": "2024-11",
-        "last_updated": "2025-09-05",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek R1",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2024-11-01",
-        "temperature": true,
-        "tool_call": false
-      },
-      "deepseek-v3.1": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "DeepSeek V3.1 is an AI model provided by nvidia.",
-        "id": "deepseek-v3.1",
-        "knowledge": "2024-07",
-        "last_updated": "2025-08-26",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V3.1",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-08-20",
-        "temperature": true,
-        "tool_call": true
-      },
-      "flux_1-dev": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "FLUX.1-dev is an AI model provided by nvidia.",
-        "id": "flux_1-dev",
-        "knowledge": "2024-08",
-        "last_updated": "2025-09-05",
-        "limit": {
-          "context": 4096,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "image"
-          ]
-        },
-        "name": "FLUX.1-dev",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-08-01",
-        "temperature": true,
-        "tool_call": false
-      },
-      "gemma-3-27b-it": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Gemma-3-27B-IT is an AI model provided by nvidia.",
-        "id": "gemma-3-27b-it",
-        "knowledge": "2024-12",
-        "last_updated": "2025-09-05",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemma-3-27B-IT",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2024-12-01",
-        "temperature": true,
-        "tool_call": true
-      },
-      "llama-3.1-nemotron-ultra-253b-v1": {
+      "nvidia/llama-3.1-nemotron-ultra-253b-v1": {
         "attachment": false,
         "cost": {
           "input": 0,
           "output": 0
         },
         "description": "Llama-3.1-Nemotron-Ultra-253B-v1 is an AI model provided by nvidia.",
-        "id": "llama-3.1-nemotron-ultra-253b-v1",
+        "id": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
         "knowledge": "2024-07",
         "last_updated": "2025-09-05",
         "limit": {
@@ -12014,73 +12139,14 @@
         "temperature": true,
         "tool_call": true
       },
-      "llama-3.3-nemotron-super-49b-v1.5": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Llama-3.3-Nemotron-Super-49B-v1.5 is an AI model provided by nvidia.",
-        "id": "llama-3.3-nemotron-super-49b-v1.5",
-        "knowledge": "2023-12",
-        "last_updated": "2025-09-05",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama-3.3-Nemotron-Super-49B-v1.5",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-07-25",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mistral-small-3.1-24b-instruct-2503": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Mistral-Small-3.1-24B-Instruct-2503 is an AI model provided by nvidia.",
-        "id": "mistral-small-3.1-24b-instruct-2503",
-        "knowledge": "2023-10",
-        "last_updated": "2025-09-05",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Mistral-Small-3.1-24B-Instruct-2503",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-04-01",
-        "temperature": true,
-        "tool_call": true
-      },
-      "nemoretriever-ocr-v1": {
+      "nvidia/nemoretriever-ocr-v1": {
         "attachment": false,
         "cost": {
           "input": 0,
           "output": 0
         },
         "description": "NeMo Retriever OCR v1 is an AI model provided by nvidia.",
-        "id": "nemoretriever-ocr-v1",
+        "id": "nvidia/nemoretriever-ocr-v1",
         "knowledge": "2024-01",
         "last_updated": "2025-09-05",
         "limit": {
@@ -12102,14 +12168,14 @@
         "temperature": false,
         "tool_call": false
       },
-      "parakeet-tdt-0.6b-v2": {
+      "nvidia/parakeet-tdt-0.6b-v2": {
         "attachment": false,
         "cost": {
           "input": 0,
           "output": 0
         },
         "description": "Parakeet TDT 0.6B v2 is an AI model provided by nvidia.",
-        "id": "parakeet-tdt-0.6b-v2",
+        "id": "nvidia/parakeet-tdt-0.6b-v2",
         "knowledge": "2024-01",
         "last_updated": "2025-09-05",
         "limit": {
@@ -12131,45 +12197,72 @@
         "temperature": false,
         "tool_call": false
       },
-      "phi-4-multimodal-instruct": {
+      "openai/gpt-oss-120b": {
         "attachment": true,
         "cost": {
           "input": 0,
           "output": 0
         },
-        "description": "Phi-4-Multimodal-Instruct is an AI model provided by nvidia.",
-        "id": "phi-4-multimodal-instruct",
-        "knowledge": "2024-12",
+        "description": "GPT-OSS-120B is an AI model provided by nvidia.",
+        "id": "openai/gpt-oss-120b",
+        "knowledge": "2024-01",
         "last_updated": "2025-09-05",
         "limit": {
-          "context": 131072,
+          "context": 128000,
           "output": 8192
         },
         "modalities": {
           "input": [
-            "text",
-            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-OSS-120B",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2024-01-01",
+        "temperature": true,
+        "tool_call": false
+      },
+      "openai/whisper-large-v3": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Whisper Large v3 is an AI model provided by nvidia.",
+        "id": "openai/whisper-large-v3",
+        "knowledge": "2023-09",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 0,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
             "audio"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "Phi-4-Multimodal-Instruct",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2024-12-01",
-        "temperature": true,
-        "tool_call": true
+        "name": "Whisper Large v3",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2023-09-01",
+        "temperature": false,
+        "tool_call": false
       },
-      "qwen3-235b-a22b": {
+      "qwen/qwen3-235b-a22b": {
         "attachment": false,
         "cost": {
           "input": 0,
           "output": 0
         },
         "description": "Qwen3-235B-A22B is an AI model provided by nvidia.",
-        "id": "qwen3-235b-a22b",
+        "id": "qwen/qwen3-235b-a22b",
         "knowledge": "2024-12",
         "last_updated": "2025-09-05",
         "limit": {
@@ -12191,14 +12284,14 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3-coder-480b-a35b-instruct": {
+      "qwen/qwen3-coder-480b-a35b-instruct": {
         "attachment": false,
         "cost": {
           "input": 0,
           "output": 0
         },
         "description": "Qwen3 Coder 480B A35B Instruct is an AI model provided by nvidia.",
-        "id": "qwen3-coder-480b-a35b-instruct",
+        "id": "qwen/qwen3-coder-480b-a35b-instruct",
         "knowledge": "2025-04",
         "last_updated": "2025-07-23",
         "limit": {
@@ -12219,35 +12312,6 @@
         "release_date": "2025-07-23",
         "temperature": true,
         "tool_call": true
-      },
-      "whisper-large-v3": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Whisper Large v3 is an AI model provided by nvidia.",
-        "id": "whisper-large-v3",
-        "knowledge": "2023-09",
-        "last_updated": "2025-09-05",
-        "limit": {
-          "context": 0,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "audio"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Whisper Large v3",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2023-09-01",
-        "temperature": false,
-        "tool_call": false
       }
     },
     "name": "Nvidia",
@@ -13354,6 +13418,41 @@
           ]
         },
         "name": "GPT-5",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/openai"
+        },
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5-codex": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 10,
+          "reasoning": 10
+        },
+        "description": "GPT-5-Codex is an AI model provided by opencode.",
+        "id": "gpt-5-codex",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5-Codex",
         "open_weights": false,
         "provider": {
           "npm": "@ai-sdk/openai"
