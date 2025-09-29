@@ -1498,6 +1498,39 @@
         "release_date": "2025-05-22",
         "temperature": true,
         "tool_call": true
+      },
+      "claude-sonnet-4-5-20250929": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15,
+          "reasoning": 15
+        },
+        "description": "Claude Sonnet 4.5 is an AI model provided by anthropic.",
+        "id": "claude-sonnet-4-5-20250929",
+        "knowledge": "2025-07-31",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-29",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Anthropic",
@@ -2936,14 +2969,43 @@
         "temperature": true,
         "tool_call": true
       },
-      "deepseek-ai/DeepSeek-V3.1-Turbo": {
+      "deepseek-ai/DeepSeek-V3.1-Terminus": {
+        "attachment": false,
+        "cost": {
+          "input": 0.25,
+          "output": 1
+        },
+        "description": "DeepSeek V3.1 Terminus is an AI model provided by chutes.",
+        "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
+        "knowledge": "2025-07",
+        "last_updated": "2025-09-22",
+        "limit": {
+          "context": 131072,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.1 Terminus",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-09-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-ai/DeepSeek-V3.1-turbo": {
         "attachment": false,
         "cost": {
           "input": 1,
           "output": 3
         },
         "description": "DeepSeek V3.1 Turbo is an AI model provided by chutes.",
-        "id": "deepseek-ai/DeepSeek-V3.1-Turbo",
+        "id": "deepseek-ai/DeepSeek-V3.1-turbo",
         "last_updated": "2025-08-21",
         "limit": {
           "context": 128000,
@@ -3277,14 +3339,14 @@
         "temperature": true,
         "tool_call": true
       },
-      "zai-org/GLM-4.5-Turbo": {
+      "zai-org/GLM-4.5-turbo": {
         "attachment": false,
         "cost": {
           "input": 1,
           "output": 3
         },
         "description": "GLM 4.5 Turbo is an AI model provided by chutes.",
-        "id": "zai-org/GLM-4.5-Turbo",
+        "id": "zai-org/GLM-4.5-turbo",
         "knowledge": "2025-04",
         "last_updated": "2025-07-28",
         "limit": {
@@ -8923,6 +8985,7 @@
         "cost": {
           "cache_read": 0.075,
           "input": 0.3,
+          "input_audio": 1,
           "output": 2.5
         },
         "description": "Gemini 2.5 Flash is an AI model provided by google.",
@@ -8991,6 +9054,7 @@
         "cost": {
           "cache_read": 0.025,
           "input": 0.1,
+          "input_audio": 0.3,
           "output": 0.4
         },
         "description": "Gemini 2.5 Flash Lite Preview 06-17 is an AI model provided by google.",
@@ -9256,6 +9320,109 @@
         "reasoning": true,
         "release_date": "2025-06-05",
         "temperature": true,
+        "tool_call": true
+      },
+      "gemini-flash-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0375,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "Gemini Flash Latest is an AI model provided by google.",
+        "id": "gemini-flash-latest",
+        "knowledge": "2025-01",
+        "last_updated": "2025-09-25",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini Flash Latest",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-25",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-flash-lite-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.1,
+          "output": 0.4
+        },
+        "description": "Gemini Flash-Lite Latest is an AI model provided by google.",
+        "id": "gemini-flash-lite-latest",
+        "knowledge": "2025-01",
+        "last_updated": "2025-09-25",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini Flash-Lite Latest",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-25",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-live-2.5-flash-preview-native-audio": {
+        "attachment": false,
+        "cost": {
+          "input": 0.5,
+          "input_audio": 3,
+          "output": 2,
+          "output_audio": 12
+        },
+        "description": "Gemini Live 2.5 Flash Preview Native Audio is an AI model provided by google.",
+        "experimental": true,
+        "id": "gemini-live-2.5-flash-preview-native-audio",
+        "knowledge": "2025-01",
+        "last_updated": "2025-09-18",
+        "limit": {
+          "context": 131072,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text",
+            "audio"
+          ]
+        },
+        "name": "Gemini Live 2.5 Flash Preview Native Audio",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-06-17",
+        "temperature": false,
         "tool_call": true
       }
     },
@@ -13962,7 +14129,7 @@
         "knowledge": "2025-03-31",
         "last_updated": "2025-05-22",
         "limit": {
-          "context": 200000,
+          "context": 1000000,
           "output": 64000
         },
         "modalities": {
@@ -13981,6 +14148,42 @@
         },
         "reasoning": true,
         "release_date": "2025-05-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-sonnet-4-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15,
+          "reasoning": 15
+        },
+        "description": "Claude Sonnet 4.5 is an AI model provided by opencode.",
+        "id": "claude-sonnet-4-5",
+        "knowledge": "2025-07-31",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.5",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/anthropic"
+        },
+        "reasoning": true,
+        "release_date": "2025-09-29",
         "temperature": true,
         "tool_call": true
       },
@@ -14374,6 +14577,38 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-05-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-4.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4.5 is an AI model provided by openrouter.",
+        "id": "anthropic/claude-sonnet-4.5",
+        "knowledge": "2025-07-31",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-29",
         "temperature": true,
         "tool_call": true
       },
@@ -17021,6 +17256,38 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-07-09",
+        "temperature": true,
+        "tool_call": true
+      },
+      "x-ai/grok-4-fast": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "cache_write": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok 4 Fast is an AI model provided by openrouter.",
+        "id": "x-ai/grok-4-fast",
+        "knowledge": "2024-11",
+        "last_updated": "2025-08-19",
+        "limit": {
+          "context": 2000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4 Fast",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-19",
         "temperature": true,
         "tool_call": true
       },
@@ -19896,6 +20163,7 @@
         "cost": {
           "cache_read": 0.075,
           "input": 0.3,
+          "input_audio": 1,
           "output": 2.5
         },
         "description": "Gemini 2.5 Flash is an AI model provided by vercel.",
@@ -21180,6 +21448,98 @@
         "release_date": "2025-07-09",
         "temperature": true,
         "tool_call": true
+      },
+      "xai/grok-4-fast": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok 4 Fast is an AI model provided by vercel.",
+        "id": "xai/grok-4-fast",
+        "knowledge": "2025-07",
+        "last_updated": "2025-09-19",
+        "limit": {
+          "context": 2000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4 Fast",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-19",
+        "temperature": true,
+        "tool_call": true
+      },
+      "xai/grok-4-fast-non-reasoning": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok 4 Fast (Non-Reasoning) is an AI model provided by vercel.",
+        "id": "xai/grok-4-fast-non-reasoning",
+        "knowledge": "2025-07",
+        "last_updated": "2025-09-19",
+        "limit": {
+          "context": 2000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4 Fast (Non-Reasoning)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09-19",
+        "temperature": true,
+        "tool_call": true
+      },
+      "xai/grok-code-fast-1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.2,
+          "output": 1.5
+        },
+        "description": "Grok Code Fast 1 is an AI model provided by vercel.",
+        "id": "xai/grok-code-fast-1",
+        "knowledge": "2023-10",
+        "last_updated": "2025-08-28",
+        "limit": {
+          "context": 256000,
+          "output": 10000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok Code Fast 1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-28",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Vercel AI Gateway",
@@ -22046,6 +22406,36 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-11-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "grok-code-fast-1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.2,
+          "output": 1.5
+        },
+        "description": "Grok Code Fast 1 is an AI model provided by xai.",
+        "id": "grok-code-fast-1",
+        "knowledge": "2023-10",
+        "last_updated": "2025-08-28",
+        "limit": {
+          "context": 256000,
+          "output": 10000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok Code Fast 1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-28",
         "temperature": true,
         "tool_call": true
       },
