@@ -4362,6 +4362,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "claude-haiku-4-5-20251001": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.1,
+          "cache_write": 1.25,
+          "input": 1,
+          "output": 1.25
+        },
+        "description": "Claude Haiku 4.5 是由 anthropic 提供的人工智能模型。",
+        "id": "claude-haiku-4-5-20251001",
+        "knowledge": "2025-02-31",
+        "last_updated": "2025-10-15",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Haiku 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-10-15",
+        "temperature": true,
+        "tool_call": true
+      },
       "claude-opus-4-1-20250805": {
         "attachment": true,
         "cost": {
@@ -12353,9 +12385,10 @@
       "gemini-2.5-flash-preview-09-2025": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0375,
-          "input": 0.15,
-          "output": 0.6
+          "cache_read": 0.075,
+          "input": 0.3,
+          "input_audio": 1,
+          "output": 2.5
         },
         "description": "Gemini 2.5 Flash Preview 09-25 是由 google 提供的人工智能模型。",
         "id": "gemini-2.5-flash-preview-09-2025",
@@ -12574,9 +12607,10 @@
       "gemini-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0375,
-          "input": 0.15,
-          "output": 0.6
+          "cache_read": 0.075,
+          "input": 0.3,
+          "input_audio": 1,
+          "output": 2.5
         },
         "description": "Gemini Flash Latest 是由 google 提供的人工智能模型。",
         "id": "gemini-flash-latest",
@@ -12825,6 +12859,40 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-2.5-flash-lite": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.1,
+          "output": 0.4
+        },
+        "description": "Gemini 2.5 Flash Lite 是由 google-vertex 提供的人工智能模型。",
+        "id": "gemini-2.5-flash-lite",
+        "knowledge": "2025-01",
+        "last_updated": "2025-06-17",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-06-17",
+        "temperature": true,
+        "tool_call": true
+      },
       "gemini-2.5-flash-lite-preview-06-17": {
         "attachment": true,
         "cost": {
@@ -12856,6 +12924,40 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-06-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-2.5-flash-lite-preview-09-2025": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.1,
+          "output": 0.4
+        },
+        "description": "Gemini 2.5 Flash Lite Preview 09-25 是由 google-vertex 提供的人工智能模型。",
+        "id": "gemini-2.5-flash-lite-preview-09-2025",
+        "knowledge": "2025-01",
+        "last_updated": "2025-09-25",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash Lite Preview 09-25",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-25",
         "temperature": true,
         "tool_call": true
       },
@@ -12924,6 +13026,41 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-05-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-2.5-flash-preview-09-2025": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 0.383,
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Gemini 2.5 Flash Preview 09-25 是由 google-vertex 提供的人工智能模型。",
+        "id": "gemini-2.5-flash-preview-09-2025",
+        "knowledge": "2025-01",
+        "last_updated": "2025-09-25",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash Preview 09-25",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-25",
         "temperature": true,
         "tool_call": true
       },
@@ -13026,6 +13163,75 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-06-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-flash-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 0.383,
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Gemini Flash Latest 是由 google-vertex 提供的人工智能模型。",
+        "id": "gemini-flash-latest",
+        "knowledge": "2025-01",
+        "last_updated": "2025-09-25",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini Flash Latest",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-25",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-flash-lite-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.1,
+          "output": 0.4
+        },
+        "description": "Gemini Flash-Lite Latest 是由 google-vertex 提供的人工智能模型。",
+        "id": "gemini-flash-lite-latest",
+        "knowledge": "2025-01",
+        "last_updated": "2025-09-25",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini Flash-Lite Latest",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-25",
         "temperature": true,
         "tool_call": true
       }
@@ -16479,35 +16685,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "moonshotai/kimi-k2-0905-preview": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Kimi K2 0905 是由 nvidia 提供的人工智能模型。",
-        "id": "moonshotai/kimi-k2-0905-preview",
-        "knowledge": "2024-10",
-        "last_updated": "2025-09-05",
-        "limit": {
-          "context": 262144,
-          "output": 262144
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi K2 0905",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-09-05",
-        "temperature": true,
-        "tool_call": true
-      },
       "moonshotai/kimi-k2-instruct": {
         "attachment": false,
         "cost": {
@@ -16534,6 +16711,35 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-01-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/kimi-k2-instruct-0905": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Kimi K2 0905 是由 nvidia 提供的人工智能模型。",
+        "id": "moonshotai/kimi-k2-instruct-0905",
+        "knowledge": "2024-10",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 0905",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-05",
         "temperature": true,
         "tool_call": true
       },
@@ -17875,6 +18081,41 @@
         "temperature": true,
         "tool_call": true
       },
+      "claude-haiku-4-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.1,
+          "cache_write": 1.25,
+          "input": 1,
+          "output": 1.25
+        },
+        "description": "Claude Haiku 4.5 是由 opencode 提供的人工智能模型。",
+        "id": "claude-haiku-4-5",
+        "knowledge": "2025-02-31",
+        "last_updated": "2025-10-15",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Haiku 4.5",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/anthropic"
+        },
+        "reasoning": true,
+        "release_date": "2025-10-15",
+        "temperature": true,
+        "tool_call": true
+      },
       "claude-opus-4-1": {
         "attachment": true,
         "cost": {
@@ -18850,6 +19091,108 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-07-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-2.5-flash-lite": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.1,
+          "output": 0.4
+        },
+        "description": "Gemini 2.5 Flash Lite 是由 openrouter 提供的人工智能模型。",
+        "id": "google/gemini-2.5-flash-lite",
+        "knowledge": "2025-01",
+        "last_updated": "2025-06-17",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-06-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-2.5-flash-lite-preview-09-2025": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.1,
+          "output": 0.4
+        },
+        "description": "Gemini 2.5 Flash Lite Preview 09-25 是由 openrouter 提供的人工智能模型。",
+        "id": "google/gemini-2.5-flash-lite-preview-09-2025",
+        "knowledge": "2025-01",
+        "last_updated": "2025-09-25",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash Lite Preview 09-25",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-25",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-2.5-flash-preview-09-2025": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.031,
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Gemini 2.5 Flash Preview 09-25 是由 openrouter 提供的人工智能模型。",
+        "id": "google/gemini-2.5-flash-preview-09-2025",
+        "knowledge": "2025-01",
+        "last_updated": "2025-09-25",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash Preview 09-25",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-25",
         "temperature": true,
         "tool_call": true
       },
@@ -23566,6 +23909,182 @@
     "id": "vercel",
     "lobeIcon": "Vercel.Color",
     "models": {
+      "alibaba/qwen3-coder-plus": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 5
+        },
+        "description": "Qwen3 Coder Plus 是由 vercel 提供的人工智能模型。",
+        "id": "alibaba/qwen3-coder-plus",
+        "knowledge": "2025-04",
+        "last_updated": "2025-07-23",
+        "limit": {
+          "context": 1000000,
+          "output": 1000000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder Plus",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-07-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen3-max": {
+        "attachment": false,
+        "cost": {
+          "input": 1.2,
+          "output": 6
+        },
+        "description": "Qwen3 Max 是由 vercel 提供的人工智能模型。",
+        "id": "alibaba/qwen3-max",
+        "knowledge": "2025-04",
+        "last_updated": "2025-09-23",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Max",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen3-next-80b-a3b-instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.5,
+          "output": 2
+        },
+        "description": "Qwen3 Next 80B A3B Instruct 是由 vercel 提供的人工智能模型。",
+        "id": "alibaba/qwen3-next-80b-a3b-instruct",
+        "knowledge": "2025-04",
+        "last_updated": "2025-09-12",
+        "limit": {
+          "context": 131072,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Next 80B A3B Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-12",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen3-next-80b-a3b-thinking": {
+        "attachment": false,
+        "cost": {
+          "input": 0.5,
+          "output": 6
+        },
+        "description": "Qwen3 Next 80B A3B Thinking 是由 vercel 提供的人工智能模型。",
+        "id": "alibaba/qwen3-next-80b-a3b-thinking",
+        "knowledge": "2025-09",
+        "last_updated": "2025-09-12",
+        "limit": {
+          "context": 131072,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Next 80B A3B Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-09-12",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen3-vl-instruct": {
+        "attachment": true,
+        "cost": {
+          "input": 0.7,
+          "output": 2.8
+        },
+        "description": "Qwen3 VL Instruct 是由 vercel 提供的人工智能模型。",
+        "id": "alibaba/qwen3-vl-instruct",
+        "knowledge": "2025-04",
+        "last_updated": "2025-09-24",
+        "limit": {
+          "context": 131072,
+          "output": 129024
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 VL Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-24",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen3-vl-thinking": {
+        "attachment": true,
+        "cost": {
+          "input": 0.7,
+          "output": 8.4
+        },
+        "description": "Qwen3 VL Thinking 是由 vercel 提供的人工智能模型。",
+        "id": "alibaba/qwen3-vl-thinking",
+        "knowledge": "2025-09",
+        "last_updated": "2025-09-24",
+        "limit": {
+          "context": 131072,
+          "output": 129024
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 VL Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-09-24",
+        "temperature": true,
+        "tool_call": true
+      },
       "amazon/nova-lite": {
         "attachment": true,
         "cost": {
@@ -24035,6 +24554,93 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek/deepseek-v3.1-terminus": {
+        "attachment": false,
+        "cost": {
+          "input": 0.27,
+          "output": 1
+        },
+        "description": "DeepSeek V3.1 Terminus 是由 vercel 提供的人工智能模型。",
+        "id": "deepseek/deepseek-v3.1-terminus",
+        "knowledge": "2025-07",
+        "last_updated": "2025-09-22",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.1 Terminus",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-09-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-v3.2-exp": {
+        "attachment": false,
+        "cost": {
+          "input": 0.28,
+          "output": 0.42
+        },
+        "description": "DeepSeek V3.2 Exp 是由 vercel 提供的人工智能模型。",
+        "id": "deepseek/deepseek-v3.2-exp",
+        "knowledge": "2025-09",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 163840,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.2 Exp",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-v3.2-exp-thinking": {
+        "attachment": false,
+        "cost": {
+          "input": 0.28,
+          "output": 0.42
+        },
+        "description": "DeepSeek V3.2 Exp Thinking 是由 vercel 提供的人工智能模型。",
+        "id": "deepseek/deepseek-v3.2-exp-thinking",
+        "knowledge": "2025-09",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 163840,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.2 Exp Thinking",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-29",
+        "temperature": true,
+        "tool_call": true
+      },
       "google/gemini-2.0-flash": {
         "attachment": true,
         "cost": {
@@ -24134,6 +24740,109 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-03-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-2.5-flash-lite": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.1,
+          "output": 0.4
+        },
+        "description": "Gemini 2.5 Flash Lite 是由 vercel 提供的人工智能模型。",
+        "id": "google/gemini-2.5-flash-lite",
+        "knowledge": "2025-01",
+        "last_updated": "2025-06-17",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-06-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-2.5-flash-lite-preview-09-2025": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.1,
+          "output": 0.4
+        },
+        "description": "Gemini 2.5 Flash Lite Preview 09-25 是由 vercel 提供的人工智能模型。",
+        "id": "google/gemini-2.5-flash-lite-preview-09-2025",
+        "knowledge": "2025-01",
+        "last_updated": "2025-09-25",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash Lite Preview 09-25",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-25",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-2.5-flash-preview-09-2025": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 0.383,
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Gemini 2.5 Flash Preview 09-25 是由 vercel 提供的人工智能模型。",
+        "id": "google/gemini-2.5-flash-preview-09-2025",
+        "knowledge": "2025-01",
+        "last_updated": "2025-09-25",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash Preview 09-25",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-25",
         "temperature": true,
         "tool_call": true
       },
@@ -25126,6 +25835,124 @@
         "temperature": false,
         "tool_call": true
       },
+      "perplexity/sonar": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 1
+        },
+        "description": "Sonar 是由 vercel 提供的人工智能模型。",
+        "id": "perplexity/sonar",
+        "knowledge": "2025-02",
+        "last_updated": "2025-02-19",
+        "limit": {
+          "context": 127000,
+          "output": 8000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Sonar",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-02-19",
+        "temperature": true,
+        "tool_call": false
+      },
+      "perplexity/sonar-pro": {
+        "attachment": false,
+        "cost": {
+          "input": 3,
+          "output": 15
+        },
+        "description": "Sonar Pro 是由 vercel 提供的人工智能模型。",
+        "id": "perplexity/sonar-pro",
+        "knowledge": "2025-09",
+        "last_updated": "2025-02-19",
+        "limit": {
+          "context": 200000,
+          "output": 8000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Sonar Pro",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-02-19",
+        "temperature": true,
+        "tool_call": false
+      },
+      "perplexity/sonar-reasoning": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 5
+        },
+        "description": "Sonar Reasoning 是由 vercel 提供的人工智能模型。",
+        "id": "perplexity/sonar-reasoning",
+        "knowledge": "2025-09",
+        "last_updated": "2025-02-19",
+        "limit": {
+          "context": 127000,
+          "output": 8000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Sonar Reasoning",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-02-19",
+        "temperature": true,
+        "tool_call": false
+      },
+      "perplexity/sonar-reasoning-pro": {
+        "attachment": false,
+        "cost": {
+          "input": 2,
+          "output": 8
+        },
+        "description": "Sonar Reasoning Pro 是由 vercel 提供的人工智能模型。",
+        "id": "perplexity/sonar-reasoning-pro",
+        "knowledge": "2025-09",
+        "last_updated": "2025-02-19",
+        "limit": {
+          "context": 127000,
+          "output": 8000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Sonar Reasoning Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-02-19",
+        "temperature": true,
+        "tool_call": false
+      },
       "vercel/v0-1.0-md": {
         "attachment": true,
         "cost": {
@@ -25487,6 +26314,123 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-08-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai/glm-4.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.6,
+          "output": 2.2
+        },
+        "description": "GLM 4.5 是由 vercel 提供的人工智能模型。",
+        "id": "zai/glm-4.5",
+        "knowledge": "2025-07",
+        "last_updated": "2025-07-28",
+        "limit": {
+          "context": 128000,
+          "output": 96000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-07-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai/glm-4.5-air": {
+        "attachment": false,
+        "cost": {
+          "input": 0.2,
+          "output": 1.1
+        },
+        "description": "GLM 4.5 Air 是由 vercel 提供的人工智能模型。",
+        "id": "zai/glm-4.5-air",
+        "knowledge": "2025-04",
+        "last_updated": "2025-07-28",
+        "limit": {
+          "context": 128000,
+          "output": 96000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.5 Air",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-07-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai/glm-4.5v": {
+        "attachment": true,
+        "cost": {
+          "input": 0.6,
+          "output": 1.8
+        },
+        "description": "GLM 4.5V 是由 vercel 提供的人工智能模型。",
+        "id": "zai/glm-4.5v",
+        "knowledge": "2025-08",
+        "last_updated": "2025-08-11",
+        "limit": {
+          "context": 66000,
+          "output": 16000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.5V",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai/glm-4.6": {
+        "attachment": false,
+        "cost": {
+          "input": 0.6,
+          "output": 2.2
+        },
+        "description": "GLM 4.6 是由 vercel 提供的人工智能模型。",
+        "id": "zai/glm-4.6",
+        "knowledge": "2025-04",
+        "last_updated": "2025-09-30",
+        "limit": {
+          "context": 200000,
+          "output": 96000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-09-30",
         "temperature": true,
         "tool_call": true
       }
