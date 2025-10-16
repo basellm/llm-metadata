@@ -9,7 +9,6 @@
   "lobeIcon": "OpenCode",
   "models": {
     "an-g8x": {
-      "alpha": true,
       "attachment": false,
       "cost": {
         "input": 0.5,
@@ -18,7 +17,7 @@
       "description": "Code G8X (alpha) 是由 opencode 提供的人工智能模型。",
       "id": "an-g8x",
       "knowledge": "2025-01",
-      "last_updated": "2025-07-30",
+      "last_updated": "2025-01-01",
       "limit": {
         "context": 200000,
         "output": 128000
@@ -34,7 +33,38 @@
       "name": "Code G8X (alpha)",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2025-07-30",
+      "release_date": "2025-01-01",
+      "status": "alpha",
+      "temperature": true,
+      "tool_call": true
+    },
+    "an-gbt": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 3
+      },
+      "description": "Code GBT (beta) 是由 opencode 提供的人工智能模型。",
+      "id": "an-gbt",
+      "knowledge": "2025-01",
+      "last_updated": "2025-01-01",
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Code GBT (beta)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-01-01",
+      "status": "alpha",
       "temperature": true,
       "tool_call": true
     },
@@ -247,7 +277,6 @@
     },
     "glm-4.6": {
       "attachment": false,
-      "beta": true,
       "cost": {
         "input": 0.6,
         "output": 1.9
@@ -272,6 +301,7 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-09-30",
+      "status": "beta",
       "temperature": true,
       "tool_call": true
     },
