@@ -1,6 +1,5 @@
 {
-  "api": "https://api.aihubmix.com/v1",
-  "doc": "https://aihubmix.com/docs/models",
+  "doc": "https://docs.aihubmix.com",
   "env": [
     "AIHUBMIX_API_KEY"
   ],
@@ -96,10 +95,10 @@
     "claude-haiku-4-5": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.08,
-        "cache_write": 1,
-        "input": 0.8,
-        "output": 4
+        "cache_read": 0.11,
+        "cache_write": 1.25,
+        "input": 1.1,
+        "output": 5.5
       },
       "description": "Claude Haiku 4.5 は aihubmix によって提供される AI モデルです。",
       "id": "claude-haiku-4-5",
@@ -107,7 +106,7 @@
       "last_updated": "2025-09-29",
       "limit": {
         "context": 200000,
-        "output": 8192
+        "output": 64000
       },
       "modalities": {
         "input": [
@@ -162,8 +161,8 @@
       "cost": {
         "cache_read": 0.3,
         "cache_write": 3.75,
-        "input": 3,
-        "output": 15
+        "input": 3.3,
+        "output": 16.5
       },
       "description": "Claude Sonnet 4.5 は aihubmix によって提供される AI モデルです。",
       "id": "claude-sonnet-4-5",
@@ -202,7 +201,7 @@
       "last_updated": "2025-09-15",
       "limit": {
         "context": 1000000,
-        "output": 8192
+        "output": 65000
       },
       "modalities": {
         "input": [
@@ -260,8 +259,8 @@
       "cost": {
         "cache_read": 0.11,
         "cache_write": 0,
-        "input": 0.6,
-        "output": 2.2
+        "input": 0.27,
+        "output": 1.1
       },
       "description": "GLM-4.6 は aihubmix によって提供される AI モデルです。",
       "id": "glm-4.6",
@@ -269,7 +268,7 @@
       "last_updated": "2025-09-30",
       "limit": {
         "context": 204800,
-        "output": 131072
+        "output": 204800
       },
       "modalities": {
         "input": [
@@ -624,8 +623,8 @@
     "qwen3-235b-a22b-instruct-2507": {
       "attachment": false,
       "cost": {
-        "input": 0.15,
-        "output": 0.6
+        "input": 0.28,
+        "output": 1.12
       },
       "description": "Qwen3 235B A22B Instruct 2507 は aihubmix によって提供される AI モデルです。",
       "id": "qwen3-235b-a22b-instruct-2507",
@@ -653,8 +652,8 @@
     "qwen3-235b-a22b-thinking-2507": {
       "attachment": false,
       "cost": {
-        "input": 0.15,
-        "output": 0.6
+        "input": 0.28,
+        "output": 2.8
       },
       "description": "Qwen3 235B A22B Thinking 2507 は aihubmix によって提供される AI モデルです。",
       "id": "qwen3-235b-a22b-thinking-2507",
@@ -709,5 +708,5 @@
     }
   },
   "name": "AIHubMix",
-  "npm": "@ai-sdk/openai-compatible"
+  "npm": "@aihubmix/ai-sdk-provider"
 }
