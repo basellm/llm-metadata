@@ -13601,6 +13601,7 @@
         "tool_call": false
       },
       "gemini-embedding-001": {
+        "attachment": false,
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -13624,7 +13625,10 @@
           ]
         },
         "name": "gemini-embedding-001",
+        "open_weights": false,
+        "reasoning": false,
         "release_date": "2025-06-01",
+        "temperature": false,
         "tool_call": true
       },
       "gemini-flash-latest": {
@@ -14189,6 +14193,35 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-embedding-001": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 0
+        },
+        "description": "Gemini Embedding 001 是由 google-vertex 提供的人工智能模型。",
+        "id": "gemini-embedding-001",
+        "knowledge": "2025-05",
+        "last_updated": "2025-05-20",
+        "limit": {
+          "context": 2048,
+          "output": 3072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini Embedding 001",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-20",
+        "temperature": false,
+        "tool_call": false
+      },
       "gemini-flash-latest": {
         "attachment": true,
         "cost": {
@@ -14369,6 +14402,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "claude-haiku-4-5-20251001": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.1,
+          "cache_write": 1.25,
+          "input": 1,
+          "output": 5
+        },
+        "description": "Claude Haiku 4.5 是由 google-vertex-anthropic 提供的人工智能模型。",
+        "id": "claude-haiku-4-5-20251001",
+        "knowledge": "2025-02-31",
+        "last_updated": "2025-10-15",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Haiku 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-10-15",
+        "temperature": true,
+        "tool_call": true
+      },
       "claude-opus-4-1@20250805": {
         "attachment": true,
         "cost": {
@@ -14430,6 +14495,38 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-05-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-sonnet-4-5-20250929": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4.5 是由 google-vertex-anthropic 提供的人工智能模型。",
+        "id": "claude-sonnet-4-5-20250929",
+        "knowledge": "2025-07-31",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-29",
         "temperature": true,
         "tool_call": true
       },
@@ -15041,6 +15138,64 @@
         "release_date": "2025-07-23",
         "temperature": true,
         "tool_call": true
+      },
+      "Qwen/Qwen3-Embedding-4B": {
+        "attachment": false,
+        "cost": {
+          "input": 0.01,
+          "output": 0
+        },
+        "description": "Qwen 3 Embedding 4B 是由 huggingface 提供的人工智能模型。",
+        "id": "Qwen/Qwen3-Embedding-4B",
+        "knowledge": "2024-12",
+        "last_updated": "2025-01-01",
+        "limit": {
+          "context": 32000,
+          "output": 2048
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3 Embedding 4B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-01-01",
+        "temperature": false,
+        "tool_call": false
+      },
+      "Qwen/Qwen3-Embedding-8B": {
+        "attachment": false,
+        "cost": {
+          "input": 0.01,
+          "output": 0
+        },
+        "description": "Qwen 3 Embedding 4B 是由 huggingface 提供的人工智能模型。",
+        "id": "Qwen/Qwen3-Embedding-8B",
+        "knowledge": "2024-12",
+        "last_updated": "2025-01-01",
+        "limit": {
+          "context": 32000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3 Embedding 4B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-01-01",
+        "temperature": false,
+        "tool_call": false
       },
       "Qwen/Qwen3-Next-80B-A3B-Instruct": {
         "attachment": false,
@@ -17883,6 +18038,35 @@
         "release_date": "2024-07-01",
         "temperature": true,
         "tool_call": true
+      },
+      "nvidia/llama-embed-nemotron-8b": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Llama Embed Nemotron 8B 是由 nvidia 提供的人工智能模型。",
+        "id": "nvidia/llama-embed-nemotron-8b",
+        "knowledge": "2025-03",
+        "last_updated": "2025-03-18",
+        "limit": {
+          "context": 32768,
+          "output": 2048
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama Embed Nemotron 8B",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-03-18",
+        "temperature": false,
+        "tool_call": false
       },
       "nvidia/nemoretriever-ocr-v1": {
         "attachment": false,
