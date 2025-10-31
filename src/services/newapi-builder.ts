@@ -7,28 +7,30 @@ import type {
   NewApiVendor,
   NormalizedData,
 } from '../types/index.js';
-import { buildModelPriceInfo, buildModelTags } from '../utils/format-utils.js';
+import { buildModelPriceInfo, buildModelTags, getMaxPrices } from '../utils/format-utils.js';
 
 /** NewAPI 构建服务 */
 export class NewApiBuilder {
-  /** 计算 NewAPI 价格比率 */
+  /** 计算 NewAPI 价格比率（使用分层定价中的最高价格） */
   private calculateRatios(cost?: ModelCost): NewApiRatios | null {
-    if (!cost?.input || typeof cost.input !== 'number' || cost.input <= 0) {
+    const { maxInput, maxOutput, maxCacheRead } = getMaxPrices(cost);
+
+    if (!maxInput) {
       return null;
     }
 
     const ratios: NewApiRatios = {
-      model: cost.input / 2, // 基准: $2 per 1M tokens
+      model: maxInput / 2, // 基准: $2 per 1M tokens
       completion: null,
       cache: null,
     };
 
-    if (typeof cost.output === 'number' && cost.output > 0) {
-      ratios.completion = cost.output / cost.input;
+    if (maxOutput) {
+      ratios.completion = maxOutput / maxInput;
     }
 
-    if (typeof cost.cache_read === 'number' && cost.cache_read > 0) {
-      ratios.cache = cost.cache_read / cost.input;
+    if (maxCacheRead) {
+      ratios.cache = maxCacheRead / maxInput;
     }
 
     return ratios;

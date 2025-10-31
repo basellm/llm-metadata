@@ -14,8 +14,8 @@
     "dev": "npm run compile:watch",
     "docs-md-only": "npm run compile && node dist/build.js --docs-md-only",
     "api-only": "npm run compile && node dist/build.js --api-only",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx}\""
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
