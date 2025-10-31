@@ -31,6 +31,12 @@ function formatFieldName(field) {
 function formatPrice(symbol, value, suffix = '') {
     return `${symbol}${value}${suffix}`;
 }
+/** 从对象中提取所有数字类型的字段 */
+function extractNumericFields(obj) {
+    return Object.entries(obj)
+        .filter(([, value]) => typeof value === 'number')
+        .map(([key, value]) => [key, value]);
+}
 /** 定价字段配置（按优先级排序） */
 const PRICING_FIELD_CONFIGS = [
     // 1. 基础 input/output 字段
@@ -119,6 +125,14 @@ const PRICING_FIELD_CONFIGS = [
         },
     },
 ];
+/** 所有已知的显式字段（从配置自动生成） */
+const KNOWN_FIELDS = (() => {
+    const fields = new Set();
+    PRICING_FIELD_CONFIGS.forEach((config) => {
+        config.keys.forEach((key) => fields.add(key));
+    });
+    return fields;
+})();
 /** 格式化定价信息 */
 export function formatPricing(cost) {
     if (!cost)
@@ -133,23 +147,13 @@ export function formatPricing(cost) {
             break;
         }
     }
-    // 添加缓存字段（作为补充信息）
-    const cacheFields = [
-        ['Cache Read', 'cache_read'],
-        ['Cache Write', 'cache_write'],
-    ];
-    cacheFields.forEach(([label, key]) => {
-        if (cost[key] !== undefined) {
-            lines.push(`${label}: ${formatPrice(symbol, cost[key])}`);
-        }
+    // 显示所有其他数字字段（包括 cache、分层定价、推理模式等）
+    const otherFields = extractNumericFields(cost)
+        .filter(([key]) => !KNOWN_FIELDS.has(key))
+        .sort(([a], [b]) => a.localeCompare(b)); // 按字段名排序
+    otherFields.forEach(([key, value]) => {
+        lines.push(`${formatFieldName(key)}: ${formatPrice(symbol, value)}`);
     });
-    // 如果没有匹配到任何已知字段，显示动态字段
-    if (lines.length === 0) {
-        const dynamicFields = Object.entries(cost).filter(([key, value]) => key !== 'currency' && typeof value === 'number');
-        dynamicFields.slice(0, 3).forEach(([key, value]) => {
-            lines.push(`${formatFieldName(key)}: ${formatPrice(symbol, value)}`);
-        });
-    }
     return lines.length > 0 ? lines.join('<br/>') : '-';
 }
 /** 能力标志映射 */
