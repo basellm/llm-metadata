@@ -163,7 +163,7 @@ ${intro}
   }
 
   /** 格式化 NewAPI 比率显示 */
-  private formatNewApiRatios(ratios: NewApiRatios | null): string {
+  private formatNewApiRatios(ratios: NewApiRatios | null, cost?: ModelCost): string {
     if (!ratios) return '-';
 
     const parts = [`Model: ${ratios.model.toFixed(3)}`];
@@ -174,6 +174,14 @@ ${intro}
 
     if (ratios.cache !== null) {
       parts.push(`Cache: ${ratios.cache.toFixed(3)}`);
+    }
+
+    // 如果货币不是 USD，添加换算提示
+    const currency = cost?.currency || 'USD';
+    if (currency !== 'USD') {
+      parts.push(
+        `<span style="color: #888; font-size: 0.9em;">(${currency} pricing, multiply by USD/${currency} rate for NewAPI)</span>`,
+      );
     }
 
     return parts.join('<br/>');
@@ -197,7 +205,7 @@ ${intro}
       releaseRaw,
       releaseTs,
       pricing: formatPricing(model.cost),
-      ratios: this.formatNewApiRatios(this.calculateNewApiRatios(model.cost)),
+      ratios: this.formatNewApiRatios(this.calculateNewApiRatios(model.cost), model.cost),
       capabilities: formatCapabilities(model),
       knowledge: model.knowledge,
       modalities: formatModalities(model.modalities),
@@ -283,7 +291,7 @@ ${intro}
         formatLimit(model.limit?.context),
         formatLimit(model.limit?.output),
         formatPricing(model.cost),
-        this.formatNewApiRatios(this.calculateNewApiRatios(model.cost)),
+        this.formatNewApiRatios(this.calculateNewApiRatios(model.cost), model.cost),
         formatCapabilities(model),
         model.knowledge || '-',
         formatModalities(model.modalities),
