@@ -9438,34 +9438,6 @@
       ]
     },
     {
-      "description": "Devstral Small (2505) 是由 chutes 提供的人工智能模型。",
-      "firm": "chutes",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:chutes",
-      "id": "chutesai/Devstral-Small-2505",
-      "maxCtxTokens": 32768,
-      "maxOutputTokens": 32768,
-      "name": "Devstral Small (2505)",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 0.02,
-        "output": 0.08
-      },
-      "tags": [
-        "tools",
-        "open_weights",
-        "32.8K"
-      ]
-    },
-    {
       "description": "Mistral Small 3.2 24B Instruct (2506) 是由 chutes 提供的人工智能模型。",
       "firm": "chutes",
       "flags": {
@@ -9662,33 +9634,6 @@
       ]
     },
     {
-      "description": "DeepSeek V3.1 Turbo 是由 chutes 提供的人工智能模型。",
-      "firm": "chutes",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:chutes",
-      "id": "deepseek-ai/DeepSeek-V3.1-turbo",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 128000,
-      "name": "DeepSeek V3.1 Turbo",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 1,
-        "output": 3
-      },
-      "tags": [
-        "tools",
-        "128K"
-      ]
-    },
-    {
       "description": "DeepSeek V3.1 Reasoning 是由 chutes 提供的人工智能模型。",
       "firm": "chutes",
       "flags": {
@@ -9774,30 +9719,32 @@
       ]
     },
     {
-      "description": "Kimi Dev 72B 是由 chutes 提供的人工智能模型。",
+      "description": "MiniMax M2 是由 chutes 提供的人工智能模型。",
       "firm": "chutes",
       "flags": {
         "attachment": false,
         "audio": false,
         "image": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "lb:chutes",
-      "id": "moonshotai/Kimi-Dev-72B",
-      "maxCtxTokens": 131072,
-      "maxOutputTokens": 131072,
-      "name": "Kimi Dev 72B",
+      "id": "minimaxai/MiniMax-M2",
+      "maxCtxTokens": 200000,
+      "maxOutputTokens": 128000,
+      "name": "MiniMax M2",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.06664,
-        "output": 0.266688
+        "input": 0.15,
+        "output": 0.45
       },
       "tags": [
+        "reasoning",
         "tools",
-        "131.1K"
+        "open_weights",
+        "200K"
       ]
     },
     {
@@ -10027,35 +9974,6 @@
       ]
     },
     {
-      "description": "Qwen3 30B A3B Thinking 2507 是由 chutes 提供的人工智能模型。",
-      "firm": "chutes",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:chutes",
-      "id": "Qwen/Qwen3-30B-A3B-Thinking-2507",
-      "maxCtxTokens": 262144,
-      "maxOutputTokens": 262144,
-      "name": "Qwen3 30B A3B Thinking 2507",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 0.08,
-        "output": 0.29
-      },
-      "tags": [
-        "reasoning",
-        "tools",
-        "open_weights",
-        "262.1K"
-      ]
-    },
-    {
       "description": "Qwen3 Coder 30B A3B Instruct 是由 chutes 提供的人工智能模型。",
       "firm": "chutes",
       "flags": {
@@ -10224,6 +10142,35 @@
       ]
     },
     {
+      "description": "GLM 4.5 是由 chutes 提供的人工智能模型。",
+      "firm": "chutes",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:chutes",
+      "id": "zai-org/GLM-4.5",
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 131072,
+      "name": "GLM 4.5",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.35,
+        "output": 1.55
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "131.1K"
+      ]
+    },
+    {
       "description": "GLM 4.5 Air 是由 chutes 提供的人工智能模型。",
       "firm": "chutes",
       "flags": {
@@ -10282,7 +10229,7 @@
       ]
     },
     {
-      "description": "GLM 4.5 Turbo 是由 chutes 提供的人工智能模型。",
+      "description": "GLM 4.6 是由 chutes 提供的人工智能模型。",
       "firm": "chutes",
       "flags": {
         "attachment": false,
@@ -10293,21 +10240,21 @@
         "tool_call": true
       },
       "icon": "lb:chutes",
-      "id": "zai-org/GLM-4.5-turbo",
-      "maxCtxTokens": 131072,
+      "id": "zai-org/GLM-4.6",
+      "maxCtxTokens": 204800,
       "maxOutputTokens": 131072,
-      "name": "GLM 4.5 Turbo",
+      "name": "GLM 4.6",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 1,
-        "output": 3
+        "input": 0.4,
+        "output": 1.75
       },
       "tags": [
         "reasoning",
         "tools",
         "open_weights",
-        "131.1K"
+        "204.8K"
       ]
     },
     {
