@@ -15,6 +15,7 @@ export const ALLOWED_MODEL_OVERRIDE_KEYS = [
     'modalities',
     'limit',
     'cost',
+    'currency',
 ];
 export const ALLOWED_MODEL_OVERRIDE_KEY_SET = new Set(ALLOWED_MODEL_OVERRIDE_KEYS);
 //# sourceMappingURL=override-keys.js.map

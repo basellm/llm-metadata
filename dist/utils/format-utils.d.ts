@@ -10,6 +10,7 @@ export declare function formatPricing(cost?: {
     output?: number;
     cache_read?: number;
     cache_write?: number;
+    currency?: 'USD' | 'CNY';
 }): string;
 /** 格式化能力标志 */
 export declare function formatCapabilities(model: {
