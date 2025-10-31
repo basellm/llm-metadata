@@ -41,11 +41,11 @@ function extractNumericFields(obj) {
 const PRICING_FIELD_CONFIGS = [
     // 1. 基础 input/output 字段
     {
-        keys: ['input'],
+        keys: ['input', 'output'],
         priority: 1,
         formatter: (cost, symbol) => {
             const output = cost.output !== undefined ? formatPrice(symbol, cost.output) : '-';
-            return [`In: ${formatPrice(symbol, cost.input)}<br/>Out: ${output}`];
+            return [`Input: ${formatPrice(symbol, cost.input)}<br/>Output: ${output}`];
         },
     },
     // 2. 多模态字段
@@ -55,9 +55,9 @@ const PRICING_FIELD_CONFIGS = [
         formatter: (cost, symbol) => {
             const lines = [];
             const inputs = [
-                ['Text In', 'text_input', ''],
-                ['Vision In', 'vision_input', ''],
-                ['Audio In', 'audio_input', ''],
+                ['Text Input', 'text_input', ''],
+                ['Vision Input', 'vision_input', ''],
+                ['Audio Input', 'audio_input', ''],
             ];
             inputs.forEach(([label, key]) => {
                 if (cost[key] !== undefined)
@@ -65,9 +65,9 @@ const PRICING_FIELD_CONFIGS = [
             });
             // 多模态输出
             const outputs = [
-                ['Out', 'multi_output'],
-                ['Multi Out', 'multiin_text_output'],
-                ['Pure Out', 'purein_text_output'],
+                ['Output', 'multi_output'],
+                ['Multi Output', 'multiin_text_output'],
+                ['Pure Output', 'purein_text_output'],
             ];
             for (const [label, key] of outputs) {
                 if (cost[key] !== undefined) {
@@ -244,6 +244,32 @@ export function buildModelPriceInfo(cost) {
         output: extractValidPrice(cost?.output),
         cacheRead: extractValidPrice(cost?.cache_read),
         cacheWrite: extractValidPrice(cost?.cache_write),
+    };
+}
+/** 获取最高价格（用于 NewAPI 比率计算） */
+export function getMaxPrices(cost) {
+    if (!cost) {
+        return { maxInput: null, maxOutput: null, maxCacheRead: null };
+    }
+    const numericFields = extractNumericFields(cost);
+    // 收集所有 input 相关字段
+    const inputFields = numericFields
+        .filter(([key]) => key === 'input' || key.startsWith('input_') || key.startsWith('thinking_input'))
+        .map(([, value]) => value);
+    // 收集所有 output 相关字段
+    const outputFields = numericFields
+        .filter(([key]) => key === 'output' || key.startsWith('output_') || key.startsWith('thinking_output'))
+        .map(([, value]) => value);
+    // 收集所有 cache_read 相关字段
+    const cacheReadFields = numericFields
+        .filter(([key]) => key === 'cache_read' ||
+        key.startsWith('cache_read_') ||
+        key.startsWith('thinking_cache_read'))
+        .map(([, value]) => value);
+    return {
+        maxInput: inputFields.length > 0 ? Math.max(...inputFields) : null,
+        maxOutput: outputFields.length > 0 ? Math.max(...outputFields) : null,
+        maxCacheRead: cacheReadFields.length > 0 ? Math.max(...cacheReadFields) : null,
     };
 }
 //# sourceMappingURL=format-utils.js.map

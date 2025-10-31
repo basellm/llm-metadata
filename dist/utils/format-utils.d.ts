@@ -38,5 +38,11 @@ export declare function buildModelPriceInfo(cost?: ModelCost): {
     cacheRead: number | null;
     cacheWrite: number | null;
 };
+/** 获取最高价格（用于 NewAPI 比率计算） */
+export declare function getMaxPrices(cost?: ModelCost): {
+    maxInput: number | null;
+    maxOutput: number | null;
+    maxCacheRead: number | null;
+};
 export {};
 //# sourceMappingURL=format-utils.d.ts.map

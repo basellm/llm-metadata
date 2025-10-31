@@ -1,5 +1,5 @@
 import { I18nService } from './i18n-service.js';
-import { escapeMarkdownPipes, formatCapabilities, formatDetails, formatLimit, formatModalities, formatPricing, } from '../utils/format-utils.js';
+import { escapeMarkdownPipes, formatCapabilities, formatDetails, formatLimit, formatModalities, formatPricing, getMaxPrices, } from '../utils/format-utils.js';
 // 常量配置
 const TIME_PERIODS = {
     WEEK_MS: 7 * 24 * 60 * 60 * 1000,
@@ -77,19 +77,20 @@ ${intro}
     }
     /** 计算 NewAPI 比率（文档用） */
     calculateNewApiRatios(cost) {
-        if (!cost?.input || typeof cost.input !== 'number' || cost.input <= 0) {
+        const { maxInput, maxOutput, maxCacheRead } = getMaxPrices(cost);
+        if (!maxInput) {
             return null;
         }
         const ratios = {
-            model: cost.input / 2, // 基准: $2 per 1M tokens
+            model: maxInput / 2, // 基准: $2 per 1M tokens
             completion: null,
             cache: null,
         };
-        if (typeof cost.output === 'number' && cost.output > 0) {
-            ratios.completion = cost.output / cost.input;
+        if (maxOutput) {
+            ratios.completion = maxOutput / maxInput;
         }
-        if (typeof cost.cache_read === 'number' && cost.cache_read > 0) {
-            ratios.cache = cost.cache_read / cost.input;
+        if (maxCacheRead) {
+            ratios.cache = maxCacheRead / maxInput;
         }
         return ratios;
     }

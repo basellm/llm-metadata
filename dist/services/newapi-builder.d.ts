@@ -1,7 +1,7 @@
 import type { NewApiPriceConfig, NewApiSyncPayload, NormalizedData } from '../types/index.js';
 /** NewAPI 构建服务 */
 export declare class NewApiBuilder {
-    /** 计算 NewAPI 价格比率 */
+    /** 计算 NewAPI 价格比率（使用分层定价中的最高价格） */
     private calculateRatios;
     /** 计算每百万 tokens 的美元价格与倍率字段 */
     private buildPricingFields;
