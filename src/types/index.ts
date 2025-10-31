@@ -29,11 +29,41 @@ export interface ModelLimits {
 
 /** 模型成本信息 */
 export interface ModelCost {
+  // 货币类型（必填）
+  currency?: 'CNY' | 'USD' | 'EUR';
+
+  // 基础字段
   input?: number;
   output?: number;
   cache_read?: number;
   cache_write?: number;
-  currency?: 'USD' | 'CNY';
+
+  // 多模态输入字段
+  text_input?: number;
+  vision_input?: number;
+  audio_input?: number;
+
+  // 多模态输出字段
+  multi_output?: number;
+  multiin_text_output?: number;
+  purein_text_output?: number;
+
+  // 特殊字段
+  text?: number;
+  vl?: number;
+
+  // 嵌入模型字段
+  embedding_text?: number;
+  embedding_image?: number;
+
+  // 按单位计费字段
+  per_second?: number;
+  per_10k_chars?: number;
+  per_image?: number;
+
+  // 动态字段支持（分段定价、推理模式等）
+  // 支持模式如: input_32k_128k, output_128k_256k, thinking_input, thinking_output_256k_1m 等
+  [key: string]: number | string | undefined;
 }
 
 /** 模型支持的模态 */
