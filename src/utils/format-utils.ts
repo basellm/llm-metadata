@@ -32,15 +32,17 @@ export function formatPricing(cost?: {
   output?: number;
   cache_read?: number;
   cache_write?: number;
+  currency?: 'USD' | 'CNY';
 }): string {
   if (!cost?.input) return '-';
 
+  const currencySymbol = cost.currency === 'CNY' ? '¥' : '$';
   const input = cost.input;
   const output = cost.output || '-';
-  const cacheRead = cost.cache_read ? `<br/>Cache Read: $${cost.cache_read}` : '';
-  const cacheWrite = cost.cache_write ? `<br/>Cache Write: $${cost.cache_write}` : '';
+  const cacheRead = cost.cache_read ? `<br/>Cache Read: ${currencySymbol}${cost.cache_read}` : '';
+  const cacheWrite = cost.cache_write ? `<br/>Cache Write: ${currencySymbol}${cost.cache_write}` : '';
 
-  return `In: $${input}<br/>Out: $${output}${cacheRead}${cacheWrite}`;
+  return `In: ${currencySymbol}${input}<br/>Out: ${currencySymbol}${output}${cacheRead}${cacheWrite}`;
 }
 
 /** 格式化能力标志 */

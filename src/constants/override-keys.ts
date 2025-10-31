@@ -16,6 +16,7 @@ export const ALLOWED_MODEL_OVERRIDE_KEYS = [
   'modalities',
   'limit',
   'cost',
+  'currency',
 ] as const;
 
 export type AllowedModelOverrideKey = (typeof ALLOWED_MODEL_OVERRIDE_KEYS)[number];

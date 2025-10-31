@@ -33,6 +33,7 @@ export interface ModelCost {
   output?: number;
   cache_read?: number;
   cache_write?: number;
+  currency?: 'USD' | 'CNY';
 }
 
 /** 模型支持的模态 */
