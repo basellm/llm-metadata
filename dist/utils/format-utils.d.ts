@@ -5,21 +5,17 @@ export declare function formatTokensToKM(tokens?: number): string | null;
 /** 转义 Markdown 管道符 */
 export declare function escapeMarkdownPipes(text?: string): string;
 /** 格式化定价信息 */
-export declare function formatPricing(cost?: {
-    input?: number;
-    output?: number;
-    cache_read?: number;
-    cache_write?: number;
-    currency?: 'USD' | 'CNY';
-}): string;
-/** 格式化能力标志 */
-export declare function formatCapabilities(model: {
+export declare function formatPricing(cost?: ModelCost): string;
+/** 能力模型类型 */
+type CapabilityModel = {
     attachment?: boolean;
     reasoning?: boolean;
     tool_call?: boolean;
     temperature?: boolean;
     image?: boolean;
-}): string;
+};
+/** 格式化能力标志 */
+export declare function formatCapabilities(model: CapabilityModel): string;
 /** 格式化模态信息 */
 export declare function formatModalities(modalities?: {
     input?: string[];
@@ -35,10 +31,12 @@ export declare function formatDetails(model: {
 export declare function formatLimit(value?: number): string;
 /** 构建模型标签字符串 */
 export declare function buildModelTags(model: any, map?: Record<string, string>): string[];
+/** 构建模型价格信息 */
 export declare function buildModelPriceInfo(cost?: ModelCost): {
     input: number | null;
     output: number | null;
     cacheRead: number | null;
     cacheWrite: number | null;
 };
+export {};
 //# sourceMappingURL=format-utils.d.ts.map

@@ -24,11 +24,25 @@ export interface ModelLimits {
 }
 /** 模型成本信息 */
 export interface ModelCost {
+    currency?: 'CNY' | 'USD' | 'EUR';
     input?: number;
     output?: number;
     cache_read?: number;
     cache_write?: number;
-    currency?: 'USD' | 'CNY';
+    text_input?: number;
+    vision_input?: number;
+    audio_input?: number;
+    multi_output?: number;
+    multiin_text_output?: number;
+    purein_text_output?: number;
+    text?: number;
+    vl?: number;
+    embedding_text?: number;
+    embedding_image?: number;
+    per_second?: number;
+    per_10k_chars?: number;
+    per_image?: number;
+    [key: string]: number | string | undefined;
 }
 /** 模型支持的模态 */
 export interface ModelModalities {
