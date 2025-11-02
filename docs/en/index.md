@@ -25,6 +25,7 @@ A lightweight static API for discovering and integrating large language model (L
 | `/api/providers.json`                                   | Provider list and statistics  | Get provider list and model count statistics         |
 | `/api/all.json`                                         | Complete model dataset        | Get detailed information for all models              |
 | `/api/newapi/ratio_config-v1-base.json`                 | New API price ratios          | Price calculation ratios for New API system          |
+| `/api/newapi/providers/{providerId}/ratio_config-v1-base.json` | New API price ratios (per provider) | Example: `/api/newapi/providers/anthropic/ratio_config-v1-base.json` |
 | `/api/newapi/vendors.json`                              | New API vendors payload       | Vendor rows adapted for New API system               |
 | `/api/newapi/models.json`                               | New API models payload        | Model rows adapted for New API system                |
 | `/api/voapi/firms.json`                                 | VoAPI firms payload           | Firm rows adapted for VoAPI system                   |

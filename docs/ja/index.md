@@ -25,6 +25,7 @@ hide:
 | `/api/providers.json`                                   | プロバイダー一覧と統計       | プロバイダー一覧とモデル数統計                |
 | `/api/all.json`                                         | 完全なモデルデータセット     | すべてのモデルの詳細情報                      |
 | `/api/newapi/ratio_config-v1-base.json`                 | New API 価格比率             | New API システムにおける価格計算の比率        |
+| `/api/newapi/providers/{providerId}/ratio_config-v1-base.json` | 単一プロバイダーの New API 価格比率 | 例：`/api/newapi/providers/anthropic/ratio_config-v1-base.json` |
 | `/api/newapi/vendors.json`                              | New API ベンダーデータ       | New API システム向けのベンダーデータ          |
 | `/api/newapi/models.json`                               | New API モデルデータ         | New API システム向けのモデルデータ            |
 | `/api/voapi/firms.json`                                 | VoAPI 企業データ             | VoAPI システム向けの企業データ                |

@@ -25,6 +25,7 @@ hide:
 | `/api/providers.json`                                   | 提供商列表与统计     | 获取提供商列表以及模型数量统计                  |
 | `/api/all.json`                                         | 完整模型数据集       | 获取所有模型的详细信息                          |
 | `/api/newapi/ratio_config-v1-base.json`                 | New API 价格比率     | New API 系统用于价格计算的比率配置              |
+| `/api/newapi/providers/{providerId}/ratio_config-v1-base.json` | 单一提供商的 New API 价格比率 | 示例：`/api/newapi/providers/anthropic/ratio_config-v1-base.json` |
 | `/api/newapi/vendors.json`                              | New API 供应商数据   | 适配 New API 系统的供应商数据行                 |
 | `/api/newapi/models.json`                               | New API 模型数据     | 适配 New API 系统的模型数据行                   |
 | `/api/voapi/firms.json`                                 | VoAPI 供应商数据     | 适配 VoAPI 系统的供应商数据行                   |

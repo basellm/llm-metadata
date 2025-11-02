@@ -111,8 +111,8 @@ export class NewApiBuilder {
     return { vendors, models };
   }
 
-  /** 构建 NewAPI 价格配置 */
-  buildPriceConfig(allModelsData: NormalizedData): NewApiPriceConfig {
+  /** 构建 NewAPI 价格配置（可选按提供商过滤） */
+  buildPriceConfig(allModelsData: NormalizedData, providerId?: string): NewApiPriceConfig {
     const config: NewApiPriceConfig = {
       data: {
         cache_ratio: {},
@@ -123,7 +123,13 @@ export class NewApiBuilder {
       success: true,
     };
 
-    for (const provider of Object.values(allModelsData.providers)) {
+    const providers = providerId
+      ? allModelsData.providers[providerId]
+        ? [allModelsData.providers[providerId]]
+        : []
+      : Object.values(allModelsData.providers);
+
+    for (const provider of providers) {
       for (const [modelId, model] of Object.entries(provider.models || {})) {
         const ratios = this.calculateRatios(model.cost);
         if (ratios) {
