@@ -141,8 +141,15 @@ ${intro}
   private calculateNewApiRatios(cost?: ModelCost): NewApiRatios | null {
     const { maxInput, maxOutput, maxCacheRead } = getMaxPrices(cost);
 
+    // 无 token 定价时尝试使用单位计费的最低价格作为倍率
     if (!maxInput) {
-      return null;
+      const minUnit = this.getMinUnitPrice(cost);
+      if (minUnit === null) return null;
+      return {
+        model: minUnit,
+        completion: null,
+        cache: null,
+      };
     }
 
     const ratios: NewApiRatios = {
@@ -160,6 +167,23 @@ ${intro}
     }
 
     return ratios;
+  }
+
+  /** 提取单位计费的最小价格（per_image、per_second、per_10k_chars 及其变体） */
+  private getMinUnitPrice(cost?: ModelCost): number | null {
+    if (!cost) return null;
+    const entries = Object.entries(cost).filter(([, v]) => typeof v === 'number') as [
+      string,
+      number,
+    ][];
+    const unitPrices: number[] = [];
+    for (const [key, value] of entries) {
+      if (/^(per_image|per_second|per_10k_chars)(\b|_)/.test(key)) {
+        if (value > 0) unitPrices.push(value);
+      }
+    }
+    if (unitPrices.length === 0) return null;
+    return Math.min(...unitPrices);
   }
 
   /** 格式化 NewAPI 比率显示 */

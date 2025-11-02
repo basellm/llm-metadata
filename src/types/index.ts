@@ -245,6 +245,8 @@ export interface NewApiPriceConfig {
     cache_ratio: Record<string, number>;
     completion_ratio: Record<string, number>;
     model_ratio: Record<string, number>;
+    /** 单位计费价格（按最小可用单价，单位与提供商标注一致，例如 /img 或 /s 等） */
+    model_price: Record<string, number>;
   };
   message: string;
   success: boolean;
