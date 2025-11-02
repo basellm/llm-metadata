@@ -247,6 +247,22 @@ class Builder {
             if (writeJSONIfChanged(join(newapiDir, 'ratio_config-v1-base.json'), priceConfig, { dryRun })) {
                 changes++;
             }
+            // 按提供商生成 NewAPI 价格配置
+            {
+                const providersBaseDir = join(newapiDir, 'providers');
+                ensureDirSync(providersBaseDir);
+                for (const providerId of Object.keys(allModelsData.providers)) {
+                    const safeProvider = sanitizeFileSegment(providerId);
+                    const outDir = join(providersBaseDir, safeProvider);
+                    ensureDirSync(outDir);
+                    const priceConfigForProvider = this.newApiBuilder.buildPriceConfig(allModelsData, providerId);
+                    if (writeJSONIfChanged(join(outDir, 'ratio_config-v1-base.json'), priceConfigForProvider, {
+                        dryRun,
+                    })) {
+                        changes++;
+                    }
+                }
+            }
             // 生成多语言 NewAPI（按 locales 输出至 api/i18n/<locale>/newapi）
             {
                 const locales = this.i18nService.getLocales().map((l) => l.locale);
