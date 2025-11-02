@@ -149,13 +149,15 @@ export class NewApiBuilder {
 
     for (const provider of providers) {
       for (const [modelId, model] of Object.entries(provider.models || {})) {
-        const ratios = this.calculateRatios(model.cost);
         const minUnit = this.getMinUnitPrice(model.cost);
-
         if (minUnit !== null) {
+          // 单位计费模型：只输出 model_price，且不输出任何 ratio 字段
           config.data.model_price[modelId] = minUnit;
+          continue;
         }
 
+        // 非单位计费模型：按 token 定价计算比率
+        const ratios = this.calculateRatios(model.cost);
         if (ratios) {
           config.data.model_ratio[modelId] = ratios.model;
 
@@ -166,9 +168,6 @@ export class NewApiBuilder {
           if (ratios.cache !== null) {
             config.data.cache_ratio[modelId] = ratios.cache;
           }
-        } else if (minUnit !== null) {
-          // 无 token 定价时，使用单位计费的最低价格作为倍率
-          config.data.model_ratio[modelId] = minUnit;
         }
       }
     }
