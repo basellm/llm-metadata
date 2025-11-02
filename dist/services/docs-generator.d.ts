@@ -11,6 +11,8 @@ export declare class DocumentationGenerator {
     private parseDateToTimestamp;
     /** 计算 NewAPI 比率（文档用） */
     private calculateNewApiRatios;
+    /** 提取单位计费的最小价格（per_image、per_second、per_10k_chars 及其变体） */
+    private getMinUnitPrice;
     /** 格式化 NewAPI 比率显示 */
     private formatNewApiRatios;
     /** 构建模型行数据 */
