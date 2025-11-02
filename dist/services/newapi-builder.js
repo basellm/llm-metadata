@@ -73,8 +73,8 @@ export class NewApiBuilder {
         }
         return { vendors, models };
     }
-    /** 构建 NewAPI 价格配置 */
-    buildPriceConfig(allModelsData) {
+    /** 构建 NewAPI 价格配置（可选按提供商过滤） */
+    buildPriceConfig(allModelsData, providerId) {
         const config = {
             data: {
                 cache_ratio: {},
@@ -84,7 +84,12 @@ export class NewApiBuilder {
             message: '',
             success: true,
         };
-        for (const provider of Object.values(allModelsData.providers)) {
+        const providers = providerId
+            ? allModelsData.providers[providerId]
+                ? [allModelsData.providers[providerId]]
+                : []
+            : Object.values(allModelsData.providers);
+        for (const provider of providers) {
             for (const [modelId, model] of Object.entries(provider.models || {})) {
                 const ratios = this.calculateRatios(model.cost);
                 if (ratios) {

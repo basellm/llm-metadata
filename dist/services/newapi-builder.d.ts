@@ -7,7 +7,7 @@ export declare class NewApiBuilder {
     private buildPricingFields;
     /** 构建 NewAPI 同步载荷 */
     buildSyncPayload(allModelsData: NormalizedData, tagMap?: Record<string, string>): NewApiSyncPayload;
-    /** 构建 NewAPI 价格配置 */
-    buildPriceConfig(allModelsData: NormalizedData): NewApiPriceConfig;
+    /** 构建 NewAPI 价格配置（可选按提供商过滤） */
+    buildPriceConfig(allModelsData: NormalizedData, providerId?: string): NewApiPriceConfig;
 }
 //# sourceMappingURL=newapi-builder.d.ts.map
