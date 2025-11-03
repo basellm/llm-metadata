@@ -20352,6 +20352,35 @@
         "temperature": false,
         "tool_call": false
       },
+      "nvidia/nvidia-nemotron-nano-9b-v2": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "nvidia-nemotron-nano-9b-v2 is an AI model provided by nvidia.",
+        "id": "nvidia/nvidia-nemotron-nano-9b-v2",
+        "knowledge": "2024-09",
+        "last_updated": "2025-08-18",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "nvidia-nemotron-nano-9b-v2",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-18",
+        "temperature": true,
+        "tool_call": true
+      },
       "nvidia/parakeet-tdt-0.6b-v2": {
         "attachment": false,
         "cost": {
@@ -20494,6 +20523,64 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-07-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3-next-80b-a3b-instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3-Next-80B-A3B-Instruct is an AI model provided by nvidia.",
+        "id": "qwen/qwen3-next-80b-a3b-instruct",
+        "knowledge": "2024-12",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 262144,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-Next-80B-A3B-Instruct",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-12-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3-next-80b-a3b-thinking": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3-Next-80B-A3B-Thinking is an AI model provided by nvidia.",
+        "id": "qwen/qwen3-next-80b-a3b-thinking",
+        "knowledge": "2024-12",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 262144,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-Next-80B-A3B-Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2024-12-01",
         "temperature": true,
         "tool_call": true
       }
@@ -21805,10 +21892,11 @@
       "glm-4.6": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.1,
           "input": 0.6,
-          "output": 1.9
+          "output": 2.2
         },
-        "description": "GLM-4.6 (beta) is an AI model provided by opencode.",
+        "description": "GLM-4.6 is an AI model provided by opencode.",
         "id": "glm-4.6",
         "knowledge": "2025-04",
         "last_updated": "2025-09-30",
@@ -21824,11 +21912,10 @@
             "text"
           ]
         },
-        "name": "GLM-4.6 (beta)",
+        "name": "GLM-4.6",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-09-30",
-        "status": "beta",
         "temperature": true,
         "tool_call": true
       },
