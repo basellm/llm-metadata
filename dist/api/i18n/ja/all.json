@@ -24121,6 +24121,35 @@
         "temperature": true,
         "tool_call": true
       },
+      "kwaipilot/kat-coder-pro:free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Kat Coder Pro (free) は openrouter によって提供される AI モデルです。",
+        "id": "kwaipilot/kat-coder-pro:free",
+        "knowledge": "2025-11",
+        "last_updated": "2025-11-10",
+        "limit": {
+          "context": 256000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kat Coder Pro (free)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-11-10",
+        "temperature": true,
+        "tool_call": true
+      },
       "meta-llama/llama-3.2-11b-vision-instruct": {
         "attachment": true,
         "cost": {
@@ -30476,8 +30505,10 @@
       "minimax/minimax-m2": {
         "attachment": false,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.03,
+          "cache_write": 0.38,
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "MiniMax M2 は vercel によって提供される AI モデルです。",
         "id": "minimax/minimax-m2",
