@@ -40,21 +40,21 @@
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-4-sonnet-20250522": {
+    "anthropic/claude-haiku-4-5": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
+        "cache_read": 0.1,
+        "cache_write": 1.25,
+        "input": 1,
+        "output": 5
       },
-      "description": "Claude Sonnet 4 是由 requesty 提供的人工智能模型。",
-      "id": "anthropic/claude-4-sonnet-20250522",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-22",
+      "description": "Claude Haiku 4.5 是由 requesty 提供的人工智能模型。",
+      "id": "anthropic/claude-haiku-4-5",
+      "knowledge": "2025-02-01",
+      "last_updated": "2025-10-15",
       "limit": {
         "context": 200000,
-        "output": 64000
+        "output": 62000
       },
       "modalities": {
         "input": [
@@ -65,10 +65,10 @@
           "text"
         ]
       },
-      "name": "Claude Sonnet 4",
+      "name": "Claude Haiku 4.5",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2025-05-22",
+      "release_date": "2025-10-15",
       "temperature": true,
       "tool_call": true
     },
@@ -104,7 +104,7 @@
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-opus-4-1-20250805": {
+    "anthropic/claude-opus-4-1": {
       "attachment": true,
       "cost": {
         "cache_read": 1.5,
@@ -113,7 +113,7 @@
         "output": 75
       },
       "description": "Claude Opus 4.1 是由 requesty 提供的人工智能模型。",
-      "id": "anthropic/claude-opus-4-1-20250805",
+      "id": "anthropic/claude-opus-4-1",
       "knowledge": "2025-03-31",
       "last_updated": "2025-08-05",
       "limit": {
@@ -133,6 +133,70 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-sonnet-4": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Claude Sonnet 4 是由 requesty 提供的人工智能模型。",
+      "id": "anthropic/claude-sonnet-4",
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-05-22",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-05-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-sonnet-4-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Claude Sonnet 4.5 是由 requesty 提供的人工智能模型。",
+      "id": "anthropic/claude-sonnet-4-5",
+      "knowledge": "2025-07-31",
+      "last_updated": "2025-09-29",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-29",
       "temperature": true,
       "tool_call": true
     },
@@ -423,6 +487,69 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-04-16",
+      "temperature": true,
+      "tool_call": true
+    },
+    "xai/grok-4": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.75,
+        "cache_write": 3,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Grok 4 是由 requesty 提供的人工智能模型。",
+      "id": "xai/grok-4",
+      "knowledge": "2025-01",
+      "last_updated": "2025-09-09",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-09",
+      "temperature": true,
+      "tool_call": true
+    },
+    "xai/grok-4-fast": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 0.2,
+        "input": 0.2,
+        "output": 0.5
+      },
+      "description": "Grok 4 Fast 是由 requesty 提供的人工智能模型。",
+      "id": "xai/grok-4-fast",
+      "knowledge": "2025-01",
+      "last_updated": "2025-09-19",
+      "limit": {
+        "context": 2000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4 Fast",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-19",
       "temperature": true,
       "tool_call": true
     }
