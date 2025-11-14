@@ -1,7 +1,42 @@
 {
   "api": "https://platform.minimaxi.com/document/对话",
-  "iconURL": "https://filecdn.minimax.chat/public/4a16f8c5-338f-4815-933a-9947de4dfe6f.png",
+  "doc": "https://platform.minimax.io/docs/guides/quickstart",
+  "env": [
+    "MINIMAX_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/minimax.svg",
   "id": "minimax",
   "lobeIcon": "Minimax.Color",
-  "models": {}
+  "models": {
+    "MiniMax-M2": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Minimax-M2 is an AI model provided by minimax.",
+      "id": "MiniMax-M2",
+      "last_updated": "2025-10-27",
+      "limit": {
+        "context": 196608,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Minimax-M2",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-10-27",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Minimax",
+  "npm": "@ai-sdk/anthropic"
 }

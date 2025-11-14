@@ -1,9 +1,43 @@
 {
   "api": "https://platform.minimaxi.com/document/对话",
   "description": "MiniMax is a global AI foundation model company. Founded in early 2022, we are committed to advancing the frontiers of AI towards AGI via our mission Intelligence with Everyone.\nOur proprietary multimodal models, led by MiniMax M1, Hailuo-02, Speech-02 and Music-01, have ultra-long context processing capacity and can understand, generate, and integrate a wide range of modalities, including text, audio, images, video, and music. These models power our major AI-native products — including MiniMax, Hailuo AI, MiniMax Audio, Talkie, and our enterprise and developer-facing Open API Platform — which collectively deliver intelligent, dynamic experiences to enhance productivity and quality of life for users worldwide.\nTo date, our proprietary models and AI-native products have cumulatively served over 157 million individual users across over 200 countries and regions, and more than 50,000 enterprises and developers across over 90 countries and regions.",
-  "iconURL": "https://filecdn.minimax.chat/public/4a16f8c5-338f-4815-933a-9947de4dfe6f.png",
+  "doc": "https://platform.minimax.io/docs/guides/quickstart",
+  "env": [
+    "MINIMAX_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/minimax.svg",
   "id": "minimax",
   "lobeIcon": "Minimax.Color",
-  "models": {},
-  "name": "minimax"
+  "models": {
+    "MiniMax-M2": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Minimax-M2 is an AI model provided by minimax.",
+      "id": "MiniMax-M2",
+      "last_updated": "2025-10-27",
+      "limit": {
+        "context": 196608,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Minimax-M2",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-10-27",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "minimax",
+  "npm": "@ai-sdk/anthropic"
 }

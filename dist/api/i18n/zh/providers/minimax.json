@@ -1,9 +1,43 @@
 {
   "api": "https://platform.minimaxi.com/document/对话",
   "description": "MiniMax是全球领先的通用人工智能科技公司。自2022年初成立以来，我们以“与所有人共创智能”为使命，致力于推动人工智能科技前沿发展，实现通用人工智能(AGI）。\nMiniMax自主研发了一系列多模态通用大模型，包括MiniMax M1、Hailuo-02、Speech-02和Music-01，具备超长上下文处理能力，能够理解、生成并整合包括文本、音频、图像、视频和音乐在内的多种模态。基于这些自研模型，我们面向全球推出一系列AI原生产品，包括MiniMax、海螺AI、MiniMax Audio、星野等，以及面向企业和开发者的开放平台，共同为全球用户提供极致的智能体验，提升社会整体生产力，丰富个人生活质量。\n自研模型的飞速进展，有力支撑了MiniMax的全球业务拓展。迄今，MiniMax的自研多模态模型及AI原生应用已累计为来自超过200个国家及地区的逾 1.57亿名个人用户，以及来自超过90个国家及地区的50,000余名企业客户以及开发者提供服务。",
-  "iconURL": "https://filecdn.minimax.chat/public/4a16f8c5-338f-4815-933a-9947de4dfe6f.png",
+  "doc": "https://platform.minimax.io/docs/guides/quickstart",
+  "env": [
+    "MINIMAX_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/minimax.svg",
   "id": "minimax",
   "lobeIcon": "Minimax.Color",
-  "models": {},
-  "name": "minimax"
+  "models": {
+    "MiniMax-M2": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Minimax-M2 是由 minimax 提供的人工智能模型。",
+      "id": "MiniMax-M2",
+      "last_updated": "2025-10-27",
+      "limit": {
+        "context": 196608,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Minimax-M2",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-10-27",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "minimax",
+  "npm": "@ai-sdk/anthropic"
 }
