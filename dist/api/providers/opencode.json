@@ -8,7 +8,43 @@
   "id": "opencode",
   "lobeIcon": "OpenCode",
   "models": {
-    "an-gd4": {
+    "alpha-doubao-seed-code": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Doubao Seed Code (alpha) is an AI model provided by opencode.",
+      "id": "alpha-doubao-seed-code",
+      "knowledge": "2024-10",
+      "last_updated": "2025-11-11",
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Doubao Seed Code (alpha)",
+      "open_weights": true,
+      "provider": {
+        "npm": "@ai-sdk/openai"
+      },
+      "reasoning": true,
+      "release_date": "2025-11-11",
+      "status": "alpha",
+      "temperature": true,
+      "tool_call": true
+    },
+    "alpha-gd4": {
       "attachment": false,
       "cost": {
         "cache_read": 0.15,
@@ -16,7 +52,7 @@
         "output": 2
       },
       "description": "Code GD4 (alpha) is an AI model provided by opencode.",
-      "id": "an-gd4",
+      "id": "alpha-gd4",
       "knowledge": "2025-01",
       "last_updated": "2025-01-01",
       "limit": {
@@ -35,6 +71,69 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-01-01",
+      "status": "alpha",
+      "temperature": true,
+      "tool_call": true
+    },
+    "alpha-kimi-k2-thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 2.5
+      },
+      "description": "Kimi K2 Thinking (alpha) is an AI model provided by opencode.",
+      "id": "alpha-kimi-k2-thinking",
+      "knowledge": "2024-10",
+      "last_updated": "2025-09-05",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 Thinking (alpha)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-09-05",
+      "status": "alpha",
+      "temperature": true,
+      "tool_call": true
+    },
+    "alpha-minimax-m2": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax M2 (alpha) is an AI model provided by opencode.",
+      "id": "alpha-minimax-m2",
+      "knowledge": "2024-10",
+      "last_updated": "2025-10-27",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2 (alpha)",
+      "open_weights": true,
+      "provider": {
+        "npm": "@ai-sdk/anthropic"
+      },
+      "reasoning": true,
+      "release_date": "2025-10-27",
       "status": "alpha",
       "temperature": true,
       "tool_call": true
@@ -351,10 +450,9 @@
     "gpt-5-nano": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.005,
-        "input": 0.05,
-        "output": 0.4,
-        "reasoning": 0.4
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "GPT-5 Nano is an AI model provided by opencode.",
       "id": "gpt-5-nano",
@@ -380,6 +478,78 @@
       },
       "reasoning": true,
       "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5.1 is an AI model provided by opencode.",
+      "id": "gpt-5.1",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-12",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "GPT-5.1",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/openai"
+      },
+      "reasoning": true,
+      "release_date": "2025-11-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1-codex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5.1 Codex is an AI model provided by opencode.",
+      "id": "gpt-5.1-codex",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-12",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "GPT-5.1 Codex",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/openai"
+      },
+      "reasoning": true,
+      "release_date": "2025-11-12",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -441,69 +611,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-09-05",
-      "temperature": true,
-      "tool_call": true
-    },
-    "kimi-k2-thinking": {
-      "attachment": false,
-      "cost": {
-        "input": 0.6,
-        "output": 2.5
-      },
-      "description": "Kimi K2 Thinking (alpha) is an AI model provided by opencode.",
-      "id": "kimi-k2-thinking",
-      "knowledge": "2024-10",
-      "last_updated": "2025-09-05",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2 Thinking (alpha)",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-09-05",
-      "status": "alpha",
-      "temperature": true,
-      "tool_call": true
-    },
-    "minimax-m2": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "MiniMax M2 (alpha) is an AI model provided by opencode.",
-      "id": "minimax-m2",
-      "knowledge": "2024-10",
-      "last_updated": "2025-10-27",
-      "limit": {
-        "context": 204800,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax M2 (alpha)",
-      "open_weights": true,
-      "provider": {
-        "npm": "@ai-sdk/anthropic"
-      },
-      "reasoning": true,
-      "release_date": "2025-10-27",
-      "status": "alpha",
       "temperature": true,
       "tool_call": true
     },
