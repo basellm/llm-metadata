@@ -7797,6 +7797,142 @@
         "temperature": false,
         "tool_call": true
       },
+      "gpt-5.1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1 は azure によって提供される AI モデルです。",
+        "id": "gpt-5.1",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-11-14",
+        "limit": {
+          "context": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio"
+          ],
+          "output": [
+            "text",
+            "image",
+            "audio"
+          ]
+        },
+        "name": "GPT-5.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-14",
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.1-chat": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1 Chat は azure によって提供される AI モデルです。",
+        "id": "gpt-5.1-chat",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-11-14",
+        "limit": {
+          "context": 128000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio"
+          ],
+          "output": [
+            "text",
+            "image",
+            "audio"
+          ]
+        },
+        "name": "GPT-5.1 Chat",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-14",
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.1-codex": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1 Codex は azure によって提供される AI モデルです。",
+        "id": "gpt-5.1-codex",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-11-14",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio"
+          ],
+          "output": [
+            "text",
+            "image",
+            "audio"
+          ]
+        },
+        "name": "GPT-5.1 Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-14",
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.1-codex-mini": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.25,
+          "output": 2
+        },
+        "description": "GPT-5.1 Codex Mini は azure によって提供される AI モデルです。",
+        "id": "gpt-5.1-codex-mini",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-11-14",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio"
+          ],
+          "output": [
+            "text",
+            "image",
+            "audio"
+          ]
+        },
+        "name": "GPT-5.1 Codex Mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-14",
+        "temperature": false,
+        "tool_call": true
+      },
       "o1": {
         "attachment": false,
         "cost": {
@@ -23087,6 +23223,12 @@
         "cost": {
           "cache_read": 0.3,
           "cache_write": 3.75,
+          "context_over_200k": {
+            "cache_read": 0.6,
+            "cache_write": 7.5,
+            "input": 6,
+            "output": 22.5
+          },
           "input": 3,
           "output": 15
         },
@@ -23122,6 +23264,12 @@
         "cost": {
           "cache_read": 0.3,
           "cache_write": 3.75,
+          "context_over_200k": {
+            "cache_read": 0.6,
+            "cache_write": 7.5,
+            "input": 6,
+            "output": 22.5
+          },
           "input": 3,
           "output": 15
         },
@@ -23629,6 +23777,12 @@
         "cost": {
           "cache_read": 0.3,
           "cache_write": 3.75,
+          "context_over_200k": {
+            "cache_read": 0.6,
+            "cache_write": 7.5,
+            "input": 6,
+            "output": 22.5
+          },
           "input": 3,
           "output": 15
         },
@@ -23661,6 +23815,12 @@
         "cost": {
           "cache_read": 0.3,
           "cache_write": 3.75,
+          "context_over_200k": {
+            "cache_read": 0.6,
+            "cache_write": 7.5,
+            "input": 6,
+            "output": 22.5
+          },
           "input": 3,
           "output": 15
         },
@@ -27282,7 +27442,7 @@
         },
         "name": "DeepSeek-R1-Distill-Llama-70B",
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2025-01-30",
         "structured_output": true,
         "temperature": true,
@@ -27311,7 +27471,7 @@
         },
         "name": "gpt-oss-120b",
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2025-08-28",
         "structured_output": true,
         "tool_call": true
@@ -27339,7 +27499,7 @@
         },
         "name": "gpt-oss-20b",
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2025-08-28",
         "structured_output": true,
         "tool_call": true
@@ -27659,7 +27819,7 @@
         },
         "name": "Qwen3-32B",
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2025-07-16",
         "structured_output": true,
         "temperature": true,
