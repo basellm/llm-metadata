@@ -360,9 +360,14 @@
     "gemini-3-pro": {
       "attachment": true,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 4,
+          "output": 18
+        },
+        "input": 2,
+        "output": 12
       },
       "description": "Gemini 3 Pro は opencode によって提供される AI モデルです。",
       "id": "gemini-3-pro",
