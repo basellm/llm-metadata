@@ -29467,6 +29467,2836 @@
     "name": "Perplexity",
     "npm": "@ai-sdk/perplexity"
   },
+  "poe": {
+    "api": "https://api.poe.com/v1",
+    "doc": "https://creator.poe.com/docs/external-applications/openai-compatible-api",
+    "env": [
+      "POE_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/poe.svg",
+    "id": "poe",
+    "models": {
+      "anthropic/claude-haiku-3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.021,
+          "cache_write": 0.26,
+          "input": 0.21,
+          "output": 1.1
+        },
+        "description": "Claude-Haiku-3 は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-haiku-3",
+        "last_updated": "2024-03-09",
+        "limit": {
+          "context": 189096,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude-Haiku-3",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-03-09",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-haiku-3.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.068,
+          "cache_write": 0.85,
+          "input": 0.68,
+          "output": 3.4
+        },
+        "description": "Claude-Haiku-3.5 は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-haiku-3.5",
+        "last_updated": "2024-10-01",
+        "limit": {
+          "context": 189096,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude-Haiku-3.5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-10-01",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-haiku-3.5-search": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.068,
+          "cache_write": 0.85,
+          "input": 0.68,
+          "output": 3.4
+        },
+        "description": "Claude-Haiku-3.5-Search は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-haiku-3.5-search",
+        "last_updated": "2025-05-15",
+        "limit": {
+          "context": 189096,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude-Haiku-3.5-Search",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-15",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-haiku-4.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.085,
+          "cache_write": 1.1,
+          "input": 0.85,
+          "output": 4.2
+        },
+        "description": "Claude Haiku 4.5 は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-haiku-4.5",
+        "last_updated": "2025-10-15",
+        "limit": {
+          "context": 192000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Haiku 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-10-15",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-opus-3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.3,
+          "cache_write": 16,
+          "input": 13,
+          "output": 64
+        },
+        "description": "Claude-Opus-3 は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-opus-3",
+        "last_updated": "2024-03-04",
+        "limit": {
+          "context": 189096,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude-Opus-3",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-03-04",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-opus-4": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.3,
+          "cache_write": 16,
+          "input": 13,
+          "output": 64
+        },
+        "description": "Claude Opus 4 は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-opus-4",
+        "last_updated": "2025-05-21",
+        "limit": {
+          "context": 192512,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-21",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-opus-4-reasoning": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.3,
+          "cache_write": 16,
+          "input": 13,
+          "output": 64
+        },
+        "description": "Claude Opus 4 Reasoning は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-opus-4-reasoning",
+        "last_updated": "2025-05-21",
+        "limit": {
+          "context": 196608,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4 Reasoning",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-21",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-opus-4-search": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.3,
+          "cache_write": 16,
+          "input": 13,
+          "output": 64
+        },
+        "description": "Claude Opus 4 Search は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-opus-4-search",
+        "last_updated": "2025-06-20",
+        "limit": {
+          "context": 196608,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4 Search",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-06-20",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-opus-4.1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.3,
+          "cache_write": 16,
+          "input": 13,
+          "output": 64
+        },
+        "description": "Claude Opus 4.1 は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-opus-4.1",
+        "last_updated": "2025-08-05",
+        "limit": {
+          "context": 196608,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-05",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-3.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 3.2,
+          "input": 2.6,
+          "output": 13
+        },
+        "description": "Claude-Sonnet-3.5 は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-sonnet-3.5",
+        "last_updated": "2024-06-05",
+        "limit": {
+          "context": 189096,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude-Sonnet-3.5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-06-05",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-3.5-june": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 3.2,
+          "input": 2.6,
+          "output": 13
+        },
+        "description": "Claude-Sonnet-3.5-June は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-sonnet-3.5-june",
+        "last_updated": "2024-11-18",
+        "limit": {
+          "context": 189096,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude-Sonnet-3.5-June",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-11-18",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-3.7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 3.2,
+          "input": 2.6,
+          "output": 13
+        },
+        "description": "Claude Sonnet 3.7 は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-sonnet-3.7",
+        "last_updated": "2025-02-19",
+        "limit": {
+          "context": 196608,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 3.7",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-02-19",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-3.7-reasoning": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 3.2,
+          "input": 2.6,
+          "output": 13
+        },
+        "description": "Claude Sonnet 3.7 Reasoning は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-sonnet-3.7-reasoning",
+        "last_updated": "2025-02-19",
+        "limit": {
+          "context": 196608,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 3.7 Reasoning",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-02-19",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-3.7-search": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 3.2,
+          "input": 2.6,
+          "output": 13
+        },
+        "description": "Claude Sonnet 3.7 Search は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-sonnet-3.7-search",
+        "last_updated": "2025-05-15",
+        "limit": {
+          "context": 196608,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 3.7 Search",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-15",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-4": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 3.2,
+          "input": 2.6,
+          "output": 13
+        },
+        "description": "Claude Sonnet 4 は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-sonnet-4",
+        "last_updated": "2025-05-21",
+        "limit": {
+          "context": 983040,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-21",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-4-reasoning": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 3.2,
+          "input": 2.6,
+          "output": 13
+        },
+        "description": "Claude Sonnet 4 Reasoning は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-sonnet-4-reasoning",
+        "last_updated": "2025-05-21",
+        "limit": {
+          "context": 983040,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4 Reasoning",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-21",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-4-search": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 3.2,
+          "input": 2.6,
+          "output": 13
+        },
+        "description": "Claude Sonnet 4 Search は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-sonnet-4-search",
+        "last_updated": "2025-06-20",
+        "limit": {
+          "context": 983040,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4 Search",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-06-20",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-4.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 3.2,
+          "input": 2.6,
+          "output": 13
+        },
+        "description": "Claude Sonnet 4.5 は poe によって提供される AI モデルです。",
+        "id": "anthropic/claude-sonnet-4.5",
+        "last_updated": "2025-09-26",
+        "limit": {
+          "context": 983040,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-26",
+        "temperature": false,
+        "tool_call": true
+      },
+      "elevenlabs/elevenlabs-music": {
+        "attachment": true,
+        "description": "ElevenLabs-Music は poe によって提供される AI モデルです。",
+        "id": "elevenlabs/elevenlabs-music",
+        "last_updated": "2025-08-29",
+        "limit": {
+          "context": 2000,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "ElevenLabs-Music",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-08-29",
+        "temperature": false,
+        "tool_call": true
+      },
+      "elevenlabs/elevenlabs-v2.5-turbo": {
+        "attachment": true,
+        "description": "ElevenLabs-v2.5-Turbo は poe によって提供される AI モデルです。",
+        "id": "elevenlabs/elevenlabs-v2.5-turbo",
+        "last_updated": "2024-10-28",
+        "limit": {
+          "context": 128000,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "ElevenLabs-v2.5-Turbo",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-10-28",
+        "temperature": false,
+        "tool_call": true
+      },
+      "elevenlabs/elevenlabs-v3": {
+        "attachment": true,
+        "description": "ElevenLabs-v3 は poe によって提供される AI モデルです。",
+        "id": "elevenlabs/elevenlabs-v3",
+        "last_updated": "2025-06-05",
+        "limit": {
+          "context": 128000,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "ElevenLabs-v3",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-06-05",
+        "temperature": false,
+        "tool_call": true
+      },
+      "facebook/llama-3.1-405b": {
+        "attachment": true,
+        "cost": {
+          "input": 3,
+          "output": 3
+        },
+        "description": "Llama-3.1-405B は poe によって提供される AI モデルです。",
+        "id": "facebook/llama-3.1-405b",
+        "last_updated": "2024-08-08",
+        "limit": {
+          "context": 8192,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama-3.1-405B",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-08-08",
+        "temperature": false,
+        "tool_call": true
+      },
+      "facebook/llama-3.1-70b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.9,
+          "output": 0.9
+        },
+        "description": "Llama-3.1-70B は poe によって提供される AI モデルです。",
+        "id": "facebook/llama-3.1-70b",
+        "last_updated": "2024-08-08",
+        "limit": {
+          "context": 8192,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama-3.1-70B",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-08-08",
+        "temperature": false,
+        "tool_call": true
+      },
+      "facebook/llama-3.1-8b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.2,
+          "output": 0.2
+        },
+        "description": "Llama-3.1-8B は poe によって提供される AI モデルです。",
+        "id": "facebook/llama-3.1-8b",
+        "last_updated": "2024-08-08",
+        "limit": {
+          "context": 8192,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama-3.1-8B",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-08-08",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/gemini-2.0-flash": {
+        "attachment": true,
+        "cost": {
+          "input": 0.1,
+          "output": 0.42
+        },
+        "description": "Gemini-2.0-Flash は poe によって提供される AI モデルです。",
+        "id": "google/gemini-2.0-flash",
+        "last_updated": "2024-12-11",
+        "limit": {
+          "context": 990000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini-2.0-Flash",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-12-11",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/gemini-2.0-flash-lite": {
+        "attachment": true,
+        "cost": {
+          "input": 0.052,
+          "output": 0.21
+        },
+        "description": "Gemini-2.0-Flash-Lite は poe によって提供される AI モデルです。",
+        "id": "google/gemini-2.0-flash-lite",
+        "last_updated": "2025-02-05",
+        "limit": {
+          "context": 990000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini-2.0-Flash-Lite",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-02-05",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/gemini-2.5-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.052,
+          "input": 0.21,
+          "output": 1.7
+        },
+        "description": "Gemini 2.5 Flash は poe によって提供される AI モデルです。",
+        "id": "google/gemini-2.5-flash",
+        "last_updated": "2025-04-26",
+        "limit": {
+          "context": 1065535,
+          "output": 65535
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-04-26",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/gemini-2.5-flash-lite": {
+        "attachment": true,
+        "cost": {
+          "input": 0.07,
+          "output": 0.28
+        },
+        "description": "Gemini 2.5 Flash Lite は poe によって提供される AI モデルです。",
+        "id": "google/gemini-2.5-flash-lite",
+        "last_updated": "2025-06-19",
+        "limit": {
+          "context": 1024000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-06-19",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/gemini-2.5-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.22,
+          "input": 0.87,
+          "output": 7
+        },
+        "description": "Gemini 2.5 Pro は poe によって提供される AI モデルです。",
+        "id": "google/gemini-2.5-pro",
+        "last_updated": "2025-02-05",
+        "limit": {
+          "context": 1065535,
+          "output": 65535
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-02-05",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/gemini-3.0-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.16,
+          "input": 1.6,
+          "output": 9.6
+        },
+        "description": "Gemini-3.0-Pro は poe によって提供される AI モデルです。",
+        "id": "google/gemini-3.0-pro",
+        "last_updated": "2025-10-22",
+        "limit": {
+          "context": 1048576,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini-3.0-Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-10-22",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/imagen-3": {
+        "attachment": true,
+        "description": "Imagen-3 は poe によって提供される AI モデルです。",
+        "id": "google/imagen-3",
+        "last_updated": "2024-10-15",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Imagen-3",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-10-15",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/imagen-3-fast": {
+        "attachment": true,
+        "description": "Imagen-3-Fast は poe によって提供される AI モデルです。",
+        "id": "google/imagen-3-fast",
+        "last_updated": "2024-10-17",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Imagen-3-Fast",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-10-17",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/imagen-4": {
+        "attachment": true,
+        "description": "Imagen-4 は poe によって提供される AI モデルです。",
+        "id": "google/imagen-4",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Imagen-4",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-22",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/imagen-4-fast": {
+        "attachment": true,
+        "description": "Imagen-4-Fast は poe によって提供される AI モデルです。",
+        "id": "google/imagen-4-fast",
+        "last_updated": "2025-06-25",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Imagen-4-Fast",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-06-25",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/imagen-4-ultra": {
+        "attachment": true,
+        "description": "Imagen-4-Ultra は poe によって提供される AI モデルです。",
+        "id": "google/imagen-4-ultra",
+        "last_updated": "2025-05-24",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Imagen-4-Ultra",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-24",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/lyria": {
+        "attachment": true,
+        "description": "Lyria は poe によって提供される AI モデルです。",
+        "id": "google/lyria",
+        "last_updated": "2025-06-04",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "Lyria",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-06-04",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/nano-banana": {
+        "attachment": true,
+        "cost": {
+          "input": 0.21,
+          "output": 1.7
+        },
+        "description": "Nano-Banana は poe によって提供される AI モデルです。",
+        "id": "google/nano-banana",
+        "last_updated": "2025-08-21",
+        "limit": {
+          "context": 32768,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "Nano-Banana",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-08-21",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/veo-2": {
+        "attachment": true,
+        "description": "Veo-2 は poe によって提供される AI モデルです。",
+        "id": "google/veo-2",
+        "last_updated": "2024-12-02",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "video"
+          ]
+        },
+        "name": "Veo-2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-12-02",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/veo-3": {
+        "attachment": true,
+        "description": "Veo-3 は poe によって提供される AI モデルです。",
+        "id": "google/veo-3",
+        "last_updated": "2025-05-21",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "video"
+          ]
+        },
+        "name": "Veo-3",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-21",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/veo-3-fast": {
+        "attachment": true,
+        "description": "Veo-3-Fast は poe によって提供される AI モデルです。",
+        "id": "google/veo-3-fast",
+        "last_updated": "2025-10-13",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "video"
+          ]
+        },
+        "name": "Veo-3-Fast",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-10-13",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/veo-3.1": {
+        "attachment": true,
+        "description": "Veo-3.1 は poe によって提供される AI モデルです。",
+        "id": "google/veo-3.1",
+        "last_updated": "2025-10-15",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "video"
+          ]
+        },
+        "name": "Veo-3.1",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-10-15",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/veo-3.1-fast": {
+        "attachment": true,
+        "description": "Veo-3.1-Fast は poe によって提供される AI モデルです。",
+        "id": "google/veo-3.1-fast",
+        "last_updated": "2025-10-15",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "video"
+          ]
+        },
+        "name": "Veo-3.1-Fast",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-10-15",
+        "temperature": false,
+        "tool_call": true
+      },
+      "ideogramai/ideogram": {
+        "attachment": true,
+        "description": "Ideogram は poe によって提供される AI モデルです。",
+        "id": "ideogramai/ideogram",
+        "last_updated": "2024-04-03",
+        "limit": {
+          "context": 150,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Ideogram",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-04-03",
+        "temperature": false,
+        "tool_call": true
+      },
+      "ideogramai/ideogram-v2": {
+        "attachment": true,
+        "description": "Ideogram-v2 は poe によって提供される AI モデルです。",
+        "id": "ideogramai/ideogram-v2",
+        "last_updated": "2024-08-21",
+        "limit": {
+          "context": 150,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Ideogram-v2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-08-21",
+        "temperature": false,
+        "tool_call": true
+      },
+      "ideogramai/ideogram-v2a": {
+        "attachment": true,
+        "description": "Ideogram-v2a は poe によって提供される AI モデルです。",
+        "id": "ideogramai/ideogram-v2a",
+        "last_updated": "2025-02-27",
+        "limit": {
+          "context": 150,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Ideogram-v2a",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-02-27",
+        "temperature": false,
+        "tool_call": true
+      },
+      "ideogramai/ideogram-v2a-turbo": {
+        "attachment": true,
+        "description": "Ideogram-v2a-Turbo は poe によって提供される AI モデルです。",
+        "id": "ideogramai/ideogram-v2a-turbo",
+        "last_updated": "2025-02-27",
+        "limit": {
+          "context": 150,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Ideogram-v2a-Turbo",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-02-27",
+        "temperature": false,
+        "tool_call": true
+      },
+      "lumalabs/dream-machine": {
+        "attachment": true,
+        "description": "Dream-Machine は poe によって提供される AI モデルです。",
+        "id": "lumalabs/dream-machine",
+        "last_updated": "2024-09-18",
+        "limit": {
+          "context": 5000,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "video"
+          ]
+        },
+        "name": "Dream-Machine",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-09-18",
+        "temperature": false,
+        "tool_call": true
+      },
+      "lumalabs/ray2": {
+        "attachment": true,
+        "description": "Ray2 は poe によって提供される AI モデルです。",
+        "id": "lumalabs/ray2",
+        "last_updated": "2025-02-20",
+        "limit": {
+          "context": 5000,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "video"
+          ]
+        },
+        "name": "Ray2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-02-20",
+        "temperature": false,
+        "tool_call": true
+      },
+      "novita/glm-4.6": {
+        "attachment": true,
+        "description": "GLM-4.6 は poe によって提供される AI モデルです。",
+        "id": "novita/glm-4.6",
+        "last_updated": "2025-09-30",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.6",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09-30",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/chatgpt-4o-latest": {
+        "attachment": true,
+        "cost": {
+          "input": 4.5,
+          "output": 13
+        },
+        "description": "ChatGPT-4o-Latest は poe によって提供される AI モデルです。",
+        "id": "openAi/chatgpt-4o-latest",
+        "last_updated": "2024-08-14",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "ChatGPT-4o-Latest",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-08-14",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/dall-e-3": {
+        "attachment": true,
+        "description": "DALL-E-3 は poe によって提供される AI モデルです。",
+        "id": "openAi/dall-e-3",
+        "last_updated": "2023-11-06",
+        "limit": {
+          "context": 800,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "DALL-E-3",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2023-11-06",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-3.5-turbo": {
+        "attachment": true,
+        "cost": {
+          "input": 0.45,
+          "output": 1.3
+        },
+        "description": "GPT-3.5-Turbo は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-3.5-turbo",
+        "last_updated": "2023-09-13",
+        "limit": {
+          "context": 16384,
+          "output": 2048
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-3.5-Turbo",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2023-09-13",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-3.5-turbo-instruct": {
+        "attachment": true,
+        "cost": {
+          "input": 1.3,
+          "output": 1.8
+        },
+        "description": "GPT-3.5-Turbo-Instruct は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-3.5-turbo-instruct",
+        "last_updated": "2023-09-20",
+        "limit": {
+          "context": 3500,
+          "output": 1024
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-3.5-Turbo-Instruct",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2023-09-20",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-3.5-turbo-raw": {
+        "attachment": true,
+        "cost": {
+          "input": 0.45,
+          "output": 1.3
+        },
+        "description": "GPT-3.5-Turbo-Raw は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-3.5-turbo-raw",
+        "last_updated": "2023-09-27",
+        "limit": {
+          "context": 4524,
+          "output": 2048
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-3.5-Turbo-Raw",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2023-09-27",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-4-classic": {
+        "attachment": true,
+        "cost": {
+          "input": 27,
+          "output": 54
+        },
+        "description": "GPT-4-Classic は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-4-classic",
+        "last_updated": "2024-03-25",
+        "limit": {
+          "context": 8192,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4-Classic",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-03-25",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-4-classic-0314": {
+        "attachment": true,
+        "cost": {
+          "input": 27,
+          "output": 54
+        },
+        "description": "GPT-4-Classic-0314 は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-4-classic-0314",
+        "last_updated": "2024-08-26",
+        "limit": {
+          "context": 8192,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4-Classic-0314",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-08-26",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-4-turbo": {
+        "attachment": true,
+        "cost": {
+          "input": 9,
+          "output": 27
+        },
+        "description": "GPT-4-Turbo は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-4-turbo",
+        "last_updated": "2023-09-13",
+        "limit": {
+          "context": 128000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4-Turbo",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2023-09-13",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-4.1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.45,
+          "input": 1.8,
+          "output": 7.2
+        },
+        "description": "GPT-4.1 は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-4.1",
+        "last_updated": "2025-04-14",
+        "limit": {
+          "context": 1047576,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4.1",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-04-14",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-4.1-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.09,
+          "input": 0.36,
+          "output": 1.4
+        },
+        "description": "GPT-4.1-mini は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-4.1-mini",
+        "last_updated": "2025-04-15",
+        "limit": {
+          "context": 1047576,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4.1-mini",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-04-15",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-4.1-nano": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.023,
+          "input": 0.09,
+          "output": 0.36
+        },
+        "description": "GPT-4.1-nano は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-4.1-nano",
+        "last_updated": "2025-04-15",
+        "limit": {
+          "context": 1047576,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4.1-nano",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-04-15",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-4o": {
+        "attachment": true,
+        "description": "GPT-4o は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-4o",
+        "last_updated": "2024-05-13",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4o",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-05-13",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-4o-aug": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.1,
+          "input": 2.3,
+          "output": 9
+        },
+        "description": "GPT-4o-Aug は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-4o-aug",
+        "last_updated": "2024-11-21",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4o-Aug",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-11-21",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-4o-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.068,
+          "input": 0.14,
+          "output": 0.54
+        },
+        "description": "GPT-4o-mini は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-4o-mini",
+        "last_updated": "2024-07-18",
+        "limit": {
+          "context": 128000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4o-mini",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-07-18",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-4o-mini-search": {
+        "attachment": true,
+        "cost": {
+          "input": 0.14,
+          "output": 0.54
+        },
+        "description": "GPT-4o-mini-Search は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-4o-mini-search",
+        "last_updated": "2025-03-11",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4o-mini-Search",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-03-11",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-4o-search": {
+        "attachment": true,
+        "cost": {
+          "input": 2.3,
+          "output": 9
+        },
+        "description": "GPT-4o-Search は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-4o-search",
+        "last_updated": "2025-03-11",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4o-Search",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-03-11",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.11,
+          "input": 1.1,
+          "output": 9
+        },
+        "description": "GPT-5 は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-5",
+        "last_updated": "2025-08-05",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-05",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-5-chat": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.11,
+          "input": 1.1,
+          "output": 9
+        },
+        "description": "GPT-5-Chat は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-5-chat",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 128000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5-Chat",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-08-07",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-5-codex": {
+        "attachment": true,
+        "cost": {
+          "input": 1.1,
+          "output": 9
+        },
+        "description": "GPT-5-Codex は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-5-codex",
+        "last_updated": "2025-09-23",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5-Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-23",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-5-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.022,
+          "input": 0.22,
+          "output": 1.8
+        },
+        "description": "GPT-5-mini は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-5-mini",
+        "last_updated": "2025-06-25",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5-mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-06-25",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-5-nano": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0045,
+          "input": 0.045,
+          "output": 0.36
+        },
+        "description": "GPT-5-nano は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-5-nano",
+        "last_updated": "2025-08-05",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5-nano",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-05",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-5-pro": {
+        "attachment": true,
+        "cost": {
+          "input": 13,
+          "output": 110
+        },
+        "description": "GPT-5-Pro は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-5-pro",
+        "last_updated": "2025-10-06",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5-Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-10-06",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-image-1": {
+        "attachment": true,
+        "description": "GPT-Image-1 は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-image-1",
+        "last_updated": "2025-03-31",
+        "limit": {
+          "context": 128000,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "GPT-Image-1",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-03-31",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/gpt-image-1-mini": {
+        "attachment": true,
+        "description": "GPT-Image-1-Mini は poe によって提供される AI モデルです。",
+        "id": "openAi/gpt-image-1-mini",
+        "last_updated": "2025-08-26",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "GPT-Image-1-Mini",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-08-26",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/o1": {
+        "attachment": true,
+        "cost": {
+          "input": 13,
+          "output": 54
+        },
+        "description": "o1 は poe によって提供される AI モデルです。",
+        "id": "openAi/o1",
+        "last_updated": "2024-12-18",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2024-12-18",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/o1-pro": {
+        "attachment": true,
+        "cost": {
+          "input": 140,
+          "output": 540
+        },
+        "description": "o1-pro は poe によって提供される AI モデルです。",
+        "id": "openAi/o1-pro",
+        "last_updated": "2025-03-19",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o1-pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-03-19",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/o3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.45,
+          "input": 1.8,
+          "output": 7.2
+        },
+        "description": "o3 は poe によって提供される AI モデルです。",
+        "id": "openAi/o3",
+        "last_updated": "2025-04-16",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o3",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-04-16",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/o3-deep-research": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 2.3,
+          "input": 9,
+          "output": 36
+        },
+        "description": "o3-deep-research は poe によって提供される AI モデルです。",
+        "id": "openAi/o3-deep-research",
+        "last_updated": "2025-06-27",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o3-deep-research",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-06-27",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/o3-mini": {
+        "attachment": true,
+        "cost": {
+          "input": 0.99,
+          "output": 4
+        },
+        "description": "o3-mini は poe によって提供される AI モデルです。",
+        "id": "openAi/o3-mini",
+        "last_updated": "2025-01-31",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o3-mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-01-31",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/o3-mini-high": {
+        "attachment": true,
+        "cost": {
+          "input": 0.99,
+          "output": 4
+        },
+        "description": "o3-mini-high は poe によって提供される AI モデルです。",
+        "id": "openAi/o3-mini-high",
+        "last_updated": "2025-01-31",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o3-mini-high",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-01-31",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/o3-pro": {
+        "attachment": true,
+        "cost": {
+          "input": 18,
+          "output": 72
+        },
+        "description": "o3-pro は poe によって提供される AI モデルです。",
+        "id": "openAi/o3-pro",
+        "last_updated": "2025-06-10",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o3-pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-06-10",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/o4-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "input": 0.99,
+          "output": 4
+        },
+        "description": "o4-mini は poe によって提供される AI モデルです。",
+        "id": "openAi/o4-mini",
+        "last_updated": "2025-04-16",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o4-mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-04-16",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/o4-mini-deep-research": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.45,
+          "input": 1.8,
+          "output": 7.2
+        },
+        "description": "o4-mini-deep-research は poe によって提供される AI モデルです。",
+        "id": "openAi/o4-mini-deep-research",
+        "last_updated": "2025-06-27",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o4-mini-deep-research",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-06-27",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/sora-2": {
+        "attachment": true,
+        "description": "Sora-2 は poe によって提供される AI モデルです。",
+        "id": "openAi/sora-2",
+        "last_updated": "2025-10-06",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "video"
+          ]
+        },
+        "name": "Sora-2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-10-06",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openAi/sora-2-pro": {
+        "attachment": true,
+        "description": "Sora-2-Pro は poe によって提供される AI モデルです。",
+        "id": "openAi/sora-2-pro",
+        "last_updated": "2025-10-06",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "video"
+          ]
+        },
+        "name": "Sora-2-Pro",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-10-06",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai/gpt-5.1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.11,
+          "input": 1.1,
+          "output": 9
+        },
+        "description": "GPT-5.1 は poe によって提供される AI モデルです。",
+        "id": "openai/gpt-5.1",
+        "last_updated": "2025-11-12",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-12",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai/gpt-5.1-codex": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.11,
+          "input": 1.1,
+          "output": 9
+        },
+        "description": "GPT-5.1-Codex は poe によって提供される AI モデルです。",
+        "id": "openai/gpt-5.1-codex",
+        "last_updated": "2025-11-12",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1-Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-12",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai/gpt-5.1-codex-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.022,
+          "input": 0.22,
+          "output": 1.8
+        },
+        "description": "GPT-5.1-Codex-Mini は poe によって提供される AI モデルです。",
+        "id": "openai/gpt-5.1-codex-mini",
+        "last_updated": "2025-11-12",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1-Codex-Mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-12",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai/gpt-5.1-instant": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.11,
+          "input": 1.1,
+          "output": 9
+        },
+        "description": "GPT-5.1-Instant は poe によって提供される AI モデルです。",
+        "id": "openai/gpt-5.1-instant",
+        "last_updated": "2025-11-12",
+        "limit": {
+          "context": 128000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1-Instant",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-11-12",
+        "temperature": false,
+        "tool_call": true
+      },
+      "runwayml/runway": {
+        "attachment": true,
+        "description": "Runway は poe によって提供される AI モデルです。",
+        "id": "runwayml/runway",
+        "last_updated": "2024-10-11",
+        "limit": {
+          "context": 256,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "video"
+          ]
+        },
+        "name": "Runway",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-10-11",
+        "temperature": false,
+        "tool_call": true
+      },
+      "runwayml/runway-gen-4-turbo": {
+        "attachment": true,
+        "description": "Runway-Gen-4-Turbo は poe によって提供される AI モデルです。",
+        "id": "runwayml/runway-gen-4-turbo",
+        "last_updated": "2025-05-09",
+        "limit": {
+          "context": 256,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "video"
+          ]
+        },
+        "name": "Runway-Gen-4-Turbo",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-09",
+        "temperature": false,
+        "tool_call": true
+      },
+      "stabilityai/stablediffusionxl": {
+        "attachment": true,
+        "description": "StableDiffusionXL は poe によって提供される AI モデルです。",
+        "id": "stabilityai/stablediffusionxl",
+        "last_updated": "2023-07-09",
+        "limit": {
+          "context": 200,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "StableDiffusionXL",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2023-07-09",
+        "temperature": false,
+        "tool_call": true
+      },
+      "topazlabs-co/topazlabs": {
+        "attachment": true,
+        "description": "TopazLabs は poe によって提供される AI モデルです。",
+        "id": "topazlabs-co/topazlabs",
+        "last_updated": "2024-12-03",
+        "limit": {
+          "context": 204,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "TopazLabs",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-12-03",
+        "temperature": false,
+        "tool_call": true
+      },
+      "trytako/tako": {
+        "attachment": true,
+        "description": "Tako は poe によって提供される AI モデルです。",
+        "id": "trytako/tako",
+        "last_updated": "2024-08-15",
+        "limit": {
+          "context": 2048,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Tako",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-08-15",
+        "temperature": false,
+        "tool_call": true
+      },
+      "xai/grok-2": {
+        "attachment": true,
+        "cost": {
+          "input": 2,
+          "output": 10
+        },
+        "description": "Grok-2 は poe によって提供される AI モデルです。",
+        "id": "xai/grok-2",
+        "last_updated": "2025-01-14",
+        "limit": {
+          "context": 131072,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok-2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-01-14",
+        "temperature": false,
+        "tool_call": true
+      },
+      "xai/grok-3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Grok 3 は poe によって提供される AI モデルです。",
+        "id": "xai/grok-3",
+        "last_updated": "2025-04-11",
+        "limit": {
+          "context": 131072,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 3",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-04-11",
+        "temperature": false,
+        "tool_call": true
+      },
+      "xai/grok-3-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.3,
+          "output": 0.5
+        },
+        "description": "Grok 3 Mini は poe によって提供される AI モデルです。",
+        "id": "xai/grok-3-mini",
+        "last_updated": "2025-04-11",
+        "limit": {
+          "context": 131072,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 3 Mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-04-11",
+        "temperature": false,
+        "tool_call": true
+      },
+      "xai/grok-4": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Grok 4 は poe によって提供される AI モデルです。",
+        "id": "xai/grok-4",
+        "last_updated": "2025-07-10",
+        "limit": {
+          "context": 256000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-07-10",
+        "temperature": false,
+        "tool_call": true
+      },
+      "xai/grok-4-fast-non-reasoning": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok-4-Fast-Non-Reasoning は poe によって提供される AI モデルです。",
+        "id": "xai/grok-4-fast-non-reasoning",
+        "last_updated": "2025-09-16",
+        "limit": {
+          "context": 256000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok-4-Fast-Non-Reasoning",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09-16",
+        "temperature": false,
+        "tool_call": true
+      },
+      "xai/grok-4-fast-reasoning": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok 4 Fast Reasoning は poe によって提供される AI モデルです。",
+        "id": "xai/grok-4-fast-reasoning",
+        "last_updated": "2025-09-16",
+        "limit": {
+          "context": 256000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4 Fast Reasoning",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-16",
+        "temperature": false,
+        "tool_call": true
+      },
+      "xai/grok-code-fast-1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.2,
+          "output": 1.5
+        },
+        "description": "Grok Code Fast 1 は poe によって提供される AI モデルです。",
+        "id": "xai/grok-code-fast-1",
+        "last_updated": "2025-08-22",
+        "limit": {
+          "context": 256000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok Code Fast 1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-22",
+        "temperature": false,
+        "tool_call": true
+      }
+    },
+    "name": "Poe",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "requesty": {
     "api": "https://router.requesty.ai/v1",
     "doc": "https://requesty.ai/solution/llm-routing/models",
