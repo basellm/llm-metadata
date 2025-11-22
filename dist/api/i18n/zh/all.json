@@ -7348,7 +7348,7 @@
         "name": "Claude Haiku 4.5",
         "open_weights": false,
         "provider": {
-          "npm": "@anthropic-ai/foundry-sdk"
+          "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
         "release_date": "2025-11-18",
@@ -7384,7 +7384,7 @@
         "name": "Claude Opus 4.1",
         "open_weights": false,
         "provider": {
-          "npm": "@anthropic-ai/foundry-sdk"
+          "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
         "release_date": "2025-11-18",
@@ -7420,7 +7420,7 @@
         "name": "Claude Sonnet 4.5",
         "open_weights": false,
         "provider": {
-          "npm": "@anthropic-ai/foundry-sdk"
+          "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
         "release_date": "2025-11-18",
@@ -8391,7 +8391,7 @@
         "name": "Claude Haiku 4.5",
         "open_weights": false,
         "provider": {
-          "npm": "@anthropic-ai/foundry-sdk"
+          "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
         "release_date": "2025-11-18",
@@ -8427,7 +8427,7 @@
         "name": "Claude Opus 4.1",
         "open_weights": false,
         "provider": {
-          "npm": "@anthropic-ai/foundry-sdk"
+          "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
         "release_date": "2025-11-18",
@@ -8463,7 +8463,7 @@
         "name": "Claude Sonnet 4.5",
         "open_weights": false,
         "provider": {
-          "npm": "@anthropic-ai/foundry-sdk"
+          "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
         "release_date": "2025-11-18",
@@ -13127,6 +13127,222 @@
     },
     "name": "Cloudflare Workers AI",
     "npm": "workers-ai-provider"
+  },
+  "cohere": {
+    "doc": "https://docs.cohere.com/docs/models",
+    "env": [
+      "COHERE_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/cohere.svg",
+    "id": "cohere",
+    "models": {
+      "command-a-03-2025": {
+        "attachment": false,
+        "cost": {
+          "input": 2.5,
+          "output": 10
+        },
+        "description": "Command A 是由 cohere 提供的人工智能模型。",
+        "id": "command-a-03-2025",
+        "knowledge": "2024-06-01",
+        "last_updated": "2025-03-13",
+        "limit": {
+          "context": 256000,
+          "output": 8000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Command A",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-03-13",
+        "temperature": true,
+        "tool_call": true
+      },
+      "command-a-reasoning-08-2025": {
+        "attachment": false,
+        "cost": {
+          "input": 2.5,
+          "output": 10
+        },
+        "description": "Command A Reasoning 是由 cohere 提供的人工智能模型。",
+        "id": "command-a-reasoning-08-2025",
+        "knowledge": "2024-06-01",
+        "last_updated": "2025-08-21",
+        "limit": {
+          "context": 256000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Command A Reasoning",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-21",
+        "temperature": true,
+        "tool_call": true
+      },
+      "command-a-translate-08-2025": {
+        "attachment": false,
+        "cost": {
+          "input": 2.5,
+          "output": 10
+        },
+        "description": "Command A Translate 是由 cohere 提供的人工智能模型。",
+        "id": "command-a-translate-08-2025",
+        "knowledge": "2024-06-01",
+        "last_updated": "2025-08-28",
+        "limit": {
+          "context": 8000,
+          "output": 8000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Command A Translate",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-08-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "command-a-vision-07-2025": {
+        "attachment": false,
+        "cost": {
+          "input": 2.5,
+          "output": 10
+        },
+        "description": "Command A Vision 是由 cohere 提供的人工智能模型。",
+        "id": "command-a-vision-07-2025",
+        "knowledge": "2024-06-01",
+        "last_updated": "2025-07-31",
+        "limit": {
+          "context": 128000,
+          "output": 8000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Command A Vision",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-07-31",
+        "temperature": true,
+        "tool_call": false
+      },
+      "command-r-08-2024": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "Command R 是由 cohere 提供的人工智能模型。",
+        "id": "command-r-08-2024",
+        "knowledge": "2024-06-01",
+        "last_updated": "2024-08-30",
+        "limit": {
+          "context": 128000,
+          "output": 4000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Command R",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2024-08-30",
+        "temperature": true,
+        "tool_call": true
+      },
+      "command-r-plus-08-2024": {
+        "attachment": false,
+        "cost": {
+          "input": 2.5,
+          "output": 10
+        },
+        "description": "Command R+ 是由 cohere 提供的人工智能模型。",
+        "id": "command-r-plus-08-2024",
+        "knowledge": "2024-06-01",
+        "last_updated": "2024-08-30",
+        "limit": {
+          "context": 128000,
+          "output": 4000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Command R+",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2024-08-30",
+        "temperature": true,
+        "tool_call": true
+      },
+      "command-r7b-12-2024": {
+        "attachment": false,
+        "cost": {
+          "input": 0.0375,
+          "output": 0.15
+        },
+        "description": "Command R7B 是由 cohere 提供的人工智能模型。",
+        "id": "command-r7b-12-2024",
+        "knowledge": "2024-06-01",
+        "last_updated": "2024-02-27",
+        "limit": {
+          "context": 128000,
+          "output": 4000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Command R7B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-02-27",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Cohere",
+    "npm": "@ai-sdk/cohere"
   },
   "cortecs": {
     "api": "https://api.cortecs.ai/v1",
@@ -24865,10 +25081,9 @@
       "gpt-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.125,
-          "input": 1.25,
-          "output": 10,
-          "reasoning": 10
+          "cache_read": 0.107,
+          "input": 1.07,
+          "output": 8.5
         },
         "description": "GPT-5 是由 opencode 提供的人工智能模型。",
         "id": "gpt-5",
@@ -24901,10 +25116,9 @@
       "gpt-5-codex": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.125,
-          "input": 1.25,
-          "output": 10,
-          "reasoning": 10
+          "cache_read": 0.107,
+          "input": 1.07,
+          "output": 8.5
         },
         "description": "GPT-5 Codex 是由 opencode 提供的人工智能模型。",
         "id": "gpt-5-codex",
@@ -24972,9 +25186,9 @@
       "gpt-5.1": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.125,
-          "input": 1.25,
-          "output": 10
+          "cache_read": 0.107,
+          "input": 1.07,
+          "output": 8.5
         },
         "description": "GPT-5.1 是由 opencode 提供的人工智能模型。",
         "id": "gpt-5.1",
@@ -25008,9 +25222,9 @@
       "gpt-5.1-codex": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.125,
-          "input": 1.25,
-          "output": 10
+          "cache_read": 0.107,
+          "input": 1.07,
+          "output": 8.5
         },
         "description": "GPT-5.1 Codex 是由 opencode 提供的人工智能模型。",
         "id": "gpt-5.1-codex",
