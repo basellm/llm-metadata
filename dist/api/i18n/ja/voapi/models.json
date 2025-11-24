@@ -10693,34 +10693,6 @@
       ]
     },
     {
-      "description": "Qwen 3 Coder 480B は cerebras によって提供される AI モデルです。",
-      "firm": "cerebras",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:cerebras",
-      "id": "qwen-3-coder-480b",
-      "maxCtxTokens": 131000,
-      "maxOutputTokens": 32000,
-      "name": "Qwen 3 Coder 480B",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 2,
-        "output": 2
-      },
-      "tags": [
-        "tools",
-        "open_weights",
-        "131K"
-      ]
-    },
-    {
       "description": "Z.AI GLM-4.6 は cerebras によって提供される AI モデルです。",
       "firm": "cerebras",
       "flags": {
@@ -15653,6 +15625,35 @@
         "tools",
         "open_weights",
         "128K"
+      ]
+    },
+    {
+      "description": "Kimi K2 Thinking は fireworks-ai によって提供される AI モデルです。",
+      "firm": "fireworks-ai",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:fireworks",
+      "id": "accounts/fireworks/models/kimi-k2-thinking",
+      "maxCtxTokens": 256000,
+      "maxOutputTokens": 16384,
+      "name": "Kimi K2 Thinking",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.6,
+        "output": 0.6
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "256K"
       ]
     },
     {
@@ -23674,7 +23675,7 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "cogito-2.1-671b",
+      "id": "cogito-2.1:671b-cloud",
       "maxCtxTokens": 160000,
       "maxOutputTokens": 8192,
       "name": "Cogito 2.1 671B",
@@ -23702,7 +23703,7 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "deepseek-v3.1-671b",
+      "id": "deepseek-v3.1:671b-cloud",
       "maxCtxTokens": 160000,
       "maxOutputTokens": 8192,
       "name": "DeepSeek-V3.1 671B",
@@ -23731,7 +23732,7 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "gemini-3-pro-preview",
+      "id": "gemini-3-pro-preview:latest",
       "maxCtxTokens": 1000000,
       "maxOutputTokens": 64000,
       "name": "Gemini 3 Pro Preview",
@@ -23761,7 +23762,7 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "glm-4.6",
+      "id": "glm-4.6:cloud",
       "maxCtxTokens": 200000,
       "maxOutputTokens": 8192,
       "name": "GLM-4.6",
@@ -23789,7 +23790,7 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "gpt-oss-120b",
+      "id": "gpt-oss:120b-cloud",
       "maxCtxTokens": 200000,
       "maxOutputTokens": 8192,
       "name": "GPT-OSS 120B",
@@ -23807,21 +23808,21 @@
       ]
     },
     {
-      "description": "Kimi K2 は ollama-cloud によって提供される AI モデルです。",
+      "description": "GPT-OSS 20B は ollama-cloud によって提供される AI モデルです。",
       "firm": "ollama-cloud",
       "flags": {
         "attachment": false,
         "audio": false,
         "image": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
-      "id": "kimi-k2",
-      "maxCtxTokens": 256000,
+      "id": "gpt-oss:20b-cloud",
+      "maxCtxTokens": 200000,
       "maxOutputTokens": 8192,
-      "name": "Kimi K2",
+      "name": "GPT-OSS 20B",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
@@ -23829,9 +23830,10 @@
         "output": null
       },
       "tags": [
+        "reasoning",
         "tools",
         "open_weights",
-        "256K"
+        "200K"
       ]
     },
     {
@@ -23846,7 +23848,7 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "kimi-k2-thinking",
+      "id": "kimi-k2-thinking:cloud",
       "maxCtxTokens": 256000,
       "maxOutputTokens": 8192,
       "name": "Kimi K2 Thinking",
@@ -23864,6 +23866,34 @@
       ]
     },
     {
+      "description": "Kimi K2 は ollama-cloud によって提供される AI モデルです。",
+      "firm": "ollama-cloud",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "kimi-k2:1t-cloud",
+      "maxCtxTokens": 256000,
+      "maxOutputTokens": 8192,
+      "name": "Kimi K2",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "tags": [
+        "tools",
+        "open_weights",
+        "256K"
+      ]
+    },
+    {
       "description": "MiniMax M2 は ollama-cloud によって提供される AI モデルです。",
       "firm": "ollama-cloud",
       "flags": {
@@ -23875,7 +23905,7 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "minimax-m2",
+      "id": "minimax-m2:cloud",
       "maxCtxTokens": 200000,
       "maxOutputTokens": 8192,
       "name": "MiniMax M2",
@@ -23903,7 +23933,7 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "qwen3-coder-480b",
+      "id": "qwen3-coder-480b-cloud",
       "maxCtxTokens": 200000,
       "maxOutputTokens": 8192,
       "name": "Qwen3 Coder 480B",
@@ -23931,7 +23961,37 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "qwen3-vl-235b-instruct",
+      "id": "qwen3-vl-235b-cloud",
+      "maxCtxTokens": 200000,
+      "maxOutputTokens": 8192,
+      "name": "Qwen3-VL 235B Instruct",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "tags": [
+        "tools",
+        "files",
+        "open_weights",
+        "vision",
+        "200K"
+      ]
+    },
+    {
+      "description": "Qwen3-VL 235B Instruct は ollama-cloud によって提供される AI モデルです。",
+      "firm": "ollama-cloud",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "qwen3-vl-235b-instruct-cloud",
       "maxCtxTokens": 200000,
       "maxOutputTokens": 8192,
       "name": "Qwen3-VL 235B Instruct",
@@ -25116,6 +25176,36 @@
         "tools",
         "open_weights",
         "200K"
+      ]
+    },
+    {
+      "description": "Code GD5 (alpha) は opencode によって提供される AI モデルです。",
+      "firm": "opencode",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:opencode",
+      "id": "alpha-gd5",
+      "maxCtxTokens": 400000,
+      "maxOutputTokens": 128000,
+      "name": "Code GD5 (alpha)",
+      "price": {
+        "cacheRead": 0.3,
+        "cacheWrite": null,
+        "input": 1.5,
+        "output": 15
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "files",
+        "vision",
+        "400K"
       ]
     },
     {
@@ -35723,34 +35813,6 @@
         "files",
         "vision",
         "200K"
-      ]
-    },
-    {
-      "description": "Qwen 3 Coder 480B は vercel によって提供される AI モデルです。",
-      "firm": "vercel",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:vercel-color",
-      "id": "cerebras/qwen3-coder",
-      "maxCtxTokens": 131000,
-      "maxOutputTokens": 32000,
-      "name": "Qwen 3 Coder 480B",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 2,
-        "output": 2
-      },
-      "tags": [
-        "tools",
-        "open_weights",
-        "131K"
       ]
     },
     {

@@ -4226,17 +4226,6 @@
         "reasoning": false,
         "tool_call": true
       },
-      "id": "qwen-3-coder-480b",
-      "name": "Qwen 3 Coder 480B",
-      "providerId": "cerebras",
-      "updated": "2025-07-23"
-    },
-    {
-      "flags": {
-        "attachment": false,
-        "reasoning": false,
-        "tool_call": true
-      },
       "id": "zai-glm-4.6",
       "name": "Z.AI GLM-4.6",
       "providerId": "cerebras",
@@ -6155,6 +6144,17 @@
       "name": "Kimi K2 Instruct",
       "providerId": "fireworks-ai",
       "updated": "2025-07-11"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "accounts/fireworks/models/kimi-k2-thinking",
+      "name": "Kimi K2 Thinking",
+      "providerId": "fireworks-ai",
+      "updated": "2025-11-06"
     },
     {
       "flags": {
@@ -9220,7 +9220,7 @@
         "reasoning": false,
         "tool_call": true
       },
-      "id": "cogito-2.1-671b",
+      "id": "cogito-2.1:671b-cloud",
       "name": "Cogito 2.1 671B",
       "providerId": "ollama-cloud",
       "updated": "2025-11-19"
@@ -9231,7 +9231,7 @@
         "reasoning": true,
         "tool_call": true
       },
-      "id": "deepseek-v3.1-671b",
+      "id": "deepseek-v3.1:671b-cloud",
       "name": "DeepSeek-V3.1 671B",
       "providerId": "ollama-cloud",
       "updated": "2025-08-21"
@@ -9242,7 +9242,7 @@
         "reasoning": false,
         "tool_call": true
       },
-      "id": "gemini-3-pro-preview",
+      "id": "gemini-3-pro-preview:latest",
       "name": "Gemini 3 Pro Preview",
       "providerId": "ollama-cloud",
       "updated": "2025-11-18"
@@ -9253,7 +9253,7 @@
         "reasoning": false,
         "tool_call": true
       },
-      "id": "glm-4.6",
+      "id": "glm-4.6:cloud",
       "name": "GLM-4.6",
       "providerId": "ollama-cloud",
       "updated": "2025-09-29"
@@ -9264,7 +9264,7 @@
         "reasoning": true,
         "tool_call": true
       },
-      "id": "gpt-oss-120b",
+      "id": "gpt-oss:120b-cloud",
       "name": "GPT-OSS 120B",
       "providerId": "ollama-cloud",
       "updated": "2025-08-05"
@@ -9272,13 +9272,13 @@
     {
       "flags": {
         "attachment": false,
-        "reasoning": false,
+        "reasoning": true,
         "tool_call": true
       },
-      "id": "kimi-k2",
-      "name": "Kimi K2",
+      "id": "gpt-oss:20b-cloud",
+      "name": "GPT-OSS 20B",
       "providerId": "ollama-cloud",
-      "updated": "2025-09-05"
+      "updated": "2025-08-05"
     },
     {
       "flags": {
@@ -9286,7 +9286,7 @@
         "reasoning": true,
         "tool_call": true
       },
-      "id": "kimi-k2-thinking",
+      "id": "kimi-k2-thinking:cloud",
       "name": "Kimi K2 Thinking",
       "providerId": "ollama-cloud",
       "updated": "2025-11-06"
@@ -9297,7 +9297,18 @@
         "reasoning": false,
         "tool_call": true
       },
-      "id": "minimax-m2",
+      "id": "kimi-k2:1t-cloud",
+      "name": "Kimi K2",
+      "providerId": "ollama-cloud",
+      "updated": "2025-09-05"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": false,
+        "tool_call": true
+      },
+      "id": "minimax-m2:cloud",
       "name": "MiniMax M2",
       "providerId": "ollama-cloud",
       "updated": "2025-10-27"
@@ -9308,7 +9319,7 @@
         "reasoning": false,
         "tool_call": true
       },
-      "id": "qwen3-coder-480b",
+      "id": "qwen3-coder-480b-cloud",
       "name": "Qwen3 Coder 480B",
       "providerId": "ollama-cloud",
       "updated": "2025-07-22"
@@ -9319,7 +9330,18 @@
         "reasoning": false,
         "tool_call": true
       },
-      "id": "qwen3-vl-235b-instruct",
+      "id": "qwen3-vl-235b-cloud",
+      "name": "Qwen3-VL 235B Instruct",
+      "providerId": "ollama-cloud",
+      "updated": "2025-09-22"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": false,
+        "tool_call": true
+      },
+      "id": "qwen3-vl-235b-instruct-cloud",
       "name": "Qwen3-VL 235B Instruct",
       "providerId": "ollama-cloud",
       "updated": "2025-09-22"
@@ -9761,6 +9783,17 @@
       },
       "id": "alpha-gd4",
       "name": "Code GD4 (alpha)",
+      "providerId": "opencode",
+      "updated": "2025-01-01"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "alpha-gd5",
+      "name": "Code GD5 (alpha)",
       "providerId": "opencode",
       "updated": "2025-01-01"
     },
@@ -13793,17 +13826,6 @@
     {
       "flags": {
         "attachment": false,
-        "reasoning": false,
-        "tool_call": true
-      },
-      "id": "cerebras/qwen3-coder",
-      "name": "Qwen 3 Coder 480B",
-      "providerId": "vercel",
-      "updated": "2025-07-23"
-    },
-    {
-      "flags": {
-        "attachment": false,
         "reasoning": true,
         "tool_call": true
       },
@@ -15461,7 +15483,7 @@
       "iconURL": "https://models.dev/logos/cerebras.svg",
       "id": "cerebras",
       "lobeIcon": "Cerebras",
-      "modelCount": 4,
+      "modelCount": 3,
       "name": "Cerebras"
     },
     {
@@ -15544,7 +15566,7 @@
       "iconURL": "https://models.dev/logos/fireworks-ai.svg",
       "id": "fireworks-ai",
       "lobeIcon": "Fireworks",
-      "modelCount": 11,
+      "modelCount": 12,
       "name": "Fireworks AI"
     },
     {
@@ -15737,7 +15759,7 @@
       "doc": "https://docs.ollama.com/cloud",
       "iconURL": "https://models.dev/logos/ollama-cloud.svg",
       "id": "ollama-cloud",
-      "modelCount": 10,
+      "modelCount": 12,
       "name": "Ollama Cloud"
     },
     {
@@ -15754,7 +15776,7 @@
       "iconURL": "https://models.dev/logos/opencode.svg",
       "id": "opencode",
       "lobeIcon": "OpenCode",
-      "modelCount": 20,
+      "modelCount": 21,
       "name": "OpenCode Zen"
     },
     {
@@ -15863,7 +15885,7 @@
       "iconURL": "https://models.dev/logos/vercel.svg",
       "id": "vercel",
       "lobeIcon": "Vercel.Color",
-      "modelCount": 86,
+      "modelCount": 85,
       "name": "Vercel AI Gateway"
     },
     {
