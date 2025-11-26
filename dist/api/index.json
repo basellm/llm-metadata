@@ -2950,17 +2950,6 @@
         "reasoning": true,
         "tool_call": true
       },
-      "id": "anthropic.claude-opus-4-5-20251101-v1:0",
-      "name": "Claude Opus 4.5",
-      "providerId": "amazon-bedrock",
-      "updated": "2025-08-01"
-    },
-    {
-      "flags": {
-        "attachment": true,
-        "reasoning": true,
-        "tool_call": true
-      },
       "id": "anthropic.claude-sonnet-4-20250514-v1:0",
       "name": "Claude Sonnet 4",
       "providerId": "amazon-bedrock",
@@ -4208,6 +4197,28 @@
       "name": "o4-mini",
       "providerId": "azure-cognitive-services",
       "updated": "2025-04-16"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": false,
+        "tool_call": true
+      },
+      "id": "Ling-1T",
+      "name": "Ling-1T",
+      "providerId": "bailing",
+      "updated": "2025-10"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": true,
+        "tool_call": false
+      },
+      "id": "Ring-1T",
+      "name": "Ring-1T",
+      "providerId": "bailing",
+      "updated": "2025-10"
     },
     {
       "flags": {
@@ -12795,6 +12806,17 @@
         "reasoning": true,
         "tool_call": true
       },
+      "id": "anthropic/claude-opus-4-5",
+      "name": "Claude Opus 4.5",
+      "providerId": "requesty",
+      "updated": "2025-11-24"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
       "id": "anthropic/claude-sonnet-4",
       "name": "Claude Sonnet 4",
       "providerId": "requesty",
@@ -12832,6 +12854,17 @@
       "name": "Gemini 2.5 Pro",
       "providerId": "requesty",
       "updated": "2025-06-17"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "google/gemini-3-pro-preview",
+      "name": "Gemini 3 Pro",
+      "providerId": "requesty",
+      "updated": "2025-11-18"
     },
     {
       "flags": {
@@ -16335,7 +16368,7 @@
       "iconURL": "https://models.dev/logos/amazon-bedrock.svg",
       "id": "amazon-bedrock",
       "lobeIcon": "AmazonBedrock.Color",
-      "modelCount": 44,
+      "modelCount": 43,
       "name": "Amazon Bedrock"
     },
     {
@@ -16360,6 +16393,14 @@
       "id": "azure-cognitive-services",
       "modelCount": 34,
       "name": "Azure Cognitive Services"
+    },
+    {
+      "api": "https://api.tbox.cn/api/llm/v1/chat/completions",
+      "doc": "https://alipaytbox.yuque.com/sxs0ba/ling/intro",
+      "iconURL": "https://models.dev/logos/bailing.svg",
+      "id": "bailing",
+      "modelCount": 2,
+      "name": "Bailing"
     },
     {
       "api": "https://inference.baseten.co/v1",
@@ -16708,7 +16749,7 @@
       "iconURL": "https://models.dev/logos/requesty.svg",
       "id": "requesty",
       "lobeIcon": "Requesty",
-      "modelCount": 17,
+      "modelCount": 19,
       "name": "Requesty"
     },
     {

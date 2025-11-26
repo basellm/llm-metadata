@@ -5949,38 +5949,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "anthropic.claude-opus-4-5-20251101-v1:0": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 1.5,
-          "cache_write": 18.75,
-          "input": 5,
-          "output": 25
-        },
-        "description": "Claude Opus 4.5 is an AI model provided by amazon-bedrock.",
-        "id": "anthropic.claude-opus-4-5-20251101-v1:0",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-08-01",
-        "limit": {
-          "context": 200000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Opus 4.5",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-11-24",
-        "temperature": true,
-        "tool_call": true
-      },
       "anthropic.claude-sonnet-4-20250514-v1:0": {
         "attachment": true,
         "cost": {
@@ -7244,8 +7212,8 @@
       "claude-opus-4-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 1.5,
-          "cache_write": 18.75,
+          "cache_read": 0.5,
+          "cache_write": 6.25,
           "input": 5,
           "output": 25
         },
@@ -9561,6 +9529,77 @@
     },
     "name": "Azure Cognitive Services",
     "npm": "@ai-sdk/azure"
+  },
+  "bailing": {
+    "api": "https://api.tbox.cn/api/llm/v1/chat/completions",
+    "doc": "https://alipaytbox.yuque.com/sxs0ba/ling/intro",
+    "env": [
+      "BAILING_API_TOKEN"
+    ],
+    "iconURL": "https://models.dev/logos/bailing.svg",
+    "id": "bailing",
+    "models": {
+      "Ling-1T": {
+        "attachment": false,
+        "cost": {
+          "input": 0.57,
+          "output": 2.29
+        },
+        "description": "Ling-1T is an AI model provided by bailing.",
+        "id": "Ling-1T",
+        "knowledge": "2024-06",
+        "last_updated": "2025-10",
+        "limit": {
+          "context": 128000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ling-1T",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-10",
+        "temperature": true,
+        "tool_call": true
+      },
+      "Ring-1T": {
+        "attachment": false,
+        "cost": {
+          "input": 0.57,
+          "output": 2.29
+        },
+        "description": "Ring-1T is an AI model provided by bailing.",
+        "id": "Ring-1T",
+        "knowledge": "2024-06",
+        "last_updated": "2025-10",
+        "limit": {
+          "context": 128000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ring-1T",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-10",
+        "temperature": true,
+        "tool_call": false
+      }
+    },
+    "name": "Bailing",
+    "npm": "@ai-sdk/openai-compatible"
   },
   "baseten": {
     "api": "https://inference.baseten.co/v1",
@@ -33230,6 +33269,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "anthropic/claude-opus-4-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.5 is an AI model provided by requesty.",
+        "id": "anthropic/claude-opus-4-5",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-11-24",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-24",
+        "temperature": true,
+        "tool_call": true
+      },
       "anthropic/claude-sonnet-4": {
         "attachment": true,
         "cost": {
@@ -33361,6 +33432,41 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-06-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3-pro-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "cache_write": 4.5,
+          "input": 2,
+          "output": 12
+        },
+        "description": "Gemini 3 Pro is an AI model provided by requesty.",
+        "id": "google/gemini-3-pro-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2025-11-18",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-18",
         "temperature": true,
         "tool_call": true
       },
@@ -35400,8 +35506,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "audio"
           ],
           "output": [
             "text"

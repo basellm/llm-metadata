@@ -7357,36 +7357,6 @@
       ]
     },
     {
-      "description": "Claude Opus 4.5 is an AI model provided by amazon-bedrock.",
-      "firm": "amazon-bedrock",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:amazonbedrock-color",
-      "id": "anthropic.claude-opus-4-5-20251101-v1:0",
-      "maxCtxTokens": 200000,
-      "maxOutputTokens": 64000,
-      "name": "Claude Opus 4.5",
-      "price": {
-        "cacheRead": 1.5,
-        "cacheWrite": 18.75,
-        "input": 5,
-        "output": 25
-      },
-      "tags": [
-        "reasoning",
-        "tools",
-        "files",
-        "vision",
-        "200K"
-      ]
-    },
-    {
       "description": "Claude Sonnet 4 is an AI model provided by amazon-bedrock.",
       "firm": "amazon-bedrock",
       "flags": {
@@ -8581,8 +8551,8 @@
       "maxOutputTokens": 64000,
       "name": "Claude Opus 4.5 (latest)",
       "price": {
-        "cacheRead": 1.5,
-        "cacheWrite": 18.75,
+        "cacheRead": 0.5,
+        "cacheWrite": 6.25,
         "input": 5,
         "output": 25
       },
@@ -10670,6 +10640,62 @@
         "files",
         "vision",
         "200K"
+      ]
+    },
+    {
+      "description": "Ling-1T is an AI model provided by bailing.",
+      "firm": "bailing",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "Ling-1T",
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 32000,
+      "name": "Ling-1T",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.57,
+        "output": 2.29
+      },
+      "tags": [
+        "tools",
+        "open_weights",
+        "128K"
+      ]
+    },
+    {
+      "description": "Ring-1T is an AI model provided by bailing.",
+      "firm": "bailing",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": false
+      },
+      "icon": "",
+      "id": "Ring-1T",
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 32000,
+      "name": "Ring-1T",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.57,
+        "output": 2.29
+      },
+      "tags": [
+        "reasoning",
+        "open_weights",
+        "128K"
       ]
     },
     {
@@ -33122,6 +33148,36 @@
       ]
     },
     {
+      "description": "Claude Opus 4.5 is an AI model provided by requesty.",
+      "firm": "requesty",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:requesty",
+      "id": "anthropic/claude-opus-4-5",
+      "maxCtxTokens": 200000,
+      "maxOutputTokens": 64000,
+      "name": "Claude Opus 4.5",
+      "price": {
+        "cacheRead": 0.5,
+        "cacheWrite": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "files",
+        "vision",
+        "200K"
+      ]
+    },
+    {
       "description": "Claude Sonnet 4 is an AI model provided by requesty.",
       "firm": "requesty",
       "flags": {
@@ -33233,6 +33289,37 @@
         "cacheWrite": 2.375,
         "input": 1.25,
         "output": 10
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "files",
+        "vision",
+        "audio",
+        "1M"
+      ]
+    },
+    {
+      "description": "Gemini 3 Pro is an AI model provided by requesty.",
+      "firm": "requesty",
+      "flags": {
+        "attachment": true,
+        "audio": true,
+        "image": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:requesty",
+      "id": "google/gemini-3-pro-preview",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 65536,
+      "name": "Gemini 3 Pro",
+      "price": {
+        "cacheRead": 0.2,
+        "cacheWrite": 4.5,
+        "input": 2,
+        "output": 12
       },
       "tags": [
         "reasoning",
@@ -35152,8 +35239,8 @@
       "firm": "siliconflow",
       "flags": {
         "attachment": true,
-        "audio": false,
-        "image": true,
+        "audio": true,
+        "image": false,
         "reasoning": false,
         "temperature": true,
         "tool_call": true
@@ -35172,7 +35259,7 @@
       "tags": [
         "tools",
         "files",
-        "vision",
+        "audio",
         "66K"
       ]
     },

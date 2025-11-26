@@ -1,0 +1,71 @@
+{
+  "api": "https://api.tbox.cn/api/llm/v1/chat/completions",
+  "doc": "https://alipaytbox.yuque.com/sxs0ba/ling/intro",
+  "env": [
+    "BAILING_API_TOKEN"
+  ],
+  "iconURL": "https://models.dev/logos/bailing.svg",
+  "id": "bailing",
+  "models": {
+    "Ling-1T": {
+      "attachment": false,
+      "cost": {
+        "input": 0.57,
+        "output": 2.29
+      },
+      "description": "Ling-1T は bailing によって提供される AI モデルです。",
+      "id": "Ling-1T",
+      "knowledge": "2024-06",
+      "last_updated": "2025-10",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling-1T",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-10",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Ring-1T": {
+      "attachment": false,
+      "cost": {
+        "input": 0.57,
+        "output": 2.29
+      },
+      "description": "Ring-1T は bailing によって提供される AI モデルです。",
+      "id": "Ring-1T",
+      "knowledge": "2024-06",
+      "last_updated": "2025-10",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ring-1T",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-10",
+      "temperature": true,
+      "tool_call": false
+    }
+  },
+  "name": "Bailing",
+  "npm": "@ai-sdk/openai-compatible"
+}
