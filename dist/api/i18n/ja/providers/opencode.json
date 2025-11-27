@@ -51,13 +51,13 @@
         "input": 0.5,
         "output": 2
       },
-      "description": "Code GD4 (alpha) は opencode によって提供される AI モデルです。",
+      "description": "Alpha GD4 は opencode によって提供される AI モデルです。",
       "id": "alpha-gd4",
       "knowledge": "2025-01",
       "last_updated": "2025-01-01",
       "limit": {
-        "context": 200000,
-        "output": 128000
+        "context": 262144,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -67,8 +67,11 @@
           "text"
         ]
       },
-      "name": "Code GD4 (alpha)",
+      "name": "Alpha GD4",
       "open_weights": true,
+      "provider": {
+        "npm": "@ai-sdk/anthropic"
+      },
       "reasoning": true,
       "release_date": "2025-01-01",
       "status": "alpha",
