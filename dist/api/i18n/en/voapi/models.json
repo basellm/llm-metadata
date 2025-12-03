@@ -16293,13 +16293,40 @@
       ]
     },
     {
-      "description": "@cf/openai/gpt-oss-120b is an AI model provided by cloudflare-workers-ai.",
+      "description": "@cf/aisingapore/gemma-sea-lion-v4-27b-it is an AI model provided by cloudflare-workers-ai.",
       "firm": "cloudflare-workers-ai",
       "flags": {
         "attachment": false,
         "audio": false,
         "image": false,
         "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:cloudflare-color",
+      "id": "gemma-sea-lion-v4-27b-it",
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 0,
+      "name": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.35,
+        "output": 0.56
+      },
+      "tags": [
+        "tools",
+        "128K"
+      ]
+    },
+    {
+      "description": "@cf/openai/gpt-oss-120b is an AI model provided by cloudflare-workers-ai.",
+      "firm": "cloudflare-workers-ai",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
         "temperature": false,
         "tool_call": false
       },
@@ -16315,6 +16342,7 @@
         "output": 0.75
       },
       "tags": [
+        "reasoning",
         "open_weights",
         "128K"
       ]
@@ -16326,7 +16354,7 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": false,
         "tool_call": false
       },
@@ -16342,8 +16370,36 @@
         "output": 0.3
       },
       "tags": [
+        "reasoning",
         "open_weights",
         "128K"
+      ]
+    },
+    {
+      "description": "@cf/ibm-granite/granite-4.0-h-micro is an AI model provided by cloudflare-workers-ai.",
+      "firm": "cloudflare-workers-ai",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:cloudflare-color",
+      "id": "granite-4.0-h-micro",
+      "maxCtxTokens": 131000,
+      "maxOutputTokens": 0,
+      "name": "@cf/ibm-granite/granite-4.0-h-micro",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.017,
+        "output": 0.11
+      },
+      "tags": [
+        "tools",
+        "131K"
       ]
     },
     {
@@ -16835,7 +16891,7 @@
       },
       "icon": "lb:cloudflare-color",
       "id": "llama-guard-3-8b",
-      "maxCtxTokens": 0,
+      "maxCtxTokens": 131072,
       "maxOutputTokens": 0,
       "name": "@cf/meta/llama-guard-3-8b",
       "price": {
@@ -16845,7 +16901,8 @@
         "output": 0.03
       },
       "tags": [
-        "open_weights"
+        "open_weights",
+        "131.1K"
       ]
     },
     {
@@ -17054,7 +17111,7 @@
       "icon": "lb:cloudflare-color",
       "id": "mistral-7b-instruct-v0.2",
       "maxCtxTokens": 3072,
-      "maxOutputTokens": 3072,
+      "maxOutputTokens": 4096,
       "name": "@hf/mistral/mistral-7b-instruct-v0.2",
       "price": {
         "cacheRead": null,
@@ -17424,6 +17481,35 @@
         "output": 1
       },
       "tags": [
+        "tools",
+        "open_weights",
+        "32.8K"
+      ]
+    },
+    {
+      "description": "@cf/qwen/qwen3-30b-a3b-fp8 is an AI model provided by cloudflare-workers-ai.",
+      "firm": "cloudflare-workers-ai",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:cloudflare-color",
+      "id": "qwen3-30b-a3b-fp8",
+      "maxCtxTokens": 32768,
+      "maxOutputTokens": 0,
+      "name": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.051,
+        "output": 0.34
+      },
+      "tags": [
+        "reasoning",
         "tools",
         "open_weights",
         "32.8K"
