@@ -28412,10 +28412,10 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3-coder-480b-cloud": {
+      "qwen3-coder:480b-cloud": {
         "attachment": false,
         "description": "Qwen3 Coder 480B is an AI model provided by ollama-cloud.",
-        "id": "qwen3-coder-480b-cloud",
+        "id": "qwen3-coder:480b-cloud",
         "last_updated": "2025-07-22",
         "limit": {
           "context": 200000,
@@ -31090,6 +31090,35 @@
           ]
         },
         "name": "DeepSeek V3.2",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-v3.2-speciale": {
+        "attachment": false,
+        "cost": {
+          "input": 0.27,
+          "output": 0.41
+        },
+        "description": "DeepSeek V3.2 Speciale is an AI model provided by openrouter.",
+        "id": "deepseek/deepseek-v3.2-speciale",
+        "knowledge": "2024-07",
+        "last_updated": "2025-12-01",
+        "limit": {
+          "context": 163840,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.2 Speciale",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-01",
@@ -38298,6 +38327,109 @@
     },
     "name": "Requesty",
     "npm": "@ai-sdk/openai-compatible"
+  },
+  "sap-ai-core": {
+    "doc": "https://help.sap.com/docs/sap-ai-core",
+    "env": [
+      "SAP_AI_SERVICE_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/sap-ai-core.svg",
+    "id": "sap-ai-core",
+    "models": {
+      "claude-3-5-sonnet": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 3.5 is an AI model provided by sap-ai-core.",
+        "id": "claude-3-5-sonnet",
+        "last_updated": "2024-06-20",
+        "limit": {
+          "context": 200000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 3.5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-06-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-1.5-pro": {
+        "attachment": true,
+        "cost": {
+          "input": 1.25,
+          "output": 5
+        },
+        "description": "Gemini 1.5 Pro is an AI model provided by sap-ai-core.",
+        "id": "gemini-1.5-pro",
+        "last_updated": "2024-02-15",
+        "limit": {
+          "context": 2000000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 1.5 Pro",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-02-15",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gpt-4o": {
+        "attachment": true,
+        "cost": {
+          "input": 2.5,
+          "output": 10
+        },
+        "description": "GPT-4o is an AI model provided by sap-ai-core.",
+        "id": "gpt-4o",
+        "last_updated": "2024-05-13",
+        "limit": {
+          "context": 128000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4o",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-05-13",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "SAP AI Core",
+    "npm": "@mymediset/sap-ai-provider"
   },
   "scaleway": {
     "api": "https://api.scaleway.ai/v1",

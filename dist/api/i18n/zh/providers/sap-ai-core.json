@@ -1,0 +1,103 @@
+{
+  "doc": "https://help.sap.com/docs/sap-ai-core",
+  "env": [
+    "SAP_AI_SERVICE_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/sap-ai-core.svg",
+  "id": "sap-ai-core",
+  "models": {
+    "claude-3-5-sonnet": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Claude Sonnet 3.5 是由 sap-ai-core 提供的人工智能模型。",
+      "id": "claude-3-5-sonnet",
+      "last_updated": "2024-06-20",
+      "limit": {
+        "context": 200000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 3.5",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-06-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-1.5-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 1.25,
+        "output": 5
+      },
+      "description": "Gemini 1.5 Pro 是由 sap-ai-core 提供的人工智能模型。",
+      "id": "gemini-1.5-pro",
+      "last_updated": "2024-02-15",
+      "limit": {
+        "context": 2000000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 1.5 Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-02-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4o": {
+      "attachment": true,
+      "cost": {
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "GPT-4o 是由 sap-ai-core 提供的人工智能模型。",
+      "id": "gpt-4o",
+      "last_updated": "2024-05-13",
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-05-13",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "SAP AI Core",
+  "npm": "@mymediset/sap-ai-provider"
+}
