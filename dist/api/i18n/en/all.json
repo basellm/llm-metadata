@@ -28617,6 +28617,38 @@
         "temperature": false,
         "tool_call": true
       },
+      "gpt-5.1-codex-max": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1 Codex Max is an AI model provided by openai.",
+        "id": "gpt-5.1-codex-max",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-11-13",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1 Codex Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-13",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "gpt-5.1-codex-mini": {
         "attachment": true,
         "cost": {
@@ -37725,7 +37757,99 @@
     "iconURL": "https://models.dev/logos/sap-ai-core.svg",
     "id": "sap-ai-core",
     "models": {
-      "claude-3-5-sonnet": {
+      "anthropic--claude-3-haiku": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "cache_write": 0.3,
+          "input": 0.25,
+          "output": 1.25
+        },
+        "description": "anthropic--claude-3-haiku is an AI model provided by sap-ai-core.",
+        "id": "anthropic--claude-3-haiku",
+        "knowledge": "2023-08-31",
+        "last_updated": "2024-03-13",
+        "limit": {
+          "context": 200000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "anthropic--claude-3-haiku",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-03-13",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic--claude-3-opus": {
+        "attachment": true,
+        "cost": {
+          "input": 15,
+          "output": 75
+        },
+        "description": "anthropic--claude-3-opus is an AI model provided by sap-ai-core.",
+        "id": "anthropic--claude-3-opus",
+        "knowledge": "2023-08-31",
+        "last_updated": "2024-02-29",
+        "limit": {
+          "context": 200000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "anthropic--claude-3-opus",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-02-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic--claude-3-sonnet": {
+        "attachment": true,
+        "cost": {
+          "input": 3,
+          "output": 15
+        },
+        "description": "anthropic--claude-3-sonnet is an AI model provided by sap-ai-core.",
+        "id": "anthropic--claude-3-sonnet",
+        "knowledge": "2023-08-31",
+        "last_updated": "2024-03-04",
+        "limit": {
+          "context": 200000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "anthropic--claude-3-sonnet",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-03-04",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic--claude-3.5-sonnet": {
         "attachment": true,
         "cost": {
           "cache_read": 0.3,
@@ -37733,9 +37857,10 @@
           "input": 3,
           "output": 15
         },
-        "description": "Claude Sonnet 3.5 is an AI model provided by sap-ai-core.",
-        "id": "claude-3-5-sonnet",
-        "last_updated": "2024-06-20",
+        "description": "anthropic--claude-3.5-sonnet is an AI model provided by sap-ai-core.",
+        "id": "anthropic--claude-3.5-sonnet",
+        "knowledge": "2024-04-30",
+        "last_updated": "2024-10-22",
         "limit": {
           "context": 200000,
           "output": 8192
@@ -37749,56 +37874,28 @@
             "text"
           ]
         },
-        "name": "Claude Sonnet 3.5",
+        "name": "anthropic--claude-3.5-sonnet",
         "open_weights": false,
         "reasoning": false,
-        "release_date": "2024-06-20",
+        "release_date": "2024-10-22",
         "temperature": true,
         "tool_call": true
       },
-      "gemini-1.5-pro": {
+      "anthropic--claude-3.7-sonnet": {
         "attachment": true,
         "cost": {
-          "input": 1.25,
-          "output": 5
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
         },
-        "description": "Gemini 1.5 Pro is an AI model provided by sap-ai-core.",
-        "id": "gemini-1.5-pro",
-        "last_updated": "2024-02-15",
+        "description": "anthropic--claude-3.7-sonnet is an AI model provided by sap-ai-core.",
+        "id": "anthropic--claude-3.7-sonnet",
+        "knowledge": "2024-10-31",
+        "last_updated": "2025-02-24",
         "limit": {
-          "context": 2000000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemini 1.5 Pro",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-02-15",
-        "temperature": true,
-        "tool_call": true
-      },
-      "gpt-4o": {
-        "attachment": true,
-        "cost": {
-          "input": 2.5,
-          "output": 10
-        },
-        "description": "GPT-4o is an AI model provided by sap-ai-core.",
-        "id": "gpt-4o",
-        "last_updated": "2024-05-13",
-        "limit": {
-          "context": 128000,
-          "output": 4096
+          "context": 200000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -37809,11 +37906,274 @@
             "text"
           ]
         },
-        "name": "GPT-4o",
+        "name": "anthropic--claude-3.7-sonnet",
         "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-05-13",
+        "reasoning": true,
+        "release_date": "2025-02-24",
         "temperature": true,
+        "tool_call": true
+      },
+      "anthropic--claude-4-opus": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.5,
+          "cache_write": 18.75,
+          "input": 15,
+          "output": 75
+        },
+        "description": "anthropic--claude-4-opus is an AI model provided by sap-ai-core.",
+        "id": "anthropic--claude-4-opus",
+        "knowledge": "2025-01-31",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 200000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "anthropic--claude-4-opus",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic--claude-4-sonnet": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "anthropic--claude-4-sonnet is an AI model provided by sap-ai-core.",
+        "id": "anthropic--claude-4-sonnet",
+        "knowledge": "2025-01-31",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "anthropic--claude-4-sonnet",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic--claude-4.5-sonnet": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "anthropic--claude-4.5-sonnet is an AI model provided by sap-ai-core.",
+        "id": "anthropic--claude-4.5-sonnet",
+        "knowledge": "2025-01-31",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "anthropic--claude-4.5-sonnet",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-2.5-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.3,
+          "input_audio": 1,
+          "output": 2.5
+        },
+        "description": "gemini-2.5-flash is an AI model provided by sap-ai-core.",
+        "id": "gemini-2.5-flash",
+        "knowledge": "2025-01",
+        "last_updated": "2025-06-05",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "gemini-2.5-flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-03-25",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-2.5-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.31,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "gemini-2.5-pro is an AI model provided by sap-ai-core.",
+        "id": "gemini-2.5-pro",
+        "knowledge": "2025-01",
+        "last_updated": "2025-06-05",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "gemini-2.5-pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-03-25",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gpt-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.13,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "gpt-5 is an AI model provided by sap-ai-core.",
+        "id": "gpt-5",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "gpt-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.25,
+          "output": 2
+        },
+        "description": "gpt-5-mini is an AI model provided by sap-ai-core.",
+        "id": "gpt-5-mini",
+        "knowledge": "2024-05-30",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "gpt-5-mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5-nano": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.01,
+          "input": 0.05,
+          "output": 0.4
+        },
+        "description": "gpt-5-nano is an AI model provided by sap-ai-core.",
+        "id": "gpt-5-nano",
+        "knowledge": "2024-05-30",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "gpt-5-nano",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       }
     },
