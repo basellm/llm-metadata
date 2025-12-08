@@ -1,38 +1,28 @@
 {
-  "attachment": true,
+  "attachment": false,
   "cost": {
-    "cache_read": 0.3,
-    "cache_write": 3.75,
-    "context_over_200k": {
-      "cache_read": 0.6,
-      "cache_write": 7.5,
-      "input": 6,
-      "output": 22.5
-    },
     "input": 3,
     "output": 15
   },
-  "description": "Claude Sonnet 4 は cloudflare-ai-gateway によって提供される AI モデルです。",
+  "description": "claude sonnet 4 は cloudflare-ai-gateway によって提供される AI モデルです。",
   "id": "anthropic/claude-sonnet-4",
-  "knowledge": "2025-03-31",
   "last_updated": "2025-05-22",
   "limit": {
-    "context": 200000,
-    "output": 64000
+    "context": 128000,
+    "output": 16384
   },
   "modalities": {
     "input": [
-      "text",
-      "image"
+      "text"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Claude Sonnet 4",
+  "name": "claude sonnet 4",
   "open_weights": false,
-  "reasoning": true,
+  "reasoning": false,
   "release_date": "2025-05-22",
   "temperature": true,
-  "tool_call": true
+  "tool_call": false
 }
