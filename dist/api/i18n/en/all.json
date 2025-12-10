@@ -12798,6 +12798,9 @@
         },
         "description": "DeepSeek V3.2 is an AI model provided by baseten.",
         "id": "deepseek-ai/DeepSeek-V3.2",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "knowledge": "2025-10",
         "last_updated": "2025-12-01",
         "limit": {
@@ -19613,6 +19616,9 @@
         },
         "description": "DeepSeek Reasoner is an AI model provided by deepseek.",
         "id": "deepseek-reasoner",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "knowledge": "2024-07",
         "last_updated": "2025-09-29",
         "limit": {
@@ -19631,35 +19637,6 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-01-20",
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek-v3.2": {
-        "attachment": false,
-        "cost": {
-          "input": 0.28,
-          "output": 0.42
-        },
-        "description": "DeepSeek V3.2 is an AI model provided by deepseek.",
-        "id": "deepseek-v3.2",
-        "knowledge": "2024-07",
-        "last_updated": "2025-12-01",
-        "limit": {
-          "context": 128000,
-          "output": 8000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V3.2",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-12-01",
         "temperature": true,
         "tool_call": true
       }
@@ -30727,6 +30704,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "labs-devstral-small-2512": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.3
+        },
+        "description": "Devstral Small 2 is an AI model provided by mistral.",
+        "id": "labs-devstral-small-2512",
+        "knowledge": "2025-12",
+        "last_updated": "2025-12-09",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Devstral Small 2",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-12-09",
+        "temperature": true,
+        "tool_call": true
+      },
       "magistral-medium-latest": {
         "attachment": false,
         "cost": {
@@ -32506,6 +32513,67 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-10-27",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mistralai/devstral-2-123b-instruct-2512": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Devstral-2-123B-Instruct-2512 is an AI model provided by nvidia.",
+        "id": "mistralai/devstral-2-123b-instruct-2512",
+        "knowledge": "2025-12",
+        "last_updated": "2025-12-09",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Devstral-2-123B-Instruct-2512",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-08",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "mistralai/ministral-14b-instruct-2512": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Ministral 3 14B Instruct 2512 is an AI model provided by nvidia.",
+        "id": "mistralai/ministral-14b-instruct-2512",
+        "knowledge": "2025-12",
+        "last_updated": "2025-12-08",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ministral 3 14B Instruct 2512",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-12-01",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -52109,6 +52177,37 @@
         "release_date": "2025-09-30",
         "temperature": true,
         "tool_call": true
+      },
+      "glm-4.6v": {
+        "attachment": true,
+        "cost": {
+          "input": 0.3,
+          "output": 0.9
+        },
+        "description": "GLM-4.6V is an AI model provided by zai.",
+        "id": "glm-4.6v",
+        "knowledge": "2025-04",
+        "last_updated": "2025-12-08",
+        "limit": {
+          "context": 128000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.6V",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-08",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Z.AI",
@@ -52275,6 +52374,37 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-09-30",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-4.6v": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-4.6V is an AI model provided by zai-coding-plan.",
+        "id": "glm-4.6v",
+        "knowledge": "2025-04",
+        "last_updated": "2025-12-08",
+        "limit": {
+          "context": 128000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.6V",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-08",
         "temperature": true,
         "tool_call": true
       }
@@ -53106,6 +53236,37 @@
         "release_date": "2025-09-30",
         "temperature": true,
         "tool_call": true
+      },
+      "glm-4.6v": {
+        "attachment": true,
+        "cost": {
+          "input": 0.3,
+          "output": 0.9
+        },
+        "description": "GLM-4.6V is an AI model provided by zhipuai.",
+        "id": "glm-4.6v",
+        "knowledge": "2025-04",
+        "last_updated": "2025-12-08",
+        "limit": {
+          "context": 128000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.6V",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-08",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Zhipu AI",
@@ -53272,6 +53433,37 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-09-30",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-4.6v": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-4.6V is an AI model provided by zhipuai-coding-plan.",
+        "id": "glm-4.6v",
+        "knowledge": "2025-04",
+        "last_updated": "2025-12-08",
+        "limit": {
+          "context": 128000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.6V",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-08",
         "temperature": true,
         "tool_call": true
       }

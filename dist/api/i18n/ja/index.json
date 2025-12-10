@@ -8010,17 +8010,6 @@
         "reasoning": true,
         "tool_call": true
       },
-      "id": "deepseek-v3.2",
-      "name": "DeepSeek V3.2",
-      "providerId": "deepseek",
-      "updated": "2025-12-01"
-    },
-    {
-      "flags": {
-        "attachment": false,
-        "reasoning": true,
-        "tool_call": true
-      },
       "id": "doubao-seed-1-6",
       "name": "doubao-seed-1-6",
       "providerId": "doubao",
@@ -11901,6 +11890,17 @@
     {
       "flags": {
         "attachment": false,
+        "reasoning": false,
+        "tool_call": true
+      },
+      "id": "labs-devstral-small-2512",
+      "name": "Devstral Small 2",
+      "providerId": "mistral",
+      "updated": "2025-12-09"
+    },
+    {
+      "flags": {
+        "attachment": false,
         "reasoning": true,
         "tool_call": true
       },
@@ -12535,6 +12535,28 @@
       "name": "MiniMax-M2",
       "providerId": "nvidia",
       "updated": "2025-10-31"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "mistralai/devstral-2-123b-instruct-2512",
+      "name": "Devstral-2-123B-Instruct-2512",
+      "providerId": "nvidia",
+      "updated": "2025-12-09"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": false,
+        "tool_call": true
+      },
+      "id": "mistralai/ministral-14b-instruct-2512",
+      "name": "Ministral 3 14B Instruct 2512",
+      "providerId": "nvidia",
+      "updated": "2025-12-08"
     },
     {
       "flags": {
@@ -19622,6 +19644,17 @@
     },
     {
       "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "glm-4.6v",
+      "name": "GLM-4.6V",
+      "providerId": "zai",
+      "updated": "2025-12-08"
+    },
+    {
+      "flags": {
         "attachment": false,
         "reasoning": true,
         "tool_call": true
@@ -19674,6 +19707,17 @@
       "name": "GLM-4.6",
       "providerId": "zai-coding-plan",
       "updated": "2025-09-30"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "glm-4.6v",
+      "name": "GLM-4.6V",
+      "providerId": "zai-coding-plan",
+      "updated": "2025-12-08"
     },
     {
       "flags": {
@@ -19963,6 +20007,17 @@
     },
     {
       "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "glm-4.6v",
+      "name": "GLM-4.6V",
+      "providerId": "zhipuai",
+      "updated": "2025-12-08"
+    },
+    {
+      "flags": {
         "attachment": false,
         "reasoning": true,
         "tool_call": true
@@ -20015,6 +20070,17 @@
       "name": "GLM-4.6",
       "providerId": "zhipuai-coding-plan",
       "updated": "2025-09-30"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "glm-4.6v",
+      "name": "GLM-4.6V",
+      "providerId": "zhipuai-coding-plan",
+      "updated": "2025-12-08"
     }
   ],
   "providers": [
@@ -20157,7 +20223,7 @@
       "iconURL": "https://models.dev/logos/deepseek.svg",
       "id": "deepseek",
       "lobeIcon": "DeepSeek.Color",
-      "modelCount": 3,
+      "modelCount": 2,
       "name": "DeepSeek"
     },
     {
@@ -20357,7 +20423,7 @@
       "iconURL": "https://models.dev/logos/mistral.svg",
       "id": "mistral",
       "lobeIcon": "Mistral.Color",
-      "modelCount": 22,
+      "modelCount": 23,
       "name": "Mistral"
     },
     {
@@ -20409,7 +20475,7 @@
       "doc": "https://docs.api.nvidia.com/nim/",
       "iconURL": "https://models.dev/logos/nvidia.svg",
       "id": "nvidia",
-      "modelCount": 21,
+      "modelCount": 23,
       "name": "Nvidia"
     },
     {
@@ -20591,7 +20657,7 @@
       "iconURL": "https://models.dev/logos/zai.svg",
       "id": "zai",
       "lobeIcon": "ZAI",
-      "modelCount": 5,
+      "modelCount": 6,
       "name": "Z.AI"
     },
     {
@@ -20599,7 +20665,7 @@
       "doc": "https://docs.z.ai/devpack/overview",
       "iconURL": "https://models.dev/logos/zai-coding-plan.svg",
       "id": "zai-coding-plan",
-      "modelCount": 5,
+      "modelCount": 6,
       "name": "Z.AI Coding Plan"
     },
     {
@@ -20616,7 +20682,7 @@
       "iconURL": "https://models.dev/logos/zhipuai.svg",
       "id": "zhipuai",
       "lobeIcon": "Zhipu.Color",
-      "modelCount": 5,
+      "modelCount": 6,
       "name": "Zhipu AI"
     },
     {
@@ -20624,7 +20690,7 @@
       "doc": "https://docs.bigmodel.cn/cn/coding-plan/overview",
       "iconURL": "https://models.dev/logos/zhipuai-coding-plan.svg",
       "id": "zhipuai-coding-plan",
-      "modelCount": 5,
+      "modelCount": 6,
       "name": "Zhipu AI Coding Plan"
     }
   ]
