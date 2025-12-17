@@ -381,6 +381,45 @@
       "temperature": true,
       "tool_call": true
     },
+    "gemini-3-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.5,
+        "output": 3
+      },
+      "description": "Gemini 3 Flash は opencode によって提供される AI モデルです。",
+      "family": "gemini-flash",
+      "id": "gemini-3-flash",
+      "knowledge": "2025-01",
+      "last_updated": "2025-12-17",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3 Flash",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/google"
+      },
+      "reasoning": true,
+      "release_date": "2025-12-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "gemini-3-pro": {
       "attachment": true,
       "cost": {
@@ -399,8 +438,8 @@
       "knowledge": "2025-01",
       "last_updated": "2025-11-18",
       "limit": {
-        "context": 1000000,
-        "output": 64000
+        "context": 1048576,
+        "output": 65536
       },
       "modalities": {
         "input": [
