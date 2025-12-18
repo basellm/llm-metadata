@@ -26178,6 +26178,47 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-3-flash-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "context_over_200k": {
+            "cache_read": 0.05,
+            "input": 0.5,
+            "output": 3
+          },
+          "input": 0.5,
+          "output": 3
+        },
+        "description": "Gemini 3 Flash Preview is an AI model provided by google-vertex.",
+        "family": "gemini-flash",
+        "id": "gemini-3-flash-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Flash Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gemini-3-pro-preview": {
         "attachment": true,
         "cost": {
@@ -32659,6 +32700,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "devstral-2512": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Devstral 2 is an AI model provided by mistral.",
+        "family": "devstral-medium",
+        "id": "devstral-2512",
+        "knowledge": "2025-12",
+        "last_updated": "2025-12-09",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Devstral 2",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-12-09",
+        "temperature": true,
+        "tool_call": true
+      },
       "devstral-medium-2507": {
         "attachment": false,
         "cost": {
@@ -32782,8 +32853,8 @@
       "labs-devstral-small-2512": {
         "attachment": false,
         "cost": {
-          "input": 0.1,
-          "output": 0.3
+          "input": 0,
+          "output": 0
         },
         "description": "Devstral Small 2 is an AI model provided by mistral.",
         "family": "devstral-small",
@@ -37809,7 +37880,6 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-09-05",
-        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -46190,6 +46260,41 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-06-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3-flash-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "cache_write": 1,
+          "input": 0.5,
+          "output": 3
+        },
+        "description": "Gemini 3 Flash is an AI model provided by requesty.",
+        "id": "google/gemini-3-flash-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-17",
         "temperature": true,
         "tool_call": true
       },
@@ -58889,6 +58994,39 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-08-26",
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2-flash": {
+        "attachment": false,
+        "cost": {
+          "input": 0.07,
+          "output": 0.21
+        },
+        "description": "MiMo-V2-Flash is an AI model provided by zenmux.",
+        "family": "mimo-v2-flash",
+        "id": "xiaomi/mimo-v2-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12-01",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 256000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-17",
         "temperature": true,
         "tool_call": true
       },
