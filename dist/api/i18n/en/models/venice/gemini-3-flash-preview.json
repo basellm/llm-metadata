@@ -1,30 +1,27 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.05,
-    "context_over_200k": {
-      "cache_read": 0.05,
-      "input": 0.5,
-      "output": 3
-    },
-    "input": 0.5,
-    "output": 3
+    "input": 0.7,
+    "output": 3.75
   },
-  "description": "Gemini 3 Flash Preview 是由 google 提供的人工智能模型。",
+  "description": "Gemini 3 Flash Preview is an AI model provided by venice.",
   "family": "gemini-flash",
   "id": "gemini-3-flash-preview",
+  "interleaved": {
+    "field": "reasoning_details"
+  },
   "knowledge": "2025-01",
   "last_updated": "2025-12-17",
   "limit": {
-    "context": 1048576,
+    "context": 256576,
     "output": 65536
   },
   "modalities": {
     "input": [
       "text",
       "image",
-      "video",
       "audio",
+      "video",
       "pdf"
     ],
     "output": [
@@ -35,7 +32,6 @@
   "open_weights": false,
   "reasoning": true,
   "release_date": "2025-12-17",
-  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

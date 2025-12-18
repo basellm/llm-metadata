@@ -22593,6 +22593,40 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-3-flash-preview": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemini 3 Flash は github-copilot によって提供される AI モデルです。",
+        "family": "gemini-flash",
+        "id": "gemini-3-flash-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 128000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gemini-3-pro-preview": {
         "attachment": true,
         "cost": {
@@ -25454,14 +25488,14 @@
       "gemini-3-flash-preview": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0375,
+          "cache_read": 0.05,
           "context_over_200k": {
-            "cache_read": 0.075,
-            "input": 0.3,
-            "output": 1.2
+            "cache_read": 0.05,
+            "input": 0.5,
+            "output": 3
           },
-          "input": 0.15,
-          "output": 0.6
+          "input": 0.5,
+          "output": 3
         },
         "description": "Gemini 3 Flash Preview は google によって提供される AI モデルです。",
         "family": "gemini-flash",
@@ -38879,9 +38913,9 @@
       "google/gemini-3-flash-preview": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0375,
-          "input": 0.15,
-          "output": 0.6
+          "cache_read": 0.05,
+          "input": 0.5,
+          "output": 3
         },
         "description": "Gemini 3 Flash Preview は openrouter によって提供される AI モデルです。",
         "family": "gemini-flash",
@@ -53302,6 +53336,43 @@
         "release_date": "2025-10-05",
         "temperature": true,
         "tool_call": false
+      },
+      "gemini-3-flash-preview": {
+        "attachment": true,
+        "cost": {
+          "input": 0.7,
+          "output": 3.75
+        },
+        "description": "Gemini 3 Flash Preview は venice によって提供される AI モデルです。",
+        "family": "gemini-flash",
+        "id": "gemini-3-flash-preview",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 256576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Flash Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-17",
+        "temperature": true,
+        "tool_call": true
       },
       "gemini-3-pro-preview": {
         "attachment": true,
