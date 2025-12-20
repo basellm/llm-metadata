@@ -18,10 +18,10 @@
       "family": "claude-opus",
       "id": "claude-opus-45",
       "knowledge": "2025-03",
-      "last_updated": "2025-12-05",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 202752,
-        "output": 8192
+        "output": 50688
       },
       "modalities": {
         "input": [
@@ -36,7 +36,8 @@
       "name": "Claude Opus 4.5",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2025-12-05",
+      "release_date": "2025-12-18",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -50,10 +51,10 @@
       "family": "deepseek-v3",
       "id": "deepseek-v3.2",
       "knowledge": "2025-10",
-      "last_updated": "2025-10-05",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 163840,
-        "output": 8192
+        "output": 40960
       },
       "modalities": {
         "input": [
@@ -65,10 +66,40 @@
       },
       "name": "DeepSeek V3.2",
       "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-10-05",
+      "reasoning": true,
+      "release_date": "2025-12-07",
       "temperature": true,
       "tool_call": false
+    },
+    "devstral-2-2512": {
+      "attachment": false,
+      "cost": {
+        "input": 0.25,
+        "output": 0.25
+      },
+      "description": "Devstral 2 是由 venice 提供的人工智能模型。",
+      "family": "devstral",
+      "id": "devstral-2-2512",
+      "last_updated": "2025-12-18",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral 2",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "gemini-3-flash-preview": {
       "attachment": true,
@@ -83,9 +114,9 @@
         "field": "reasoning_details"
       },
       "knowledge": "2025-01",
-      "last_updated": "2025-12-17",
+      "last_updated": "2025-12-18",
       "limit": {
-        "context": 256576,
+        "context": 262144,
         "output": 65536
       },
       "modalities": {
@@ -103,7 +134,8 @@
       "name": "Gemini 3 Flash Preview",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2025-12-17",
+      "release_date": "2025-12-18",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -117,14 +149,17 @@
       "family": "gemini-pro",
       "id": "gemini-3-pro-preview",
       "knowledge": "2024-04",
-      "last_updated": "2025-11-18",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 202752,
-        "output": 8192
+        "output": 50688
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "audio",
+          "video"
         ],
         "output": [
           "text"
@@ -133,7 +168,8 @@
       "name": "Gemini 3 Pro Preview",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2025-11-18",
+      "release_date": "2024-06-07",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -147,10 +183,10 @@
       "family": "gemma-3",
       "id": "google-gemma-3-27b-it",
       "knowledge": "2025-07",
-      "last_updated": "2025-07-27",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 202752,
-        "output": 8192
+        "output": 50688
       },
       "modalities": {
         "input": [
@@ -164,7 +200,8 @@
       "name": "Google Gemma 3 27B Instruct",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-27",
+      "release_date": "2024-04-01",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -178,10 +215,10 @@
       "family": "grok",
       "id": "grok-41-fast",
       "knowledge": "2025-07",
-      "last_updated": "2025-11-19",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 262144,
-        "output": 8192
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -195,7 +232,8 @@
       "name": "Grok 4.1 Fast",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2025-11-19",
+      "release_date": "2025-04-29",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -209,10 +247,10 @@
       "family": "llama-3.1",
       "id": "hermes-3-llama-3.1-405b",
       "knowledge": "2024-04",
-      "last_updated": "2024-04-15",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 131072,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -225,7 +263,7 @@
       "name": "Hermes 3 Llama 3.1 405b",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-04-15",
+      "release_date": "2024-04-01",
       "temperature": true,
       "tool_call": false
     },
@@ -239,10 +277,10 @@
       "family": "kimi-k2",
       "id": "kimi-k2-thinking",
       "knowledge": "2024-04",
-      "last_updated": "2025-09-05",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 262144,
-        "output": 8192
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -255,7 +293,8 @@
       "name": "Kimi K2 Thinking",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2025-09-05",
+      "release_date": "2024-06-07",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -269,10 +308,10 @@
       "family": "llama-3.2",
       "id": "llama-3.2-3b",
       "knowledge": "2023-12",
-      "last_updated": "2025-05-23",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 131072,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -285,7 +324,8 @@
       "name": "Llama 3.2 3B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-05-23",
+      "release_date": "2024-10-03",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -299,10 +339,10 @@
       "family": "llama-3.3",
       "id": "llama-3.3-70b",
       "knowledge": "2023-12",
-      "last_updated": "2025-06-09",
+      "last_updated": "2025-12-18",
       "limit": {
-        "context": 65536,
-        "output": 8192
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -315,7 +355,7 @@
       "name": "Llama 3.3 70B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-06-09",
+      "release_date": "2024-12-09",
       "temperature": true,
       "tool_call": true
     },
@@ -329,10 +369,10 @@
       "family": "mistral",
       "id": "mistral-31-24b",
       "knowledge": "2023-10",
-      "last_updated": "2025-12-09",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 131072,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -346,14 +386,14 @@
       "name": "Venice Medium",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-15",
+      "release_date": "2025-03-18",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "openai-gpt-52": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
-        "cache_read": 0.175,
         "input": 2.19,
         "output": 17.5
       },
@@ -361,15 +401,14 @@
       "family": "gpt-5",
       "id": "openai-gpt-52",
       "knowledge": "2025-08-31",
-      "last_updated": "2025-12-11",
+      "last_updated": "2025-12-18",
       "limit": {
-        "context": 200000,
-        "output": 128000
+        "context": 262144,
+        "output": 65536
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -378,8 +417,9 @@
       "name": "GPT-5.2",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2025-12-11",
-      "temperature": false,
+      "release_date": "2025-12-18",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "openai-gpt-oss-120b": {
@@ -392,10 +432,10 @@
       "family": "openai-gpt-oss",
       "id": "openai-gpt-oss-120b",
       "knowledge": "2025-07",
-      "last_updated": "2025-07-27",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 131072,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -408,7 +448,7 @@
       "name": "OpenAI GPT OSS 120B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-27",
+      "release_date": "2024-04-01",
       "temperature": true,
       "tool_call": true
     },
@@ -452,10 +492,10 @@
       "family": "qwen3",
       "id": "qwen3-235b-a22b-instruct-2507",
       "knowledge": "2025-07",
-      "last_updated": "2025-07-27",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 131072,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -468,7 +508,8 @@
       "name": "Qwen 3 235B A22B Instruct 2507",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-27",
+      "release_date": "2025-04-29",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -482,10 +523,10 @@
       "family": "qwen3",
       "id": "qwen3-235b-a22b-thinking-2507",
       "knowledge": "2025-07",
-      "last_updated": "2025-07-27",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 131072,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -498,7 +539,8 @@
       "name": "Qwen 3 235B A22B Thinking 2507",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2025-07-27",
+      "release_date": "2025-04-29",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -512,7 +554,7 @@
       "family": "qwen3",
       "id": "qwen3-4b",
       "knowledge": "2024-07",
-      "last_updated": "2025-12-09",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 32768,
         "output": 8192
@@ -528,7 +570,8 @@
       "name": "Venice Small",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2025-07-27",
+      "release_date": "2025-04-29",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -542,10 +585,10 @@
       "family": "qwen3-coder",
       "id": "qwen3-coder-480b-a35b-instruct",
       "knowledge": "2025-07",
-      "last_updated": "2025-07-27",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 262144,
-        "output": 8192
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -558,7 +601,8 @@
       "name": "Qwen 3 Coder 480b",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-27",
+      "release_date": "2025-04-29",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -572,10 +616,10 @@
       "family": "qwen3",
       "id": "qwen3-next-80b",
       "knowledge": "2025-07",
-      "last_updated": "2025-07-27",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 262144,
-        "output": 8192
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -588,7 +632,8 @@
       "name": "Qwen 3 Next 80b",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-27",
+      "release_date": "2025-04-29",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -602,7 +647,7 @@
       "family": "venice-uncensored",
       "id": "venice-uncensored",
       "knowledge": "2023-10",
-      "last_updated": "2025-12-09",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 32768,
         "output": 8192
@@ -618,7 +663,8 @@
       "name": "Venice Uncensored 1.1",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-15",
+      "release_date": "2025-03-18",
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -632,10 +678,10 @@
       "family": "glm-4.6",
       "id": "zai-org-glm-4.6",
       "knowledge": "2024-04",
-      "last_updated": "2025-09-30",
+      "last_updated": "2025-12-18",
       "limit": {
         "context": 202752,
-        "output": 8192
+        "output": 50688
       },
       "modalities": {
         "input": [
@@ -648,11 +694,43 @@
       "name": "GLM 4.6",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-09-30",
+      "release_date": "2024-04-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org-glm-4.6v": {
+      "attachment": true,
+      "cost": {
+        "input": 0.39,
+        "output": 1.13
+      },
+      "description": "GLM 4.6V 是由 venice 提供的人工智能模型。",
+      "family": "glm-4.6",
+      "id": "zai-org-glm-4.6v",
+      "last_updated": "2025-12-18",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.6V",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-12-10",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     }
   },
   "name": "Venice AI",
-  "npm": "@ai-sdk/openai-compatible"
+  "npm": "@openrouter/ai-sdk-provider"
 }

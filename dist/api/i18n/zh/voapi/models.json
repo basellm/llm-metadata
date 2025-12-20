@@ -50320,7 +50320,7 @@
       "icon": "lb:veniceai",
       "id": "claude-opus-45",
       "maxCtxTokens": 202752,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 50688,
       "name": "Claude Opus 4.5",
       "price": {
         "cacheRead": null,
@@ -50343,14 +50343,14 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": false
       },
       "icon": "lb:veniceai",
       "id": "deepseek-v3.2",
       "maxCtxTokens": 163840,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 40960,
       "name": "DeepSeek V3.2",
       "price": {
         "cacheRead": null,
@@ -50359,8 +50359,37 @@
         "output": 1
       },
       "tags": [
+        "reasoning",
         "open_weights",
         "163.8K"
+      ]
+    },
+    {
+      "description": "Devstral 2 是由 venice 提供的人工智能模型。",
+      "firm": "venice",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:veniceai",
+      "id": "devstral-2-2512",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 65536,
+      "name": "Devstral 2",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.25,
+        "output": 0.25
+      },
+      "tags": [
+        "tools",
+        "open_weights",
+        "262.1K"
       ]
     },
     {
@@ -50376,7 +50405,7 @@
       },
       "icon": "lb:veniceai",
       "id": "gemini-3-flash-preview",
-      "maxCtxTokens": 256576,
+      "maxCtxTokens": 262144,
       "maxOutputTokens": 65536,
       "name": "Gemini 3 Flash Preview",
       "price": {
@@ -50391,7 +50420,7 @@
         "files",
         "vision",
         "audio",
-        "256.6K"
+        "262.1K"
       ]
     },
     {
@@ -50399,8 +50428,8 @@
       "firm": "venice",
       "flags": {
         "attachment": true,
-        "audio": false,
-        "image": false,
+        "audio": true,
+        "image": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
@@ -50408,7 +50437,7 @@
       "icon": "lb:veniceai",
       "id": "gemini-3-pro-preview",
       "maxCtxTokens": 202752,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 50688,
       "name": "Gemini 3 Pro Preview",
       "price": {
         "cacheRead": null,
@@ -50420,6 +50449,8 @@
         "reasoning",
         "tools",
         "files",
+        "vision",
+        "audio",
         "202.8K"
       ]
     },
@@ -50437,7 +50468,7 @@
       "icon": "lb:veniceai",
       "id": "google-gemma-3-27b-it",
       "maxCtxTokens": 202752,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 50688,
       "name": "Google Gemma 3 27B Instruct",
       "price": {
         "cacheRead": null,
@@ -50467,7 +50498,7 @@
       "icon": "lb:veniceai",
       "id": "grok-41-fast",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 65536,
       "name": "Grok 4.1 Fast",
       "price": {
         "cacheRead": null,
@@ -50497,7 +50528,7 @@
       "icon": "lb:veniceai",
       "id": "hermes-3-llama-3.1-405b",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 32768,
       "name": "Hermes 3 Llama 3.1 405b",
       "price": {
         "cacheRead": null,
@@ -50524,7 +50555,7 @@
       "icon": "lb:veniceai",
       "id": "kimi-k2-thinking",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 65536,
       "name": "Kimi K2 Thinking",
       "price": {
         "cacheRead": null,
@@ -50553,7 +50584,7 @@
       "icon": "lb:veniceai",
       "id": "llama-3.2-3b",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 32768,
       "name": "Llama 3.2 3B",
       "price": {
         "cacheRead": null,
@@ -50580,8 +50611,8 @@
       },
       "icon": "lb:veniceai",
       "id": "llama-3.3-70b",
-      "maxCtxTokens": 65536,
-      "maxOutputTokens": 8192,
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 32768,
       "name": "Llama 3.3 70B",
       "price": {
         "cacheRead": null,
@@ -50592,7 +50623,7 @@
       "tags": [
         "tools",
         "open_weights",
-        "65.5K"
+        "131.1K"
       ]
     },
     {
@@ -50609,7 +50640,7 @@
       "icon": "lb:veniceai",
       "id": "mistral-31-24b",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 32768,
       "name": "Venice Medium",
       "price": {
         "cacheRead": null,
@@ -50629,20 +50660,20 @@
       "description": "GPT-5.2 是由 venice 提供的人工智能模型。",
       "firm": "venice",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
-        "image": true,
+        "image": false,
         "reasoning": true,
-        "temperature": false,
+        "temperature": true,
         "tool_call": true
       },
       "icon": "lb:veniceai",
       "id": "openai-gpt-52",
-      "maxCtxTokens": 200000,
-      "maxOutputTokens": 128000,
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 65536,
       "name": "GPT-5.2",
       "price": {
-        "cacheRead": 0.175,
+        "cacheRead": null,
         "cacheWrite": null,
         "input": 2.19,
         "output": 17.5
@@ -50650,9 +50681,7 @@
       "tags": [
         "reasoning",
         "tools",
-        "files",
-        "vision",
-        "200K"
+        "262.1K"
       ]
     },
     {
@@ -50669,7 +50698,7 @@
       "icon": "lb:veniceai",
       "id": "openai-gpt-oss-120b",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 32768,
       "name": "OpenAI GPT OSS 120B",
       "price": {
         "cacheRead": null,
@@ -50726,7 +50755,7 @@
       "icon": "lb:veniceai",
       "id": "qwen3-235b-a22b-instruct-2507",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 32768,
       "name": "Qwen 3 235B A22B Instruct 2507",
       "price": {
         "cacheRead": null,
@@ -50754,7 +50783,7 @@
       "icon": "lb:veniceai",
       "id": "qwen3-235b-a22b-thinking-2507",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 32768,
       "name": "Qwen 3 235B A22B Thinking 2507",
       "price": {
         "cacheRead": null,
@@ -50812,7 +50841,7 @@
       "icon": "lb:veniceai",
       "id": "qwen3-coder-480b-a35b-instruct",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 65536,
       "name": "Qwen 3 Coder 480b",
       "price": {
         "cacheRead": null,
@@ -50840,7 +50869,7 @@
       "icon": "lb:veniceai",
       "id": "qwen3-next-80b",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 65536,
       "name": "Qwen 3 Next 80b",
       "price": {
         "cacheRead": null,
@@ -50895,7 +50924,7 @@
       "icon": "lb:veniceai",
       "id": "zai-org-glm-4.6",
       "maxCtxTokens": 202752,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 50688,
       "name": "GLM 4.6",
       "price": {
         "cacheRead": null,
@@ -50907,6 +50936,36 @@
         "tools",
         "open_weights",
         "202.8K"
+      ]
+    },
+    {
+      "description": "GLM 4.6V 是由 venice 提供的人工智能模型。",
+      "firm": "venice",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:veniceai",
+      "id": "zai-org-glm-4.6v",
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 32768,
+      "name": "GLM 4.6V",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.39,
+        "output": 1.13
+      },
+      "tags": [
+        "tools",
+        "files",
+        "open_weights",
+        "vision",
+        "131.1K"
       ]
     },
     {
