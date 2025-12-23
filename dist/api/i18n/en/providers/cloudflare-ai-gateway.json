@@ -9,324 +9,413 @@
   "iconURL": "https://models.dev/logos/cloudflare-ai-gateway.svg",
   "id": "cloudflare-ai-gateway",
   "models": {
-    "anthropic/claude-3-haiku": {
-      "attachment": false,
+    "anthropic/claude-3-5-haiku": {
+      "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 1.25
+        "cache_read": 0.08,
+        "cache_write": 1,
+        "input": 0.8,
+        "output": 4
       },
-      "description": "Claude 3 Haiku is an AI model provided by cloudflare-ai-gateway.",
+      "description": "Claude Haiku 3.5 (latest) is an AI model provided by cloudflare-ai-gateway.",
       "family": "claude-haiku",
-      "id": "anthropic/claude-3-haiku",
-      "last_updated": "2024-07-31",
+      "id": "anthropic/claude-3-5-haiku",
+      "knowledge": "2024-07-31",
+      "last_updated": "2024-10-22",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 200000,
+        "output": 8192
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude 3 Haiku",
+      "name": "Claude Haiku 3.5 (latest)",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2024-07-31",
+      "release_date": "2024-10-22",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
+    },
+    "anthropic/claude-3-haiku": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.3,
+        "input": 0.25,
+        "output": 1.25
+      },
+      "description": "Claude Haiku 3 is an AI model provided by cloudflare-ai-gateway.",
+      "family": "claude-haiku",
+      "id": "anthropic/claude-3-haiku",
+      "knowledge": "2023-08-31",
+      "last_updated": "2024-03-13",
+      "limit": {
+        "context": 200000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Haiku 3",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-03-13",
+      "temperature": true,
+      "tool_call": true
     },
     "anthropic/claude-3-opus": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
+        "cache_read": 1.5,
+        "cache_write": 18.75,
         "input": 15,
         "output": 75
       },
-      "description": "Claude 3 Opus is an AI model provided by cloudflare-ai-gateway.",
+      "description": "Claude Opus 3 is an AI model provided by cloudflare-ai-gateway.",
       "family": "claude-opus",
       "id": "anthropic/claude-3-opus",
-      "last_updated": "2024-07-31",
+      "knowledge": "2023-08-31",
+      "last_updated": "2024-02-29",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 200000,
+        "output": 4096
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude 3 Opus",
+      "name": "Claude Opus 3",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2024-07-31",
+      "release_date": "2024-02-29",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "anthropic/claude-3-sonnet": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
+        "cache_read": 0.3,
+        "cache_write": 0.3,
         "input": 3,
         "output": 15
       },
-      "description": "Claude 3 Sonnet is an AI model provided by cloudflare-ai-gateway.",
+      "description": "Claude Sonnet 3 is an AI model provided by cloudflare-ai-gateway.",
       "family": "claude-sonnet",
       "id": "anthropic/claude-3-sonnet",
-      "last_updated": "2024-07-31",
+      "knowledge": "2023-08-31",
+      "last_updated": "2024-03-04",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 200000,
+        "output": 4096
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude 3 Sonnet",
+      "name": "Claude Sonnet 3",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2024-07-31",
+      "release_date": "2024-03-04",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "anthropic/claude-3.5-haiku": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
-        "input": 0,
+        "cache_read": 0.08,
+        "cache_write": 1,
+        "input": 0.8,
         "output": 4
       },
-      "description": "Claude 3.5 Haiku is an AI model provided by cloudflare-ai-gateway.",
+      "description": "Claude Haiku 3.5 (latest) is an AI model provided by cloudflare-ai-gateway.",
       "family": "claude-haiku",
       "id": "anthropic/claude-3.5-haiku",
-      "last_updated": "2025-01-07",
+      "knowledge": "2024-07-31",
+      "last_updated": "2024-10-22",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 200000,
+        "output": 8192
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude 3.5 Haiku",
+      "name": "Claude Haiku 3.5 (latest)",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2025-01-07",
+      "release_date": "2024-10-22",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "anthropic/claude-3.5-sonnet": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
-        "input": 6,
-        "output": 30
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
       },
-      "description": "Claude 3.5 Sonnet is an AI model provided by cloudflare-ai-gateway.",
+      "description": "Claude Sonnet 3.5 v2 is an AI model provided by cloudflare-ai-gateway.",
       "family": "claude-sonnet",
       "id": "anthropic/claude-3.5-sonnet",
-      "last_updated": "2024-07-31",
+      "knowledge": "2024-04-30",
+      "last_updated": "2024-10-22",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 200000,
+        "output": 8192
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude 3.5 Sonnet",
+      "name": "Claude Sonnet 3.5 v2",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2024-07-31",
+      "release_date": "2024-10-22",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
-    "anthropic/claude-haiku-4.5": {
-      "attachment": false,
+    "anthropic/claude-haiku-4-5": {
+      "attachment": true,
       "cost": {
+        "cache_read": 0.1,
+        "cache_write": 1.25,
         "input": 1,
         "output": 5
       },
-      "description": "Claude Haiku 4.5 is an AI model provided by cloudflare-ai-gateway.",
+      "description": "Claude Haiku 4.5 (latest) is an AI model provided by cloudflare-ai-gateway.",
       "family": "claude-haiku",
-      "id": "anthropic/claude-haiku-4.5",
-      "last_updated": "2025-11-14",
+      "id": "anthropic/claude-haiku-4-5",
+      "knowledge": "2025-02-28",
+      "last_updated": "2025-10-15",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 200000,
+        "output": 64000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Haiku 4.5",
+      "name": "Claude Haiku 4.5 (latest)",
       "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-11-14",
+      "reasoning": true,
+      "release_date": "2025-10-15",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "anthropic/claude-opus-4": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
+        "cache_read": 1.5,
+        "cache_write": 18.75,
         "input": 15,
         "output": 75
       },
-      "description": "Claude Opus 4 is an AI model provided by cloudflare-ai-gateway.",
+      "description": "Claude Opus 4 (latest) is an AI model provided by cloudflare-ai-gateway.",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4",
+      "knowledge": "2025-03-31",
       "last_updated": "2025-05-22",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 200000,
+        "output": 32000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Opus 4",
+      "name": "Claude Opus 4 (latest)",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
       "release_date": "2025-05-22",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
-    "anthropic/claude-opus-4.1": {
-      "attachment": false,
+    "anthropic/claude-opus-4-1": {
+      "attachment": true,
       "cost": {
+        "cache_read": 1.5,
+        "cache_write": 18.75,
         "input": 15,
         "output": 75
       },
-      "description": "Claude Opus 4.1 is an AI model provided by cloudflare-ai-gateway.",
+      "description": "Claude Opus 4.1 (latest) is an AI model provided by cloudflare-ai-gateway.",
       "family": "claude-opus",
-      "id": "anthropic/claude-opus-4.1",
+      "id": "anthropic/claude-opus-4-1",
+      "knowledge": "2025-03-31",
       "last_updated": "2025-08-05",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 200000,
+        "output": 32000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Opus 4.1",
+      "name": "Claude Opus 4.1 (latest)",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
       "release_date": "2025-08-05",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
-    "anthropic/claude-opus-4.5": {
-      "attachment": false,
+    "anthropic/claude-opus-4-5": {
+      "attachment": true,
       "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
         "input": 5,
         "output": 25
       },
-      "description": "Claude Opus 4.5 is an AI model provided by cloudflare-ai-gateway.",
+      "description": "Claude Opus 4.5 (latest) is an AI model provided by cloudflare-ai-gateway.",
       "family": "claude-opus",
-      "id": "anthropic/claude-opus-4.5",
+      "id": "anthropic/claude-opus-4-5",
+      "knowledge": "2025-03-31",
       "last_updated": "2025-11-24",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 200000,
+        "output": 64000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Opus 4.5",
+      "name": "Claude Opus 4.5 (latest)",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
       "release_date": "2025-11-24",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "anthropic/claude-sonnet-4": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
         "input": 3,
         "output": 15
       },
-      "description": "Claude Sonnet 4 is an AI model provided by cloudflare-ai-gateway.",
+      "description": "Claude Sonnet 4 (latest) is an AI model provided by cloudflare-ai-gateway.",
       "family": "claude-sonnet",
       "id": "anthropic/claude-sonnet-4",
+      "knowledge": "2025-03-31",
       "last_updated": "2025-05-22",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 200000,
+        "output": 64000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Sonnet 4",
+      "name": "Claude Sonnet 4 (latest)",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
       "release_date": "2025-05-22",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
-    "anthropic/claude-sonnet-4.5": {
-      "attachment": false,
+    "anthropic/claude-sonnet-4-5": {
+      "attachment": true,
       "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
         "input": 3,
         "output": 15
       },
-      "description": "Claude Sonnet 4.5 is an AI model provided by cloudflare-ai-gateway.",
+      "description": "Claude Sonnet 4.5 (latest) is an AI model provided by cloudflare-ai-gateway.",
       "family": "claude-sonnet",
-      "id": "anthropic/claude-sonnet-4.5",
-      "last_updated": "2025-10-08",
+      "id": "anthropic/claude-sonnet-4-5",
+      "knowledge": "2025-07-31",
+      "last_updated": "2025-09-29",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 200000,
+        "output": 64000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Sonnet 4.5",
+      "name": "Claude Sonnet 4.5 (latest)",
       "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-10-08",
+      "reasoning": true,
+      "release_date": "2025-09-29",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "openai/gpt-3.5-turbo": {
       "attachment": false,
@@ -531,6 +620,38 @@
       "temperature": true,
       "tool_call": false
     },
+    "openai/gpt-5.2": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.2 is an AI model provided by cloudflare-ai-gateway.",
+      "family": "gpt-5",
+      "id": "openai/gpt-5.2",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-11",
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/o1": {
       "attachment": false,
       "cost": {
@@ -557,64 +678,6 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-01-07",
-      "temperature": true,
-      "tool_call": false
-    },
-    "openai/o1-mini": {
-      "attachment": false,
-      "cost": {
-        "input": 1.1,
-        "output": 4.4
-      },
-      "description": "o1 mini is an AI model provided by cloudflare-ai-gateway.",
-      "family": "o1-mini",
-      "id": "openai/o1-mini",
-      "last_updated": "2025-02-10",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o1 mini",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-02-10",
-      "temperature": true,
-      "tool_call": false
-    },
-    "openai/o1-preview": {
-      "attachment": false,
-      "cost": {
-        "input": 15,
-        "output": 60
-      },
-      "description": "o1 Preview is an AI model provided by cloudflare-ai-gateway.",
-      "family": "o1-preview",
-      "id": "openai/o1-preview",
-      "last_updated": "2024-09-12",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o1 Preview",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-09-12",
       "temperature": true,
       "tool_call": false
     },
@@ -731,151 +794,6 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-04-16",
-      "temperature": true,
-      "tool_call": false
-    },
-    "replicate/deepseek-ai/deepseek-r1": {
-      "attachment": false,
-      "cost": {
-        "input": 10,
-        "output": 10
-      },
-      "description": "DeepSeek R1 is an AI model provided by cloudflare-ai-gateway.",
-      "family": "deepseek-r1",
-      "id": "replicate/deepseek-ai/deepseek-r1",
-      "last_updated": "2025-03-11",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek R1",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-03-11",
-      "temperature": true,
-      "tool_call": false
-    },
-    "replicate/meta/meta-llama-3-70b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 2.75
-      },
-      "description": "Llama 3 70B Instruct is an AI model provided by cloudflare-ai-gateway.",
-      "family": "llama-3",
-      "id": "replicate/meta/meta-llama-3-70b-instruct",
-      "last_updated": "2024-10-08",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3 70B Instruct",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-10-08",
-      "temperature": true,
-      "tool_call": false
-    },
-    "replicate/meta/meta-llama-3-8b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Llama 3 8B Instruct is an AI model provided by cloudflare-ai-gateway.",
-      "family": "llama-3",
-      "id": "replicate/meta/meta-llama-3-8b-instruct",
-      "last_updated": "2025-02-05",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3 8B Instruct",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-02-05",
-      "temperature": true,
-      "tool_call": false
-    },
-    "replicate/meta/meta-llama-3.1-405b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 9.5,
-        "output": 9.5
-      },
-      "description": "Llama 3.1 405B Instruct is an AI model provided by cloudflare-ai-gateway.",
-      "family": "llama-3.1",
-      "id": "replicate/meta/meta-llama-3.1-405b-instruct",
-      "last_updated": "2024-09-25",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.1 405B Instruct",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-09-25",
-      "temperature": true,
-      "tool_call": false
-    },
-    "workers-ai/aura-1": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Aura 1 is an AI model provided by cloudflare-ai-gateway.",
-      "family": "aura",
-      "id": "workers-ai/aura-1",
-      "last_updated": "2025-11-14",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Aura 1",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-11-14",
       "temperature": true,
       "tool_call": false
     },
@@ -2004,64 +1922,6 @@
         ]
       },
       "name": "Smart Turn V2",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-11-14",
-      "temperature": true,
-      "tool_call": false
-    },
-    "workers-ai/whisper": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Whisper is an AI model provided by cloudflare-ai-gateway.",
-      "family": "whisper",
-      "id": "workers-ai/whisper",
-      "last_updated": "2025-11-14",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Whisper",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-11-14",
-      "temperature": true,
-      "tool_call": false
-    },
-    "workers-ai/whisper-large-v3-turbo": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Whisper Large V3 Turbo is an AI model provided by cloudflare-ai-gateway.",
-      "family": "whisper-large",
-      "id": "workers-ai/whisper-large-v3-turbo",
-      "last_updated": "2025-11-14",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Whisper Large V3 Turbo",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-11-14",
