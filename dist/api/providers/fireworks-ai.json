@@ -98,6 +98,40 @@
       "temperature": true,
       "tool_call": true
     },
+    "accounts/fireworks/models/deepseek-v3p2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.28,
+        "input": 0.56,
+        "output": 1.68
+      },
+      "description": "DeepSeek V3.2 is an AI model provided by fireworks-ai.",
+      "family": "deepseek-v3",
+      "id": "accounts/fireworks/models/deepseek-v3p2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-09",
+      "last_updated": "2025-12-01",
+      "limit": {
+        "context": 160000,
+        "output": 160000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3.2",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-01",
+      "temperature": true,
+      "tool_call": true
+    },
     "accounts/fireworks/models/glm-4p5": {
       "attachment": false,
       "cost": {
@@ -107,6 +141,9 @@
       "description": "GLM 4.5 is an AI model provided by fireworks-ai.",
       "family": "glm-4",
       "id": "accounts/fireworks/models/glm-4p5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2025-07-29",
       "limit": {
@@ -155,6 +192,74 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-08-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "accounts/fireworks/models/glm-4p6": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.28,
+        "input": 0.55,
+        "output": 2.19
+      },
+      "description": "GLM 4.6 is an AI model provided by fireworks-ai.",
+      "family": "glm-4",
+      "id": "accounts/fireworks/models/glm-4p6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2025-10-01",
+      "limit": {
+        "context": 198000,
+        "output": 198000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.6",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-10-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "accounts/fireworks/models/glm-4p7": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3,
+        "input": 0.6,
+        "output": 2.2
+      },
+      "description": "GLM 4.7 is an AI model provided by fireworks-ai.",
+      "family": "glm-4",
+      "id": "accounts/fireworks/models/glm-4p7",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2025-12-22",
+      "limit": {
+        "context": 198000,
+        "output": 198000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.7",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-22",
       "temperature": true,
       "tool_call": true
     },
@@ -255,10 +360,13 @@
       "description": "Kimi K2 Thinking is an AI model provided by fireworks-ai.",
       "family": "kimi-k2",
       "id": "accounts/fireworks/models/kimi-k2-thinking",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2025-11-06",
       "limit": {
         "context": 256000,
-        "output": 16384
+        "output": 256000
       },
       "modalities": {
         "input": [
@@ -284,11 +392,14 @@
       "description": "MiniMax-M2 is an AI model provided by fireworks-ai.",
       "family": "minimax",
       "id": "accounts/fireworks/models/minimax-m2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2024-11",
       "last_updated": "2025-10-27",
       "limit": {
         "context": 128000,
-        "output": 16384
+        "output": 128000
       },
       "modalities": {
         "input": [
