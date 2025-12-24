@@ -1,29 +1,32 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
     "input": 20,
     "output": 80
   },
-  "description": "O3 Pro は cloudflare-ai-gateway によって提供される AI モデルです。",
+  "description": "o3-pro は cloudflare-ai-gateway によって提供される AI モデルです。",
   "family": "o3-pro",
   "id": "openai/o3-pro",
-  "last_updated": "2025-06-11",
+  "knowledge": "2024-05",
+  "last_updated": "2025-06-10",
   "limit": {
-    "context": 128000,
-    "output": 16384
+    "context": 200000,
+    "output": 100000
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "O3 Pro",
+  "name": "o3-pro",
   "open_weights": false,
-  "reasoning": false,
-  "release_date": "2025-06-11",
-  "temperature": true,
-  "tool_call": false
+  "reasoning": true,
+  "release_date": "2025-06-10",
+  "structured_output": true,
+  "temperature": false,
+  "tool_call": true
 }

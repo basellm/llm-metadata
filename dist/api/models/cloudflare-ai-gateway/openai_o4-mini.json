@@ -1,29 +1,33 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
+    "cache_read": 0.28,
     "input": 1.1,
     "output": 4.4
   },
-  "description": "o4 mini is an AI model provided by cloudflare-ai-gateway.",
+  "description": "o4-mini is an AI model provided by cloudflare-ai-gateway.",
   "family": "o4-mini",
   "id": "openai/o4-mini",
+  "knowledge": "2024-05",
   "last_updated": "2025-04-16",
   "limit": {
-    "context": 128000,
-    "output": 16384
+    "context": 200000,
+    "output": 100000
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "o4 mini",
+  "name": "o4-mini",
   "open_weights": false,
-  "reasoning": false,
+  "reasoning": true,
   "release_date": "2025-04-16",
-  "temperature": true,
-  "tool_call": false
+  "structured_output": true,
+  "temperature": false,
+  "tool_call": true
 }

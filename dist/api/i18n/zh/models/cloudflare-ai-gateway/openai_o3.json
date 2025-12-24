@@ -1,29 +1,33 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
+    "cache_read": 0.5,
     "input": 2,
     "output": 8
   },
-  "description": "O3 是由 cloudflare-ai-gateway 提供的人工智能模型。",
+  "description": "o3 是由 cloudflare-ai-gateway 提供的人工智能模型。",
   "family": "o3",
   "id": "openai/o3",
-  "last_updated": "2025-06-10",
+  "knowledge": "2024-05",
+  "last_updated": "2025-04-16",
   "limit": {
-    "context": 128000,
-    "output": 16384
+    "context": 200000,
+    "output": 100000
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "O3",
+  "name": "o3",
   "open_weights": false,
-  "reasoning": false,
-  "release_date": "2025-06-10",
-  "temperature": true,
-  "tool_call": false
+  "reasoning": true,
+  "release_date": "2025-04-16",
+  "structured_output": true,
+  "temperature": false,
+  "tool_call": true
 }

@@ -1,20 +1,23 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
+    "cache_read": 7.5,
     "input": 15,
     "output": 60
   },
   "description": "o1 是由 cloudflare-ai-gateway 提供的人工智能模型。",
   "family": "o1",
   "id": "openai/o1",
-  "last_updated": "2025-01-07",
+  "knowledge": "2023-09",
+  "last_updated": "2024-12-05",
   "limit": {
-    "context": 128000,
-    "output": 16384
+    "context": 200000,
+    "output": 100000
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image"
     ],
     "output": [
       "text"
@@ -22,8 +25,9 @@
   },
   "name": "o1",
   "open_weights": false,
-  "reasoning": false,
-  "release_date": "2025-01-07",
-  "temperature": true,
-  "tool_call": false
+  "reasoning": true,
+  "release_date": "2024-12-05",
+  "structured_output": true,
+  "temperature": false,
+  "tool_call": true
 }

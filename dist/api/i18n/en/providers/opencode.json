@@ -471,6 +471,9 @@
       "description": "GLM-4.7 is an AI model provided by opencode.",
       "family": "glm-free",
       "id": "glm-4.7-free",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2025-12-22",
       "limit": {
@@ -839,42 +842,6 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-09-05",
-      "temperature": true,
-      "tool_call": true
-    },
-    "minimax-m2.1": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0,
-        "cache_write": 0,
-        "input": 0,
-        "output": 0
-      },
-      "description": "MiniMax M2.1 is an AI model provided by opencode.",
-      "family": "minimax",
-      "id": "minimax-m2.1",
-      "knowledge": "2025-01",
-      "last_updated": "2025-12-20",
-      "limit": {
-        "context": 204800,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax M2.1",
-      "open_weights": false,
-      "provider": {
-        "npm": "@ai-sdk/anthropic"
-      },
-      "reasoning": true,
-      "release_date": "2025-12-20",
-      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },

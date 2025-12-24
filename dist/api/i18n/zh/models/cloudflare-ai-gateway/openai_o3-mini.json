@@ -1,16 +1,18 @@
 {
   "attachment": false,
   "cost": {
+    "cache_read": 0.55,
     "input": 1.1,
     "output": 4.4
   },
-  "description": "o3 mini 是由 cloudflare-ai-gateway 提供的人工智能模型。",
+  "description": "o3-mini 是由 cloudflare-ai-gateway 提供的人工智能模型。",
   "family": "o3-mini",
   "id": "openai/o3-mini",
-  "last_updated": "2025-02-05",
+  "knowledge": "2024-05",
+  "last_updated": "2025-01-29",
   "limit": {
-    "context": 128000,
-    "output": 16384
+    "context": 200000,
+    "output": 100000
   },
   "modalities": {
     "input": [
@@ -20,10 +22,11 @@
       "text"
     ]
   },
-  "name": "o3 mini",
+  "name": "o3-mini",
   "open_weights": false,
-  "reasoning": false,
-  "release_date": "2025-02-05",
-  "temperature": true,
-  "tool_call": false
+  "reasoning": true,
+  "release_date": "2024-12-20",
+  "structured_output": true,
+  "temperature": false,
+  "tool_call": true
 }
