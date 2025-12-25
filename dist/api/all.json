@@ -38496,43 +38496,6 @@
     "id": "opencode",
     "lobeIcon": "OpenCode",
     "models": {
-      "alpha-doubao-seed-code": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "Doubao Seed Code (alpha) is an AI model provided by opencode.",
-        "family": "doubao",
-        "id": "alpha-doubao-seed-code",
-        "knowledge": "2024-10",
-        "last_updated": "2025-11-11",
-        "limit": {
-          "context": 256000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Doubao Seed Code (alpha)",
-        "open_weights": true,
-        "provider": {
-          "npm": "@ai-sdk/openai"
-        },
-        "reasoning": true,
-        "release_date": "2025-11-11",
-        "status": "alpha",
-        "temperature": true,
-        "tool_call": true
-      },
       "alpha-gd4": {
         "attachment": false,
         "cost": {
@@ -38564,6 +38527,41 @@
         },
         "reasoning": true,
         "release_date": "2025-01-01",
+        "status": "alpha",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alpha-glm-4.7": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.6,
+          "input": 0.6,
+          "output": 2.2
+        },
+        "description": "Alpha GLM-4.7 is an AI model provided by opencode.",
+        "family": "alpha-glm",
+        "id": "alpha-glm-4.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2025-12-22",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Alpha GLM-4.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-22",
         "status": "alpha",
         "temperature": true,
         "tool_call": true
