@@ -22283,6 +22283,7 @@
       "accounts/fireworks/models/minimax-m2": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.15,
           "input": 0.3,
           "output": 1.2
         },
@@ -22295,8 +22296,8 @@
         "knowledge": "2024-11",
         "last_updated": "2025-10-27",
         "limit": {
-          "context": 128000,
-          "output": 128000
+          "context": 192000,
+          "output": 192000
         },
         "modalities": {
           "input": [
@@ -22310,6 +22311,39 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-10-27",
+        "temperature": true,
+        "tool_call": true
+      },
+      "accounts/fireworks/models/minimax-m2p1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax-M2.1 is an AI model provided by fireworks-ai.",
+        "family": "minimax",
+        "id": "accounts/fireworks/models/minimax-m2p1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2025-12-23",
+        "limit": {
+          "context": 200000,
+          "output": 200000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-23",
         "temperature": true,
         "tool_call": true
       },
@@ -22385,7 +22419,7 @@
     "iconURL": "https://models.dev/logos/friendli.svg",
     "id": "friendli",
     "models": {
-      "LGAI-EXAONE-EXAONE-4.0.1-32B": {
+      "LGAI-EXAONE/EXAONE-4.0.1-32B": {
         "attachment": false,
         "cost": {
           "input": 0.6,
@@ -22393,7 +22427,7 @@
         },
         "description": "EXAONE 4.0.1 32B is an AI model provided by friendli.",
         "family": "exaone",
-        "id": "LGAI-EXAONE-EXAONE-4.0.1-32B",
+        "id": "LGAI-EXAONE/EXAONE-4.0.1-32B",
         "last_updated": "2025-12-23",
         "limit": {
           "context": 131072,
@@ -22415,7 +22449,7 @@
         "temperature": true,
         "tool_call": true
       },
-      "Qwen-Qwen3-235B-A22B-Instruct-2507": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507": {
         "attachment": false,
         "cost": {
           "input": 0.2,
@@ -22423,7 +22457,7 @@
         },
         "description": "Qwen3 235B A22B Instruct 2507 is an AI model provided by friendli.",
         "family": "qwen3",
-        "id": "Qwen-Qwen3-235B-A22B-Instruct-2507",
+        "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
         "last_updated": "2025-12-23",
         "limit": {
           "context": 131072,
@@ -22445,11 +22479,11 @@
         "temperature": true,
         "tool_call": true
       },
-      "Qwen-Qwen3-235B-A22B-Thinking-2507": {
+      "Qwen/Qwen3-235B-A22B-Thinking-2507": {
         "attachment": false,
         "description": "Qwen3 235B A22B Thinking 2507 is an AI model provided by friendli.",
         "family": "qwen3",
-        "id": "Qwen-Qwen3-235B-A22B-Thinking-2507",
+        "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
         "last_updated": "2025-12-23",
         "limit": {
           "context": 131072,
@@ -22471,11 +22505,11 @@
         "temperature": true,
         "tool_call": true
       },
-      "Qwen-Qwen3-30B-A3B": {
+      "Qwen/Qwen3-30B-A3B": {
         "attachment": false,
         "description": "Qwen3 30B A3B is an AI model provided by friendli.",
         "family": "qwen3",
-        "id": "Qwen-Qwen3-30B-A3B",
+        "id": "Qwen/Qwen3-30B-A3B",
         "last_updated": "2025-12-23",
         "limit": {
           "context": 131072,
@@ -22497,11 +22531,11 @@
         "temperature": true,
         "tool_call": true
       },
-      "Qwen-Qwen3-32B": {
+      "Qwen/Qwen3-32B": {
         "attachment": false,
         "description": "Qwen3 32B is an AI model provided by friendli.",
         "family": "qwen3",
-        "id": "Qwen-Qwen3-32B",
+        "id": "Qwen/Qwen3-32B",
         "last_updated": "2025-12-23",
         "limit": {
           "context": 131072,
@@ -22523,11 +22557,11 @@
         "temperature": true,
         "tool_call": true
       },
-      "deepseek-ai-DeepSeek-R1-0528": {
+      "deepseek-ai/DeepSeek-R1-0528": {
         "attachment": false,
         "description": "DeepSeek R1 0528 is an AI model provided by friendli.",
         "family": "deepseek-r1",
-        "id": "deepseek-ai-DeepSeek-R1-0528",
+        "id": "deepseek-ai/DeepSeek-R1-0528",
         "last_updated": "2025-12-23",
         "limit": {
           "context": 163840,
@@ -22609,11 +22643,11 @@
         "temperature": true,
         "tool_call": true
       },
-      "meta-llama-Llama-4-Maverick-17B-128E-Instruct": {
+      "meta-llama/Llama-4-Maverick-17B-128E-Instruct": {
         "attachment": false,
         "description": "Llama 4 Maverick 17B 128E Instruct is an AI model provided by friendli.",
         "family": "llama-4",
-        "id": "meta-llama-Llama-4-Maverick-17B-128E-Instruct",
+        "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct",
         "last_updated": "2025-12-23",
         "limit": {
           "context": 131072,
@@ -22635,11 +22669,11 @@
         "temperature": true,
         "tool_call": false
       },
-      "meta-llama-Llama-4-Scout-17B-16E-Instruct": {
+      "meta-llama/Llama-4-Scout-17B-16E-Instruct": {
         "attachment": false,
         "description": "Llama 4 Scout 17B 16E Instruct is an AI model provided by friendli.",
         "family": "llama-4",
-        "id": "meta-llama-Llama-4-Scout-17B-16E-Instruct",
+        "id": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
         "last_updated": "2025-12-23",
         "limit": {
           "context": 131072,
@@ -22661,11 +22695,11 @@
         "temperature": true,
         "tool_call": false
       },
-      "zai-org-GLM-4.6": {
+      "zai-org/GLM-4.6": {
         "attachment": false,
         "description": "GLM 4.6 is an AI model provided by friendli.",
         "family": "glm-4",
-        "id": "zai-org-GLM-4.6",
+        "id": "zai-org/GLM-4.6",
         "last_updated": "2025-12-23",
         "limit": {
           "context": 131072,
