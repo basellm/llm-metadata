@@ -9714,13 +9714,10 @@
         "modalities": {
           "input": [
             "text",
-            "image",
-            "audio"
+            "image"
           ],
           "output": [
-            "text",
-            "image",
-            "audio"
+            "text"
           ]
         },
         "name": "GPT-5.1 Codex Mini",
@@ -12560,13 +12557,10 @@
         "modalities": {
           "input": [
             "text",
-            "image",
-            "audio"
+            "image"
           ],
           "output": [
-            "text",
-            "image",
-            "audio"
+            "text"
           ]
         },
         "name": "GPT-5.1 Codex Mini",
@@ -38949,8 +38943,7 @@
             "image"
           ],
           "output": [
-            "text",
-            "image"
+            "text"
           ]
         },
         "name": "GPT-5.1 Codex mini",
@@ -40214,6 +40207,43 @@
           ]
         },
         "name": "GPT-5.1 Codex Max",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/openai"
+        },
+        "reasoning": true,
+        "release_date": "2025-11-12",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.1-codex-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.25,
+          "output": 2
+        },
+        "description": "GPT-5.1 Codex Mini は opencode によって提供される AI モデルです。",
+        "family": "gpt-5-codex-mini",
+        "id": "gpt-5.1-codex-mini",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-11-12",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1 Codex Mini",
         "open_weights": false,
         "provider": {
           "npm": "@ai-sdk/openai"
@@ -49230,6 +49260,8 @@
       "anthropic--claude-3-opus": {
         "attachment": true,
         "cost": {
+          "cache_read": 1.5,
+          "cache_write": 18.75,
           "input": 15,
           "output": 75
         },
@@ -49262,6 +49294,8 @@
       "anthropic--claude-3-sonnet": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.3,
+          "cache_write": 0.3,
           "input": 3,
           "output": 15
         },
@@ -49458,6 +49492,40 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-09-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic--claude-haiku-4.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.1,
+          "cache_write": 1.25,
+          "input": 1,
+          "output": 5
+        },
+        "description": "anthropic--claude-haiku-4.5 は sap-ai-core によって提供される AI モデルです。",
+        "family": "claude-haiku",
+        "id": "anthropic--claude-haiku-4.5",
+        "knowledge": "2025-02-28",
+        "last_updated": "2025-10-01",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "anthropic--claude-haiku-4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-10-01",
         "temperature": true,
         "tool_call": true
       },
@@ -54735,6 +54803,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "hf:MiniMaxAI/MiniMax-M2.1": {
+        "attachment": false,
+        "cost": {
+          "input": 0.55,
+          "output": 2.19
+        },
+        "description": "MiniMax-M2.1 は synthetic によって提供される AI モデルです。",
+        "family": "minimax",
+        "id": "hf:MiniMaxAI/MiniMax-M2.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2025-12-23",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-23",
+        "temperature": true,
+        "tool_call": true
+      },
       "hf:Qwen/Qwen2.5-Coder-32B-Instruct": {
         "attachment": false,
         "cost": {
@@ -55974,7 +56074,7 @@
         "family": "claude-opus",
         "id": "claude-opus-45",
         "knowledge": "2025-03",
-        "last_updated": "2025-12-23",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 202752,
           "output": 50688
@@ -55992,7 +56092,7 @@
         "name": "Claude Opus 4.5",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2024-12-05",
+        "release_date": "2025-12-06",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -56008,7 +56108,7 @@
         "family": "deepseek-v3",
         "id": "deepseek-v3.2",
         "knowledge": "2025-10",
-        "last_updated": "2025-12-23",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 163840,
           "output": 40960
@@ -56024,7 +56124,7 @@
         "name": "DeepSeek V3.2",
         "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-12-07",
+        "release_date": "2025-12-04",
         "temperature": true,
         "tool_call": false
       },
@@ -56041,7 +56141,7 @@
           "field": "reasoning_details"
         },
         "knowledge": "2025-01",
-        "last_updated": "2025-12-23",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 262144,
           "output": 65536
@@ -56061,7 +56161,7 @@
         "name": "Gemini 3 Flash Preview",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-12-13",
+        "release_date": "2025-12-19",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -56077,7 +56177,7 @@
         "family": "gemini-pro",
         "id": "gemini-3-pro-preview",
         "knowledge": "2024-04",
-        "last_updated": "2025-12-23",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 202752,
           "output": 50688
@@ -56096,7 +56196,7 @@
         "name": "Gemini 3 Pro Preview",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2024-06-07",
+        "release_date": "2025-12-02",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -56111,7 +56211,7 @@
         "family": "gemma-3",
         "id": "google-gemma-3-27b-it",
         "knowledge": "2025-07",
-        "last_updated": "2025-12-18",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 202752,
           "output": 50688
@@ -56128,7 +56228,7 @@
         "name": "Google Gemma 3 27B Instruct",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2024-04-01",
+        "release_date": "2025-11-04",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -56144,7 +56244,7 @@
         "family": "grok",
         "id": "grok-41-fast",
         "knowledge": "2025-07",
-        "last_updated": "2025-12-23",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 262144,
           "output": 65536
@@ -56161,7 +56261,7 @@
         "name": "Grok 4.1 Fast",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-04-29",
+        "release_date": "2025-12-01",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -56176,7 +56276,7 @@
         "family": "llama-3.1",
         "id": "hermes-3-llama-3.1-405b",
         "knowledge": "2024-04",
-        "last_updated": "2025-12-18",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 131072,
           "output": 32768
@@ -56192,7 +56292,7 @@
         "name": "Hermes 3 Llama 3.1 405b",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2024-04-01",
+        "release_date": "2025-09-25",
         "temperature": true,
         "tool_call": false
       },
@@ -56207,7 +56307,7 @@
         "family": "kimi-k2",
         "id": "kimi-k2-thinking",
         "knowledge": "2024-04",
-        "last_updated": "2025-12-24",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 262144,
           "output": 65536
@@ -56223,7 +56323,7 @@
         "name": "Kimi K2 Thinking",
         "open_weights": true,
         "reasoning": true,
-        "release_date": "2024-06-07",
+        "release_date": "2025-11-12",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -56269,7 +56369,7 @@
         "family": "llama-3.3",
         "id": "llama-3.3-70b",
         "knowledge": "2023-12",
-        "last_updated": "2025-12-18",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 131072,
           "output": 32768
@@ -56285,7 +56385,7 @@
         "name": "Llama 3.3 70B",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2024-12-09",
+        "release_date": "2025-04-06",
         "temperature": true,
         "tool_call": true
       },
@@ -56332,7 +56432,7 @@
         "family": "gpt-5",
         "id": "openai-gpt-52",
         "knowledge": "2025-08-31",
-        "last_updated": "2025-12-23",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 262144,
           "output": 65536
@@ -56348,7 +56448,7 @@
         "name": "GPT-5.2",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2024-12-11",
+        "release_date": "2025-12-13",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -56363,7 +56463,7 @@
         "family": "openai-gpt-oss",
         "id": "openai-gpt-oss-120b",
         "knowledge": "2025-07",
-        "last_updated": "2025-12-18",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 131072,
           "output": 32768
@@ -56379,7 +56479,7 @@
         "name": "OpenAI GPT OSS 120B",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2024-04-01",
+        "release_date": "2025-11-06",
         "temperature": true,
         "tool_call": true
       },
@@ -56579,7 +56679,7 @@
         "family": "glm-4.6",
         "id": "zai-org-glm-4.6",
         "knowledge": "2024-04",
-        "last_updated": "2025-12-18",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 202752,
           "output": 50688
@@ -56595,7 +56695,7 @@
         "name": "GLM 4.6",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2024-04-01",
+        "release_date": "2025-10-18",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -56609,7 +56709,7 @@
         "description": "GLM 4.6V は venice によって提供される AI モデルです。",
         "family": "glm-4.6",
         "id": "zai-org-glm-4.6v",
-        "last_updated": "2025-12-18",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 131072,
           "output": 32768
@@ -56626,7 +56726,7 @@
         "name": "GLM 4.6V",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2024-12-10",
+        "release_date": "2025-12-11",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -56641,7 +56741,7 @@
         "family": "glm-4.7",
         "id": "zai-org-glm-4.7",
         "knowledge": "2025-04",
-        "last_updated": "2025-12-24",
+        "last_updated": "2025-12-29",
         "limit": {
           "context": 131072,
           "output": 32768
@@ -56657,7 +56757,7 @@
         "name": "GLM 4.7",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2024-04-01",
+        "release_date": "2025-12-24",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
