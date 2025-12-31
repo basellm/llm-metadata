@@ -76,6 +76,7 @@
     "gemini-3-flash-preview": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.07,
         "input": 0.7,
         "output": 3.75
       },
@@ -86,7 +87,7 @@
         "field": "reasoning_details"
       },
       "knowledge": "2025-01",
-      "last_updated": "2025-12-29",
+      "last_updated": "2025-12-30",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -211,6 +212,38 @@
       "temperature": true,
       "tool_call": true
     },
+    "grok-code-fast-1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.25,
+        "output": 1.87
+      },
+      "description": "Grok Code Fast 1 is an AI model provided by venice.",
+      "family": "grok",
+      "id": "grok-code-fast-1",
+      "last_updated": "2025-12-30",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok Code Fast 1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "hermes-3-llama-3.1-405b": {
       "attachment": false,
       "cost": {
@@ -244,7 +277,7 @@
     "kimi-k2-thinking": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.1875,
+        "cache_read": 0.375,
         "input": 0.75,
         "output": 3.2
       },
@@ -252,7 +285,7 @@
       "family": "kimi-k2",
       "id": "kimi-k2-thinking",
       "knowledge": "2024-04",
-      "last_updated": "2025-12-29",
+      "last_updated": "2025-12-30",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -268,7 +301,7 @@
       "name": "Kimi K2 Thinking",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2025-11-12",
+      "release_date": "2025-12-10",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -331,6 +364,37 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-04-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m21": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.04,
+        "input": 0.4,
+        "output": 1.6
+      },
+      "description": "MiniMax M2.1 is an AI model provided by venice.",
+      "id": "minimax-m21",
+      "last_updated": "2025-12-30",
+      "limit": {
+        "context": 202752,
+        "output": 50688
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-01",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
