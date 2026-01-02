@@ -1,13 +1,21 @@
 {
   "attachment": false,
   "cost": {
-    "input": 0,
-    "output": 0
+    "cache_read": 0,
+    "cache_write": 0,
+    "input": 0.02,
+    "input_audio": 0,
+    "output": 0.1,
+    "output_audio": 0,
+    "reasoning": 0.15000000000000002
   },
-  "description": "Gpt Oss 20b は chutes によって提供される AI モデルです。",
-  "family": "gpt-oss",
+  "description": "gpt oss 20b は chutes によって提供される AI モデルです。",
+  "family": "openai",
   "id": "openai/gpt-oss-20b",
-  "last_updated": "2025-11-08",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2025-12-29",
   "limit": {
     "context": 131072,
     "output": 131072
@@ -20,10 +28,11 @@
       "text"
     ]
   },
-  "name": "Gpt Oss 20b",
+  "name": "gpt oss 20b",
   "open_weights": true,
   "reasoning": true,
-  "release_date": "2025-11-08",
+  "release_date": "2025-12-29",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

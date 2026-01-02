@@ -1,13 +1,21 @@
 {
   "attachment": false,
   "cost": {
+    "cache_read": 0,
+    "cache_write": 0,
     "input": 0.3,
-    "output": 0.9
+    "input_audio": 0,
+    "output": 0.9,
+    "output_audio": 0,
+    "reasoning": 1.35
   },
   "description": "GLM 4.6V is an AI model provided by chutes.",
-  "family": "glm-4.6v",
+  "family": "zai-org",
   "id": "zai-org/GLM-4.6V",
-  "last_updated": "2025-12-11",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2025-12-29",
   "limit": {
     "context": 131072,
     "output": 65536
@@ -24,7 +32,8 @@
   "name": "GLM 4.6V",
   "open_weights": true,
   "reasoning": true,
-  "release_date": "2025-12-11",
+  "release_date": "2025-12-29",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

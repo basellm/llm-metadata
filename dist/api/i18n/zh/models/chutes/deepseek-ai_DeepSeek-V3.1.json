@@ -1,16 +1,24 @@
 {
   "attachment": false,
   "cost": {
+    "cache_read": 0,
+    "cache_write": 0,
     "input": 0.2,
-    "output": 0.8
+    "input_audio": 0,
+    "output": 0.8,
+    "output_audio": 0,
+    "reasoning": 1.2000000000000002
   },
   "description": "DeepSeek V3.1 是由 chutes 提供的人工智能模型。",
-  "family": "deepseek-v3",
+  "family": "deepseek-ai",
   "id": "deepseek-ai/DeepSeek-V3.1",
-  "last_updated": "2025-11-08",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2025-12-29",
   "limit": {
     "context": 163840,
-    "output": 163840
+    "output": 65536
   },
   "modalities": {
     "input": [
@@ -21,9 +29,10 @@
     ]
   },
   "name": "DeepSeek V3.1",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
-  "release_date": "2025-08-21",
+  "release_date": "2025-12-29",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

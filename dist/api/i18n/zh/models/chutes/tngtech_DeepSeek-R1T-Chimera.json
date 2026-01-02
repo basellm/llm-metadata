@@ -1,14 +1,21 @@
 {
   "attachment": false,
   "cost": {
+    "cache_read": 0,
+    "cache_write": 0,
     "input": 0.3,
-    "output": 1.2
+    "input_audio": 0,
+    "output": 1.2,
+    "output_audio": 0,
+    "reasoning": 1.7999999999999998
   },
   "description": "DeepSeek R1T Chimera 是由 chutes 提供的人工智能模型。",
-  "family": "deepseek-r1",
+  "family": "tngtech",
   "id": "tngtech/DeepSeek-R1T-Chimera",
-  "knowledge": "2025-04",
-  "last_updated": "2025-11-08",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2025-12-29",
   "limit": {
     "context": 163840,
     "output": 163840
@@ -24,7 +31,8 @@
   "name": "DeepSeek R1T Chimera",
   "open_weights": true,
   "reasoning": true,
-  "release_date": "2025-04-26",
+  "release_date": "2025-12-29",
+  "structured_output": true,
   "temperature": true,
   "tool_call": false
 }

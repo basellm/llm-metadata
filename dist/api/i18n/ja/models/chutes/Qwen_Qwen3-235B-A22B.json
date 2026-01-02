@@ -1,13 +1,21 @@
 {
   "attachment": false,
   "cost": {
+    "cache_read": 0,
+    "cache_write": 0,
     "input": 0.3,
-    "output": 1.2
+    "input_audio": 0,
+    "output": 1.2,
+    "output_audio": 0,
+    "reasoning": 1.7999999999999998
   },
   "description": "Qwen3 235B A22B は chutes によって提供される AI モデルです。",
-  "family": "qwen3",
+  "family": "qwen",
   "id": "Qwen/Qwen3-235B-A22B",
-  "last_updated": "2025-11-08",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2025-12-29",
   "limit": {
     "context": 40960,
     "output": 40960
@@ -23,7 +31,8 @@
   "name": "Qwen3 235B A22B",
   "open_weights": true,
   "reasoning": true,
-  "release_date": "2025-11-08",
+  "release_date": "2025-12-29",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

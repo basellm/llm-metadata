@@ -1,13 +1,21 @@
 {
   "attachment": false,
   "cost": {
+    "cache_read": 0,
+    "cache_write": 0,
     "input": 0.03,
-    "output": 0.11
+    "input_audio": 0,
+    "output": 0.11,
+    "output_audio": 0,
+    "reasoning": 0.165
   },
-  "description": "QwQ 32B ArliAI RpR V1 is an AI model provided by chutes.",
-  "family": "qwq",
+  "description": "QwQ 32B ArliAI RpR v1 is an AI model provided by chutes.",
+  "family": "arliai",
   "id": "ArliAI/QwQ-32B-ArliAI-RpR-v1",
-  "last_updated": "2025-11-08",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2025-12-29",
   "limit": {
     "context": 32768,
     "output": 32768
@@ -20,10 +28,11 @@
       "text"
     ]
   },
-  "name": "QwQ 32B ArliAI RpR V1",
+  "name": "QwQ 32B ArliAI RpR v1",
   "open_weights": true,
   "reasoning": true,
-  "release_date": "2025-11-08",
+  "release_date": "2025-12-29",
+  "structured_output": true,
   "temperature": true,
   "tool_call": false
 }

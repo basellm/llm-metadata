@@ -1,14 +1,21 @@
 {
   "attachment": false,
   "cost": {
-    "input": 0,
-    "output": 0
+    "cache_read": 0,
+    "cache_write": 0,
+    "input": 0.05,
+    "input_audio": 0,
+    "output": 0.22,
+    "output_audio": 0,
+    "reasoning": 0.33
   },
   "description": "GLM 4.5 Air is an AI model provided by chutes.",
-  "family": "glm-4.5-air",
+  "family": "zai-org",
   "id": "zai-org/GLM-4.5-Air",
-  "knowledge": "2025-04",
-  "last_updated": "2025-11-08",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2025-12-29",
   "limit": {
     "context": 131072,
     "output": 131072
@@ -24,7 +31,8 @@
   "name": "GLM 4.5 Air",
   "open_weights": true,
   "reasoning": true,
-  "release_date": "2025-07-28",
+  "release_date": "2025-12-29",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }
