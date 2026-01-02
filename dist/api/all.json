@@ -1760,6 +1760,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "claude-opus-4-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.5 is an AI model provided by aihubmix.",
+        "id": "claude-opus-4-5",
+        "knowledge": "2025-03",
+        "last_updated": "2025-11-25",
+        "limit": {
+          "context": 200000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-25",
+        "temperature": true,
+        "tool_call": true
+      },
       "claude-sonnet-4-5": {
         "attachment": true,
         "cost": {
@@ -1791,6 +1823,37 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-09-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "coding-glm-4.6-free": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Coding GLM-4.6 Free is an AI model provided by aihubmix.",
+        "id": "coding-glm-4.6-free",
+        "knowledge": "2025-04",
+        "last_updated": "2025-09-30",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Coding GLM-4.6 Free",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-09-30",
         "temperature": true,
         "tool_call": true
       },
@@ -1911,7 +1974,7 @@
         "last_updated": "2025-09-30",
         "limit": {
           "context": 204800,
-          "output": 204800
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -2310,6 +2373,38 @@
         "reasoning": true,
         "release_date": "2025-11-15",
         "temperature": true,
+        "tool_call": true
+      },
+      "gpt-5.1-codex-max": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1-Codex-Max is an AI model provided by aihubmix.",
+        "id": "gpt-5.1-codex-max",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-11-13",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1-Codex-Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-13",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       },
       "gpt-5.1-codex-mini": {
@@ -58630,7 +58725,7 @@
         "tool_call": true
       },
       "grok-code-fast-1": {
-        "attachment": true,
+        "attachment": false,
         "cost": {
           "cache_read": 0.03,
           "input": 0.25,
@@ -58639,15 +58734,14 @@
         "description": "Grok Code Fast 1 is an AI model provided by venice.",
         "family": "grok",
         "id": "grok-code-fast-1",
-        "last_updated": "2025-12-30",
+        "last_updated": "2026-01-02",
         "limit": {
           "context": 262144,
           "output": 65536
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -58785,23 +58879,26 @@
         "tool_call": true
       },
       "minimax-m21": {
-        "attachment": true,
+        "attachment": false,
         "cost": {
           "cache_read": 0.04,
           "input": 0.4,
           "output": 1.6
         },
         "description": "MiniMax M2.1 is an AI model provided by venice.",
+        "family": "minimax",
         "id": "minimax-m21",
-        "last_updated": "2025-12-30",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-01-02",
         "limit": {
           "context": 202752,
           "output": 50688
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"

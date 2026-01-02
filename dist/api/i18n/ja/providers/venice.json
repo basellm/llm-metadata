@@ -213,7 +213,7 @@
       "tool_call": true
     },
     "grok-code-fast-1": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "cache_read": 0.03,
         "input": 0.25,
@@ -222,15 +222,14 @@
       "description": "Grok Code Fast 1 は venice によって提供される AI モデルです。",
       "family": "grok",
       "id": "grok-code-fast-1",
-      "last_updated": "2025-12-30",
+      "last_updated": "2026-01-02",
       "limit": {
         "context": 262144,
         "output": 65536
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -368,23 +367,26 @@
       "tool_call": true
     },
     "minimax-m21": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "cache_read": 0.04,
         "input": 0.4,
         "output": 1.6
       },
       "description": "MiniMax M2.1 は venice によって提供される AI モデルです。",
+      "family": "minimax",
       "id": "minimax-m21",
-      "last_updated": "2025-12-30",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-01-02",
       "limit": {
         "context": 202752,
         "output": 50688
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
