@@ -1603,65 +1603,6 @@
     "iconURL": "https://models.dev/logos/aihubmix.svg",
     "id": "aihubmix",
     "models": {
-      "DeepSeek-V3.2-Exp": {
-        "attachment": false,
-        "cost": {
-          "input": 0.27,
-          "output": 0.41
-        },
-        "description": "DeepSeek-V3.2-Exp は aihubmix によって提供される AI モデルです。",
-        "family": "deepseek-v3",
-        "id": "DeepSeek-V3.2-Exp",
-        "last_updated": "2025-09-29",
-        "limit": {
-          "context": 163000,
-          "output": 163000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek-V3.2-Exp",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-09-29",
-        "temperature": true,
-        "tool_call": true
-      },
-      "DeepSeek-V3.2-Exp-Think": {
-        "attachment": false,
-        "cost": {
-          "input": 0.27,
-          "output": 0.41
-        },
-        "description": "DeepSeek-V3.2-Exp-Think は aihubmix によって提供される AI モデルです。",
-        "family": "deepseek-v3",
-        "id": "DeepSeek-V3.2-Exp-Think",
-        "knowledge": "2025-09",
-        "last_updated": "2025-09-29",
-        "limit": {
-          "context": 131000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek-V3.2-Exp-Think",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-09-29",
-        "temperature": true,
-        "tool_call": true
-      },
       "Kimi-K2-0905": {
         "attachment": false,
         "cost": {
@@ -1826,7 +1767,7 @@
         "temperature": true,
         "tool_call": true
       },
-      "coding-glm-4.6-free": {
+      "coding-glm-4.7-free": {
         "attachment": false,
         "cost": {
           "cache_read": 0,
@@ -1834,10 +1775,13 @@
           "input": 0,
           "output": 0
         },
-        "description": "Coding GLM-4.6 Free は aihubmix によって提供される AI モデルです。",
-        "id": "coding-glm-4.6-free",
+        "description": "Coding GLM-4.7 Free は aihubmix によって提供される AI モデルです。",
+        "id": "coding-glm-4.7-free",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
         "knowledge": "2025-04",
-        "last_updated": "2025-09-30",
+        "last_updated": "2025-12-22",
         "limit": {
           "context": 204800,
           "output": 131072
@@ -1850,10 +1794,70 @@
             "text"
           ]
         },
-        "name": "Coding GLM-4.6 Free",
+        "name": "Coding GLM-4.7 Free",
         "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-09-30",
+        "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v3.2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 0.45
+        },
+        "description": "DeepSeek-V3.2 は aihubmix によって提供される AI モデルです。",
+        "family": "deepseek-v3",
+        "id": "deepseek-v3.2",
+        "knowledge": "2024-07",
+        "last_updated": "2025-12-01",
+        "limit": {
+          "context": 131000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek-V3.2",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v3.2-think": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 0.45
+        },
+        "description": "DeepSeek-V3.2-Think は aihubmix によって提供される AI モデルです。",
+        "family": "deepseek-v3",
+        "id": "deepseek-v3.2-think",
+        "knowledge": "2024-07",
+        "last_updated": "2025-12-01",
+        "limit": {
+          "context": 131000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek-V3.2-Think",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-01",
         "temperature": true,
         "tool_call": true
       },
@@ -1959,19 +1963,21 @@
         "temperature": true,
         "tool_call": true
       },
-      "glm-4.6": {
+      "glm-4.7": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.11,
-          "cache_write": 0,
+          "cache_read": 0.548,
           "input": 0.27,
           "output": 1.1
         },
-        "description": "GLM-4.6 は aihubmix によって提供される AI モデルです。",
-        "family": "glm-4.6",
-        "id": "glm-4.6",
+        "description": "GLM-4.7 は aihubmix によって提供される AI モデルです。",
+        "family": "glm-4.7",
+        "id": "glm-4.7",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
         "knowledge": "2025-04",
-        "last_updated": "2025-09-30",
+        "last_updated": "2025-12-22",
         "limit": {
           "context": 204800,
           "output": 131072
@@ -1984,10 +1990,10 @@
             "text"
           ]
         },
-        "name": "GLM-4.6",
+        "name": "GLM-4.7",
         "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-09-30",
+        "release_date": "2025-12-22",
         "temperature": true,
         "tool_call": true
       },
@@ -2436,6 +2442,102 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-11-15",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gpt-5.2": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.175,
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.2 は aihubmix によって提供される AI モデルです。",
+        "family": "gpt-5",
+        "id": "gpt-5.2",
+        "knowledge": "2025-08-31",
+        "last_updated": "2025-12-11",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-11",
+        "temperature": false,
+        "tool_call": true
+      },
+      "minimax-m2.1": {
+        "attachment": false,
+        "cost": {
+          "input": 0.29,
+          "output": 1.15
+        },
+        "description": "MiniMax M2.1 は aihubmix によって提供される AI モデルです。",
+        "family": "minimax",
+        "id": "minimax-m2.1",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "last_updated": "2025-12-23",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m2.1-free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiniMax M2.1 Free は aihubmix によって提供される AI モデルです。",
+        "family": "minimax",
+        "id": "minimax-m2.1-free",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "last_updated": "2025-12-23",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.1 Free",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-23",
         "temperature": true,
         "tool_call": true
       },
