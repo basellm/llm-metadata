@@ -63891,6 +63891,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "anthropic/claude-opus-4": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.5,
+          "cache_write": 18.75,
+          "input": 15,
+          "output": 75
+        },
+        "description": "Claude Opus 4 是由 zenmux 提供的人工智能模型。",
+        "id": "anthropic/claude-opus-4",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-08-14",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-14",
+        "temperature": true,
+        "tool_call": true
+      },
       "anthropic/claude-opus-4.1": {
         "attachment": true,
         "cost": {
@@ -63922,6 +63954,70 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-08-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-opus-4.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.5 是由 zenmux 提供的人工智能模型。",
+        "id": "anthropic/claude-opus-4.5",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-11-25",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-25",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-4": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4 是由 zenmux 提供的人工智能模型。",
+        "id": "anthropic/claude-sonnet-4",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-08-13",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-13",
         "temperature": true,
         "tool_call": true
       },
@@ -63959,21 +64055,51 @@
         "temperature": true,
         "tool_call": true
       },
+      "baidu/ernie-5.0-thinking-preview": {
+        "attachment": true,
+        "cost": {
+          "input": 0.84,
+          "output": 3.37
+        },
+        "description": "ERNIE-5.0-Thinking-Preview 是由 zenmux 提供的人工智能模型。",
+        "id": "baidu/ernie-5.0-thinking-preview",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-11-13",
+        "limit": {
+          "context": 128000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "ERNIE-5.0-Thinking-Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-13",
+        "temperature": true,
+        "tool_call": true
+      },
       "deepseek/deepseek-chat": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.07,
-          "input": 0.56,
-          "output": 1.68
+          "cache_read": 0.03,
+          "input": 0.28,
+          "output": 0.42
         },
-        "description": "DeepSeek-V3.2-Exp (Non-thinking Mode) 是由 zenmux 提供的人工智能模型。",
-        "family": "deepseek-chat",
+        "description": "DeepSeek-V3.2 (Non-thinking Mode) 是由 zenmux 提供的人工智能模型。",
         "id": "deepseek/deepseek-chat",
-        "knowledge": "2025-07",
-        "last_updated": "2025-09-29",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-09-10",
         "limit": {
           "context": 128000,
-          "output": 8000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -63983,10 +64109,164 @@
             "text"
           ]
         },
-        "name": "DeepSeek-V3.2-Exp (Non-thinking Mode)",
-        "open_weights": true,
+        "name": "DeepSeek-V3.2 (Non-thinking Mode)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09-10",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-reasoner": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.28,
+          "output": 0.42
+        },
+        "description": "DeepSeek-V3.2 (Thinking Mode) 是由 zenmux 提供的人工智能模型。",
+        "id": "deepseek/deepseek-reasoner",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-10-23",
+        "limit": {
+          "context": 128000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek-V3.2 (Thinking Mode)",
+        "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-09-29",
+        "release_date": "2025-10-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-v3.2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.28,
+          "output": 0.43
+        },
+        "description": "DeepSeek V3.2 是由 zenmux 提供的人工智能模型。",
+        "id": "deepseek/deepseek-v3.2",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-08",
+        "limit": {
+          "context": 128000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-08",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-v3.2-exp": {
+        "attachment": false,
+        "cost": {
+          "input": 0.22,
+          "output": 0.33
+        },
+        "description": "DeepSeek-V3.2-Exp 是由 zenmux 提供的人工智能模型。",
+        "id": "deepseek/deepseek-v3.2-exp",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-11-26",
+        "limit": {
+          "context": 163840,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek-V3.2-Exp",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-26",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-2.5-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.07,
+          "cache_write": 1,
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Gemini 2.5 Flash 是由 zenmux 提供的人工智能模型。",
+        "id": "google/gemini-2.5-flash",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-08-18",
+        "limit": {
+          "context": 1048576,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "image",
+            "text",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-2.5-flash-lite": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "cache_write": 1,
+          "input": 0.1,
+          "output": 0.4
+        },
+        "description": "Gemini 2.5 Flash Lite 是由 zenmux 提供的人工智能模型。",
+        "id": "google/gemini-2.5-flash-lite",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-08-14",
+        "limit": {
+          "context": 1048576,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "image",
+            "text",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash Lite",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-08-14",
         "temperature": true,
         "tool_call": true
       },
@@ -64026,21 +64306,118 @@
         "temperature": true,
         "tool_call": true
       },
-      "inclusionai/lint-1t": {
+      "google/gemini-3-flash-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "cache_write": 1,
+          "input": 0.5,
+          "output": 3
+        },
+        "description": "Gemini 3 Flash Preview 是由 zenmux 提供的人工智能模型。",
+        "id": "google/gemini-3-flash-preview",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 1048576,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Flash Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3-flash-preview-free": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemini 3 Flash Preview Free 是由 zenmux 提供的人工智能模型。",
+        "id": "google/gemini-3-flash-preview-free",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 1048576,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Flash Preview Free",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3-pro-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "cache_write": 4.5,
+          "input": 2,
+          "output": 12
+        },
+        "description": "Gemini 3 Pro Preview 是由 zenmux 提供的人工智能模型。",
+        "id": "google/gemini-3-pro-preview",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-11-18",
+        "limit": {
+          "context": 1048576,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Pro Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "inclusionai/ling-1t": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.112,
+          "cache_read": 0.11,
           "input": 0.56,
           "output": 2.24
         },
         "description": "Ling-1T 是由 zenmux 提供的人工智能模型。",
-        "family": "lint-1t",
-        "id": "inclusionai/lint-1t",
-        "knowledge": "2025-10",
-        "last_updated": "2025-10-09",
+        "id": "inclusionai/ling-1t",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-10-01",
         "limit": {
           "context": 128000,
-          "output": 32000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64051,27 +64428,26 @@
           ]
         },
         "name": "Ling-1T",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-10-09",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-10-01",
         "temperature": true,
         "tool_call": true
       },
       "inclusionai/ring-1t": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.112,
+          "cache_read": 0.11,
           "input": 0.56,
           "output": 2.24
         },
         "description": "Ring-1T 是由 zenmux 提供的人工智能模型。",
-        "family": "ring-1t",
         "id": "inclusionai/ring-1t",
-        "knowledge": "2025-10",
-        "last_updated": "2025-10-12",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-10-01",
         "limit": {
           "context": 128000,
-          "output": 32000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64082,27 +64458,25 @@
           ]
         },
         "name": "Ring-1T",
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-10-12",
+        "release_date": "2025-10-01",
         "temperature": true,
         "tool_call": true
       },
       "kuaishou/kat-coder-pro-v1": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.12,
-          "input": 0.6,
-          "output": 2.4
+          "input": 0,
+          "output": 0
         },
         "description": "KAT-Coder-Pro-V1 是由 zenmux 提供的人工智能模型。",
-        "family": "kat-coder-pro",
         "id": "kuaishou/kat-coder-pro-v1",
         "knowledge": "2025-01-01",
-        "last_updated": "2025-10-23",
+        "last_updated": "2025-10-24",
         "limit": {
           "context": 256000,
-          "output": 32000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64114,25 +64488,54 @@
         },
         "name": "KAT-Coder-Pro-V1",
         "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-10-23",
+        "reasoning": false,
+        "release_date": "2025-10-24",
+        "temperature": true,
+        "tool_call": true
+      },
+      "kuaishou/kat-coder-pro-v1-free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "KAT-Coder-Pro-V1 Free 是由 zenmux 提供的人工智能模型。",
+        "id": "kuaishou/kat-coder-pro-v1-free",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-31",
+        "limit": {
+          "context": 256000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "KAT-Coder-Pro-V1 Free",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-12-31",
         "temperature": true,
         "tool_call": true
       },
       "minimax/minimax-m2": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.03,
           "input": 0.3,
           "output": 1.2
         },
         "description": "MiniMax M2 是由 zenmux 提供的人工智能模型。",
-        "family": "minimax",
         "id": "minimax/minimax-m2",
-        "knowledge": "2025-10",
-        "last_updated": "2025-10-27",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-10-28",
         "limit": {
           "context": 204800,
-          "output": 128000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64145,7 +64548,37 @@
         "name": "MiniMax M2",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-10-27",
+        "release_date": "2025-10-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax/minimax-m2.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.1 是由 zenmux 提供的人工智能模型。",
+        "id": "minimax/minimax-m2.1",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-23",
+        "limit": {
+          "context": 204800,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-23",
         "temperature": true,
         "tool_call": true
       },
@@ -64157,13 +64590,12 @@
           "output": 2.5
         },
         "description": "Kimi K2 0905 是由 zenmux 提供的人工智能模型。",
-        "family": "kimi-k2",
         "id": "moonshotai/kimi-k2-0905",
-        "knowledge": "2024-10",
-        "last_updated": "2025-09-04",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-09-09",
         "limit": {
-          "context": 262144,
-          "output": 16384
+          "context": 262100,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64176,24 +64608,25 @@
         "name": "Kimi K2 0905",
         "open_weights": false,
         "reasoning": false,
-        "release_date": "2025-09-04",
+        "release_date": "2025-09-09",
         "temperature": true,
         "tool_call": true
       },
       "moonshotai/kimi-k2-thinking": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.15,
           "input": 0.6,
           "output": 2.5
         },
         "description": "Kimi K2 Thinking 是由 zenmux 提供的人工智能模型。",
         "family": "kimi-k2",
         "id": "moonshotai/kimi-k2-thinking",
-        "knowledge": "2025-11",
+        "knowledge": "2025-01-01",
         "last_updated": "2025-11-06",
         "limit": {
           "context": 262144,
-          "output": 262144
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64213,17 +64646,18 @@
       "moonshotai/kimi-k2-thinking-turbo": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.15,
           "input": 1.15,
           "output": 8
         },
         "description": "Kimi K2 Thinking Turbo 是由 zenmux 提供的人工智能模型。",
         "family": "kimi-k2",
         "id": "moonshotai/kimi-k2-thinking-turbo",
-        "knowledge": "2025-11",
+        "knowledge": "2025-01-01",
         "last_updated": "2025-11-06",
         "limit": {
           "context": 262144,
-          "output": 262144
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64243,18 +64677,17 @@
       "openai/gpt-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.125,
+          "cache_read": 0.13,
           "input": 1.25,
           "output": 10
         },
         "description": "GPT-5 是由 zenmux 提供的人工智能模型。",
-        "family": "gpt-5",
         "id": "openai/gpt-5",
-        "knowledge": "2024-10-01",
-        "last_updated": "2025-08-07",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-08-13",
         "limit": {
           "context": 400000,
-          "output": 128000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64268,25 +64701,24 @@
         "name": "GPT-5",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-08-07",
+        "release_date": "2025-08-13",
         "temperature": true,
         "tool_call": true
       },
       "openai/gpt-5-codex": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.125,
+          "cache_read": 0.13,
           "input": 1.25,
           "output": 10
         },
         "description": "GPT-5 Codex 是由 zenmux 提供的人工智能模型。",
-        "family": "gpt-5-codex",
         "id": "openai/gpt-5-codex",
-        "knowledge": "2024-10-01",
-        "last_updated": "2025-09-23",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-10-13",
         "limit": {
           "context": 400000,
-          "output": 128000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64300,7 +64732,162 @@
         "name": "GPT-5 Codex",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-09-23",
+        "release_date": "2025-10-13",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.13,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1 是由 zenmux 提供的人工智能模型。",
+        "id": "openai/gpt-5.1",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-11-14",
+        "limit": {
+          "context": 400000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-14",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.1-chat": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.13,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1 Chat 是由 zenmux 提供的人工智能模型。",
+        "id": "openai/gpt-5.1-chat",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-11-14",
+        "limit": {
+          "context": 128000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1 Chat",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-11-14",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.1-codex": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.13,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1-Codex 是由 zenmux 提供的人工智能模型。",
+        "id": "openai/gpt-5.1-codex",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-11-14",
+        "limit": {
+          "context": 400000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1-Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-14",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.1-codex-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.25,
+          "output": 2
+        },
+        "description": "GPT-5.1-Codex-Mini 是由 zenmux 提供的人工智能模型。",
+        "id": "openai/gpt-5.1-codex-mini",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-11-14",
+        "limit": {
+          "context": 400000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1-Codex-Mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-14",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.2": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.17,
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.2 是由 zenmux 提供的人工智能模型。",
+        "id": "openai/gpt-5.2",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-11",
+        "limit": {
+          "context": 400000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-11",
         "temperature": true,
         "tool_call": true
       },
@@ -64312,14 +64899,13 @@
           "input": 1,
           "output": 5
         },
-        "description": "Qwen3 Coder Plus 是由 zenmux 提供的人工智能模型。",
-        "family": "qwen3-coder",
+        "description": "Qwen3-Coder-Plus 是由 zenmux 提供的人工智能模型。",
         "id": "qwen/qwen3-coder-plus",
-        "knowledge": "2025-04",
-        "last_updated": "2025-07-23",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-09-10",
         "limit": {
           "context": 1000000,
-          "output": 66540
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64329,10 +64915,102 @@
             "text"
           ]
         },
-        "name": "Qwen3 Coder Plus",
-        "open_weights": true,
+        "name": "Qwen3-Coder-Plus",
+        "open_weights": false,
         "reasoning": false,
-        "release_date": "2025-07-23",
+        "release_date": "2025-09-10",
+        "temperature": true,
+        "tool_call": true
+      },
+      "stepfun/step-3": {
+        "attachment": true,
+        "cost": {
+          "input": 0.21,
+          "output": 0.57
+        },
+        "description": "Step-3 是由 zenmux 提供的人工智能模型。",
+        "id": "stepfun/step-3",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-18",
+        "limit": {
+          "context": 65536,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step-3",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "volcengine/doubao-seed-1.8": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "cache_write": 0,
+          "input": 0.11,
+          "output": 0.28
+        },
+        "description": "Doubao-Seed-1.8 是由 zenmux 提供的人工智能模型。",
+        "id": "volcengine/doubao-seed-1.8",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-18",
+        "limit": {
+          "context": 256000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Doubao-Seed-1.8",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "volcengine/doubao-seed-code": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.17,
+          "output": 1.12
+        },
+        "description": "Doubao-Seed-Code 是由 zenmux 提供的人工智能模型。",
+        "id": "volcengine/doubao-seed-code",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-11-11",
+        "limit": {
+          "context": 256000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Doubao-Seed-Code",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-11",
         "temperature": true,
         "tool_call": true
       },
@@ -64344,13 +65022,12 @@
           "output": 15
         },
         "description": "Grok 4 是由 zenmux 提供的人工智能模型。",
-        "family": "grok-4",
         "id": "x-ai/grok-4",
         "knowledge": "2025-01-01",
-        "last_updated": "2025-07-09",
+        "last_updated": "2025-08-19",
         "limit": {
           "context": 256000,
-          "output": 256000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64364,7 +65041,7 @@
         "name": "Grok 4",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-07-09",
+        "release_date": "2025-08-19",
         "temperature": true,
         "tool_call": true
       },
@@ -64376,13 +65053,12 @@
           "output": 0.5
         },
         "description": "Grok 4 Fast 是由 zenmux 提供的人工智能模型。",
-        "family": "grok-4",
         "id": "x-ai/grok-4-fast",
         "knowledge": "2025-01-01",
-        "last_updated": "2025-09-19",
+        "last_updated": "2025-09-22",
         "limit": {
           "context": 2000000,
-          "output": 30000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64396,25 +65072,24 @@
         "name": "Grok 4 Fast",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-09-19",
+        "release_date": "2025-09-22",
         "temperature": true,
         "tool_call": true
       },
-      "x-ai/grok-4-fast-non-reasoning": {
+      "x-ai/grok-4.1-fast": {
         "attachment": true,
         "cost": {
           "cache_read": 0.05,
           "input": 0.2,
           "output": 0.5
         },
-        "description": "Grok 4 Fast None Reasoning 是由 zenmux 提供的人工智能模型。",
-        "family": "grok-4",
-        "id": "x-ai/grok-4-fast-non-reasoning",
+        "description": "Grok 4.1 Fast 是由 zenmux 提供的人工智能模型。",
+        "id": "x-ai/grok-4.1-fast",
         "knowledge": "2025-01-01",
-        "last_updated": "2025-09-19",
+        "last_updated": "2025-11-20",
         "limit": {
           "context": 2000000,
-          "output": 30000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64425,10 +65100,41 @@
             "text"
           ]
         },
-        "name": "Grok 4 Fast None Reasoning",
+        "name": "Grok 4.1 Fast",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "x-ai/grok-4.1-fast-non-reasoning": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok 4.1 Fast Non Reasoning 是由 zenmux 提供的人工智能模型。",
+        "id": "x-ai/grok-4.1-fast-non-reasoning",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-11-20",
+        "limit": {
+          "context": 2000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.1 Fast Non Reasoning",
         "open_weights": false,
         "reasoning": false,
-        "release_date": "2025-09-19",
+        "release_date": "2025-11-20",
         "temperature": true,
         "tool_call": true
       },
@@ -64440,13 +65146,12 @@
           "output": 1.5
         },
         "description": "Grok Code Fast 1 是由 zenmux 提供的人工智能模型。",
-        "family": "grok",
         "id": "x-ai/grok-code-fast-1",
         "knowledge": "2025-01-01",
-        "last_updated": "2025-08-26",
+        "last_updated": "2025-09-19",
         "limit": {
           "context": 256000,
-          "output": 10000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64459,27 +65164,23 @@
         "name": "Grok Code Fast 1",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-08-26",
+        "release_date": "2025-09-19",
         "temperature": true,
         "tool_call": true
       },
       "xiaomi/mimo-v2-flash": {
         "attachment": false,
         "cost": {
-          "input": 0.07,
-          "output": 0.21
+          "input": 0,
+          "output": 0
         },
         "description": "MiMo-V2-Flash 是由 zenmux 提供的人工智能模型。",
-        "family": "mimo-v2-flash",
         "id": "xiaomi/mimo-v2-flash",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12-01",
+        "knowledge": "2025-01-01",
         "last_updated": "2025-12-17",
         "limit": {
-          "context": 256000,
-          "output": 32000
+          "context": 262144,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64490,27 +65191,85 @@
           ]
         },
         "name": "MiMo-V2-Flash",
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": true,
         "release_date": "2025-12-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2-flash-free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2-Flash Free 是由 zenmux 提供的人工智能模型。",
+        "id": "xiaomi/mimo-v2-flash-free",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-31",
+        "limit": {
+          "context": 262144,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2-Flash Free",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-31",
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-4.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.07,
+          "input": 0.35,
+          "output": 1.54
+        },
+        "description": "GLM 4.5 是由 zenmux 提供的人工智能模型。",
+        "id": "z-ai/glm-4.5",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-09-09",
+        "limit": {
+          "context": 128000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-09",
         "temperature": true,
         "tool_call": true
       },
       "z-ai/glm-4.5-air": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.022,
+          "cache_read": 0.02,
           "input": 0.11,
           "output": 0.56
         },
         "description": "GLM 4.5 Air 是由 zenmux 提供的人工智能模型。",
-        "family": "glm-4.5-air",
         "id": "z-ai/glm-4.5-air",
-        "knowledge": "2025-04",
-        "last_updated": "2025-07-25",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-09-09",
         "limit": {
           "context": 128000,
-          "output": 96000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -64521,9 +65280,9 @@
           ]
         },
         "name": "GLM 4.5 Air",
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-07-25",
+        "release_date": "2025-09-09",
         "temperature": true,
         "tool_call": true
       },
@@ -64555,6 +65314,130 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-09-30",
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-4.6v": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.14,
+          "output": 0.42
+        },
+        "description": "GLM 4.6V 是由 zenmux 提供的人工智能模型。",
+        "id": "z-ai/glm-4.6v",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-08",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.6V",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-08",
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-4.6v-flash": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM 4.6V FlashX 是由 zenmux 提供的人工智能模型。",
+        "id": "z-ai/glm-4.6v-flash",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-08",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.6V FlashX",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-08",
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-4.6v-flash-free": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM 4.6V Flash (Free) 是由 zenmux 提供的人工智能模型。",
+        "id": "z-ai/glm-4.6v-flash-free",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-30",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.6V Flash (Free)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-30",
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-4.7": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.28,
+          "output": 1.14
+        },
+        "description": "GLM 4.7 是由 zenmux 提供的人工智能模型。",
+        "id": "z-ai/glm-4.7",
+        "knowledge": "2025-01-01",
+        "last_updated": "2025-12-23",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-23",
         "temperature": true,
         "tool_call": true
       }
