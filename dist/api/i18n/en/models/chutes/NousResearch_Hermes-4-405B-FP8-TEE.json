@@ -1,20 +1,20 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0,
-    "cache_write": 0,
     "input": 0.3,
-    "input_audio": 0,
     "output": 1.2,
-    "output_audio": 0
+    "reasoning": 1.8
   },
   "description": "Hermes 4 405B FP8 TEE is an AI model provided by chutes.",
   "family": "nousresearch",
   "id": "NousResearch/Hermes-4-405B-FP8-TEE",
-  "last_updated": "2025-12-29",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2025-01-06",
   "limit": {
-    "context": 40960,
-    "output": 40960
+    "context": 131072,
+    "output": 65536
   },
   "modalities": {
     "input": [
@@ -26,9 +26,9 @@
   },
   "name": "Hermes 4 405B FP8 TEE",
   "open_weights": true,
-  "reasoning": false,
+  "reasoning": true,
   "release_date": "2025-12-29",
-  "structured_output": false,
+  "structured_output": true,
   "temperature": true,
-  "tool_call": false
+  "tool_call": true
 }
