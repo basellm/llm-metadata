@@ -8,20 +8,23 @@
   "id": "huggingface",
   "lobeIcon": "HuggingFace.Color",
   "models": {
-    "MiniMaxAI/MiniMax-M2": {
+    "MiniMaxAI/MiniMax-M2.1": {
       "attachment": false,
       "cost": {
         "input": 0.3,
         "output": 1.2
       },
-      "description": "MiniMax-M2 は huggingface によって提供される AI モデルです。",
+      "description": "MiniMax-M2.1 は huggingface によって提供される AI モデルです。",
       "family": "minimax",
-      "id": "MiniMaxAI/MiniMax-M2",
+      "id": "MiniMaxAI/MiniMax-M2.1",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
       "knowledge": "2025-10",
-      "last_updated": "2025-10-27",
+      "last_updated": "2025-12-23",
       "limit": {
         "context": 204800,
-        "output": 204800
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -31,10 +34,10 @@
           "text"
         ]
       },
-      "name": "MiniMax-M2",
+      "name": "MiniMax-M2.1",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2025-10-27",
+      "release_date": "2025-12-23",
       "temperature": true,
       "tool_call": true
     },
@@ -218,6 +221,36 @@
       "temperature": true,
       "tool_call": true
     },
+    "XiaomiMiMo/MiMo-V2-Flash": {
+      "attachment": false,
+      "cost": {
+        "input": 0.1,
+        "output": 0.3
+      },
+      "description": "MiMo-V2-Flash は huggingface によって提供される AI モデルです。",
+      "family": "mimo",
+      "id": "XiaomiMiMo/MiMo-V2-Flash",
+      "knowledge": "2024-12",
+      "last_updated": "2025-12-16",
+      "limit": {
+        "context": 262144,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-16",
+      "temperature": true,
+      "tool_call": true
+    },
     "deepseek-ai/DeepSeek-R1-0528": {
       "attachment": false,
       "cost": {
@@ -248,20 +281,20 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepseek-ai/Deepseek-V3-0324": {
+    "deepseek-ai/DeepSeek-V3.2": {
       "attachment": false,
       "cost": {
-        "input": 1.25,
-        "output": 1.25
+        "input": 0.28,
+        "output": 0.4
       },
-      "description": "DeepSeek-V3-0324 は huggingface によって提供される AI モデルです。",
+      "description": "DeepSeek-V3.2 は huggingface によって提供される AI モデルです。",
       "family": "deepseek-v3",
-      "id": "deepseek-ai/Deepseek-V3-0324",
-      "knowledge": "2024-10",
-      "last_updated": "2025-03-24",
+      "id": "deepseek-ai/DeepSeek-V3.2",
+      "knowledge": "2024-07",
+      "last_updated": "2025-12-01",
       "limit": {
-        "context": 16384,
-        "output": 8192
+        "context": 163840,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -271,10 +304,10 @@
           "text"
         ]
       },
-      "name": "DeepSeek-V3-0324",
+      "name": "DeepSeek-V3.2",
       "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-03-24",
+      "reasoning": true,
+      "release_date": "2025-12-01",
       "temperature": true,
       "tool_call": true
     },
@@ -338,20 +371,24 @@
       "temperature": true,
       "tool_call": true
     },
-    "zai-org/GLM-4.5": {
+    "moonshotai/Kimi-K2-Thinking": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.15,
         "input": 0.6,
-        "output": 2.2
+        "output": 2.5
       },
-      "description": "GLM-4.5 は huggingface によって提供される AI モデルです。",
-      "family": "glm-4.5",
-      "id": "zai-org/GLM-4.5",
-      "knowledge": "2025-04",
-      "last_updated": "2025-07-28",
+      "description": "Kimi-K2-Thinking は huggingface によって提供される AI モデルです。",
+      "family": "kimi-k2",
+      "id": "moonshotai/Kimi-K2-Thinking",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "knowledge": "2024-08",
+      "last_updated": "2025-11-06",
       "limit": {
-        "context": 131072,
-        "output": 98304
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -361,58 +398,31 @@
           "text"
         ]
       },
-      "name": "GLM-4.5",
+      "name": "Kimi-K2-Thinking",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2025-07-28",
+      "release_date": "2025-11-06",
       "temperature": true,
       "tool_call": true
     },
-    "zai-org/GLM-4.5-Air": {
-      "attachment": false,
-      "cost": {
-        "input": 0.2,
-        "output": 1.1
-      },
-      "description": "GLM-4.5-Air は huggingface によって提供される AI モデルです。",
-      "family": "glm-4.5-air",
-      "id": "zai-org/GLM-4.5-Air",
-      "knowledge": "2025-04",
-      "last_updated": "2025-07-28",
-      "limit": {
-        "context": 128000,
-        "output": 96000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM-4.5-Air",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-07-28",
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai-org/GLM-4.6": {
+    "zai-org/GLM-4.7": {
       "attachment": false,
       "cost": {
         "cache_read": 0.11,
         "input": 0.6,
         "output": 2.2
       },
-      "description": "GLM-4.6 は huggingface によって提供される AI モデルです。",
-      "family": "glm-4.6",
-      "id": "zai-org/GLM-4.6",
+      "description": "GLM-4.7 は huggingface によって提供される AI モデルです。",
+      "family": "glm-4.7",
+      "id": "zai-org/GLM-4.7",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
       "knowledge": "2025-04",
-      "last_updated": "2025-09-30",
+      "last_updated": "2025-12-22",
       "limit": {
-        "context": 200000,
-        "output": 128000
+        "context": 204800,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -422,10 +432,10 @@
           "text"
         ]
       },
-      "name": "GLM-4.6",
+      "name": "GLM-4.7",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2025-09-30",
+      "release_date": "2025-12-22",
       "temperature": true,
       "tool_call": true
     }
