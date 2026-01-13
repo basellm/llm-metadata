@@ -1775,7 +1775,8 @@
           "input": 0,
           "output": 0
         },
-        "description": "Coding GLM-4.7 Free 是由 aihubmix 提供的人工智能模型。",
+        "description": "Coding GLM 4.7 Free 是由 aihubmix 提供的人工智能模型。",
+        "family": "glm-4.7",
         "id": "coding-glm-4.7-free",
         "interleaved": {
           "field": "reasoning_details"
@@ -1794,10 +1795,42 @@
             "text"
           ]
         },
-        "name": "Coding GLM-4.7 Free",
+        "name": "Coding GLM 4.7 Free",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "coding-minimax-m2.1-free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Coding MiniMax M2.1 Free 是由 aihubmix 提供的人工智能模型。",
+        "family": "minimax",
+        "id": "coding-minimax-m2.1-free",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "last_updated": "2025-12-23",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Coding MiniMax M2.1 Free",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-23",
         "temperature": true,
         "tool_call": true
       },
@@ -1825,6 +1858,65 @@
           ]
         },
         "name": "DeepSeek-V3.2",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v3.2-fast": {
+        "attachment": false,
+        "cost": {
+          "input": 1.1,
+          "output": 3.29
+        },
+        "description": "DeepSeek-V3.2-Fast 是由 aihubmix 提供的人工智能模型。",
+        "family": "deepseek-v3",
+        "id": "deepseek-v3.2-fast",
+        "knowledge": "2024-07",
+        "last_updated": "2025-12-01",
+        "limit": {
+          "context": 128000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek-V3.2-Fast",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-12-01",
+        "tool_call": false
+      },
+      "deepseek-v3.2-speciale": {
+        "attachment": false,
+        "cost": {
+          "input": 0.58,
+          "output": 1.68
+        },
+        "description": "DeepSeek V3.2 Speciale 是由 aihubmix 提供的人工智能模型。",
+        "family": "deepseek-v3",
+        "id": "deepseek-v3.2-speciale",
+        "knowledge": "2024-07",
+        "last_updated": "2025-12-01",
+        "limit": {
+          "context": 128000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.2 Speciale",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-01",
@@ -2122,38 +2214,6 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-05-13",
-        "temperature": true,
-        "tool_call": true
-      },
-      "gpt-4o-2024-11-20": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 1.25,
-          "input": 2.5,
-          "output": 10
-        },
-        "description": "GPT-4o (2024-11-20) 是由 aihubmix 提供的人工智能模型。",
-        "family": "gpt-4o",
-        "id": "gpt-4o-2024-11-20",
-        "knowledge": "2023-09",
-        "last_updated": "2024-11-20",
-        "limit": {
-          "context": 128000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-4o (2024-11-20)",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-11-20",
         "temperature": true,
         "tool_call": true
       },
@@ -2503,38 +2563,6 @@
           ]
         },
         "name": "MiniMax M2.1",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-12-23",
-        "temperature": true,
-        "tool_call": true
-      },
-      "minimax-m2.1-free": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "MiniMax M2.1 Free 是由 aihubmix 提供的人工智能模型。",
-        "family": "minimax",
-        "id": "minimax-m2.1-free",
-        "interleaved": {
-          "field": "reasoning_details"
-        },
-        "last_updated": "2025-12-23",
-        "limit": {
-          "context": 204800,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax M2.1 Free",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-23",
@@ -7993,8 +8021,8 @@
       "anthropic.claude-opus-4-5-20251101-v1:0": {
         "attachment": true,
         "cost": {
-          "cache_read": 1.5,
-          "cache_write": 18.75,
+          "cache_read": 0.5,
+          "cache_write": 6.25,
           "input": 5,
           "output": 25
         },
@@ -8335,8 +8363,8 @@
       "global.anthropic.claude-opus-4-5-20251101-v1:0": {
         "attachment": true,
         "cost": {
-          "cache_read": 1.5,
-          "cache_write": 18.75,
+          "cache_read": 0.5,
+          "cache_write": 6.25,
           "input": 5,
           "output": 25
         },
@@ -10234,8 +10262,8 @@
       "claude-opus-4-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 1.5,
-          "cache_write": 18.75,
+          "cache_read": 0.5,
+          "cache_write": 6.25,
           "input": 5,
           "output": 25
         },
@@ -10668,9 +10696,8 @@
       "deepseek-v3.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
-          "input": 0.28,
-          "output": 0.42
+          "input": 0.58,
+          "output": 1.68
         },
         "description": "DeepSeek-V3.2 是由 azure 提供的人工智能模型。",
         "family": "deepseek-v3",
@@ -10699,8 +10726,8 @@
       "deepseek-v3.2-speciale": {
         "attachment": false,
         "cost": {
-          "input": 0.28,
-          "output": 0.42
+          "input": 0.58,
+          "output": 1.68
         },
         "description": "DeepSeek-V3.2-Speciale 是由 azure 提供的人工智能模型。",
         "family": "deepseek-v3",
@@ -13110,8 +13137,8 @@
       "claude-opus-4-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 1.5,
-          "cache_write": 18.75,
+          "cache_read": 0.5,
+          "cache_write": 6.25,
           "input": 5,
           "output": 25
         },
@@ -13544,9 +13571,8 @@
       "deepseek-v3.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
-          "input": 0.28,
-          "output": 0.42
+          "input": 0.58,
+          "output": 1.68
         },
         "description": "DeepSeek-V3.2 是由 azure-cognitive-services 提供的人工智能模型。",
         "family": "deepseek-v3",
@@ -13575,8 +13601,8 @@
       "deepseek-v3.2-speciale": {
         "attachment": false,
         "cost": {
-          "input": 0.28,
-          "output": 0.42
+          "input": 0.58,
+          "output": 1.68
         },
         "description": "DeepSeek-V3.2-Speciale 是由 azure-cognitive-services 提供的人工智能模型。",
         "family": "deepseek-v3",
@@ -16254,13 +16280,8 @@
       "MiniMaxAI/MiniMax-M2.1-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.3,
-          "input_audio": 0,
-          "output": 1.2,
-          "output_audio": 0,
-          "reasoning": 1.8
+          "output": 1.2
         },
         "description": "MiniMax M2.1 TEE 是由 chutes 提供的人工智能模型。",
         "family": "minimaxai",
@@ -16268,7 +16289,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 196608,
           "output": 65536
@@ -16292,17 +16313,13 @@
       "NousResearch/DeepHermes-3-Mistral-24B-Preview": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.02,
-          "input_audio": 0,
-          "output": 0.1,
-          "output_audio": 0
+          "output": 0.1
         },
         "description": "DeepHermes 3 Mistral 24B Preview 是由 chutes 提供的人工智能模型。",
         "family": "nousresearch",
         "id": "NousResearch/DeepHermes-3-Mistral-24B-Preview",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 32768,
           "output": 32768
@@ -16326,13 +16343,8 @@
       "NousResearch/Hermes-4-14B": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.01,
-          "input_audio": 0,
-          "output": 0.05,
-          "output_audio": 0,
-          "reasoning": 0.075
+          "output": 0.05
         },
         "description": "Hermes 4 14B 是由 chutes 提供的人工智能模型。",
         "family": "nousresearch",
@@ -16340,7 +16352,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 40960,
           "output": 40960
@@ -16365,8 +16377,7 @@
         "attachment": false,
         "cost": {
           "input": 0.3,
-          "output": 1.2,
-          "reasoning": 1.8
+          "output": 1.2
         },
         "description": "Hermes 4 405B FP8 TEE 是由 chutes 提供的人工智能模型。",
         "family": "nousresearch",
@@ -16374,7 +16385,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-01-06",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 65536
@@ -16398,13 +16409,8 @@
       "NousResearch/Hermes-4-70B": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.11,
-          "input_audio": 0,
-          "output": 0.38,
-          "output_audio": 0,
-          "reasoning": 0.57
+          "output": 0.38
         },
         "description": "Hermes 4 70B 是由 chutes 提供的人工智能模型。",
         "family": "nousresearch",
@@ -16412,7 +16418,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 131072
@@ -16436,20 +16442,16 @@
       "NousResearch/Hermes-4.3-36B": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.1,
-          "input_audio": 0,
-          "output": 0.39,
-          "output_audio": 0
+          "output": 0.39
         },
         "description": "Hermes 4.3 36B 是由 chutes 提供的人工智能模型。",
         "family": "nousresearch",
         "id": "NousResearch/Hermes-4.3-36B",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
-          "context": 524288,
-          "output": 524288
+          "context": 32768,
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -16476,7 +16478,7 @@
         "description": "InternVL3 78B TEE 是由 chutes 提供的人工智能模型。",
         "family": "opengvlab",
         "id": "OpenGVLab/InternVL3-78B-TEE",
-        "last_updated": "2025-01-06",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 32768,
           "output": 32768
@@ -16501,17 +16503,13 @@
       "Qwen/Qwen2.5-72B-Instruct": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.13,
-          "input_audio": 0,
-          "output": 0.52,
-          "output_audio": 0
+          "output": 0.52
         },
         "description": "Qwen2.5 72B Instruct 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
         "id": "Qwen/Qwen2.5-72B-Instruct",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 32768,
           "output": 32768
@@ -16535,17 +16533,13 @@
       "Qwen/Qwen2.5-Coder-32B-Instruct": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.03,
-          "input_audio": 0,
-          "output": 0.11,
-          "output_audio": 0
+          "output": 0.11
         },
         "description": "Qwen2.5 Coder 32B Instruct 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
         "id": "Qwen/Qwen2.5-Coder-32B-Instruct",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 32768,
           "output": 32768
@@ -16569,17 +16563,13 @@
       "Qwen/Qwen2.5-VL-32B-Instruct": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.05,
-          "input_audio": 0,
-          "output": 0.22,
-          "output_audio": 0
+          "output": 0.22
         },
         "description": "Qwen2.5 VL 32B Instruct 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
         "id": "Qwen/Qwen2.5-VL-32B-Instruct",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 16384,
           "output": 16384
@@ -16604,20 +16594,16 @@
       "Qwen/Qwen2.5-VL-72B-Instruct-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.15,
-          "input_audio": 0,
-          "output": 0.6,
-          "output_audio": 0
+          "output": 0.6
         },
         "description": "Qwen2.5 VL 72B Instruct TEE 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
         "id": "Qwen/Qwen2.5-VL-72B-Instruct-TEE",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
-          "context": 40960,
-          "output": 40960
+          "context": 32768,
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -16632,20 +16618,15 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-12-29",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "tool_call": false
       },
       "Qwen/Qwen3-14B": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.05,
-          "input_audio": 0,
-          "output": 0.22,
-          "output_audio": 0,
-          "reasoning": 0.33
+          "output": 0.22
         },
         "description": "Qwen3 14B 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
@@ -16653,7 +16634,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 40960,
           "output": 40960
@@ -16677,13 +16658,8 @@
       "Qwen/Qwen3-235B-A22B": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.3,
-          "input_audio": 0,
-          "output": 1.2,
-          "output_audio": 0,
-          "reasoning": 1.8
+          "output": 1.2
         },
         "description": "Qwen3 235B A22B 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
@@ -16691,7 +16667,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 40960,
           "output": 40960
@@ -16715,17 +16691,13 @@
       "Qwen/Qwen3-235B-A22B-Instruct-2507-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.08,
-          "input_audio": 0,
-          "output": 0.55,
-          "output_audio": 0
+          "output": 0.55
         },
         "description": "Qwen3 235B A22B Instruct 2507 TEE 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
         "id": "Qwen/Qwen3-235B-A22B-Instruct-2507-TEE",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 262144,
           "output": 65536
@@ -16749,13 +16721,8 @@
       "Qwen/Qwen3-235B-A22B-Thinking-2507": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.11,
-          "input_audio": 0,
-          "output": 0.6,
-          "output_audio": 0,
-          "reasoning": 0.9
+          "output": 0.6
         },
         "description": "Qwen3 235B A22B Thinking 2507 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
@@ -16763,7 +16730,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 262144,
           "output": 262144
@@ -16787,13 +16754,8 @@
       "Qwen/Qwen3-30B-A3B": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.06,
-          "input_audio": 0,
-          "output": 0.22,
-          "output_audio": 0,
-          "reasoning": 0.33
+          "output": 0.22
         },
         "description": "Qwen3 30B A3B 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
@@ -16801,7 +16763,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 40960,
           "output": 40960
@@ -16825,17 +16787,13 @@
       "Qwen/Qwen3-30B-A3B-Instruct-2507": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.08,
-          "input_audio": 0,
-          "output": 0.33,
-          "output_audio": 0
+          "output": 0.33
         },
         "description": "Qwen3 30B A3B Instruct 2507 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
         "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 262144,
           "output": 262144
@@ -16859,13 +16817,8 @@
       "Qwen/Qwen3-32B": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.08,
-          "input_audio": 0,
-          "output": 0.24,
-          "output_audio": 0,
-          "reasoning": 0.36
+          "output": 0.24
         },
         "description": "Qwen3 32B 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
@@ -16873,7 +16826,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 40960,
           "output": 40960
@@ -16897,17 +16850,13 @@
       "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.22,
-          "input_audio": 0,
-          "output": 0.95,
-          "output_audio": 0
+          "output": 0.95
         },
         "description": "Qwen3 Coder 480B A35B Instruct FP8 TEE 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
         "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8-TEE",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 262144,
           "output": 262144
@@ -16931,17 +16880,13 @@
       "Qwen/Qwen3-Next-80B-A3B-Instruct": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.1,
-          "input_audio": 0,
-          "output": 0.8,
-          "output_audio": 0
+          "output": 0.8
         },
         "description": "Qwen3 Next 80B A3B Instruct 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
         "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 262144,
           "output": 262144
@@ -16965,17 +16910,13 @@
       "Qwen/Qwen3-VL-235B-A22B-Instruct": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.3,
-          "input_audio": 0,
-          "output": 1.2,
-          "output_audio": 0
+          "output": 1.2
         },
         "description": "Qwen3 VL 235B A22B Instruct 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
         "id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 262144,
           "output": 262144
@@ -16993,27 +16934,23 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-12-29",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
       "Qwen/Qwen3Guard-Gen-0.6B": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.01,
-          "input_audio": 0,
-          "output": 0.01,
-          "output_audio": 0
+          "output": 0.01
         },
         "description": "Qwen3Guard Gen 0.6B 是由 chutes 提供的人工智能模型。",
         "family": "qwen",
         "id": "Qwen/Qwen3Guard-Gen-0.6B",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 32768,
-          "output": 32768
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -17034,20 +16971,16 @@
       "XiaomiMiMo/MiMo-V2-Flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.17,
-          "input_audio": 0,
-          "output": 0.65,
-          "output_audio": 0
+          "output": 0.65
         },
         "description": "MiMo V2 Flash 是由 chutes 提供的人工智能模型。",
         "family": "xiaomimimo",
         "id": "XiaomiMiMo/MiMo-V2-Flash",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
-          "context": 262144,
-          "output": 262144
+          "context": 32768,
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -17068,17 +17001,13 @@
       "chutesai/Mistral-Small-3.1-24B-Instruct-2503": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.03,
-          "input_audio": 0,
-          "output": 0.11,
-          "output_audio": 0
+          "output": 0.11
         },
         "description": "Mistral Small 3.1 24B Instruct 2503 是由 chutes 提供的人工智能模型。",
         "family": "chutesai",
         "id": "chutesai/Mistral-Small-3.1-24B-Instruct-2503",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 131072
@@ -17103,17 +17032,13 @@
       "chutesai/Mistral-Small-3.2-24B-Instruct-2506": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.06,
-          "input_audio": 0,
-          "output": 0.18,
-          "output_audio": 0
+          "output": 0.18
         },
         "description": "Mistral Small 3.2 24B Instruct 2506 是由 chutes 提供的人工智能模型。",
         "family": "chutesai",
         "id": "chutesai/Mistral-Small-3.2-24B-Instruct-2506",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 131072
@@ -17138,13 +17063,8 @@
       "deepseek-ai/DeepSeek-R1-0528-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.4,
-          "input_audio": 0,
-          "output": 1.75,
-          "output_audio": 0,
-          "reasoning": 2.625
+          "output": 1.75
         },
         "description": "DeepSeek R1 0528 TEE 是由 chutes 提供的人工智能模型。",
         "family": "deepseek-ai",
@@ -17152,7 +17072,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 163840,
           "output": 65536
@@ -17176,13 +17096,8 @@
       "deepseek-ai/DeepSeek-R1-Distill-Llama-70B": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.03,
-          "input_audio": 0,
-          "output": 0.11,
-          "output_audio": 0,
-          "reasoning": 0.165
+          "output": 0.11
         },
         "description": "DeepSeek R1 Distill Llama 70B 是由 chutes 提供的人工智能模型。",
         "family": "deepseek-ai",
@@ -17190,7 +17105,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 131072
@@ -17214,13 +17129,8 @@
       "deepseek-ai/DeepSeek-R1-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.3,
-          "input_audio": 0,
-          "output": 1.2,
-          "output_audio": 0,
-          "reasoning": 1.8
+          "output": 1.2
         },
         "description": "DeepSeek R1 TEE 是由 chutes 提供的人工智能模型。",
         "family": "deepseek-ai",
@@ -17228,7 +17138,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 163840,
           "output": 163840
@@ -17252,17 +17162,13 @@
       "deepseek-ai/DeepSeek-V3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.3,
-          "input_audio": 0,
-          "output": 1.2,
-          "output_audio": 0
+          "output": 1.2
         },
         "description": "DeepSeek V3 是由 chutes 提供的人工智能模型。",
         "family": "deepseek-ai",
         "id": "deepseek-ai/DeepSeek-V3",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 163840,
           "output": 163840
@@ -17286,17 +17192,13 @@
       "deepseek-ai/DeepSeek-V3-0324-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.19,
-          "input_audio": 0,
-          "output": 0.87,
-          "output_audio": 0
+          "output": 0.87
         },
         "description": "DeepSeek V3 0324 TEE 是由 chutes 提供的人工智能模型。",
         "family": "deepseek-ai",
         "id": "deepseek-ai/DeepSeek-V3-0324-TEE",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 163840,
           "output": 65536
@@ -17320,13 +17222,8 @@
       "deepseek-ai/DeepSeek-V3.1-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.2,
-          "input_audio": 0,
-          "output": 0.8,
-          "output_audio": 0,
-          "reasoning": 1.2
+          "output": 0.8
         },
         "description": "DeepSeek V3.1 TEE 是由 chutes 提供的人工智能模型。",
         "family": "deepseek-ai",
@@ -17334,7 +17231,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 163840,
           "output": 65536
@@ -17358,13 +17255,8 @@
       "deepseek-ai/DeepSeek-V3.1-Terminus-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.23,
-          "input_audio": 0,
-          "output": 0.9,
-          "output_audio": 0,
-          "reasoning": 1.35
+          "output": 0.9
         },
         "description": "DeepSeek V3.1 Terminus TEE 是由 chutes 提供的人工智能模型。",
         "family": "deepseek-ai",
@@ -17372,7 +17264,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 163840,
           "output": 65536
@@ -17396,13 +17288,8 @@
       "deepseek-ai/DeepSeek-V3.2-Speciale-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.27,
-          "input_audio": 0,
-          "output": 0.41,
-          "output_audio": 0,
-          "reasoning": 0.615
+          "output": 0.41
         },
         "description": "DeepSeek V3.2 Speciale TEE 是由 chutes 提供的人工智能模型。",
         "family": "deepseek-ai",
@@ -17410,7 +17297,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 163840,
           "output": 65536
@@ -17434,13 +17321,8 @@
       "deepseek-ai/DeepSeek-V3.2-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.25,
-          "input_audio": 0,
-          "output": 0.38,
-          "output_audio": 0,
-          "reasoning": 0.57
+          "output": 0.38
         },
         "description": "DeepSeek V3.2 TEE 是由 chutes 提供的人工智能模型。",
         "family": "deepseek-ai",
@@ -17448,7 +17330,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 163840,
           "output": 65536
@@ -17469,20 +17351,45 @@
         "temperature": true,
         "tool_call": true
       },
+      "miromind-ai/MiroThinker-v1.5-235B": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiroThinker V1.5 235B 是由 chutes 提供的人工智能模型。",
+        "id": "miromind-ai/MiroThinker-v1.5-235B",
+        "last_updated": "2026-01-10",
+        "limit": {
+          "context": 32768,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiroThinker V1.5 235B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-01-10",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
+      },
       "mistralai/Devstral-2-123B-Instruct-2512": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.05,
-          "input_audio": 0,
-          "output": 0.22,
-          "output_audio": 0
+          "output": 0.22
         },
         "description": "Devstral 2 123B Instruct 2512 是由 chutes 提供的人工智能模型。",
         "family": "mistralai",
         "id": "mistralai/Devstral-2-123B-Instruct-2512",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 262144,
           "output": 65536
@@ -17503,20 +17410,45 @@
         "temperature": true,
         "tool_call": true
       },
+      "mistralai/Devstral-2-123B-Instruct-2512-TEE": {
+        "attachment": false,
+        "cost": {
+          "input": 0.05,
+          "output": 0.22
+        },
+        "description": "Devstral 2 123B Instruct 2512 TEE 是由 chutes 提供的人工智能模型。",
+        "id": "mistralai/Devstral-2-123B-Instruct-2512-TEE",
+        "last_updated": "2026-01-10",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Devstral 2 123B Instruct 2512 TEE",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-01-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "moonshotai/Kimi-K2-Instruct-0905": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.39,
-          "input_audio": 0,
-          "output": 1.9,
-          "output_audio": 0
+          "output": 1.9
         },
         "description": "Kimi K2 Instruct 0905 是由 chutes 提供的人工智能模型。",
         "family": "moonshotai",
         "id": "moonshotai/Kimi-K2-Instruct-0905",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 262144,
           "output": 262144
@@ -17540,13 +17472,8 @@
       "moonshotai/Kimi-K2-Thinking-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.4,
-          "input_audio": 0,
-          "output": 1.75,
-          "output_audio": 0,
-          "reasoning": 2.625
+          "output": 1.75
         },
         "description": "Kimi K2 Thinking TEE 是由 chutes 提供的人工智能模型。",
         "family": "moonshotai",
@@ -17554,7 +17481,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 262144,
           "output": 65535
@@ -17578,17 +17505,13 @@
       "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.06,
-          "input_audio": 0,
-          "output": 0.24,
-          "output_audio": 0
+          "output": 0.24
         },
         "description": "NVIDIA Nemotron 3 Nano 30B A3B BF16 是由 chutes 提供的人工智能模型。",
         "family": "nvidia",
         "id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 262144,
           "output": 262144
@@ -17612,13 +17535,8 @@
       "openai/gpt-oss-120b-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.04,
-          "input_audio": 0,
-          "output": 0.18,
-          "output_audio": 0,
-          "reasoning": 0.27
+          "output": 0.18
         },
         "description": "gpt oss 120b TEE 是由 chutes 提供的人工智能模型。",
         "family": "openai",
@@ -17626,7 +17544,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 65536
@@ -17650,13 +17568,8 @@
       "openai/gpt-oss-20b": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.02,
-          "input_audio": 0,
-          "output": 0.1,
-          "output_audio": 0,
-          "reasoning": 0.15
+          "output": 0.1
         },
         "description": "gpt oss 20b 是由 chutes 提供的人工智能模型。",
         "family": "openai",
@@ -17664,7 +17577,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 131072
@@ -17688,17 +17601,13 @@
       "rednote-hilab/dots.ocr": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.01,
-          "input_audio": 0,
-          "output": 0.01,
-          "output_audio": 0
+          "output": 0.01
         },
         "description": "dots.ocr 是由 chutes 提供的人工智能模型。",
         "family": "rednote-hilab",
         "id": "rednote-hilab/dots.ocr",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 131072
@@ -17723,13 +17632,8 @@
       "tngtech/DeepSeek-R1T-Chimera": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.3,
-          "input_audio": 0,
-          "output": 1.2,
-          "output_audio": 0,
-          "reasoning": 1.8
+          "output": 1.2
         },
         "description": "DeepSeek R1T Chimera 是由 chutes 提供的人工智能模型。",
         "family": "tngtech",
@@ -17737,7 +17641,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 163840,
           "output": 163840
@@ -17761,13 +17665,8 @@
       "tngtech/DeepSeek-TNG-R1T2-Chimera": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.25,
-          "input_audio": 0,
-          "output": 0.85,
-          "output_audio": 0,
-          "reasoning": 1.275
+          "output": 0.85
         },
         "description": "DeepSeek TNG R1T2 Chimera 是由 chutes 提供的人工智能模型。",
         "family": "tngtech",
@@ -17775,7 +17674,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 163840,
           "output": 163840
@@ -17796,50 +17695,11 @@
         "temperature": true,
         "tool_call": true
       },
-      "tngtech/DeepSeek-TNG-R1T2-Chimera-TEE": {
-        "attachment": false,
-        "cost": {
-          "input": 0.25,
-          "output": 0.85,
-          "reasoning": 1.275
-        },
-        "description": "DeepSeek TNG R1T2 Chimera TEE 是由 chutes 提供的人工智能模型。",
-        "family": "tngtech",
-        "id": "tngtech/DeepSeek-TNG-R1T2-Chimera-TEE",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2025-01-06",
-        "limit": {
-          "context": 163840,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek TNG R1T2 Chimera TEE",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-01-06",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "tngtech/TNG-R1T-Chimera-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.25,
-          "input_audio": 0,
-          "output": 0.85,
-          "output_audio": 0,
-          "reasoning": 1.275
+          "output": 0.85
         },
         "description": "TNG R1T Chimera TEE 是由 chutes 提供的人工智能模型。",
         "family": "tngtech",
@@ -17847,7 +17707,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 163840,
           "output": 65536
@@ -17871,17 +17731,13 @@
       "unsloth/Mistral-Nemo-Instruct-2407": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.02,
-          "input_audio": 0,
-          "output": 0.04,
-          "output_audio": 0
+          "output": 0.04
         },
         "description": "Mistral Nemo Instruct 2407 是由 chutes 提供的人工智能模型。",
         "family": "unsloth",
         "id": "unsloth/Mistral-Nemo-Instruct-2407",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 131072
@@ -17905,17 +17761,13 @@
       "unsloth/Mistral-Small-24B-Instruct-2501": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.03,
-          "input_audio": 0,
-          "output": 0.11,
-          "output_audio": 0
+          "output": 0.11
         },
         "description": "Mistral Small 24B Instruct 2501 是由 chutes 提供的人工智能模型。",
         "family": "unsloth",
         "id": "unsloth/Mistral-Small-24B-Instruct-2501",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 32768,
           "output": 32768
@@ -17940,17 +17792,13 @@
       "unsloth/gemma-3-12b-it": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.03,
-          "input_audio": 0,
-          "output": 0.1,
-          "output_audio": 0
+          "output": 0.1
         },
         "description": "gemma 3 12b it 是由 chutes 提供的人工智能模型。",
         "family": "unsloth",
         "id": "unsloth/gemma-3-12b-it",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 131072
@@ -17968,24 +17816,20 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-12-29",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "tool_call": false
       },
       "unsloth/gemma-3-27b-it": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.04,
-          "input_audio": 0,
-          "output": 0.15,
-          "output_audio": 0
+          "output": 0.15
         },
         "description": "gemma 3 27b it 是由 chutes 提供的人工智能模型。",
         "family": "unsloth",
         "id": "unsloth/gemma-3-27b-it",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 96000,
           "output": 96000
@@ -18010,17 +17854,13 @@
       "unsloth/gemma-3-4b-it": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.01,
-          "input_audio": 0,
-          "output": 0.03,
-          "output_audio": 0
+          "output": 0.03
         },
         "description": "gemma 3 4b it 是由 chutes 提供的人工智能模型。",
         "family": "unsloth",
         "id": "unsloth/gemma-3-4b-it",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 96000,
           "output": 96000
@@ -18045,13 +17885,8 @@
       "zai-org/GLM-4.5-Air": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.05,
-          "input_audio": 0,
-          "output": 0.22,
-          "output_audio": 0,
-          "reasoning": 0.33
+          "output": 0.22
         },
         "description": "GLM 4.5 Air 是由 chutes 提供的人工智能模型。",
         "family": "zai-org",
@@ -18059,7 +17894,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 131072
@@ -18083,13 +17918,8 @@
       "zai-org/GLM-4.5-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.35,
-          "input_audio": 0,
-          "output": 1.55,
-          "output_audio": 0,
-          "reasoning": 2.325
+          "output": 1.55
         },
         "description": "GLM 4.5 TEE 是由 chutes 提供的人工智能模型。",
         "family": "zai-org",
@@ -18097,7 +17927,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 65536
@@ -18121,13 +17951,8 @@
       "zai-org/GLM-4.6-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.35,
-          "input_audio": 0,
-          "output": 1.5,
-          "output_audio": 0,
-          "reasoning": 2.25
+          "output": 1.5
         },
         "description": "GLM 4.6 TEE 是由 chutes 提供的人工智能模型。",
         "family": "zai-org",
@@ -18135,7 +17960,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 202752,
           "output": 65536
@@ -18159,13 +17984,8 @@
       "zai-org/GLM-4.6V": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.3,
-          "input_audio": 0,
-          "output": 0.9,
-          "output_audio": 0,
-          "reasoning": 1.35
+          "output": 0.9
         },
         "description": "GLM 4.6V 是由 chutes 提供的人工智能模型。",
         "family": "zai-org",
@@ -18173,7 +17993,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 131072,
           "output": 65536
@@ -18198,13 +18018,8 @@
       "zai-org/GLM-4.7-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0.4,
-          "input_audio": 0,
-          "output": 1.5,
-          "output_audio": 0,
-          "reasoning": 2.25
+          "output": 1.5
         },
         "description": "GLM 4.7 TEE 是由 chutes 提供的人工智能模型。",
         "family": "zai-org",
@@ -18212,7 +18027,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-10",
         "limit": {
           "context": 202752,
           "output": 65535
@@ -24558,6 +24373,532 @@
     "name": "Fireworks AI",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "firmware": {
+    "api": "https://app.firmware.ai/api/v1",
+    "doc": "https://firmware.ai",
+    "env": [
+      "FIRMWARE_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/firmware.svg",
+    "id": "firmware",
+    "models": {
+      "anthropic/claude-haiku-4-5-20251001": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Claude Haiku 4.5 是由 firmware 提供的人工智能模型。",
+        "family": "claude-haiku",
+        "id": "anthropic/claude-haiku-4-5-20251001",
+        "knowledge": "2025-02-28",
+        "last_updated": "2025-10-15",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Haiku 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-10-15",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-opus-4-5": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Claude Opus 4.5 (latest) 是由 firmware 提供的人工智能模型。",
+        "family": "claude-opus",
+        "id": "anthropic/claude-opus-4-5",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-11-24",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.5 (latest)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-24",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-4-5-20250929": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Claude Sonnet 4.5 是由 firmware 提供的人工智能模型。",
+        "family": "claude-sonnet",
+        "id": "anthropic/claude-sonnet-4-5-20250929",
+        "knowledge": "2025-07-31",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-chat": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "DeepSeek Chat 是由 firmware 提供的人工智能模型。",
+        "family": "deepseek-chat",
+        "id": "deepseek/deepseek-chat",
+        "knowledge": "2024-07",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek Chat",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-12-26",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-coder": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "DeepSeek Coder 是由 firmware 提供的人工智能模型。",
+        "family": "deepseek-coder",
+        "id": "deepseek/deepseek-coder",
+        "last_updated": "2024-01-26",
+        "limit": {
+          "context": 16384,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek Coder",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-01-25",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-reasoner": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "DeepSeek Reasoner 是由 firmware 提供的人工智能模型。",
+        "family": "deepseek",
+        "id": "deepseek/deepseek-reasoner",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-07",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 128000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek Reasoner",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-01-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-2.5-flash": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemini 2.5 Flash 是由 firmware 提供的人工智能模型。",
+        "family": "gemini-flash",
+        "id": "google/gemini-2.5-flash",
+        "knowledge": "2025-01",
+        "last_updated": "2025-07-17",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-07-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-2.5-pro": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemini 2.5 Pro 是由 firmware 提供的人工智能模型。",
+        "family": "gemini-pro",
+        "id": "google/gemini-2.5-pro",
+        "knowledge": "2025-01",
+        "last_updated": "2025-06-05",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-03-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3-flash-preview": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemini 3 Flash Preview 是由 firmware 提供的人工智能模型。",
+        "family": "gemini-flash",
+        "id": "google/gemini-3-flash-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Flash Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3-pro-preview": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemini 3 Pro Preview 是由 firmware 提供的人工智能模型。",
+        "family": "gemini-pro",
+        "id": "google/gemini-3-pro-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2025-11-18",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Pro Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-4o": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "GPT-4o 是由 firmware 提供的人工智能模型。",
+        "family": "gpt-4o",
+        "id": "openai/gpt-4o",
+        "knowledge": "2023-09",
+        "last_updated": "2024-08-06",
+        "limit": {
+          "context": 128000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4o",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-05-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "GPT-5 是由 firmware 提供的人工智能模型。",
+        "family": "gpt-5",
+        "id": "openai/gpt-5",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai/gpt-5.2": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "GPT-5.2 是由 firmware 提供的人工智能模型。",
+        "family": "gpt-5",
+        "id": "openai/gpt-5.2",
+        "knowledge": "2025-08-31",
+        "last_updated": "2025-12-11",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-11",
+        "temperature": false,
+        "tool_call": true
+      },
+      "xai/grok-4-fast-non-reasoning": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Grok 4 Fast (Non-Reasoning) 是由 firmware 提供的人工智能模型。",
+        "family": "grok",
+        "id": "xai/grok-4-fast-non-reasoning",
+        "knowledge": "2025-07",
+        "last_updated": "2025-09-19",
+        "limit": {
+          "context": 2000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4 Fast (Non-Reasoning)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09-19",
+        "temperature": true,
+        "tool_call": true
+      },
+      "xai/grok-4-fast-reasoning": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Grok 4 Fast (Reasoning) 是由 firmware 提供的人工智能模型。",
+        "family": "grok",
+        "id": "xai/grok-4-fast-reasoning",
+        "knowledge": "2025-07",
+        "last_updated": "2025-09-19",
+        "limit": {
+          "context": 2000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4 Fast (Reasoning)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-19",
+        "temperature": true,
+        "tool_call": true
+      },
+      "xai/grok-code-fast-1": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Grok Code Fast 1 是由 firmware 提供的人工智能模型。",
+        "family": "grok",
+        "id": "xai/grok-code-fast-1",
+        "knowledge": "2023-10",
+        "last_updated": "2025-08-28",
+        "limit": {
+          "context": 256000,
+          "output": 10000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok Code Fast 1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-28",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Firmware",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "friendli": {
     "api": "https://api.friendli.ai/serverless/v1",
     "doc": "https://friendli.ai/docs/guides/serverless_endpoints/introduction",
@@ -24593,6 +24934,36 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-07-31",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "LGAI-EXAONE/K-EXAONE-236B-A23B": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "K EXAONE 236B A23B 是由 friendli 提供的人工智能模型。",
+        "family": "exaone",
+        "id": "LGAI-EXAONE/K-EXAONE-236B-A23B",
+        "last_updated": "2026-01-08",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "K EXAONE 236B A23B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-31",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -24704,32 +25075,6 @@
         "structured_output": true,
         "temperature": true,
         "tool_call": true
-      },
-      "deepseek-ai/DeepSeek-R1-0528": {
-        "attachment": false,
-        "description": "DeepSeek R1 0528 是由 friendli 提供的人工智能模型。",
-        "family": "deepseek-r1",
-        "id": "deepseek-ai/DeepSeek-R1-0528",
-        "last_updated": "2025-12-23",
-        "limit": {
-          "context": 163840,
-          "output": 163840
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek R1 0528",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-07-11",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": false
       },
       "meta-llama-3.1-8b-instruct": {
         "attachment": false,
@@ -27455,6 +27800,111 @@
     "name": "GitHub Models",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "gitlab": {
+    "doc": "https://docs.gitlab.com/user/duo_agent_platform/",
+    "env": [
+      "GITLAB_TOKEN"
+    ],
+    "iconURL": "https://models.dev/logos/gitlab.svg",
+    "id": "gitlab",
+    "models": {
+      "duo-chat-haiku-4-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Agentic Chat (Claude Haiku 4.5) 是由 gitlab 提供的人工智能模型。",
+        "family": "claude-haiku",
+        "id": "duo-chat-haiku-4-5",
+        "last_updated": "2026-01-08",
+        "limit": {
+          "context": 200000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Agentic Chat (Claude Haiku 4.5)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-01-08",
+        "temperature": true,
+        "tool_call": true
+      },
+      "duo-chat-opus-4-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Agentic Chat (Claude Opus 4.5) 是由 gitlab 提供的人工智能模型。",
+        "family": "claude-opus",
+        "id": "duo-chat-opus-4-5",
+        "last_updated": "2026-01-08",
+        "limit": {
+          "context": 200000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Agentic Chat (Claude Opus 4.5)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-01-08",
+        "temperature": true,
+        "tool_call": true
+      },
+      "duo-chat-sonnet-4-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Agentic Chat (Claude Sonnet 4.5) 是由 gitlab 提供的人工智能模型。",
+        "family": "claude-sonnet",
+        "id": "duo-chat-sonnet-4-5",
+        "last_updated": "2026-01-08",
+        "limit": {
+          "context": 200000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Agentic Chat (Claude Sonnet 4.5)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-01-08",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "GitLab Duo",
+    "npm": "@gitlab/gitlab-ai-provider"
+  },
   "google": {
     "doc": "https://ai.google.dev/gemini-api/docs/pricing",
     "env": [
@@ -30129,7 +30579,7 @@
       "claude-4.5-opus": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.5000000000000001,
+          "cache_read": 0.5,
           "cache_write": 6.25,
           "input": 5,
           "output": 25
@@ -46146,6 +46596,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen/qwen3-coder-30b-a3b-instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.07,
+          "output": 0.27
+        },
+        "description": "Qwen3 Coder 30B A3B Instruct 是由 openrouter 提供的人工智能模型。",
+        "family": "qwen3-coder",
+        "id": "qwen/qwen3-coder-30b-a3b-instruct",
+        "knowledge": "2025-04",
+        "last_updated": "2025-07-31",
+        "limit": {
+          "context": 160000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder 30B A3B Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-07-31",
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen/qwen3-coder-flash": {
         "attachment": false,
         "cost": {
@@ -50872,6 +51352,176 @@
     "name": "Poe",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "privatemode-ai": {
+    "api": "http://localhost:8080/v1",
+    "doc": "https://docs.privatemode.ai/api/overview",
+    "env": [
+      "PRIVATEMODE_API_KEY",
+      "PRIVATEMODE_ENDPOINT"
+    ],
+    "iconURL": "https://models.dev/logos/privatemode-ai.svg",
+    "id": "privatemode-ai",
+    "models": {
+      "gemma-3-27b": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemma 3 27B 是由 privatemode-ai 提供的人工智能模型。",
+        "family": "gemma-3",
+        "id": "gemma-3-27b",
+        "knowledge": "2024-08",
+        "last_updated": "2025-03-12",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 3 27B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-03-12",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gpt-oss-120b": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "gpt-oss-120b 是由 privatemode-ai 提供的人工智能模型。",
+        "family": "gpt-oss",
+        "id": "gpt-oss-120b",
+        "knowledge": "2025-08",
+        "last_updated": "2025-08-14",
+        "limit": {
+          "context": 128000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "gpt-oss-120b",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-04",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-coder-30b-a3b": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3-Coder 30B-A3B 是由 privatemode-ai 提供的人工智能模型。",
+        "family": "qwen3-coder",
+        "id": "qwen3-coder-30b-a3b",
+        "knowledge": "2025-04",
+        "last_updated": "2025-04",
+        "limit": {
+          "context": 128000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-Coder 30B-A3B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-04",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-embedding-4b": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3-Embedding 4B 是由 privatemode-ai 提供的人工智能模型。",
+        "family": "qwen3-embedding",
+        "id": "qwen3-embedding-4b",
+        "knowledge": "2025-06",
+        "last_updated": "2025-06-06",
+        "limit": {
+          "context": 32000,
+          "output": 2560
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-Embedding 4B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-06-06",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
+      },
+      "whisper-large-v3": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Whisper large-v3 是由 privatemode-ai 提供的人工智能模型。",
+        "family": "whisper",
+        "id": "whisper-large-v3",
+        "knowledge": "2023-09",
+        "last_updated": "2023-09-01",
+        "limit": {
+          "context": 0,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Whisper large-v3",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2023-09-01",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
+      }
+    },
+    "name": "Privatemode AI",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "requesty": {
     "api": "https://router.requesty.ai/v1",
     "doc": "https://requesty.ai/solution/llm-routing/models",
@@ -54003,6 +54653,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek-ai/DeepSeek-V3.2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.27,
+          "output": 0.42
+        },
+        "description": "deepseek-ai/DeepSeek-V3.2 是由 siliconflow 提供的人工智能模型。",
+        "family": "deepseek-v3-2",
+        "id": "deepseek-ai/DeepSeek-V3.2",
+        "last_updated": "2025-12-03",
+        "limit": {
+          "context": 164000,
+          "output": 164000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "deepseek-ai/DeepSeek-V3.2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "deepseek-ai/DeepSeek-V3.2-Exp": {
         "attachment": false,
         "cost": {
@@ -54663,6 +55343,67 @@
         "reasoning": false,
         "release_date": "2025-10-04",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-4.6V": {
+        "attachment": true,
+        "cost": {
+          "input": 0.3,
+          "output": 0.9
+        },
+        "description": "zai-org/GLM-4.6V 是由 siliconflow 提供的人工智能模型。",
+        "family": "glm-4-6v",
+        "id": "zai-org/GLM-4.6V",
+        "last_updated": "2025-12-07",
+        "limit": {
+          "context": 131000,
+          "output": 131000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "zai-org/GLM-4.6V",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-07",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-4.7": {
+        "attachment": false,
+        "cost": {
+          "input": 0.6,
+          "output": 2.2
+        },
+        "description": "zai-org/GLM-4.7 是由 siliconflow 提供的人工智能模型。",
+        "family": "glm-4-7",
+        "id": "zai-org/GLM-4.7",
+        "last_updated": "2025-12-22",
+        "limit": {
+          "context": 205000,
+          "output": 205000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "zai-org/GLM-4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-22",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       }
@@ -58220,7 +58961,7 @@
     "npm": "@ai-sdk/togetherai"
   },
   "upstage": {
-    "api": "https://api.upstage.ai",
+    "api": "https://api.upstage.ai/v1/solar",
     "doc": "https://developers.upstage.ai/docs/apis/chat",
     "env": [
       "UPSTAGE_API_KEY"
@@ -58286,6 +59027,36 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-05-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "solar-pro3": {
+        "attachment": false,
+        "cost": {
+          "input": 0.25,
+          "output": 0.25
+        },
+        "description": "solar-pro3 是由 upstage 提供的人工智能模型。",
+        "family": "solar-pro",
+        "id": "solar-pro3",
+        "knowledge": "2025-03",
+        "last_updated": "2026-01",
+        "limit": {
+          "context": 131072,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "solar-pro3",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-01",
         "temperature": true,
         "tool_call": true
       }
@@ -58410,6 +59181,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.6,
+          "cache_write": 7.5,
           "input": 6,
           "output": 30
         },
@@ -58417,7 +59189,7 @@
         "family": "claude-opus",
         "id": "claude-opus-45",
         "knowledge": "2025-03",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-08",
         "limit": {
           "context": 202752,
           "output": 50688
@@ -59078,37 +59850,6 @@
         "temperature": true,
         "tool_call": false
       },
-      "zai-org-glm-4.6": {
-        "attachment": false,
-        "cost": {
-          "input": 0.85,
-          "output": 2.75
-        },
-        "description": "GLM 4.6 是由 venice 提供的人工智能模型。",
-        "family": "glm-4.6",
-        "id": "zai-org-glm-4.6",
-        "knowledge": "2024-04",
-        "last_updated": "2025-12-29",
-        "limit": {
-          "context": 202752,
-          "output": 50688
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 4.6",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-10-18",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "zai-org-glm-4.6v": {
         "attachment": true,
         "cost": {
@@ -59187,6 +59928,218 @@
     "id": "vercel",
     "lobeIcon": "Vercel.Color",
     "models": {
+      "alibaba/qwen-3-14b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.06,
+          "output": 0.24
+        },
+        "description": "Qwen3-14B 是由 vercel 提供的人工智能模型。",
+        "family": "qwen3-14b",
+        "id": "alibaba/qwen-3-14b",
+        "knowledge": "2025-04",
+        "last_updated": "2025-04",
+        "limit": {
+          "context": 40960,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-14B",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-04",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen-3-235b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.13,
+          "output": 0.6
+        },
+        "description": "Qwen3 235B A22B Instruct 2507 是由 vercel 提供的人工智能模型。",
+        "family": "qwen3-235b",
+        "id": "alibaba/qwen-3-235b",
+        "knowledge": "2025-04",
+        "last_updated": "2025-04",
+        "limit": {
+          "context": 40960,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 235B A22B Instruct 2507",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-04",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen-3-30b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.08,
+          "output": 0.29
+        },
+        "description": "Qwen3-30B-A3B 是由 vercel 提供的人工智能模型。",
+        "family": "qwen3-30b",
+        "id": "alibaba/qwen-3-30b",
+        "knowledge": "2025-04",
+        "last_updated": "2025-04",
+        "limit": {
+          "context": 40960,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-30B-A3B",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-04",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen-3-32b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.3
+        },
+        "description": "Qwen 3.32B 是由 vercel 提供的人工智能模型。",
+        "family": "qwen3-32b",
+        "id": "alibaba/qwen-3-32b",
+        "knowledge": "2025-04",
+        "last_updated": "2025-04",
+        "limit": {
+          "context": 40960,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.32B",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-04",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen3-235b-a22b-thinking": {
+        "attachment": true,
+        "cost": {
+          "input": 0.3,
+          "output": 2.9
+        },
+        "description": "Qwen3 235B A22B Thinking 2507 是由 vercel 提供的人工智能模型。",
+        "family": "qwen3-235b",
+        "id": "alibaba/qwen3-235b-a22b-thinking",
+        "knowledge": "2025-04",
+        "last_updated": "2025-04",
+        "limit": {
+          "context": 262114,
+          "output": 262114
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 235B A22B Thinking 2507",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-04",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen3-coder": {
+        "attachment": false,
+        "cost": {
+          "input": 0.38,
+          "output": 1.53
+        },
+        "description": "Qwen3 Coder 480B A35B Instruct 是由 vercel 提供的人工智能模型。",
+        "family": "qwen-coder",
+        "id": "alibaba/qwen3-coder",
+        "knowledge": "2025-04",
+        "last_updated": "2025-04",
+        "limit": {
+          "context": 262144,
+          "output": 66536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder 480B A35B Instruct",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-04",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen3-coder-30b-a3b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.07,
+          "output": 0.27
+        },
+        "description": "Qwen 3 Coder 30B A3B Instruct 是由 vercel 提供的人工智能模型。",
+        "family": "qwen-coder",
+        "id": "alibaba/qwen3-coder-30b-a3b",
+        "knowledge": "2025-04",
+        "last_updated": "2025-04",
+        "limit": {
+          "context": 160000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3 Coder 30B A3B Instruct",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-04",
+        "temperature": true,
+        "tool_call": true
+      },
       "alibaba/qwen3-coder-plus": {
         "attachment": false,
         "cost": {
@@ -59216,6 +60169,93 @@
         "release_date": "2025-07-23",
         "temperature": true,
         "tool_call": true
+      },
+      "alibaba/qwen3-embedding-0.6b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.01,
+          "output": 0
+        },
+        "description": "Qwen3 Embedding 0.6B 是由 vercel 提供的人工智能模型。",
+        "family": "qwen-embedding",
+        "id": "alibaba/qwen3-embedding-0.6b",
+        "last_updated": "2025-11-14",
+        "limit": {
+          "context": 32768,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Embedding 0.6B",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-11-14",
+        "temperature": false,
+        "tool_call": false
+      },
+      "alibaba/qwen3-embedding-4b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.02,
+          "output": 0
+        },
+        "description": "Qwen3 Embedding 4B 是由 vercel 提供的人工智能模型。",
+        "family": "qwen-embedding",
+        "id": "alibaba/qwen3-embedding-4b",
+        "last_updated": "2025-06-05",
+        "limit": {
+          "context": 32768,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Embedding 4B",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-06-05",
+        "temperature": false,
+        "tool_call": false
+      },
+      "alibaba/qwen3-embedding-8b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.05,
+          "output": 0
+        },
+        "description": "Qwen3 Embedding 8B 是由 vercel 提供的人工智能模型。",
+        "family": "qwen-embedding",
+        "id": "alibaba/qwen3-embedding-8b",
+        "last_updated": "2025-06-05",
+        "limit": {
+          "context": 32768,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Embedding 8B",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-06-05",
+        "temperature": false,
+        "tool_call": false
       },
       "alibaba/qwen3-max": {
         "attachment": false,
@@ -59247,11 +60287,42 @@
         "temperature": true,
         "tool_call": true
       },
+      "alibaba/qwen3-max-preview": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.24,
+          "input": 1.2,
+          "output": 6
+        },
+        "description": "Qwen3 Max Preview 是由 vercel 提供的人工智能模型。",
+        "family": "qwen-max",
+        "id": "alibaba/qwen3-max-preview",
+        "knowledge": "2025-04",
+        "last_updated": "2025-09-23",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Max Preview",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09-23",
+        "temperature": true,
+        "tool_call": true
+      },
       "alibaba/qwen3-next-80b-a3b-instruct": {
         "attachment": false,
         "cost": {
-          "input": 0.5,
-          "output": 2
+          "input": 0.09,
+          "output": 1.1
         },
         "description": "Qwen3 Next 80B A3B Instruct 是由 vercel 提供的人工智能模型。",
         "family": "qwen3",
@@ -59259,7 +60330,7 @@
         "knowledge": "2025-04",
         "last_updated": "2025-09-12",
         "limit": {
-          "context": 131072,
+          "context": 262144,
           "output": 32768
         },
         "modalities": {
@@ -59280,8 +60351,8 @@
       "alibaba/qwen3-next-80b-a3b-thinking": {
         "attachment": false,
         "cost": {
-          "input": 0.5,
-          "output": 6
+          "input": 0.15,
+          "output": 1.5
         },
         "description": "Qwen3 Next 80B A3B Thinking 是由 vercel 提供的人工智能模型。",
         "family": "qwen3",
@@ -59290,7 +60361,7 @@
         "last_updated": "2025-09-12",
         "limit": {
           "context": 131072,
-          "output": 32768
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -59368,6 +60439,37 @@
         "release_date": "2025-09-24",
         "temperature": true,
         "tool_call": true
+      },
+      "amazon/nova-2-lite": {
+        "attachment": true,
+        "cost": {
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Nova 2 Lite 是由 vercel 提供的人工智能模型。",
+        "family": "nova-2",
+        "id": "amazon/nova-2-lite",
+        "knowledge": "2024-10",
+        "last_updated": "2024-12-01",
+        "limit": {
+          "context": 1000000,
+          "output": 1000000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nova 2 Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2024-12-01",
+        "temperature": true,
+        "tool_call": false
       },
       "amazon/nova-lite": {
         "attachment": true,
@@ -59465,6 +60567,35 @@
         "release_date": "2024-12-03",
         "temperature": true,
         "tool_call": true
+      },
+      "amazon/titan-embed-text-v2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.02,
+          "output": 0
+        },
+        "description": "Titan Text Embeddings V2 是由 vercel 提供的人工智能模型。",
+        "family": "titan-embed",
+        "id": "amazon/titan-embed-text-v2",
+        "last_updated": "2024-04",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Titan Text Embeddings V2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-04",
+        "temperature": false,
+        "tool_call": false
       },
       "anthropic/claude-3-haiku": {
         "attachment": true,
@@ -59602,6 +60733,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "anthropic/claude-3.5-sonnet-20240620": {
+        "attachment": true,
+        "cost": {
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude 3.5 Sonnet (2024-06-20) 是由 vercel 提供的人工智能模型。",
+        "family": "claude-sonnet",
+        "id": "anthropic/claude-3.5-sonnet-20240620",
+        "knowledge": "2024-04",
+        "last_updated": "2024-06-20",
+        "limit": {
+          "context": 200000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude 3.5 Sonnet (2024-06-20)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-06-20",
+        "temperature": true,
+        "tool_call": true
+      },
       "anthropic/claude-3.7-sonnet": {
         "attachment": true,
         "cost": {
@@ -59636,149 +60799,13 @@
         "temperature": true,
         "tool_call": true
       },
-      "anthropic/claude-4-1-opus": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 1.5,
-          "cache_write": 18.75,
-          "input": 15,
-          "output": 75
-        },
-        "description": "Claude Opus 4 是由 vercel 提供的人工智能模型。",
-        "family": "claude-opus",
-        "id": "anthropic/claude-4-1-opus",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-05-22",
-        "limit": {
-          "context": 200000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Opus 4",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-05-22",
-        "temperature": true,
-        "tool_call": true
-      },
-      "anthropic/claude-4-opus": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 1.5,
-          "cache_write": 18.75,
-          "input": 15,
-          "output": 75
-        },
-        "description": "Claude Opus 4 是由 vercel 提供的人工智能模型。",
-        "family": "claude-opus",
-        "id": "anthropic/claude-4-opus",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-05-22",
-        "limit": {
-          "context": 200000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Opus 4",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-05-22",
-        "temperature": true,
-        "tool_call": true
-      },
-      "anthropic/claude-4-sonnet": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
-          "input": 3,
-          "output": 15
-        },
-        "description": "Claude Sonnet 4 是由 vercel 提供的人工智能模型。",
-        "family": "claude-sonnet",
-        "id": "anthropic/claude-4-sonnet",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-05-22",
-        "limit": {
-          "context": 200000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Sonnet 4",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-05-22",
-        "temperature": true,
-        "tool_call": true
-      },
-      "anthropic/claude-4.5-sonnet": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
-          "input": 3,
-          "output": 15
-        },
-        "description": "Claude Sonnet 4.5 是由 vercel 提供的人工智能模型。",
-        "family": "claude-sonnet",
-        "id": "anthropic/claude-4.5-sonnet",
-        "knowledge": "2025-07-31",
-        "last_updated": "2025-09-29",
-        "limit": {
-          "context": 200000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Sonnet 4.5",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-09-29",
-        "temperature": true,
-        "tool_call": true
-      },
       "anthropic/claude-haiku-4.5": {
         "attachment": true,
         "cost": {
           "cache_read": 0.1,
           "cache_write": 1.25,
           "input": 1,
-          "output": 1.25
+          "output": 5
         },
         "description": "Claude Haiku 4.5 是由 vercel 提供的人工智能模型。",
         "family": "claude-haiku",
@@ -59806,10 +60833,78 @@
         "temperature": true,
         "tool_call": true
       },
-      "anthropic/claude-opus-4.5": {
+      "anthropic/claude-opus-4": {
         "attachment": true,
         "cost": {
           "cache_read": 1.5,
+          "cache_write": 18.75,
+          "input": 15,
+          "output": 75
+        },
+        "description": "Claude Opus 4 是由 vercel 提供的人工智能模型。",
+        "family": "claude-opus",
+        "id": "anthropic/claude-opus-4",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 200000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-opus-4.1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.5,
+          "cache_write": 18.75,
+          "input": 15,
+          "output": 75
+        },
+        "description": "Claude Opus 4 是由 vercel 提供的人工智能模型。",
+        "family": "claude-opus",
+        "id": "anthropic/claude-opus-4.1",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 200000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-opus-4.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
           "cache_write": 18.75,
           "input": 5,
           "output": 25
@@ -59839,6 +60934,319 @@
         "release_date": "2025-11-24",
         "temperature": true,
         "tool_call": true
+      },
+      "anthropic/claude-sonnet-4": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4 是由 vercel 提供的人工智能模型。",
+        "family": "claude-sonnet",
+        "id": "anthropic/claude-sonnet-4",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-4.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4.5 是由 vercel 提供的人工智能模型。",
+        "family": "claude-sonnet",
+        "id": "anthropic/claude-sonnet-4.5",
+        "knowledge": "2025-07-31",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "arcee-ai/trinity-mini": {
+        "attachment": false,
+        "cost": {
+          "input": 0.05,
+          "output": 0.15
+        },
+        "description": "Trinity Mini 是由 vercel 提供的人工智能模型。",
+        "family": "trinity",
+        "id": "arcee-ai/trinity-mini",
+        "knowledge": "2024-10",
+        "last_updated": "2025-12",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Trinity Mini",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-12",
+        "temperature": true,
+        "tool_call": false
+      },
+      "bfl/flux-kontext-max": {
+        "attachment": false,
+        "description": "FLUX.1 Kontext Max 是由 vercel 提供的人工智能模型。",
+        "family": "flux-kontext",
+        "id": "bfl/flux-kontext-max",
+        "last_updated": "2025-06",
+        "limit": {
+          "context": 512,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "FLUX.1 Kontext Max",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-06",
+        "temperature": false,
+        "tool_call": false
+      },
+      "bfl/flux-kontext-pro": {
+        "attachment": false,
+        "description": "FLUX.1 Kontext Pro 是由 vercel 提供的人工智能模型。",
+        "family": "flux-kontext",
+        "id": "bfl/flux-kontext-pro",
+        "last_updated": "2025-06",
+        "limit": {
+          "context": 512,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "FLUX.1 Kontext Pro",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-06",
+        "temperature": false,
+        "tool_call": false
+      },
+      "bfl/flux-pro-1.0-fill": {
+        "attachment": false,
+        "description": "FLUX.1 Fill [pro] 是由 vercel 提供的人工智能模型。",
+        "family": "flux-pro",
+        "id": "bfl/flux-pro-1.0-fill",
+        "last_updated": "2024-10",
+        "limit": {
+          "context": 512,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "FLUX.1 Fill [pro]",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-10",
+        "temperature": false,
+        "tool_call": false
+      },
+      "bfl/flux-pro-1.1": {
+        "attachment": false,
+        "description": "FLUX1.1 [pro] 是由 vercel 提供的人工智能模型。",
+        "family": "flux-pro",
+        "id": "bfl/flux-pro-1.1",
+        "last_updated": "2024-10",
+        "limit": {
+          "context": 512,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "FLUX1.1 [pro]",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-10",
+        "temperature": false,
+        "tool_call": false
+      },
+      "bfl/flux-pro-1.1-ultra": {
+        "attachment": false,
+        "description": "FLUX1.1 [pro] Ultra 是由 vercel 提供的人工智能模型。",
+        "family": "flux-pro",
+        "id": "bfl/flux-pro-1.1-ultra",
+        "last_updated": "2024-11",
+        "limit": {
+          "context": 512,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "FLUX1.1 [pro] Ultra",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-11",
+        "temperature": false,
+        "tool_call": false
+      },
+      "bytedance/seed-1.6": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.25,
+          "output": 2
+        },
+        "description": "Seed 1.6 是由 vercel 提供的人工智能模型。",
+        "family": "seed",
+        "id": "bytedance/seed-1.6",
+        "knowledge": "2024-10",
+        "last_updated": "2025-09",
+        "limit": {
+          "context": 256000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Seed 1.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09",
+        "temperature": true,
+        "tool_call": true
+      },
+      "cohere/command-a": {
+        "attachment": false,
+        "cost": {
+          "input": 2.5,
+          "output": 10
+        },
+        "description": "Command A 是由 vercel 提供的人工智能模型。",
+        "family": "command",
+        "id": "cohere/command-a",
+        "knowledge": "2024-10",
+        "last_updated": "2025-03-13",
+        "limit": {
+          "context": 256000,
+          "output": 8000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Command A",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-03-13",
+        "temperature": true,
+        "tool_call": true
+      },
+      "cohere/embed-v4.0": {
+        "attachment": false,
+        "cost": {
+          "input": 0.12,
+          "output": 0
+        },
+        "description": "Embed v4.0 是由 vercel 提供的人工智能模型。",
+        "family": "embed",
+        "id": "cohere/embed-v4.0",
+        "last_updated": "2025-04-15",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Embed v4.0",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-04-15",
+        "temperature": false,
+        "tool_call": false
       },
       "deepseek/deepseek-r1": {
         "attachment": false,
@@ -59870,20 +61278,20 @@
         "temperature": true,
         "tool_call": true
       },
-      "deepseek/deepseek-r1-distill-llama-70b": {
+      "deepseek/deepseek-v3": {
         "attachment": false,
         "cost": {
-          "input": 0.75,
-          "output": 0.99
+          "input": 0.77,
+          "output": 0.77
         },
-        "description": "DeepSeek R1 Distill Llama 70B 是由 vercel 提供的人工智能模型。",
-        "family": "deepseek-r1-distill-llama",
-        "id": "deepseek/deepseek-r1-distill-llama-70b",
+        "description": "DeepSeek V3 0324 是由 vercel 提供的人工智能模型。",
+        "family": "deepseek-v3",
+        "id": "deepseek/deepseek-v3",
         "knowledge": "2024-07",
-        "last_updated": "2025-01-20",
+        "last_updated": "2024-12-26",
         "limit": {
-          "context": 131072,
-          "output": 8192
+          "context": 163840,
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -59893,11 +61301,40 @@
             "text"
           ]
         },
-        "name": "DeepSeek R1 Distill Llama 70B",
-        "open_weights": true,
+        "name": "DeepSeek V3 0324",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-12-26",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-v3.1": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1
+        },
+        "description": "DeepSeek-V3.1 是由 vercel 提供的人工智能模型。",
+        "family": "deepseek-v3",
+        "id": "deepseek/deepseek-v3.1",
+        "knowledge": "2024-07",
+        "last_updated": "2025-08-21",
+        "limit": {
+          "context": 163840,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek-V3.1",
+        "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-01-20",
-        "status": "deprecated",
+        "release_date": "2025-08-21",
         "temperature": true,
         "tool_call": true
       },
@@ -59913,8 +61350,8 @@
         "knowledge": "2025-07",
         "last_updated": "2025-09-22",
         "limit": {
-          "context": 128000,
-          "output": 8192
+          "context": 131072,
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -59931,11 +61368,42 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek/deepseek-v3.2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.22,
+          "input": 0.27,
+          "output": 0.4
+        },
+        "description": "DeepSeek V3.2 是由 vercel 提供的人工智能模型。",
+        "family": "deepseek-v3",
+        "id": "deepseek/deepseek-v3.2",
+        "knowledge": "2024-07",
+        "last_updated": "2025-12-01",
+        "limit": {
+          "context": 163842,
+          "output": 8000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-12-01",
+        "temperature": true,
+        "tool_call": false
+      },
       "deepseek/deepseek-v3.2-exp": {
         "attachment": false,
         "cost": {
-          "input": 0.28,
-          "output": 0.42
+          "input": 0.27,
+          "output": 0.4
         },
         "description": "DeepSeek V3.2 Exp 是由 vercel 提供的人工智能模型。",
         "family": "deepseek-v3",
@@ -59944,7 +61412,7 @@
         "last_updated": "2025-09-29",
         "limit": {
           "context": 163840,
-          "output": 8192
+          "output": 163840
         },
         "modalities": {
           "input": [
@@ -59956,25 +61424,26 @@
         },
         "name": "DeepSeek V3.2 Exp",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2025-09-29",
         "temperature": true,
         "tool_call": true
       },
-      "deepseek/deepseek-v3.2-exp-thinking": {
+      "deepseek/deepseek-v3.2-thinking": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.03,
           "input": 0.28,
           "output": 0.42
         },
-        "description": "DeepSeek V3.2 Exp Thinking 是由 vercel 提供的人工智能模型。",
+        "description": "DeepSeek V3.2 Thinking 是由 vercel 提供的人工智能模型。",
         "family": "deepseek-v3",
-        "id": "deepseek/deepseek-v3.2-exp-thinking",
-        "knowledge": "2025-09",
-        "last_updated": "2025-09-29",
+        "id": "deepseek/deepseek-v3.2-thinking",
+        "knowledge": "2024-07",
+        "last_updated": "2025-12-01",
         "limit": {
-          "context": 163840,
-          "output": 8192
+          "context": 128000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -59984,10 +61453,10 @@
             "text"
           ]
         },
-        "name": "DeepSeek V3.2 Exp Thinking",
+        "name": "DeepSeek V3.2 Thinking",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-09-29",
+        "release_date": "2025-12-01",
         "temperature": true,
         "tool_call": true
       },
@@ -60099,10 +61568,72 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemini-2.5-flash-image": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Nano Banana (Gemini 2.5 Flash Image) 是由 vercel 提供的人工智能模型。",
+        "family": "gemini-flash-image",
+        "id": "google/gemini-2.5-flash-image",
+        "knowledge": "2025-01",
+        "last_updated": "2025-03-20",
+        "limit": {
+          "context": 32768,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "Nano Banana (Gemini 2.5 Flash Image)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-03-20",
+        "temperature": true,
+        "tool_call": false
+      },
+      "google/gemini-2.5-flash-image-preview": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Nano Banana Preview (Gemini 2.5 Flash Image Preview) 是由 vercel 提供的人工智能模型。",
+        "family": "gemini-flash-image",
+        "id": "google/gemini-2.5-flash-image-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2025-03-20",
+        "limit": {
+          "context": 32768,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "Nano Banana Preview (Gemini 2.5 Flash Image Preview)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-03-20",
+        "temperature": true,
+        "tool_call": false
+      },
       "google/gemini-2.5-flash-lite": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.025,
+          "cache_read": 0.01,
           "input": 0.1,
           "output": 0.4
         },
@@ -60137,7 +61668,7 @@
       "google/gemini-2.5-flash-lite-preview-09-2025": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.025,
+          "cache_read": 0.01,
           "input": 0.1,
           "output": 0.4
         },
@@ -60172,7 +61703,7 @@
       "google/gemini-2.5-flash-preview-09-2025": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.075,
+          "cache_read": 0.03,
           "cache_write": 0.383,
           "input": 0.3,
           "output": 2.5
@@ -60241,6 +61772,70 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemini-3-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.5,
+          "output": 3
+        },
+        "description": "Gemini 3 Flash 是由 vercel 提供的人工智能模型。",
+        "family": "gemini-flash",
+        "id": "google/gemini-3-flash",
+        "knowledge": "2025-03",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3-pro-image": {
+        "attachment": false,
+        "cost": {
+          "input": 2,
+          "output": 120
+        },
+        "description": "Nano Banana Pro (Gemini 3 Pro Image) 是由 vercel 提供的人工智能模型。",
+        "family": "gemini-pro",
+        "id": "google/gemini-3-pro-image",
+        "knowledge": "2025-03",
+        "last_updated": "2025-09",
+        "limit": {
+          "context": 65536,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "Nano Banana Pro (Gemini 3 Pro Image)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09",
+        "temperature": true,
+        "tool_call": false
+      },
       "google/gemini-3-pro-preview": {
         "attachment": true,
         "cost": {
@@ -60278,7 +61873,462 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-11-18",
-        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-embedding-001": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 0
+        },
+        "description": "Gemini Embedding 001 是由 vercel 提供的人工智能模型。",
+        "family": "gemini-embedding",
+        "id": "google/gemini-embedding-001",
+        "last_updated": "2025-05-20",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini Embedding 001",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-20",
+        "temperature": false,
+        "tool_call": false
+      },
+      "google/imagen-4.0-fast-generate-001": {
+        "attachment": false,
+        "description": "Imagen 4 Fast 是由 vercel 提供的人工智能模型。",
+        "family": "imagen-4",
+        "id": "google/imagen-4.0-fast-generate-001",
+        "last_updated": "2025-06",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Imagen 4 Fast",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-06",
+        "temperature": false,
+        "tool_call": false
+      },
+      "google/imagen-4.0-generate-001": {
+        "attachment": false,
+        "description": "Imagen 4 是由 vercel 提供的人工智能模型。",
+        "family": "imagen-4",
+        "id": "google/imagen-4.0-generate-001",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Imagen 4",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-22",
+        "temperature": false,
+        "tool_call": false
+      },
+      "google/imagen-4.0-ultra-generate-001": {
+        "attachment": false,
+        "description": "Imagen 4 Ultra 是由 vercel 提供的人工智能模型。",
+        "family": "imagen-4",
+        "id": "google/imagen-4.0-ultra-generate-001",
+        "last_updated": "2025-05-24",
+        "limit": {
+          "context": 480,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Imagen 4 Ultra",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-24",
+        "temperature": false,
+        "tool_call": false
+      },
+      "google/text-embedding-005": {
+        "attachment": false,
+        "cost": {
+          "input": 0.03,
+          "output": 0
+        },
+        "description": "Text Embedding 005 是由 vercel 提供的人工智能模型。",
+        "family": "text-embedding",
+        "id": "google/text-embedding-005",
+        "last_updated": "2024-08",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Text Embedding 005",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-08",
+        "temperature": false,
+        "tool_call": false
+      },
+      "google/text-multilingual-embedding-002": {
+        "attachment": false,
+        "cost": {
+          "input": 0.03,
+          "output": 0
+        },
+        "description": "Text Multilingual Embedding 002 是由 vercel 提供的人工智能模型。",
+        "family": "text-embedding",
+        "id": "google/text-multilingual-embedding-002",
+        "last_updated": "2024-03",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Text Multilingual Embedding 002",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-03",
+        "temperature": false,
+        "tool_call": false
+      },
+      "inception/mercury-coder-small": {
+        "attachment": false,
+        "cost": {
+          "input": 0.25,
+          "output": 1
+        },
+        "description": "Mercury Coder Small Beta 是由 vercel 提供的人工智能模型。",
+        "family": "mercury",
+        "id": "inception/mercury-coder-small",
+        "knowledge": "2024-10",
+        "last_updated": "2025-02-26",
+        "limit": {
+          "context": 32000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mercury Coder Small Beta",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-02-26",
+        "temperature": true,
+        "tool_call": true
+      },
+      "kwaipilot/kat-coder-pro-v1": {
+        "attachment": false,
+        "description": "KAT-Coder-Pro V1 是由 vercel 提供的人工智能模型。",
+        "family": "kat-coder",
+        "id": "kwaipilot/kat-coder-pro-v1",
+        "knowledge": "2024-10",
+        "last_updated": "2025-10-24",
+        "limit": {
+          "context": 256000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "KAT-Coder-Pro V1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-10-24",
+        "temperature": true,
+        "tool_call": false
+      },
+      "meituan/longcat-flash-chat": {
+        "attachment": false,
+        "description": "LongCat Flash Chat 是由 vercel 提供的人工智能模型。",
+        "family": "longcat",
+        "id": "meituan/longcat-flash-chat",
+        "knowledge": "2024-10",
+        "last_updated": "2025-08-30",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "LongCat Flash Chat",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-08-30",
+        "temperature": true,
+        "tool_call": true
+      },
+      "meituan/longcat-flash-thinking": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 1.5
+        },
+        "description": "LongCat Flash Thinking 是由 vercel 提供的人工智能模型。",
+        "family": "longcat",
+        "id": "meituan/longcat-flash-thinking",
+        "knowledge": "2024-10",
+        "last_updated": "2025-09-23",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "LongCat Flash Thinking",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "meta/llama-3.1-70b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.4,
+          "output": 0.4
+        },
+        "description": "Llama 3.1 70B Instruct 是由 vercel 提供的人工智能模型。",
+        "family": "llama-3.1",
+        "id": "meta/llama-3.1-70b",
+        "knowledge": "2023-12",
+        "last_updated": "2024-07-23",
+        "limit": {
+          "context": 131072,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.1 70B Instruct",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-07-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "meta/llama-3.1-8b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.03,
+          "output": 0.05
+        },
+        "description": "Llama 3.1 8B Instruct 是由 vercel 提供的人工智能模型。",
+        "family": "llama-3.1",
+        "id": "meta/llama-3.1-8b",
+        "knowledge": "2023-12",
+        "last_updated": "2024-07-23",
+        "limit": {
+          "context": 131072,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.1 8B Instruct",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-07-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "meta/llama-3.2-11b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.16,
+          "output": 0.16
+        },
+        "description": "Llama 3.2 11B Vision Instruct 是由 vercel 提供的人工智能模型。",
+        "family": "llama-3.2",
+        "id": "meta/llama-3.2-11b",
+        "knowledge": "2023-12",
+        "last_updated": "2024-09-25",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.2 11B Vision Instruct",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-09-25",
+        "temperature": true,
+        "tool_call": true
+      },
+      "meta/llama-3.2-1b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.1
+        },
+        "description": "Llama 3.2 1B Instruct 是由 vercel 提供的人工智能模型。",
+        "family": "llama-3.2",
+        "id": "meta/llama-3.2-1b",
+        "knowledge": "2023-12",
+        "last_updated": "2024-09-18",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.2 1B Instruct",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-09-18",
+        "temperature": true,
+        "tool_call": false
+      },
+      "meta/llama-3.2-3b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 0.15
+        },
+        "description": "Llama 3.2 3B Instruct 是由 vercel 提供的人工智能模型。",
+        "family": "llama-3.2",
+        "id": "meta/llama-3.2-3b",
+        "knowledge": "2023-12",
+        "last_updated": "2024-09-18",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.2 3B Instruct",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-09-18",
+        "temperature": true,
+        "tool_call": false
+      },
+      "meta/llama-3.2-90b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.72,
+          "output": 0.72
+        },
+        "description": "Llama 3.2 90B Vision Instruct 是由 vercel 提供的人工智能模型。",
+        "family": "llama-3.2",
+        "id": "meta/llama-3.2-90b",
+        "knowledge": "2023-12",
+        "last_updated": "2024-09-25",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.2 90B Vision Instruct",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-09-25",
         "temperature": true,
         "tool_call": true
       },
@@ -60379,8 +62429,8 @@
         "cost": {
           "cache_read": 0.03,
           "cache_write": 0.38,
-          "input": 0.3,
-          "output": 1.2
+          "input": 0.27,
+          "output": 1.15
         },
         "description": "MiniMax M2 是由 vercel 提供的人工智能模型。",
         "family": "minimax",
@@ -60388,8 +62438,8 @@
         "knowledge": "2024-10",
         "last_updated": "2025-10-27",
         "limit": {
-          "context": 205000,
-          "output": 131072
+          "context": 262114,
+          "output": 262114
         },
         "modalities": {
           "input": [
@@ -60401,6 +62451,70 @@
         },
         "name": "MiniMax M2",
         "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-10-27",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax/minimax-m2.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "cache_write": 0.38,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.1 是由 vercel 提供的人工智能模型。",
+        "family": "minimax-m2.1",
+        "id": "minimax/minimax-m2.1",
+        "knowledge": "2024-10",
+        "last_updated": "2025-10-27",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-10-27",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax/minimax-m2.1-lightning": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "cache_write": 0.38,
+          "input": 0.3,
+          "output": 2.4
+        },
+        "description": "MiniMax M2.1 Lightning 是由 vercel 提供的人工智能模型。",
+        "family": "minimax-m2.1",
+        "id": "minimax/minimax-m2.1-lightning",
+        "knowledge": "2024-10",
+        "last_updated": "2025-10-27",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.1 Lightning",
+        "open_weights": false,
         "reasoning": true,
         "release_date": "2025-10-27",
         "temperature": true,
@@ -60433,6 +62547,117 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-05-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mistral/codestral-embed": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 0
+        },
+        "description": "Codestral Embed 是由 vercel 提供的人工智能模型。",
+        "family": "codestral-embed",
+        "id": "mistral/codestral-embed",
+        "last_updated": "2025-05-28",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Codestral Embed",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-28",
+        "temperature": false,
+        "tool_call": false
+      },
+      "mistral/devstral-2": {
+        "attachment": false,
+        "description": "Devstral 2 是由 vercel 提供的人工智能模型。",
+        "family": "devstral-medium",
+        "id": "mistral/devstral-2",
+        "knowledge": "2024-10",
+        "last_updated": "2025-12-09",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Devstral 2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-12-09",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mistral/devstral-small": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.3
+        },
+        "description": "Devstral Small 1.1 是由 vercel 提供的人工智能模型。",
+        "family": "devstral-small",
+        "id": "mistral/devstral-small",
+        "knowledge": "2024-10",
+        "last_updated": "2025-05-07",
+        "limit": {
+          "context": 128000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Devstral Small 1.1",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-07",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mistral/devstral-small-2": {
+        "attachment": false,
+        "description": "Devstral Small 2 是由 vercel 提供的人工智能模型。",
+        "family": "devstral-small",
+        "id": "mistral/devstral-small-2",
+        "knowledge": "2024-10",
+        "last_updated": "2025-05-07",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Devstral Small 2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-07",
         "temperature": true,
         "tool_call": true
       },
@@ -60496,6 +62721,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "mistral/ministral-14b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.2,
+          "output": 0.2
+        },
+        "description": "Ministral 14B 是由 vercel 提供的人工智能模型。",
+        "family": "ministral-14b",
+        "id": "mistral/ministral-14b",
+        "knowledge": "2024-10",
+        "last_updated": "2025-12-01",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ministral 14B",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-12-01",
+        "temperature": true,
+        "tool_call": false
+      },
       "mistral/ministral-3b": {
         "attachment": false,
         "cost": {
@@ -60556,20 +62813,49 @@
         "temperature": true,
         "tool_call": true
       },
-      "mistral/mistral-large": {
+      "mistral/mistral-embed": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0
+        },
+        "description": "Mistral Embed 是由 vercel 提供的人工智能模型。",
+        "family": "mistral-embed",
+        "id": "mistral/mistral-embed",
+        "last_updated": "2023-12-11",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mistral Embed",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2023-12-11",
+        "temperature": false,
+        "tool_call": false
+      },
+      "mistral/mistral-large-3": {
         "attachment": true,
         "cost": {
           "input": 0.5,
           "output": 1.5
         },
-        "description": "Mistral Large 是由 vercel 提供的人工智能模型。",
+        "description": "Mistral Large 3 是由 vercel 提供的人工智能模型。",
         "family": "mistral-large",
-        "id": "mistral/mistral-large",
-        "knowledge": "2024-11",
+        "id": "mistral/mistral-large-3",
+        "knowledge": "2024-10",
         "last_updated": "2025-12-02",
         "limit": {
-          "context": 262144,
-          "output": 262144
+          "context": 256000,
+          "output": 256000
         },
         "modalities": {
           "input": [
@@ -60580,10 +62866,71 @@
             "text"
           ]
         },
-        "name": "Mistral Large",
-        "open_weights": true,
+        "name": "Mistral Large 3",
+        "open_weights": false,
         "reasoning": false,
-        "release_date": "2024-11-01",
+        "release_date": "2025-12-02",
+        "temperature": true,
+        "tool_call": false
+      },
+      "mistral/mistral-medium": {
+        "attachment": true,
+        "cost": {
+          "input": 0.4,
+          "output": 2
+        },
+        "description": "Mistral Medium 3.1 是由 vercel 提供的人工智能模型。",
+        "family": "mistral-medium",
+        "id": "mistral/mistral-medium",
+        "knowledge": "2024-10",
+        "last_updated": "2025-05-07",
+        "limit": {
+          "context": 128000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mistral Medium 3.1",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-07",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mistral/mistral-nemo": {
+        "attachment": false,
+        "cost": {
+          "input": 0.04,
+          "output": 0.17
+        },
+        "description": "Mistral Nemo 是由 vercel 提供的人工智能模型。",
+        "family": "mistral-nemo",
+        "id": "mistral/mistral-nemo",
+        "knowledge": "2024-04",
+        "last_updated": "2024-07-01",
+        "limit": {
+          "context": 60288,
+          "output": 16000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mistral Nemo",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-07-01",
         "temperature": true,
         "tool_call": true
       },
@@ -60741,6 +63088,128 @@
         "temperature": true,
         "tool_call": true
       },
+      "moonshotai/kimi-k2-0905": {
+        "attachment": false,
+        "cost": {
+          "input": 0.6,
+          "output": 2.5
+        },
+        "description": "Kimi K2 0905 是由 vercel 提供的人工智能模型。",
+        "family": "kimi-k2",
+        "id": "moonshotai/kimi-k2-0905",
+        "knowledge": "2024-10",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 131072,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 0905",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09-05",
+        "temperature": true,
+        "tool_call": false
+      },
+      "moonshotai/kimi-k2-thinking": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.14,
+          "input": 0.47,
+          "output": 2
+        },
+        "description": "Kimi K2 Thinking 是由 vercel 提供的人工智能模型。",
+        "family": "kimi-k2",
+        "id": "moonshotai/kimi-k2-thinking",
+        "knowledge": "2024-08",
+        "last_updated": "2025-11-06",
+        "limit": {
+          "context": 216144,
+          "output": 216144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 Thinking",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-06",
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/kimi-k2-thinking-turbo": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 1.15,
+          "output": 8
+        },
+        "description": "Kimi K2 Thinking Turbo 是由 vercel 提供的人工智能模型。",
+        "family": "kimi-k2",
+        "id": "moonshotai/kimi-k2-thinking-turbo",
+        "knowledge": "2024-08",
+        "last_updated": "2025-11-06",
+        "limit": {
+          "context": 262114,
+          "output": 262114
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 Thinking Turbo",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-06",
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/kimi-k2-turbo": {
+        "attachment": false,
+        "cost": {
+          "input": 2.4,
+          "output": 10
+        },
+        "description": "Kimi K2 Turbo 是由 vercel 提供的人工智能模型。",
+        "family": "kimi-k2",
+        "id": "moonshotai/kimi-k2-turbo",
+        "knowledge": "2024-08",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 256000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 Turbo",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09-05",
+        "temperature": true,
+        "tool_call": true
+      },
       "morph/morph-v3-fast": {
         "attachment": false,
         "cost": {
@@ -60797,6 +63266,190 @@
         "reasoning": false,
         "release_date": "2024-08-15",
         "temperature": false,
+        "tool_call": false
+      },
+      "nvidia/nemotron-3-nano-30b-a3b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.06,
+          "output": 0.24
+        },
+        "description": "Nemotron 3 Nano 30B A3B 是由 vercel 提供的人工智能模型。",
+        "family": "nemotron",
+        "id": "nvidia/nemotron-3-nano-30b-a3b",
+        "knowledge": "2024-10",
+        "last_updated": "2024-12",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nemotron 3 Nano 30B A3B",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2024-12",
+        "temperature": true,
+        "tool_call": false
+      },
+      "nvidia/nemotron-nano-12b-v2-vl": {
+        "attachment": true,
+        "cost": {
+          "input": 0.2,
+          "output": 0.6
+        },
+        "description": "Nvidia Nemotron Nano 12B V2 VL 是由 vercel 提供的人工智能模型。",
+        "family": "nemotron",
+        "id": "nvidia/nemotron-nano-12b-v2-vl",
+        "knowledge": "2024-10",
+        "last_updated": "2024-12",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nvidia Nemotron Nano 12B V2 VL",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2024-12",
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia/nemotron-nano-9b-v2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.04,
+          "output": 0.16
+        },
+        "description": "Nvidia Nemotron Nano 9B V2 是由 vercel 提供的人工智能模型。",
+        "family": "nemotron",
+        "id": "nvidia/nemotron-nano-9b-v2",
+        "knowledge": "2024-10",
+        "last_updated": "2025-08-18",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nvidia Nemotron Nano 9B V2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/codex-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.38,
+          "input": 1.5,
+          "output": 6
+        },
+        "description": "Codex Mini 是由 vercel 提供的人工智能模型。",
+        "family": "codex",
+        "id": "openai/codex-mini",
+        "knowledge": "2024-10",
+        "last_updated": "2025-05-16",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Codex Mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-16",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-3.5-turbo": {
+        "attachment": false,
+        "cost": {
+          "input": 0.5,
+          "output": 1.5
+        },
+        "description": "GPT-3.5 Turbo 是由 vercel 提供的人工智能模型。",
+        "family": "gpt-3.5-turbo",
+        "id": "openai/gpt-3.5-turbo",
+        "knowledge": "2021-09",
+        "last_updated": "2023-03-01",
+        "limit": {
+          "context": 16385,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-3.5 Turbo",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2023-03-01",
+        "temperature": true,
+        "tool_call": false
+      },
+      "openai/gpt-3.5-turbo-instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 1.5,
+          "output": 2
+        },
+        "description": "GPT-3.5 Turbo Instruct 是由 vercel 提供的人工智能模型。",
+        "family": "gpt-3.5-turbo",
+        "id": "openai/gpt-3.5-turbo-instruct",
+        "knowledge": "2021-09",
+        "last_updated": "2023-03-01",
+        "limit": {
+          "context": 8192,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-3.5 Turbo Instruct",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2023-03-01",
+        "temperature": true,
         "tool_call": false
       },
       "openai/gpt-4-turbo": {
@@ -61029,6 +63682,40 @@
         "temperature": false,
         "tool_call": true
       },
+      "openai/gpt-5-chat": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.13,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5 Chat 是由 vercel 提供的人工智能模型。",
+        "family": "gpt-5",
+        "id": "openai/gpt-5-chat",
+        "knowledge": "2024-10",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 128000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "GPT-5 Chat",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "temperature": true,
+        "tool_call": true
+      },
       "openai/gpt-5-codex": {
         "attachment": false,
         "cost": {
@@ -61128,6 +63815,304 @@
         "temperature": false,
         "tool_call": true
       },
+      "openai/gpt-5-pro": {
+        "attachment": true,
+        "cost": {
+          "input": 15,
+          "output": 120
+        },
+        "description": "GPT-5 pro 是由 vercel 提供的人工智能模型。",
+        "family": "gpt-5",
+        "id": "openai/gpt-5-pro",
+        "knowledge": "2024-10",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 272000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "GPT-5 pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.1-codex": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.13,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1-Codex 是由 vercel 提供的人工智能模型。",
+        "family": "gpt-5.1",
+        "id": "openai/gpt-5.1-codex",
+        "knowledge": "2024-10",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1-Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.1-codex-max": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.13,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT 5.1 Codex Max 是由 vercel 提供的人工智能模型。",
+        "family": "gpt-5.1",
+        "id": "openai/gpt-5.1-codex-max",
+        "knowledge": "2024-10",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT 5.1 Codex Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.1-codex-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.25,
+          "output": 2
+        },
+        "description": "GPT-5.1 Codex mini 是由 vercel 提供的人工智能模型。",
+        "family": "gpt-5.1",
+        "id": "openai/gpt-5.1-codex-mini",
+        "knowledge": "2024-10",
+        "last_updated": "2025-05-16",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1 Codex mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-16",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.1-instant": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.13,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1 Instant 是由 vercel 提供的人工智能模型。",
+        "family": "gpt-5.1",
+        "id": "openai/gpt-5.1-instant",
+        "knowledge": "2024-10",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 128000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "GPT-5.1 Instant",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.1-thinking": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.13,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT 5.1 Thinking 是由 vercel 提供的人工智能模型。",
+        "family": "gpt-5.1",
+        "id": "openai/gpt-5.1-thinking",
+        "knowledge": "2024-10",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "GPT 5.1 Thinking",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai/gpt-5.2": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.18,
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.2 是由 vercel 提供的人工智能模型。",
+        "family": "gpt-5.2",
+        "id": "openai/gpt-5.2",
+        "knowledge": "2024-10",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.2-chat": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.18,
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.2 Chat 是由 vercel 提供的人工智能模型。",
+        "family": "gpt-5.2",
+        "id": "openai/gpt-5.2-chat",
+        "knowledge": "2024-10",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 128000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.2 Chat",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.2-pro": {
+        "attachment": true,
+        "cost": {
+          "input": 21,
+          "output": 168
+        },
+        "description": "GPT 5.2  是由 vercel 提供的人工智能模型。",
+        "family": "gpt-5.2",
+        "id": "openai/gpt-5.2-pro",
+        "knowledge": "2024-10",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT 5.2 ",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "temperature": true,
+        "tool_call": true
+      },
       "openai/gpt-oss-120b": {
         "attachment": false,
         "cost": {
@@ -61137,10 +64122,11 @@
         "description": "GPT OSS 120B 是由 vercel 提供的人工智能模型。",
         "family": "gpt-oss",
         "id": "openai/gpt-oss-120b",
+        "knowledge": "2024-10",
         "last_updated": "2025-08-05",
         "limit": {
           "context": 131072,
-          "output": 32768
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -61166,6 +64152,7 @@
         "description": "GPT OSS 20B 是由 vercel 提供的人工智能模型。",
         "family": "gpt-oss",
         "id": "openai/gpt-oss-20b",
+        "knowledge": "2024-10",
         "last_updated": "2025-08-05",
         "limit": {
           "context": 131072,
@@ -61183,6 +64170,37 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-08-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-oss-safeguard-20b": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.04,
+          "input": 0.08,
+          "output": 0.3
+        },
+        "description": "gpt-oss-safeguard-20b 是由 vercel 提供的人工智能模型。",
+        "family": "gpt-oss",
+        "id": "openai/gpt-oss-safeguard-20b",
+        "knowledge": "2024-10",
+        "last_updated": "2024-12-01",
+        "limit": {
+          "context": 131072,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "gpt-oss-safeguard-20b",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2024-12-01",
         "temperature": true,
         "tool_call": true
       },
@@ -61252,6 +64270,39 @@
         "temperature": false,
         "tool_call": true
       },
+      "openai/o3-deep-research": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 2.5,
+          "input": 10,
+          "output": 40
+        },
+        "description": "o3-deep-research 是由 vercel 提供的人工智能模型。",
+        "family": "o3",
+        "id": "openai/o3-deep-research",
+        "knowledge": "2024-10",
+        "last_updated": "2024-06-26",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o3-deep-research",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2024-06-26",
+        "temperature": false,
+        "tool_call": true
+      },
       "openai/o3-mini": {
         "attachment": false,
         "cost": {
@@ -61281,6 +64332,38 @@
         "reasoning": true,
         "release_date": "2024-12-20",
         "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai/o3-pro": {
+        "attachment": true,
+        "cost": {
+          "input": 20,
+          "output": 80
+        },
+        "description": "o3 Pro 是由 vercel 提供的人工智能模型。",
+        "family": "o3",
+        "id": "openai/o3-pro",
+        "knowledge": "2024-10",
+        "last_updated": "2025-04-16",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o3 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-04-16",
         "temperature": false,
         "tool_call": true
       },
@@ -61317,8 +64400,95 @@
         "temperature": false,
         "tool_call": true
       },
-      "perplexity/sonar": {
+      "openai/text-embedding-3-large": {
         "attachment": false,
+        "cost": {
+          "input": 0.13,
+          "output": 0
+        },
+        "description": "text-embedding-3-large 是由 vercel 提供的人工智能模型。",
+        "family": "text-embedding-3",
+        "id": "openai/text-embedding-3-large",
+        "last_updated": "2024-01-25",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "text-embedding-3-large",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-01-25",
+        "temperature": false,
+        "tool_call": false
+      },
+      "openai/text-embedding-3-small": {
+        "attachment": false,
+        "cost": {
+          "input": 0.02,
+          "output": 0
+        },
+        "description": "text-embedding-3-small 是由 vercel 提供的人工智能模型。",
+        "family": "text-embedding-3",
+        "id": "openai/text-embedding-3-small",
+        "last_updated": "2024-01-25",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "text-embedding-3-small",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-01-25",
+        "temperature": false,
+        "tool_call": false
+      },
+      "openai/text-embedding-ada-002": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0
+        },
+        "description": "text-embedding-ada-002 是由 vercel 提供的人工智能模型。",
+        "family": "text-embedding-ada",
+        "id": "openai/text-embedding-ada-002",
+        "last_updated": "2022-12-15",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "text-embedding-ada-002",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2022-12-15",
+        "temperature": false,
+        "tool_call": false
+      },
+      "perplexity/sonar": {
+        "attachment": true,
         "cost": {
           "input": 1,
           "output": 1
@@ -61346,10 +64516,10 @@
         "reasoning": false,
         "release_date": "2025-02-19",
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "perplexity/sonar-pro": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 3,
           "output": 15
@@ -61377,7 +64547,7 @@
         "reasoning": false,
         "release_date": "2025-02-19",
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "perplexity/sonar-reasoning": {
         "attachment": false,
@@ -61439,6 +64609,36 @@
         "temperature": true,
         "tool_call": false
       },
+      "prime-intellect/intellect-3": {
+        "attachment": false,
+        "cost": {
+          "input": 0.2,
+          "output": 1.1
+        },
+        "description": "INTELLECT 3 是由 vercel 提供的人工智能模型。",
+        "family": "intellect",
+        "id": "prime-intellect/intellect-3",
+        "knowledge": "2024-10",
+        "last_updated": "2025-11-26",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "INTELLECT 3",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-26",
+        "temperature": true,
+        "tool_call": true
+      },
       "vercel/v0-1.0-md": {
         "attachment": true,
         "cost": {
@@ -61499,21 +64699,19 @@
         "temperature": true,
         "tool_call": true
       },
-      "xai/grok-2": {
+      "voyage/voyage-3-large": {
         "attachment": false,
         "cost": {
-          "cache_read": 2,
-          "input": 2,
-          "output": 10
+          "input": 0.18,
+          "output": 0
         },
-        "description": "Grok 2 是由 vercel 提供的人工智能模型。",
-        "family": "grok-2",
-        "id": "xai/grok-2",
-        "knowledge": "2024-08",
-        "last_updated": "2024-08-20",
+        "description": "voyage-3-large 是由 vercel 提供的人工智能模型。",
+        "family": "voyage-3",
+        "id": "voyage/voyage-3-large",
+        "last_updated": "2024-09",
         "limit": {
-          "context": 131072,
-          "output": 8192
+          "context": 8192,
+          "output": 1536
         },
         "modalities": {
           "input": [
@@ -61523,12 +64721,186 @@
             "text"
           ]
         },
-        "name": "Grok 2",
+        "name": "voyage-3-large",
         "open_weights": false,
         "reasoning": false,
-        "release_date": "2024-08-20",
-        "temperature": true,
-        "tool_call": true
+        "release_date": "2024-09",
+        "temperature": false,
+        "tool_call": false
+      },
+      "voyage/voyage-3.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.06,
+          "output": 0
+        },
+        "description": "voyage-3.5 是由 vercel 提供的人工智能模型。",
+        "family": "voyage-3",
+        "id": "voyage/voyage-3.5",
+        "last_updated": "2025-05-20",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "voyage-3.5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-20",
+        "temperature": false,
+        "tool_call": false
+      },
+      "voyage/voyage-3.5-lite": {
+        "attachment": false,
+        "cost": {
+          "input": 0.02,
+          "output": 0
+        },
+        "description": "voyage-3.5-lite 是由 vercel 提供的人工智能模型。",
+        "family": "voyage-3",
+        "id": "voyage/voyage-3.5-lite",
+        "last_updated": "2025-05-20",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "voyage-3.5-lite",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-20",
+        "temperature": false,
+        "tool_call": false
+      },
+      "voyage/voyage-code-2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.12,
+          "output": 0
+        },
+        "description": "voyage-code-2 是由 vercel 提供的人工智能模型。",
+        "family": "voyage-code",
+        "id": "voyage/voyage-code-2",
+        "last_updated": "2024-01",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "voyage-code-2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-01",
+        "temperature": false,
+        "tool_call": false
+      },
+      "voyage/voyage-code-3": {
+        "attachment": false,
+        "cost": {
+          "input": 0.18,
+          "output": 0
+        },
+        "description": "voyage-code-3 是由 vercel 提供的人工智能模型。",
+        "family": "voyage-code",
+        "id": "voyage/voyage-code-3",
+        "last_updated": "2024-09",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "voyage-code-3",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-09",
+        "temperature": false,
+        "tool_call": false
+      },
+      "voyage/voyage-finance-2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.12,
+          "output": 0
+        },
+        "description": "voyage-finance-2 是由 vercel 提供的人工智能模型。",
+        "family": "voyage-finance",
+        "id": "voyage/voyage-finance-2",
+        "last_updated": "2024-03",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "voyage-finance-2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-03",
+        "temperature": false,
+        "tool_call": false
+      },
+      "voyage/voyage-law-2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.12,
+          "output": 0
+        },
+        "description": "voyage-law-2 是由 vercel 提供的人工智能模型。",
+        "family": "voyage-law",
+        "id": "voyage/voyage-law-2",
+        "last_updated": "2024-03",
+        "limit": {
+          "context": 8192,
+          "output": 1536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "voyage-law-2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-03",
+        "temperature": false,
+        "tool_call": false
       },
       "xai/grok-2-vision": {
         "attachment": true,
@@ -61720,38 +65092,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "xai/grok-4-fast": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.05,
-          "input": 0.2,
-          "output": 0.5
-        },
-        "description": "Grok 4 Fast 是由 vercel 提供的人工智能模型。",
-        "family": "grok",
-        "id": "xai/grok-4-fast",
-        "knowledge": "2025-07",
-        "last_updated": "2025-09-19",
-        "limit": {
-          "context": 2000000,
-          "output": 30000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Grok 4 Fast",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-09-19",
-        "temperature": true,
-        "tool_call": true
-      },
       "xai/grok-4-fast-non-reasoning": {
         "attachment": true,
         "cost": {
@@ -61781,6 +65121,99 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-09-19",
+        "temperature": true,
+        "tool_call": true
+      },
+      "xai/grok-4-fast-reasoning": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok 4 Fast Reasoning 是由 vercel 提供的人工智能模型。",
+        "family": "grok",
+        "id": "xai/grok-4-fast-reasoning",
+        "knowledge": "2024-10",
+        "last_updated": "2025-07-09",
+        "limit": {
+          "context": 2000000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4 Fast Reasoning",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-07-09",
+        "temperature": true,
+        "tool_call": true
+      },
+      "xai/grok-4.1-fast-non-reasoning": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok 4.1 Fast Non-Reasoning 是由 vercel 提供的人工智能模型。",
+        "family": "grok",
+        "id": "xai/grok-4.1-fast-non-reasoning",
+        "knowledge": "2024-10",
+        "last_updated": "2025-07-09",
+        "limit": {
+          "context": 2000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.1 Fast Non-Reasoning",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-07-09",
+        "temperature": true,
+        "tool_call": true
+      },
+      "xai/grok-4.1-fast-reasoning": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok 4.1 Fast Reasoning 是由 vercel 提供的人工智能模型。",
+        "family": "grok",
+        "id": "xai/grok-4.1-fast-reasoning",
+        "knowledge": "2024-10",
+        "last_updated": "2025-07-09",
+        "limit": {
+          "context": 2000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.1 Fast Reasoning",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-07-09",
         "temperature": true,
         "tool_call": true
       },
@@ -61815,6 +65248,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "xiaomi/mimo-v2-flash": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.29
+        },
+        "description": "MiMo V2 Flash 是由 vercel 提供的人工智能模型。",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2-flash",
+        "knowledge": "2024-10",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 262144,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-17",
+        "temperature": true,
+        "tool_call": true
+      },
       "zai/glm-4.5": {
         "attachment": false,
         "cost": {
@@ -61827,8 +65290,8 @@
         "knowledge": "2025-07",
         "last_updated": "2025-07-28",
         "limit": {
-          "context": 128000,
-          "output": 96000
+          "context": 131072,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -61888,7 +65351,7 @@
         "last_updated": "2025-08-11",
         "limit": {
           "context": 66000,
-          "output": 16000
+          "output": 66000
         },
         "modalities": {
           "input": [
@@ -61909,8 +65372,8 @@
       "zai/glm-4.6": {
         "attachment": false,
         "cost": {
-          "input": 0.6,
-          "output": 2.2
+          "input": 0.45,
+          "output": 1.8
         },
         "description": "GLM 4.6 是由 vercel 提供的人工智能模型。",
         "family": "glm-4.6",
@@ -61935,10 +65398,148 @@
         "release_date": "2025-09-30",
         "temperature": true,
         "tool_call": true
+      },
+      "zai/glm-4.6v": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.3,
+          "output": 0.9
+        },
+        "description": "GLM-4.6V 是由 vercel 提供的人工智能模型。",
+        "family": "glm-4.6v",
+        "id": "zai/glm-4.6v",
+        "knowledge": "2024-10",
+        "last_updated": "2025-09-30",
+        "limit": {
+          "context": 128000,
+          "output": 24000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.6V",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-30",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai/glm-4.6v-flash": {
+        "attachment": true,
+        "description": "GLM-4.6V-Flash 是由 vercel 提供的人工智能模型。",
+        "family": "glm-4.6v",
+        "id": "zai/glm-4.6v-flash",
+        "knowledge": "2024-10",
+        "last_updated": "2025-09-30",
+        "limit": {
+          "context": 128000,
+          "output": 24000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.6V-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-30",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai/glm-4.7": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.08,
+          "input": 0.43,
+          "output": 1.75
+        },
+        "description": "GLM 4.7 是由 vercel 提供的人工智能模型。",
+        "family": "glm-4.7",
+        "id": "zai/glm-4.7",
+        "knowledge": "2024-10",
+        "last_updated": "2025-12-22",
+        "limit": {
+          "context": 202752,
+          "output": 120000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Vercel AI Gateway",
     "npm": "@ai-sdk/gateway"
+  },
+  "vivgrid": {
+    "api": "https://api.vivgrid.com/v1",
+    "doc": "https://docs.vivgrid.com/models",
+    "env": [
+      "VIVGRID_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/vivgrid.svg",
+    "id": "vivgrid",
+    "models": {
+      "gpt-5.1-codex": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1 Codex 是由 vivgrid 提供的人工智能模型。",
+        "family": "gpt-5-codex",
+        "id": "gpt-5.1-codex",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-11-13",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1 Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-13",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      }
+    },
+    "name": "Vivgrid",
+    "npm": "@ai-sdk/openai"
   },
   "vultr": {
     "api": "https://api.vultrinference.com/v1",
