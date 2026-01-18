@@ -54737,7 +54737,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.3,
-          "cache_write": 0.3,
+          "cache_write": 3.75,
           "input": 3,
           "output": 15
         },
@@ -54937,6 +54937,40 @@
         "temperature": true,
         "tool_call": true
       },
+      "anthropic--claude-4.5-opus": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "description": "anthropic--claude-4.5-opus is an AI model provided by sap-ai-core.",
+        "family": "claude-opus",
+        "id": "anthropic--claude-4.5-opus",
+        "knowledge": "2025-04-30",
+        "last_updated": "2025-11-24",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "anthropic--claude-4.5-opus",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-24",
+        "temperature": true,
+        "tool_call": true
+      },
       "anthropic--claude-4.5-sonnet": {
         "attachment": true,
         "cost": {
@@ -54974,7 +55008,7 @@
       "gemini-2.5-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.075,
+          "cache_read": 0.03,
           "input": 0.3,
           "input_audio": 1,
           "output": 2.5
@@ -55011,7 +55045,7 @@
       "gemini-2.5-pro": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.31,
+          "cache_read": 0.125,
           "input": 1.25,
           "output": 10
         },
@@ -55080,7 +55114,7 @@
       "gpt-5-mini": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.03,
+          "cache_read": 0.025,
           "input": 0.25,
           "output": 2
         },
