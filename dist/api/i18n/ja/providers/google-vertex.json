@@ -13,8 +13,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.025,
-        "input": 0.1,
-        "output": 0.4
+        "input": 0.15,
+        "output": 0.6
       },
       "description": "Gemini 2.0 Flash は google-vertex によって提供される AI モデルです。",
       "family": "gemini-flash",
@@ -668,6 +668,39 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/glm-4.7-maas": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 2.2
+      },
+      "description": "GLM-4.7 は google-vertex によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "zai-org/glm-4.7-maas",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2025-12-22",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.7",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-22",
       "temperature": true,
       "tool_call": true
     }

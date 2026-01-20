@@ -1,5 +1,4 @@
 {
-  "api": "https://api.venice.ai/api/v1",
   "doc": "https://docs.venice.ai",
   "env": [
     "VENICE_API_KEY"
@@ -54,6 +53,9 @@
       "description": "Claude Sonnet 4.5 is an AI model provided by venice.",
       "family": "claude-sonnet",
       "id": "claude-sonnet-45",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-09",
       "last_updated": "2026-01-15",
       "limit": {
@@ -119,7 +121,7 @@
       "family": "gemini-flash",
       "id": "gemini-3-flash-preview",
       "interleaved": {
-        "field": "reasoning_details"
+        "field": "reasoning_content"
       },
       "knowledge": "2025-01",
       "last_updated": "2025-12-30",
@@ -601,6 +603,9 @@
       "description": "Qwen 3 235B A22B Thinking 2507 is an AI model provided by venice.",
       "family": "qwen",
       "id": "qwen3-235b-a22b-thinking-2507",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-07",
       "last_updated": "2025-12-18",
       "limit": {
@@ -788,7 +793,7 @@
       "family": "glm",
       "id": "zai-org-glm-4.7",
       "interleaved": {
-        "field": "reasoning_details"
+        "field": "reasoning_content"
       },
       "knowledge": "2025-04",
       "last_updated": "2026-01-07",
@@ -814,5 +819,5 @@
     }
   },
   "name": "Venice AI",
-  "npm": "@ai-sdk/openai-compatible"
+  "npm": "venice-ai-sdk-provider"
 }
