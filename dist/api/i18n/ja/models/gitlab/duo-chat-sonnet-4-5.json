@@ -1,5 +1,5 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
     "cache_read": 0,
     "cache_write": 0,
@@ -9,14 +9,17 @@
   "description": "Agentic Chat (Claude Sonnet 4.5) は gitlab によって提供される AI モデルです。",
   "family": "claude-sonnet",
   "id": "duo-chat-sonnet-4-5",
+  "knowledge": "2025-07-31",
   "last_updated": "2026-01-08",
   "limit": {
     "context": 200000,
-    "output": 4096
+    "output": 64000
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image",
+      "pdf"
     ],
     "output": [
       "text"
@@ -24,7 +27,7 @@
   },
   "name": "Agentic Chat (Claude Sonnet 4.5)",
   "open_weights": false,
-  "reasoning": false,
+  "reasoning": true,
   "release_date": "2026-01-08",
   "temperature": true,
   "tool_call": true

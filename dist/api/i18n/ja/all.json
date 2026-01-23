@@ -24722,35 +24722,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "deepseek-coder": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "DeepSeek Coder は firmware によって提供される AI モデルです。",
-        "family": "deepseek",
-        "id": "deepseek-coder",
-        "last_updated": "2024-01-26",
-        "limit": {
-          "context": 16384,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek Coder",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-01-25",
-        "temperature": true,
-        "tool_call": true
-      },
       "deepseek-reasoner": {
         "attachment": true,
         "cost": {
@@ -25776,7 +25747,7 @@
         "knowledge": "2024-04",
         "last_updated": "2025-04-14",
         "limit": {
-          "context": 128000,
+          "context": 64000,
           "output": 16384
         },
         "modalities": {
@@ -27935,7 +27906,7 @@
         "tool_call": true
       },
       "duo-chat-haiku-4-5": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -27945,14 +27916,17 @@
         "description": "Agentic Chat (Claude Haiku 4.5) は gitlab によって提供される AI モデルです。",
         "family": "claude-haiku",
         "id": "duo-chat-haiku-4-5",
+        "knowledge": "2025-02-28",
         "last_updated": "2026-01-08",
         "limit": {
           "context": 200000,
-          "output": 4096
+          "output": 64000
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -27960,13 +27934,13 @@
         },
         "name": "Agentic Chat (Claude Haiku 4.5)",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2026-01-08",
         "temperature": true,
         "tool_call": true
       },
       "duo-chat-opus-4-5": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -27976,14 +27950,17 @@
         "description": "Agentic Chat (Claude Opus 4.5) は gitlab によって提供される AI モデルです。",
         "family": "claude-opus",
         "id": "duo-chat-opus-4-5",
+        "knowledge": "2025-03-31",
         "last_updated": "2026-01-08",
         "limit": {
           "context": 200000,
-          "output": 4096
+          "output": 64000
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -27991,13 +27968,13 @@
         },
         "name": "Agentic Chat (Claude Opus 4.5)",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2026-01-08",
         "temperature": true,
         "tool_call": true
       },
       "duo-chat-sonnet-4-5": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -28007,14 +27984,17 @@
         "description": "Agentic Chat (Claude Sonnet 4.5) は gitlab によって提供される AI モデルです。",
         "family": "claude-sonnet",
         "id": "duo-chat-sonnet-4-5",
+        "knowledge": "2025-07-31",
         "last_updated": "2026-01-08",
         "limit": {
           "context": 200000,
-          "output": 4096
+          "output": 64000
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -28022,7 +28002,7 @@
         },
         "name": "Agentic Chat (Claude Sonnet 4.5)",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2026-01-08",
         "temperature": true,
         "tool_call": true
