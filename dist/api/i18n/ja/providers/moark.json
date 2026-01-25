@@ -1,0 +1,75 @@
+{
+  "api": "https://moark.com/v1",
+  "doc": "https://moark.com/docs/openapi/v1#tag/%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90",
+  "env": [
+    "MOARK_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/moark.svg",
+  "id": "moark",
+  "models": {
+    "GLM-4.7": {
+      "attachment": false,
+      "cost": {
+        "input": 3.5,
+        "output": 14
+      },
+      "description": "GLM-4.7 は moark によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "GLM-4.7",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2025-12-22",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.7",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "MiniMax-M2.1": {
+      "attachment": false,
+      "cost": {
+        "input": 2.1,
+        "output": 8.4
+      },
+      "description": "MiniMax-M2.1 は moark によって提供される AI モデルです。",
+      "family": "minimax",
+      "id": "MiniMax-M2.1",
+      "last_updated": "2025-12-23",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-23",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Moark",
+  "npm": "@ai-sdk/openai-compatible"
+}
