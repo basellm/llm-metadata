@@ -1687,6 +1687,7 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "aihubmix": {
+    "api": "https://aihubmix.com/v1",
     "doc": "https://docs.aihubmix.com",
     "env": [
       "AIHUBMIX_API_KEY"
@@ -2782,7 +2783,7 @@
       }
     },
     "name": "AIHubMix",
-    "npm": "@aihubmix/ai-sdk-provider"
+    "npm": "@ai-sdk/openai-compatible"
   },
   "alibaba": {
     "api": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
@@ -41201,6 +41202,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek-ai/deepseek-v3.2": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "DeepSeek V3.2 是由 nvidia 提供的人工智能模型。",
+        "family": "deepseek",
+        "id": "deepseek-ai/deepseek-v3.2",
+        "knowledge": "2024-07",
+        "last_updated": "2025-12-01",
+        "limit": {
+          "context": 163840,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-01",
+        "temperature": true,
+        "tool_call": true
+      },
       "google/codegemma-1.1-7b": {
         "attachment": false,
         "cost": {
@@ -68788,6 +68819,88 @@
     "iconURL": "https://models.dev/logos/vivgrid.svg",
     "id": "vivgrid",
     "models": {
+      "gemini-3-flash-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "context_over_200k": {
+            "cache_read": 0.05,
+            "input": 0.5,
+            "output": 3
+          },
+          "input": 0.5,
+          "output": 3
+        },
+        "description": "Gemini 3 Flash Preview 是由 vivgrid 提供的人工智能模型。",
+        "family": "gemini-flash",
+        "id": "gemini-3-flash-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Flash Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-3-pro-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18
+          },
+          "input": 2,
+          "output": 12
+        },
+        "description": "Gemini 3 Pro Preview 是由 vivgrid 提供的人工智能模型。",
+        "family": "gemini-pro",
+        "id": "gemini-3-pro-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2025-11-18",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Pro Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gpt-5.1-codex": {
         "attachment": false,
         "cost": {
@@ -68818,6 +68931,71 @@
         "reasoning": true,
         "release_date": "2025-11-13",
         "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.1-codex-max": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1 Codex Max 是由 vivgrid 提供的人工智能模型。",
+        "family": "gpt-codex",
+        "id": "gpt-5.1-codex-max",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-11-13",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1 Codex Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-13",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.2-codex": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.175,
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.2 Codex 是由 vivgrid 提供的人工智能模型。",
+        "family": "gpt-codex",
+        "id": "gpt-5.2-codex",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-01-14",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.2 Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-01-14",
         "temperature": false,
         "tool_call": true
       }
