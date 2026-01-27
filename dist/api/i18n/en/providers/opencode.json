@@ -399,6 +399,9 @@
       "description": "GLM-4.7 is an AI model provided by opencode.",
       "family": "glm",
       "id": "glm-4.7",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2025-12-22",
       "limit": {
@@ -883,6 +886,76 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-09-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.6,
+        "input": 1.2,
+        "output": 1.2
+      },
+      "description": "Kimi K2.5 is an AI model provided by opencode.",
+      "family": "kimi",
+      "id": "kimi-k2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-10",
+      "last_updated": "2026-01-27",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m2.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.1,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax M2.1 is an AI model provided by opencode.",
+      "family": "minimax",
+      "id": "minimax-m2.1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2025-12-23",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-23",
       "temperature": true,
       "tool_call": true
     },
