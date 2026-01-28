@@ -1210,15 +1210,22 @@
         "output": 3
       },
       "description": "Kimi K2.5 TEE 是由 chutes 提供的人工智能模型。",
+      "family": "kimi",
       "id": "moonshotai/Kimi-K2.5-TEE",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-10",
       "last_updated": "2026-01-27",
       "limit": {
-        "context": 32768,
-        "output": 8192
+        "context": 262144,
+        "output": 65535
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -1226,11 +1233,11 @@
       },
       "name": "Kimi K2.5 TEE",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
       "release_date": "2026-01-27",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16": {
       "attachment": false,
