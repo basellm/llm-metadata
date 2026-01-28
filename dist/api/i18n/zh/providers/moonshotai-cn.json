@@ -80,6 +80,9 @@
       "description": "Kimi K2 Thinking 是由 moonshotai-cn 提供的人工智能模型。",
       "family": "kimi-thinking",
       "id": "kimi-k2-thinking",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2024-08",
       "last_updated": "2025-11-06",
       "limit": {
@@ -111,6 +114,9 @@
       "description": "Kimi K2 Thinking Turbo 是由 moonshotai-cn 提供的人工智能模型。",
       "family": "kimi-thinking",
       "id": "kimi-k2-thinking-turbo",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2024-08",
       "last_updated": "2025-11-06",
       "limit": {
@@ -160,6 +166,44 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-09-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Kimi K2.5 是由 moonshotai-cn 提供的人工智能模型。",
+      "family": "kimi",
+      "id": "kimi-k2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     }
