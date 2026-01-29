@@ -39613,7 +39613,7 @@
         "reasoning": true,
         "release_date": "2026-01",
         "structured_output": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       }
     },
@@ -39826,7 +39826,7 @@
         "reasoning": true,
         "release_date": "2026-01",
         "structured_output": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       }
     },
@@ -64374,8 +64374,8 @@
       "hf:moonshotai/Kimi-K2.5": {
         "attachment": false,
         "cost": {
-          "input": 1.2,
-          "output": 1.2
+          "input": 0.55,
+          "output": 2.19
         },
         "description": "Kimi K2.5 は synthetic によって提供される AI モデルです。",
         "family": "kimi",
@@ -64387,7 +64387,7 @@
         "last_updated": "2026-01",
         "limit": {
           "context": 262144,
-          "output": 32768
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -64540,6 +64540,36 @@
     "id": "togetherai",
     "lobeIcon": "TogetherAI.Color",
     "models": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "attachment": false,
+        "cost": {
+          "input": 0.2,
+          "output": 0.6
+        },
+        "description": "Qwen3 235B A22B Instruct 2507 FP8 は togetherai によって提供される AI モデルです。",
+        "family": "qwen",
+        "id": "Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "knowledge": "2025-07",
+        "last_updated": "2025-07-25",
+        "limit": {
+          "context": 262144,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 235B A22B Instruct 2507 FP8",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-07-25",
+        "temperature": true,
+        "tool_call": true
+      },
       "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
         "attachment": false,
         "cost": {
@@ -64567,6 +64597,36 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen/Qwen3-Next-80B-A3B-Instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 1.5
+        },
+        "description": "Qwen3-Next-80B-A3B-Instruct は togetherai によって提供される AI モデルです。",
+        "family": "qwen",
+        "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+        "knowledge": "2025-07",
+        "last_updated": "2025-07-25",
+        "limit": {
+          "context": 262144,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-Next-80B-A3B-Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-07-25",
         "temperature": true,
         "tool_call": true
       },
@@ -64720,6 +64780,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "moonshotai/Kimi-K2-5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.5,
+          "output": 2.8
+        },
+        "description": "Kimi K2.5 は togetherai によって提供される AI モデルです。",
+        "family": "kimi",
+        "id": "moonshotai/Kimi-K2-5",
+        "interleaved": true,
+        "knowledge": "2024-10",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-27",
+        "temperature": true,
+        "tool_call": true
+      },
       "moonshotai/Kimi-K2-Instruct": {
         "attachment": false,
         "cost": {
@@ -64747,6 +64839,36 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-14",
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/Kimi-K2-Instruct-0905": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 3
+        },
+        "description": "Kimi K2 Instruct-0905 は togetherai によって提供される AI モデルです。",
+        "family": "kimi",
+        "id": "moonshotai/Kimi-K2-Instruct-0905",
+        "knowledge": "2025-09",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 Instruct-0905",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-05",
         "temperature": true,
         "tool_call": true
       },
@@ -64870,6 +64992,36 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-09-30",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-4.7": {
+        "attachment": false,
+        "cost": {
+          "input": 0.45,
+          "output": 2
+        },
+        "description": "GLM-4.7 は togetherai によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "zai-org/GLM-4.7",
+        "knowledge": "2025-07",
+        "last_updated": "2025-07-25",
+        "limit": {
+          "context": 200000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-07-25",
         "temperature": true,
         "tool_call": true
       }
@@ -65105,10 +65257,10 @@
         "family": "claude-opus",
         "id": "claude-opus-45",
         "knowledge": "2025-03",
-        "last_updated": "2026-01-08",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 202752,
-          "output": 50688
+          "context": 198000,
+          "output": 49500
         },
         "modalities": {
           "input": [
@@ -65143,10 +65295,10 @@
           "field": "reasoning_content"
         },
         "knowledge": "2025-09",
-        "last_updated": "2026-01-15",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 202752,
-          "output": 50688
+          "context": 198000,
+          "output": 49500
         },
         "modalities": {
           "input": [
@@ -65176,10 +65328,10 @@
         "family": "deepseek",
         "id": "deepseek-v3.2",
         "knowledge": "2025-10",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 163840,
-          "output": 40960
+          "context": 160000,
+          "output": 40000
         },
         "modalities": {
           "input": [
@@ -65210,10 +65362,10 @@
           "field": "reasoning_content"
         },
         "knowledge": "2025-01",
-        "last_updated": "2025-12-30",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 262144,
-          "output": 65536
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -65246,10 +65398,10 @@
         "family": "gemini-pro",
         "id": "gemini-3-pro-preview",
         "knowledge": "2024-04",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 202752,
-          "output": 50688
+          "context": 198000,
+          "output": 49500
         },
         "modalities": {
           "input": [
@@ -65280,10 +65432,10 @@
         "family": "gemma",
         "id": "google-gemma-3-27b-it",
         "knowledge": "2025-07",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 202752,
-          "output": 50688
+          "context": 198000,
+          "output": 49500
         },
         "modalities": {
           "input": [
@@ -65313,10 +65465,10 @@
         "family": "grok",
         "id": "grok-41-fast",
         "knowledge": "2025-07",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 262144,
-          "output": 65536
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -65345,10 +65497,10 @@
         "description": "Grok Code Fast 1 は venice によって提供される AI モデルです。",
         "family": "grok",
         "id": "grok-code-fast-1",
-        "last_updated": "2026-01-02",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 262144,
-          "output": 65536
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -65376,10 +65528,10 @@
         "family": "hermes",
         "id": "hermes-3-llama-3.1-405b",
         "knowledge": "2024-04",
-        "last_updated": "2026-01-15",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 128000,
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -65410,10 +65562,10 @@
           "field": "reasoning_content"
         },
         "knowledge": "2024-04",
-        "last_updated": "2026-01-27",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 262144,
-          "output": 65536
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -65443,10 +65595,10 @@
         "family": "kimi-thinking",
         "id": "kimi-k2-thinking",
         "knowledge": "2024-04",
-        "last_updated": "2025-12-30",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 262144,
-          "output": 65536
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -65474,10 +65626,10 @@
         "family": "llama",
         "id": "llama-3.2-3b",
         "knowledge": "2023-12",
-        "last_updated": "2026-01-13",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 128000,
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -65504,10 +65656,10 @@
         "family": "llama",
         "id": "llama-3.3-70b",
         "knowledge": "2023-12",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 128000,
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -65537,10 +65689,10 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2026-01-02",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 202752,
-          "output": 50688
+          "context": 198000,
+          "output": 49500
         },
         "modalities": {
           "input": [
@@ -65551,7 +65703,7 @@
           ]
         },
         "name": "MiniMax M2.1",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-01",
         "structured_output": true,
@@ -65568,10 +65720,10 @@
         "family": "mistral",
         "id": "mistral-31-24b",
         "knowledge": "2023-10",
-        "last_updated": "2025-12-18",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 128000,
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -65601,10 +65753,10 @@
         "family": "gpt",
         "id": "openai-gpt-52",
         "knowledge": "2025-08-31",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 262144,
-          "output": 65536
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -65633,10 +65785,10 @@
         "family": "gpt-codex",
         "id": "openai-gpt-52-codex",
         "knowledge": "2025-08",
-        "last_updated": "2026-01-15",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 262144,
-          "output": 65536
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -65665,10 +65817,10 @@
         "family": "gpt-oss",
         "id": "openai-gpt-oss-120b",
         "knowledge": "2025-07",
-        "last_updated": "2025-12-29",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 128000,
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -65695,10 +65847,10 @@
         "family": "qwen",
         "id": "qwen3-235b-a22b-instruct-2507",
         "knowledge": "2025-07",
-        "last_updated": "2025-12-18",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 128000,
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -65729,10 +65881,10 @@
           "field": "reasoning_content"
         },
         "knowledge": "2025-07",
-        "last_updated": "2025-12-18",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 128000,
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -65760,10 +65912,10 @@
         "family": "qwen",
         "id": "qwen3-4b",
         "knowledge": "2024-07",
-        "last_updated": "2025-12-18",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 32768,
-          "output": 8192
+          "context": 32000,
+          "output": 8000
         },
         "modalities": {
           "input": [
@@ -65791,10 +65943,10 @@
         "family": "qwen",
         "id": "qwen3-coder-480b-a35b-instruct",
         "knowledge": "2025-07",
-        "last_updated": "2025-12-18",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 262144,
-          "output": 65536
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -65822,10 +65974,10 @@
         "family": "qwen",
         "id": "qwen3-next-80b",
         "knowledge": "2025-07",
-        "last_updated": "2025-12-18",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 262144,
-          "output": 65536
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -65852,10 +66004,10 @@
         "description": "Qwen3 VL 235B は venice によって提供される AI モデルです。",
         "family": "qwen",
         "id": "qwen3-vl-235b-a22b",
-        "last_updated": "2026-01-19",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 262144,
-          "output": 65536
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -65884,10 +66036,10 @@
         "family": "venice",
         "id": "venice-uncensored",
         "knowledge": "2023-10",
-        "last_updated": "2025-12-18",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 32768,
-          "output": 8192
+          "context": 32000,
+          "output": 8000
         },
         "modalities": {
           "input": [
@@ -65919,10 +66071,10 @@
           "field": "reasoning_content"
         },
         "knowledge": "2025-04",
-        "last_updated": "2026-01-26",
+        "last_updated": "2026-01-28",
         "limit": {
-          "context": 202752,
-          "output": 50688
+          "context": 198000,
+          "output": 49500
         },
         "modalities": {
           "input": [
@@ -73605,6 +73757,38 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-4.7-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-4.7-Flash は zai-coding-plan によって提供される AI モデルです。",
+        "family": "glm-flash",
+        "id": "glm-4.7-flash",
+        "knowledge": "2025-04",
+        "last_updated": "2026-01-19",
+        "limit": {
+          "context": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-19",
         "temperature": true,
         "tool_call": true
       }
