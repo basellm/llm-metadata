@@ -32230,7 +32230,7 @@
       }
     },
     "name": "Vertex (Anthropic)",
-    "npm": "@ai-sdk/google-vertex"
+    "npm": "@ai-sdk/google-vertex/anthropic"
   },
   "groq": {
     "doc": "https://console.groq.com/docs/models",
@@ -41046,6 +41046,85 @@
       }
     },
     "name": "Nebius Token Factory",
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "nova": {
+    "api": "https://api.nova.amazon.com/v1",
+    "doc": "https://nova.amazon.com/dev/documentation",
+    "env": [
+      "NOVA_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/nova.svg",
+    "id": "nova",
+    "models": {
+      "nova-2-lite-v1": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0
+        },
+        "description": "Nova 2 Lite is an AI model provided by nova.",
+        "family": "nova-lite",
+        "id": "nova-2-lite-v1",
+        "last_updated": "2025-12-01",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nova 2 Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "nova-2-pro-v1": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0
+        },
+        "description": "Nova 2 Pro is an AI model provided by nova.",
+        "family": "nova-pro",
+        "id": "nova-2-pro-v1",
+        "last_updated": "2026-01-03",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nova 2 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-12-03",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Nova",
     "npm": "@ai-sdk/openai-compatible"
   },
   "novita-ai": {
@@ -53479,6 +53558,42 @@
         },
         "reasoning": true,
         "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-4.7-flash": {
+        "attachment": false,
+        "cost": {
+          "input": 0.07,
+          "output": 0.4
+        },
+        "description": "GLM-4.7 is an AI model provided by openrouter.",
+        "family": "glm",
+        "id": "z-ai/glm-4.7-flash",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "last_updated": "2026-01-19",
+        "limit": {
+          "context": 200000,
+          "output": 65535
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7",
+        "open_weights": true,
+        "provider": {
+          "npm": "@openrouter/ai-sdk-provider"
+        },
+        "reasoning": true,
+        "release_date": "2026-01-19",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       }
