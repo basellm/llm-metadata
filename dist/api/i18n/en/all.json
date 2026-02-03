@@ -18822,6 +18822,263 @@
     "name": "Baseten",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "berget": {
+    "api": "https://api.berget.ai/v1",
+    "doc": "https://api.berget.ai",
+    "env": [
+      "BERGET_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/berget.svg",
+    "id": "berget",
+    "models": {
+      "BAAI/bge-reranker-v2-m3": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.1
+        },
+        "description": "bge-reranker-v2-m3 is an AI model provided by berget.",
+        "family": "bge",
+        "id": "BAAI/bge-reranker-v2-m3",
+        "knowledge": "2025-04",
+        "last_updated": "2025-04-23",
+        "limit": {
+          "context": 512,
+          "output": 512
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "bge-reranker-v2-m3",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-04-23",
+        "temperature": false,
+        "tool_call": false
+      },
+      "KBLab/kb-whisper-large": {
+        "attachment": false,
+        "cost": {
+          "input": 3,
+          "output": 3
+        },
+        "description": "KB-Whisper-Large is an AI model provided by berget.",
+        "family": "whisper",
+        "id": "KBLab/kb-whisper-large",
+        "knowledge": "2025-04",
+        "last_updated": "2025-04-27",
+        "limit": {
+          "context": 480000,
+          "output": 4800
+        },
+        "modalities": {
+          "input": [
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "KB-Whisper-Large",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-04-27",
+        "temperature": false,
+        "tool_call": false
+      },
+      "intfloat/multilingual-e5-large": {
+        "attachment": false,
+        "cost": {
+          "input": 0.02,
+          "output": 0
+        },
+        "description": "Multilingual-E5-large is an AI model provided by berget.",
+        "family": "text-embedding",
+        "id": "intfloat/multilingual-e5-large",
+        "knowledge": "2025-09",
+        "last_updated": "2025-09-11",
+        "limit": {
+          "context": 512,
+          "output": 1024
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Multilingual-E5-large",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-11",
+        "temperature": false,
+        "tool_call": false
+      },
+      "intfloat/multilingual-e5-large-instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.02,
+          "output": 0
+        },
+        "description": "Multilingual-E5-large-instruct is an AI model provided by berget.",
+        "family": "text-embedding",
+        "id": "intfloat/multilingual-e5-large-instruct",
+        "knowledge": "2025-04",
+        "last_updated": "2025-04-27",
+        "limit": {
+          "context": 512,
+          "output": 1024
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Multilingual-E5-large-instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-04-27",
+        "temperature": false,
+        "tool_call": false
+      },
+      "meta-llama/Llama-3.3-70B-Instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.9,
+          "output": 0.9
+        },
+        "description": "Llama 3.3 70B Instruct is an AI model provided by berget.",
+        "family": "llama",
+        "id": "meta-llama/Llama-3.3-70B-Instruct",
+        "knowledge": "2023-12",
+        "last_updated": "2025-04-27",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.3 70B Instruct",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-04-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "mistralai/Mistral-Small-3.2-24B-Instruct-2506": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 0.3
+        },
+        "description": "Mistral Small 3.2 24B Instruct 2506 is an AI model provided by berget.",
+        "family": "mistral-small",
+        "id": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+        "knowledge": "2025-09",
+        "last_updated": "2025-10-01",
+        "limit": {
+          "context": 32000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mistral Small 3.2 24B Instruct 2506",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-10-01",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-oss-120b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 0.9
+        },
+        "description": "GPT-OSS-120B is an AI model provided by berget.",
+        "family": "gpt-oss",
+        "id": "openai/gpt-oss-120b",
+        "knowledge": "2025-08",
+        "last_updated": "2025-08-05",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-OSS-120B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-05",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-4.7": {
+        "attachment": false,
+        "cost": {
+          "input": 0.7,
+          "output": 2.3
+        },
+        "description": "GLM 4.7 is an AI model provided by berget.",
+        "family": "glm",
+        "id": "zai-org/GLM-4.7",
+        "knowledge": "2025-12",
+        "last_updated": "2026-01-19",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-19",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Berget.AI",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "cerebras": {
     "doc": "https://inference-docs.cerebras.ai/models/overview",
     "env": [
@@ -28484,7 +28741,7 @@
         "knowledge": "2024-04",
         "last_updated": "2025-04-14",
         "limit": {
-          "context": 64000,
+          "context": 128000,
           "output": 16384
         },
         "modalities": {
@@ -49443,7 +49700,7 @@
         "reasoning": true,
         "release_date": "2026-01-09",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "anthropic/claude-3.5-haiku": {
         "attachment": true,
@@ -49977,7 +50234,7 @@
         "reasoning": false,
         "release_date": "2025-07-09",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "cognitivecomputations/dolphin3.0-mistral-24b": {
         "attachment": false,
@@ -51191,7 +51448,7 @@
         "reasoning": false,
         "release_date": "2026-01-20",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "liquid/lfm-2.5-1.2b-thinking:free": {
         "attachment": false,
@@ -51221,7 +51478,7 @@
         "reasoning": true,
         "release_date": "2026-01-20",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "meta-llama/llama-3.1-405b-instruct:free": {
         "attachment": true,
@@ -51251,7 +51508,7 @@
         "reasoning": false,
         "release_date": "2024-07-23",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "meta-llama/llama-3.2-11b-vision-instruct": {
         "attachment": true,
@@ -51313,7 +51570,7 @@
         "reasoning": false,
         "release_date": "2024-09-25",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "meta-llama/llama-3.3-70b-instruct:free": {
         "attachment": false,
@@ -52246,7 +52503,7 @@
         "reasoning": true,
         "release_date": "2024-08-16",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "nousresearch/hermes-4-405b": {
         "attachment": false,
@@ -54335,7 +54592,7 @@
         "reasoning": true,
         "release_date": "2025-11-26",
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "x-ai/grok-3": {
         "attachment": false,
