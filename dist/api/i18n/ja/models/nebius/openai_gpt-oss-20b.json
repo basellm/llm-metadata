@@ -1,17 +1,19 @@
 {
-  "attachment": true,
+  "attachment": false,
   "cost": {
+    "cache_read": 0.005,
+    "cache_write": 0.06,
     "input": 0.05,
     "output": 0.2
   },
-  "description": "GPT OSS 20B は nebius によって提供される AI モデルです。",
-  "family": "gpt-oss",
+  "description": "gpt-oss-20b は nebius によって提供される AI モデルです。",
   "id": "openai/gpt-oss-20b",
-  "knowledge": "2024-01",
-  "last_updated": "2025-10-04",
+  "knowledge": "2025-09",
+  "last_updated": "2026-02-04",
   "limit": {
-    "context": 131072,
-    "output": 8192
+    "context": 128000,
+    "input": 124000,
+    "output": 4096
   },
   "modalities": {
     "input": [
@@ -21,10 +23,11 @@
       "text"
     ]
   },
-  "name": "GPT OSS 20B",
-  "open_weights": false,
-  "reasoning": true,
-  "release_date": "2024-01-01",
+  "name": "gpt-oss-20b",
+  "open_weights": true,
+  "reasoning": false,
+  "release_date": "2026-01-10",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

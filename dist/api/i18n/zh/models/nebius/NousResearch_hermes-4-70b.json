@@ -1,16 +1,22 @@
 {
   "attachment": false,
   "cost": {
+    "cache_read": 0.013,
+    "cache_write": 0.16,
     "input": 0.13,
-    "output": 0.4
+    "output": 0.4,
+    "reasoning": 0.4
   },
-  "description": "Hermes 4 70B 是由 nebius 提供的人工智能模型。",
-  "family": "hermes",
+  "description": "Hermes-4-70B 是由 nebius 提供的人工智能模型。",
   "id": "NousResearch/hermes-4-70b",
-  "knowledge": "2024-07",
-  "last_updated": "2025-10-04",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "knowledge": "2025-11",
+  "last_updated": "2026-02-04",
   "limit": {
-    "context": 131072,
+    "context": 128000,
+    "input": 120000,
     "output": 8192
   },
   "modalities": {
@@ -21,10 +27,11 @@
       "text"
     ]
   },
-  "name": "Hermes 4 70B",
-  "open_weights": false,
+  "name": "Hermes-4-70B",
+  "open_weights": true,
   "reasoning": true,
-  "release_date": "2024-08-01",
+  "release_date": "2026-01-30",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

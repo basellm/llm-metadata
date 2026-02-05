@@ -1,30 +1,34 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
+    "cache_read": 0.05,
+    "cache_write": 0.625,
     "input": 0.5,
     "output": 2.4
   },
-  "description": "Kimi K2 Instruct 是由 nebius 提供的人工智能模型。",
-  "family": "kimi",
+  "description": "Kimi-K2-Instruct 是由 nebius 提供的人工智能模型。",
   "id": "moonshotai/kimi-k2-instruct",
-  "knowledge": "2024-01",
-  "last_updated": "2025-10-04",
+  "knowledge": "2025-10",
+  "last_updated": "2026-02-04",
   "limit": {
-    "context": 131072,
+    "context": 200000,
+    "input": 190000,
     "output": 8192
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Kimi K2 Instruct",
+  "name": "Kimi-K2-Instruct",
   "open_weights": false,
-  "reasoning": true,
-  "release_date": "2025-01-01",
+  "reasoning": false,
+  "release_date": "2026-01-05",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

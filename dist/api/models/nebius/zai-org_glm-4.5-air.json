@@ -1,17 +1,19 @@
 {
   "attachment": false,
   "cost": {
+    "cache_read": 0.02,
+    "cache_write": 0.25,
     "input": 0.2,
     "output": 1.2
   },
-  "description": "GLM 4.5 Air is an AI model provided by nebius.",
-  "family": "glm-air",
+  "description": "GLM-4.5-Air is an AI model provided by nebius.",
   "id": "zai-org/glm-4.5-air",
-  "knowledge": "2024-05",
-  "last_updated": "2025-10-04",
+  "knowledge": "2025-06",
+  "last_updated": "2026-02-04",
   "limit": {
-    "context": 131072,
-    "output": 8192
+    "context": 128000,
+    "input": 124000,
+    "output": 4096
   },
   "modalities": {
     "input": [
@@ -21,10 +23,11 @@
       "text"
     ]
   },
-  "name": "GLM 4.5 Air",
+  "name": "GLM-4.5-Air",
   "open_weights": false,
-  "reasoning": true,
-  "release_date": "2024-06-01",
+  "reasoning": false,
+  "release_date": "2025-11-15",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }
