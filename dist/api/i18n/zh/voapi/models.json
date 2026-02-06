@@ -11270,8 +11270,8 @@
         "tool_call": true
       },
       "icon": "lb:amazonbedrock-color",
-      "id": "anthropic.claude-opus-4-6-v1:0",
-      "maxCtxTokens": 200000,
+      "id": "anthropic.claude-opus-4-6-v1",
+      "maxCtxTokens": 1000000,
       "maxOutputTokens": 128000,
       "name": "Claude Opus 4.6",
       "price": {
@@ -11285,7 +11285,7 @@
         "tools",
         "files",
         "vision",
-        "200K"
+        "1M"
       ]
     },
     {
@@ -11614,8 +11614,8 @@
       "maxOutputTokens": 64000,
       "name": "Claude Opus 4.5 (EU)",
       "price": {
-        "cacheRead": 1.5,
-        "cacheWrite": 18.75,
+        "cacheRead": 0.5,
+        "cacheWrite": 6.25,
         "input": 5,
         "output": 25
       },
@@ -11639,13 +11639,13 @@
         "tool_call": true
       },
       "icon": "lb:amazonbedrock-color",
-      "id": "eu.anthropic.claude-opus-4-6-v1:0",
-      "maxCtxTokens": 200000,
+      "id": "eu.anthropic.claude-opus-4-6-v1",
+      "maxCtxTokens": 1000000,
       "maxOutputTokens": 128000,
       "name": "Claude Opus 4.6 (EU)",
       "price": {
-        "cacheRead": 1.5,
-        "cacheWrite": 18.75,
+        "cacheRead": 0.5,
+        "cacheWrite": 6.25,
         "input": 5,
         "output": 25
       },
@@ -11654,7 +11654,7 @@
         "tools",
         "files",
         "vision",
-        "200K"
+        "1M"
       ]
     },
     {
@@ -11789,8 +11789,8 @@
         "tool_call": true
       },
       "icon": "lb:amazonbedrock-color",
-      "id": "global.anthropic.claude-opus-4-6-v1:0",
-      "maxCtxTokens": 200000,
+      "id": "global.anthropic.claude-opus-4-6-v1",
+      "maxCtxTokens": 1000000,
       "maxOutputTokens": 128000,
       "name": "Claude Opus 4.6 (Global)",
       "price": {
@@ -11804,7 +11804,7 @@
         "tools",
         "files",
         "vision",
-        "200K"
+        "1M"
       ]
     },
     {
@@ -12956,8 +12956,8 @@
       "maxOutputTokens": 64000,
       "name": "Claude Opus 4.5 (US)",
       "price": {
-        "cacheRead": 1.5,
-        "cacheWrite": 18.75,
+        "cacheRead": 0.5,
+        "cacheWrite": 6.25,
         "input": 5,
         "output": 25
       },
@@ -12981,13 +12981,13 @@
         "tool_call": true
       },
       "icon": "lb:amazonbedrock-color",
-      "id": "us.anthropic.claude-opus-4-6-v1:0",
-      "maxCtxTokens": 200000,
+      "id": "us.anthropic.claude-opus-4-6-v1",
+      "maxCtxTokens": 1000000,
       "maxOutputTokens": 128000,
       "name": "Claude Opus 4.6 (US)",
       "price": {
-        "cacheRead": 1.5,
-        "cacheWrite": 18.75,
+        "cacheRead": 0.5,
+        "cacheWrite": 6.25,
         "input": 5,
         "output": 25
       },
@@ -12996,7 +12996,7 @@
         "tools",
         "files",
         "vision",
-        "200K"
+        "1M"
       ]
     },
     {
@@ -13590,36 +13590,6 @@
         "files",
         "vision",
         "1M"
-      ]
-    },
-    {
-      "description": "Claude Opus 4.6 是由 anthropic 提供的人工智能模型。",
-      "firm": "anthropic",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:claude-color",
-      "id": "claude-opus-4-6-20260205",
-      "maxCtxTokens": 200000,
-      "maxOutputTokens": 128000,
-      "name": "Claude Opus 4.6",
-      "price": {
-        "cacheRead": 0.5,
-        "cacheWrite": 6.25,
-        "input": 5,
-        "output": 25
-      },
-      "tags": [
-        "reasoning",
-        "tools",
-        "files",
-        "vision",
-        "200K"
       ]
     },
     {
@@ -20582,6 +20552,34 @@
       ]
     },
     {
+      "description": "Qwen3 Coder Next 是由 chutes 提供的人工智能模型。",
+      "firm": "chutes",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:chutes",
+      "id": "Qwen/Qwen3-Coder-Next",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 65536,
+      "name": "Qwen3 Coder Next",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.07,
+        "output": 0.3
+      },
+      "tags": [
+        "tools",
+        "open_weights",
+        "262.1K"
+      ]
+    },
+    {
       "description": "Qwen3 Next 80B A3B Instruct 是由 chutes 提供的人工智能模型。",
       "firm": "chutes",
       "flags": {
@@ -24999,6 +24997,35 @@
       ]
     },
     {
+      "description": "GLM-4.7-Flash 是由 deepinfra 提供的人工智能模型。",
+      "firm": "deepinfra",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:deepinfra",
+      "id": "zai-org/GLM-4.7-Flash",
+      "maxCtxTokens": 202752,
+      "maxOutputTokens": 16384,
+      "name": "GLM-4.7-Flash",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.06,
+        "output": 0.4
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "202.8K"
+      ]
+    },
+    {
       "description": "DeepSeek Chat 是由 deepseek 提供的人工智能模型。",
       "firm": "deepseek",
       "flags": {
@@ -26103,7 +26130,7 @@
       ]
     },
     {
-      "description": "Claude Opus 4.5 (latest) 是由 firmware 提供的人工智能模型。",
+      "description": "Claude Opus 4.5 是由 firmware 提供的人工智能模型。",
       "firm": "firmware",
       "flags": {
         "attachment": true,
@@ -26117,7 +26144,37 @@
       "id": "claude-opus-4-5",
       "maxCtxTokens": 200000,
       "maxOutputTokens": 64000,
-      "name": "Claude Opus 4.5 (latest)",
+      "name": "Claude Opus 4.5",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "files",
+        "vision",
+        "200K"
+      ]
+    },
+    {
+      "description": "Claude Opus 4.6 是由 firmware 提供的人工智能模型。",
+      "firm": "firmware",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "claude-opus-4-6",
+      "maxCtxTokens": 200000,
+      "maxOutputTokens": 128000,
+      "name": "Claude Opus 4.6",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
@@ -26966,6 +27023,36 @@
       "maxCtxTokens": 128000,
       "maxOutputTokens": 16000,
       "name": "Claude Opus 4.5",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "files",
+        "vision",
+        "128K"
+      ]
+    },
+    {
+      "description": "Claude Opus 4.6 是由 github-copilot 提供的人工智能模型。",
+      "firm": "github-copilot",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:githubcopilot",
+      "id": "claude-opus-4.6",
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 64000,
+      "name": "Claude Opus 4.6",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
@@ -30888,8 +30975,8 @@
         "tool_call": true
       },
       "icon": "lb:vertexai-color",
-      "id": "claude-opus-4-6@20260205",
-      "maxCtxTokens": 200000,
+      "id": "claude-opus-4-6@default",
+      "maxCtxTokens": 1000000,
       "maxOutputTokens": 128000,
       "name": "Claude Opus 4.6",
       "price": {
@@ -30903,7 +30990,7 @@
         "tools",
         "files",
         "vision",
-        "200K"
+        "1M"
       ]
     },
     {
@@ -52622,6 +52709,36 @@
       ]
     },
     {
+      "description": "claude-opus-4-6 是由 poe 提供的人工智能模型。",
+      "firm": "poe",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "anthropic/claude-opus-4-6",
+      "maxCtxTokens": 983040,
+      "maxOutputTokens": 128000,
+      "name": "claude-opus-4-6",
+      "price": {
+        "cacheRead": 0.43,
+        "cacheWrite": 5.3,
+        "input": 4.3,
+        "output": 21
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "files",
+        "vision",
+        "983K"
+      ]
+    },
+    {
       "description": "Claude Opus 4.1 是由 poe 提供的人工智能模型。",
       "firm": "poe",
       "flags": {
@@ -63125,6 +63242,36 @@
       ]
     },
     {
+      "description": "Claude Opus 4.6 是由 venice 提供的人工智能模型。",
+      "firm": "venice",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:veniceai",
+      "id": "claude-opus-4-6",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 128000,
+      "name": "Claude Opus 4.6",
+      "price": {
+        "cacheRead": 0.6,
+        "cacheWrite": 7.5,
+        "input": 6,
+        "output": 30
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "files",
+        "vision",
+        "1M"
+      ]
+    },
+    {
       "description": "Claude Opus 4.5 是由 venice 提供的人工智能模型。",
       "firm": "venice",
       "flags": {
@@ -63879,6 +64026,34 @@
       ]
     },
     {
+      "description": "GLM 4.7 Flash 是由 venice 提供的人工智能模型。",
+      "firm": "venice",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:veniceai",
+      "id": "zai-org-glm-4.7-flash",
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 32000,
+      "name": "GLM 4.7 Flash",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.125,
+        "output": 0.5
+      },
+      "tags": [
+        "tools",
+        "open_weights",
+        "128K"
+      ]
+    },
+    {
       "description": "Qwen3-14B 是由 vercel 提供的人工智能模型。",
       "firm": "vercel",
       "flags": {
@@ -64232,6 +64407,35 @@
       "tags": [
         "tools",
         "262.1K"
+      ]
+    },
+    {
+      "description": "Qwen 3 Max Thinking 是由 vercel 提供的人工智能模型。",
+      "firm": "vercel",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:vercel-color",
+      "id": "alibaba/qwen3-max-thinking",
+      "maxCtxTokens": 256000,
+      "maxOutputTokens": 65536,
+      "name": "Qwen 3 Max Thinking",
+      "price": {
+        "cacheRead": 0.24,
+        "cacheWrite": null,
+        "input": 1.2,
+        "output": 6
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "256K"
       ]
     },
     {
@@ -64788,6 +64992,36 @@
       ]
     },
     {
+      "description": "Claude Opus 4.6 是由 vercel 提供的人工智能模型。",
+      "firm": "vercel",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:vercel-color",
+      "id": "anthropic/claude-opus-4.6",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 128000,
+      "name": "Claude Opus 4.6",
+      "price": {
+        "cacheRead": 0.5,
+        "cacheWrite": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "files",
+        "vision",
+        "1M"
+      ]
+    },
+    {
       "description": "Claude Sonnet 4 是由 vercel 提供的人工智能模型。",
       "firm": "vercel",
       "flags": {
@@ -64845,6 +65079,33 @@
         "files",
         "vision",
         "200K"
+      ]
+    },
+    {
+      "description": "Trinity Large Preview 是由 vercel 提供的人工智能模型。",
+      "firm": "vercel",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:vercel-color",
+      "id": "arcee-ai/trinity-large-preview",
+      "maxCtxTokens": 131000,
+      "maxOutputTokens": 131000,
+      "name": "Trinity Large Preview",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.25,
+        "output": 1
+      },
+      "tags": [
+        "tools",
+        "131K"
       ]
     },
     {
@@ -67341,6 +67602,32 @@
       ]
     },
     {
+      "description": "GPT 4o Mini Search Preview 是由 vercel 提供的人工智能模型。",
+      "firm": "vercel",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": false
+      },
+      "icon": "lb:vercel-color",
+      "id": "openai/gpt-4o-mini-search-preview",
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 16384,
+      "name": "GPT 4o Mini Search Preview",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "tags": [
+        "128K"
+      ]
+    },
+    {
       "description": "GPT-5 是由 vercel 提供的人工智能模型。",
       "firm": "vercel",
       "flags": {
@@ -69106,6 +69393,35 @@
         "reasoning",
         "tools",
         "202.8K"
+      ]
+    },
+    {
+      "description": "GLM 4.7 FlashX 是由 vercel 提供的人工智能模型。",
+      "firm": "vercel",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:vercel-color",
+      "id": "zai/glm-4.7-flashx",
+      "maxCtxTokens": 200000,
+      "maxOutputTokens": 128000,
+      "name": "GLM 4.7 FlashX",
+      "price": {
+        "cacheRead": 0.01,
+        "cacheWrite": null,
+        "input": 0.06,
+        "output": 0.4
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "200K"
       ]
     },
     {

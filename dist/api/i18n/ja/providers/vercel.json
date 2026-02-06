@@ -397,6 +397,37 @@
       "temperature": true,
       "tool_call": true
     },
+    "alibaba/qwen3-max-thinking": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.24,
+        "input": 1.2,
+        "output": 6
+      },
+      "description": "Qwen 3 Max Thinking は vercel によって提供される AI モデルです。",
+      "family": "qwen",
+      "id": "alibaba/qwen3-max-thinking",
+      "knowledge": "2025-01",
+      "last_updated": "2025-01",
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3 Max Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-01",
+      "temperature": true,
+      "tool_call": true
+    },
     "alibaba/qwen3-next-80b-a3b-instruct": {
       "attachment": false,
       "cost": {
@@ -889,6 +920,7 @@
       "description": "Claude Haiku 4.5 は vercel によって提供される AI モデルです。",
       "family": "claude-haiku",
       "id": "anthropic/claude-haiku-4.5",
+      "interleaved": true,
       "knowledge": "2025-02-28",
       "last_updated": "2025-10-15",
       "limit": {
@@ -991,6 +1023,7 @@
       "description": "Claude Opus 4.5 は vercel によって提供される AI モデルです。",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4.5",
+      "interleaved": true,
       "knowledge": "2025-03-31",
       "last_updated": "2025-11-24",
       "limit": {
@@ -1011,6 +1044,41 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-11-24",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-4.6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Claude Opus 4.6 は vercel によって提供される AI モデルです。",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.6",
+      "interleaved": true,
+      "knowledge": "2025-05",
+      "last_updated": "2026-02",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02",
       "temperature": true,
       "tool_call": true
     },
@@ -1079,6 +1147,36 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-09-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "arcee-ai/trinity-large-preview": {
+      "attachment": false,
+      "cost": {
+        "input": 0.25,
+        "output": 1
+      },
+      "description": "Trinity Large Preview は vercel によって提供される AI モデルです。",
+      "family": "trinity",
+      "id": "arcee-ai/trinity-large-preview",
+      "knowledge": "2024-10",
+      "last_updated": "2025-01",
+      "limit": {
+        "context": 131000,
+        "output": 131000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Trinity Large Preview",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-01",
       "temperature": true,
       "tool_call": true
     },
@@ -1550,6 +1648,7 @@
       "description": "DeepSeek V3.2 Thinking は vercel によって提供される AI モデルです。",
       "family": "deepseek-thinking",
       "id": "deepseek/deepseek-v3.2-thinking",
+      "interleaved": true,
       "knowledge": "2024-07",
       "last_updated": "2025-12-01",
       "limit": {
@@ -2546,6 +2645,7 @@
       "description": "MiniMax M2 は vercel によって提供される AI モデルです。",
       "family": "minimax",
       "id": "minimax/minimax-m2",
+      "interleaved": true,
       "knowledge": "2024-10",
       "last_updated": "2025-10-27",
       "limit": {
@@ -2578,6 +2678,7 @@
       "description": "MiniMax M2.1 は vercel によって提供される AI モデルです。",
       "family": "minimax",
       "id": "minimax/minimax-m2.1",
+      "interleaved": true,
       "knowledge": "2024-10",
       "last_updated": "2025-10-27",
       "limit": {
@@ -3239,6 +3340,7 @@
       "description": "Kimi K2 Thinking は vercel によって提供される AI モデルです。",
       "family": "kimi-thinking",
       "id": "moonshotai/kimi-k2-thinking",
+      "interleaved": true,
       "knowledge": "2024-08",
       "last_updated": "2025-11-06",
       "limit": {
@@ -3270,6 +3372,7 @@
       "description": "Kimi K2 Thinking Turbo は vercel によって提供される AI モデルです。",
       "family": "kimi-thinking",
       "id": "moonshotai/kimi-k2-thinking-turbo",
+      "interleaved": true,
       "knowledge": "2024-08",
       "last_updated": "2025-11-06",
       "limit": {
@@ -3330,9 +3433,7 @@
       "description": "Kimi K2.5 は vercel によって提供される AI モデルです。",
       "family": "kimi",
       "id": "moonshotai/kimi-k2.5",
-      "interleaved": {
-        "field": "reasoning_details"
-      },
+      "interleaved": true,
       "knowledge": "2025-01",
       "last_updated": "2026-01-26",
       "limit": {
@@ -3794,6 +3895,37 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
+    },
+    "openai/gpt-4o-mini-search-preview": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "GPT 4o Mini Search Preview は vercel によって提供される AI モデルです。",
+      "family": "gpt-mini",
+      "id": "openai/gpt-4o-mini-search-preview",
+      "knowledge": "2023-09",
+      "last_updated": "2025-01",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT 4o Mini Search Preview",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-01",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
     },
     "openai/gpt-5": {
       "attachment": true,
@@ -5520,6 +5652,7 @@
       "description": "GLM 4.5 は vercel によって提供される AI モデルです。",
       "family": "glm",
       "id": "zai/glm-4.5",
+      "interleaved": true,
       "knowledge": "2025-07",
       "last_updated": "2025-07-28",
       "limit": {
@@ -5611,6 +5744,7 @@
       "description": "GLM 4.6 は vercel によって提供される AI モデルです。",
       "family": "glm",
       "id": "zai/glm-4.6",
+      "interleaved": true,
       "knowledge": "2025-04",
       "last_updated": "2025-09-30",
       "limit": {
@@ -5703,6 +5837,7 @@
       "description": "GLM 4.7 は vercel によって提供される AI モデルです。",
       "family": "glm",
       "id": "zai/glm-4.7",
+      "interleaved": true,
       "knowledge": "2024-10",
       "last_updated": "2025-12-22",
       "limit": {
@@ -5721,6 +5856,38 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-12-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai/glm-4.7-flashx": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.06,
+        "output": 0.4
+      },
+      "description": "GLM 4.7 FlashX は vercel によって提供される AI モデルです。",
+      "family": "glm-flash",
+      "id": "zai/glm-4.7-flashx",
+      "interleaved": true,
+      "knowledge": "2025-01",
+      "last_updated": "2025-01",
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.7 FlashX",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-01",
       "temperature": true,
       "tool_call": true
     }

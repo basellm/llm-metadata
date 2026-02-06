@@ -7,6 +7,39 @@
   "id": "venice",
   "lobeIcon": "VeniceAI",
   "models": {
+    "claude-opus-4-6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.6,
+        "cache_write": 7.5,
+        "input": 6,
+        "output": 30
+      },
+      "description": "Claude Opus 4.6 是由 venice 提供的人工智能模型。",
+      "family": "claude-opus",
+      "id": "claude-opus-4-6",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "claude-opus-45": {
       "attachment": true,
       "cost": {
@@ -850,6 +883,36 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-12-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org-glm-4.7-flash": {
+      "attachment": false,
+      "cost": {
+        "input": 0.125,
+        "output": 0.5
+      },
+      "description": "GLM 4.7 Flash 是由 venice 提供的人工智能模型。",
+      "family": "glm-flash",
+      "id": "zai-org-glm-4.7-flash",
+      "last_updated": "2026-01-30",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.7 Flash",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-29",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
