@@ -1,20 +1,20 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.1,
-    "input": 0.58,
-    "output": 3.02
+    "input": 0.5,
+    "output": 2.8
   },
-  "description": "Kimi K2.5 は zenmux によって提供される AI モデルです。",
-  "id": "moonshotai/kimi-k2.5",
+  "description": "Kimi K2.5 は deepinfra によって提供される AI モデルです。",
+  "family": "kimi",
+  "id": "moonshotai/Kimi-K2.5",
   "interleaved": {
     "field": "reasoning_content"
   },
-  "knowledge": "2025-01-01",
+  "knowledge": "2025-01",
   "last_updated": "2026-01-27",
   "limit": {
-    "context": 262000,
-    "output": 64000
+    "context": 262144,
+    "output": 32768
   },
   "modalities": {
     "input": [
@@ -27,9 +27,10 @@
     ]
   },
   "name": "Kimi K2.5",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
   "release_date": "2026-01-27",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }
