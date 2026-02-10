@@ -12519,6 +12519,36 @@
       ]
     },
     {
+      "description": "Kimi K2.5 は amazon-bedrock によって提供される AI モデルです。",
+      "firm": "amazon-bedrock",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:amazonbedrock-color",
+      "id": "moonshotai.kimi-k2.5",
+      "maxCtxTokens": 256000,
+      "maxOutputTokens": 256000,
+      "name": "Kimi K2.5",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.6,
+        "output": 3
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "vision",
+        "256K"
+      ]
+    },
+    {
       "description": "NVIDIA Nemotron Nano 12B v2 VL BF16 は amazon-bedrock によって提供される AI モデルです。",
       "firm": "amazon-bedrock",
       "flags": {
@@ -26510,34 +26540,6 @@
       ]
     },
     {
-      "description": "DeepSeek v3.2 は firmware によって提供される AI モデルです。",
-      "firm": "firmware",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "",
-      "id": "deepseek-v3",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 8192,
-      "name": "DeepSeek v3.2",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 0.58,
-        "output": 1.68
-      },
-      "tags": [
-        "tools",
-        "files",
-        "128K"
-      ]
-    },
-    {
       "description": "Gemini 2.5 Flash は firmware によって提供される AI モデルです。",
       "firm": "firmware",
       "flags": {
@@ -26840,7 +26842,7 @@
       ]
     },
     {
-      "description": "GPT OSS 120B は firmware によって提供される AI モデルです。",
+      "description": "GPT OSS 20B は firmware によって提供される AI モデルです。",
       "firm": "firmware",
       "flags": {
         "attachment": false,
@@ -26854,7 +26856,7 @@
       "id": "gpt-oss-20b",
       "maxCtxTokens": 131072,
       "maxOutputTokens": 32768,
-      "name": "GPT OSS 120B",
+      "name": "GPT OSS 20B",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
@@ -65992,7 +65994,7 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
@@ -66008,6 +66010,7 @@
         "output": 0.5
       },
       "tags": [
+        "reasoning",
         "tools",
         "open_weights",
         "128K"
