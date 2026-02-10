@@ -120,6 +120,49 @@
       "temperature": true,
       "tool_call": true
     },
+    "claude-opus-4-6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "context_over_200k": {
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 37.5
+        },
+        "input": 5,
+        "output": 25
+      },
+      "description": "Claude Opus 4.6 is an AI model provided by azure-cognitive-services.",
+      "family": "claude-opus",
+      "id": "claude-opus-4-6",
+      "knowledge": "2025-05",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.6",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/anthropic"
+      },
+      "reasoning": true,
+      "release_date": "2026-02-05",
+      "temperature": true,
+      "tool_call": true
+    },
     "claude-sonnet-4-5": {
       "attachment": true,
       "cost": {
@@ -1622,6 +1665,39 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-11-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 3
+      },
+      "description": "Kimi K2.5 is an AI model provided by azure-cognitive-services.",
+      "family": "kimi",
+      "id": "kimi-k2.5",
+      "interleaved": true,
+      "knowledge": "2025-01",
+      "last_updated": "2026-02-06",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-06",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
