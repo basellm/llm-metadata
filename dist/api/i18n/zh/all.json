@@ -11390,6 +11390,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "minimax.minimax-m2.1": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.1 是由 amazon-bedrock 提供的人工智能模型。",
+        "family": "minimax",
+        "id": "minimax.minimax-m2.1",
+        "last_updated": "2025-12-23",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-23",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "mistral.ministral-3-14b-instruct": {
         "attachment": false,
         "cost": {
@@ -12253,6 +12283,69 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-09-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai.glm-4.7": {
+        "attachment": false,
+        "cost": {
+          "input": 0.6,
+          "output": 2.2
+        },
+        "description": "GLM-4.7 是由 amazon-bedrock 提供的人工智能模型。",
+        "family": "glm",
+        "id": "zai.glm-4.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2025-12-22",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai.glm-4.7-flash": {
+        "attachment": false,
+        "cost": {
+          "input": 0.07,
+          "output": 0.4
+        },
+        "description": "GLM-4.7-Flash 是由 amazon-bedrock 提供的人工智能模型。",
+        "family": "glm-flash",
+        "id": "zai.glm-4.7-flash",
+        "knowledge": "2025-04",
+        "last_updated": "2026-01-19",
+        "limit": {
+          "context": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-19",
         "temperature": true,
         "tool_call": true
       }
@@ -28243,7 +28336,7 @@
         "last_updated": "2025-10-15",
         "limit": {
           "context": 128000,
-          "output": 16000
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -28274,7 +28367,7 @@
         "last_updated": "2025-08-01",
         "limit": {
           "context": 128000,
-          "output": 16000
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -28398,7 +28491,7 @@
         "last_updated": "2025-09-29",
         "limit": {
           "context": 128000,
-          "output": 16000
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -28529,7 +28622,7 @@
         "knowledge": "2024-04",
         "last_updated": "2025-04-14",
         "limit": {
-          "context": 128000,
+          "context": 64000,
           "output": 16384
         },
         "modalities": {
@@ -28654,7 +28747,7 @@
         "last_updated": "2025-11-13",
         "limit": {
           "context": 128000,
-          "output": 128000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -28747,7 +28840,7 @@
         "last_updated": "2025-11-13",
         "limit": {
           "context": 128000,
-          "output": 100000
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -36776,6 +36869,39 @@
         "release_date": "2025-08-08",
         "temperature": true,
         "tool_call": true
+      },
+      "zai-org/GLM-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5 是由 huggingface 提供的人工智能模型。",
+        "family": "glm",
+        "id": "zai-org/GLM-5",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 202752,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Hugging Face",
@@ -38335,6 +38461,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "claude-opus-4-6": {
+        "attachment": true,
+        "cost": {
+          "input": 5,
+          "output": 25
+        },
+        "description": "claude-opus-4-6 是由 jiekou 提供的人工智能模型。",
+        "family": "claude-opus",
+        "id": "claude-opus-4-6",
+        "last_updated": "2026-02",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "claude-opus-4-6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "claude-sonnet-4-20250514": {
         "attachment": true,
         "cost": {
@@ -38935,6 +39092,37 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-01",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gpt-5.1": {
+        "attachment": true,
+        "cost": {
+          "input": 1.125,
+          "output": 9
+        },
+        "description": "gpt-5.1 是由 jiekou 提供的人工智能模型。",
+        "family": "gpt",
+        "id": "gpt-5.1",
+        "last_updated": "2026-02",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "gpt-5.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -39555,38 +39743,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen/qwen2.5-vl-72b-instruct": {
-        "attachment": true,
-        "cost": {
-          "input": 0.8,
-          "output": 0.8
-        },
-        "description": "Qwen2.5 VL 72B Instruct 是由 jiekou 提供的人工智能模型。",
-        "family": "qwen",
-        "id": "qwen/qwen2.5-vl-72b-instruct",
-        "last_updated": "2026-01",
-        "limit": {
-          "context": 32768,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen2.5 VL 72B Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2026-01",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
       "qwen/qwen3-235b-a22b-fp8": {
         "attachment": false,
         "cost": {
@@ -39763,6 +39919,36 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-01",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3-coder-next": {
+        "attachment": false,
+        "cost": {
+          "input": 0.2,
+          "output": 1.5
+        },
+        "description": "qwen/qwen3-coder-next 是由 jiekou 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "qwen/qwen3-coder-next",
+        "last_updated": "2026-02",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "qwen/qwen3-coder-next",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-02",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -68225,6 +68411,254 @@
     "name": "SiliconFlow (China)",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "stackit": {
+    "api": "https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1",
+    "doc": "https://docs.stackit.cloud/products/data-and-ai/ai-model-serving/basics/available-shared-models",
+    "env": [
+      "STACKIT_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/stackit.svg",
+    "id": "stackit",
+    "models": {
+      "e5-mistral-7b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.02,
+          "output": 0.02
+        },
+        "description": "E5 Mistral 7B 是由 stackit 提供的人工智能模型。",
+        "id": "e5-mistral-7b",
+        "last_updated": "2023-12-11",
+        "limit": {
+          "context": 4096,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "E5 Mistral 7B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2023-12-11",
+        "structured_output": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "gemma-3-27b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.53,
+          "output": 0.77
+        },
+        "description": "Gemma 3 27B 是由 stackit 提供的人工智能模型。",
+        "id": "gemma-3-27b",
+        "last_updated": "2025-05-17",
+        "limit": {
+          "context": 37000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 3 27B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-05-17",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
+      },
+      "gpt-oss-120b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.53,
+          "output": 0.77
+        },
+        "description": "GPT-OSS 120B 是由 stackit 提供的人工智能模型。",
+        "id": "gpt-oss-120b",
+        "last_updated": "2025-08-05",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-OSS 120B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-05",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "llama-3.1-8b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.18,
+          "output": 0.3
+        },
+        "description": "Llama 3.1 8B 是由 stackit 提供的人工智能模型。",
+        "id": "llama-3.1-8b",
+        "last_updated": "2024-07-23",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.1 8B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-07-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "llama-3.3-70b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.53,
+          "output": 0.77
+        },
+        "description": "Llama 3.3 70B 是由 stackit 提供的人工智能模型。",
+        "id": "llama-3.3-70b",
+        "last_updated": "2024-12-05",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.3 70B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-12-05",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "mistral-nemo": {
+        "attachment": false,
+        "cost": {
+          "input": 0.53,
+          "output": 0.77
+        },
+        "description": "Mistral Nemo 是由 stackit 提供的人工智能模型。",
+        "id": "mistral-nemo",
+        "last_updated": "2024-07-01",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mistral Nemo",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-07-01",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-vl-235b": {
+        "attachment": true,
+        "cost": {
+          "input": 1.77,
+          "output": 2.07
+        },
+        "description": "Qwen3-VL 235B 是由 stackit 提供的人工智能模型。",
+        "id": "qwen3-vl-235b",
+        "last_updated": "2024-11-01",
+        "limit": {
+          "context": 218000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-VL 235B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-11-01",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-vl-embedding-8b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.09,
+          "output": 0.09
+        },
+        "description": "Qwen3-VL Embedding 8B 是由 stackit 提供的人工智能模型。",
+        "id": "qwen3-vl-embedding-8b",
+        "last_updated": "2026-02-05",
+        "limit": {
+          "context": 32000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-VL Embedding 8B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-02-05",
+        "structured_output": false,
+        "temperature": false,
+        "tool_call": false
+      }
+    },
+    "name": "STACKIT",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "submodel": {
     "api": "https://llm.submodel.ai/v1",
     "doc": "https://submodel.gitbook.io",
@@ -69323,7 +69757,7 @@
         "last_updated": "2025-07-25",
         "limit": {
           "context": 262144,
-          "output": 131072
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -69353,7 +69787,7 @@
         "last_updated": "2025-07-23",
         "limit": {
           "context": 262144,
-          "output": 66536
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -69383,7 +69817,7 @@
         "last_updated": "2026-02-03",
         "limit": {
           "context": 262144,
-          "output": 32000
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -69413,7 +69847,7 @@
         "last_updated": "2025-07-25",
         "limit": {
           "context": 262144,
-          "output": 131072
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -69443,7 +69877,7 @@
         "last_updated": "2025-03-24",
         "limit": {
           "context": 163839,
-          "output": 12288
+          "output": 163839
         },
         "modalities": {
           "input": [
@@ -69473,7 +69907,7 @@
         "last_updated": "2025-05-29",
         "limit": {
           "context": 131072,
-          "output": 12288
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -69503,7 +69937,7 @@
         "last_updated": "2025-08-21",
         "limit": {
           "context": 131072,
-          "output": 12288
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -69563,7 +69997,7 @@
         "last_updated": "2024-12-06",
         "limit": {
           "context": 131072,
-          "output": 66536
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -69593,7 +70027,7 @@
         "last_updated": "2025-07-14",
         "limit": {
           "context": 131072,
-          "output": 32768
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -69623,7 +70057,7 @@
         "last_updated": "2025-09-05",
         "limit": {
           "context": 262144,
-          "output": 32768
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -69654,7 +70088,7 @@
         "last_updated": "2025-11-06",
         "limit": {
           "context": 262144,
-          "output": 32768
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -69746,7 +70180,7 @@
         "last_updated": "2025-09-30",
         "limit": {
           "context": 200000,
-          "output": 32768
+          "output": 200000
         },
         "modalities": {
           "input": [
@@ -69776,7 +70210,7 @@
         "last_updated": "2025-07-25",
         "limit": {
           "context": 200000,
-          "output": 128000
+          "output": 200000
         },
         "modalities": {
           "input": [
@@ -78519,6 +78953,40 @@
         "release_date": "2026-01-19",
         "temperature": true,
         "tool_call": true
+      },
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-5 是由 zai 提供的人工智能模型。",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Z.AI",
@@ -78789,6 +79257,40 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-01-19",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-5 是由 zai-coding-plan 提供的人工智能模型。",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-11",
         "temperature": true,
         "tool_call": true
       }
@@ -80956,6 +81458,40 @@
         "release_date": "2026-01-19",
         "temperature": true,
         "tool_call": true
+      },
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-5 是由 zhipuai 提供的人工智能模型。",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Zhipu AI",
@@ -81226,6 +81762,40 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-5 是由 zhipuai-coding-plan 提供的人工智能模型。",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-11",
         "temperature": true,
         "tool_call": true
       }
