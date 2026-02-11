@@ -1,0 +1,429 @@
+{
+  "api": "https://api.scaleway.ai/v1",
+  "doc": "https://www.scaleway.com/en/docs/generative-apis/",
+  "env": [
+    "SCALEWAY_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/scaleway.svg",
+  "id": "scaleway",
+  "models": {
+    "bge-multilingual-gemma2": {
+      "attachment": false,
+      "cost": {
+        "input": 0.13,
+        "output": 0
+      },
+      "description": "BGE Multilingual Gemma2 是由 scaleway 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "bge-multilingual-gemma2",
+      "last_updated": "2025-06-15",
+      "limit": {
+        "context": 8191,
+        "output": 3072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "BGE Multilingual Gemma2",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-07-26",
+      "temperature": false,
+      "tool_call": false
+    },
+    "deepseek-r1-distill-llama-70b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.9,
+        "output": 0.9
+      },
+      "description": "DeepSeek R1 Distill Llama 70B 是由 scaleway 提供的人工智慧模型。",
+      "family": "deepseek-thinking",
+      "id": "deepseek-r1-distill-llama-70b",
+      "knowledge": "2024-07",
+      "last_updated": "2025-01-20",
+      "limit": {
+        "context": 32000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek R1 Distill Llama 70B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-01-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "devstral-2-123b-instruct-2512": {
+      "attachment": false,
+      "cost": {
+        "input": 0.4,
+        "output": 2
+      },
+      "description": "Devstral 2 123B Instruct (2512) 是由 scaleway 提供的人工智慧模型。",
+      "family": "devstral",
+      "id": "devstral-2-123b-instruct-2512",
+      "last_updated": "2026-01-07",
+      "limit": {
+        "context": 256000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral 2 123B Instruct (2512)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemma-3-27b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.25,
+        "output": 0.5
+      },
+      "description": "Gemma-3-27B-IT 是由 scaleway 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "gemma-3-27b-it",
+      "knowledge": "2024-12",
+      "last_updated": "2025-09-05",
+      "limit": {
+        "context": 40000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma-3-27B-IT",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2024-12-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-oss-120b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "GPT-OSS 120B 是由 scaleway 提供的人工智慧模型。",
+      "family": "gpt-oss",
+      "id": "gpt-oss-120b",
+      "last_updated": "2024-01-01",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-OSS 120B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-01-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "llama-3.1-8b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.2,
+        "output": 0.2
+      },
+      "description": "Llama 3.1 8B Instruct 是由 scaleway 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "llama-3.1-8b-instruct",
+      "knowledge": "2023-12",
+      "last_updated": "2025-01-01",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 8B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-01-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "llama-3.3-70b-instruct": {
+      "attachment": true,
+      "cost": {
+        "input": 0.9,
+        "output": 0.9
+      },
+      "description": "Llama-3.3-70B-Instruct 是由 scaleway 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "llama-3.3-70b-instruct",
+      "knowledge": "2023-12",
+      "last_updated": "2024-12-06",
+      "limit": {
+        "context": 100000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama-3.3-70B-Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-12-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistral-nemo-instruct-2407": {
+      "attachment": true,
+      "cost": {
+        "input": 0.2,
+        "output": 0.2
+      },
+      "description": "Mistral Nemo Instruct 2407 是由 scaleway 提供的人工智慧模型。",
+      "family": "mistral-nemo",
+      "id": "mistral-nemo-instruct-2407",
+      "last_updated": "2024-07-25",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Nemo Instruct 2407",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-07-25",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistral-small-3.2-24b-instruct-2506": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.35
+      },
+      "description": "Mistral Small 3.2 24B Instruct (2506) 是由 scaleway 提供的人工智慧模型。",
+      "family": "mistral-small",
+      "id": "mistral-small-3.2-24b-instruct-2506",
+      "last_updated": "2025-06-20",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Small 3.2 24B Instruct (2506)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-06-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "pixtral-12b-2409": {
+      "attachment": true,
+      "cost": {
+        "input": 0.2,
+        "output": 0.2
+      },
+      "description": "Pixtral 12B 2409 是由 scaleway 提供的人工智慧模型。",
+      "family": "pixtral",
+      "id": "pixtral-12b-2409",
+      "last_updated": "2024-09-25",
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Pixtral 12B 2409",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-09-25",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-235b-a22b-instruct-2507": {
+      "attachment": true,
+      "cost": {
+        "input": 0.75,
+        "output": 2.25
+      },
+      "description": "Qwen3 235B A22B Instruct 2507 是由 scaleway 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen3-235b-a22b-instruct-2507",
+      "last_updated": "2025-07-01",
+      "limit": {
+        "context": 260000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 235B A22B Instruct 2507",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-coder-30b-a3b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.2,
+        "output": 0.8
+      },
+      "description": "Qwen3-Coder 30B-A3B Instruct 是由 scaleway 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen3-coder-30b-a3b-instruct",
+      "knowledge": "2025-04",
+      "last_updated": "2025-04",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3-Coder 30B-A3B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04",
+      "temperature": true,
+      "tool_call": true
+    },
+    "voxtral-small-24b-2507": {
+      "attachment": true,
+      "cost": {
+        "input": 0.15,
+        "output": 0.35
+      },
+      "description": "Voxtral Small 24B 2507 是由 scaleway 提供的人工智慧模型。",
+      "family": "voxtral",
+      "id": "voxtral-small-24b-2507",
+      "last_updated": "2025-07-01",
+      "limit": {
+        "context": 32000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Voxtral Small 24B 2507",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "whisper-large-v3": {
+      "attachment": false,
+      "cost": {
+        "input": 0.003,
+        "output": 0
+      },
+      "description": "Whisper Large v3 是由 scaleway 提供的人工智慧模型。",
+      "family": "whisper",
+      "id": "whisper-large-v3",
+      "knowledge": "2023-09",
+      "last_updated": "2025-09-05",
+      "limit": {
+        "context": 0,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Whisper Large v3",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2023-09-01",
+      "temperature": false,
+      "tool_call": false
+    }
+  },
+  "name": "Scaleway",
+  "npm": "@ai-sdk/openai-compatible"
+}

@@ -1,0 +1,1842 @@
+{
+  "api": "https://api.jiekou.ai/openai",
+  "doc": "https://docs.jiekou.ai/docs/support/quickstart?utm_source=github_models.dev",
+  "env": [
+    "JIEKOU_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/jiekou.svg",
+  "id": "jiekou",
+  "models": {
+    "baidu/ernie-4.5-300b-a47b-paddle": {
+      "attachment": false,
+      "cost": {
+        "input": 0.28,
+        "output": 1.1
+      },
+      "description": "ERNIE 4.5 300B A47B 是由 jiekou 提供的人工智慧模型。",
+      "family": "ernie",
+      "id": "baidu/ernie-4.5-300b-a47b-paddle",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 123000,
+        "output": 12000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "ERNIE 4.5 300B A47B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "baidu/ernie-4.5-vl-424b-a47b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.42,
+        "output": 1.25
+      },
+      "description": "ERNIE 4.5 VL 424B A47B 是由 jiekou 提供的人工智慧模型。",
+      "family": "ernie",
+      "id": "baidu/ernie-4.5-vl-424b-a47b",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 123000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "ERNIE 4.5 VL 424B A47B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-haiku-4-5-20251001": {
+      "attachment": true,
+      "cost": {
+        "input": 0.9,
+        "output": 4.5
+      },
+      "description": "claude-haiku-4-5-20251001 是由 jiekou 提供的人工智慧模型。",
+      "family": "claude-haiku",
+      "id": "claude-haiku-4-5-20251001",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 20000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "claude-haiku-4-5-20251001",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-4-1-20250805": {
+      "attachment": true,
+      "cost": {
+        "input": 13.5,
+        "output": 67.5
+      },
+      "description": "claude-opus-4-1-20250805 是由 jiekou 提供的人工智慧模型。",
+      "family": "claude-opus",
+      "id": "claude-opus-4-1-20250805",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "claude-opus-4-1-20250805",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-4-20250514": {
+      "attachment": true,
+      "cost": {
+        "input": 13.5,
+        "output": 67.5
+      },
+      "description": "claude-opus-4-20250514 是由 jiekou 提供的人工智慧模型。",
+      "family": "claude-opus",
+      "id": "claude-opus-4-20250514",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "claude-opus-4-20250514",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-4-5-20251101": {
+      "attachment": true,
+      "cost": {
+        "input": 4.5,
+        "output": 22.5
+      },
+      "description": "claude-opus-4-5-20251101 是由 jiekou 提供的人工智慧模型。",
+      "family": "claude-opus",
+      "id": "claude-opus-4-5-20251101",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 200000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "claude-opus-4-5-20251101",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-sonnet-4-20250514": {
+      "attachment": true,
+      "cost": {
+        "input": 2.7,
+        "output": 13.5
+      },
+      "description": "claude-sonnet-4-20250514 是由 jiekou 提供的人工智慧模型。",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4-20250514",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "claude-sonnet-4-20250514",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-sonnet-4-5-20250929": {
+      "attachment": true,
+      "cost": {
+        "input": 2.7,
+        "output": 13.5
+      },
+      "description": "claude-sonnet-4-5-20250929 是由 jiekou 提供的人工智慧模型。",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4-5-20250929",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "claude-sonnet-4-5-20250929",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-r1-0528": {
+      "attachment": false,
+      "cost": {
+        "input": 0.7,
+        "output": 2.5
+      },
+      "description": "DeepSeek R1 0528 是由 jiekou 提供的人工智慧模型。",
+      "family": "deepseek-thinking",
+      "id": "deepseek/deepseek-r1-0528",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 163840,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek R1 0528",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v3-0324": {
+      "attachment": false,
+      "cost": {
+        "input": 0.28,
+        "output": 1.14
+      },
+      "description": "DeepSeek V3 0324 是由 jiekou 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v3-0324",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3 0324",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v3.1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.27,
+        "output": 1
+      },
+      "description": "DeepSeek V3.1 是由 jiekou 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v3.1",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 163840,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-2.5-flash": {
+      "attachment": true,
+      "cost": {
+        "input": 0.27,
+        "output": 2.25
+      },
+      "description": "gemini-2.5-flash 是由 jiekou 提供的人工智慧模型。",
+      "family": "gemini-flash",
+      "id": "gemini-2.5-flash",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 1048576,
+        "output": 65535
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemini-2.5-flash",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-2.5-flash-lite": {
+      "attachment": true,
+      "cost": {
+        "input": 0.09,
+        "output": 0.36
+      },
+      "description": "gemini-2.5-flash-lite 是由 jiekou 提供的人工智慧模型。",
+      "family": "gemini-flash-lite",
+      "id": "gemini-2.5-flash-lite",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 1048576,
+        "output": 65535
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemini-2.5-flash-lite",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-2.5-flash-lite-preview-06-17": {
+      "attachment": true,
+      "cost": {
+        "input": 0.09,
+        "output": 0.36
+      },
+      "description": "gemini-2.5-flash-lite-preview-06-17 是由 jiekou 提供的人工智慧模型。",
+      "family": "gemini-flash-lite",
+      "id": "gemini-2.5-flash-lite-preview-06-17",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 1048576,
+        "output": 65535
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "video",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemini-2.5-flash-lite-preview-06-17",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-2.5-flash-lite-preview-09-2025": {
+      "attachment": true,
+      "cost": {
+        "input": 0.09,
+        "output": 0.36
+      },
+      "description": "gemini-2.5-flash-lite-preview-09-2025 是由 jiekou 提供的人工智慧模型。",
+      "family": "gemini-flash-lite",
+      "id": "gemini-2.5-flash-lite-preview-09-2025",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemini-2.5-flash-lite-preview-09-2025",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-2.5-flash-preview-05-20": {
+      "attachment": true,
+      "cost": {
+        "input": 0.135,
+        "output": 3.15
+      },
+      "description": "gemini-2.5-flash-preview-05-20 是由 jiekou 提供的人工智慧模型。",
+      "family": "gemini-flash",
+      "id": "gemini-2.5-flash-preview-05-20",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 1048576,
+        "output": 200000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemini-2.5-flash-preview-05-20",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-2.5-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 1.125,
+        "output": 9
+      },
+      "description": "gemini-2.5-pro 是由 jiekou 提供的人工智慧模型。",
+      "family": "gemini-pro",
+      "id": "gemini-2.5-pro",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 1048576,
+        "output": 65535
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemini-2.5-pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-2.5-pro-preview-06-05": {
+      "attachment": true,
+      "cost": {
+        "input": 1.125,
+        "output": 9
+      },
+      "description": "gemini-2.5-pro-preview-06-05 是由 jiekou 提供的人工智慧模型。",
+      "family": "gemini-pro",
+      "id": "gemini-2.5-pro-preview-06-05",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 1048576,
+        "output": 200000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemini-2.5-pro-preview-06-05",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3-flash-preview": {
+      "attachment": true,
+      "cost": {
+        "input": 0.5,
+        "output": 3
+      },
+      "description": "gemini-3-flash-preview 是由 jiekou 提供的人工智慧模型。",
+      "family": "gemini-flash",
+      "id": "gemini-3-flash-preview",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemini-3-flash-preview",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3-pro-preview": {
+      "attachment": true,
+      "cost": {
+        "input": 1.8,
+        "output": 10.8
+      },
+      "description": "gemini-3-pro-preview 是由 jiekou 提供的人工智慧模型。",
+      "family": "gemini-pro",
+      "id": "gemini-3-pro-preview",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemini-3-pro-preview",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5-chat-latest": {
+      "attachment": true,
+      "cost": {
+        "input": 1.125,
+        "output": 9
+      },
+      "description": "gpt-5-chat-latest 是由 jiekou 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-5-chat-latest",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-5-chat-latest",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5-codex": {
+      "attachment": true,
+      "cost": {
+        "input": 1.125,
+        "output": 9
+      },
+      "description": "gpt-5-codex 是由 jiekou 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5-codex",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-5-codex",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5-mini": {
+      "attachment": true,
+      "cost": {
+        "input": 0.225,
+        "output": 1.8
+      },
+      "description": "gpt-5-mini 是由 jiekou 提供的人工智慧模型。",
+      "family": "gpt-mini",
+      "id": "gpt-5-mini",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-5-mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5-nano": {
+      "attachment": true,
+      "cost": {
+        "input": 0.045,
+        "output": 0.36
+      },
+      "description": "gpt-5-nano 是由 jiekou 提供的人工智慧模型。",
+      "family": "gpt-nano",
+      "id": "gpt-5-nano",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-5-nano",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 13.5,
+        "output": 108
+      },
+      "description": "gpt-5-pro 是由 jiekou 提供的人工智慧模型。",
+      "family": "gpt-pro",
+      "id": "gpt-5-pro",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 400000,
+        "output": 272000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-5-pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5.1-codex": {
+      "attachment": true,
+      "cost": {
+        "input": 1.125,
+        "output": 9
+      },
+      "description": "gpt-5.1-codex 是由 jiekou 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.1-codex",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-5.1-codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5.1-codex-max": {
+      "attachment": true,
+      "cost": {
+        "input": 1.125,
+        "output": 9
+      },
+      "description": "gpt-5.1-codex-max 是由 jiekou 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.1-codex-max",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-5.1-codex-max",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5.1-codex-mini": {
+      "attachment": true,
+      "cost": {
+        "input": 0.225,
+        "output": 1.8
+      },
+      "description": "gpt-5.1-codex-mini 是由 jiekou 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.1-codex-mini",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-5.1-codex-mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5.2": {
+      "attachment": true,
+      "cost": {
+        "input": 1.575,
+        "output": 12.6
+      },
+      "description": "gpt-5.2 是由 jiekou 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-5.2",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-5.2",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5.2-codex": {
+      "attachment": true,
+      "cost": {
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "gpt-5.2-codex 是由 jiekou 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.2-codex",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-5.2-codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5.2-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 18.9,
+        "output": 151.2
+      },
+      "description": "gpt-5.2-pro 是由 jiekou 提供的人工智慧模型。",
+      "family": "gpt-pro",
+      "id": "gpt-5.2-pro",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-5.2-pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "grok-4-0709": {
+      "attachment": true,
+      "cost": {
+        "input": 2.7,
+        "output": 13.5
+      },
+      "description": "grok-4-0709 是由 jiekou 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "grok-4-0709",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 256000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "grok-4-0709",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "grok-4-1-fast-non-reasoning": {
+      "attachment": true,
+      "cost": {
+        "input": 0.18,
+        "output": 0.45
+      },
+      "description": "grok-4-1-fast-non-reasoning 是由 jiekou 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "grok-4-1-fast-non-reasoning",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "grok-4-1-fast-non-reasoning",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "grok-4-1-fast-reasoning": {
+      "attachment": true,
+      "cost": {
+        "input": 0.18,
+        "output": 0.45
+      },
+      "description": "grok-4-1-fast-reasoning 是由 jiekou 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "grok-4-1-fast-reasoning",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "grok-4-1-fast-reasoning",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "grok-4-fast-non-reasoning": {
+      "attachment": true,
+      "cost": {
+        "input": 0.18,
+        "output": 0.45
+      },
+      "description": "grok-4-fast-non-reasoning 是由 jiekou 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "grok-4-fast-non-reasoning",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "grok-4-fast-non-reasoning",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "grok-4-fast-reasoning": {
+      "attachment": true,
+      "cost": {
+        "input": 0.18,
+        "output": 0.45
+      },
+      "description": "grok-4-fast-reasoning 是由 jiekou 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "grok-4-fast-reasoning",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "grok-4-fast-reasoning",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "grok-code-fast-1": {
+      "attachment": true,
+      "cost": {
+        "input": 0.18,
+        "output": 1.35
+      },
+      "description": "grok-code-fast-1 是由 jiekou 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "grok-code-fast-1",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "grok-code-fast-1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Minimax M2.1 是由 jiekou 提供的人工智慧模型。",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.1",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Minimax M2.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimaxai/minimax-m1-80k": {
+      "attachment": false,
+      "cost": {
+        "input": 0.55,
+        "output": 2.2
+      },
+      "description": "MiniMax M1 是由 jiekou 提供的人工智慧模型。",
+      "family": "minimax",
+      "id": "minimaxai/minimax-m1-80k",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 1000000,
+        "output": 40000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2-0905": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 2.5
+      },
+      "description": "Kimi K2 0905 是由 jiekou 提供的人工智慧模型。",
+      "family": "kimi",
+      "id": "moonshotai/kimi-k2-0905",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 0905",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.57,
+        "output": 2.3
+      },
+      "description": "Kimi K2 Instruct 是由 jiekou 提供的人工智慧模型。",
+      "family": "kimi",
+      "id": "moonshotai/kimi-k2-instruct",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2.5": {
+      "attachment": true,
+      "cost": {
+        "input": 0.6,
+        "output": 3
+      },
+      "description": "Kimi K2.5 是由 jiekou 提供的人工智慧模型。",
+      "family": "kimi",
+      "id": "moonshotai/kimi-k2.5",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "o3": {
+      "attachment": true,
+      "cost": {
+        "input": 10,
+        "output": 40
+      },
+      "description": "o3 是由 jiekou 提供的人工智慧模型。",
+      "id": "o3",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o3",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "o3-mini": {
+      "attachment": true,
+      "cost": {
+        "input": 1.1,
+        "output": 4.4
+      },
+      "description": "o3-mini 是由 jiekou 提供的人工智慧模型。",
+      "family": "o",
+      "id": "o3-mini",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o3-mini",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "o4-mini": {
+      "attachment": true,
+      "cost": {
+        "input": 1.1,
+        "output": 4.4
+      },
+      "description": "o4-mini 是由 jiekou 提供的人工智慧模型。",
+      "family": "o",
+      "id": "o4-mini",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o4-mini",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen2.5-vl-72b-instruct": {
+      "attachment": true,
+      "cost": {
+        "input": 0.8,
+        "output": 0.8
+      },
+      "description": "Qwen2.5 VL 72B Instruct 是由 jiekou 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen2.5-vl-72b-instruct",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen2.5 VL 72B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
+    "qwen/qwen3-235b-a22b-fp8": {
+      "attachment": false,
+      "cost": {
+        "input": 0.2,
+        "output": 0.8
+      },
+      "description": "Qwen3 235B A22B 是由 jiekou 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-235b-a22b-fp8",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 40960,
+        "output": 20000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 235B A22B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
+    "qwen/qwen3-235b-a22b-instruct-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.8
+      },
+      "description": "Qwen3 235B A22B Instruct 2507 是由 jiekou 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-235b-a22b-instruct-2507",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 235B A22B Instruct 2507",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-235b-a22b-thinking-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 3
+      },
+      "description": "Qwen3 235B A22b Thinking 2507 是由 jiekou 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-235b-a22b-thinking-2507",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 235B A22b Thinking 2507",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-30b-a3b-fp8": {
+      "attachment": false,
+      "cost": {
+        "input": 0.09,
+        "output": 0.45
+      },
+      "description": "Qwen3 30B A3B 是由 jiekou 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-30b-a3b-fp8",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 40960,
+        "output": 20000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 30B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
+    "qwen/qwen3-32b-fp8": {
+      "attachment": false,
+      "cost": {
+        "input": 0.1,
+        "output": 0.45
+      },
+      "description": "Qwen3 32B 是由 jiekou 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-32b-fp8",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 40960,
+        "output": 20000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 32B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
+    "qwen/qwen3-coder-480b-a35b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.29,
+        "output": 1.2
+      },
+      "description": "Qwen3 Coder 480B A35B Instruct 是由 jiekou 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-coder-480b-a35b-instruct",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder 480B A35B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-next-80b-a3b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 1.5
+      },
+      "description": "Qwen3 Next 80B A3B Instruct 是由 jiekou 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-next-80b-a3b-instruct",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Next 80B A3B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-next-80b-a3b-thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 1.5
+      },
+      "description": "Qwen3 Next 80B A3B Thinking 是由 jiekou 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-next-80b-a3b-thinking",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Next 80B A3B Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "xiaomimimo/mimo-v2-flash": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "XiaomiMiMo/MiMo-V2-Flash 是由 jiekou 提供的人工智慧模型。",
+      "family": "mimo",
+      "id": "xiaomimimo/mimo-v2-flash",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "XiaomiMiMo/MiMo-V2-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/glm-4.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 2.2
+      },
+      "description": "GLM-4.5 是由 jiekou 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "zai-org/glm-4.5",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 131072,
+        "output": 98304
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/glm-4.5v": {
+      "attachment": true,
+      "cost": {
+        "input": 0.6,
+        "output": 1.8
+      },
+      "description": "GLM 4.5V 是由 jiekou 提供的人工智慧模型。",
+      "family": "glmv",
+      "id": "zai-org/glm-4.5v",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 65536,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.5V",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/glm-4.7": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 2.2
+      },
+      "description": "GLM-4.7 是由 jiekou 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "zai-org/glm-4.7",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.7",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/glm-4.7-flash": {
+      "attachment": false,
+      "cost": {
+        "input": 0.07,
+        "output": 0.4
+      },
+      "description": "GLM-4.7-Flash 是由 jiekou 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "zai-org/glm-4.7-flash",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.7-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Jiekou.AI",
+  "npm": "@ai-sdk/openai-compatible"
+}

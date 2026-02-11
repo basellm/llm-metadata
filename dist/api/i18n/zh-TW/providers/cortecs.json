@@ -1,0 +1,660 @@
+{
+  "api": "https://api.cortecs.ai/v1",
+  "doc": "https://api.cortecs.ai/v1/models",
+  "env": [
+    "CORTECS_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/cortecs.svg",
+  "id": "cortecs",
+  "models": {
+    "claude-4-5-sonnet": {
+      "attachment": true,
+      "cost": {
+        "input": 3.259,
+        "output": 16.296
+      },
+      "description": "Claude 4.5 Sonnet 是由 cortecs 提供的人工智慧模型。",
+      "family": "claude-sonnet",
+      "id": "claude-4-5-sonnet",
+      "knowledge": "2025-07-31",
+      "last_updated": "2025-09-29",
+      "limit": {
+        "context": 200000,
+        "output": 200000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude 4.5 Sonnet",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-sonnet-4": {
+      "attachment": false,
+      "cost": {
+        "input": 3.307,
+        "output": 16.536
+      },
+      "description": "Claude Sonnet 4 是由 cortecs 提供的人工智慧模型。",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4",
+      "knowledge": "2025-03",
+      "last_updated": "2025-05-22",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-05-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v3-0324": {
+      "attachment": false,
+      "cost": {
+        "input": 0.551,
+        "output": 1.654
+      },
+      "description": "DeepSeek V3 0324 是由 cortecs 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek-v3-0324",
+      "knowledge": "2024-07",
+      "last_updated": "2025-03-24",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3 0324",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-24",
+      "temperature": true,
+      "tool_call": true
+    },
+    "devstral-2512": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Devstral 2 2512 是由 cortecs 提供的人工智慧模型。",
+      "id": "devstral-2512",
+      "knowledge": "2025-12",
+      "last_updated": "2025-12-09",
+      "limit": {
+        "context": 262000,
+        "output": 262000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral 2 2512",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-09",
+      "temperature": true,
+      "tool_call": true
+    },
+    "devstral-small-2512": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Devstral Small 2 2512 是由 cortecs 提供的人工智慧模型。",
+      "id": "devstral-small-2512",
+      "knowledge": "2025-12",
+      "last_updated": "2025-12-09",
+      "limit": {
+        "context": 262000,
+        "output": 262000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral Small 2 2512",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-09",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-2.5-pro": {
+      "attachment": false,
+      "cost": {
+        "input": 1.654,
+        "output": 11.024
+      },
+      "description": "Gemini 2.5 Pro 是由 cortecs 提供的人工智慧模型。",
+      "family": "gemini-pro",
+      "id": "gemini-2.5-pro",
+      "knowledge": "2025-01",
+      "last_updated": "2025-06-17",
+      "limit": {
+        "context": 1048576,
+        "output": 65535
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-03-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-4p5": {
+      "attachment": false,
+      "cost": {
+        "input": 0.67,
+        "output": 2.46
+      },
+      "description": "GLM 4.5 是由 cortecs 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "glm-4p5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-29",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-07-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-4p5-air": {
+      "attachment": false,
+      "cost": {
+        "input": 0.22,
+        "output": 1.34
+      },
+      "description": "GLM 4.5 Air 是由 cortecs 提供的人工智慧模型。",
+      "family": "glm-air",
+      "id": "glm-4p5-air",
+      "knowledge": "2025-04",
+      "last_updated": "2025-08-01",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.5 Air",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-4p7": {
+      "attachment": false,
+      "cost": {
+        "input": 0.45,
+        "output": 2.23
+      },
+      "description": "GLM 4.7 是由 cortecs 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "glm-4p7",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2025-12-22",
+      "limit": {
+        "context": 198000,
+        "output": 198000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.7",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1": {
+      "attachment": false,
+      "cost": {
+        "input": 2.354,
+        "output": 9.417
+      },
+      "description": "GPT 4.1 是由 cortecs 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-4.1",
+      "knowledge": "2024-06",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT 4.1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-oss-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GPT Oss 120b 是由 cortecs 提供的人工智慧模型。",
+      "family": "gpt-oss",
+      "id": "gpt-oss-120b",
+      "knowledge": "2024-01",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT Oss 120b",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "intellect-3": {
+      "attachment": true,
+      "cost": {
+        "input": 0.219,
+        "output": 1.202
+      },
+      "description": "INTELLECT 3 是由 cortecs 提供的人工智慧模型。",
+      "id": "intellect-3",
+      "knowledge": "2025-11",
+      "last_updated": "2025-11-26",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "INTELLECT 3",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-11-26",
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.551,
+        "output": 2.646
+      },
+      "description": "Kimi K2 Instruct 是由 cortecs 提供的人工智慧模型。",
+      "family": "kimi",
+      "id": "kimi-k2-instruct",
+      "knowledge": "2024-07",
+      "last_updated": "2025-09-05",
+      "limit": {
+        "context": 131000,
+        "output": 131000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2-thinking": {
+      "attachment": true,
+      "cost": {
+        "input": 0.656,
+        "output": 2.731
+      },
+      "description": "Kimi K2 Thinking 是由 cortecs 提供的人工智慧模型。",
+      "id": "kimi-k2-thinking",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-12",
+      "last_updated": "2025-12-08",
+      "limit": {
+        "context": 262000,
+        "output": 262000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-08",
+      "temperature": true,
+      "tool_call": true
+    },
+    "llama-3.1-405b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Llama 3.1 405B Instruct 是由 cortecs 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "llama-3.1-405b-instruct",
+      "knowledge": "2023-12",
+      "last_updated": "2024-07-23",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 405B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-07-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m2": {
+      "attachment": false,
+      "cost": {
+        "input": 0.39,
+        "output": 1.57
+      },
+      "description": "MiniMax-M2 是由 cortecs 提供的人工智慧模型。",
+      "family": "minimax",
+      "id": "minimax-m2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-11",
+      "last_updated": "2025-10-27",
+      "limit": {
+        "context": 400000,
+        "output": 400000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-10-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m2p1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.34,
+        "output": 1.34
+      },
+      "description": "MiniMax-M2.1 是由 cortecs 提供的人工智慧模型。",
+      "family": "minimax",
+      "id": "minimax-m2p1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-12-23",
+      "limit": {
+        "context": 196000,
+        "output": 196000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nova-pro-v1": {
+      "attachment": false,
+      "cost": {
+        "input": 1.016,
+        "output": 4.061
+      },
+      "description": "Nova Pro 1.0 是由 cortecs 提供的人工智慧模型。",
+      "family": "nova-pro",
+      "id": "nova-pro-v1",
+      "knowledge": "2024-04",
+      "last_updated": "2024-12-03",
+      "limit": {
+        "context": 300000,
+        "output": 5000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nova Pro 1.0",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-12-03",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-32b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.099,
+        "output": 0.33
+      },
+      "description": "Qwen3 32B 是由 cortecs 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen3-32b",
+      "knowledge": "2024-12",
+      "last_updated": "2025-04-29",
+      "limit": {
+        "context": 16384,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 32B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-coder-480b-a35b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.441,
+        "output": 1.984
+      },
+      "description": "Qwen3 Coder 480B A35B Instruct 是由 cortecs 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen3-coder-480b-a35b-instruct",
+      "knowledge": "2025-01",
+      "last_updated": "2025-07-25",
+      "limit": {
+        "context": 262000,
+        "output": 262000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder 480B A35B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-25",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-next-80b-a3b-thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 0.164,
+        "output": 1.311
+      },
+      "description": "Qwen3 Next 80B A3B Thinking 是由 cortecs 提供的人工智慧模型。",
+      "id": "qwen3-next-80b-a3b-thinking",
+      "knowledge": "2025-04",
+      "last_updated": "2025-09-11",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Next 80B A3B Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-09-11",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Cortecs",
+  "npm": "@ai-sdk/openai-compatible"
+}

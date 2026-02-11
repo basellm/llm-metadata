@@ -1,0 +1,641 @@
+{
+  "api": "https://api.githubcopilot.com",
+  "doc": "https://docs.github.com/en/copilot",
+  "env": [
+    "GITHUB_TOKEN"
+  ],
+  "iconURL": "https://models.dev/logos/github-copilot.svg",
+  "id": "github-copilot",
+  "lobeIcon": "GithubCopilot",
+  "models": {
+    "claude-haiku-4.5": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Claude Haiku 4.5 是由 github-copilot 提供的人工智能模型。",
+      "family": "claude-haiku",
+      "id": "claude-haiku-4.5",
+      "knowledge": "2025-02-28",
+      "last_updated": "2025-10-15",
+      "limit": {
+        "context": 128000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Haiku 4.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-10-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-4.5": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Claude Opus 4.5 是由 github-copilot 提供的人工智能模型。",
+      "family": "claude-opus",
+      "id": "claude-opus-4.5",
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-08-01",
+      "limit": {
+        "context": 128000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-24",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-4.6": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Claude Opus 4.6 是由 github-copilot 提供的人工智能模型。",
+      "family": "claude-opus",
+      "id": "claude-opus-4.6",
+      "knowledge": "2025-03-31",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-41": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Claude Opus 4.1 是由 github-copilot 提供的人工智能模型。",
+      "family": "claude-opus",
+      "id": "claude-opus-41",
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 80000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": false
+    },
+    "claude-sonnet-4": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Claude Sonnet 4 是由 github-copilot 提供的人工智能模型。",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4",
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-05-22",
+      "limit": {
+        "context": 128000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-05-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-sonnet-4.5": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Claude Sonnet 4.5 是由 github-copilot 提供的人工智能模型。",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4.5",
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-09-29",
+      "limit": {
+        "context": 128000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-2.5-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Gemini 2.5 Pro 是由 github-copilot 提供的人工智能模型。",
+      "family": "gemini-pro",
+      "id": "gemini-2.5-pro",
+      "knowledge": "2025-01",
+      "last_updated": "2025-06-05",
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-03-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3-flash-preview": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Gemini 3 Flash 是由 github-copilot 提供的人工智能模型。",
+      "family": "gemini-flash",
+      "id": "gemini-3-flash-preview",
+      "knowledge": "2025-01",
+      "last_updated": "2025-12-17",
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3-pro-preview": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Gemini 3 Pro Preview 是由 github-copilot 提供的人工智能模型。",
+      "family": "gemini-pro",
+      "id": "gemini-3-pro-preview",
+      "knowledge": "2025-01",
+      "last_updated": "2025-11-18",
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3 Pro Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GPT-4.1 是由 github-copilot 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "gpt-4.1",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4o": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GPT-4o 是由 github-copilot 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "gpt-4o",
+      "knowledge": "2023-09",
+      "last_updated": "2024-05-13",
+      "limit": {
+        "context": 64000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-05-13",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GPT-5 是由 github-copilot 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "gpt-5",
+      "knowledge": "2024-10",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5-mini": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GPT-5-mini 是由 github-copilot 提供的人工智能模型。",
+      "family": "gpt-mini",
+      "id": "gpt-5-mini",
+      "knowledge": "2024-06",
+      "last_updated": "2025-08-13",
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5-mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-13",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5.1": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GPT-5.1 是由 github-copilot 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "gpt-5.1",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1-codex": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GPT-5.1-Codex 是由 github-copilot 提供的人工智能模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.1-codex",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1-Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1-codex-max": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GPT-5.1-Codex-max 是由 github-copilot 提供的人工智能模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.1-codex-max",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-12-04",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1-Codex-max",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-04",
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1-codex-mini": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GPT-5.1-Codex-mini 是由 github-copilot 提供的人工智能模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.1-codex-mini",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 128000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1-Codex-mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.2": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GPT-5.2 是由 github-copilot 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "gpt-5.2",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-11",
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.2-codex": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GPT-5.2-Codex 是由 github-copilot 提供的人工智能模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.2-codex",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2-Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-11",
+      "temperature": false,
+      "tool_call": true
+    },
+    "grok-code-fast-1": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Grok Code Fast 1 是由 github-copilot 提供的人工智能模型。",
+      "family": "grok",
+      "id": "grok-code-fast-1",
+      "knowledge": "2025-08",
+      "last_updated": "2025-08-27",
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok Code Fast 1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-27",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "GitHub Copilot",
+  "npm": "@ai-sdk/openai-compatible"
+}
