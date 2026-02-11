@@ -1,0 +1,102 @@
+{
+  "doc": "https://inference-docs.cerebras.ai/models/overview",
+  "env": [
+    "CEREBRAS_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/cerebras.svg",
+  "id": "cerebras",
+  "lobeIcon": "Cerebras",
+  "models": {
+    "gpt-oss-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.25,
+        "output": 0.69
+      },
+      "description": "GPT OSS 120B 是由 cerebras 提供的人工智能模型。",
+      "family": "gpt-oss",
+      "id": "gpt-oss-120b",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen-3-235b-a22b-instruct-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 1.2
+      },
+      "description": "Qwen 3 235B Instruct 是由 cerebras 提供的人工智能模型。",
+      "family": "qwen",
+      "id": "qwen-3-235b-a22b-instruct-2507",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-22",
+      "limit": {
+        "context": 131000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3 235B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-glm-4.7": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Z.AI GLM-4.7 是由 cerebras 提供的人工智能模型。",
+      "id": "zai-glm-4.7",
+      "last_updated": "2026-01-10",
+      "limit": {
+        "context": 131072,
+        "output": 40000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Z.AI GLM-4.7",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-10",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Cerebras",
+  "npm": "@ai-sdk/cerebras"
+}

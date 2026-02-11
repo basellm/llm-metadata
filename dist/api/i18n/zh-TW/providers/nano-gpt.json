@@ -1,0 +1,671 @@
+{
+  "api": "https://nano-gpt.com/api/v1",
+  "doc": "https://docs.nano-gpt.com",
+  "env": [
+    "NANO_GPT_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/nano-gpt.svg",
+  "id": "nano-gpt",
+  "models": {
+    "deepseek/deepseek-r1": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Deepseek R1 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-r1",
+      "knowledge": "2024-10",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Deepseek R1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-01-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v3.2:thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Deepseek V3.2 Thinking 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v3.2:thinking",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Deepseek V3.2 Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "meta-llama/llama-3.3-70b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Llama 3.3 70b Instruct 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "meta-llama/llama-3.3-70b-instruct",
+      "knowledge": "2023-12",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.3 70b Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-12-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "meta-llama/llama-4-maverick": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Llama 4 Maverick 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "meta-llama/llama-4-maverick",
+      "knowledge": "2025-01",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 4 Maverick",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.1": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Minimax M2.1 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Minimax M2.1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/devstral-2-123b-instruct-2512": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Devstral 2 123b Instruct 2512 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "mistral",
+      "id": "mistralai/devstral-2-123b-instruct-2512",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral 2 123b Instruct 2512",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/ministral-14b-instruct-2512": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Ministral 14b Instruct 2512 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "mistral",
+      "id": "mistralai/ministral-14b-instruct-2512",
+      "knowledge": "2025-12",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ministral 14b Instruct 2512",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/mistral-large-3-675b-instruct-2512": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Mistral Large 3 675b Instruct 2512 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "mistral",
+      "id": "mistralai/mistral-large-3-675b-instruct-2512",
+      "knowledge": "2025-01",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Large 3 675b Instruct 2512",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Kimi K2 Instruct 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "kimi",
+      "id": "moonshotai/kimi-k2-instruct",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-10",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 Instruct",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-07-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2-thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Kimi K2 Thinking 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "kimi-thinking",
+      "id": "moonshotai/kimi-k2-thinking",
+      "knowledge": "2024-08",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 Thinking",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2024-11-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nousresearch/hermes-4-405b:thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Hermes 4 405b Thinking 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "hermes",
+      "id": "nousresearch/hermes-4-405b:thinking",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hermes 4 405b Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2024-08-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/llama-3_3-nemotron-super-49b-v1_5": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Llama 3 3 Nemotron Super 49B V1 5 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "nvidia/llama-3_3-nemotron-super-49b-v1_5",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3 3 Nemotron Super 49B V1 5",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-08-08",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "GPT Oss 120b 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "openai/gpt-oss-120b",
+      "knowledge": "2024-10",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT Oss 120b",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-06-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-235b-a22b-thinking-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Qwen3 235B A22B Thinking 2507 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-235b-a22b-thinking-2507",
+      "knowledge": "2024-12",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 262144,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 235B A22B Thinking 2507",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-07-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-coder": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Qwen3 Coder 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-coder",
+      "knowledge": "2024-12",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 106000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-01-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-4.6": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "GLM 4.6 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "z-ai/glm-4.6",
+      "knowledge": "2024-10",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 200000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.6",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-11-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-4.6:thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "GLM 4.6 Thinking 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "z-ai/glm-4.6:thinking",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.6 Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/glm-4.5-air": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "GLM 4.5 Air 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "zai-org/glm-4.5-air",
+      "knowledge": "2025-04",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.5 Air",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-28",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/glm-4.5-air:thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "GLM 4.5 Air Thinking 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "zai-org/glm-4.5-air:thinking",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.5 Air Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/glm-4.7": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "GLM 4.7 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "zai-org/glm-4.7",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 204800,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.7",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/glm-4.7:thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "GLM 4.7 Thinking 是由 nano-gpt 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "zai-org/glm-4.7:thinking",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-12-24",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.7 Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "NanoGPT",
+  "npm": "@ai-sdk/openai-compatible"
+}

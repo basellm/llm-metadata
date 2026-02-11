@@ -1,0 +1,456 @@
+{
+  "api": "https://go.fastrouter.ai/api/v1",
+  "doc": "https://fastrouter.ai/models",
+  "env": [
+    "FASTROUTER_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/fastrouter.svg",
+  "id": "fastrouter",
+  "lobeIcon": "FastGPT",
+  "models": {
+    "anthropic/claude-opus-4.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.5,
+        "cache_write": 18.75,
+        "input": 15,
+        "output": 75
+      },
+      "description": "Claude Opus 4.1 是由 fastrouter 提供的人工智能模型。",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.1",
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-sonnet-4": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Claude Sonnet 4 是由 fastrouter 提供的人工智能模型。",
+      "family": "claude-sonnet",
+      "id": "anthropic/claude-sonnet-4",
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-05-22",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-05-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-ai/deepseek-r1-distill-llama-70b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.03,
+        "output": 0.14
+      },
+      "description": "DeepSeek R1 Distill Llama 70B 是由 fastrouter 提供的人工智能模型。",
+      "family": "deepseek-thinking",
+      "id": "deepseek-ai/deepseek-r1-distill-llama-70b",
+      "knowledge": "2024-10",
+      "last_updated": "2025-01-23",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek R1 Distill Llama 70B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-01-23",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemini-2.5-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0375,
+        "input": 0.3,
+        "output": 2.5
+      },
+      "description": "Gemini 2.5 Flash 是由 fastrouter 提供的人工智能模型。",
+      "family": "gemini-flash",
+      "id": "google/gemini-2.5-flash",
+      "knowledge": "2025-01",
+      "last_updated": "2025-06-17",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-06-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-2.5-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.31,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "Gemini 2.5 Pro 是由 fastrouter 提供的人工智能模型。",
+      "family": "gemini-pro",
+      "id": "google/gemini-2.5-pro",
+      "knowledge": "2025-01",
+      "last_updated": "2025-06-17",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-06-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2": {
+      "attachment": false,
+      "cost": {
+        "input": 0.55,
+        "output": 2.2
+      },
+      "description": "Kimi K2 是由 fastrouter 提供的人工智能模型。",
+      "family": "kimi",
+      "id": "moonshotai/kimi-k2",
+      "knowledge": "2024-10",
+      "last_updated": "2025-07-11",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-4.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 2,
+        "output": 8
+      },
+      "description": "GPT-4.1 是由 fastrouter 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "openai/gpt-4.1",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5 是由 fastrouter 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "openai/gpt-5",
+      "knowledge": "2024-10-01",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.25,
+        "output": 2
+      },
+      "description": "GPT-5 Mini 是由 fastrouter 提供的人工智能模型。",
+      "family": "gpt-mini",
+      "id": "openai/gpt-5-mini",
+      "knowledge": "2024-10-01",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5-nano": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.005,
+        "input": 0.05,
+        "output": 0.4
+      },
+      "description": "GPT-5 Nano 是由 fastrouter 提供的人工智能模型。",
+      "family": "gpt-nano",
+      "id": "openai/gpt-5-nano",
+      "knowledge": "2024-10-01",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Nano",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "GPT OSS 120B 是由 fastrouter 提供的人工智能模型。",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-120b",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-20b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0.2
+      },
+      "description": "GPT OSS 20B 是由 fastrouter 提供的人工智能模型。",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-20b",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 20B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-coder": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Qwen3 Coder 是由 fastrouter 提供的人工智能模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-coder",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-23",
+      "limit": {
+        "context": 262144,
+        "output": 66536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-4": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.75,
+        "cache_write": 15,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Grok 4 是由 fastrouter 提供的人工智能模型。",
+      "family": "grok",
+      "id": "x-ai/grok-4",
+      "knowledge": "2025-07",
+      "last_updated": "2025-07-09",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-07-09",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "FastRouter",
+  "npm": "@ai-sdk/openai-compatible"
+}

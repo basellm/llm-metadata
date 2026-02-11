@@ -1,0 +1,5523 @@
+{
+  "api": "https://openrouter.ai/api/v1",
+  "doc": "https://openrouter.ai/models",
+  "env": [
+    "OPENROUTER_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/openrouter.svg",
+  "id": "openrouter",
+  "lobeIcon": "OpenRouter.Color",
+  "models": {
+    "allenai/molmo-2-8b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Molmo2 8B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "allenai",
+      "id": "allenai/molmo-2-8b:free",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-31",
+      "limit": {
+        "context": 36864,
+        "output": 36864
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Molmo2 8B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-09",
+      "temperature": true,
+      "tool_call": false
+    },
+    "anthropic/claude-3.5-haiku": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.08,
+        "cache_write": 1,
+        "input": 0.8,
+        "output": 4
+      },
+      "description": "Claude Haiku 3.5 是由 openrouter 提供的人工智慧模型。",
+      "family": "claude-haiku",
+      "id": "anthropic/claude-3.5-haiku",
+      "knowledge": "2024-07-31",
+      "last_updated": "2024-10-22",
+      "limit": {
+        "context": 200000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Haiku 3.5",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-10-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-3.7-sonnet": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.5,
+        "cache_write": 18.75,
+        "input": 15,
+        "output": 75
+      },
+      "description": "Claude Sonnet 3.7 是由 openrouter 提供的人工智慧模型。",
+      "family": "claude-sonnet",
+      "id": "anthropic/claude-3.7-sonnet",
+      "knowledge": "2024-01",
+      "last_updated": "2025-02-19",
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 3.7",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-02-19",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-haiku-4.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 1.25,
+        "input": 1,
+        "output": 5
+      },
+      "description": "Claude Haiku 4.5 是由 openrouter 提供的人工智慧模型。",
+      "family": "claude-haiku",
+      "id": "anthropic/claude-haiku-4.5",
+      "knowledge": "2025-02-28",
+      "last_updated": "2025-10-15",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Haiku 4.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-10-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-4": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.5,
+        "cache_write": 18.75,
+        "input": 15,
+        "output": 75
+      },
+      "description": "Claude Opus 4 是由 openrouter 提供的人工智慧模型。",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4",
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-05-22",
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-05-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-4.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.5,
+        "cache_write": 18.75,
+        "input": 15,
+        "output": 75
+      },
+      "description": "Claude Opus 4.1 是由 openrouter 提供的人工智慧模型。",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.1",
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-4.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Claude Opus 4.5 是由 openrouter 提供的人工智慧模型。",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.5",
+      "knowledge": "2025-05-30",
+      "last_updated": "2025-11-24",
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-24",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-4.6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "context_over_200k": {
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 37.5
+        },
+        "input": 5,
+        "output": 25
+      },
+      "description": "Claude Opus 4.6 是由 openrouter 提供的人工智慧模型。",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.6",
+      "knowledge": "2025-05-30",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-sonnet-4": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "context_over_200k": {
+          "cache_read": 0.6,
+          "cache_write": 7.5,
+          "input": 6,
+          "output": 22.5
+        },
+        "input": 3,
+        "output": 15
+      },
+      "description": "Claude Sonnet 4 是由 openrouter 提供的人工智慧模型。",
+      "family": "claude-sonnet",
+      "id": "anthropic/claude-sonnet-4",
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-05-22",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-05-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-sonnet-4.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "context_over_200k": {
+          "cache_read": 0.6,
+          "cache_write": 7.5,
+          "input": 6,
+          "output": 22.5
+        },
+        "input": 3,
+        "output": 15
+      },
+      "description": "Claude Sonnet 4.5 是由 openrouter 提供的人工智慧模型。",
+      "family": "claude-sonnet",
+      "id": "anthropic/claude-sonnet-4.5",
+      "knowledge": "2025-07-31",
+      "last_updated": "2025-09-29",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "arcee-ai/trinity-large-preview:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Trinity Large Preview 是由 openrouter 提供的人工智慧模型。",
+      "family": "trinity",
+      "id": "arcee-ai/trinity-large-preview:free",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Trinity Large Preview",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "arcee-ai/trinity-mini:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Trinity Mini 是由 openrouter 提供的人工智慧模型。",
+      "family": "trinity-mini",
+      "id": "arcee-ai/trinity-mini:free",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Trinity Mini",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "black-forest-labs/flux.2-flex": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "FLUX.2 Flex 是由 openrouter 提供的人工智慧模型。",
+      "family": "flux",
+      "id": "black-forest-labs/flux.2-flex",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-31",
+      "limit": {
+        "context": 67344,
+        "output": 67344
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "image",
+          "text"
+        ]
+      },
+      "name": "FLUX.2 Flex",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-11-25",
+      "temperature": true,
+      "tool_call": false
+    },
+    "black-forest-labs/flux.2-klein-4b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "FLUX.2 Klein 4B 是由 openrouter 提供的人工智慧模型。",
+      "family": "flux",
+      "id": "black-forest-labs/flux.2-klein-4b",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-31",
+      "limit": {
+        "context": 40960,
+        "output": 40960
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "image",
+          "text"
+        ]
+      },
+      "name": "FLUX.2 Klein 4B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-14",
+      "temperature": true,
+      "tool_call": false
+    },
+    "black-forest-labs/flux.2-max": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "FLUX.2 Max 是由 openrouter 提供的人工智慧模型。",
+      "family": "flux",
+      "id": "black-forest-labs/flux.2-max",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-31",
+      "limit": {
+        "context": 46864,
+        "output": 46864
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "image",
+          "text"
+        ]
+      },
+      "name": "FLUX.2 Max",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-16",
+      "temperature": true,
+      "tool_call": false
+    },
+    "black-forest-labs/flux.2-pro": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "FLUX.2 Pro 是由 openrouter 提供的人工智慧模型。",
+      "family": "flux",
+      "id": "black-forest-labs/flux.2-pro",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-31",
+      "limit": {
+        "context": 46864,
+        "output": 46864
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "image",
+          "text"
+        ]
+      },
+      "name": "FLUX.2 Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-11-25",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bytedance-seed/seedream-4.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Seedream 4.5 是由 openrouter 提供的人工智慧模型。",
+      "family": "seed",
+      "id": "bytedance-seed/seedream-4.5",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-31",
+      "limit": {
+        "context": 4096,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "image",
+          "text"
+        ]
+      },
+      "name": "Seedream 4.5",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-23",
+      "temperature": true,
+      "tool_call": false
+    },
+    "cognitivecomputations/dolphin-mistral-24b-venice-edition:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Uncensored (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "mistral",
+      "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-31",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Uncensored (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-09",
+      "temperature": true,
+      "tool_call": false
+    },
+    "cognitivecomputations/dolphin3.0-mistral-24b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Dolphin3.0 Mistral 24B 是由 openrouter 提供的人工智慧模型。",
+      "family": "mistral",
+      "id": "cognitivecomputations/dolphin3.0-mistral-24b",
+      "knowledge": "2024-10",
+      "last_updated": "2025-02-13",
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Dolphin3.0 Mistral 24B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-02-13",
+      "temperature": true,
+      "tool_call": true
+    },
+    "cognitivecomputations/dolphin3.0-r1-mistral-24b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Dolphin3.0 R1 Mistral 24B 是由 openrouter 提供的人工智慧模型。",
+      "family": "mistral",
+      "id": "cognitivecomputations/dolphin3.0-r1-mistral-24b",
+      "knowledge": "2024-10",
+      "last_updated": "2025-02-13",
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Dolphin3.0 R1 Mistral 24B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-02-13",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-chat-v3-0324": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "DeepSeek V3 0324 是由 openrouter 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-chat-v3-0324",
+      "knowledge": "2024-10",
+      "last_updated": "2025-03-24",
+      "limit": {
+        "context": 16384,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3 0324",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-24",
+      "temperature": true,
+      "tool_call": false
+    },
+    "deepseek/deepseek-chat-v3.1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.2,
+        "output": 0.8
+      },
+      "description": "DeepSeek-V3.1 是由 openrouter 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-chat-v3.1",
+      "knowledge": "2025-07",
+      "last_updated": "2025-08-21",
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek-V3.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-21",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-r1-0528-qwen3-8b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Deepseek R1 0528 Qwen3 8B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "deepseek/deepseek-r1-0528-qwen3-8b:free",
+      "knowledge": "2025-05",
+      "last_updated": "2025-05-29",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Deepseek R1 0528 Qwen3 8B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-05-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-r1-0528:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "R1 0528 (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-r1-0528:free",
+      "knowledge": "2025-05",
+      "last_updated": "2025-05-28",
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "R1 0528 (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-05-28",
+      "temperature": true,
+      "tool_call": false
+    },
+    "deepseek/deepseek-r1-distill-llama-70b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "DeepSeek R1 Distill Llama 70B 是由 openrouter 提供的人工智慧模型。",
+      "family": "deepseek-thinking",
+      "id": "deepseek/deepseek-r1-distill-llama-70b",
+      "knowledge": "2024-10",
+      "last_updated": "2025-01-23",
+      "limit": {
+        "context": 8192,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek R1 Distill Llama 70B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-01-23",
+      "temperature": true,
+      "tool_call": false
+    },
+    "deepseek/deepseek-r1-distill-qwen-14b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "DeepSeek R1 Distill Qwen 14B 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "deepseek/deepseek-r1-distill-qwen-14b",
+      "knowledge": "2024-10",
+      "last_updated": "2025-01-29",
+      "limit": {
+        "context": 64000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek R1 Distill Qwen 14B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-01-29",
+      "temperature": true,
+      "tool_call": false
+    },
+    "deepseek/deepseek-r1:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "R1 (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-r1:free",
+      "knowledge": "2025-01",
+      "last_updated": "2025-01-20",
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "R1 (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-01-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v3-base:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "DeepSeek V3 Base (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v3-base:free",
+      "knowledge": "2025-03",
+      "last_updated": "2025-03-29",
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3 Base (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-29",
+      "temperature": true,
+      "tool_call": false
+    },
+    "deepseek/deepseek-v3.1-terminus": {
+      "attachment": false,
+      "cost": {
+        "input": 0.27,
+        "output": 1
+      },
+      "description": "DeepSeek V3.1 Terminus 是由 openrouter 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v3.1-terminus",
+      "knowledge": "2025-07",
+      "last_updated": "2025-09-22",
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3.1 Terminus",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-09-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v3.1-terminus:exacto": {
+      "attachment": false,
+      "cost": {
+        "input": 0.27,
+        "output": 1
+      },
+      "description": "DeepSeek V3.1 Terminus (exacto) 是由 openrouter 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v3.1-terminus:exacto",
+      "knowledge": "2025-07",
+      "last_updated": "2025-09-22",
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3.1 Terminus (exacto)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-09-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v3.2": {
+      "attachment": false,
+      "cost": {
+        "input": 0.28,
+        "output": 0.4
+      },
+      "description": "DeepSeek V3.2 是由 openrouter 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v3.2",
+      "knowledge": "2024-07",
+      "last_updated": "2025-12-01",
+      "limit": {
+        "context": 163840,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3.2",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v3.2-speciale": {
+      "attachment": false,
+      "cost": {
+        "input": 0.27,
+        "output": 0.41
+      },
+      "description": "DeepSeek V3.2 Speciale 是由 openrouter 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v3.2-speciale",
+      "knowledge": "2024-07",
+      "last_updated": "2025-12-01",
+      "limit": {
+        "context": 163840,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3.2 Speciale",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "featherless/qwerky-72b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwerky 72B 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwerky",
+      "id": "featherless/qwerky-72b",
+      "knowledge": "2024-10",
+      "last_updated": "2025-03-20",
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwerky 72B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-20",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemini-2.0-flash-001": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "Gemini 2.0 Flash 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemini-flash",
+      "id": "google/gemini-2.0-flash-001",
+      "knowledge": "2024-06",
+      "last_updated": "2024-12-11",
+      "limit": {
+        "context": 1048576,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.0 Flash",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-12-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-2.0-flash-exp:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Gemini 2.0 Flash Experimental (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemini-flash",
+      "id": "google/gemini-2.0-flash-exp:free",
+      "knowledge": "2024-12",
+      "last_updated": "2024-12-11",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.0 Flash Experimental (free)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-12-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-2.5-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0375,
+        "input": 0.3,
+        "output": 2.5
+      },
+      "description": "Gemini 2.5 Flash 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemini-flash",
+      "id": "google/gemini-2.5-flash",
+      "knowledge": "2025-01",
+      "last_updated": "2025-07-17",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-07-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-2.5-flash-lite": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "Gemini 2.5 Flash Lite 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemini-flash-lite",
+      "id": "google/gemini-2.5-flash-lite",
+      "knowledge": "2025-01",
+      "last_updated": "2025-06-17",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Flash Lite",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-06-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-2.5-flash-lite-preview-09-2025": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "Gemini 2.5 Flash Lite Preview 09-25 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemini-flash-lite",
+      "id": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "knowledge": "2025-01",
+      "last_updated": "2025-09-25",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Flash Lite Preview 09-25",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-25",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-2.5-flash-preview-09-2025": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.031,
+        "input": 0.3,
+        "output": 2.5
+      },
+      "description": "Gemini 2.5 Flash Preview 09-25 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemini-flash",
+      "id": "google/gemini-2.5-flash-preview-09-2025",
+      "knowledge": "2025-01",
+      "last_updated": "2025-09-25",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Flash Preview 09-25",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-25",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-2.5-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.31,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "Gemini 2.5 Pro 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemini-pro",
+      "id": "google/gemini-2.5-pro",
+      "knowledge": "2025-01",
+      "last_updated": "2025-06-05",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-03-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-2.5-pro-preview-05-06": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.31,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "Gemini 2.5 Pro Preview 05-06 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemini-pro",
+      "id": "google/gemini-2.5-pro-preview-05-06",
+      "knowledge": "2025-01",
+      "last_updated": "2025-05-06",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Pro Preview 05-06",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-05-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-2.5-pro-preview-06-05": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.31,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "Gemini 2.5 Pro Preview 06-05 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemini-pro",
+      "id": "google/gemini-2.5-pro-preview-06-05",
+      "knowledge": "2025-01",
+      "last_updated": "2025-06-05",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Pro Preview 06-05",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-06-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-3-flash-preview": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.5,
+        "output": 3
+      },
+      "description": "Gemini 3 Flash Preview 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemini-flash",
+      "id": "google/gemini-3-flash-preview",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2025-12-17",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3 Flash Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-3-pro-preview": {
+      "attachment": true,
+      "cost": {
+        "input": 2,
+        "output": 12
+      },
+      "description": "Gemini 3 Pro Preview 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemini-pro",
+      "id": "google/gemini-3-pro-preview",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2025-11",
+      "limit": {
+        "context": 1050000,
+        "output": 66000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3 Pro Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-2-9b-it": {
+      "attachment": false,
+      "cost": {
+        "input": 0.03,
+        "output": 0.09
+      },
+      "description": "Gemma 2 9B 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "google/gemma-2-9b-it",
+      "knowledge": "2024-06",
+      "last_updated": "2024-06-28",
+      "limit": {
+        "context": 8192,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 2 9B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-06-28",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemma-3-12b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.03,
+        "output": 0.1
+      },
+      "description": "Gemma 3 12B 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "google/gemma-3-12b-it",
+      "knowledge": "2024-10",
+      "last_updated": "2025-03-13",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 12B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-13",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemma-3-12b-it:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Gemma 3 12B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "google/gemma-3-12b-it:free",
+      "knowledge": "2024-10",
+      "last_updated": "2025-03-13",
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 12B (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-13",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemma-3-27b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.04,
+        "output": 0.15
+      },
+      "description": "Gemma 3 27B 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "google/gemma-3-27b-it",
+      "knowledge": "2024-10",
+      "last_updated": "2025-03-12",
+      "limit": {
+        "context": 96000,
+        "output": 96000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 27B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-3-27b-it:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Gemma 3 27B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "google/gemma-3-27b-it:free",
+      "knowledge": "2024-10",
+      "last_updated": "2025-03-12",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 27B (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-3-4b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.01703,
+        "output": 0.06815
+      },
+      "description": "Gemma 3 4B 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "google/gemma-3-4b-it",
+      "knowledge": "2024-10",
+      "last_updated": "2025-03-13",
+      "limit": {
+        "context": 96000,
+        "output": 96000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 4B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-13",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemma-3-4b-it:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Gemma 3 4B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "google/gemma-3-4b-it:free",
+      "knowledge": "2024-10",
+      "last_updated": "2025-03-13",
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 4B (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-13",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemma-3n-e2b-it:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Gemma 3n 2B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "google/gemma-3n-e2b-it:free",
+      "knowledge": "2024-06",
+      "last_updated": "2025-07-09",
+      "limit": {
+        "context": 8192,
+        "output": 2000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3n 2B (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-09",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemma-3n-e4b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.02,
+        "output": 0.04
+      },
+      "description": "Gemma 3n 4B 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "google/gemma-3n-e4b-it",
+      "knowledge": "2024-06",
+      "last_updated": "2025-05-20",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3n 4B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-05-20",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemma-3n-e4b-it:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Gemma 3n 4B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "google/gemma-3n-e4b-it:free",
+      "knowledge": "2024-06",
+      "last_updated": "2025-05-20",
+      "limit": {
+        "context": 8192,
+        "output": 2000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3n 4B (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-05-20",
+      "temperature": true,
+      "tool_call": false
+    },
+    "kwaipilot/kat-coder-pro:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Kat Coder Pro (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "kat-coder",
+      "id": "kwaipilot/kat-coder-pro:free",
+      "knowledge": "2025-11",
+      "last_updated": "2025-11-10",
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kat Coder Pro (free)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-11-10",
+      "temperature": true,
+      "tool_call": true
+    },
+    "liquid/lfm-2.5-1.2b-instruct:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "LFM2.5-1.2B-Instruct (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "liquid",
+      "id": "liquid/lfm-2.5-1.2b-instruct:free",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LFM2.5-1.2B-Instruct (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-20",
+      "temperature": true,
+      "tool_call": false
+    },
+    "liquid/lfm-2.5-1.2b-thinking:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "LFM2.5-1.2B-Thinking (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "liquid",
+      "id": "liquid/lfm-2.5-1.2b-thinking:free",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LFM2.5-1.2B-Thinking (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-20",
+      "temperature": true,
+      "tool_call": false
+    },
+    "meta-llama/llama-3.1-405b-instruct:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Llama 3.1 405B Instruct (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "meta-llama/llama-3.1-405b-instruct:free",
+      "knowledge": "2024-08",
+      "last_updated": "2025-04-05",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 405B Instruct (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-07-23",
+      "temperature": true,
+      "tool_call": false
+    },
+    "meta-llama/llama-3.2-11b-vision-instruct": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Llama 3.2 11B Vision Instruct 是由 openrouter 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "meta-llama/llama-3.2-11b-vision-instruct",
+      "knowledge": "2023-12",
+      "last_updated": "2024-09-25",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.2 11B Vision Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-09-25",
+      "temperature": true,
+      "tool_call": false
+    },
+    "meta-llama/llama-3.2-3b-instruct:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Llama 3.2 3B Instruct (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "meta-llama/llama-3.2-3b-instruct:free",
+      "knowledge": "2023-12",
+      "last_updated": "2024-09-25",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.2 3B Instruct (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-09-25",
+      "temperature": true,
+      "tool_call": false
+    },
+    "meta-llama/llama-3.3-70b-instruct:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Llama 3.3 70B Instruct (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "meta-llama/llama-3.3-70b-instruct:free",
+      "knowledge": "2024-12",
+      "last_updated": "2024-12-06",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.3 70B Instruct (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-12-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "meta-llama/llama-4-scout:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Llama 4 Scout (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "meta-llama/llama-4-scout:free",
+      "knowledge": "2024-08",
+      "last_updated": "2025-04-05",
+      "limit": {
+        "context": 64000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 4 Scout (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "microsoft/mai-ds-r1:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "MAI DS R1 (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "mai",
+      "id": "microsoft/mai-ds-r1:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-04-21",
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MAI DS R1 (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-21",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-01": {
+      "attachment": true,
+      "cost": {
+        "input": 0.2,
+        "output": 1.1
+      },
+      "description": "MiniMax-01 是由 openrouter 提供的人工智慧模型。",
+      "family": "minimax",
+      "id": "minimax/minimax-01",
+      "last_updated": "2025-01-15",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-01",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-01-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.4,
+        "output": 2.2
+      },
+      "description": "MiniMax M1 是由 openrouter 提供的人工智慧模型。",
+      "family": "minimax",
+      "id": "minimax/minimax-m1",
+      "last_updated": "2025-06-17",
+      "limit": {
+        "context": 1000000,
+        "output": 40000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-06-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.28,
+        "cache_write": 1.15,
+        "input": 0.28,
+        "output": 1.15
+      },
+      "description": "MiniMax M2 是由 openrouter 提供的人工智慧模型。",
+      "family": "minimax",
+      "id": "minimax/minimax-m2",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "last_updated": "2025-10-23",
+      "limit": {
+        "context": 196600,
+        "output": 118000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-10-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax M2.1 是由 openrouter 提供的人工智慧模型。",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.1",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "last_updated": "2025-12-23",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/codestral-2508": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 0.9
+      },
+      "description": "Codestral 2508 是由 openrouter 提供的人工智慧模型。",
+      "family": "codestral",
+      "id": "mistralai/codestral-2508",
+      "knowledge": "2025-05",
+      "last_updated": "2025-08-01",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Codestral 2508",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-08-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/devstral-2512": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Devstral 2 2512 是由 openrouter 提供的人工智慧模型。",
+      "family": "devstral",
+      "id": "mistralai/devstral-2512",
+      "knowledge": "2025-12",
+      "last_updated": "2025-09-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral 2 2512",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-09-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/devstral-2512:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Devstral 2 2512 (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "devstral",
+      "id": "mistralai/devstral-2512:free",
+      "knowledge": "2025-12",
+      "last_updated": "2025-09-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral 2 2512 (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-09-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/devstral-medium-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.4,
+        "output": 2
+      },
+      "description": "Devstral Medium 是由 openrouter 提供的人工智慧模型。",
+      "family": "devstral",
+      "id": "mistralai/devstral-medium-2507",
+      "knowledge": "2025-05",
+      "last_updated": "2025-07-10",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral Medium",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-10",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/devstral-small-2505": {
+      "attachment": false,
+      "cost": {
+        "input": 0.06,
+        "output": 0.12
+      },
+      "description": "Devstral Small 是由 openrouter 提供的人工智慧模型。",
+      "family": "devstral",
+      "id": "mistralai/devstral-small-2505",
+      "knowledge": "2025-05",
+      "last_updated": "2025-05-07",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral Small",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-05-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/devstral-small-2505:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Devstral Small 2505 (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "devstral",
+      "id": "mistralai/devstral-small-2505:free",
+      "knowledge": "2025-05",
+      "last_updated": "2025-05-21",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral Small 2505 (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-05-21",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/devstral-small-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.1,
+        "output": 0.3
+      },
+      "description": "Devstral Small 1.1 是由 openrouter 提供的人工智慧模型。",
+      "family": "devstral",
+      "id": "mistralai/devstral-small-2507",
+      "knowledge": "2025-05",
+      "last_updated": "2025-07-10",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral Small 1.1",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-10",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/mistral-7b-instruct:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Mistral 7B Instruct (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "mistral",
+      "id": "mistralai/mistral-7b-instruct:free",
+      "knowledge": "2024-05",
+      "last_updated": "2024-05-27",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral 7B Instruct (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-05-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/mistral-medium-3": {
+      "attachment": true,
+      "cost": {
+        "input": 0.4,
+        "output": 2
+      },
+      "description": "Mistral Medium 3 是由 openrouter 提供的人工智慧模型。",
+      "family": "mistral-medium",
+      "id": "mistralai/mistral-medium-3",
+      "knowledge": "2025-05",
+      "last_updated": "2025-05-07",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Medium 3",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-05-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/mistral-medium-3.1": {
+      "attachment": true,
+      "cost": {
+        "input": 0.4,
+        "output": 2
+      },
+      "description": "Mistral Medium 3.1 是由 openrouter 提供的人工智慧模型。",
+      "family": "mistral-medium",
+      "id": "mistralai/mistral-medium-3.1",
+      "knowledge": "2025-05",
+      "last_updated": "2025-08-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Medium 3.1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-08-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/mistral-nemo:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Mistral Nemo (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "mistral-nemo",
+      "id": "mistralai/mistral-nemo:free",
+      "knowledge": "2024-07",
+      "last_updated": "2024-07-19",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Nemo (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-07-19",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/mistral-small-3.1-24b-instruct": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Mistral Small 3.1 24B Instruct 是由 openrouter 提供的人工智慧模型。",
+      "family": "mistral-small",
+      "id": "mistralai/mistral-small-3.1-24b-instruct",
+      "knowledge": "2024-10",
+      "last_updated": "2025-03-17",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Small 3.1 24B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Mistral Small 3.2 24B Instruct 是由 openrouter 提供的人工智慧模型。",
+      "family": "mistral-small",
+      "id": "mistralai/mistral-small-3.2-24b-instruct",
+      "knowledge": "2024-10",
+      "last_updated": "2025-06-20",
+      "limit": {
+        "context": 96000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Small 3.2 24B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-06-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/mistral-small-3.2-24b-instruct:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Mistral Small 3.2 24B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "mistral-small",
+      "id": "mistralai/mistral-small-3.2-24b-instruct:free",
+      "knowledge": "2025-06",
+      "last_updated": "2025-06-20",
+      "limit": {
+        "context": 96000,
+        "output": 96000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Small 3.2 24B (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-06-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-dev-72b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Kimi Dev 72b (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "kimi",
+      "id": "moonshotai/kimi-dev-72b:free",
+      "knowledge": "2025-06",
+      "last_updated": "2025-06-16",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi Dev 72b (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-06-16",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2": {
+      "attachment": false,
+      "cost": {
+        "input": 0.55,
+        "output": 2.2
+      },
+      "description": "Kimi K2 是由 openrouter 提供的人工智慧模型。",
+      "family": "kimi",
+      "id": "moonshotai/kimi-k2",
+      "knowledge": "2024-10",
+      "last_updated": "2025-07-11",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2-0905": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 2.5
+      },
+      "description": "Kimi K2 Instruct 0905 是由 openrouter 提供的人工智慧模型。",
+      "family": "kimi",
+      "id": "moonshotai/kimi-k2-0905",
+      "knowledge": "2024-10",
+      "last_updated": "2025-09-05",
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 Instruct 0905",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-09-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2-0905:exacto": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 2.5
+      },
+      "description": "Kimi K2 Instruct 0905 (exacto) 是由 openrouter 提供的人工智慧模型。",
+      "family": "kimi",
+      "id": "moonshotai/kimi-k2-0905:exacto",
+      "knowledge": "2024-10",
+      "last_updated": "2025-09-05",
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 Instruct 0905 (exacto)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-09-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2-thinking": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 0.6,
+        "output": 2.5
+      },
+      "description": "Kimi K2 Thinking 是由 openrouter 提供的人工智慧模型。",
+      "family": "kimi-thinking",
+      "id": "moonshotai/kimi-k2-thinking",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "knowledge": "2024-08",
+      "last_updated": "2025-11-06",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-11-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "input": 0.6,
+        "output": 3
+      },
+      "description": "Kimi K2.5 是由 openrouter 提供的人工智慧模型。",
+      "family": "kimi",
+      "id": "moonshotai/kimi-k2.5",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-01-27",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Kimi K2 (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "kimi",
+      "id": "moonshotai/kimi-k2:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-11",
+      "limit": {
+        "context": 32800,
+        "output": 32800
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nousresearch/deephermes-3-llama-3-8b-preview": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "DeepHermes 3 Llama 3 8B Preview 是由 openrouter 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "nousresearch/deephermes-3-llama-3-8b-preview",
+      "knowledge": "2024-04",
+      "last_updated": "2025-02-28",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepHermes 3 Llama 3 8B Preview",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-02-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nousresearch/hermes-3-llama-3.1-405b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Hermes 3 405B Instruct (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "hermes",
+      "id": "nousresearch/hermes-3-llama-3.1-405b:free",
+      "knowledge": "2023-12",
+      "last_updated": "2024-08-16",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hermes 3 405B Instruct (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2024-08-16",
+      "temperature": true,
+      "tool_call": false
+    },
+    "nousresearch/hermes-4-405b": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 3
+      },
+      "description": "Hermes 4 405B 是由 openrouter 提供的人工智慧模型。",
+      "family": "hermes",
+      "id": "nousresearch/hermes-4-405b",
+      "knowledge": "2023-12",
+      "last_updated": "2025-08-25",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hermes 4 405B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-25",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nousresearch/hermes-4-70b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.13,
+        "output": 0.4
+      },
+      "description": "Hermes 4 70B 是由 openrouter 提供的人工智慧模型。",
+      "family": "hermes",
+      "id": "nousresearch/hermes-4-70b",
+      "knowledge": "2023-12",
+      "last_updated": "2025-08-25",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hermes 4 70B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-25",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-3-nano-30b-a3b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron 3 Nano 30B A3B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-3-nano-30b-a3b:free",
+      "knowledge": "2025-11",
+      "last_updated": "2026-01-31",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Nano 30B A3B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-nano-12b-v2-vl:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron Nano 12B 2 VL (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-nano-12b-v2-vl:free",
+      "knowledge": "2025-11",
+      "last_updated": "2026-01-31",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron Nano 12B 2 VL (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-10-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-nano-9b-v2": {
+      "attachment": false,
+      "cost": {
+        "input": 0.04,
+        "output": 0.16
+      },
+      "description": "nvidia-nemotron-nano-9b-v2 是由 openrouter 提供的人工智慧模型。",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-nano-9b-v2",
+      "knowledge": "2024-09",
+      "last_updated": "2025-08-18",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "nvidia-nemotron-nano-9b-v2",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-nano-9b-v2:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron Nano 9B V2 (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-nano-9b-v2:free",
+      "knowledge": "2024-09",
+      "last_updated": "2025-08-18",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron Nano 9B V2 (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-09-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-4.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 2,
+        "output": 8
+      },
+      "description": "GPT-4.1 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "openai/gpt-4.1",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-4.1-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "input": 0.4,
+        "output": 1.6
+      },
+      "description": "GPT-4.1 Mini 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-mini",
+      "id": "openai/gpt-4.1-mini",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1 Mini",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-4o-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.08,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "GPT-4o-mini 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-mini",
+      "id": "openai/gpt-4o-mini",
+      "knowledge": "2024-10",
+      "last_updated": "2024-07-18",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o-mini",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-07-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5": {
+      "attachment": true,
+      "cost": {
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "openai/gpt-5",
+      "knowledge": "2024-10-01",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5-chat": {
+      "attachment": true,
+      "cost": {
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5 Chat (latest) 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "openai/gpt-5-chat",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Chat (latest)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "temperature": true,
+      "tool_call": false
+    },
+    "openai/gpt-5-codex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5 Codex 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "openai/gpt-5-codex",
+      "knowledge": "2024-10-01",
+      "last_updated": "2025-09-15",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5-image": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.25,
+        "input": 5,
+        "output": 10
+      },
+      "description": "GPT-5 Image 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "openai/gpt-5-image",
+      "knowledge": "2024-10-01",
+      "last_updated": "2025-10-14",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "GPT-5 Image",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-10-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5-mini": {
+      "attachment": true,
+      "cost": {
+        "input": 0.25,
+        "output": 2
+      },
+      "description": "GPT-5 Mini 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-mini",
+      "id": "openai/gpt-5-mini",
+      "knowledge": "2024-10-01",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5-nano": {
+      "attachment": true,
+      "cost": {
+        "input": 0.05,
+        "output": 0.4
+      },
+      "description": "GPT-5 Nano 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-nano",
+      "id": "openai/gpt-5-nano",
+      "knowledge": "2024-10-01",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Nano",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 15,
+        "output": 120
+      },
+      "description": "GPT-5 Pro 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-pro",
+      "id": "openai/gpt-5-pro",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-10-06",
+      "limit": {
+        "context": 400000,
+        "output": 272000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-10-06",
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5.1 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "openai/gpt-5.1",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5.1-chat": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5.1 Chat 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "openai/gpt-5.1-chat",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1 Chat",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5.1-codex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5.1-Codex 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "openai/gpt-5.1-codex",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1-Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5.1-codex-max": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.11,
+        "input": 1.1,
+        "output": 9
+      },
+      "description": "GPT-5.1-Codex-Max 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "openai/gpt-5.1-codex-max",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1-Codex-Max",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5.1-codex-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.25,
+        "output": 2
+      },
+      "description": "GPT-5.1-Codex-Mini 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "openai/gpt-5.1-codex-mini",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 400000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1-Codex-Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5.2": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.2 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "openai/gpt-5.2",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-11",
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.2-chat": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.2 Chat 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "openai/gpt-5.2-chat",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2 Chat",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.2-codex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.2-Codex 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "openai/gpt-5.2-codex",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-01-14",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2-Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-01-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5.2-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 21,
+        "output": 168
+      },
+      "description": "GPT-5.2 Pro 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-pro",
+      "id": "openai/gpt-5.2-pro",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-oss-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.072,
+        "output": 0.28
+      },
+      "description": "GPT OSS 120B 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-120b",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-120b:exacto": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0.24
+      },
+      "description": "GPT OSS 120B (exacto) 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-120b:exacto",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B (exacto)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-120b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "gpt-oss-120b (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-120b:free",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-oss-120b (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-20b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0.2
+      },
+      "description": "GPT OSS 20B 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-20b",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 20B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-20b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "gpt-oss-20b (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-20b:free",
+      "last_updated": "2026-01-31",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-oss-20b (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-safeguard-20b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.075,
+        "output": 0.3
+      },
+      "description": "GPT OSS Safeguard 20B 是由 openrouter 提供的人工智慧模型。",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-safeguard-20b",
+      "last_updated": "2025-10-29",
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS Safeguard 20B",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-10-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/o4-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.28,
+        "input": 1.1,
+        "output": 4.4
+      },
+      "description": "o4 Mini 是由 openrouter 提供的人工智慧模型。",
+      "family": "o-mini",
+      "id": "openai/o4-mini",
+      "knowledge": "2024-06",
+      "last_updated": "2025-04-16",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o4 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-04-16",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openrouter/pony-alpha": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Pony Alpha 是由 openrouter 提供的人工智慧模型。",
+      "family": "pony",
+      "id": "openrouter/pony-alpha",
+      "last_updated": "2026-02-06",
+      "limit": {
+        "context": 200000,
+        "output": 131000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Pony Alpha",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openrouter/sherlock-dash-alpha": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Sherlock Dash Alpha 是由 openrouter 提供的人工智慧模型。",
+      "family": "sherlock",
+      "id": "openrouter/sherlock-dash-alpha",
+      "knowledge": "2025-11",
+      "last_updated": "2025-12-14",
+      "limit": {
+        "context": 1840000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Sherlock Dash Alpha",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-11-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openrouter/sherlock-think-alpha": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Sherlock Think Alpha 是由 openrouter 提供的人工智慧模型。",
+      "family": "sherlock",
+      "id": "openrouter/sherlock-think-alpha",
+      "knowledge": "2025-11",
+      "last_updated": "2025-12-14",
+      "limit": {
+        "context": 1840000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Sherlock Think Alpha",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen-2.5-coder-32b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen2.5 Coder 32B Instruct 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen-2.5-coder-32b-instruct",
+      "knowledge": "2024-10",
+      "last_updated": "2024-11-11",
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen2.5 Coder 32B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-11-11",
+      "temperature": true,
+      "tool_call": false
+    },
+    "qwen/qwen-2.5-vl-7b-instruct:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen2.5-VL 7B Instruct (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen-2.5-vl-7b-instruct:free",
+      "knowledge": "2025-02",
+      "last_updated": "2024-08-28",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen2.5-VL 7B Instruct (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-08-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen2.5-vl-32b-instruct:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen2.5 VL 32B Instruct (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen2.5-vl-32b-instruct:free",
+      "knowledge": "2025-03",
+      "last_updated": "2025-03-24",
+      "limit": {
+        "context": 8192,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen2.5 VL 32B Instruct (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-24",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen2.5-vl-72b-instruct": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen2.5 VL 72B Instruct 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen2.5-vl-72b-instruct",
+      "knowledge": "2024-10",
+      "last_updated": "2025-02-01",
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen2.5 VL 72B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-02-01",
+      "temperature": true,
+      "tool_call": false
+    },
+    "qwen/qwen2.5-vl-72b-instruct:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen2.5 VL 72B Instruct (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen2.5-vl-72b-instruct:free",
+      "knowledge": "2025-02",
+      "last_updated": "2025-02-01",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen2.5 VL 72B Instruct (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-02-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-14b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen3 14B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-14b:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-04-28",
+      "limit": {
+        "context": 40960,
+        "output": 40960
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 14B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-235b-a22b-07-25": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.85
+      },
+      "description": "Qwen3 235B A22B Instruct 2507 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-235b-a22b-07-25",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-21",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 235B A22B Instruct 2507",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-235b-a22b-07-25:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen3 235B A22B Instruct 2507 (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-235b-a22b-07-25:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-21",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 235B A22B Instruct 2507 (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-235b-a22b-thinking-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.078,
+        "output": 0.312
+      },
+      "description": "Qwen3 235B A22B Thinking 2507 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-235b-a22b-thinking-2507",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-25",
+      "limit": {
+        "context": 262144,
+        "output": 81920
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 235B A22B Thinking 2507",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-07-25",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-235b-a22b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen3 235B A22B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-235b-a22b:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-04-28",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 235B A22B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.2,
+        "output": 0.8
+      },
+      "description": "Qwen3 30B A3B Instruct 2507 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-30b-a3b-instruct-2507",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-29",
+      "limit": {
+        "context": 262000,
+        "output": 262000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 30B A3B Instruct 2507",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-30b-a3b-thinking-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.2,
+        "output": 0.8
+      },
+      "description": "Qwen3 30B A3B Thinking 2507 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-30b-a3b-thinking-2507",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-29",
+      "limit": {
+        "context": 262000,
+        "output": 262000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 30B A3B Thinking 2507",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-07-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-30b-a3b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen3 30B A3B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-30b-a3b:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-04-28",
+      "limit": {
+        "context": 40960,
+        "output": 40960
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 30B A3B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-32b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen3 32B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-32b:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-04-28",
+      "limit": {
+        "context": 40960,
+        "output": 40960
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 32B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-4b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen3 4B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-4b:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-23",
+      "limit": {
+        "context": 40960,
+        "output": 40960
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 4B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-8b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen3 8B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-8b:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-04-28",
+      "limit": {
+        "context": 40960,
+        "output": 40960
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 8B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-coder": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Qwen3 Coder 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-coder",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-23",
+      "limit": {
+        "context": 262144,
+        "output": 66536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-coder-30b-a3b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.07,
+        "output": 0.27
+      },
+      "description": "Qwen3 Coder 30B A3B Instruct 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-coder-30b-a3b-instruct",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-31",
+      "limit": {
+        "context": 160000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder 30B A3B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-31",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-coder-flash": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.5
+      },
+      "description": "Qwen3 Coder Flash 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-coder-flash",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-23",
+      "limit": {
+        "context": 128000,
+        "output": 66536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder Flash",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-07-23",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-coder:exacto": {
+      "attachment": false,
+      "cost": {
+        "input": 0.38,
+        "output": 1.53
+      },
+      "description": "Qwen3 Coder (exacto) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-coder:exacto",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-23",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder (exacto)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-coder:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen3 Coder 480B A35B Instruct (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-coder:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-23",
+      "limit": {
+        "context": 262144,
+        "output": 66536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder 480B A35B Instruct (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-max": {
+      "attachment": false,
+      "cost": {
+        "input": 1.2,
+        "output": 6
+      },
+      "description": "Qwen3 Max 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-max",
+      "last_updated": "2025-09-05",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-next-80b-a3b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.14,
+        "output": 1.4
+      },
+      "description": "Qwen3 Next 80B A3B Instruct 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-next-80b-a3b-instruct",
+      "knowledge": "2025-04",
+      "last_updated": "2025-09-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Next 80B A3B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-09-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-next-80b-a3b-instruct:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen3 Next 80B A3B Instruct (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-next-80b-a3b-instruct:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-09-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Next 80B A3B Instruct (free)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-09-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-next-80b-a3b-thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 0.14,
+        "output": 1.4
+      },
+      "description": "Qwen3 Next 80B A3B Thinking 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3-next-80b-a3b-thinking",
+      "knowledge": "2025-04",
+      "last_updated": "2025-09-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Next 80B A3B Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-09-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwq-32b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "QwQ 32B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen/qwq-32b:free",
+      "knowledge": "2025-03",
+      "last_updated": "2025-03-05",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "QwQ 32B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-03-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "rekaai/reka-flash-3": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Reka Flash 3 是由 openrouter 提供的人工智慧模型。",
+      "family": "reka",
+      "id": "rekaai/reka-flash-3",
+      "knowledge": "2024-10",
+      "last_updated": "2025-03-12",
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Reka Flash 3",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-03-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "sarvamai/sarvam-m:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Sarvam-M (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "sarvam",
+      "id": "sarvamai/sarvam-m:free",
+      "knowledge": "2025-05",
+      "last_updated": "2025-05-25",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Sarvam-M (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-05-25",
+      "temperature": true,
+      "tool_call": true
+    },
+    "sourceful/riverflow-v2-fast-preview": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Riverflow V2 Fast Preview 是由 openrouter 提供的人工智慧模型。",
+      "family": "sourceful",
+      "id": "sourceful/riverflow-v2-fast-preview",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 8192,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Riverflow V2 Fast Preview",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-08",
+      "temperature": true,
+      "tool_call": false
+    },
+    "sourceful/riverflow-v2-max-preview": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Riverflow V2 Max Preview 是由 openrouter 提供的人工智慧模型。",
+      "family": "sourceful",
+      "id": "sourceful/riverflow-v2-max-preview",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 8192,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Riverflow V2 Max Preview",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-08",
+      "temperature": true,
+      "tool_call": false
+    },
+    "sourceful/riverflow-v2-standard-preview": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Riverflow V2 Standard Preview 是由 openrouter 提供的人工智慧模型。",
+      "family": "sourceful",
+      "id": "sourceful/riverflow-v2-standard-preview",
+      "knowledge": "2025-06",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 8192,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Riverflow V2 Standard Preview",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-08",
+      "temperature": true,
+      "tool_call": false
+    },
+    "thudm/glm-z1-32b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GLM Z1 32B (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "glm-z",
+      "id": "thudm/glm-z1-32b:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-04-17",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM Z1 32B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "tngtech/deepseek-r1t2-chimera:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "DeepSeek R1T2 Chimera (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "deepseek-thinking",
+      "id": "tngtech/deepseek-r1t2-chimera:free",
+      "knowledge": "2025-07",
+      "last_updated": "2025-07-08",
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek R1T2 Chimera (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-07-08",
+      "temperature": true,
+      "tool_call": false
+    },
+    "tngtech/tng-r1t-chimera:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "R1T Chimera (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "tngtech",
+      "id": "tngtech/tng-r1t-chimera:free",
+      "knowledge": "2025-07",
+      "last_updated": "2026-01-31",
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "R1T Chimera (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-11-26",
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.75,
+        "cache_write": 15,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Grok 3 是由 openrouter 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "x-ai/grok-3",
+      "knowledge": "2024-11",
+      "last_updated": "2025-02-17",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 3",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-02-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-3-beta": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.75,
+        "cache_write": 15,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Grok 3 Beta 是由 openrouter 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "x-ai/grok-3-beta",
+      "knowledge": "2024-11",
+      "last_updated": "2025-02-17",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 3 Beta",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-02-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-3-mini": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.075,
+        "cache_write": 0.5,
+        "input": 0.3,
+        "output": 0.5
+      },
+      "description": "Grok 3 Mini 是由 openrouter 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "x-ai/grok-3-mini",
+      "knowledge": "2024-11",
+      "last_updated": "2025-02-17",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 3 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-02-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-3-mini-beta": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.075,
+        "cache_write": 0.5,
+        "input": 0.3,
+        "output": 0.5
+      },
+      "description": "Grok 3 Mini Beta 是由 openrouter 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "x-ai/grok-3-mini-beta",
+      "knowledge": "2024-11",
+      "last_updated": "2025-02-17",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 3 Mini Beta",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-02-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-4": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.75,
+        "cache_write": 15,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Grok 4 是由 openrouter 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "x-ai/grok-4",
+      "knowledge": "2025-07",
+      "last_updated": "2025-07-09",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-07-09",
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-4-fast": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 0.05,
+        "input": 0.2,
+        "output": 0.5
+      },
+      "description": "Grok 4 Fast 是由 openrouter 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "x-ai/grok-4-fast",
+      "knowledge": "2024-11",
+      "last_updated": "2025-08-19",
+      "limit": {
+        "context": 2000000,
+        "output": 30000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4 Fast",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-19",
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-4.1-fast": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 0.05,
+        "input": 0.2,
+        "output": 0.5
+      },
+      "description": "Grok 4.1 Fast 是由 openrouter 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "x-ai/grok-4.1-fast",
+      "knowledge": "2024-11",
+      "last_updated": "2025-11-19",
+      "limit": {
+        "context": 2000000,
+        "output": 30000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.1 Fast",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-19",
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-code-fast-1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.2,
+        "output": 1.5
+      },
+      "description": "Grok Code Fast 1 是由 openrouter 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "x-ai/grok-code-fast-1",
+      "knowledge": "2025-08",
+      "last_updated": "2025-08-26",
+      "limit": {
+        "context": 256000,
+        "output": 10000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok Code Fast 1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-26",
+      "temperature": true,
+      "tool_call": true
+    },
+    "xiaomi/mimo-v2-flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.1,
+        "output": 0.3
+      },
+      "description": "MiMo-V2-Flash 是由 openrouter 提供的人工智慧模型。",
+      "family": "mimo",
+      "id": "xiaomi/mimo-v2-flash",
+      "knowledge": "2024-12",
+      "last_updated": "2025-12-14",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-4.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 2.2
+      },
+      "description": "GLM 4.5 是由 openrouter 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "z-ai/glm-4.5",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-28",
+      "limit": {
+        "context": 128000,
+        "output": 96000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-07-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-4.5-air": {
+      "attachment": false,
+      "cost": {
+        "input": 0.2,
+        "output": 1.1
+      },
+      "description": "GLM 4.5 Air 是由 openrouter 提供的人工智慧模型。",
+      "family": "glm-air",
+      "id": "z-ai/glm-4.5-air",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-28",
+      "limit": {
+        "context": 128000,
+        "output": 96000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.5 Air",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-07-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-4.5-air:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GLM 4.5 Air (free) 是由 openrouter 提供的人工智慧模型。",
+      "family": "glm-air",
+      "id": "z-ai/glm-4.5-air:free",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-28",
+      "limit": {
+        "context": 128000,
+        "output": 96000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.5 Air (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-07-28",
+      "temperature": true,
+      "tool_call": false
+    },
+    "z-ai/glm-4.5v": {
+      "attachment": true,
+      "cost": {
+        "input": 0.6,
+        "output": 1.8
+      },
+      "description": "GLM 4.5V 是由 openrouter 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "z-ai/glm-4.5v",
+      "knowledge": "2025-04",
+      "last_updated": "2025-08-11",
+      "limit": {
+        "context": 64000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.5V",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-4.6": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.11,
+        "input": 0.6,
+        "output": 2.2
+      },
+      "description": "GLM 4.6 是由 openrouter 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "z-ai/glm-4.6",
+      "knowledge": "2025-09",
+      "last_updated": "2025-09-30",
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.6",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-09-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-4.6:exacto": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.11,
+        "input": 0.6,
+        "output": 1.9
+      },
+      "description": "GLM 4.6 (exacto) 是由 openrouter 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "z-ai/glm-4.6:exacto",
+      "knowledge": "2025-09",
+      "last_updated": "2025-09-30",
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.6 (exacto)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-09-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-4.7": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.11,
+        "input": 0.6,
+        "output": 2.2
+      },
+      "description": "GLM-4.7 是由 openrouter 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "z-ai/glm-4.7",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2025-12-22",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.7",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-4.7-flash": {
+      "attachment": false,
+      "cost": {
+        "input": 0.07,
+        "output": 0.4
+      },
+      "description": "GLM-4.7 是由 openrouter 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "z-ai/glm-4.7-flash",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "last_updated": "2026-01-19",
+      "limit": {
+        "context": 200000,
+        "output": 65535
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.7",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "OpenRouter",
+  "npm": "@openrouter/ai-sdk-provider"
+}

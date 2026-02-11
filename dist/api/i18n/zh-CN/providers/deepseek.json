@@ -1,0 +1,79 @@
+{
+  "api": "https://api.deepseek.com",
+  "doc": "https://platform.deepseek.com/api-docs/pricing",
+  "env": [
+    "DEEPSEEK_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/deepseek.svg",
+  "id": "deepseek",
+  "lobeIcon": "DeepSeek.Color",
+  "models": {
+    "deepseek-chat": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.028,
+        "input": 0.28,
+        "output": 0.42
+      },
+      "description": "DeepSeek Chat 是由 deepseek 提供的人工智能模型。",
+      "family": "deepseek",
+      "id": "deepseek-chat",
+      "knowledge": "2024-07",
+      "last_updated": "2025-09-29",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek Chat",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-12-26",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-reasoner": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.028,
+        "input": 0.28,
+        "output": 0.42
+      },
+      "description": "DeepSeek Reasoner 是由 deepseek 提供的人工智能模型。",
+      "family": "deepseek-thinking",
+      "id": "deepseek-reasoner",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-07",
+      "last_updated": "2025-09-29",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek Reasoner",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-01-20",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "DeepSeek",
+  "npm": "@ai-sdk/openai-compatible"
+}

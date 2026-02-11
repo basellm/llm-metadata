@@ -1,0 +1,1441 @@
+{
+  "doc": "https://platform.openai.com/docs/models",
+  "env": [
+    "OPENAI_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/openai.svg",
+  "id": "openai",
+  "lobeIcon": "OpenAI.Color",
+  "models": {
+    "codex-mini-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.375,
+        "input": 1.5,
+        "output": 6
+      },
+      "description": "Codex Mini 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-codex-mini",
+      "id": "codex-mini-latest",
+      "knowledge": "2024-04",
+      "last_updated": "2025-05-16",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Codex Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-05-16",
+      "temperature": false,
+      "tool_call": true
+    },
+    "dall-e-2": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0.05,
+        "input": 0.02,
+        "output": 0.1
+      },
+      "description": "An AI model that generates images from textual descriptions.",
+      "id": "dall-e-2",
+      "knowledge": "2021-04",
+      "last_updated": "2022-06-15",
+      "limit": {
+        "context": 1024,
+        "output": 1
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "DALL-E 2",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2022-04-06",
+      "temperature": false,
+      "tool_call": true
+    },
+    "dall-e-3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0.05,
+        "input": 0.03,
+        "output": 0.15
+      },
+      "description": "The latest version of DALL-E for generating images from text.",
+      "id": "dall-e-3",
+      "knowledge": "2024-04",
+      "last_updated": "2024-08-15",
+      "limit": {
+        "context": 2048,
+        "output": 1
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "DALL-E 3",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-03-01",
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-3.5-turbo": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 1.25,
+        "input": 0.5,
+        "output": 1.5
+      },
+      "description": "GPT-3.5-turbo 是由 openai 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-3.5-turbo",
+      "knowledge": "2021-09-01",
+      "last_updated": "2023-11-06",
+      "limit": {
+        "context": 16385,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-3.5-turbo",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2023-03-01",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
+    "gpt-4": {
+      "attachment": true,
+      "cost": {
+        "input": 30,
+        "output": 60
+      },
+      "description": "GPT-4 是由 openai 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-4",
+      "knowledge": "2023-11",
+      "last_updated": "2024-04-09",
+      "limit": {
+        "context": 8192,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2023-11-06",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4-turbo": {
+      "attachment": true,
+      "cost": {
+        "input": 10,
+        "output": 30
+      },
+      "description": "GPT-4 Turbo 是由 openai 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-4-turbo",
+      "knowledge": "2023-12",
+      "last_updated": "2024-04-09",
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4 Turbo",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2023-11-06",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 2,
+        "output": 8
+      },
+      "description": "GPT-4.1 是由 openai 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-4.1",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "input": 0.4,
+        "output": 1.6
+      },
+      "description": "GPT-4.1 mini 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-mini",
+      "id": "gpt-4.1-mini",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1 mini",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1-nano": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "GPT-4.1 nano 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-nano",
+      "id": "gpt-4.1-nano",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1 nano",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4o": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.25,
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "GPT-4o 是由 openai 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-4o",
+      "knowledge": "2023-09",
+      "last_updated": "2024-08-06",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-05-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4o-2024-05-13": {
+      "attachment": true,
+      "cost": {
+        "input": 5,
+        "output": 15
+      },
+      "description": "GPT-4o (2024-05-13) 是由 openai 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-4o-2024-05-13",
+      "knowledge": "2023-09",
+      "last_updated": "2024-05-13",
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o (2024-05-13)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-05-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4o-2024-08-06": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.25,
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "GPT-4o (2024-08-06) 是由 openai 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-4o-2024-08-06",
+      "knowledge": "2023-09",
+      "last_updated": "2024-08-06",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o (2024-08-06)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-08-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4o-2024-11-20": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.25,
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "GPT-4o (2024-11-20) 是由 openai 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-4o-2024-11-20",
+      "knowledge": "2023-09",
+      "last_updated": "2024-11-20",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o (2024-11-20)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-11-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4o-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.08,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "GPT-4o mini 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-mini",
+      "id": "gpt-4o-mini",
+      "knowledge": "2023-09",
+      "last_updated": "2024-07-18",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o mini",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-07-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5 是由 openai 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-5",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-chat-latest": {
+      "attachment": true,
+      "cost": {
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5 Chat (latest) 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5-chat-latest",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Chat (latest)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "gpt-5-codex": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5-Codex 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5-codex",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-09-15",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5-Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-15",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.25,
+        "output": 2
+      },
+      "description": "GPT-5 Mini 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-mini",
+      "id": "gpt-5-mini",
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-nano": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.005,
+        "input": 0.05,
+        "output": 0.4
+      },
+      "description": "GPT-5 Nano 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-nano",
+      "id": "gpt-5-nano",
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Nano",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 15,
+        "output": 120
+      },
+      "description": "GPT-5 Pro 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-pro",
+      "id": "gpt-5-pro",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-10-06",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 272000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-10-06",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.13,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5.1 是由 openai 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-5.1",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1-chat-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5.1 Chat 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.1-chat-latest",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1 Chat",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1-codex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5.1 Codex 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.1-codex",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1 Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1-codex-max": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5.1 Codex Max 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.1-codex-max",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1 Codex Max",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1-codex-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.25,
+        "output": 2
+      },
+      "description": "GPT-5.1 Codex mini 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.1-codex-mini",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1 Codex mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.2": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.2 是由 openai 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "gpt-5.2",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.2-chat-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.2 Chat 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.2-chat-latest",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2 Chat",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.2-codex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.2 Codex 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.2-codex",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2 Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.2-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 21,
+        "output": 168
+      },
+      "description": "GPT-5.2 Pro 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-pro",
+      "id": "gpt-5.2-pro",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.3-codex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.3 Codex 是由 openai 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "gpt-5.3-codex",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.3 Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-05",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-image-1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 0.6,
+        "input": 10,
+        "output": 20
+      },
+      "description": "An advanced AI model for generating images from textual descriptions.",
+      "id": "gpt-image-1",
+      "knowledge": "2023-10",
+      "last_updated": "2024-10-01",
+      "limit": {
+        "context": 1000,
+        "output": 512
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GPT-IMAGE-1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2024-01-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "o1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 7.5,
+        "input": 15,
+        "output": 60
+      },
+      "description": "o1 是由 openai 提供的人工智慧模型。",
+      "family": "o",
+      "id": "o1",
+      "knowledge": "2023-09",
+      "last_updated": "2024-12-05",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2024-12-05",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "o1-mini": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.55,
+        "input": 1.1,
+        "output": 4.4
+      },
+      "description": "o1-mini 是由 openai 提供的人工智慧模型。",
+      "family": "o-mini",
+      "id": "o1-mini",
+      "knowledge": "2023-09",
+      "last_updated": "2024-09-12",
+      "limit": {
+        "context": 128000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o1-mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2024-09-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": false
+    },
+    "o1-preview": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 7.5,
+        "input": 15,
+        "output": 60
+      },
+      "description": "o1-preview 是由 openai 提供的人工智慧模型。",
+      "family": "o",
+      "id": "o1-preview",
+      "knowledge": "2023-09",
+      "last_updated": "2024-09-12",
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o1-preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2024-09-12",
+      "temperature": true,
+      "tool_call": false
+    },
+    "o1-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 150,
+        "output": 600
+      },
+      "description": "o1-pro 是由 openai 提供的人工智慧模型。",
+      "family": "o-pro",
+      "id": "o1-pro",
+      "knowledge": "2023-09",
+      "last_updated": "2025-03-19",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o1-pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-03-19",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "o3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 2,
+        "output": 8
+      },
+      "description": "o3 是由 openai 提供的人工智慧模型。",
+      "family": "o",
+      "id": "o3",
+      "knowledge": "2024-05",
+      "last_updated": "2025-04-16",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o3",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-04-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "o3-deep-research": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 2.5,
+        "input": 10,
+        "output": 40
+      },
+      "description": "o3-deep-research 是由 openai 提供的人工智慧模型。",
+      "family": "o",
+      "id": "o3-deep-research",
+      "knowledge": "2024-05",
+      "last_updated": "2024-06-26",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o3-deep-research",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2024-06-26",
+      "temperature": false,
+      "tool_call": true
+    },
+    "o3-mini": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.55,
+        "input": 1.1,
+        "output": 4.4
+      },
+      "description": "o3-mini 是由 openai 提供的人工智慧模型。",
+      "family": "o-mini",
+      "id": "o3-mini",
+      "knowledge": "2024-05",
+      "last_updated": "2025-01-29",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o3-mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2024-12-20",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "o3-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 20,
+        "output": 80
+      },
+      "description": "o3-pro 是由 openai 提供的人工智慧模型。",
+      "family": "o-pro",
+      "id": "o3-pro",
+      "knowledge": "2024-05",
+      "last_updated": "2025-06-10",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o3-pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-06-10",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "o4-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.28,
+        "input": 1.1,
+        "output": 4.4
+      },
+      "description": "o4-mini 是由 openai 提供的人工智慧模型。",
+      "family": "o-mini",
+      "id": "o4-mini",
+      "knowledge": "2024-05",
+      "last_updated": "2025-04-16",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o4-mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-04-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "o4-mini-deep-research": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 2,
+        "output": 8
+      },
+      "description": "o4-mini-deep-research 是由 openai 提供的人工智慧模型。",
+      "family": "o-mini",
+      "id": "o4-mini-deep-research",
+      "knowledge": "2024-05",
+      "last_updated": "2024-06-26",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "o4-mini-deep-research",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2024-06-26",
+      "temperature": false,
+      "tool_call": true
+    },
+    "text-embedding-3-large": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 0.4,
+        "input": 7,
+        "output": 10
+      },
+      "description": "Large size text embedding model for extensive natural language processing tasks.",
+      "family": "text-embedding",
+      "id": "text-embedding-3-large",
+      "knowledge": "2023-10",
+      "last_updated": "2023-10-01",
+      "limit": {
+        "context": 64000,
+        "output": 2048
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "vector"
+        ]
+      },
+      "name": "TEXT-EMBEDDING-3-LARGE",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2023-12-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "text-embedding-3-small": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.04,
+        "cache_write": 0.3,
+        "input": 4,
+        "output": 8
+      },
+      "description": "Small size text embedding model for efficient processing.",
+      "family": "text-embedding",
+      "id": "text-embedding-3-small",
+      "knowledge": "2023-10",
+      "last_updated": "2023-10-01",
+      "limit": {
+        "context": 32000,
+        "output": 1024
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "vector"
+        ]
+      },
+      "name": "TEXT-EMBEDDING-3-SMALL",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2023-11-10",
+      "temperature": true,
+      "tool_call": true
+    },
+    "text-embedding-ada-002": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.06,
+        "cache_write": 0.45,
+        "input": 6,
+        "output": 12
+      },
+      "description": "Ada-based text embedding model optimized for various NLP tasks.",
+      "family": "text-embedding",
+      "id": "text-embedding-ada-002",
+      "knowledge": "2023-10",
+      "last_updated": "2023-10-01",
+      "limit": {
+        "context": 60000,
+        "output": 1500
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "vector"
+        ]
+      },
+      "name": "TEXT-EMBEDDING-ADA-002",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2023-11-20",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "OpenAI",
+  "npm": "@ai-sdk/openai"
+}

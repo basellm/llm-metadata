@@ -1,0 +1,923 @@
+{
+  "doc": "https://docs.venice.ai",
+  "env": [
+    "VENICE_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/venice.svg",
+  "id": "venice",
+  "lobeIcon": "VeniceAI",
+  "models": {
+    "claude-opus-4-6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.6,
+        "cache_write": 7.5,
+        "input": 6,
+        "output": 30
+      },
+      "description": "Claude Opus 4.6 是由 venice 提供的人工智慧模型。",
+      "family": "claude-opus",
+      "id": "claude-opus-4-6",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-45": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.6,
+        "cache_write": 7.5,
+        "input": 6,
+        "output": 30
+      },
+      "description": "Claude Opus 4.5 是由 venice 提供的人工智慧模型。",
+      "family": "claude-opus",
+      "id": "claude-opus-45",
+      "knowledge": "2025-03",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 198000,
+        "output": 49500
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-sonnet-45": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.375,
+        "cache_write": 4.69,
+        "input": 3.75,
+        "output": 18.75
+      },
+      "description": "Claude Sonnet 4.5 是由 venice 提供的人工智慧模型。",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-45",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-09",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 198000,
+        "output": 49500
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-01-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v3.2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 0.4,
+        "output": 1
+      },
+      "description": "DeepSeek V3.2 是由 venice 提供的人工智慧模型。",
+      "family": "deepseek",
+      "id": "deepseek-v3.2",
+      "knowledge": "2025-10",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 160000,
+        "output": 40000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3.2",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-04",
+      "temperature": true,
+      "tool_call": false
+    },
+    "gemini-3-flash-preview": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.07,
+        "input": 0.7,
+        "output": 3.75
+      },
+      "description": "Gemini 3 Flash Preview 是由 venice 提供的人工智慧模型。",
+      "family": "gemini-flash",
+      "id": "gemini-3-flash-preview",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3 Flash Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3-pro-preview": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.625,
+        "input": 2.5,
+        "output": 15
+      },
+      "description": "Gemini 3 Pro Preview 是由 venice 提供的人工智慧模型。",
+      "family": "gemini-pro",
+      "id": "gemini-3-pro-preview",
+      "knowledge": "2024-04",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 198000,
+        "output": 49500
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3 Pro Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google-gemma-3-27b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.12,
+        "output": 0.2
+      },
+      "description": "Google Gemma 3 27B Instruct 是由 venice 提供的人工智慧模型。",
+      "family": "gemma",
+      "id": "google-gemma-3-27b-it",
+      "knowledge": "2025-07",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 198000,
+        "output": 49500
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Google Gemma 3 27B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-11-04",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "grok-41-fast": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 0.5,
+        "output": 1.25
+      },
+      "description": "Grok 4.1 Fast 是由 venice 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "grok-41-fast",
+      "knowledge": "2025-07",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.1 Fast",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "grok-code-fast-1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.25,
+        "output": 1.87
+      },
+      "description": "Grok Code Fast 1 是由 venice 提供的人工智慧模型。",
+      "family": "grok",
+      "id": "grok-code-fast-1",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok Code Fast 1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "hermes-3-llama-3.1-405b": {
+      "attachment": false,
+      "cost": {
+        "input": 1.1,
+        "output": 3
+      },
+      "description": "Hermes 3 Llama 3.1 405b 是由 venice 提供的人工智慧模型。",
+      "family": "hermes",
+      "id": "hermes-3-llama-3.1-405b",
+      "knowledge": "2024-04",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hermes 3 Llama 3.1 405b",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-09-25",
+      "temperature": true,
+      "tool_call": false
+    },
+    "kimi-k2-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 0.75,
+        "output": 3.75
+      },
+      "description": "Kimi K2.5 是由 venice 提供的人工智慧模型。",
+      "family": "kimi",
+      "id": "kimi-k2-5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-04",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2-thinking": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.375,
+        "input": 0.75,
+        "output": 3.2
+      },
+      "description": "Kimi K2 Thinking 是由 venice 提供的人工智慧模型。",
+      "family": "kimi-thinking",
+      "id": "kimi-k2-thinking",
+      "knowledge": "2024-04",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "llama-3.2-3b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Llama 3.2 3B 是由 venice 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "llama-3.2-3b",
+      "knowledge": "2023-12",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.2 3B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-10-03",
+      "temperature": true,
+      "tool_call": true
+    },
+    "llama-3.3-70b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.7,
+        "output": 2.8
+      },
+      "description": "Llama 3.3 70B 是由 venice 提供的人工智慧模型。",
+      "family": "llama",
+      "id": "llama-3.3-70b",
+      "knowledge": "2023-12",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.3 70B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m21": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.04,
+        "input": 0.4,
+        "output": 1.6
+      },
+      "description": "MiniMax M2.1 是由 venice 提供的人工智慧模型。",
+      "family": "minimax",
+      "id": "minimax-m21",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 198000,
+        "output": 49500
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistral-31-24b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.5,
+        "output": 2
+      },
+      "description": "Venice Medium 是由 venice 提供的人工智慧模型。",
+      "family": "mistral",
+      "id": "mistral-31-24b",
+      "knowledge": "2023-10",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Venice Medium",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai-gpt-52": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.219,
+        "input": 2.19,
+        "output": 17.5
+      },
+      "description": "GPT-5.2 是由 venice 提供的人工智慧模型。",
+      "family": "gpt",
+      "id": "openai-gpt-52",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai-gpt-52-codex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.219,
+        "input": 2.19,
+        "output": 17.5
+      },
+      "description": "GPT-5.2 Codex 是由 venice 提供的人工智慧模型。",
+      "family": "gpt-codex",
+      "id": "openai-gpt-52-codex",
+      "knowledge": "2025-08",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2 Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-01-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai-gpt-oss-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.07,
+        "output": 0.3
+      },
+      "description": "OpenAI GPT OSS 120B 是由 venice 提供的人工智慧模型。",
+      "family": "gpt-oss",
+      "id": "openai-gpt-oss-120b",
+      "knowledge": "2025-07",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-11-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-235b-a22b-instruct-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.75
+      },
+      "description": "Qwen 3 235B A22B Instruct 2507 是由 venice 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen3-235b-a22b-instruct-2507",
+      "knowledge": "2025-07",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3 235B A22B Instruct 2507",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-235b-a22b-thinking-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.45,
+        "output": 3.5
+      },
+      "description": "Qwen 3 235B A22B Thinking 2507 是由 venice 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen3-235b-a22b-thinking-2507",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-07",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3 235B A22B Thinking 2507",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-4b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0.15
+      },
+      "description": "Venice Small 是由 venice 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen3-4b",
+      "knowledge": "2024-07",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 32000,
+        "output": 8000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Venice Small",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-coder-480b-a35b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.75,
+        "output": 3
+      },
+      "description": "Qwen 3 Coder 480b 是由 venice 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen3-coder-480b-a35b-instruct",
+      "knowledge": "2025-07",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3 Coder 480b",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-next-80b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.35,
+        "output": 1.9
+      },
+      "description": "Qwen 3 Next 80b 是由 venice 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen3-next-80b",
+      "knowledge": "2025-07",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3 Next 80b",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-vl-235b-a22b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.25,
+        "output": 1.5
+      },
+      "description": "Qwen3 VL 235B 是由 venice 提供的人工智慧模型。",
+      "family": "qwen",
+      "id": "qwen3-vl-235b-a22b",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 VL 235B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-16",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "venice-uncensored": {
+      "attachment": false,
+      "cost": {
+        "input": 0.2,
+        "output": 0.9
+      },
+      "description": "Venice Uncensored 1.1 是由 venice 提供的人工智慧模型。",
+      "family": "venice",
+      "id": "venice-uncensored",
+      "knowledge": "2023-10",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 32000,
+        "output": 8000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Venice Uncensored 1.1",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "zai-org-glm-4.7": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.11,
+        "input": 0.55,
+        "output": 2.65
+      },
+      "description": "GLM 4.7 是由 venice 提供的人工智慧模型。",
+      "family": "glm",
+      "id": "zai-org-glm-4.7",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 198000,
+        "output": 49500
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.7",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org-glm-4.7-flash": {
+      "attachment": false,
+      "cost": {
+        "input": 0.125,
+        "output": 0.5
+      },
+      "description": "GLM 4.7 Flash 是由 venice 提供的人工智慧模型。",
+      "family": "glm-flash",
+      "id": "zai-org-glm-4.7-flash",
+      "last_updated": "2026-02-10",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.7 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Venice AI",
+  "npm": "venice-ai-sdk-provider"
+}
