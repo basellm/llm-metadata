@@ -22053,7 +22053,7 @@
         "last_updated": "2026-02-05",
         "limit": {
           "context": 1000000,
-          "output": 64000
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -28985,37 +28985,6 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-12-11",
-        "temperature": false,
-        "tool_call": true
-      },
-      "gpt-5.3-codex": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GPT-5.3-Codex は github-copilot によって提供される AI モデルです。",
-        "family": "gpt-codex",
-        "id": "gpt-5.3-codex",
-        "knowledge": "2025-08-31",
-        "last_updated": "2026-02-05",
-        "limit": {
-          "context": 272000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5.3-Codex",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2026-02-05",
         "temperature": false,
         "tool_call": true
       },
@@ -42843,6 +42812,39 @@
         "temperature": true,
         "tool_call": true
       },
+      "minimax/minimax-m2.5-official": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.5 は nano-gpt によって提供される AI モデルです。",
+        "family": "minimax",
+        "id": "minimax/minimax-m2.5-official",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "mistralai/devstral-2-123b-instruct-2512": {
         "attachment": false,
         "cost": {
@@ -43221,67 +43223,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "z-ai/glm-4.6": {
-        "attachment": false,
-        "cost": {
-          "input": 1,
-          "output": 2
-        },
-        "description": "GLM 4.6 は nano-gpt によって提供される AI モデルです。",
-        "family": "glm",
-        "id": "z-ai/glm-4.6",
-        "knowledge": "2024-10",
-        "last_updated": "2025-12-24",
-        "limit": {
-          "context": 200000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 4.6",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-11-15",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "z-ai/glm-4.6:thinking": {
-        "attachment": false,
-        "cost": {
-          "input": 1,
-          "output": 2
-        },
-        "description": "GLM 4.6 Thinking は nano-gpt によって提供される AI モデルです。",
-        "family": "glm",
-        "id": "z-ai/glm-4.6:thinking",
-        "last_updated": "2025-12-24",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 4.6 Thinking",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-04-07",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "zai-org/glm-4.5-air": {
         "attachment": false,
         "cost": {
@@ -43336,6 +43277,67 @@
           ]
         },
         "name": "GLM 4.5 Air Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-04-07",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/glm-4.6": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 2
+        },
+        "description": "GLM 4.6 は nano-gpt によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "zai-org/glm-4.6",
+        "knowledge": "2024-10",
+        "last_updated": "2025-12-24",
+        "limit": {
+          "context": 200000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.6",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-11-15",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/glm-4.6:thinking": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 2
+        },
+        "description": "GLM 4.6 Thinking は nano-gpt によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "zai-org/glm-4.6:thinking",
+        "last_updated": "2025-12-24",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.6 Thinking",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-04-07",
@@ -43423,7 +43425,7 @@
           "field": "reasoning_content"
         },
         "knowledge": "2025-06",
-        "last_updated": "2025-02-11",
+        "last_updated": "2026-02-11",
         "limit": {
           "context": 200000,
           "output": 128000
@@ -43439,7 +43441,75 @@
         "name": "GLM 5",
         "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-02-11",
+        "release_date": "2026-02-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/glm-5-original": {
+        "attachment": false,
+        "cost": {
+          "input": 0.8,
+          "output": 2.56
+        },
+        "description": "GLM 5 Original は nano-gpt によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "zai-org/glm-5-original",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-06",
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 200000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5 Original",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/glm-5-original:thinking": {
+        "attachment": false,
+        "cost": {
+          "input": 0.8,
+          "output": 2.56
+        },
+        "description": "GLM 5 Original Thinking は nano-gpt によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "zai-org/glm-5-original:thinking",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-06",
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 200000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5 Original Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -43457,7 +43527,7 @@
           "field": "reasoning_content"
         },
         "knowledge": "2025-06",
-        "last_updated": "2025-02-11",
+        "last_updated": "2026-02-11",
         "limit": {
           "context": 200000,
           "output": 128000
@@ -43473,7 +43543,7 @@
         "name": "GLM 5 Thinking",
         "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-02-11",
+        "release_date": "2026-02-11",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -46169,6 +46239,40 @@
         "temperature": true,
         "tool_call": true
       },
+      "minimax/minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.5 は novita-ai によって提供される AI モデルです。",
+        "family": "minimax",
+        "id": "minimax/minimax-m2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131100
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "minimaxai/minimax-m1-80k": {
         "attachment": false,
         "cost": {
@@ -47632,6 +47736,40 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-01-19",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5 は novita-ai によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "zai-org/glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 202800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -51532,6 +51670,41 @@
         "temperature": false,
         "tool_call": true
       },
+      "gpt-5.3-codex-spark": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.175,
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.3 Codex Spark は openai によって提供される AI モデルです。",
+        "family": "gpt-codex-spark",
+        "id": "gpt-5.3-codex-spark",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-02-05",
+        "limit": {
+          "context": 128000,
+          "input": 100000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.3 Codex Spark",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-05",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "gpt-image-1": {
         "attachment": true,
         "cost": {
@@ -53056,6 +53229,38 @@
         },
         "reasoning": true,
         "release_date": "2025-12-23",
+        "status": "deprecated",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m2.5-free": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiniMax M2.5 Free は opencode によって提供される AI モデルです。",
+        "family": "minimax-free",
+        "id": "minimax-m2.5-free",
+        "knowledge": "2025-01",
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5 Free",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
         "temperature": true,
         "tool_call": true
       },
@@ -53117,6 +53322,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-01-28",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       }
@@ -57983,6 +58189,67 @@
         "release_date": "2025-12-08",
         "temperature": true,
         "tool_call": false
+      },
+      "stepfun/step-3.5-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.1,
+          "output": 0.3
+        },
+        "description": "Step 3.5 Flash は openrouter によって提供される AI モデルです。",
+        "family": "step",
+        "id": "stepfun/step-3.5-flash",
+        "knowledge": "2025-01",
+        "last_updated": "2026-01-29",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 3.5 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "stepfun/step-3.5-flash:free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Step 3.5 Flash (free) は openrouter によって提供される AI モデルです。",
+        "family": "step",
+        "id": "stepfun/step-3.5-flash:free",
+        "knowledge": "2025-01",
+        "last_updated": "2026-01-29",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 3.5 Flash (free)",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-29",
+        "temperature": true,
+        "tool_call": true
       },
       "thudm/glm-z1-32b:free": {
         "attachment": false,
@@ -68713,189 +68980,15 @@
     "iconURL": "https://models.dev/logos/stackit.svg",
     "id": "stackit",
     "models": {
-      "e5-mistral-7b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.02,
-          "output": 0.02
-        },
-        "description": "E5 Mistral 7B は stackit によって提供される AI モデルです。",
-        "id": "e5-mistral-7b",
-        "last_updated": "2023-12-11",
-        "limit": {
-          "context": 4096,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "E5 Mistral 7B",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2023-12-11",
-        "structured_output": false,
-        "temperature": false,
-        "tool_call": false
-      },
-      "gemma-3-27b": {
+      "Qwen/Qwen3-VL-235B-A22B-Instruct-FP8": {
         "attachment": true,
         "cost": {
-          "input": 0.53,
-          "output": 0.77
-        },
-        "description": "Gemma 3 27B は stackit によって提供される AI モデルです。",
-        "id": "gemma-3-27b",
-        "last_updated": "2025-05-17",
-        "limit": {
-          "context": 37000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemma 3 27B",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-05-17",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "gpt-oss-120b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.53,
-          "output": 0.77
-        },
-        "description": "GPT-OSS 120B は stackit によって提供される AI モデルです。",
-        "id": "gpt-oss-120b",
-        "last_updated": "2025-08-05",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-OSS 120B",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-08-05",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "llama-3.1-8b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.18,
-          "output": 0.3
-        },
-        "description": "Llama 3.1 8B は stackit によって提供される AI モデルです。",
-        "id": "llama-3.1-8b",
-        "last_updated": "2024-07-23",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama 3.1 8B",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-07-23",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "llama-3.3-70b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.53,
-          "output": 0.77
-        },
-        "description": "Llama 3.3 70B は stackit によって提供される AI モデルです。",
-        "id": "llama-3.3-70b",
-        "last_updated": "2024-12-05",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama 3.3 70B",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-12-05",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "mistral-nemo": {
-        "attachment": false,
-        "cost": {
-          "input": 0.53,
-          "output": 0.77
-        },
-        "description": "Mistral Nemo は stackit によって提供される AI モデルです。",
-        "id": "mistral-nemo",
-        "last_updated": "2024-07-01",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Mistral Nemo",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-07-01",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-vl-235b": {
-        "attachment": true,
-        "cost": {
-          "input": 1.77,
-          "output": 2.07
+          "input": 1.64,
+          "output": 1.91
         },
         "description": "Qwen3-VL 235B は stackit によって提供される AI モデルです。",
-        "id": "qwen3-vl-235b",
+        "family": "qwen",
+        "id": "Qwen/Qwen3-VL-235B-A22B-Instruct-FP8",
         "last_updated": "2024-11-01",
         "limit": {
           "context": 218000,
@@ -68918,14 +69011,15 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3-vl-embedding-8b": {
+      "Qwen/Qwen3-VL-Embedding-8B": {
         "attachment": true,
         "cost": {
           "input": 0.09,
           "output": 0.09
         },
         "description": "Qwen3-VL Embedding 8B は stackit によって提供される AI モデルです。",
-        "id": "qwen3-vl-embedding-8b",
+        "family": "qwen",
+        "id": "Qwen/Qwen3-VL-Embedding-8B",
         "last_updated": "2026-02-05",
         "limit": {
           "context": 32000,
@@ -68947,6 +69041,187 @@
         "structured_output": false,
         "temperature": false,
         "tool_call": false
+      },
+      "cortecs/Llama-3.3-70B-Instruct-FP8-Dynamic": {
+        "attachment": false,
+        "cost": {
+          "input": 0.49,
+          "output": 0.71
+        },
+        "description": "Llama 3.3 70B は stackit によって提供される AI モデルです。",
+        "family": "llama",
+        "id": "cortecs/Llama-3.3-70B-Instruct-FP8-Dynamic",
+        "last_updated": "2024-12-05",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.3 70B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-12-05",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemma-3-27b-it": {
+        "attachment": true,
+        "cost": {
+          "input": 0.49,
+          "output": 0.71
+        },
+        "description": "Gemma 3 27B は stackit によって提供される AI モデルです。",
+        "family": "gemma",
+        "id": "google/gemma-3-27b-it",
+        "last_updated": "2025-05-17",
+        "limit": {
+          "context": 37000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 3 27B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-05-17",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
+      },
+      "intfloat/e5-mistral-7b-instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.02,
+          "output": 0.02
+        },
+        "description": "E5 Mistral 7B は stackit によって提供される AI モデルです。",
+        "family": "mistral",
+        "id": "intfloat/e5-mistral-7b-instruct",
+        "last_updated": "2023-12-11",
+        "limit": {
+          "context": 4096,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "E5 Mistral 7B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2023-12-11",
+        "structured_output": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "neuralmagic/Meta-Llama-3.1-8B-Instruct-FP8": {
+        "attachment": false,
+        "cost": {
+          "input": 0.16,
+          "output": 0.27
+        },
+        "description": "Llama 3.1 8B は stackit によって提供される AI モデルです。",
+        "family": "llama",
+        "id": "neuralmagic/Meta-Llama-3.1-8B-Instruct-FP8",
+        "last_updated": "2024-07-23",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.1 8B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-07-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "neuralmagic/Mistral-Nemo-Instruct-2407-FP8": {
+        "attachment": false,
+        "cost": {
+          "input": 0.49,
+          "output": 0.71
+        },
+        "description": "Mistral Nemo は stackit によって提供される AI モデルです。",
+        "family": "mistral",
+        "id": "neuralmagic/Mistral-Nemo-Instruct-2407-FP8",
+        "last_updated": "2024-07-01",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mistral Nemo",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-07-01",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-oss-120b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.49,
+          "output": 0.71
+        },
+        "description": "GPT-OSS 120B は stackit によって提供される AI モデルです。",
+        "family": "gpt",
+        "id": "openai/gpt-oss-120b",
+        "last_updated": "2025-08-05",
+        "limit": {
+          "context": 131000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-OSS 120B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-05",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "STACKIT",

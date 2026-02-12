@@ -21836,7 +21836,7 @@
       "icon": "",
       "id": "anthropic/claude-opus-4-6",
       "maxCtxTokens": 1000000,
-      "maxOutputTokens": 64000,
+      "maxOutputTokens": 128000,
       "name": "Claude Opus 4.6 (latest)",
       "price": {
         "cacheRead": 0.5,
@@ -28025,35 +28025,6 @@
       "maxCtxTokens": 272000,
       "maxOutputTokens": 128000,
       "name": "GPT-5.2-Codex",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "tags": [
-        "reasoning",
-        "tools",
-        "vision",
-        "272K"
-      ]
-    },
-    {
-      "description": "GPT-5.3-Codex is an AI model provided by github-copilot.",
-      "firm": "github-copilot",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": true,
-        "reasoning": true,
-        "temperature": false,
-        "tool_call": true
-      },
-      "icon": "lb:githubcopilot",
-      "id": "gpt-5.3-codex",
-      "maxCtxTokens": 272000,
-      "maxOutputTokens": 128000,
-      "name": "GPT-5.3-Codex",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
@@ -40286,6 +40257,34 @@
       ]
     },
     {
+      "description": "MiniMax M2.5 is an AI model provided by nano-gpt.",
+      "firm": "nano-gpt",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "minimax/minimax-m2.5-official",
+      "maxCtxTokens": 204800,
+      "maxOutputTokens": 131072,
+      "name": "MiniMax M2.5",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "204.8K"
+      ]
+    },
+    {
       "description": "Devstral 2 123b Instruct 2512 is an AI model provided by nano-gpt.",
       "firm": "nano-gpt",
       "flags": {
@@ -40628,63 +40627,6 @@
       ]
     },
     {
-      "description": "GLM 4.6 is an AI model provided by nano-gpt.",
-      "firm": "nano-gpt",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "",
-      "id": "z-ai/glm-4.6",
-      "maxCtxTokens": 200000,
-      "maxOutputTokens": 8192,
-      "name": "GLM 4.6",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 1,
-        "output": 2
-      },
-      "tags": [
-        "tools",
-        "open_weights",
-        "200K"
-      ]
-    },
-    {
-      "description": "GLM 4.6 Thinking is an AI model provided by nano-gpt.",
-      "firm": "nano-gpt",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "",
-      "id": "z-ai/glm-4.6:thinking",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 8192,
-      "name": "GLM 4.6 Thinking",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 1,
-        "output": 2
-      },
-      "tags": [
-        "reasoning",
-        "tools",
-        "open_weights",
-        "128K"
-      ]
-    },
-    {
       "description": "GLM 4.5 Air is an AI model provided by nano-gpt.",
       "firm": "nano-gpt",
       "flags": {
@@ -40728,6 +40670,63 @@
       "maxCtxTokens": 128000,
       "maxOutputTokens": 8192,
       "name": "GLM 4.5 Air Thinking",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 1,
+        "output": 2
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "128K"
+      ]
+    },
+    {
+      "description": "GLM 4.6 is an AI model provided by nano-gpt.",
+      "firm": "nano-gpt",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "zai-org/glm-4.6",
+      "maxCtxTokens": 200000,
+      "maxOutputTokens": 8192,
+      "name": "GLM 4.6",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 1,
+        "output": 2
+      },
+      "tags": [
+        "tools",
+        "open_weights",
+        "200K"
+      ]
+    },
+    {
+      "description": "GLM 4.6 Thinking is an AI model provided by nano-gpt.",
+      "firm": "nano-gpt",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "zai-org/glm-4.6:thinking",
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 8192,
+      "name": "GLM 4.6 Thinking",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
@@ -40814,6 +40813,64 @@
       "maxCtxTokens": 200000,
       "maxOutputTokens": 128000,
       "name": "GLM 5",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.8,
+        "output": 2.56
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "200K"
+      ]
+    },
+    {
+      "description": "GLM 5 Original is an AI model provided by nano-gpt.",
+      "firm": "nano-gpt",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "zai-org/glm-5-original",
+      "maxCtxTokens": 200000,
+      "maxOutputTokens": 128000,
+      "name": "GLM 5 Original",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.8,
+        "output": 2.56
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "200K"
+      ]
+    },
+    {
+      "description": "GLM 5 Original Thinking is an AI model provided by nano-gpt.",
+      "firm": "nano-gpt",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "zai-org/glm-5-original:thinking",
+      "maxCtxTokens": 200000,
+      "maxOutputTokens": 128000,
+      "name": "GLM 5 Original Thinking",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
@@ -43204,6 +43261,34 @@
       ]
     },
     {
+      "description": "MiniMax M2.5 is an AI model provided by novita-ai.",
+      "firm": "novita-ai",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "minimax/minimax-m2.5",
+      "maxCtxTokens": 204800,
+      "maxOutputTokens": 131100,
+      "name": "MiniMax M2.5",
+      "price": {
+        "cacheRead": 0.03,
+        "cacheWrite": null,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "204.8K"
+      ]
+    },
+    {
       "description": "MiniMax M1 is an AI model provided by novita-ai.",
       "firm": "novita-ai",
       "flags": {
@@ -44585,6 +44670,35 @@
         "tools",
         "open_weights",
         "200K"
+      ]
+    },
+    {
+      "description": "GLM-5 is an AI model provided by novita-ai.",
+      "firm": "novita-ai",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "zai-org/glm-5",
+      "maxCtxTokens": 202800,
+      "maxOutputTokens": 131072,
+      "name": "GLM-5",
+      "price": {
+        "cacheRead": 0.2,
+        "cacheWrite": null,
+        "input": 1,
+        "output": 3.2
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "202.8K"
       ]
     },
     {
@@ -48355,6 +48469,36 @@
       ]
     },
     {
+      "description": "GPT-5.3 Codex Spark is an AI model provided by openai.",
+      "firm": "openai",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:openai-color",
+      "id": "gpt-5.3-codex-spark",
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 32000,
+      "name": "GPT-5.3 Codex Spark",
+      "price": {
+        "cacheRead": 0.175,
+        "cacheWrite": null,
+        "input": 1.75,
+        "output": 14
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "files",
+        "vision",
+        "128K"
+      ]
+    },
+    {
       "description": "An advanced AI model for generating images from textual descriptions.",
       "firm": "openai",
       "flags": {
@@ -49613,6 +49757,35 @@
       "maxCtxTokens": 204800,
       "maxOutputTokens": 131072,
       "name": "MiniMax M2.1 Free",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "204.8K"
+      ]
+    },
+    {
+      "description": "MiniMax M2.5 Free is an AI model provided by opencode.",
+      "firm": "opencode",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:opencode",
+      "id": "minimax-m2.5-free",
+      "maxCtxTokens": 204800,
+      "maxOutputTokens": 131072,
+      "name": "MiniMax M2.5 Free",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
@@ -54166,6 +54339,64 @@
         "open_weights",
         "vision",
         "8.2K"
+      ]
+    },
+    {
+      "description": "Step 3.5 Flash is an AI model provided by openrouter.",
+      "firm": "openrouter",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:openrouter-color",
+      "id": "stepfun/step-3.5-flash",
+      "maxCtxTokens": 256000,
+      "maxOutputTokens": 256000,
+      "name": "Step 3.5 Flash",
+      "price": {
+        "cacheRead": 0.02,
+        "cacheWrite": null,
+        "input": 0.1,
+        "output": 0.3
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "256K"
+      ]
+    },
+    {
+      "description": "Step 3.5 Flash (free) is an AI model provided by openrouter.",
+      "firm": "openrouter",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:openrouter-color",
+      "id": "stepfun/step-3.5-flash:free",
+      "maxCtxTokens": 256000,
+      "maxOutputTokens": 256000,
+      "name": "Step 3.5 Flash (free)",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "256K"
       ]
     },
     {
@@ -64243,6 +64474,63 @@
       ]
     },
     {
+      "description": "Llama 3.3 70B is an AI model provided by stackit.",
+      "firm": "stackit",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "cortecs/Llama-3.3-70B-Instruct-FP8-Dynamic",
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 8192,
+      "name": "Llama 3.3 70B",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.49,
+        "output": 0.71
+      },
+      "tags": [
+        "tools",
+        "open_weights",
+        "128K"
+      ]
+    },
+    {
+      "description": "Gemma 3 27B is an AI model provided by stackit.",
+      "firm": "stackit",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": false
+      },
+      "icon": "",
+      "id": "google/gemma-3-27b-it",
+      "maxCtxTokens": 37000,
+      "maxOutputTokens": 8192,
+      "name": "Gemma 3 27B",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.49,
+        "output": 0.71
+      },
+      "tags": [
+        "files",
+        "open_weights",
+        "vision",
+        "37K"
+      ]
+    },
+    {
       "description": "E5 Mistral 7B is an AI model provided by stackit.",
       "firm": "stackit",
       "flags": {
@@ -64254,7 +64542,7 @@
         "tool_call": false
       },
       "icon": "",
-      "id": "e5-mistral-7b",
+      "id": "intfloat/e5-mistral-7b-instruct",
       "maxCtxTokens": 4096,
       "maxOutputTokens": 4096,
       "name": "E5 Mistral 7B",
@@ -64270,64 +64558,6 @@
       ]
     },
     {
-      "description": "Gemma 3 27B is an AI model provided by stackit.",
-      "firm": "stackit",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "gemma-3-27b",
-      "maxCtxTokens": 37000,
-      "maxOutputTokens": 8192,
-      "name": "Gemma 3 27B",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 0.53,
-        "output": 0.77
-      },
-      "tags": [
-        "files",
-        "open_weights",
-        "vision",
-        "37K"
-      ]
-    },
-    {
-      "description": "GPT-OSS 120B is an AI model provided by stackit.",
-      "firm": "stackit",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "",
-      "id": "gpt-oss-120b",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 8192,
-      "name": "GPT-OSS 120B",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 0.53,
-        "output": 0.77
-      },
-      "tags": [
-        "reasoning",
-        "tools",
-        "open_weights",
-        "128K"
-      ]
-    },
-    {
       "description": "Llama 3.1 8B is an AI model provided by stackit.",
       "firm": "stackit",
       "flags": {
@@ -64339,43 +64569,15 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "llama-3.1-8b",
+      "id": "neuralmagic/Meta-Llama-3.1-8B-Instruct-FP8",
       "maxCtxTokens": 128000,
       "maxOutputTokens": 8192,
       "name": "Llama 3.1 8B",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.18,
-        "output": 0.3
-      },
-      "tags": [
-        "tools",
-        "open_weights",
-        "128K"
-      ]
-    },
-    {
-      "description": "Llama 3.3 70B is an AI model provided by stackit.",
-      "firm": "stackit",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "",
-      "id": "llama-3.3-70b",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 8192,
-      "name": "Llama 3.3 70B",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 0.53,
-        "output": 0.77
+        "input": 0.16,
+        "output": 0.27
       },
       "tags": [
         "tools",
@@ -64395,20 +64597,49 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "mistral-nemo",
+      "id": "neuralmagic/Mistral-Nemo-Instruct-2407-FP8",
       "maxCtxTokens": 128000,
       "maxOutputTokens": 8192,
       "name": "Mistral Nemo",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.53,
-        "output": 0.77
+        "input": 0.49,
+        "output": 0.71
       },
       "tags": [
         "tools",
         "open_weights",
         "128K"
+      ]
+    },
+    {
+      "description": "GPT-OSS 120B is an AI model provided by stackit.",
+      "firm": "stackit",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "openai/gpt-oss-120b",
+      "maxCtxTokens": 131000,
+      "maxOutputTokens": 8192,
+      "name": "GPT-OSS 120B",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.49,
+        "output": 0.71
+      },
+      "tags": [
+        "reasoning",
+        "tools",
+        "open_weights",
+        "131K"
       ]
     },
     {
@@ -64423,15 +64654,15 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "qwen3-vl-235b",
+      "id": "Qwen/Qwen3-VL-235B-A22B-Instruct-FP8",
       "maxCtxTokens": 218000,
       "maxOutputTokens": 8192,
       "name": "Qwen3-VL 235B",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 1.77,
-        "output": 2.07
+        "input": 1.64,
+        "output": 1.91
       },
       "tags": [
         "tools",
@@ -64453,7 +64684,7 @@
         "tool_call": false
       },
       "icon": "",
-      "id": "qwen3-vl-embedding-8b",
+      "id": "Qwen/Qwen3-VL-Embedding-8B",
       "maxCtxTokens": 32000,
       "maxOutputTokens": 4096,
       "name": "Qwen3-VL Embedding 8B",
