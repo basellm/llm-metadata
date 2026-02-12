@@ -75,6 +75,9 @@
       },
       "description": "MiniMax M2.1 is an AI model provided by friendli.",
       "id": "MiniMaxAI/MiniMax-M2.1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-01-29",
       "limit": {
         "context": 196608,
@@ -191,6 +194,9 @@
       "description": "GLM 4.7 is an AI model provided by friendli.",
       "family": "glm",
       "id": "zai-org/GLM-4.7",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-01-29",
       "limit": {
         "context": 202752,
@@ -208,6 +214,39 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-12-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 3.2
+      },
+      "description": "GLM 5 is an AI model provided by friendli.",
+      "family": "glm",
+      "id": "zai-org/GLM-5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-12",
+      "limit": {
+        "context": 202752,
+        "output": 202752
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-12",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

@@ -379,6 +379,7 @@
       "last_updated": "2025-12-01",
       "limit": {
         "context": 162816,
+        "input": 162816,
         "output": 8000
       },
       "modalities": {
@@ -673,6 +674,40 @@
       "temperature": true,
       "tool_call": true
     },
+    "hf:nvidia/Kimi-K2.5-NVFP4": {
+      "attachment": false,
+      "cost": {
+        "input": 0.55,
+        "output": 2.19
+      },
+      "description": "Kimi K2.5 (NVFP4) is an AI model provided by synthetic.",
+      "family": "kimi",
+      "id": "hf:nvidia/Kimi-K2.5-NVFP4",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5 (NVFP4)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "temperature": true,
+      "tool_call": true
+    },
     "hf:openai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
@@ -699,36 +734,6 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-08-05",
-      "temperature": true,
-      "tool_call": true
-    },
-    "hf:zai-org/GLM-4.5": {
-      "attachment": false,
-      "cost": {
-        "input": 0.55,
-        "output": 2.19
-      },
-      "description": "GLM 4.5 is an AI model provided by synthetic.",
-      "family": "glm",
-      "id": "hf:zai-org/GLM-4.5",
-      "knowledge": "2025-04",
-      "last_updated": "2025-07-28",
-      "limit": {
-        "context": 128000,
-        "output": 96000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 4.5",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-07-28",
       "temperature": true,
       "tool_call": true
     },

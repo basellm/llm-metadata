@@ -28171,6 +28171,9 @@
         },
         "description": "MiniMax M2.1 は friendli によって提供される AI モデルです。",
         "id": "MiniMaxAI/MiniMax-M2.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-01-29",
         "limit": {
           "context": 196608,
@@ -28287,6 +28290,9 @@
         "description": "GLM 4.7 は friendli によって提供される AI モデルです。",
         "family": "glm",
         "id": "zai-org/GLM-4.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-01-29",
         "limit": {
           "context": 202752,
@@ -28304,6 +28310,39 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-5": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM 5 は friendli によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "zai-org/GLM-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 202752,
+          "output": 202752
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -30658,7 +30697,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2026-01-22",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -30690,7 +30730,8 @@
         "knowledge": "2025-08-31",
         "last_updated": "2026-01-23",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -30722,7 +30763,8 @@
         "knowledge": "2025-08-31",
         "last_updated": "2026-01-22",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -30755,7 +30797,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2026-01-22",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -30787,7 +30830,8 @@
         "knowledge": "2024-05-30",
         "last_updated": "2026-01-22",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -42895,6 +42939,74 @@
         "temperature": true,
         "tool_call": true
       },
+      "moonshotai/kimi-k2.5": {
+        "attachment": true,
+        "cost": {
+          "input": 0.3,
+          "output": 1.9
+        },
+        "description": "Kimi K2.5 は nano-gpt によって提供される AI モデルです。",
+        "family": "kimi",
+        "id": "moonshotai/kimi-k2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-01-26",
+        "limit": {
+          "context": 256000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-26",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/kimi-k2.5-thinking": {
+        "attachment": true,
+        "cost": {
+          "input": 0.3,
+          "output": 1.9
+        },
+        "description": "Kimi K2.5 Thinking は nano-gpt によって提供される AI モデルです。",
+        "family": "kimi",
+        "id": "moonshotai/kimi-k2.5-thinking",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-01-26",
+        "limit": {
+          "context": 256000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5 Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-26",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "nousresearch/hermes-4-405b:thinking": {
         "attachment": false,
         "cost": {
@@ -43233,6 +43345,74 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-04-07",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/glm-5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.8,
+          "output": 2.56
+        },
+        "description": "GLM 5 は nano-gpt によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "zai-org/glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-06",
+        "last_updated": "2025-02-11",
+        "limit": {
+          "context": 200000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-02-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/glm-5:thinking": {
+        "attachment": false,
+        "cost": {
+          "input": 0.8,
+          "output": 2.56
+        },
+        "description": "GLM 5 Thinking は nano-gpt によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "zai-org/glm-5:thinking",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-06",
+        "last_updated": "2025-02-11",
+        "limit": {
+          "context": 200000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5 Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-02-11",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -49817,6 +49997,33 @@
         "release_date": "2025-12-22",
         "tool_call": true
       },
+      "glm-5": {
+        "attachment": false,
+        "description": "glm-5 は ollama-cloud によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 202752,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "glm-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "tool_call": true
+      },
       "gpt-oss:120b": {
         "attachment": false,
         "description": "gpt-oss:120b は ollama-cloud によって提供される AI モデルです。",
@@ -50736,7 +50943,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-08-07",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -50768,7 +50976,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-08-07",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -50801,7 +51010,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-09-15",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -50834,7 +51044,8 @@
         "knowledge": "2024-05-30",
         "last_updated": "2025-08-07",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -50867,7 +51078,8 @@
         "knowledge": "2024-05-30",
         "last_updated": "2025-08-07",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -50933,7 +51145,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-11-13",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -50999,7 +51212,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-11-13",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -51032,7 +51246,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-11-13",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -51065,7 +51280,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-11-13",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -51098,7 +51314,8 @@
         "knowledge": "2025-08-31",
         "last_updated": "2025-12-11",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -51164,7 +51381,8 @@
         "knowledge": "2025-08-31",
         "last_updated": "2025-12-11",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -51197,7 +51415,8 @@
         "knowledge": "2025-08-31",
         "last_updated": "2025-12-11",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -51230,7 +51449,8 @@
         "knowledge": "2025-08-31",
         "last_updated": "2026-02-05",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -52220,7 +52440,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-08-07",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -52256,7 +52477,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-09-15",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -52292,7 +52514,8 @@
         "knowledge": "2024-05-30",
         "last_updated": "2025-08-07",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -52328,7 +52551,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-11-13",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -52364,7 +52588,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-11-13",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -52400,7 +52625,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-11-13",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -52436,7 +52662,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-11-13",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -52472,7 +52699,8 @@
         "knowledge": "2025-08-31",
         "last_updated": "2025-12-11",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -52508,7 +52736,8 @@
         "knowledge": "2025-08-31",
         "last_updated": "2026-01-14",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -56694,36 +56923,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "openrouter/pony-alpha": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Pony Alpha は openrouter によって提供される AI モデルです。",
-        "family": "pony",
-        "id": "openrouter/pony-alpha",
-        "last_updated": "2026-02-06",
-        "limit": {
-          "context": 200000,
-          "output": 131000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Pony Alpha",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2026-02-06",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "openrouter/sherlock-dash-alpha": {
         "attachment": true,
         "cost": {
@@ -58349,6 +58548,40 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-01-19",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5 は openrouter によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "z-ai/glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 202752,
+          "output": 131000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -69314,6 +69547,7 @@
         "last_updated": "2025-12-01",
         "limit": {
           "context": 162816,
+          "input": 162816,
           "output": 8000
         },
         "modalities": {
@@ -69608,6 +69842,40 @@
         "temperature": true,
         "tool_call": true
       },
+      "hf:nvidia/Kimi-K2.5-NVFP4": {
+        "attachment": false,
+        "cost": {
+          "input": 0.55,
+          "output": 2.19
+        },
+        "description": "Kimi K2.5 (NVFP4) は synthetic によって提供される AI モデルです。",
+        "family": "kimi",
+        "id": "hf:nvidia/Kimi-K2.5-NVFP4",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-01",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5 (NVFP4)",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01",
+        "temperature": true,
+        "tool_call": true
+      },
       "hf:openai/gpt-oss-120b": {
         "attachment": false,
         "cost": {
@@ -69634,36 +69902,6 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-08-05",
-        "temperature": true,
-        "tool_call": true
-      },
-      "hf:zai-org/GLM-4.5": {
-        "attachment": false,
-        "cost": {
-          "input": 0.55,
-          "output": 2.19
-        },
-        "description": "GLM 4.5 は synthetic によって提供される AI モデルです。",
-        "family": "glm",
-        "id": "hf:zai-org/GLM-4.5",
-        "knowledge": "2025-04",
-        "last_updated": "2025-07-28",
-        "limit": {
-          "context": 128000,
-          "output": 96000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 4.5",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-07-28",
         "temperature": true,
         "tool_call": true
       },
@@ -71352,6 +71590,40 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-01-29",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org-glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM 5 は venice によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "zai-org-glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 198000,
+          "output": 49500
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -75302,7 +75574,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-08-07",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -75369,7 +75642,8 @@
         "knowledge": "2024-09-30",
         "last_updated": "2025-09-15",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -75402,7 +75676,8 @@
         "knowledge": "2024-05-30",
         "last_updated": "2025-08-07",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -75435,7 +75710,8 @@
         "knowledge": "2024-05-30",
         "last_updated": "2025-08-07",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -78956,10 +79232,10 @@
       "glm-5": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
+          "cache_read": 0.2,
           "cache_write": 0,
-          "input": 0,
-          "output": 0
+          "input": 1,
+          "output": 3.2
         },
         "description": "GLM-5 は zai によって提供される AI モデルです。",
         "family": "glm",
@@ -81461,10 +81737,10 @@
       "glm-5": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
+          "cache_read": 0.2,
           "cache_write": 0,
-          "input": 0,
-          "output": 0
+          "input": 1,
+          "output": 3.2
         },
         "description": "GLM-5 は zhipuai によって提供される AI モデルです。",
         "family": "glm",
