@@ -67,66 +67,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "MiniMaxAI/MiniMax-M1-80k": {
-      "attachment": false,
-      "cost": {
-        "input": 0.55,
-        "output": 2.2
-      },
-      "description": "MiniMaxAI/MiniMax-M1-80k 是由 siliconflow-cn 提供的人工智能模型。",
-      "family": "minimax",
-      "id": "MiniMaxAI/MiniMax-M1-80k",
-      "last_updated": "2025-11-25",
-      "limit": {
-        "context": 131000,
-        "output": 131000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMaxAI/MiniMax-M1-80k",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-06-17",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "MiniMaxAI/MiniMax-M2": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "MiniMaxAI/MiniMax-M2 是由 siliconflow-cn 提供的人工智能模型。",
-      "family": "minimax",
-      "id": "MiniMaxAI/MiniMax-M2",
-      "last_updated": "2025-11-25",
-      "limit": {
-        "context": 197000,
-        "output": 131000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMaxAI/MiniMax-M2",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-10-28",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "Pro/MiniMaxAI/MiniMax-M2.1": {
       "attachment": false,
       "cost": {
@@ -377,6 +317,9 @@
       "description": "Pro/zai-org/GLM-4.7 是由 siliconflow-cn 提供的人工智能模型。",
       "family": "glm",
       "id": "Pro/zai-org/GLM-4.7",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2025-12-22",
       "limit": {
         "context": 205000,
@@ -394,7 +337,40 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-12-22",
-      "structured_output": false,
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Pro/zai-org/GLM-5": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 3.2
+      },
+      "description": "Pro/zai-org/GLM-5 是由 siliconflow-cn 提供的人工智能模型。",
+      "family": "glm",
+      "id": "Pro/zai-org/GLM-5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-12",
+      "limit": {
+        "context": 205000,
+        "output": 205000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Pro/zai-org/GLM-5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-12",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -756,36 +732,6 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-07-28",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "Qwen/Qwen3-30B-A3B": {
-      "attachment": false,
-      "cost": {
-        "input": 0.09,
-        "output": 0.45
-      },
-      "description": "Qwen/Qwen3-30B-A3B 是由 siliconflow-cn 提供的人工智能模型。",
-      "family": "qwen",
-      "id": "Qwen/Qwen3-30B-A3B",
-      "last_updated": "2025-11-25",
-      "limit": {
-        "context": 131000,
-        "output": 131000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen/Qwen3-30B-A3B",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-04-30",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1432,37 +1378,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "THUDM/GLM-4.1V-9B-Thinking": {
-      "attachment": true,
-      "cost": {
-        "input": 0.035,
-        "output": 0.14
-      },
-      "description": "THUDM/GLM-4.1V-9B-Thinking 是由 siliconflow-cn 提供的人工智能模型。",
-      "family": "glm",
-      "id": "THUDM/GLM-4.1V-9B-Thinking",
-      "last_updated": "2025-11-25",
-      "limit": {
-        "context": 66000,
-        "output": 66000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "THUDM/GLM-4.1V-9B-Thinking",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-07-04",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "THUDM/GLM-Z1-32B-0414": {
       "attachment": false,
       "cost": {
@@ -1666,36 +1581,6 @@
         ]
       },
       "name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-01-20",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B": {
-      "attachment": false,
-      "cost": {
-        "input": 0.05,
-        "output": 0.05
-      },
-      "description": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B 是由 siliconflow-cn 提供的人工智能模型。",
-      "family": "qwen",
-      "id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
-      "last_updated": "2025-11-25",
-      "limit": {
-        "context": 33000,
-        "output": 16000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-01-20",
@@ -1914,36 +1799,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "moonshotai/Kimi-Dev-72B": {
-      "attachment": false,
-      "cost": {
-        "input": 0.29,
-        "output": 1.15
-      },
-      "description": "moonshotai/Kimi-Dev-72B 是由 siliconflow-cn 提供的人工智能模型。",
-      "family": "kimi",
-      "id": "moonshotai/Kimi-Dev-72B",
-      "last_updated": "2025-11-25",
-      "limit": {
-        "context": 131000,
-        "output": 131000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "moonshotai/Kimi-Dev-72B",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-06-19",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "moonshotai/Kimi-K2-Instruct-0905": {
       "attachment": false,
       "cost": {
@@ -2004,33 +1859,32 @@
       "temperature": true,
       "tool_call": true
     },
-    "stepfun-ai/step3": {
-      "attachment": true,
+    "stepfun-ai/Step-3.5-Flash": {
+      "attachment": false,
       "cost": {
-        "input": 0.57,
-        "output": 1.42
+        "input": 0.1,
+        "output": 0.3
       },
-      "description": "stepfun-ai/step3 是由 siliconflow-cn 提供的人工智能模型。",
+      "description": "stepfun-ai/Step-3.5-Flash 是由 siliconflow-cn 提供的人工智能模型。",
       "family": "step",
-      "id": "stepfun-ai/step3",
-      "last_updated": "2025-11-25",
+      "id": "stepfun-ai/Step-3.5-Flash",
+      "last_updated": "2026-02-11",
       "limit": {
-        "context": 66000,
-        "output": 66000
+        "context": 262000,
+        "output": 262000
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "stepfun-ai/step3",
+      "name": "stepfun-ai/Step-3.5-Flash",
       "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-08-06",
+      "reasoning": true,
+      "release_date": "2026-02-11",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

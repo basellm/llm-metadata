@@ -344,37 +344,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepseek-ai/deepseek-v3": {
-      "attachment": false,
-      "cost": {
-        "input": 0.5,
-        "output": 1.5
-      },
-      "description": "DeepSeek V3 是由 nebius 提供的人工智能模型。",
-      "family": "deepseek",
-      "id": "deepseek-ai/deepseek-v3",
-      "knowledge": "2024-04",
-      "last_updated": "2026-02-04",
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V3",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2024-05-07",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
     "deepseek-ai/deepseek-v3-0324": {
       "attachment": false,
       "cost": {
@@ -644,7 +613,7 @@
       "temperature": false,
       "tool_call": false
     },
-    "meta-llama/llama-3.3-70b-instruct-base": {
+    "meta-llama/Llama-3.3-70B-Instruct": {
       "attachment": false,
       "cost": {
         "cache_read": 0.013,
@@ -653,7 +622,7 @@
         "output": 0.4
       },
       "description": "Llama-3.3-70B-Instruct 是由 nebius 提供的人工智能模型。",
-      "id": "meta-llama/llama-3.3-70b-instruct-base",
+      "id": "meta-llama/Llama-3.3-70B-Instruct",
       "knowledge": "2025-08",
       "last_updated": "2026-02-04",
       "limit": {
@@ -706,40 +675,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-12-05",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "meta-llama/llama-3_1-405b-instruct": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.1,
-        "cache_write": 1.25,
-        "input": 1,
-        "output": 3
-      },
-      "description": "Llama-3.1-405B-Instruct 是由 nebius 提供的人工智能模型。",
-      "id": "meta-llama/llama-3_1-405b-instruct",
-      "knowledge": "2024-12",
-      "last_updated": "2026-02-04",
-      "limit": {
-        "context": 131072,
-        "input": 124000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama-3.1-405B-Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-01-20",
-      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -839,6 +774,45 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-07-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 0.625,
+        "input": 0.5,
+        "output": 2.5,
+        "reasoning": 2.5
+      },
+      "description": "Kimi-K2.5 是由 nebius 提供的人工智能模型。",
+      "family": "kimi",
+      "id": "moonshotai/Kimi-K2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-06",
+      "last_updated": "2026-02-04",
+      "limit": {
+        "context": 262144,
+        "input": 250000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi-K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-15",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1541,36 +1515,6 @@
       "reasoning": false,
       "release_date": "2025-11-15",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai-org/glm-4.7": {
-      "attachment": false,
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "GLM 4.7 是由 nebius 提供的人工智能模型。",
-      "family": "glm",
-      "id": "zai-org/glm-4.7",
-      "knowledge": "2025-01",
-      "last_updated": "2025-02-04",
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 4.7",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-01-01",
       "temperature": true,
       "tool_call": true
     },

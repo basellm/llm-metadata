@@ -21773,7 +21773,6 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "cloudflare-ai-gateway": {
-    "api": "https://gateway.ai.cloudflare.com/v1/${CLOUDFLARE_ACCOUNT_ID}/${CLOUDFLARE_GATEWAY_ID}/compat/",
     "doc": "https://developers.cloudflare.com/ai-gateway/",
     "env": [
       "CLOUDFLARE_API_TOKEN",
@@ -23783,7 +23782,7 @@
       }
     },
     "name": "Cloudflare AI Gateway",
-    "npm": "@ai-sdk/openai-compatible"
+    "npm": "ai-gateway-provider"
   },
   "cloudflare-workers-ai": {
     "api": "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/ai/v1",
@@ -40448,6 +40447,54 @@
     "name": "Kimi For Coding",
     "npm": "@ai-sdk/anthropic"
   },
+  "kuae-cloud-coding-plan": {
+    "api": "https://coding-plan-endpoint.kuaecloud.net/v1",
+    "doc": "https://docs.mthreads.com/kuaecloud/kuaecloud-doc-online/coding_plan/",
+    "env": [
+      "KUAE_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/kuae-cloud-coding-plan.svg",
+    "id": "kuae-cloud-coding-plan",
+    "models": {
+      "GLM-4.7": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-4.7 is an AI model provided by kuae-cloud-coding-plan.",
+        "family": "glm",
+        "id": "GLM-4.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2025-12-22",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "KUAE Cloud Coding Plan",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "llama": {
     "api": "https://api.llama.com/compat/v1/",
     "doc": "https://llama.developer.meta.com/docs/models",
@@ -44180,37 +44227,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "deepseek-ai/deepseek-v3": {
-        "attachment": false,
-        "cost": {
-          "input": 0.5,
-          "output": 1.5
-        },
-        "description": "DeepSeek V3 is an AI model provided by nebius.",
-        "family": "deepseek",
-        "id": "deepseek-ai/deepseek-v3",
-        "knowledge": "2024-04",
-        "last_updated": "2026-02-04",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V3",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2024-05-07",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "deepseek-ai/deepseek-v3-0324": {
         "attachment": false,
         "cost": {
@@ -44480,7 +44496,7 @@
         "temperature": false,
         "tool_call": false
       },
-      "meta-llama/llama-3.3-70b-instruct-base": {
+      "meta-llama/Llama-3.3-70B-Instruct": {
         "attachment": false,
         "cost": {
           "cache_read": 0.013,
@@ -44489,7 +44505,7 @@
           "output": 0.4
         },
         "description": "Llama-3.3-70B-Instruct is an AI model provided by nebius.",
-        "id": "meta-llama/llama-3.3-70b-instruct-base",
+        "id": "meta-llama/Llama-3.3-70B-Instruct",
         "knowledge": "2025-08",
         "last_updated": "2026-02-04",
         "limit": {
@@ -44542,40 +44558,6 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-12-05",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "meta-llama/llama-3_1-405b-instruct": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.1,
-          "cache_write": 1.25,
-          "input": 1,
-          "output": 3
-        },
-        "description": "Llama-3.1-405B-Instruct is an AI model provided by nebius.",
-        "id": "meta-llama/llama-3_1-405b-instruct",
-        "knowledge": "2024-12",
-        "last_updated": "2026-02-04",
-        "limit": {
-          "context": 131072,
-          "input": 124000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama-3.1-405B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-01-20",
-        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -44675,6 +44657,45 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-07-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/Kimi-K2.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "cache_write": 0.625,
+          "input": 0.5,
+          "output": 2.5,
+          "reasoning": 2.5
+        },
+        "description": "Kimi-K2.5 is an AI model provided by nebius.",
+        "family": "kimi",
+        "id": "moonshotai/Kimi-K2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-06",
+        "last_updated": "2026-02-04",
+        "limit": {
+          "context": 262144,
+          "input": 250000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi-K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-15",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -45377,36 +45398,6 @@
         "reasoning": false,
         "release_date": "2025-11-15",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "zai-org/glm-4.7": {
-        "attachment": false,
-        "cost": {
-          "input": 0.4,
-          "output": 2
-        },
-        "description": "GLM 4.7 is an AI model provided by nebius.",
-        "family": "glm",
-        "id": "zai-org/glm-4.7",
-        "knowledge": "2025-01",
-        "last_updated": "2025-02-04",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 4.7",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-01-01",
         "temperature": true,
         "tool_call": true
       },
@@ -64843,66 +64834,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "MiniMaxAI/MiniMax-M1-80k": {
-        "attachment": false,
-        "cost": {
-          "input": 0.55,
-          "output": 2.2
-        },
-        "description": "MiniMaxAI/MiniMax-M1-80k is an AI model provided by siliconflow.",
-        "family": "minimax",
-        "id": "MiniMaxAI/MiniMax-M1-80k",
-        "last_updated": "2025-11-25",
-        "limit": {
-          "context": 131000,
-          "output": 131000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMaxAI/MiniMax-M1-80k",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-06-17",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "MiniMaxAI/MiniMax-M2": {
-        "attachment": false,
-        "cost": {
-          "input": 0.3,
-          "output": 1.2
-        },
-        "description": "MiniMaxAI/MiniMax-M2 is an AI model provided by siliconflow.",
-        "family": "minimax",
-        "id": "MiniMaxAI/MiniMax-M2",
-        "last_updated": "2025-11-25",
-        "limit": {
-          "context": 197000,
-          "output": 131000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMaxAI/MiniMax-M2",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-10-28",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "MiniMaxAI/MiniMax-M2.1": {
         "attachment": false,
         "cost": {
@@ -65352,36 +65283,6 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-07-28",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "Qwen/Qwen3-30B-A3B": {
-        "attachment": false,
-        "cost": {
-          "input": 0.09,
-          "output": 0.45
-        },
-        "description": "Qwen/Qwen3-30B-A3B is an AI model provided by siliconflow.",
-        "family": "qwen",
-        "id": "Qwen/Qwen3-30B-A3B",
-        "last_updated": "2025-11-25",
-        "limit": {
-          "context": 131000,
-          "output": 131000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen/Qwen3-30B-A3B",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-04-30",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -66028,37 +65929,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "THUDM/GLM-4.1V-9B-Thinking": {
-        "attachment": true,
-        "cost": {
-          "input": 0.035,
-          "output": 0.14
-        },
-        "description": "THUDM/GLM-4.1V-9B-Thinking is an AI model provided by siliconflow.",
-        "family": "glm",
-        "id": "THUDM/GLM-4.1V-9B-Thinking",
-        "last_updated": "2025-11-25",
-        "limit": {
-          "context": 66000,
-          "output": 66000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "THUDM/GLM-4.1V-9B-Thinking",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-07-04",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "THUDM/GLM-Z1-32B-0414": {
         "attachment": false,
         "cost": {
@@ -66232,36 +66102,6 @@
           ]
         },
         "name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-01-20",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B": {
-        "attachment": false,
-        "cost": {
-          "input": 0.05,
-          "output": 0.05
-        },
-        "description": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B is an AI model provided by siliconflow.",
-        "family": "qwen",
-        "id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
-        "last_updated": "2025-11-25",
-        "limit": {
-          "context": 33000,
-          "output": 16000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-01-20",
@@ -66570,36 +66410,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "moonshotai/Kimi-Dev-72B": {
-        "attachment": false,
-        "cost": {
-          "input": 0.29,
-          "output": 1.15
-        },
-        "description": "moonshotai/Kimi-Dev-72B is an AI model provided by siliconflow.",
-        "family": "kimi",
-        "id": "moonshotai/Kimi-Dev-72B",
-        "last_updated": "2025-11-25",
-        "limit": {
-          "context": 131000,
-          "output": 131000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "moonshotai/Kimi-Dev-72B",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-06-19",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "moonshotai/Kimi-K2-Instruct": {
         "attachment": false,
         "cost": {
@@ -66811,33 +66621,32 @@
         "temperature": true,
         "tool_call": true
       },
-      "stepfun-ai/step3": {
-        "attachment": true,
+      "stepfun-ai/Step-3.5-Flash": {
+        "attachment": false,
         "cost": {
-          "input": 0.57,
-          "output": 1.42
+          "input": 0.1,
+          "output": 0.3
         },
-        "description": "stepfun-ai/step3 is an AI model provided by siliconflow.",
+        "description": "stepfun-ai/Step-3.5-Flash is an AI model provided by siliconflow.",
         "family": "step",
-        "id": "stepfun-ai/step3",
-        "last_updated": "2025-11-25",
+        "id": "stepfun-ai/Step-3.5-Flash",
+        "last_updated": "2026-02-11",
         "limit": {
-          "context": 66000,
-          "output": 66000
+          "context": 262000,
+          "output": 262000
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "stepfun-ai/step3",
+        "name": "stepfun-ai/Step-3.5-Flash",
         "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-08-06",
+        "reasoning": true,
+        "release_date": "2026-02-11",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -67063,6 +66872,9 @@
         "description": "zai-org/GLM-4.7 is an AI model provided by siliconflow.",
         "family": "glm",
         "id": "zai-org/GLM-4.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2025-12-22",
         "limit": {
           "context": 205000,
@@ -67080,7 +66892,40 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-12-22",
-        "structured_output": false,
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-5": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "zai-org/GLM-5 is an AI model provided by siliconflow.",
+        "family": "glm",
+        "id": "zai-org/GLM-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 205000,
+          "output": 205000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "zai-org/GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       }
@@ -67153,66 +66998,6 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-09-27",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "MiniMaxAI/MiniMax-M1-80k": {
-        "attachment": false,
-        "cost": {
-          "input": 0.55,
-          "output": 2.2
-        },
-        "description": "MiniMaxAI/MiniMax-M1-80k is an AI model provided by siliconflow-cn.",
-        "family": "minimax",
-        "id": "MiniMaxAI/MiniMax-M1-80k",
-        "last_updated": "2025-11-25",
-        "limit": {
-          "context": 131000,
-          "output": 131000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMaxAI/MiniMax-M1-80k",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-06-17",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "MiniMaxAI/MiniMax-M2": {
-        "attachment": false,
-        "cost": {
-          "input": 0.3,
-          "output": 1.2
-        },
-        "description": "MiniMaxAI/MiniMax-M2 is an AI model provided by siliconflow-cn.",
-        "family": "minimax",
-        "id": "MiniMaxAI/MiniMax-M2",
-        "last_updated": "2025-11-25",
-        "limit": {
-          "context": 197000,
-          "output": 131000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMaxAI/MiniMax-M2",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-10-28",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -67467,6 +67252,9 @@
         "description": "Pro/zai-org/GLM-4.7 is an AI model provided by siliconflow-cn.",
         "family": "glm",
         "id": "Pro/zai-org/GLM-4.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2025-12-22",
         "limit": {
           "context": 205000,
@@ -67484,7 +67272,40 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-12-22",
-        "structured_output": false,
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "Pro/zai-org/GLM-5": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "Pro/zai-org/GLM-5 is an AI model provided by siliconflow-cn.",
+        "family": "glm",
+        "id": "Pro/zai-org/GLM-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 205000,
+          "output": 205000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Pro/zai-org/GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -67846,36 +67667,6 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-07-28",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "Qwen/Qwen3-30B-A3B": {
-        "attachment": false,
-        "cost": {
-          "input": 0.09,
-          "output": 0.45
-        },
-        "description": "Qwen/Qwen3-30B-A3B is an AI model provided by siliconflow-cn.",
-        "family": "qwen",
-        "id": "Qwen/Qwen3-30B-A3B",
-        "last_updated": "2025-11-25",
-        "limit": {
-          "context": 131000,
-          "output": 131000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen/Qwen3-30B-A3B",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-04-30",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -68522,37 +68313,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "THUDM/GLM-4.1V-9B-Thinking": {
-        "attachment": true,
-        "cost": {
-          "input": 0.035,
-          "output": 0.14
-        },
-        "description": "THUDM/GLM-4.1V-9B-Thinking is an AI model provided by siliconflow-cn.",
-        "family": "glm",
-        "id": "THUDM/GLM-4.1V-9B-Thinking",
-        "last_updated": "2025-11-25",
-        "limit": {
-          "context": 66000,
-          "output": 66000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "THUDM/GLM-4.1V-9B-Thinking",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-07-04",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "THUDM/GLM-Z1-32B-0414": {
         "attachment": false,
         "cost": {
@@ -68756,36 +68516,6 @@
           ]
         },
         "name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-01-20",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B": {
-        "attachment": false,
-        "cost": {
-          "input": 0.05,
-          "output": 0.05
-        },
-        "description": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B is an AI model provided by siliconflow-cn.",
-        "family": "qwen",
-        "id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
-        "last_updated": "2025-11-25",
-        "limit": {
-          "context": 33000,
-          "output": 16000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-01-20",
@@ -69004,36 +68734,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "moonshotai/Kimi-Dev-72B": {
-        "attachment": false,
-        "cost": {
-          "input": 0.29,
-          "output": 1.15
-        },
-        "description": "moonshotai/Kimi-Dev-72B is an AI model provided by siliconflow-cn.",
-        "family": "kimi",
-        "id": "moonshotai/Kimi-Dev-72B",
-        "last_updated": "2025-11-25",
-        "limit": {
-          "context": 131000,
-          "output": 131000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "moonshotai/Kimi-Dev-72B",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-06-19",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "moonshotai/Kimi-K2-Instruct-0905": {
         "attachment": false,
         "cost": {
@@ -69094,33 +68794,32 @@
         "temperature": true,
         "tool_call": true
       },
-      "stepfun-ai/step3": {
-        "attachment": true,
+      "stepfun-ai/Step-3.5-Flash": {
+        "attachment": false,
         "cost": {
-          "input": 0.57,
-          "output": 1.42
+          "input": 0.1,
+          "output": 0.3
         },
-        "description": "stepfun-ai/step3 is an AI model provided by siliconflow-cn.",
+        "description": "stepfun-ai/Step-3.5-Flash is an AI model provided by siliconflow-cn.",
         "family": "step",
-        "id": "stepfun-ai/step3",
-        "last_updated": "2025-11-25",
+        "id": "stepfun-ai/Step-3.5-Flash",
+        "last_updated": "2026-02-11",
         "limit": {
-          "context": 66000,
-          "output": 66000
+          "context": 262000,
+          "output": 262000
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "stepfun-ai/step3",
+        "name": "stepfun-ai/Step-3.5-Flash",
         "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-08-06",
+        "reasoning": true,
+        "release_date": "2026-02-11",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -71139,6 +70838,37 @@
         "release_date": "2025-07-25",
         "temperature": true,
         "tool_call": true
+      },
+      "zai-org/GLM-5": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5 is an AI model provided by togetherai.",
+        "family": "glm",
+        "id": "zai-org/GLM-5",
+        "knowledge": "2025-11",
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 202752,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Together AI",
@@ -71855,6 +71585,39 @@
         "reasoning": true,
         "release_date": "2025-12-01",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m25": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.04,
+          "input": 0.4,
+          "output": 1.6
+        },
+        "description": "MiniMax M2.5 is an AI model provided by venice.",
+        "family": "minimax",
+        "id": "minimax-m25",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-13",
+        "limit": {
+          "context": 198000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-12",
         "temperature": true,
         "tool_call": true
       },
@@ -81054,6 +80817,74 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax/minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "cache_write": 0.375,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.5 is an AI model provided by zenmux.",
+        "id": "minimax/minimax-m2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01-01",
+        "last_updated": "2026-02-13",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-13",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax/minimax-m2.5-lightning": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.06,
+          "cache_write": 0.75,
+          "input": 0.6,
+          "output": 4.8
+        },
+        "description": "MiniMax: MiniMax M2.5 highspeed is an AI model provided by zenmux.",
+        "id": "minimax/minimax-m2.5-lightning",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01-01",
+        "last_updated": "2026-02-13",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax: MiniMax M2.5 highspeed",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-13",
         "temperature": true,
         "tool_call": true
       },
