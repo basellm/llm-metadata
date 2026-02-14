@@ -422,6 +422,7 @@
     "Qwen/Qwen3-235B-A22B-Instruct-2507-TEE": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.04,
         "input": 0.08,
         "output": 0.55
       },
@@ -548,6 +549,7 @@
     "Qwen/Qwen3-32B": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.04,
         "input": 0.08,
         "output": 0.24
       },
@@ -581,6 +583,7 @@
     "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8-TEE": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.11,
         "input": 0.22,
         "output": 0.95
       },
@@ -702,6 +705,7 @@
     "Qwen/Qwen3Guard-Gen-0.6B": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.005,
         "input": 0.01,
         "output": 0.01
       },
@@ -762,6 +766,7 @@
     "chutesai/Mistral-Small-3.1-24B-Instruct-2503": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.015,
         "input": 0.03,
         "output": 0.11
       },
@@ -953,6 +958,7 @@
     "deepseek-ai/DeepSeek-V3-0324-TEE": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.095,
         "input": 0.19,
         "output": 0.87
       },
@@ -1082,6 +1088,7 @@
     "deepseek-ai/DeepSeek-V3.2-TEE": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.125,
         "input": 0.25,
         "output": 0.38
       },
@@ -1115,6 +1122,7 @@
     "miromind-ai/MiroThinker-v1.5-235B": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.15,
         "input": 0.3,
         "output": 1.2
       },
@@ -1122,7 +1130,7 @@
       "id": "miromind-ai/MiroThinker-v1.5-235B",
       "last_updated": "2026-01-10",
       "limit": {
-        "context": 32768,
+        "context": 262144,
         "output": 8192
       },
       "modalities": {
@@ -1173,6 +1181,7 @@
     "moonshotai/Kimi-K2-Instruct-0905": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.195,
         "input": 0.39,
         "output": 1.9
       },
@@ -1368,6 +1377,7 @@
     "rednote-hilab/dots.ocr": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.005,
         "input": 0.01,
         "output": 0.01
       },
@@ -1527,6 +1537,7 @@
     "unsloth/Llama-3.2-1B-Instruct": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.005,
         "input": 0.01,
         "output": 0.01
       },
@@ -1553,9 +1564,41 @@
       "temperature": true,
       "tool_call": false
     },
+    "unsloth/Llama-3.2-3B-Instruct": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.005,
+        "input": 0.01,
+        "output": 0.01
+      },
+      "description": "Llama 3.2 3B Instruct is an AI model provided by chutes.",
+      "family": "unsloth",
+      "id": "unsloth/Llama-3.2-3B-Instruct",
+      "last_updated": "2025-02-12",
+      "limit": {
+        "context": 16384,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.2 3B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-02-12",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
     "unsloth/Mistral-Nemo-Instruct-2407": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.01,
         "input": 0.02,
         "output": 0.04
       },
@@ -1648,6 +1691,7 @@
     "unsloth/gemma-3-27b-it": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.02,
         "input": 0.04,
         "output": 0.15
       },
@@ -1656,8 +1700,8 @@
       "id": "unsloth/gemma-3-27b-it",
       "last_updated": "2026-01-10",
       "limit": {
-        "context": 96000,
-        "output": 96000
+        "context": 128000,
+        "output": 65536
       },
       "modalities": {
         "input": [
