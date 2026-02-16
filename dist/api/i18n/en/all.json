@@ -69579,6 +69579,112 @@
     "name": "STACKIT",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "stepfun": {
+    "api": "https://api.stepfun.com/v1",
+    "doc": "https://platform.stepfun.com/docs/zh/overview/concept",
+    "env": [
+      "STEPFUN_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/stepfun.svg",
+    "id": "stepfun",
+    "models": {
+      "step-1-32k": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.41,
+          "input": 2.05,
+          "output": 9.59
+        },
+        "description": "Step 1 (32K) is an AI model provided by stepfun.",
+        "id": "step-1-32k",
+        "knowledge": "2024-06",
+        "last_updated": "2026-02-13",
+        "limit": {
+          "context": 32768,
+          "input": 32768,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 1 (32K)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-01-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "step-2-16k": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 1.04,
+          "input": 5.21,
+          "output": 16.44
+        },
+        "description": "Step 2 (16K) is an AI model provided by stepfun.",
+        "id": "step-2-16k",
+        "knowledge": "2024-06",
+        "last_updated": "2026-02-13",
+        "limit": {
+          "context": 16384,
+          "input": 16384,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 2 (16K)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-01-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "step-3.5-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.019,
+          "input": 0.096,
+          "output": 0.288
+        },
+        "description": "Step 3.5 Flash is an AI model provided by stepfun.",
+        "id": "step-3.5-flash",
+        "knowledge": "2025-01",
+        "last_updated": "2026-02-13",
+        "limit": {
+          "context": 256000,
+          "input": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 3.5 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-29",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "StepFun",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "submodel": {
     "api": "https://llm.submodel.ai/v1",
     "doc": "https://submodel.gitbook.io",
@@ -70669,6 +70775,35 @@
     "id": "togetherai",
     "lobeIcon": "TogetherAI.Color",
     "models": {
+      "MiniMaxAI/MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax-M2.5 is an AI model provided by togetherai.",
+        "family": "minimax",
+        "id": "MiniMaxAI/MiniMax-M2.5",
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
       "Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
         "attachment": false,
         "cost": {
