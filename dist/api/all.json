@@ -10581,6 +10581,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek.v3.2-v1:0": {
+        "attachment": false,
+        "cost": {
+          "input": 0.62,
+          "output": 1.85
+        },
+        "description": "DeepSeek-V3.2 is an AI model provided by amazon-bedrock.",
+        "family": "deepseek",
+        "id": "deepseek.v3.2-v1:0",
+        "knowledge": "2024-07",
+        "last_updated": "2026-02-15",
+        "limit": {
+          "context": 163840,
+          "output": 81920
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek-V3.2",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-15",
+        "temperature": true,
+        "tool_call": true
+      },
       "eu.anthropic.claude-haiku-4-5-20251001-v1:0": {
         "attachment": true,
         "cost": {
@@ -19747,8 +19777,8 @@
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
-          "input": 0,
-          "output": 0
+          "input": 2.25,
+          "output": 2.75
         },
         "description": "Z.AI GLM-4.7 is an AI model provided by cerebras.",
         "id": "zai-glm-4.7",
@@ -19815,6 +19845,39 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-29",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "MiniMaxAI/MiniMax-M2.5-TEE": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "MiniMax M2.5 TEE is an AI model provided by chutes.",
+        "family": "minimax",
+        "id": "MiniMaxAI/MiniMax-M2.5-TEE",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-15",
+        "limit": {
+          "context": 196608,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5 TEE",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-15",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -21807,6 +21870,39 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-29",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-5-TEE": {
+        "attachment": false,
+        "cost": {
+          "input": 0.75,
+          "output": 2.5
+        },
+        "description": "GLM 5 TEE is an AI model provided by chutes.",
+        "family": "glm",
+        "id": "zai-org/GLM-5-TEE",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-14",
+        "limit": {
+          "context": 202752,
+          "output": 65535
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5 TEE",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-14",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -27824,7 +27920,7 @@
         },
         "name": "Claude Haiku 4.5",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2025-10-15",
         "temperature": true,
         "tool_call": true
@@ -27858,7 +27954,7 @@
         },
         "name": "Claude Opus 4.5",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2025-11-24",
         "temperature": true,
         "tool_call": true
@@ -27892,7 +27988,7 @@
         },
         "name": "Claude Opus 4.6",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2026-02-05",
         "temperature": true,
         "tool_call": true
@@ -27928,39 +28024,6 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-09-29",
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek-r1": {
-        "attachment": true,
-        "cost": {
-          "input": 1.35,
-          "output": 5.4
-        },
-        "description": "DeepSeek R1 is an AI model provided by firmware.",
-        "family": "deepseek-thinking",
-        "id": "deepseek-r1",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-07",
-        "last_updated": "2025-09-29",
-        "limit": {
-          "context": 128000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek R1",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-01-20",
         "temperature": true,
         "tool_call": true
       },
@@ -28325,123 +28388,6 @@
         "name": "GPT OSS 20B",
         "open_weights": true,
         "reasoning": true,
-        "release_date": "1970-01-01",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "kimi-k2-thinking": {
-        "attachment": false,
-        "cost": {
-          "input": 0.6,
-          "output": 2.5
-        },
-        "description": "Kimi K2 Thinking is an AI model provided by firmware.",
-        "id": "kimi-k2-thinking",
-        "last_updated": "1970-01-01",
-        "limit": {
-          "context": 262000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi K2 Thinking",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "1970-01-01",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "kimi-k2.5": {
-        "attachment": false,
-        "cost": {
-          "input": 0.6,
-          "output": 3
-        },
-        "description": "Kimi-K2.5 is an AI model provided by firmware.",
-        "id": "kimi-k2.5",
-        "last_updated": "1970-01-01",
-        "limit": {
-          "context": 256000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi-K2.5",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "1970-01-01",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "zai-glm-4.7": {
-        "attachment": false,
-        "cost": {
-          "input": 0.6,
-          "output": 2.2
-        },
-        "description": "Z.AI GLM-4.7 is an AI model provided by firmware.",
-        "id": "zai-glm-4.7",
-        "last_updated": "1970-01-01",
-        "limit": {
-          "context": 131072,
-          "output": 40000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Z.AI GLM-4.7",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "1970-01-01",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "zai-glm-4.7-flash": {
-        "attachment": false,
-        "cost": {
-          "input": 0.07,
-          "output": 0.4
-        },
-        "description": "Z.AI GLM-4.7 Flash is an AI model provided by firmware.",
-        "id": "zai-glm-4.7-flash",
-        "last_updated": "1970-01-01",
-        "limit": {
-          "context": 131072,
-          "output": 40000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Z.AI GLM-4.7 Flash",
-        "open_weights": true,
-        "reasoning": false,
         "release_date": "1970-01-01",
         "structured_output": true,
         "temperature": true,
@@ -32983,6 +32929,39 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/glm-5-maas": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.1,
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5 is an AI model provided by google-vertex.",
+        "family": "glm",
+        "id": "zai-org/glm-5-maas",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
         "temperature": true,
         "tool_call": true
       }
@@ -78305,6 +78284,39 @@
     "iconURL": "https://models.dev/logos/vivgrid.svg",
     "id": "vivgrid",
     "models": {
+      "deepseek-v3.2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.28,
+          "output": 0.42
+        },
+        "description": "DeepSeek-V3.2 is an AI model provided by vivgrid.",
+        "family": "deepseek",
+        "id": "deepseek-v3.2",
+        "knowledge": "2024-07",
+        "last_updated": "2025-12-01",
+        "limit": {
+          "context": 128000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek-V3.2",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2025-12-01",
+        "temperature": true,
+        "tool_call": true
+      },
       "gemini-3-flash-preview": {
         "attachment": true,
         "cost": {
@@ -78391,6 +78403,78 @@
         "release_date": "2025-11-18",
         "structured_output": true,
         "temperature": true,
+        "tool_call": true
+      },
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5 is an AI model provided by vivgrid.",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 202752,
+          "output": 131000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gpt-5-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.25,
+          "output": 2
+        },
+        "description": "GPT-5 Mini is an AI model provided by vivgrid.",
+        "family": "gpt-mini",
+        "id": "gpt-5-mini",
+        "knowledge": "2024-05-30",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5 Mini",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "temperature": false,
         "tool_call": true
       },
       "gpt-5.1-codex": {
