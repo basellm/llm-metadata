@@ -36915,6 +36915,39 @@
         "temperature": true,
         "tool_call": true
       },
+      "MiniMaxAI/MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax-M2.5 は huggingface によって提供される AI モデルです。",
+        "family": "minimax",
+        "id": "MiniMaxAI/MiniMax-M2.5",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
       "Qwen/Qwen3-235B-A22B-Thinking-2507": {
         "attachment": false,
         "cost": {
@@ -36972,6 +37005,36 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen/Qwen3-Coder-Next": {
+        "attachment": false,
+        "cost": {
+          "input": 0.2,
+          "output": 1.5
+        },
+        "description": "Qwen3-Coder-Next は huggingface によって提供される AI モデルです。",
+        "family": "qwen",
+        "id": "Qwen/Qwen3-Coder-Next",
+        "knowledge": "2025-04",
+        "last_updated": "2026-02-03",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-Coder-Next",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-02-03",
         "temperature": true,
         "tool_call": true
       },
@@ -37092,6 +37155,40 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-09-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen/Qwen3.5-397B-A17B": {
+        "attachment": true,
+        "cost": {
+          "input": 0.6,
+          "output": 3.6
+        },
+        "description": "Qwen3.5-397B-A17B は huggingface によって提供される AI モデルです。",
+        "family": "qwen",
+        "id": "Qwen/Qwen3.5-397B-A17B",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2026-02-01",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5-397B-A17B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-01",
         "temperature": true,
         "tool_call": true
       },
@@ -40682,6 +40779,7 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "kilo": {
+    "api": "https://api.kilo.ai/api/gateway",
     "doc": "https://kilo.ai",
     "env": [
       "KILO_API_KEY"
@@ -48325,7 +48423,7 @@
       }
     },
     "name": "Kilo Gateway",
-    "npm": "opencode-kilo-auth"
+    "npm": "@ai-sdk/openai-compatible"
   },
   "kimi-for-coding": {
     "api": "https://api.kimi.com/coding/v1",
@@ -59216,6 +59314,34 @@
         "release_date": "2025-09-22",
         "tool_call": true
       },
+      "qwen3.5:397b": {
+        "attachment": true,
+        "description": "qwen3.5:397b は ollama-cloud によって提供される AI モデルです。",
+        "family": "qwen",
+        "id": "qwen3.5:397b",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "last_updated": "2026-02-17",
+        "limit": {
+          "context": 262144,
+          "output": 81920
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "qwen3.5:397b",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-15",
+        "tool_call": true
+      },
       "rnj-1:8b": {
         "attachment": false,
         "description": "rnj-1:8b は ollama-cloud によって提供される AI モデルです。",
@@ -65988,6 +66114,36 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-11-15",
+        "temperature": true,
+        "tool_call": true
+      },
+      "prime-intellect/intellect-3": {
+        "attachment": false,
+        "cost": {
+          "input": 0.2,
+          "output": 1.1
+        },
+        "description": "Intellect 3 は openrouter によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "prime-intellect/intellect-3",
+        "knowledge": "2024-10",
+        "last_updated": "2025-01-15",
+        "limit": {
+          "context": 131072,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Intellect 3",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-01-15",
         "temperature": true,
         "tool_call": true
       },
@@ -88680,6 +88836,38 @@
           ]
         },
         "name": "GLM-4.7-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-19",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-4.7-flashx": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.01,
+          "cache_write": 0,
+          "input": 0.07,
+          "output": 0.4
+        },
+        "description": "GLM-4.7-FlashX は zai-coding-plan によって提供される AI モデルです。",
+        "family": "glm-flash",
+        "id": "glm-4.7-flashx",
+        "knowledge": "2025-04",
+        "last_updated": "2026-01-19",
+        "limit": {
+          "context": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7-FlashX",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-01-19",
