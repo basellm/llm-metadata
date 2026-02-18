@@ -12,13 +12,19 @@
       "cost": {
         "cache_read": 0.6,
         "cache_write": 7.5,
+        "context_over_200k": {
+          "cache_read": 1.1,
+          "cache_write": 13.75,
+          "input": 11,
+          "output": 41.25
+        },
         "input": 6,
         "output": 30
       },
       "description": "Claude Opus 4.6 は venice によって提供される AI モデルです。",
       "family": "claude-opus",
       "id": "claude-opus-4-6",
-      "last_updated": "2026-02-05",
+      "last_updated": "2026-02-18",
       "limit": {
         "context": 1000000,
         "output": 128000
@@ -71,6 +77,45 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-12-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-sonnet-4-6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.375,
+        "cache_write": 4.69,
+        "context_over_200k": {
+          "cache_read": 0.6,
+          "cache_write": 7.5,
+          "input": 6,
+          "output": 25
+        },
+        "input": 3.75,
+        "output": 18.75
+      },
+      "description": "Claude Sonnet 4.6 は venice によって提供される AI モデルです。",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4-6",
+      "last_updated": "2026-02-18",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-01-15",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -566,6 +611,36 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-03-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "olafangensan-glm-4.7-flash-heretic": {
+      "attachment": false,
+      "cost": {
+        "input": 0.14,
+        "output": 0.8
+      },
+      "description": "GLM 4.7 Flash Heretic は venice によって提供される AI モデルです。",
+      "family": "glm-flash",
+      "id": "olafangensan-glm-4.7-flash-heretic",
+      "last_updated": "2026-02-18",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.7 Flash Heretic",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-04",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
