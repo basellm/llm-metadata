@@ -1,0 +1,35 @@
+{
+  "attachment": false,
+  "cost": {
+    "input": 0.72,
+    "output": 0.72
+  },
+  "description": "Llama 3.3 70B Instruct は google-vertex によって提供される AI モデルです。",
+  "family": "llama",
+  "id": "meta/llama-3.3-70b-instruct-maas",
+  "knowledge": "2023-12",
+  "last_updated": "2025-04-29",
+  "limit": {
+    "context": 128000,
+    "output": 8192
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Llama 3.3 70B Instruct",
+  "open_weights": true,
+  "provider": {
+    "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "reasoning": false,
+  "release_date": "2025-04-29",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

@@ -9,6 +9,41 @@
   "id": "google-vertex",
   "lobeIcon": "VertexAI.Color",
   "models": {
+    "deepseek-ai/deepseek-v3.1-maas": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 1.7
+      },
+      "description": "DeepSeek V3.1 is an AI model provided by google-vertex.",
+      "family": "deepseek",
+      "id": "deepseek-ai/deepseek-v3.1-maas",
+      "last_updated": "2025-08-28",
+      "limit": {
+        "context": 163840,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3.1",
+      "open_weights": true,
+      "provider": {
+        "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+        "npm": "@ai-sdk/openai-compatible"
+      },
+      "reasoning": true,
+      "release_date": "2025-08-28",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "gemini-2.0-flash": {
       "attachment": true,
       "cost": {
@@ -613,6 +648,77 @@
       "temperature": true,
       "tool_call": true
     },
+    "meta/llama-3.3-70b-instruct-maas": {
+      "attachment": false,
+      "cost": {
+        "input": 0.72,
+        "output": 0.72
+      },
+      "description": "Llama 3.3 70B Instruct is an AI model provided by google-vertex.",
+      "family": "llama",
+      "id": "meta/llama-3.3-70b-instruct-maas",
+      "knowledge": "2023-12",
+      "last_updated": "2025-04-29",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.3 70B Instruct",
+      "open_weights": true,
+      "provider": {
+        "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+        "npm": "@ai-sdk/openai-compatible"
+      },
+      "reasoning": false,
+      "release_date": "2025-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "meta/llama-4-maverick-17b-128e-instruct-maas": {
+      "attachment": true,
+      "cost": {
+        "input": 0.35,
+        "output": 1.15
+      },
+      "description": "Llama 4 Maverick 17B 128E Instruct is an AI model provided by google-vertex.",
+      "family": "llama",
+      "id": "meta/llama-4-maverick-17b-128e-instruct-maas",
+      "knowledge": "2024-08",
+      "last_updated": "2025-04-29",
+      "limit": {
+        "context": 524288,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 4 Maverick 17B 128E Instruct",
+      "open_weights": true,
+      "provider": {
+        "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+        "npm": "@ai-sdk/openai-compatible"
+      },
+      "reasoning": false,
+      "release_date": "2025-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-oss-120b-maas": {
       "attachment": false,
       "cost": {
@@ -671,6 +777,40 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen/qwen3-235b-a22b-instruct-2507-maas": {
+      "attachment": false,
+      "cost": {
+        "input": 0.22,
+        "output": 0.88
+      },
+      "description": "Qwen3 235B A22B Instruct is an AI model provided by google-vertex.",
+      "family": "qwen",
+      "id": "qwen/qwen3-235b-a22b-instruct-2507-maas",
+      "last_updated": "2025-08-13",
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 235B A22B Instruct",
+      "open_weights": true,
+      "provider": {
+        "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+        "npm": "@ai-sdk/openai-compatible"
+      },
+      "reasoning": true,
+      "release_date": "2025-08-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "zai-org/glm-4.7-maas": {
       "attachment": false,
       "cost": {
@@ -684,14 +824,15 @@
         "field": "reasoning_content"
       },
       "knowledge": "2025-04",
-      "last_updated": "2025-12-22",
+      "last_updated": "2026-01-06",
       "limit": {
-        "context": 204800,
-        "output": 131072
+        "context": 200000,
+        "output": 128000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "pdf"
         ],
         "output": [
           "text"
@@ -699,8 +840,13 @@
       },
       "name": "GLM-4.7",
       "open_weights": true,
+      "provider": {
+        "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+        "npm": "@ai-sdk/openai-compatible"
+      },
       "reasoning": true,
-      "release_date": "2025-12-22",
+      "release_date": "2026-01-06",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -732,6 +878,10 @@
       },
       "name": "GLM-5",
       "open_weights": true,
+      "provider": {
+        "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+        "npm": "@ai-sdk/openai-compatible"
+      },
       "reasoning": true,
       "release_date": "2026-02-11",
       "temperature": true,

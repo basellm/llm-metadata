@@ -1,0 +1,36 @@
+{
+  "attachment": true,
+  "cost": {
+    "input": 0.35,
+    "output": 1.15
+  },
+  "description": "Llama 4 Maverick 17B 128E Instruct is an AI model provided by google-vertex.",
+  "family": "llama",
+  "id": "meta/llama-4-maverick-17b-128e-instruct-maas",
+  "knowledge": "2024-08",
+  "last_updated": "2025-04-29",
+  "limit": {
+    "context": 524288,
+    "output": 8192
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Llama 4 Maverick 17B 128E Instruct",
+  "open_weights": true,
+  "provider": {
+    "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "reasoning": false,
+  "release_date": "2025-04-29",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}
