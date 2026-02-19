@@ -49730,6 +49730,615 @@
     "name": "LucidQuery AI",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "meganova": {
+    "api": "https://api.meganova.ai/v1",
+    "doc": "https://docs.meganova.ai",
+    "env": [
+      "MEGANOVA_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/meganova.svg",
+    "id": "meganova",
+    "models": {
+      "MiniMaxAI/MiniMax-M2.1": {
+        "attachment": false,
+        "cost": {
+          "input": 0.28,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.1 is an AI model provided by meganova.",
+        "family": "minimax",
+        "id": "MiniMaxAI/MiniMax-M2.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2025-12-23",
+        "limit": {
+          "context": 196608,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "MiniMaxAI/MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.5 is an AI model provided by meganova.",
+        "family": "minimax",
+        "id": "MiniMaxAI/MiniMax-M2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen/Qwen2.5-VL-32B-Instruct": {
+        "attachment": true,
+        "cost": {
+          "input": 0.2,
+          "output": 0.6
+        },
+        "description": "Qwen2.5 VL 32B Instruct is an AI model provided by meganova.",
+        "family": "qwen",
+        "id": "Qwen/Qwen2.5-VL-32B-Instruct",
+        "last_updated": "2025-03-24",
+        "limit": {
+          "context": 16384,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen2.5 VL 32B Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-03-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen/Qwen3-235B-A22B-Instruct-2507": {
+        "attachment": false,
+        "cost": {
+          "input": 0.09,
+          "output": 0.6
+        },
+        "description": "Qwen3 235B A22B Instruct 2507 is an AI model provided by meganova.",
+        "family": "qwen",
+        "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+        "last_updated": "2025-07-23",
+        "limit": {
+          "context": 262000,
+          "output": 262000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 235B A22B Instruct 2507",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-07-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen/Qwen3.5-Plus": {
+        "attachment": false,
+        "cost": {
+          "input": 0.4,
+          "output": 2.4,
+          "reasoning": 2.4
+        },
+        "description": "Qwen3.5 Plus is an AI model provided by meganova.",
+        "family": "qwen",
+        "id": "Qwen/Qwen3.5-Plus",
+        "knowledge": "2025-04",
+        "last_updated": "2026-02",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 Plus",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02",
+        "temperature": true,
+        "tool_call": true
+      },
+      "XiaomiMiMo/MiMo-V2-Flash": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.3
+        },
+        "description": "MiMo V2 Flash is an AI model provided by meganova.",
+        "family": "mimo",
+        "id": "XiaomiMiMo/MiMo-V2-Flash",
+        "knowledge": "2024-12-01",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 262144,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-ai/DeepSeek-R1-0528": {
+        "attachment": false,
+        "cost": {
+          "input": 0.5,
+          "output": 2.15
+        },
+        "description": "DeepSeek R1 0528 is an AI model provided by meganova.",
+        "family": "deepseek-thinking",
+        "id": "deepseek-ai/DeepSeek-R1-0528",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-07",
+        "last_updated": "2025-05-28",
+        "limit": {
+          "context": 163840,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek R1 0528",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-05-28",
+        "temperature": true,
+        "tool_call": false
+      },
+      "deepseek-ai/DeepSeek-V3-0324": {
+        "attachment": false,
+        "cost": {
+          "input": 0.25,
+          "output": 0.88
+        },
+        "description": "DeepSeek V3 0324 is an AI model provided by meganova.",
+        "family": "deepseek",
+        "id": "deepseek-ai/DeepSeek-V3-0324",
+        "last_updated": "2025-03-24",
+        "limit": {
+          "context": 163840,
+          "output": 163840
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3 0324",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-03-24",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-ai/DeepSeek-V3.1": {
+        "attachment": false,
+        "cost": {
+          "input": 0.27,
+          "output": 1
+        },
+        "description": "DeepSeek V3.1 is an AI model provided by meganova.",
+        "family": "deepseek",
+        "id": "deepseek-ai/DeepSeek-V3.1",
+        "last_updated": "2025-08-25",
+        "limit": {
+          "context": 164000,
+          "output": 164000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.1",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-08-25",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-ai/DeepSeek-V3.2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.26,
+          "output": 0.38
+        },
+        "description": "DeepSeek V3.2 is an AI model provided by meganova.",
+        "family": "deepseek",
+        "id": "deepseek-ai/DeepSeek-V3.2",
+        "last_updated": "2025-12-03",
+        "limit": {
+          "context": 164000,
+          "output": 164000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.2",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-12-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-ai/DeepSeek-V3.2-Exp": {
+        "attachment": false,
+        "cost": {
+          "input": 0.27,
+          "output": 0.4
+        },
+        "description": "DeepSeek V3.2 Exp is an AI model provided by meganova.",
+        "family": "deepseek",
+        "id": "deepseek-ai/DeepSeek-V3.2-Exp",
+        "last_updated": "2025-10-10",
+        "limit": {
+          "context": 164000,
+          "output": 164000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.2 Exp",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-10-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "meta-llama/Llama-3.3-70B-Instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.3
+        },
+        "description": "Llama 3.3 70B Instruct is an AI model provided by meganova.",
+        "family": "llama",
+        "id": "meta-llama/Llama-3.3-70B-Instruct",
+        "last_updated": "2024-12-06",
+        "limit": {
+          "context": 131072,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.3 70B Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-12-06",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mistralai/Mistral-Nemo-Instruct-2407": {
+        "attachment": false,
+        "cost": {
+          "input": 0.02,
+          "output": 0.04
+        },
+        "description": "Mistral Nemo Instruct 2407 is an AI model provided by meganova.",
+        "family": "mistral",
+        "id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "last_updated": "2024-07-18",
+        "limit": {
+          "context": 131072,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mistral Nemo Instruct 2407",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-07-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "mistralai/Mistral-Small-3.2-24B-Instruct-2506": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Mistral Small 3.2 24B Instruct is an AI model provided by meganova.",
+        "family": "mistral-small",
+        "id": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+        "knowledge": "2024-10",
+        "last_updated": "2025-06-20",
+        "limit": {
+          "context": 32768,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mistral Small 3.2 24B Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-06-20",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/Kimi-K2-Thinking": {
+        "attachment": false,
+        "cost": {
+          "input": 0.6,
+          "output": 2.6
+        },
+        "description": "Kimi K2 Thinking is an AI model provided by meganova.",
+        "family": "kimi-thinking",
+        "id": "moonshotai/Kimi-K2-Thinking",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-08",
+        "last_updated": "2025-11-06",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-11-06",
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/Kimi-K2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.45,
+          "output": 2.8
+        },
+        "description": "Kimi K2.5 is an AI model provided by meganova.",
+        "family": "kimi",
+        "id": "moonshotai/Kimi-K2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-01",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-27",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-4.6": {
+        "attachment": false,
+        "cost": {
+          "input": 0.45,
+          "output": 1.9
+        },
+        "description": "GLM-4.6 is an AI model provided by meganova.",
+        "family": "glm",
+        "id": "zai-org/GLM-4.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2025-09-30",
+        "limit": {
+          "context": 202752,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-09-30",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-4.7": {
+        "attachment": false,
+        "cost": {
+          "input": 0.2,
+          "output": 0.8
+        },
+        "description": "GLM-4.7 is an AI model provided by meganova.",
+        "family": "glm",
+        "id": "zai-org/GLM-4.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2025-12-22",
+        "limit": {
+          "context": 202752,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.8,
+          "output": 2.56
+        },
+        "description": "GLM-5 is an AI model provided by meganova.",
+        "family": "glm",
+        "id": "zai-org/GLM-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 202752,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Meganova",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "midjourney": {
     "description": "Midjourney is a generative artificial intelligence program and service created and hosted by the San Francisco-based independent research lab Midjourney, Inc. Midjourney generates images from natural language descriptions, called prompts, similar to OpenAI's DALL-E and Stability AI's Stable Diffusion. It is one of the technologies of the AI boom.",
     "id": "midjourney",
@@ -63319,6 +63928,45 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-09-29",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-4.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "context_over_200k": {
+            "cache_read": 0.6,
+            "cache_write": 7.5,
+            "input": 6,
+            "output": 22.5
+          },
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4.6 is an AI model provided by openrouter.",
+        "family": "claude-sonnet",
+        "id": "anthropic/claude-sonnet-4.6",
+        "last_updated": "2026-02-17",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-17",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -84411,6 +85059,35 @@
         "temperature": true,
         "tool_call": true
       },
+      "alibaba/qwen3-coder-next": {
+        "attachment": false,
+        "cost": {
+          "input": 0.5,
+          "output": 1.2
+        },
+        "description": "Qwen3 Coder Next is an AI model provided by vercel.",
+        "family": "qwen",
+        "id": "alibaba/qwen3-coder-next",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder Next",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-07-22",
+        "temperature": true,
+        "tool_call": true
+      },
       "alibaba/qwen3-coder-plus": {
         "attachment": false,
         "cost": {
@@ -84739,6 +85416,39 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-09-24",
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen3.5-plus": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.04,
+          "cache_write": 0.5,
+          "input": 0.4,
+          "output": 2.4
+        },
+        "description": "Qwen 3.5 Plus is an AI model provided by vercel.",
+        "family": "qwen",
+        "id": "alibaba/qwen3.5-plus",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.5 Plus",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-16",
         "temperature": true,
         "tool_call": true
       },
@@ -86962,6 +87672,37 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-10-27",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax/minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "cache_write": 0.375,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.5 is an AI model provided by vercel.",
+        "family": "minimax",
+        "id": "minimax/minimax-m2.5",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 204800,
+          "output": 131000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-12",
         "temperature": true,
         "tool_call": true
       },
@@ -89846,6 +90587,58 @@
         "temperature": true,
         "tool_call": true
       },
+      "xai/grok-imagine-image": {
+        "attachment": false,
+        "description": "Grok Imagine Image is an AI model provided by vercel.",
+        "family": "grok",
+        "id": "xai/grok-imagine-image",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "Grok Imagine Image",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-01-28",
+        "temperature": true,
+        "tool_call": false
+      },
+      "xai/grok-imagine-image-pro": {
+        "attachment": false,
+        "description": "Grok Imagine Image Pro is an AI model provided by vercel.",
+        "family": "grok",
+        "id": "xai/grok-imagine-image-pro",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "Grok Imagine Image Pro",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-01-28",
+        "temperature": true,
+        "tool_call": false
+      },
       "xiaomi/mimo-v2-flash": {
         "attachment": false,
         "cost": {
@@ -90121,6 +90914,36 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai/glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5 is an AI model provided by vercel.",
+        "family": "glm",
+        "id": "zai/glm-5",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 202800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-12",
         "temperature": true,
         "tool_call": true
       }
