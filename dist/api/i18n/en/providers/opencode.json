@@ -35,6 +35,9 @@
       },
       "name": "Big Pickle",
       "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/anthropic"
+      },
       "reasoning": true,
       "release_date": "2025-10-17",
       "temperature": true,
@@ -441,6 +444,50 @@
       },
       "reasoning": true,
       "release_date": "2025-11-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3.1-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 4,
+          "output": 18
+        },
+        "input": 2,
+        "output": 12
+      },
+      "description": "Gemini 3.1 Pro Preview is an AI model provided by opencode.",
+      "family": "gemini-pro",
+      "id": "gemini-3.1-pro",
+      "knowledge": "2025-01",
+      "last_updated": "2026-02-19",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.1 Pro Preview",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/google"
+      },
+      "reasoning": true,
+      "release_date": "2026-02-19",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1113,6 +1160,7 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-01-27",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -1245,9 +1293,11 @@
       },
       "name": "MiniMax M2.5 Free",
       "open_weights": true,
+      "provider": {
+        "npm": "@ai-sdk/anthropic"
+      },
       "reasoning": true,
       "release_date": "2026-02-12",
-      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -1309,7 +1359,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-01-28",
-      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     }
