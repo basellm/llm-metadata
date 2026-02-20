@@ -98,7 +98,7 @@
       "description": "Claude Sonnet 4.6 is an AI model provided by venice.",
       "family": "claude-sonnet",
       "id": "claude-sonnet-4-6",
-      "last_updated": "2026-02-18",
+      "last_updated": "2026-02-19",
       "limit": {
         "context": 1000000,
         "output": 128000
@@ -115,7 +115,7 @@
       "name": "Claude Sonnet 4.6",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2026-01-15",
+      "release_date": "2026-02-17",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -187,6 +187,46 @@
       "release_date": "2025-12-04",
       "temperature": true,
       "tool_call": false
+    },
+    "gemini-3-1-pro-preview": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 0.5,
+        "context_over_200k": {
+          "cache_read": 0.5,
+          "input": 5,
+          "output": 22.5
+        },
+        "input": 2.5,
+        "output": 15
+      },
+      "description": "Gemini 3.1 Pro Preview is an AI model provided by venice.",
+      "family": "gemini-pro",
+      "id": "gemini-3-1-pro-preview",
+      "last_updated": "2026-02-19",
+      "limit": {
+        "context": 1000000,
+        "output": 250000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.1 Pro Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "gemini-3-flash-preview": {
       "attachment": true,
@@ -563,7 +603,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-02-13",
+      "last_updated": "2026-02-19",
       "limit": {
         "context": 198000,
         "output": 32000
@@ -577,7 +617,7 @@
         ]
       },
       "name": "MiniMax M2.5",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "release_date": "2026-02-12",
       "temperature": true,

@@ -1,0 +1,389 @@
+{
+  "api": "https://models.think.evroc.com/v1",
+  "doc": "https://docs.evroc.com/products/think/overview.html",
+  "env": [
+    "EVROC_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/evroc.svg",
+  "id": "evroc",
+  "models": {
+    "KBLab/kb-whisper-large": {
+      "attachment": false,
+      "cost": {
+        "input": 0.00236,
+        "output": 0.00236,
+        "output_audio": 2.36
+      },
+      "description": "KB Whisper は evroc によって提供される AI モデルです。",
+      "family": "whisper",
+      "id": "KBLab/kb-whisper-large",
+      "last_updated": "2024-10-01",
+      "limit": {
+        "context": 448,
+        "output": 448
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "KB Whisper",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-10-01",
+      "tool_call": false
+    },
+    "Qwen/Qwen3-30B-A3B-Instruct-2507-FP8": {
+      "attachment": false,
+      "cost": {
+        "input": 0.35,
+        "output": 1.42
+      },
+      "description": "Qwen3 30B 2507 は evroc によって提供される AI モデルです。",
+      "family": "qwen",
+      "id": "Qwen/Qwen3-30B-A3B-Instruct-2507-FP8",
+      "last_updated": "2025-07-30",
+      "limit": {
+        "context": 64000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 30B 2507",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-30",
+      "tool_call": true
+    },
+    "Qwen/Qwen3-Embedding-8B": {
+      "attachment": false,
+      "cost": {
+        "input": 0.12,
+        "output": 0.12
+      },
+      "description": "Qwen3 Embedding 8B は evroc によって提供される AI モデルです。",
+      "family": "text-embedding",
+      "id": "Qwen/Qwen3-Embedding-8B",
+      "last_updated": "2025-07-30",
+      "limit": {
+        "context": 40960,
+        "output": 40960
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Embedding 8B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-30",
+      "tool_call": false
+    },
+    "Qwen/Qwen3-VL-30B-A3B-Instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.24,
+        "output": 0.94
+      },
+      "description": "Qwen3 VL 30B は evroc によって提供される AI モデルです。",
+      "family": "qwen",
+      "id": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+      "last_updated": "2025-07-30",
+      "limit": {
+        "context": 100000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 VL 30B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-30",
+      "tool_call": true
+    },
+    "intfloat/multilingual-e5-large-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.12,
+        "output": 0.12
+      },
+      "description": "E5 Multi-Lingual Large Embeddings 0.6B は evroc によって提供される AI モデルです。",
+      "family": "text-embedding",
+      "id": "intfloat/multilingual-e5-large-instruct",
+      "last_updated": "2024-06-01",
+      "limit": {
+        "context": 512,
+        "output": 512
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "E5 Multi-Lingual Large Embeddings 0.6B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-06-01",
+      "tool_call": false
+    },
+    "microsoft/Phi-4-multimodal-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.24,
+        "output": 0.47
+      },
+      "description": "Phi-4 15B は evroc によって提供される AI モデルです。",
+      "family": "phi",
+      "id": "microsoft/Phi-4-multimodal-instruct",
+      "last_updated": "2025-01-01",
+      "limit": {
+        "context": 32000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "Phi-4 15B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-01-01",
+      "tool_call": true
+    },
+    "mistralai/Magistral-Small-2509": {
+      "attachment": false,
+      "cost": {
+        "input": 0.59,
+        "output": 2.36
+      },
+      "description": "Magistral Small 1.2 24B は evroc によって提供される AI モデルです。",
+      "family": "magistral-small",
+      "id": "mistralai/Magistral-Small-2509",
+      "last_updated": "2025-06-01",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Magistral Small 1.2 24B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-06-01",
+      "tool_call": true
+    },
+    "mistralai/Voxtral-Small-24B-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.00236,
+        "output": 0.00236,
+        "output_audio": 2.36
+      },
+      "description": "Voxtral Small 24B は evroc によって提供される AI モデルです。",
+      "family": "voxtral",
+      "id": "mistralai/Voxtral-Small-24B-2507",
+      "last_updated": "2025-03-01",
+      "limit": {
+        "context": 32000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "audio",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Voxtral Small 24B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-01",
+      "tool_call": false
+    },
+    "mistralai/devstral-small-2-24b-instruct-2512": {
+      "attachment": false,
+      "cost": {
+        "input": 0.12,
+        "output": 0.47
+      },
+      "description": "Devstral Small 2 24B Instruct 2512 は evroc によって提供される AI モデルです。",
+      "family": "devstral",
+      "id": "mistralai/devstral-small-2-24b-instruct-2512",
+      "last_updated": "2025-12-01",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral Small 2 24B Instruct 2512",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-01",
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.5": {
+      "attachment": false,
+      "cost": {
+        "input": 1.47,
+        "output": 5.9
+      },
+      "description": "Kimi K2.5 は evroc によって提供される AI モデルです。",
+      "family": "kimi",
+      "id": "moonshotai/Kimi-K2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-01-27",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-27",
+      "tool_call": true
+    },
+    "nvidia/Llama-3.3-70B-Instruct-FP8": {
+      "attachment": false,
+      "cost": {
+        "input": 1.18,
+        "output": 1.18
+      },
+      "description": "Llama 3.3 70B は evroc によって提供される AI モデルです。",
+      "family": "llama",
+      "id": "nvidia/Llama-3.3-70B-Instruct-FP8",
+      "last_updated": "2024-12-01",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.3 70B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-12-01",
+      "tool_call": true
+    },
+    "openai/gpt-oss-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.24,
+        "output": 0.94
+      },
+      "description": "GPT OSS 120B は evroc によって提供される AI モデルです。",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-120b",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "tool_call": true
+    },
+    "openai/whisper-large-v3": {
+      "attachment": false,
+      "cost": {
+        "input": 0.00236,
+        "output": 0.00236,
+        "output_audio": 2.36
+      },
+      "description": "Whisper 3 Large は evroc によって提供される AI モデルです。",
+      "family": "whisper",
+      "id": "openai/whisper-large-v3",
+      "last_updated": "2024-10-01",
+      "limit": {
+        "context": 448,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Whisper 3 Large",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-10-01",
+      "tool_call": false
+    }
+  },
+  "name": "evroc",
+  "npm": "@ai-sdk/openai-compatible"
+}
