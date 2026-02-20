@@ -13807,6 +13807,7 @@
         "name": "Claude Haiku 4.5",
         "open_weights": false,
         "provider": {
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -13845,6 +13846,7 @@
         "name": "Claude Opus 4.1",
         "open_weights": false,
         "provider": {
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -13883,6 +13885,7 @@
         "name": "Claude Opus 4.5",
         "open_weights": false,
         "provider": {
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -13926,6 +13929,7 @@
         "name": "Claude Opus 4.6",
         "open_weights": false,
         "provider": {
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -13963,6 +13967,7 @@
         "name": "Claude Sonnet 4.5",
         "open_weights": false,
         "provider": {
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -16790,6 +16795,7 @@
         "name": "Claude Haiku 4.5",
         "open_weights": false,
         "provider": {
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -16828,6 +16834,7 @@
         "name": "Claude Opus 4.1",
         "open_weights": false,
         "provider": {
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -16866,6 +16873,7 @@
         "name": "Claude Opus 4.5",
         "open_weights": false,
         "provider": {
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -16909,6 +16917,7 @@
         "name": "Claude Opus 4.6",
         "open_weights": false,
         "provider": {
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -16946,6 +16955,7 @@
         "name": "Claude Sonnet 4.5",
         "open_weights": false,
         "provider": {
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -80270,6 +80280,64 @@
         "temperature": true,
         "tool_call": true
       },
+      "PaddlePaddle/PaddleOCR-VL": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "PaddlePaddle/PaddleOCR-VL is an AI model provided by siliconflow-cn.",
+        "id": "PaddlePaddle/PaddleOCR-VL",
+        "last_updated": "2025-10-16",
+        "limit": {
+          "context": 16384,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "PaddlePaddle/PaddleOCR-VL",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-10-16",
+        "temperature": true,
+        "tool_call": false
+      },
+      "PaddlePaddle/PaddleOCR-VL-1.5": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "PaddlePaddle/PaddleOCR-VL-1.5 is an AI model provided by siliconflow-cn.",
+        "id": "PaddlePaddle/PaddleOCR-VL-1.5",
+        "last_updated": "2026-01-29",
+        "limit": {
+          "context": 16384,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "PaddlePaddle/PaddleOCR-VL-1.5",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-01-29",
+        "temperature": true,
+        "tool_call": false
+      },
       "Pro/MiniMaxAI/MiniMax-M2.1": {
         "attachment": false,
         "cost": {
@@ -80296,6 +80364,39 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-12-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "Pro/MiniMaxAI/MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.22
+        },
+        "description": "Pro/MiniMaxAI/MiniMax-M2.5 is an AI model provided by siliconflow-cn.",
+        "family": "minimax",
+        "id": "Pro/MiniMaxAI/MiniMax-M2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-13",
+        "limit": {
+          "context": 192000,
+          "output": 131000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Pro/MiniMaxAI/MiniMax-M2.5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-02-13",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -81700,6 +81801,35 @@
         "structured_output": true,
         "temperature": true,
         "tool_call": true
+      },
+      "deepseek-ai/DeepSeek-OCR": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "deepseek-ai/DeepSeek-OCR is an AI model provided by siliconflow-cn.",
+        "id": "deepseek-ai/DeepSeek-OCR",
+        "last_updated": "2025-10-20",
+        "limit": {
+          "context": 8192,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "deepseek-ai/DeepSeek-OCR",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-10-20",
+        "temperature": true,
+        "tool_call": false
       },
       "deepseek-ai/DeepSeek-R1": {
         "attachment": false,
