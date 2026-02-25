@@ -64304,6 +64304,123 @@
     "name": "OpenCode Zen",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "opencode-go": {
+    "api": "https://opencode.ai/zen/go/v1",
+    "doc": "https://opencode.ai/docs/zen",
+    "env": [
+      "OPENCODE_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/opencode-go.svg",
+    "id": "opencode-go",
+    "models": {
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5 is an AI model provided by opencode-go.",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.08,
+          "input": 0.6,
+          "output": 3
+        },
+        "description": "Kimi K2.5 is an AI model provided by opencode-go.",
+        "family": "kimi",
+        "id": "kimi-k2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-10",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-27",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.5 is an AI model provided by opencode-go.",
+        "family": "minimax",
+        "id": "minimax-m2.5",
+        "knowledge": "2025-01",
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/anthropic"
+        },
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "OpenCode Go",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "openrouter": {
     "api": "https://openrouter.ai/api/v1",
     "doc": "https://openrouter.ai/models",
