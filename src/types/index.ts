@@ -283,10 +283,18 @@ export interface VoAPIModel {
     temperature: boolean;
     image: boolean;
     audio: boolean;
+    open_weights: boolean;
+  };
+  modalities: {
+    input: string[];
+    output: string[];
   };
   firm: string;
   maxCtxTokens?: number | null;
   maxOutputTokens?: number | null;
+  releaseDate?: string | null;
+  lastUpdated?: string | null;
+  knowledge?: string | null;
   price?: {
     input?: number | null;
     output?: number | null;
