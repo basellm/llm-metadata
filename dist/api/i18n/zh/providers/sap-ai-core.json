@@ -346,6 +346,86 @@
       "temperature": true,
       "tool_call": true
     },
+    "anthropic--claude-4.6-opus": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "context_over_200k": {
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 37.5
+        },
+        "input": 5,
+        "output": 25
+      },
+      "description": "anthropic--claude-4.6-opus 是由 sap-ai-core 提供的人工智能模型。",
+      "family": "claude-opus",
+      "id": "anthropic--claude-4.6-opus",
+      "knowledge": "2025-05",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "anthropic--claude-4.6-opus",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic--claude-4.6-sonnet": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "context_over_200k": {
+          "cache_read": 0.6,
+          "cache_write": 7.5,
+          "input": 6,
+          "output": 22.5
+        },
+        "input": 3,
+        "output": 15
+      },
+      "description": "anthropic--claude-4.6-sonnet 是由 sap-ai-core 提供的人工智能模型。",
+      "family": "claude-sonnet",
+      "id": "anthropic--claude-4.6-sonnet",
+      "knowledge": "2025-08",
+      "last_updated": "2026-02-17",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "anthropic--claude-4.6-sonnet",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-17",
+      "temperature": true,
+      "tool_call": true
+    },
     "gemini-2.5-flash": {
       "attachment": true,
       "cost": {
@@ -383,6 +463,42 @@
       "temperature": true,
       "tool_call": true
     },
+    "gemini-2.5-flash-lite": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "gemini-2.5-flash-lite 是由 sap-ai-core 提供的人工智能模型。",
+      "family": "gemini-flash-lite",
+      "id": "gemini-2.5-flash-lite",
+      "knowledge": "2025-01",
+      "last_updated": "2025-06-17",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemini-2.5-flash-lite",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-06-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "gemini-2.5-pro": {
       "attachment": true,
       "cost": {
@@ -415,6 +531,72 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-03-25",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 2,
+        "output": 8
+      },
+      "description": "gpt-4.1 是由 sap-ai-core 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "gpt-4.1",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-4.1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "input": 0.4,
+        "output": 1.6
+      },
+      "description": "gpt-4.1-mini 是由 sap-ai-core 提供的人工智能模型。",
+      "family": "gpt-mini",
+      "id": "gpt-4.1-mini",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-4.1-mini",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -517,6 +699,67 @@
       "structured_output": true,
       "temperature": false,
       "tool_call": true
+    },
+    "sonar": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 1
+      },
+      "description": "sonar 是由 sap-ai-core 提供的人工智能模型。",
+      "family": "sonar",
+      "id": "sonar",
+      "knowledge": "2025-09-01",
+      "last_updated": "2025-09-01",
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "sonar",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-01-01",
+      "temperature": true,
+      "tool_call": false
+    },
+    "sonar-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 3,
+        "output": 15
+      },
+      "description": "sonar-pro 是由 sap-ai-core 提供的人工智能模型。",
+      "family": "sonar-pro",
+      "id": "sonar-pro",
+      "knowledge": "2025-09-01",
+      "last_updated": "2025-09-01",
+      "limit": {
+        "context": 200000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "sonar-pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-01-01",
+      "temperature": true,
+      "tool_call": false
     }
   },
   "name": "SAP AI Core",
