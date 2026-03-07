@@ -84,24 +84,24 @@
     "claude-sonnet-4-6": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.375,
-        "cache_write": 4.69,
+        "cache_read": 0.36,
+        "cache_write": 4.5,
         "context_over_200k": {
-          "cache_read": 0.6,
-          "cache_write": 7.5,
-          "input": 6,
-          "output": 25
+          "cache_read": 0.72,
+          "cache_write": 9,
+          "input": 7.2,
+          "output": 27
         },
-        "input": 3.75,
-        "output": 18.75
+        "input": 3.6,
+        "output": 18
       },
       "description": "Claude Sonnet 4.6 is an AI model provided by venice.",
       "family": "claude-sonnet",
       "id": "claude-sonnet-4-6",
-      "last_updated": "2026-02-19",
+      "last_updated": "2026-02-28",
       "limit": {
         "context": 1000000,
-        "output": 128000
+        "output": 64000
       },
       "modalities": {
         "input": [
@@ -337,18 +337,18 @@
     "grok-41-fast": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.125,
-        "input": 0.5,
-        "output": 1.25
+        "cache_read": 0.0625,
+        "input": 0.25,
+        "output": 0.625
       },
       "description": "Grok 4.1 Fast is an AI model provided by venice.",
       "family": "grok",
       "id": "grok-41-fast",
       "knowledge": "2025-07",
-      "last_updated": "2026-01-28",
+      "last_updated": "2026-02-28",
       "limit": {
-        "context": 256000,
-        "output": 64000
+        "context": 1000000,
+        "output": 30720
       },
       "modalities": {
         "input": [
@@ -715,6 +715,69 @@
       "temperature": true,
       "tool_call": true
     },
+    "openai-gpt-4o-2024-11-20": {
+      "attachment": true,
+      "cost": {
+        "input": 3.125,
+        "output": 12.5
+      },
+      "description": "GPT-4o is an AI model provided by venice.",
+      "family": "gpt",
+      "id": "openai-gpt-4o-2024-11-20",
+      "last_updated": "2026-03-06",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-02-28",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai-gpt-4o-mini-2024-07-18": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.09375,
+        "input": 0.1875,
+        "output": 0.75
+      },
+      "description": "GPT-4o Mini is an AI model provided by venice.",
+      "family": "gpt-mini",
+      "id": "openai-gpt-4o-mini-2024-07-18",
+      "last_updated": "2026-03-06",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o Mini",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-02-28",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai-gpt-52": {
       "attachment": false,
       "cost": {
@@ -808,6 +871,37 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-02-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai-gpt-54": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.313,
+        "input": 3.13,
+        "output": 18.8
+      },
+      "description": "GPT-5.4 is an AI model provided by venice.",
+      "family": "gpt",
+      "id": "openai-gpt-54",
+      "last_updated": "2026-03-06",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.4",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-05",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -934,6 +1028,37 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-5-35b-a3b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15625,
+        "input": 0.3125,
+        "output": 1.25
+      },
+      "description": "Qwen 3.5 35B A3B is an AI model provided by venice.",
+      "family": "qwen",
+      "id": "qwen3-5-35b-a3b",
+      "last_updated": "2026-02-28",
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3.5 35B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-25",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

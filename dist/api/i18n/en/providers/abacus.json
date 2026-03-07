@@ -310,6 +310,38 @@
       "temperature": true,
       "tool_call": true
     },
+    "claude-opus-4-6": {
+      "attachment": true,
+      "cost": {
+        "input": 5,
+        "output": 25
+      },
+      "description": "Claude Opus 4.6 is an AI model provided by abacus.",
+      "family": "claude-opus",
+      "id": "claude-opus-4-6",
+      "knowledge": "2025-05",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-05",
+      "temperature": true,
+      "tool_call": true
+    },
     "claude-sonnet-4-20250514": {
       "attachment": true,
       "cost": {
@@ -370,6 +402,38 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-09-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-sonnet-4-6": {
+      "attachment": true,
+      "cost": {
+        "input": 3,
+        "output": 15
+      },
+      "description": "Claude Sonnet 4.6 is an AI model provided by abacus.",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4-6",
+      "knowledge": "2025-08",
+      "last_updated": "2026-02-17",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-17",
       "temperature": true,
       "tool_call": true
     },
@@ -463,8 +527,8 @@
     "deepseek/deepseek-v3.1": {
       "attachment": false,
       "cost": {
-        "input": 0.14,
-        "output": 0.28
+        "input": 0.55,
+        "output": 1.66
       },
       "description": "DeepSeek V3.1 is an AI model provided by abacus.",
       "family": "deepseek",
@@ -486,66 +550,6 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-01-20",
-      "temperature": true,
-      "tool_call": true
-    },
-    "gemini-2.0-flash-001": {
-      "attachment": true,
-      "cost": {
-        "input": 0.1,
-        "output": 0.4
-      },
-      "description": "Gemini 2.0 Flash is an AI model provided by abacus.",
-      "family": "gemini-flash",
-      "id": "gemini-2.0-flash-001",
-      "last_updated": "2025-02-05",
-      "limit": {
-        "context": 1000000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.0 Flash",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-02-05",
-      "temperature": true,
-      "tool_call": true
-    },
-    "gemini-2.0-pro-exp-02-05": {
-      "attachment": true,
-      "description": "Gemini 2.0 Pro Exp is an AI model provided by abacus.",
-      "family": "gemini-pro",
-      "id": "gemini-2.0-pro-exp-02-05",
-      "last_updated": "2025-02-05",
-      "limit": {
-        "context": 2000000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.0 Pro Exp",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-02-05",
       "temperature": true,
       "tool_call": true
     },
@@ -680,6 +684,75 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-06-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3.1-flash-lite-preview": {
+      "attachment": true,
+      "cost": {
+        "input": 0.25,
+        "output": 1.5
+      },
+      "description": "Gemini 3.1 Flash Lite Preview is an AI model provided by abacus.",
+      "family": "gemini-flash",
+      "id": "gemini-3.1-flash-lite-preview",
+      "last_updated": "2026-03-01",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.1 Flash Lite Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3.1-pro-preview": {
+      "attachment": true,
+      "cost": {
+        "input": 2,
+        "output": 12
+      },
+      "description": "Gemini 3.1 Pro Preview is an AI model provided by abacus.",
+      "family": "gemini-pro",
+      "id": "gemini-3.1-pro-preview",
+      "knowledge": "2025-01",
+      "last_updated": "2026-02-19",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.1 Pro Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-19",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -870,6 +943,39 @@
       "temperature": false,
       "tool_call": true
     },
+    "gpt-5-codex": {
+      "attachment": false,
+      "cost": {
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5 Codex is an AI model provided by abacus.",
+      "family": "gpt",
+      "id": "gpt-5-codex",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-09-15",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-15",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "gpt-5-mini": {
       "attachment": true,
       "cost": {
@@ -994,6 +1100,72 @@
       "temperature": false,
       "tool_call": true
     },
+    "gpt-5.1-codex": {
+      "attachment": true,
+      "cost": {
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5.1 Codex is an AI model provided by abacus.",
+      "family": "gpt",
+      "id": "gpt-5.1-codex",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1 Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1-codex-max": {
+      "attachment": true,
+      "cost": {
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5.1 Codex Max is an AI model provided by abacus.",
+      "family": "gpt",
+      "id": "gpt-5.1-codex-max",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1 Codex Max",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "gpt-5.2": {
       "attachment": true,
       "cost": {
@@ -1028,8 +1200,8 @@
     "gpt-5.2-chat-latest": {
       "attachment": true,
       "cost": {
-        "input": 1.5,
-        "output": 12
+        "input": 1.75,
+        "output": 14
       },
       "description": "GPT-5.2 Chat Latest is an AI model provided by abacus.",
       "family": "gpt",
@@ -1054,6 +1226,138 @@
       "reasoning": true,
       "release_date": "2026-01-01",
       "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5.2-codex": {
+      "attachment": true,
+      "cost": {
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.2 Codex is an AI model provided by abacus.",
+      "family": "gpt",
+      "id": "gpt-5.2-codex",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2 Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.3-chat-latest": {
+      "attachment": true,
+      "cost": {
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.3 Chat Latest is an AI model provided by abacus.",
+      "family": "gpt",
+      "id": "gpt-5.3-chat-latest",
+      "last_updated": "2026-03-01",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.3 Chat Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5.3-codex": {
+      "attachment": true,
+      "cost": {
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.3 Codex is an AI model provided by abacus.",
+      "family": "gpt",
+      "id": "gpt-5.3-codex",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.3 Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-05",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.3-codex-xhigh": {
+      "attachment": true,
+      "cost": {
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.3 Codex XHigh is an AI model provided by abacus.",
+      "family": "gpt",
+      "id": "gpt-5.3-codex-xhigh",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.3 Codex XHigh",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-05",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "grok-4-0709": {
@@ -1205,6 +1509,39 @@
       "temperature": true,
       "tool_call": true
     },
+    "kimi-k2.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 3
+      },
+      "description": "Kimi K2.5 is an AI model provided by abacus.",
+      "family": "kimi",
+      "id": "kimi-k2.5",
+      "knowledge": "2025-01",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "llama-3.3-70b-versatile": {
       "attachment": false,
       "cost": {
@@ -1288,35 +1625,6 @@
         ]
       },
       "name": "Llama 3.1 405B Instruct Turbo",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-07-23",
-      "temperature": true,
-      "tool_call": true
-    },
-    "meta-llama/Meta-Llama-3.1-70B-Instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.4,
-        "output": 0.4
-      },
-      "description": "Llama 3.1 70B Instruct is an AI model provided by abacus.",
-      "family": "llama",
-      "id": "meta-llama/Meta-Llama-3.1-70B-Instruct",
-      "last_updated": "2024-07-23",
-      "limit": {
-        "context": 128000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.1 70B Instruct",
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-07-23",
@@ -1417,7 +1725,7 @@
       "attachment": true,
       "cost": {
         "input": 20,
-        "output": 80
+        "output": 40
       },
       "description": "o3-pro is an AI model provided by abacus.",
       "family": "o-pro",
@@ -1566,8 +1874,8 @@
     "route-llm": {
       "attachment": true,
       "cost": {
-        "input": 0.5,
-        "output": 1.5
+        "input": 3,
+        "output": 15
       },
       "description": "Route LLM is an AI model provided by abacus.",
       "family": "gpt",
@@ -1655,8 +1963,8 @@
     "zai-org/glm-4.7": {
       "attachment": false,
       "cost": {
-        "input": 0.7,
-        "output": 2.5
+        "input": 0.6,
+        "output": 2.2
       },
       "description": "GLM-4.7 is an AI model provided by abacus.",
       "family": "glm",
@@ -1678,6 +1986,35 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-06-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/glm-5": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 3.2
+      },
+      "description": "GLM-5 is an AI model provided by abacus.",
+      "family": "glm",
+      "id": "zai-org/glm-5",
+      "last_updated": "2026-02-11",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-11",
       "temperature": true,
       "tool_call": true
     }

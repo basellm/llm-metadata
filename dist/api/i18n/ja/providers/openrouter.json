@@ -1906,6 +1906,99 @@
       "temperature": true,
       "tool_call": false
     },
+    "inception/mercury": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.25,
+        "output": 0.75
+      },
+      "description": "Mercury は openrouter によって提供される AI モデルです。",
+      "family": "mercury",
+      "id": "inception/mercury",
+      "last_updated": "2025-06-26",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mercury",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-06-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inception/mercury-2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.25,
+        "output": 0.75
+      },
+      "description": "Mercury 2 は openrouter によって提供される AI モデルです。",
+      "family": "mercury",
+      "id": "inception/mercury-2",
+      "last_updated": "2026-03-04",
+      "limit": {
+        "context": 128000,
+        "output": 50000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mercury 2",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-04",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inception/mercury-coder": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.25,
+        "output": 0.75
+      },
+      "description": "Mercury Coder は openrouter によって提供される AI モデルです。",
+      "family": "mercury",
+      "id": "inception/mercury-coder",
+      "last_updated": "2025-04-30",
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mercury Coder",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-30",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "kwaipilot/kat-coder-pro:free": {
       "attachment": false,
       "cost": {
@@ -4214,6 +4307,37 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-02-09",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openrouter/free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Free Models Router は openrouter によって提供される AI モデルです。",
+      "id": "openrouter/free",
+      "last_updated": "2026-02-01",
+      "limit": {
+        "context": 200000,
+        "input": 200000,
+        "output": 8000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Free Models Router",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-01",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

@@ -191,7 +191,7 @@
       "temperature": true,
       "tool_call": true
     },
-    "glm-4p5": {
+    "glm-4.5": {
       "attachment": false,
       "cost": {
         "input": 0.67,
@@ -199,7 +199,7 @@
       },
       "description": "GLM 4.5 は cortecs によって提供される AI モデルです。",
       "family": "glm",
-      "id": "glm-4p5",
+      "id": "glm-4.5",
       "interleaved": {
         "field": "reasoning_content"
       },
@@ -224,7 +224,7 @@
       "temperature": true,
       "tool_call": true
     },
-    "glm-4p5-air": {
+    "glm-4.5-air": {
       "attachment": false,
       "cost": {
         "input": 0.22,
@@ -232,7 +232,7 @@
       },
       "description": "GLM 4.5 Air は cortecs によって提供される AI モデルです。",
       "family": "glm-air",
-      "id": "glm-4p5-air",
+      "id": "glm-4.5-air",
       "knowledge": "2025-04",
       "last_updated": "2025-08-01",
       "limit": {
@@ -254,7 +254,7 @@
       "temperature": true,
       "tool_call": true
     },
-    "glm-4p7": {
+    "glm-4.7": {
       "attachment": false,
       "cost": {
         "input": 0.45,
@@ -262,7 +262,7 @@
       },
       "description": "GLM 4.7 は cortecs によって提供される AI モデルです。",
       "family": "glm",
-      "id": "glm-4p7",
+      "id": "glm-4.7",
       "interleaved": {
         "field": "reasoning_content"
       },
@@ -284,6 +284,39 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-12-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-4.7-flash": {
+      "attachment": false,
+      "cost": {
+        "input": 0.09,
+        "output": 0.53
+      },
+      "description": "GLM-4.7-Flash は cortecs によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "glm-4.7-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2025-08-08",
+      "limit": {
+        "context": 203000,
+        "output": 203000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.7-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-08",
       "temperature": true,
       "tool_call": true
     },
@@ -439,6 +472,41 @@
       "temperature": true,
       "tool_call": true
     },
+    "kimi-k2.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0.55,
+        "output": 2.76
+      },
+      "description": "Kimi K2.5 は cortecs によって提供される AI モデルです。",
+      "family": "kimi-thinking",
+      "id": "kimi-k2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-01-27",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-27",
+      "temperature": true,
+      "tool_call": true
+    },
     "llama-3.1-405b-instruct": {
       "attachment": false,
       "cost": {
@@ -502,7 +570,7 @@
       "temperature": true,
       "tool_call": true
     },
-    "minimax-m2p1": {
+    "minimax-m2.1": {
       "attachment": false,
       "cost": {
         "input": 0.34,
@@ -510,7 +578,7 @@
       },
       "description": "MiniMax-M2.1 は cortecs によって提供される AI モデルです。",
       "family": "minimax",
-      "id": "minimax-m2p1",
+      "id": "minimax-m2.1",
       "interleaved": {
         "field": "reasoning_content"
       },

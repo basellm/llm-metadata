@@ -1,0 +1,108 @@
+{
+  "api": "https://chat.d.run/v1",
+  "doc": "https://www.d.run",
+  "env": [
+    "DRUN_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/drun.svg",
+  "id": "drun",
+  "models": {
+    "public/deepseek-r1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.55,
+        "output": 2.2
+      },
+      "description": "DeepSeek R1 は drun によって提供される AI モデルです。",
+      "family": "deepseek-thinking",
+      "id": "public/deepseek-r1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2025-01-20",
+      "limit": {
+        "context": 131072,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek R1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-01-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "public/deepseek-v3": {
+      "attachment": false,
+      "cost": {
+        "input": 0.28,
+        "output": 1.1
+      },
+      "description": "DeepSeek V3 は drun によって提供される AI モデルです。",
+      "family": "deepseek",
+      "id": "public/deepseek-v3",
+      "knowledge": "2024-07",
+      "last_updated": "2024-12-26",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-12-26",
+      "temperature": true,
+      "tool_call": true
+    },
+    "public/minimax-m25": {
+      "attachment": false,
+      "cost": {
+        "input": 0.29,
+        "output": 1.16
+      },
+      "description": "MiniMax M2.5 は drun によって提供される AI モデルです。",
+      "family": "minimax",
+      "id": "public/minimax-m25",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "last_updated": "2025-03-01",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-03-01",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "D.Run (China)",
+  "npm": "@ai-sdk/openai-compatible"
+}

@@ -2231,6 +2231,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "claude-opus-4-6": {
+        "attachment": true,
+        "cost": {
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.6 is an AI model provided by abacus.",
+        "family": "claude-opus",
+        "id": "claude-opus-4-6",
+        "knowledge": "2025-05",
+        "last_updated": "2026-02-05",
+        "limit": {
+          "context": 200000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-05",
+        "temperature": true,
+        "tool_call": true
+      },
       "claude-sonnet-4-20250514": {
         "attachment": true,
         "cost": {
@@ -2291,6 +2323,38 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-09-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-sonnet-4-6": {
+        "attachment": true,
+        "cost": {
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4.6 is an AI model provided by abacus.",
+        "family": "claude-sonnet",
+        "id": "claude-sonnet-4-6",
+        "knowledge": "2025-08",
+        "last_updated": "2026-02-17",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-17",
         "temperature": true,
         "tool_call": true
       },
@@ -2384,8 +2448,8 @@
       "deepseek/deepseek-v3.1": {
         "attachment": false,
         "cost": {
-          "input": 0.14,
-          "output": 0.28
+          "input": 0.55,
+          "output": 1.66
         },
         "description": "DeepSeek V3.1 is an AI model provided by abacus.",
         "family": "deepseek",
@@ -2407,66 +2471,6 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-01-20",
-        "temperature": true,
-        "tool_call": true
-      },
-      "gemini-2.0-flash-001": {
-        "attachment": true,
-        "cost": {
-          "input": 0.1,
-          "output": 0.4
-        },
-        "description": "Gemini 2.0 Flash is an AI model provided by abacus.",
-        "family": "gemini-flash",
-        "id": "gemini-2.0-flash-001",
-        "last_updated": "2025-02-05",
-        "limit": {
-          "context": 1000000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemini 2.0 Flash",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-02-05",
-        "temperature": true,
-        "tool_call": true
-      },
-      "gemini-2.0-pro-exp-02-05": {
-        "attachment": true,
-        "description": "Gemini 2.0 Pro Exp is an AI model provided by abacus.",
-        "family": "gemini-pro",
-        "id": "gemini-2.0-pro-exp-02-05",
-        "last_updated": "2025-02-05",
-        "limit": {
-          "context": 2000000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemini 2.0 Pro Exp",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-02-05",
         "temperature": true,
         "tool_call": true
       },
@@ -2601,6 +2605,75 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-06-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-3.1-flash-lite-preview": {
+        "attachment": true,
+        "cost": {
+          "input": 0.25,
+          "output": 1.5
+        },
+        "description": "Gemini 3.1 Flash Lite Preview is an AI model provided by abacus.",
+        "family": "gemini-flash",
+        "id": "gemini-3.1-flash-lite-preview",
+        "last_updated": "2026-03-01",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.1 Flash Lite Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-01",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-3.1-pro-preview": {
+        "attachment": true,
+        "cost": {
+          "input": 2,
+          "output": 12
+        },
+        "description": "Gemini 3.1 Pro Preview is an AI model provided by abacus.",
+        "family": "gemini-pro",
+        "id": "gemini-3.1-pro-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.1 Pro Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-19",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -2791,6 +2864,39 @@
         "temperature": false,
         "tool_call": true
       },
+      "gpt-5-codex": {
+        "attachment": false,
+        "cost": {
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5 Codex is an AI model provided by abacus.",
+        "family": "gpt",
+        "id": "gpt-5-codex",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-09-15",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5 Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-15",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "gpt-5-mini": {
         "attachment": true,
         "cost": {
@@ -2915,6 +3021,72 @@
         "temperature": false,
         "tool_call": true
       },
+      "gpt-5.1-codex": {
+        "attachment": true,
+        "cost": {
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1 Codex is an AI model provided by abacus.",
+        "family": "gpt",
+        "id": "gpt-5.1-codex",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-11-13",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1 Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-13",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.1-codex-max": {
+        "attachment": true,
+        "cost": {
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1 Codex Max is an AI model provided by abacus.",
+        "family": "gpt",
+        "id": "gpt-5.1-codex-max",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-11-13",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1 Codex Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-13",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "gpt-5.2": {
         "attachment": true,
         "cost": {
@@ -2949,8 +3121,8 @@
       "gpt-5.2-chat-latest": {
         "attachment": true,
         "cost": {
-          "input": 1.5,
-          "output": 12
+          "input": 1.75,
+          "output": 14
         },
         "description": "GPT-5.2 Chat Latest is an AI model provided by abacus.",
         "family": "gpt",
@@ -2975,6 +3147,138 @@
         "reasoning": true,
         "release_date": "2026-01-01",
         "temperature": true,
+        "tool_call": true
+      },
+      "gpt-5.2-codex": {
+        "attachment": true,
+        "cost": {
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.2 Codex is an AI model provided by abacus.",
+        "family": "gpt",
+        "id": "gpt-5.2-codex",
+        "knowledge": "2025-08-31",
+        "last_updated": "2025-12-11",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.2 Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-11",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.3-chat-latest": {
+        "attachment": true,
+        "cost": {
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.3 Chat Latest is an AI model provided by abacus.",
+        "family": "gpt",
+        "id": "gpt-5.3-chat-latest",
+        "last_updated": "2026-03-01",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.3 Chat Latest",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gpt-5.3-codex": {
+        "attachment": true,
+        "cost": {
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.3 Codex is an AI model provided by abacus.",
+        "family": "gpt",
+        "id": "gpt-5.3-codex",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-02-05",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.3 Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-05",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.3-codex-xhigh": {
+        "attachment": true,
+        "cost": {
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.3 Codex XHigh is an AI model provided by abacus.",
+        "family": "gpt",
+        "id": "gpt-5.3-codex-xhigh",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-02-05",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.3 Codex XHigh",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-05",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       },
       "grok-4-0709": {
@@ -3126,6 +3430,39 @@
         "temperature": true,
         "tool_call": true
       },
+      "kimi-k2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.6,
+          "output": 3
+        },
+        "description": "Kimi K2.5 is an AI model provided by abacus.",
+        "family": "kimi",
+        "id": "kimi-k2.5",
+        "knowledge": "2025-01",
+        "last_updated": "2026-01",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "llama-3.3-70b-versatile": {
         "attachment": false,
         "cost": {
@@ -3209,35 +3546,6 @@
           ]
         },
         "name": "Llama 3.1 405B Instruct Turbo",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-07-23",
-        "temperature": true,
-        "tool_call": true
-      },
-      "meta-llama/Meta-Llama-3.1-70B-Instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.4,
-          "output": 0.4
-        },
-        "description": "Llama 3.1 70B Instruct is an AI model provided by abacus.",
-        "family": "llama",
-        "id": "meta-llama/Meta-Llama-3.1-70B-Instruct",
-        "last_updated": "2024-07-23",
-        "limit": {
-          "context": 128000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama 3.1 70B Instruct",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-07-23",
@@ -3338,7 +3646,7 @@
         "attachment": true,
         "cost": {
           "input": 20,
-          "output": 80
+          "output": 40
         },
         "description": "o3-pro is an AI model provided by abacus.",
         "family": "o-pro",
@@ -3487,8 +3795,8 @@
       "route-llm": {
         "attachment": true,
         "cost": {
-          "input": 0.5,
-          "output": 1.5
+          "input": 3,
+          "output": 15
         },
         "description": "Route LLM is an AI model provided by abacus.",
         "family": "gpt",
@@ -3576,8 +3884,8 @@
       "zai-org/glm-4.7": {
         "attachment": false,
         "cost": {
-          "input": 0.7,
-          "output": 2.5
+          "input": 0.6,
+          "output": 2.2
         },
         "description": "GLM-4.7 is an AI model provided by abacus.",
         "family": "glm",
@@ -3599,6 +3907,35 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-06-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/glm-5": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5 is an AI model provided by abacus.",
+        "family": "glm",
+        "id": "zai-org/glm-5",
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
         "temperature": true,
         "tool_call": true
       }
@@ -4008,6 +4345,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "coding-glm-5-free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Coding-GLM-5-Free is an AI model provided by aihubmix.",
+        "family": "glm",
+        "id": "coding-glm-5-free",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Coding-GLM-5-Free",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
+      },
       "coding-minimax-m2.1-free": {
         "attachment": false,
         "cost": {
@@ -4328,6 +4697,38 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.88,
+          "output": 2.82
+        },
+        "description": "GLM-5 is an AI model provided by aihubmix.",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-11",
         "temperature": true,
         "tool_call": true
       },
@@ -4880,6 +5281,35 @@
         "temperature": true,
         "tool_call": true
       },
+      "minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.29,
+          "output": 1.15
+        },
+        "description": "MiniMax-M2.5 is an AI model provided by aihubmix.",
+        "family": "minimax",
+        "id": "minimax-m2.5",
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
       "o4-mini": {
         "attachment": false,
         "cost": {
@@ -5000,6 +5430,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3-coder-next": {
+        "attachment": false,
+        "cost": {
+          "input": 0.14,
+          "output": 0.55
+        },
+        "description": "Qwen3 Coder Next is an AI model provided by aihubmix.",
+        "family": "qwen",
+        "id": "qwen3-coder-next",
+        "last_updated": "2026-02-04",
+        "limit": {
+          "context": 262144,
+          "input": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder Next",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-02-04",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3-max-2026-01-23": {
         "attachment": false,
         "cost": {
@@ -5027,6 +5488,38 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-09-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.5-plus": {
+        "attachment": false,
+        "cost": {
+          "input": 0.11,
+          "output": 0.66
+        },
+        "description": "Qwen 3.5 Plus is an AI model provided by aihubmix.",
+        "family": "qwen",
+        "id": "qwen3.5-plus",
+        "knowledge": "2025-04",
+        "last_updated": "2026-02-16",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.5 Plus",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-16",
         "temperature": true,
         "tool_call": true
       }
@@ -6365,6 +6858,35 @@
     "iconURL": "https://models.dev/logos/alibaba-cn.svg",
     "id": "alibaba-cn",
     "models": {
+      "MiniMax/MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.301,
+          "output": 1.205
+        },
+        "description": "MiniMax M2.5 is an AI model provided by alibaba-cn.",
+        "family": "minimax",
+        "id": "MiniMax/MiniMax-M2.5",
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
       "deepseek-r1": {
         "attachment": false,
         "cost": {
@@ -6684,6 +7206,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.86,
+          "output": 3.15
+        },
+        "description": "GLM-5 is an AI model provided by alibaba-cn.",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 202752,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
+      },
       "kimi-k2-thinking": {
         "attachment": false,
         "cost": {
@@ -6729,7 +7283,8 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2025-01-27",
+        "knowledge": "2025-01",
+        "last_updated": "2026-01-27",
         "limit": {
           "context": 262144,
           "output": 32768
@@ -6737,7 +7292,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "video"
           ],
           "output": [
             "text"
@@ -6746,8 +7302,77 @@
         "name": "Moonshot Kimi K2.5",
         "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-01-27",
+        "release_date": "2026-01-27",
         "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi/kimi-k2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.1,
+          "input": 0.6,
+          "output": 3
+        },
+        "description": "kimi/kimi-k2.5 is an AI model provided by alibaba-cn.",
+        "family": "kimi",
+        "id": "kimi/kimi-k2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "kimi/kimi-k2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-27",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax-M2.5 is an AI model provided by alibaba-cn.",
+        "family": "minimax",
+        "id": "minimax-m2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
         "temperature": true,
         "tool_call": true
       },
@@ -8239,6 +8864,40 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3.5-flash": {
+        "attachment": true,
+        "cost": {
+          "input": 0.172,
+          "output": 1.72,
+          "reasoning": 1.72
+        },
+        "description": "Qwen3.5 Flash is an AI model provided by alibaba-cn.",
+        "family": "qwen",
+        "id": "qwen3.5-flash",
+        "knowledge": "2025-04",
+        "last_updated": "2026-02-23",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3.5-plus": {
         "attachment": false,
         "cost": {
@@ -8332,6 +8991,126 @@
         "temperature": true,
         "tool_call": true
       },
+      "siliconflow/deepseek-r1-0528": {
+        "attachment": false,
+        "cost": {
+          "input": 0.5,
+          "output": 2.18
+        },
+        "description": "siliconflow/deepseek-r1-0528 is an AI model provided by alibaba-cn.",
+        "family": "deepseek-thinking",
+        "id": "siliconflow/deepseek-r1-0528",
+        "last_updated": "2025-11-25",
+        "limit": {
+          "context": 163840,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "siliconflow/deepseek-r1-0528",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-28",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "siliconflow/deepseek-v3-0324": {
+        "attachment": false,
+        "cost": {
+          "input": 0.25,
+          "output": 1
+        },
+        "description": "siliconflow/deepseek-v3-0324 is an AI model provided by alibaba-cn.",
+        "family": "deepseek",
+        "id": "siliconflow/deepseek-v3-0324",
+        "last_updated": "2025-11-25",
+        "limit": {
+          "context": 163840,
+          "output": 163840
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "siliconflow/deepseek-v3-0324",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-12-26",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "siliconflow/deepseek-v3.1-terminus": {
+        "attachment": false,
+        "cost": {
+          "input": 0.27,
+          "output": 1
+        },
+        "description": "siliconflow/deepseek-v3.1-terminus is an AI model provided by alibaba-cn.",
+        "family": "deepseek",
+        "id": "siliconflow/deepseek-v3.1-terminus",
+        "last_updated": "2025-11-25",
+        "limit": {
+          "context": 163840,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "siliconflow/deepseek-v3.1-terminus",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-29",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "siliconflow/deepseek-v3.2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.27,
+          "output": 0.42
+        },
+        "description": "siliconflow/deepseek-v3.2 is an AI model provided by alibaba-cn.",
+        "family": "deepseek",
+        "id": "siliconflow/deepseek-v3.2",
+        "last_updated": "2025-12-03",
+        "limit": {
+          "context": 163840,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "siliconflow/deepseek-v3.2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "tongyi-intent-detect-v3": {
         "attachment": false,
         "cost": {
@@ -8364,6 +9143,536 @@
       }
     },
     "name": "Alibaba (China)",
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "alibaba-coding-plan": {
+    "api": "https://coding-intl.dashscope.aliyuncs.com/v1",
+    "doc": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+    "env": [
+      "ALIBABA_CODING_PLAN_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/alibaba-coding-plan.svg",
+    "id": "alibaba-coding-plan",
+    "models": {
+      "MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiniMax-M2.5 is an AI model provided by alibaba-coding-plan.",
+        "family": "minimax",
+        "id": "MiniMax-M2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-4.7": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-4.7 is an AI model provided by alibaba-coding-plan.",
+        "family": "glm",
+        "id": "glm-4.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2025-12-22",
+        "limit": {
+          "context": 202752,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-5 is an AI model provided by alibaba-coding-plan.",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 202752,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Kimi K2.5 is an AI model provided by alibaba-coding-plan.",
+        "family": "kimi",
+        "id": "kimi-k2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-27",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-coder-next": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3 Coder Next is an AI model provided by alibaba-coding-plan.",
+        "family": "qwen",
+        "id": "qwen3-coder-next",
+        "last_updated": "2026-02-03",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder Next",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-02-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-coder-plus": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3 Coder Plus is an AI model provided by alibaba-coding-plan.",
+        "family": "qwen",
+        "id": "qwen3-coder-plus",
+        "knowledge": "2025-04",
+        "last_updated": "2025-07-23",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder Plus",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-07-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-max-2026-01-23": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3 Max is an AI model provided by alibaba-coding-plan.",
+        "family": "qwen",
+        "id": "qwen3-max-2026-01-23",
+        "knowledge": "2025-04",
+        "last_updated": "2026-01-23",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Max",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-01-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.5-plus": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3.5 Plus is an AI model provided by alibaba-coding-plan.",
+        "family": "qwen",
+        "id": "qwen3.5-plus",
+        "knowledge": "2025-04",
+        "last_updated": "2026-02-16",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 Plus",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-16",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Alibaba Coding Plan",
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "alibaba-coding-plan-cn": {
+    "api": "https://coding.dashscope.aliyuncs.com/v1",
+    "doc": "https://help.aliyun.com/zh/model-studio/coding-plan",
+    "env": [
+      "ALIBABA_CODING_PLAN_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/alibaba-coding-plan-cn.svg",
+    "id": "alibaba-coding-plan-cn",
+    "models": {
+      "glm-4.7": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-4.7 is an AI model provided by alibaba-coding-plan-cn.",
+        "family": "glm",
+        "id": "glm-4.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2025-12-22",
+        "limit": {
+          "context": 202752,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-5 is an AI model provided by alibaba-coding-plan-cn.",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 202752,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Kimi K2.5 is an AI model provided by alibaba-coding-plan-cn.",
+        "family": "kimi",
+        "id": "kimi-k2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-27",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-coder-next": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3 Coder Next is an AI model provided by alibaba-coding-plan-cn.",
+        "family": "qwen",
+        "id": "qwen3-coder-next",
+        "last_updated": "2026-02-03",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder Next",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-02-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-coder-plus": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3 Coder Plus is an AI model provided by alibaba-coding-plan-cn.",
+        "family": "qwen",
+        "id": "qwen3-coder-plus",
+        "knowledge": "2025-04",
+        "last_updated": "2025-07-23",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder Plus",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-07-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-max-2026-01-23": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3 Max is an AI model provided by alibaba-coding-plan-cn.",
+        "family": "qwen",
+        "id": "qwen3-max-2026-01-23",
+        "knowledge": "2025-04",
+        "last_updated": "2026-01-23",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Max",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-01-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.5-plus": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3.5 Plus is an AI model provided by alibaba-coding-plan-cn.",
+        "family": "qwen",
+        "id": "qwen3.5-plus",
+        "knowledge": "2025-04",
+        "last_updated": "2026-02-16",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 Plus",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-16",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Alibaba Coding Plan (China)",
     "npm": "@ai-sdk/openai-compatible"
   },
   "aliyun-bailian": {
@@ -9911,7 +11220,8 @@
     "env": [
       "AWS_ACCESS_KEY_ID",
       "AWS_SECRET_ACCESS_KEY",
-      "AWS_REGION"
+      "AWS_REGION",
+      "AWS_BEARER_TOKEN_BEDROCK"
     ],
     "iconURL": "https://models.dev/logos/amazon-bedrock.svg",
     "id": "amazon-bedrock",
@@ -22687,6 +23997,36 @@
     "iconURL": "https://models.dev/logos/cloudferro-sherlock.svg",
     "id": "cloudferro-sherlock",
     "models": {
+      " MiniMaxAI/MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax-M2.5 is an AI model provided by cloudferro-sherlock.",
+        "family": "minimax",
+        "id": " MiniMaxAI/MiniMax-M2.5",
+        "knowledge": "2026-01",
+        "last_updated": "2026-03-05",
+        "limit": {
+          "context": 196000,
+          "output": 196000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-05",
+        "temperature": true,
+        "tool_call": true
+      },
       "meta-llama/Llama-3.3-70B-Instruct": {
         "attachment": false,
         "cost": {
@@ -26120,6 +27460,36 @@
         "release_date": "2025-04-11",
         "temperature": true,
         "tool_call": false
+      },
+      "@cf/zai-org/glm-4.7-flash": {
+        "attachment": false,
+        "cost": {
+          "input": 0.06,
+          "output": 0.4
+        },
+        "description": "GLM-4.7-Flash is an AI model provided by cloudflare-workers-ai.",
+        "family": "glm-flash",
+        "id": "@cf/zai-org/glm-4.7-flash",
+        "knowledge": "2025-04",
+        "last_updated": "2026-01-19",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-19",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Cloudflare Workers AI",
@@ -26669,7 +28039,7 @@
         "temperature": true,
         "tool_call": true
       },
-      "glm-4p5": {
+      "glm-4.5": {
         "attachment": false,
         "cost": {
           "input": 0.67,
@@ -26677,7 +28047,7 @@
         },
         "description": "GLM 4.5 is an AI model provided by cortecs.",
         "family": "glm",
-        "id": "glm-4p5",
+        "id": "glm-4.5",
         "interleaved": {
           "field": "reasoning_content"
         },
@@ -26702,7 +28072,7 @@
         "temperature": true,
         "tool_call": true
       },
-      "glm-4p5-air": {
+      "glm-4.5-air": {
         "attachment": false,
         "cost": {
           "input": 0.22,
@@ -26710,7 +28080,7 @@
         },
         "description": "GLM 4.5 Air is an AI model provided by cortecs.",
         "family": "glm-air",
-        "id": "glm-4p5-air",
+        "id": "glm-4.5-air",
         "knowledge": "2025-04",
         "last_updated": "2025-08-01",
         "limit": {
@@ -26732,7 +28102,7 @@
         "temperature": true,
         "tool_call": true
       },
-      "glm-4p7": {
+      "glm-4.7": {
         "attachment": false,
         "cost": {
           "input": 0.45,
@@ -26740,7 +28110,7 @@
         },
         "description": "GLM 4.7 is an AI model provided by cortecs.",
         "family": "glm",
-        "id": "glm-4p7",
+        "id": "glm-4.7",
         "interleaved": {
           "field": "reasoning_content"
         },
@@ -26762,6 +28132,39 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-4.7-flash": {
+        "attachment": false,
+        "cost": {
+          "input": 0.09,
+          "output": 0.53
+        },
+        "description": "GLM-4.7-Flash is an AI model provided by cortecs.",
+        "family": "glm",
+        "id": "glm-4.7-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2025-08-08",
+        "limit": {
+          "context": 203000,
+          "output": 203000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-08",
         "temperature": true,
         "tool_call": true
       },
@@ -26917,6 +28320,41 @@
         "temperature": true,
         "tool_call": true
       },
+      "kimi-k2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.55,
+          "output": 2.76
+        },
+        "description": "Kimi K2.5 is an AI model provided by cortecs.",
+        "family": "kimi-thinking",
+        "id": "kimi-k2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-27",
+        "temperature": true,
+        "tool_call": true
+      },
       "llama-3.1-405b-instruct": {
         "attachment": false,
         "cost": {
@@ -26980,7 +28418,7 @@
         "temperature": true,
         "tool_call": true
       },
-      "minimax-m2p1": {
+      "minimax-m2.1": {
         "attachment": false,
         "cost": {
           "input": 0.34,
@@ -26988,7 +28426,7 @@
         },
         "description": "MiniMax-M2.1 is an AI model provided by cortecs.",
         "family": "minimax",
-        "id": "minimax-m2p1",
+        "id": "minimax-m2.1",
         "interleaved": {
           "field": "reasoning_content"
         },
@@ -27207,6 +28645,41 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "MiniMaxAI/MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "cache_write": 0.375,
+          "input": 0.27,
+          "output": 0.95
+        },
+        "description": "MiniMax M2.5 is an AI model provided by deepinfra.",
+        "family": "minimax",
+        "id": "MiniMaxAI/MiniMax-M2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-06",
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
         "temperature": true,
         "tool_call": true
       },
@@ -27429,6 +28902,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "moonshotai/Kimi-K2-Instruct-0905": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 0.4,
+          "output": 2
+        },
+        "description": "Kimi K2 0905 is an AI model provided by deepinfra.",
+        "family": "kimi",
+        "id": "moonshotai/Kimi-K2-Instruct-0905",
+        "knowledge": "2024-10",
+        "last_updated": "2025-09-05",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 0905",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-09-05",
+        "temperature": true,
+        "tool_call": true
+      },
       "moonshotai/Kimi-K2-Thinking": {
         "attachment": false,
         "cost": {
@@ -27587,6 +29091,74 @@
         "temperature": true,
         "tool_call": true
       },
+      "zai-org/GLM-4.6": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.08,
+          "input": 0.43,
+          "output": 1.74
+        },
+        "description": "GLM-4.6 is an AI model provided by deepinfra.",
+        "family": "glm",
+        "id": "zai-org/GLM-4.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2025-09-30",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-09-30",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-4.6V": {
+        "attachment": true,
+        "cost": {
+          "input": 0.3,
+          "output": 0.9
+        },
+        "description": "GLM-4.6V is an AI model provided by deepinfra.",
+        "family": "glm",
+        "id": "zai-org/GLM-4.6V",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2025-09-30",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.6V",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-09-30",
+        "temperature": true,
+        "tool_call": true
+      },
       "zai-org/GLM-4.7": {
         "attachment": false,
         "cost": {
@@ -27653,6 +29225,40 @@
         "release_date": "2026-01-19",
         "temperature": true,
         "tool_call": true
+      },
+      "zai-org/GLM-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.16,
+          "input": 0.8,
+          "output": 2.56
+        },
+        "description": "GLM-5 is an AI model provided by deepinfra.",
+        "family": "glm",
+        "id": "zai-org/GLM-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-12",
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 202752,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Deep Infra",
@@ -27660,7 +29266,7 @@
   },
   "deepseek": {
     "api": "https://api.deepseek.com",
-    "doc": "https://platform.deepseek.com/api-docs/pricing",
+    "doc": "https://api-docs.deepseek.com/quick_start/pricing",
     "env": [
       "DEEPSEEK_API_KEY"
     ],
@@ -27678,8 +29284,8 @@
         "description": "DeepSeek Chat is an AI model provided by deepseek.",
         "family": "deepseek",
         "id": "deepseek-chat",
-        "knowledge": "2024-07",
-        "last_updated": "2025-09-29",
+        "knowledge": "2025-09",
+        "last_updated": "2026-02-28",
         "limit": {
           "context": 128000,
           "output": 8192
@@ -27693,9 +29299,9 @@
           ]
         },
         "name": "DeepSeek Chat",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": false,
-        "release_date": "2024-12-26",
+        "release_date": "2025-12-01",
         "temperature": true,
         "tool_call": true
       },
@@ -27712,11 +29318,11 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "knowledge": "2024-07",
-        "last_updated": "2025-09-29",
+        "knowledge": "2025-09",
+        "last_updated": "2026-02-28",
         "limit": {
           "context": 128000,
-          "output": 128000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -27727,9 +29333,9 @@
           ]
         },
         "name": "DeepSeek Reasoner",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-01-20",
+        "release_date": "2025-12-01",
         "temperature": true,
         "tool_call": true
       }
@@ -27816,6 +29422,114 @@
       }
     },
     "name": "doubao"
+  },
+  "drun": {
+    "api": "https://chat.d.run/v1",
+    "doc": "https://www.d.run",
+    "env": [
+      "DRUN_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/drun.svg",
+    "id": "drun",
+    "models": {
+      "public/deepseek-r1": {
+        "attachment": false,
+        "cost": {
+          "input": 0.55,
+          "output": 2.2
+        },
+        "description": "DeepSeek R1 is an AI model provided by drun.",
+        "family": "deepseek-thinking",
+        "id": "public/deepseek-r1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2025-01-20",
+        "limit": {
+          "context": 131072,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek R1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-01-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "public/deepseek-v3": {
+        "attachment": false,
+        "cost": {
+          "input": 0.28,
+          "output": 1.1
+        },
+        "description": "DeepSeek V3 is an AI model provided by drun.",
+        "family": "deepseek",
+        "id": "public/deepseek-v3",
+        "knowledge": "2024-07",
+        "last_updated": "2024-12-26",
+        "limit": {
+          "context": 131072,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-12-26",
+        "temperature": true,
+        "tool_call": true
+      },
+      "public/minimax-m25": {
+        "attachment": false,
+        "cost": {
+          "input": 0.29,
+          "output": 1.16
+        },
+        "description": "MiniMax M2.5 is an AI model provided by drun.",
+        "family": "minimax",
+        "id": "public/minimax-m25",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "last_updated": "2025-03-01",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-03-01",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "D.Run (China)",
+    "npm": "@ai-sdk/openai-compatible"
   },
   "evroc": {
     "api": "https://models.think.evroc.com/v1",
@@ -27985,18 +29699,18 @@
         },
         "modalities": {
           "input": [
-            "text"
-          ],
-          "output": [
             "text",
             "image"
+          ],
+          "output": [
+            "text"
           ]
         },
         "name": "Phi-4 15B",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-01-01",
-        "tool_call": true
+        "tool_call": false
       },
       "mistralai/Magistral-Small-2509": {
         "attachment": false,
@@ -28024,7 +29738,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-06-01",
-        "tool_call": true
+        "tool_call": false
       },
       "mistralai/Voxtral-Small-24B-2507": {
         "attachment": false,
@@ -28143,7 +29857,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-12-01",
-        "tool_call": true
+        "tool_call": false
       },
       "openai/gpt-oss-120b": {
         "attachment": false,
@@ -29283,7 +30997,7 @@
         },
         "name": "Claude Sonnet 4.5",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2025-09-29",
         "temperature": true,
         "tool_call": true
@@ -29317,8 +31031,39 @@
         },
         "name": "Claude Sonnet 4.6",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2026-02-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v3-2": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.28,
+          "input": 0.58,
+          "output": 1.68
+        },
+        "description": "DeepSeek v3.2 is an AI model provided by firmware.",
+        "family": "deepseek",
+        "id": "deepseek-v3-2",
+        "knowledge": "2024-07",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek v3.2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-12-26",
         "temperature": true,
         "tool_call": true
       },
@@ -29389,6 +31134,42 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-03-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-3-1-pro-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 2,
+          "output": 12
+        },
+        "description": "Gemini 3.1 Pro Preview is an AI model provided by firmware.",
+        "family": "gemini-pro",
+        "id": "gemini-3-1-pro-preview",
+        "knowledge": "2026-01",
+        "last_updated": "2026-02-18",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.1 Pro Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-18",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -29464,6 +31245,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "glm-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5 is an AI model provided by firmware.",
+        "family": "glm",
+        "id": "glm-5",
+        "knowledge": "2024-10",
+        "last_updated": "2025-02-22",
+        "limit": {
+          "context": 198000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-01-20",
+        "temperature": true,
+        "tool_call": true
+      },
       "gpt-4o": {
         "attachment": true,
         "cost": {
@@ -29497,20 +31309,20 @@
         "temperature": true,
         "tool_call": true
       },
-      "gpt-5": {
+      "gpt-5-4": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.13,
-          "input": 1.25,
-          "output": 10
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 15
         },
-        "description": "GPT-5 is an AI model provided by firmware.",
+        "description": "GPT-5.4 is an AI model provided by firmware.",
         "family": "gpt",
-        "id": "gpt-5",
-        "knowledge": "2024-09-30",
-        "last_updated": "2025-08-07",
+        "id": "gpt-5-4",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-05",
         "limit": {
-          "context": 400000,
+          "context": 272000,
           "output": 128000
         },
         "modalities": {
@@ -29522,11 +31334,10 @@
             "text"
           ]
         },
-        "name": "GPT-5",
+        "name": "GPT-5.4",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-08-07",
-        "structured_output": true,
+        "release_date": "2026-03-05",
         "temperature": false,
         "tool_call": true
       },
@@ -29596,18 +31407,18 @@
         "temperature": false,
         "tool_call": true
       },
-      "gpt-5.2": {
+      "gpt-5.3-codex": {
         "attachment": true,
         "cost": {
           "cache_read": 0.175,
           "input": 1.75,
           "output": 14
         },
-        "description": "GPT-5.2 is an AI model provided by firmware.",
+        "description": "GPT-5.3 Codex is an AI model provided by firmware.",
         "family": "gpt",
-        "id": "gpt-5.2",
-        "knowledge": "2025-08-31",
-        "last_updated": "2025-12-11",
+        "id": "gpt-5.3-codex",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-02-15",
         "limit": {
           "context": 400000,
           "output": 128000
@@ -29621,10 +31432,10 @@
             "text"
           ]
         },
-        "name": "GPT-5.2",
+        "name": "GPT-5.3 Codex",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-12-11",
+        "release_date": "2026-02-15",
         "temperature": false,
         "tool_call": true
       },
@@ -29685,6 +31496,163 @@
         "reasoning": true,
         "release_date": "1970-01-01",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "grok-4-1-fast-non-reasoning": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok 4.1 Fast (Non-Reasoning) is an AI model provided by firmware.",
+        "family": "grok",
+        "id": "grok-4-1-fast-non-reasoning",
+        "knowledge": "2025-11",
+        "last_updated": "2025-11-25",
+        "limit": {
+          "context": 2000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.1 Fast (Non-Reasoning)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-11-25",
+        "temperature": true,
+        "tool_call": true
+      },
+      "grok-4-1-fast-reasoning": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Grok 4.1 Fast (Reasoning) is an AI model provided by firmware.",
+        "family": "grok",
+        "id": "grok-4-1-fast-reasoning",
+        "knowledge": "2025-11",
+        "last_updated": "2025-11-25",
+        "limit": {
+          "context": 2000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.1 Fast (Reasoning)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-25",
+        "temperature": true,
+        "tool_call": true
+      },
+      "grok-code-fast-1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.2,
+          "output": 1.5
+        },
+        "description": "Grok 4.1 Fast (Reasoning) is an AI model provided by firmware.",
+        "family": "grok",
+        "id": "grok-code-fast-1",
+        "knowledge": "2023-10",
+        "last_updated": "2025-08-28",
+        "limit": {
+          "context": 256000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.1 Fast (Reasoning)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.1,
+          "input": 0.6,
+          "output": 3
+        },
+        "description": "Kimi-K2.5 is an AI model provided by firmware.",
+        "id": "kimi-k2.5",
+        "last_updated": "1970-01-01",
+        "limit": {
+          "context": 256000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi-K2.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "1970-01-01",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m2-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax-M2.5 is an AI model provided by firmware.",
+        "family": "minimax",
+        "id": "minimax-m2-5",
+        "knowledge": "2024-09",
+        "last_updated": "2025-02-22",
+        "limit": {
+          "context": 192000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-01-15",
         "temperature": true,
         "tool_call": true
       }
@@ -33468,6 +35436,81 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-11-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-3.1-flash-image-preview": {
+        "attachment": true,
+        "cost": {
+          "input": 0.25,
+          "output": 60
+        },
+        "description": "Gemini 3.1 Flash Image (Preview) is an AI model provided by google.",
+        "family": "gemini-flash",
+        "id": "gemini-3.1-flash-image-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2026-02-26",
+        "limit": {
+          "context": 131072,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "Gemini 3.1 Flash Image (Preview)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-26",
+        "temperature": true,
+        "tool_call": false
+      },
+      "gemini-3.1-flash-lite-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "context_over_200k": {
+            "cache_read": 0.025,
+            "cache_write": 1,
+            "input": 0.25,
+            "output": 1.5
+          },
+          "input": 0.5,
+          "output": 3
+        },
+        "description": "Gemini 3.1 Flash Lite Preview is an AI model provided by google.",
+        "family": "gemini-flash-lite",
+        "id": "gemini-3.1-flash-lite-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2026-03-03",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.1 Flash Lite Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-03",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -39639,6 +41682,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "mercury-2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.25,
+          "output": 0.75
+        },
+        "description": "Mercury 2 is an AI model provided by inception.",
+        "family": "mercury",
+        "id": "mercury-2",
+        "knowledge": "2025-01-01",
+        "last_updated": "2026-02-24",
+        "limit": {
+          "context": 128000,
+          "output": 50000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mercury 2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "mercury-coder": {
         "attachment": false,
         "cost": {
@@ -39670,6 +41745,35 @@
         "release_date": "2025-02-26",
         "temperature": true,
         "tool_call": true
+      },
+      "mercury-edit": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.25,
+          "output": 0.75
+        },
+        "description": "Mercury Edit is an AI model provided by inception.",
+        "id": "mercury-edit",
+        "last_updated": "2026-02-24",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mercury Edit",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-24",
+        "temperature": true,
+        "tool_call": false
       }
     },
     "name": "Inception",
@@ -44421,6 +46525,35 @@
         "temperature": true,
         "tool_call": true
       },
+      "inception/mercury-2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.25,
+          "output": 0.75
+        },
+        "description": "Inception: Mercury 2 is an AI model provided by kilo.",
+        "id": "inception/mercury-2",
+        "last_updated": "2026-02-24",
+        "limit": {
+          "context": 128000,
+          "output": 50000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Inception: Mercury 2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-24",
+        "temperature": true,
+        "tool_call": true
+      },
       "inception/mercury-coder": {
         "attachment": false,
         "cost": {
@@ -44448,6 +46581,38 @@
         "release_date": "2025-02-26",
         "temperature": true,
         "tool_call": true
+      },
+      "inception/mercury-edit": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.25,
+          "output": 0.75
+        },
+        "description": "Inception: Mercury Edit is an AI model provided by kilo.",
+        "family": "mercury",
+        "id": "inception/mercury-edit",
+        "knowledge": "2025-01-01",
+        "last_updated": "2026-02-24",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Inception: Mercury Edit",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-24",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
       },
       "kilo/auto": {
         "attachment": true,
@@ -51202,7 +53367,7 @@
           ]
         },
         "name": "GLM-5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-11",
         "temperature": true,
@@ -51768,7 +53933,7 @@
           "input": 0.3,
           "output": 0.9
         },
-        "description": "Codestral is an AI model provided by mistral.",
+        "description": "Codestral (latest) is an AI model provided by mistral.",
         "family": "codestral",
         "id": "codestral-latest",
         "knowledge": "2024-10",
@@ -51785,7 +53950,7 @@
             "text"
           ]
         },
-        "name": "Codestral",
+        "name": "Codestral (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-05-29",
@@ -51858,7 +54023,7 @@
           "input": 0.4,
           "output": 2
         },
-        "description": "Devstral 2 is an AI model provided by mistral.",
+        "description": "Devstral 2 (latest) is an AI model provided by mistral.",
         "family": "devstral",
         "id": "devstral-medium-latest",
         "knowledge": "2025-12",
@@ -51875,7 +54040,7 @@
             "text"
           ]
         },
-        "name": "Devstral 2",
+        "name": "Devstral 2 (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-12-02",
@@ -51979,7 +54144,7 @@
           "input": 2,
           "output": 5
         },
-        "description": "Magistral Medium is an AI model provided by mistral.",
+        "description": "Magistral Medium (latest) is an AI model provided by mistral.",
         "family": "magistral-medium",
         "id": "magistral-medium-latest",
         "knowledge": "2025-06",
@@ -51996,7 +54161,7 @@
             "text"
           ]
         },
-        "name": "Magistral Medium",
+        "name": "Magistral Medium (latest)",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-03-17",
@@ -52039,7 +54204,7 @@
           "input": 0.04,
           "output": 0.04
         },
-        "description": "Ministral 3B is an AI model provided by mistral.",
+        "description": "Ministral 3B (latest) is an AI model provided by mistral.",
         "family": "ministral",
         "id": "ministral-3b-latest",
         "knowledge": "2024-10",
@@ -52056,7 +54221,7 @@
             "text"
           ]
         },
-        "name": "Ministral 3B",
+        "name": "Ministral 3B (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-10-01",
@@ -52069,7 +54234,7 @@
           "input": 0.1,
           "output": 0.1
         },
-        "description": "Ministral 8B is an AI model provided by mistral.",
+        "description": "Ministral 8B (latest) is an AI model provided by mistral.",
         "family": "ministral",
         "id": "ministral-8b-latest",
         "knowledge": "2024-10",
@@ -52086,7 +54251,7 @@
             "text"
           ]
         },
-        "name": "Ministral 8B",
+        "name": "Ministral 8B (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-10-01",
@@ -52189,7 +54354,7 @@
           "input": 0.5,
           "output": 1.5
         },
-        "description": "Mistral Large is an AI model provided by mistral.",
+        "description": "Mistral Large (latest) is an AI model provided by mistral.",
         "family": "mistral-large",
         "id": "mistral-large-latest",
         "knowledge": "2024-11",
@@ -52207,7 +54372,7 @@
             "text"
           ]
         },
-        "name": "Mistral Large",
+        "name": "Mistral Large (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-11-01",
@@ -52282,7 +54447,7 @@
           "input": 0.4,
           "output": 2
         },
-        "description": "Mistral Medium is an AI model provided by mistral.",
+        "description": "Mistral Medium (latest) is an AI model provided by mistral.",
         "family": "mistral-medium",
         "id": "mistral-medium-latest",
         "knowledge": "2025-05",
@@ -52300,7 +54465,7 @@
             "text"
           ]
         },
-        "name": "Mistral Medium",
+        "name": "Mistral Medium (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-05-07",
@@ -52374,7 +54539,7 @@
           "input": 0.1,
           "output": 0.3
         },
-        "description": "Mistral Small is an AI model provided by mistral.",
+        "description": "Mistral Small (latest) is an AI model provided by mistral.",
         "family": "mistral-small",
         "id": "mistral-small-latest",
         "knowledge": "2025-03",
@@ -52392,7 +54557,7 @@
             "text"
           ]
         },
-        "name": "Mistral Small",
+        "name": "Mistral Small (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09-01",
@@ -52526,7 +54691,7 @@
           "input": 2,
           "output": 6
         },
-        "description": "Pixtral Large is an AI model provided by mistral.",
+        "description": "Pixtral Large (latest) is an AI model provided by mistral.",
         "family": "pixtral",
         "id": "pixtral-large-latest",
         "knowledge": "2024-11",
@@ -52544,7 +54709,7 @@
             "text"
           ]
         },
-        "name": "Pixtral Large",
+        "name": "Pixtral Large (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-11-01",
@@ -59676,36 +61841,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "minimaxai/minimax-m2": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "MiniMax-M2 is an AI model provided by nvidia.",
-        "family": "minimax",
-        "id": "minimaxai/minimax-m2",
-        "knowledge": "2024-07",
-        "last_updated": "2025-10-31",
-        "limit": {
-          "context": 128000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax-M2",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-10-27",
-        "temperature": true,
-        "tool_call": true
-      },
       "minimaxai/minimax-m2.1": {
         "attachment": false,
         "cost": {
@@ -59732,6 +61867,36 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimaxai/minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiniMax-M2.5 is an AI model provided by nvidia.",
+        "family": "minimax",
+        "id": "minimaxai/minimax-m2.5",
+        "knowledge": "2025-08",
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
         "temperature": true,
         "tool_call": true
       },
@@ -60951,31 +63116,6 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-17",
-        "tool_call": true
-      },
-      "gemini-3-pro-preview": {
-        "attachment": true,
-        "description": "gemini-3-pro-preview is an AI model provided by ollama-cloud.",
-        "family": "gemini-pro",
-        "id": "gemini-3-pro-preview",
-        "last_updated": "2026-01-19",
-        "limit": {
-          "context": 1048576,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "gemini-3-pro-preview",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-11-18",
         "tool_call": true
       },
       "gemma3:12b": {
@@ -66739,6 +68879,99 @@
         "temperature": true,
         "tool_call": false
       },
+      "inception/mercury": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.25,
+          "output": 0.75
+        },
+        "description": "Mercury is an AI model provided by openrouter.",
+        "family": "mercury",
+        "id": "inception/mercury",
+        "last_updated": "2025-06-26",
+        "limit": {
+          "context": 128000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mercury",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-06-26",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "inception/mercury-2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.25,
+          "output": 0.75
+        },
+        "description": "Mercury 2 is an AI model provided by openrouter.",
+        "family": "mercury",
+        "id": "inception/mercury-2",
+        "last_updated": "2026-03-04",
+        "limit": {
+          "context": 128000,
+          "output": 50000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mercury 2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-04",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "inception/mercury-coder": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.25,
+          "output": 0.75
+        },
+        "description": "Mercury Coder is an AI model provided by openrouter.",
+        "family": "mercury",
+        "id": "inception/mercury-coder",
+        "last_updated": "2025-04-30",
+        "limit": {
+          "context": 128000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mercury Coder",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-04-30",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "kwaipilot/kat-coder-pro:free": {
         "attachment": false,
         "cost": {
@@ -69047,6 +71280,37 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-09",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openrouter/free": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Free Models Router is an AI model provided by openrouter.",
+        "id": "openrouter/free",
+        "last_updated": "2026-02-01",
+        "limit": {
+          "context": 200000,
+          "input": 200000,
+          "output": 8000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Free Models Router",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-01",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -72392,6 +74656,7 @@
         "modalities": {
           "input": [
             "text",
+            "image",
             "pdf"
           ],
           "output": [
@@ -72824,6 +75089,69 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-10-22",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/gemini-3.1-flash-lite": {
+        "attachment": true,
+        "cost": {
+          "input": 0.25,
+          "output": 1.5
+        },
+        "description": "Gemini-3.1-Flash-Lite is an AI model provided by poe.",
+        "id": "google/gemini-3.1-flash-lite",
+        "last_updated": "2026-02-18",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini-3.1-Flash-Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-18",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/gemini-3.1-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 2,
+          "output": 12
+        },
+        "description": "Gemini-3.1-Pro is an AI model provided by poe.",
+        "id": "google/gemini-3.1-pro",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini-3.1-Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-19",
         "temperature": false,
         "tool_call": true
       },
@@ -73918,7 +76246,7 @@
         "id": "openai/gpt-4o-mini",
         "last_updated": "2024-07-18",
         "limit": {
-          "context": 128000,
+          "context": 124096,
           "output": 4096
         },
         "modalities": {
@@ -74448,6 +76776,36 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-12-11",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai/gpt-5.3-codex": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.16,
+          "input": 1.6,
+          "output": 13
+        },
+        "description": "GPT-5.3-Codex is an AI model provided by poe.",
+        "id": "openai/gpt-5.3-codex",
+        "last_updated": "2026-02-10",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.3-Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-10",
         "temperature": false,
         "tool_call": true
       },
@@ -75730,10 +78088,10 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "qiniu-ai": {
-    "api": "https://api.qnaigc.com.com/v1",
+    "api": "https://api.qnaigc.com/v1",
     "doc": "https://developer.qiniu.com/aitokenapi",
     "env": [
-      "Qiniu_API_KEY"
+      "QINIU_API_KEY"
     ],
     "iconURL": "https://models.dev/logos/qiniu-ai.svg",
     "id": "qiniu-ai",
@@ -76430,6 +78788,114 @@
         "temperature": true,
         "tool_call": true
       },
+      "doubao-seed-2.0-code": {
+        "attachment": true,
+        "description": "Doubao Seed 2.0 Code is an AI model provided by qiniu-ai.",
+        "id": "doubao-seed-2.0-code",
+        "last_updated": "2026-02-14",
+        "limit": {
+          "context": 256000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Doubao Seed 2.0 Code",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-14",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "doubao-seed-2.0-lite": {
+        "attachment": true,
+        "description": "Doubao Seed 2.0 Lite is an AI model provided by qiniu-ai.",
+        "id": "doubao-seed-2.0-lite",
+        "last_updated": "2026-02-14",
+        "limit": {
+          "context": 256000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Doubao Seed 2.0 Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-14",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "doubao-seed-2.0-mini": {
+        "attachment": true,
+        "description": "Doubao Seed 2.0 Mini is an AI model provided by qiniu-ai.",
+        "id": "doubao-seed-2.0-mini",
+        "last_updated": "2026-02-14",
+        "limit": {
+          "context": 256000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Doubao Seed 2.0 Mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-14",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "doubao-seed-2.0-pro": {
+        "attachment": true,
+        "description": "Doubao Seed 2.0 Pro is an AI model provided by qiniu-ai.",
+        "id": "doubao-seed-2.0-pro",
+        "last_updated": "2026-02-14",
+        "limit": {
+          "context": 256000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Doubao Seed 2.0 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-14",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "gemini-2.0-flash": {
         "attachment": true,
         "description": "Gemini 2.0 Flash is an AI model provided by qiniu-ai.",
@@ -76858,6 +79324,31 @@
         "temperature": true,
         "tool_call": false
       },
+      "meituan/longcat-flash-lite": {
+        "attachment": false,
+        "description": "Meituan/Longcat-Flash-Lite is an AI model provided by qiniu-ai.",
+        "id": "meituan/longcat-flash-lite",
+        "last_updated": "2026-02-06",
+        "limit": {
+          "context": 256000,
+          "output": 320000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Meituan/Longcat-Flash-Lite",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-02-06",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "mimo-v2-flash": {
         "attachment": false,
         "description": "Mimo-V2-Flash is an AI model provided by qiniu-ai.",
@@ -76933,6 +79424,56 @@
         "temperature": true,
         "tool_call": true
       },
+      "minimax/minimax-m2.5": {
+        "attachment": false,
+        "description": "Minimax/Minimax-M2.5 is an AI model provided by qiniu-ai.",
+        "id": "minimax/minimax-m2.5",
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Minimax/Minimax-M2.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax/minimax-m2.5-highspeed": {
+        "attachment": false,
+        "description": "Minimax/Minimax-M2.5 Highspeed is an AI model provided by qiniu-ai.",
+        "id": "minimax/minimax-m2.5-highspeed",
+        "last_updated": "2026-02-14",
+        "limit": {
+          "context": 204800,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Minimax/Minimax-M2.5 Highspeed",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-14",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "moonshotai/kimi-k2-0905": {
         "attachment": false,
         "description": "Kimi K2 0905 is an AI model provided by qiniu-ai.",
@@ -76979,6 +79520,33 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-11-07",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/kimi-k2.5": {
+        "attachment": true,
+        "description": "Moonshotai/Kimi-K2.5 is an AI model provided by qiniu-ai.",
+        "id": "moonshotai/kimi-k2.5",
+        "last_updated": "2026-01-28",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Moonshotai/Kimi-K2.5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-01-28",
         "structured_output": false,
         "temperature": true,
         "tool_call": true
@@ -77268,6 +79836,56 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3-30b-a3b-instruct-2507": {
+        "attachment": false,
+        "description": "Qwen3 30b A3b Instruct 2507 is an AI model provided by qiniu-ai.",
+        "id": "qwen3-30b-a3b-instruct-2507",
+        "last_updated": "2026-02-04",
+        "limit": {
+          "context": 128000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 30b A3b Instruct 2507",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-02-04",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-30b-a3b-thinking-2507": {
+        "attachment": false,
+        "description": "Qwen3 30b A3b Thinking 2507 is an AI model provided by qiniu-ai.",
+        "id": "qwen3-30b-a3b-thinking-2507",
+        "last_updated": "2026-02-04",
+        "limit": {
+          "context": 126000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 30b A3b Thinking 2507",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-04",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3-32b": {
         "attachment": false,
         "description": "Qwen3 32B is an AI model provided by qiniu-ai.",
@@ -77418,6 +80036,59 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3-vl-30b-a3b-thinking": {
+        "attachment": true,
+        "description": "Qwen3-Vl 30b A3b Thinking is an AI model provided by qiniu-ai.",
+        "id": "qwen3-vl-30b-a3b-thinking",
+        "last_updated": "2026-02-09",
+        "limit": {
+          "context": 128000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-Vl 30b A3b Thinking",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-02-09",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.5-397b-a17b": {
+        "attachment": true,
+        "description": "Qwen3.5 397B A17B is an AI model provided by qiniu-ai.",
+        "id": "qwen3.5-397b-a17b",
+        "last_updated": "2026-02-22",
+        "limit": {
+          "context": 256000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 397B A17B",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-22",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "stepfun-ai/gelab-zero-4b-preview": {
         "attachment": true,
         "description": "Stepfun-Ai/Gelab Zero 4b Preview is an AI model provided by qiniu-ai.",
@@ -77443,6 +80114,32 @@
         "structured_output": false,
         "temperature": true,
         "tool_call": true
+      },
+      "stepfun/step-3.5-flash": {
+        "attachment": true,
+        "description": "Stepfun/Step-3.5 Flash is an AI model provided by qiniu-ai.",
+        "id": "stepfun/step-3.5-flash",
+        "last_updated": "2026-02-02",
+        "limit": {
+          "context": 64000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Stepfun/Step-3.5 Flash",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-02-02",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
       },
       "x-ai/grok-4-fast": {
         "attachment": true,
@@ -77634,6 +80331,31 @@
         "temperature": true,
         "tool_call": true
       },
+      "xiaomi/mimo-v2-flash": {
+        "attachment": false,
+        "description": "Xiaomi/Mimo-V2-Flash is an AI model provided by qiniu-ai.",
+        "id": "xiaomi/mimo-v2-flash",
+        "last_updated": "2025-12-26",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Xiaomi/Mimo-V2-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-26",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
+      },
       "z-ai/autoglm-phone-9b": {
         "attachment": true,
         "description": "Z-Ai/Autoglm Phone 9b is an AI model provided by qiniu-ai.",
@@ -77706,6 +80428,31 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-12-23",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-5": {
+        "attachment": false,
+        "description": "Z-Ai/GLM 5 is an AI model provided by qiniu-ai.",
+        "id": "z-ai/glm-5",
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 200000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Z-Ai/GLM 5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-12",
         "structured_output": false,
         "temperature": true,
         "tool_call": true
@@ -79131,6 +81878,37 @@
         "reasoning": false,
         "release_date": "2024-01-01",
         "temperature": true,
+        "tool_call": false
+      },
+      "sonar-deep-research": {
+        "attachment": false,
+        "cost": {
+          "input": 2,
+          "output": 8,
+          "reasoning": 3
+        },
+        "description": "sonar-deep-research is an AI model provided by sap-ai-core.",
+        "family": "sonar-deep-research",
+        "id": "sonar-deep-research",
+        "knowledge": "2025-01",
+        "last_updated": "2025-09-01",
+        "limit": {
+          "context": 128000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "sonar-deep-research",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-02-01",
+        "temperature": false,
         "tool_call": false
       },
       "sonar-pro": {
@@ -81724,7 +84502,7 @@
           ]
         },
         "name": "zai-org/GLM-5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-12",
         "structured_output": true,
@@ -82195,7 +84973,7 @@
           ]
         },
         "name": "Pro/zai-org/GLM-5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-12",
         "structured_output": true,
@@ -86254,24 +89032,24 @@
       "claude-sonnet-4-6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.375,
-          "cache_write": 4.69,
+          "cache_read": 0.36,
+          "cache_write": 4.5,
           "context_over_200k": {
-            "cache_read": 0.6,
-            "cache_write": 7.5,
-            "input": 6,
-            "output": 25
+            "cache_read": 0.72,
+            "cache_write": 9,
+            "input": 7.2,
+            "output": 27
           },
-          "input": 3.75,
-          "output": 18.75
+          "input": 3.6,
+          "output": 18
         },
         "description": "Claude Sonnet 4.6 is an AI model provided by venice.",
         "family": "claude-sonnet",
         "id": "claude-sonnet-4-6",
-        "last_updated": "2026-02-19",
+        "last_updated": "2026-02-28",
         "limit": {
           "context": 1000000,
-          "output": 128000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -86507,18 +89285,18 @@
       "grok-41-fast": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.125,
-          "input": 0.5,
-          "output": 1.25
+          "cache_read": 0.0625,
+          "input": 0.25,
+          "output": 0.625
         },
         "description": "Grok 4.1 Fast is an AI model provided by venice.",
         "family": "grok",
         "id": "grok-41-fast",
         "knowledge": "2025-07",
-        "last_updated": "2026-01-28",
+        "last_updated": "2026-02-28",
         "limit": {
-          "context": 256000,
-          "output": 64000
+          "context": 1000000,
+          "output": 30720
         },
         "modalities": {
           "input": [
@@ -86885,6 +89663,69 @@
         "temperature": true,
         "tool_call": true
       },
+      "openai-gpt-4o-2024-11-20": {
+        "attachment": true,
+        "cost": {
+          "input": 3.125,
+          "output": 12.5
+        },
+        "description": "GPT-4o is an AI model provided by venice.",
+        "family": "gpt",
+        "id": "openai-gpt-4o-2024-11-20",
+        "last_updated": "2026-03-06",
+        "limit": {
+          "context": 128000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4o",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-02-28",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai-gpt-4o-mini-2024-07-18": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.09375,
+          "input": 0.1875,
+          "output": 0.75
+        },
+        "description": "GPT-4o Mini is an AI model provided by venice.",
+        "family": "gpt-mini",
+        "id": "openai-gpt-4o-mini-2024-07-18",
+        "last_updated": "2026-03-06",
+        "limit": {
+          "context": 128000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4o Mini",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-02-28",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "openai-gpt-52": {
         "attachment": false,
         "cost": {
@@ -86978,6 +89819,37 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai-gpt-54": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.313,
+          "input": 3.13,
+          "output": 18.8
+        },
+        "description": "GPT-5.4 is an AI model provided by venice.",
+        "family": "gpt",
+        "id": "openai-gpt-54",
+        "last_updated": "2026-03-06",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-05",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -87104,6 +89976,37 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-04-29",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-5-35b-a3b": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.15625,
+          "input": 0.3125,
+          "output": 1.25
+        },
+        "description": "Qwen 3.5 35B A3B is an AI model provided by venice.",
+        "family": "qwen",
+        "id": "qwen3-5-35b-a3b",
+        "last_updated": "2026-02-28",
+        "limit": {
+          "context": 256000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.5 35B A3B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-25",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -89590,6 +92493,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemini-3.1-flash-image-preview": {
+        "attachment": true,
+        "cost": {
+          "input": 0.25,
+          "output": 60
+        },
+        "description": "Gemini 3.1 Flash Image Preview (Nano Banana 2) is an AI model provided by vercel.",
+        "family": "gemini",
+        "id": "google/gemini-3.1-flash-image-preview",
+        "last_updated": "2026-03-02",
+        "limit": {
+          "context": 131072,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "Gemini 3.1 Flash Image Preview (Nano Banana 2)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-26",
+        "temperature": true,
+        "tool_call": false
+      },
       "google/gemini-3.1-pro-preview": {
         "attachment": true,
         "cost": {
@@ -90305,7 +93239,7 @@
           "input": 0.3,
           "output": 0.9
         },
-        "description": "Codestral is an AI model provided by vercel.",
+        "description": "Codestral (latest) is an AI model provided by vercel.",
         "family": "codestral",
         "id": "mistral/codestral",
         "knowledge": "2024-10",
@@ -90322,7 +93256,7 @@
             "text"
           ]
         },
-        "name": "Codestral",
+        "name": "Codestral (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-05-29",
@@ -90446,7 +93380,7 @@
           "input": 2,
           "output": 5
         },
-        "description": "Magistral Medium is an AI model provided by vercel.",
+        "description": "Magistral Medium (latest) is an AI model provided by vercel.",
         "family": "magistral-medium",
         "id": "mistral/magistral-medium",
         "knowledge": "2025-06",
@@ -90463,7 +93397,7 @@
             "text"
           ]
         },
-        "name": "Magistral Medium",
+        "name": "Magistral Medium (latest)",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-03-17",
@@ -90538,7 +93472,7 @@
           "input": 0.04,
           "output": 0.04
         },
-        "description": "Ministral 3B is an AI model provided by vercel.",
+        "description": "Ministral 3B (latest) is an AI model provided by vercel.",
         "family": "ministral",
         "id": "mistral/ministral-3b",
         "knowledge": "2024-10",
@@ -90555,7 +93489,7 @@
             "text"
           ]
         },
-        "name": "Ministral 3B",
+        "name": "Ministral 3B (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-10-01",
@@ -90568,7 +93502,7 @@
           "input": 0.1,
           "output": 0.1
         },
-        "description": "Ministral 8B is an AI model provided by vercel.",
+        "description": "Ministral 8B (latest) is an AI model provided by vercel.",
         "family": "ministral",
         "id": "mistral/ministral-8b",
         "knowledge": "2024-10",
@@ -90585,7 +93519,7 @@
             "text"
           ]
         },
-        "name": "Ministral 8B",
+        "name": "Ministral 8B (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-10-01",
@@ -90719,7 +93653,7 @@
           "input": 0.1,
           "output": 0.3
         },
-        "description": "Mistral Small is an AI model provided by vercel.",
+        "description": "Mistral Small (latest) is an AI model provided by vercel.",
         "family": "mistral-small",
         "id": "mistral/mistral-small",
         "knowledge": "2025-03",
@@ -90737,7 +93671,7 @@
             "text"
           ]
         },
-        "name": "Mistral Small",
+        "name": "Mistral Small (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09-01",
@@ -90811,7 +93745,7 @@
           "input": 2,
           "output": 6
         },
-        "description": "Pixtral Large is an AI model provided by vercel.",
+        "description": "Pixtral Large (latest) is an AI model provided by vercel.",
         "family": "pixtral",
         "id": "mistral/pixtral-large",
         "knowledge": "2024-11",
@@ -90829,7 +93763,7 @@
             "text"
           ]
         },
-        "name": "Pixtral Large",
+        "name": "Pixtral Large (latest)",
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-11-01",
@@ -93566,7 +96500,7 @@
           ]
         },
         "name": "GLM-5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-12",
         "temperature": true,
@@ -95078,8 +98012,9 @@
       "mimo-v2-flash": {
         "attachment": false,
         "cost": {
-          "input": 0.07,
-          "output": 0.21
+          "cache_read": 0.01,
+          "input": 0.1,
+          "output": 0.3
         },
         "description": "MiMo-V2-Flash is an AI model provided by xiaomi.",
         "family": "mimo",
@@ -95088,10 +98023,10 @@
           "field": "reasoning_content"
         },
         "knowledge": "2024-12-01",
-        "last_updated": "2025-12-17",
+        "last_updated": "2026-02-04",
         "limit": {
           "context": 256000,
-          "output": 32000
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -95104,7 +98039,7 @@
         "name": "MiMo-V2-Flash",
         "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-12-17",
+        "release_date": "2025-12-16",
         "temperature": true,
         "tool_call": true
       }
@@ -95409,7 +98344,7 @@
           ]
         },
         "name": "GLM-5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-11",
         "temperature": true,
@@ -95747,7 +98682,7 @@
           ]
         },
         "name": "GLM-5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-11",
         "temperature": true,
@@ -96416,6 +99351,41 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemini-3.1-pro-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "cache_write": 4.5,
+          "input": 2,
+          "output": 12
+        },
+        "description": "Gemini 3.1 Pro Preview is an AI model provided by zenmux.",
+        "id": "google/gemini-3.1-pro-preview",
+        "knowledge": "2026-02-19",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 1048000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.1 Pro Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-19",
+        "temperature": true,
+        "tool_call": true
+      },
       "inclusionai/ling-1t": {
         "attachment": false,
         "cost": {
@@ -96639,7 +99609,7 @@
           "input": 0.6,
           "output": 4.8
         },
-        "description": "MiniMax: MiniMax M2.5 highspeed is an AI model provided by zenmux.",
+        "description": "MiniMax M2.5 highspeed is an AI model provided by zenmux.",
         "id": "minimax/minimax-m2.5-lightning",
         "interleaved": {
           "field": "reasoning_content"
@@ -96658,7 +99628,7 @@
             "text"
           ]
         },
-        "name": "MiniMax: MiniMax M2.5 highspeed",
+        "name": "MiniMax M2.5 highspeed",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-13",
@@ -97040,6 +100010,37 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-01-15",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai/gpt-5.2-pro": {
+        "attachment": true,
+        "cost": {
+          "input": 21,
+          "output": 168
+        },
+        "description": "GPT-5.2-Pro is an AI model provided by zenmux.",
+        "id": "openai/gpt-5.2-pro",
+        "knowledge": "2025-08-31",
+        "last_updated": "2025-12-11",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.2-Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-11",
         "temperature": false,
         "tool_call": true
       },
@@ -97871,7 +100872,7 @@
           ]
         },
         "name": "GLM 5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-12",
         "temperature": true,
@@ -98178,7 +101179,7 @@
           ]
         },
         "name": "GLM-5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-11",
         "temperature": true,
@@ -98484,7 +101485,7 @@
           ]
         },
         "name": "GLM-5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-11",
         "temperature": true,
