@@ -16982,6 +16982,9 @@
         },
         "name": "Kimi K2.5",
         "open_weights": true,
+        "provider": {
+          "shape": "completions"
+        },
         "reasoning": true,
         "release_date": "2026-02-06",
         "structured_output": true,
@@ -20041,6 +20044,9 @@
         },
         "name": "Kimi K2.5",
         "open_weights": true,
+        "provider": {
+          "shape": "completions"
+        },
         "reasoning": true,
         "release_date": "2026-02-06",
         "structured_output": true,
@@ -107488,6 +107494,48 @@
         "release_date": "2026-02-26",
         "temperature": true,
         "tool_call": false
+      },
+      "google/gemini-3.1-flash-lite-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "context_over_200k": {
+            "cache_read": 0.025,
+            "cache_write": 1,
+            "input": 0.25,
+            "output": 1.5
+          },
+          "input": 0.5,
+          "output": 3
+        },
+        "description": "Gemini 3.1 Flash Lite Preview 是由 vercel 提供的人工智能模型。",
+        "family": "gemini-flash-lite",
+        "id": "google/gemini-3.1-flash-lite-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2026-03-03",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.1 Flash Lite Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
       },
       "google/gemini-3.1-pro-preview": {
         "attachment": true,
