@@ -1,0 +1,342 @@
+{
+  "api": "https://api.clarifai.com/v2/ext/openai/v1",
+  "doc": "https://docs.clarifai.com/compute/inference/",
+  "env": [
+    "CLARIFAI_PAT"
+  ],
+  "iconURL": "https://models.dev/logos/clarifai.svg",
+  "id": "clarifai",
+  "models": {
+    "arcee_ai/AFM/models/trinity-mini": {
+      "attachment": false,
+      "cost": {
+        "input": 0.045,
+        "output": 0.15
+      },
+      "description": "Trinity Mini is an AI model provided by clarifai.",
+      "family": "trinity-mini",
+      "id": "arcee_ai/AFM/models/trinity-mini",
+      "knowledge": "2024-10",
+      "last_updated": "2026-02-25",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Trinity Mini",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "clarifai/main/models/mm-poly-8b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.658,
+        "output": 1.11
+      },
+      "description": "MM Poly 8B is an AI model provided by clarifai.",
+      "family": "mm-poly",
+      "id": "clarifai/main/models/mm-poly-8b",
+      "last_updated": "2026-02-25",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MM Poly 8B",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-06",
+      "temperature": true,
+      "tool_call": false
+    },
+    "deepseek-ai/deepseek-ocr/models/DeepSeek-OCR": {
+      "attachment": true,
+      "cost": {
+        "input": 0.2,
+        "output": 0.7
+      },
+      "description": "DeepSeek OCR is an AI model provided by clarifai.",
+      "family": "deepseek",
+      "id": "deepseek-ai/deepseek-ocr/models/DeepSeek-OCR",
+      "last_updated": "2026-02-25",
+      "limit": {
+        "context": 8192,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek OCR",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-10-20",
+      "temperature": true,
+      "tool_call": false
+    },
+    "minimaxai/chat-completion/models/MiniMax-M2_5-high-throughput": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax-M2.5 High Throughput is an AI model provided by clarifai.",
+      "family": "minimax",
+      "id": "minimaxai/chat-completion/models/MiniMax-M2_5-high-throughput",
+      "last_updated": "2026-02-25",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.5 High Throughput",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/completion/models/Ministral-3-14B-Reasoning-2512": {
+      "attachment": true,
+      "cost": {
+        "input": 2.5,
+        "output": 1.7
+      },
+      "description": "Ministral 3 14B Reasoning 2512 is an AI model provided by clarifai.",
+      "family": "ministral",
+      "id": "mistralai/completion/models/Ministral-3-14B-Reasoning-2512",
+      "knowledge": "2025-12",
+      "last_updated": "2025-12-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ministral 3 14B Reasoning 2512",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/completion/models/Ministral-3-3B-Reasoning-2512": {
+      "attachment": true,
+      "cost": {
+        "input": 1.039,
+        "output": 0.54825
+      },
+      "description": "Ministral 3 3B Reasoning 2512 is an AI model provided by clarifai.",
+      "family": "ministral",
+      "id": "mistralai/completion/models/Ministral-3-3B-Reasoning-2512",
+      "last_updated": "2026-02-25",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ministral 3 3B Reasoning 2512",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/chat-completion/models/gpt-oss-120b-high-throughput": {
+      "attachment": false,
+      "cost": {
+        "input": 0.09,
+        "output": 0.36
+      },
+      "description": "GPT OSS 120B High Throughput is an AI model provided by clarifai.",
+      "family": "gpt-oss",
+      "id": "openai/chat-completion/models/gpt-oss-120b-high-throughput",
+      "last_updated": "2026-02-25",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B High Throughput",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/chat-completion/models/gpt-oss-20b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.045,
+        "output": 0.18
+      },
+      "description": "GPT OSS 20B is an AI model provided by clarifai.",
+      "family": "gpt-oss",
+      "id": "openai/chat-completion/models/gpt-oss-20b",
+      "last_updated": "2025-12-12",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 20B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwenCoder/models/Qwen3-Coder-30B-A3B-Instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.11458,
+        "output": 0.74812
+      },
+      "description": "Qwen3 Coder 30B A3B Instruct is an AI model provided by clarifai.",
+      "family": "qwen",
+      "id": "qwen/qwenCoder/models/Qwen3-Coder-30B-A3B-Instruct",
+      "knowledge": "2025-04",
+      "last_updated": "2026-02-12",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder 30B A3B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-31",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwenLM/models/Qwen3-30B-A3B-Instruct-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 0.5
+      },
+      "description": "Qwen3 30B A3B Instruct 2507 is an AI model provided by clarifai.",
+      "family": "qwen",
+      "id": "qwen/qwenLM/models/Qwen3-30B-A3B-Instruct-2507",
+      "last_updated": "2026-02-25",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 30B A3B Instruct 2507",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-30",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwenLM/models/Qwen3-30B-A3B-Thinking-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.36,
+        "output": 1.3
+      },
+      "description": "Qwen3 30B A3B Thinking 2507 is an AI model provided by clarifai.",
+      "family": "qwen",
+      "id": "qwen/qwenLM/models/Qwen3-30B-A3B-Thinking-2507",
+      "last_updated": "2026-02-25",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 30B A3B Thinking 2507",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-07-31",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Clarifai",
+  "npm": "@ai-sdk/openai-compatible"
+}

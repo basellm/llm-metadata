@@ -1,19 +1,17 @@
 {
   "attachment": false,
   "cost": {
-    "input": 1,
-    "output": 2
+    "input": 0.33,
+    "output": 1.32
   },
-  "description": "Minimax M2.1 は nano-gpt によって提供される AI モデルです。",
+  "description": "MiniMax M2.1 は nano-gpt によって提供される AI モデルです。",
   "family": "minimax",
   "id": "minimax/minimax-m2.1",
-  "interleaved": {
-    "field": "reasoning_content"
-  },
-  "last_updated": "2025-12-24",
+  "last_updated": "2025-12-19",
   "limit": {
-    "context": 128000,
-    "output": 8192
+    "context": 200000,
+    "input": 200000,
+    "output": 131072
   },
   "modalities": {
     "input": [
@@ -23,11 +21,10 @@
       "text"
     ]
   },
-  "name": "Minimax M2.1",
+  "name": "MiniMax M2.1",
   "open_weights": false,
-  "reasoning": false,
-  "release_date": "2025-12-23",
+  "reasoning": true,
+  "release_date": "2025-12-19",
   "structured_output": true,
-  "temperature": true,
   "tool_call": true
 }

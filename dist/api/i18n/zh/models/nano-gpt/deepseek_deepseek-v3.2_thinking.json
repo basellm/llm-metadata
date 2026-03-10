@@ -1,33 +1,31 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
-    "input": 1,
-    "output": 2
+    "input": 0.27999999999999997,
+    "output": 0.42000000000000004
   },
-  "description": "Deepseek V3.2 Thinking 是由 nano-gpt 提供的人工智能模型。",
+  "description": "DeepSeek V3.2 Thinking 是由 nano-gpt 提供的人工智能模型。",
   "family": "deepseek",
   "id": "deepseek/deepseek-v3.2:thinking",
-  "interleaved": {
-    "field": "reasoning_content"
-  },
-  "last_updated": "2025-12-24",
+  "last_updated": "2025-12-01",
   "limit": {
-    "context": 128000,
-    "output": 8192
+    "context": 163000,
+    "input": 163000,
+    "output": 65536
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "pdf"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Deepseek V3.2 Thinking",
-  "open_weights": true,
+  "name": "DeepSeek V3.2 Thinking",
+  "open_weights": false,
   "reasoning": true,
   "release_date": "2025-12-01",
   "structured_output": true,
-  "temperature": true,
   "tool_call": true
 }

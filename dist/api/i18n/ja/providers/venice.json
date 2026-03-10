@@ -876,7 +876,7 @@
       "tool_call": true
     },
     "openai-gpt-54": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.313,
         "input": 3.13,
@@ -885,20 +885,56 @@
       "description": "GPT-5.4 は venice によって提供される AI モデルです。",
       "family": "gpt",
       "id": "openai-gpt-54",
-      "last_updated": "2026-03-06",
+      "last_updated": "2026-03-09",
       "limit": {
         "context": 1000000,
         "output": 131072
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
       "name": "GPT-5.4",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai-gpt-54-pro": {
+      "attachment": true,
+      "cost": {
+        "context_over_200k": {
+          "input": 75,
+          "output": 337.5
+        },
+        "input": 37.5,
+        "output": 225
+      },
+      "description": "GPT-5.4 Pro は venice によって提供される AI モデルです。",
+      "family": "gpt-pro",
+      "id": "openai-gpt-54-pro",
+      "last_updated": "2026-03-09",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.4 Pro",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-05",
@@ -1033,7 +1069,7 @@
       "tool_call": true
     },
     "qwen3-5-35b-a3b": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.15625,
         "input": 0.3125,
@@ -1042,14 +1078,16 @@
       "description": "Qwen 3.5 35B A3B は venice によって提供される AI モデルです。",
       "family": "qwen",
       "id": "qwen3-5-35b-a3b",
-      "last_updated": "2026-02-28",
+      "last_updated": "2026-03-09",
       "limit": {
         "context": 256000,
         "output": 65536
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
