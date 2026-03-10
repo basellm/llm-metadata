@@ -2576,38 +2576,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "gemini-3-pro-preview": {
-        "attachment": true,
-        "cost": {
-          "input": 2,
-          "output": 12
-        },
-        "description": "Gemini 3 Pro Preview 是由 abacus 提供的人工智能模型。",
-        "family": "gemini-pro",
-        "id": "gemini-3-pro-preview",
-        "last_updated": "2025-06-01",
-        "limit": {
-          "context": 1000000,
-          "output": 65000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemini 3 Pro Preview",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-06-01",
-        "temperature": true,
-        "tool_call": true
-      },
       "gemini-3.1-flash-lite-preview": {
         "attachment": true,
         "cost": {
@@ -3277,6 +3245,39 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-05",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.4": {
+        "attachment": true,
+        "cost": {
+          "input": 2.5,
+          "output": 15
+        },
+        "description": "GPT-5.4 是由 abacus 提供的人工智能模型。",
+        "family": "gpt",
+        "id": "gpt-5.4",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-05",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-05",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -9170,8 +9171,8 @@
         },
         "last_updated": "2026-02-12",
         "limit": {
-          "context": 204800,
-          "output": 32768
+          "context": 16608,
+          "output": 24576
         },
         "modalities": {
           "input": [
@@ -9340,7 +9341,7 @@
         "knowledge": "2025-04",
         "last_updated": "2025-07-23",
         "limit": {
-          "context": 1048576,
+          "context": 1000000,
           "output": 65536
         },
         "modalities": {
@@ -9373,7 +9374,7 @@
         "last_updated": "2026-01-23",
         "limit": {
           "context": 262144,
-          "output": 65536
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -9437,6 +9438,40 @@
     "iconURL": "https://models.dev/logos/alibaba-coding-plan-cn.svg",
     "id": "alibaba-coding-plan-cn",
     "models": {
+      "MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiniMax-M2.5 是由 alibaba-coding-plan-cn 提供的人工智能模型。",
+        "family": "minimax",
+        "id": "MiniMax-M2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 196608,
+          "output": 24576
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
       "glm-4.7": {
         "attachment": false,
         "cost": {
@@ -9621,7 +9656,7 @@
         "last_updated": "2026-01-23",
         "limit": {
           "context": 262144,
-          "output": 65536
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -24522,7 +24557,7 @@
     "iconURL": "https://models.dev/logos/cloudferro-sherlock.svg",
     "id": "cloudferro-sherlock",
     "models": {
-      " MiniMaxAI/MiniMax-M2.5": {
+      "MiniMaxAI/MiniMax-M2.5": {
         "attachment": false,
         "cost": {
           "input": 0.3,
@@ -24530,7 +24565,7 @@
         },
         "description": "MiniMax-M2.5 是由 cloudferro-sherlock 提供的人工智能模型。",
         "family": "minimax",
-        "id": " MiniMaxAI/MiniMax-M2.5",
+        "id": "MiniMaxAI/MiniMax-M2.5",
         "knowledge": "2026-01",
         "last_updated": "2026-03-05",
         "limit": {
