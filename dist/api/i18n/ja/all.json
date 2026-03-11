@@ -72377,9 +72377,9 @@
         "knowledge": "2025-11",
         "last_updated": "2026-02-04",
         "limit": {
-          "context": 128000,
-          "input": 120000,
-          "output": 8192
+          "context": 163000,
+          "input": 160000,
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -72476,8 +72476,8 @@
         "knowledge": "2025-10",
         "last_updated": "2026-02-04",
         "limit": {
-          "context": 128000,
-          "input": 120000,
+          "context": 110000,
+          "input": 100000,
           "output": 8192
         },
         "modalities": {
@@ -72510,8 +72510,8 @@
         "knowledge": "2025-10",
         "last_updated": "2026-02-04",
         "limit": {
-          "context": 128000,
-          "input": 120000,
+          "context": 110000,
+          "input": 100000,
           "output": 8192
         },
         "modalities": {
@@ -73102,6 +73102,42 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2026-01-15",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.1,
+          "cache_write": 1,
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5 は nebius によって提供される AI モデルです。",
+        "id": "zai-org/GLM-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-01",
+        "last_updated": "2026-03-10",
+        "limit": {
+          "context": 202752,
+          "input": 200000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-01",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -77865,14 +77901,14 @@
         "temperature": true,
         "tool_call": false
       },
-      "stepfun-ai/step-3-5-flash": {
+      "stepfun-ai/step-3.5-flash": {
         "attachment": false,
         "cost": {
           "input": 0,
           "output": 0
         },
         "description": "Step 3.5 Flash は nvidia によって提供される AI モデルです。",
-        "id": "stepfun-ai/step-3-5-flash",
+        "id": "stepfun-ai/step-3.5-flash",
         "last_updated": "2026-02-02",
         "limit": {
           "context": 256000,
@@ -81820,6 +81856,40 @@
         },
         "reasoning": true,
         "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
+      "nemotron-3-super-free": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Nemotron 3 Super Free は opencode によって提供される AI モデルです。",
+        "family": "nemotron-free",
+        "id": "nemotron-3-super-free",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-02",
+        "last_updated": "2026-03-11",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nemotron 3 Super Free",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-11",
         "temperature": true,
         "tool_call": true
       },
@@ -104022,6 +104092,7 @@
       "MiniMaxAI/MiniMax-M2.5": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.06,
           "input": 0.3,
           "output": 1.2
         },
