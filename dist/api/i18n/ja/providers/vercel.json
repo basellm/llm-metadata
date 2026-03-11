@@ -2225,13 +2225,13 @@
     "google/gemini-3.1-flash-image-preview": {
       "attachment": true,
       "cost": {
-        "input": 0.25,
-        "output": 60
+        "input": 0.5,
+        "output": 3
       },
       "description": "Gemini 3.1 Flash Image Preview (Nano Banana 2) は vercel によって提供される AI モデルです。",
       "family": "gemini",
       "id": "google/gemini-3.1-flash-image-preview",
-      "last_updated": "2026-03-02",
+      "last_updated": "2026-03-06",
       "limit": {
         "context": 131072,
         "output": 32768
@@ -2256,31 +2256,21 @@
     "google/gemini-3.1-flash-lite-preview": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.05,
-        "context_over_200k": {
-          "cache_read": 0.025,
-          "cache_write": 1,
-          "input": 0.25,
-          "output": 1.5
-        },
-        "input": 0.5,
-        "output": 3
+        "input": 0.25,
+        "output": 1.5
       },
       "description": "Gemini 3.1 Flash Lite Preview は vercel によって提供される AI モデルです。",
-      "family": "gemini-flash-lite",
+      "family": "gemini",
       "id": "google/gemini-3.1-flash-lite-preview",
-      "knowledge": "2025-01",
-      "last_updated": "2026-03-03",
+      "last_updated": "2026-03-06",
       "limit": {
-        "context": 1048576,
-        "output": 65536
+        "context": 1000000,
+        "output": 65000
       },
       "modalities": {
         "input": [
           "text",
           "image",
-          "video",
-          "audio",
           "pdf"
         ],
         "output": [
@@ -2291,7 +2281,6 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-03",
-      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -2488,6 +2477,36 @@
       "release_date": "2024-03",
       "temperature": false,
       "tool_call": false
+    },
+    "inception/mercury-2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.024999999999999998,
+        "input": 0.25,
+        "output": 0.75
+      },
+      "description": "Mercury 2 は vercel によって提供される AI モデルです。",
+      "family": "mercury",
+      "id": "inception/mercury-2",
+      "last_updated": "2026-03-06",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mercury 2",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-24",
+      "temperature": true,
+      "tool_call": true
     },
     "inception/mercury-coder-small": {
       "attachment": false,
@@ -3892,6 +3911,7 @@
       "last_updated": "2025-05-16",
       "limit": {
         "context": 200000,
+        "input": 100000,
         "output": 100000
       },
       "modalities": {
@@ -3924,6 +3944,7 @@
       "last_updated": "2023-03-01",
       "limit": {
         "context": 16385,
+        "input": 12289,
         "output": 4096
       },
       "modalities": {
@@ -3954,6 +3975,7 @@
       "last_updated": "2023-03-01",
       "limit": {
         "context": 8192,
+        "input": 4096,
         "output": 4096
       },
       "modalities": {
@@ -4181,6 +4203,7 @@
       "last_updated": "2025-01",
       "limit": {
         "context": 128000,
+        "input": 111616,
         "output": 16384
       },
       "modalities": {
@@ -4247,6 +4270,7 @@
       "last_updated": "2025-08-07",
       "limit": {
         "context": 128000,
+        "input": 111616,
         "output": 16384
       },
       "modalities": {
@@ -4382,6 +4406,7 @@
       "last_updated": "2025-08-07",
       "limit": {
         "context": 400000,
+        "input": 128000,
         "output": 272000
       },
       "modalities": {
@@ -4416,6 +4441,7 @@
       "last_updated": "2025-08-07",
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "modalities": {
@@ -4449,6 +4475,7 @@
       "last_updated": "2025-08-07",
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "modalities": {
@@ -4482,6 +4509,7 @@
       "last_updated": "2025-05-16",
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "modalities": {
@@ -4515,6 +4543,7 @@
       "last_updated": "2025-08-07",
       "limit": {
         "context": 128000,
+        "input": 111616,
         "output": 16384
       },
       "modalities": {
@@ -4549,6 +4578,7 @@
       "last_updated": "2025-08-07",
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "modalities": {
@@ -4583,6 +4613,7 @@
       "last_updated": "2025-08-07",
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "modalities": {
@@ -4616,6 +4647,7 @@
       "last_updated": "2025-08-07",
       "limit": {
         "context": 128000,
+        "input": 111616,
         "output": 16384
       },
       "modalities": {
@@ -4649,6 +4681,7 @@
       "last_updated": "2025-12",
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "modalities": {
@@ -4681,6 +4714,7 @@
       "last_updated": "2025-08-07",
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "modalities": {
@@ -4700,6 +4734,39 @@
       "temperature": true,
       "tool_call": true
     },
+    "openai/gpt-5.3-chat": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.3 Chat は vercel によって提供される AI モデルです。",
+      "family": "gpt",
+      "id": "openai/gpt-5.3-chat",
+      "last_updated": "2026-03-06",
+      "limit": {
+        "context": 128000,
+        "input": 111616,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.3 Chat",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-03",
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-5.3-codex": {
       "attachment": true,
       "cost": {
@@ -4713,6 +4780,7 @@
       "last_updated": "2026-02-24",
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "modalities": {
@@ -4729,6 +4797,71 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-02-24",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5.4": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2.5,
+        "output": 15
+      },
+      "description": "GPT 5.4 は vercel によって提供される AI モデルです。",
+      "family": "gpt",
+      "id": "openai/gpt-5.4",
+      "last_updated": "2026-03-06",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT 5.4",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5.4-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 30,
+        "output": 180
+      },
+      "description": "GPT 5.4 Pro は vercel によって提供される AI モデルです。",
+      "family": "gpt",
+      "id": "openai/gpt-5.4-pro",
+      "last_updated": "2026-03-06",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT 5.4 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-05",
       "temperature": true,
       "tool_call": true
     },
@@ -4775,6 +4908,7 @@
       "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
+        "input": 98304,
         "output": 32768
       },
       "modalities": {
@@ -4806,6 +4940,7 @@
       "last_updated": "2024-12-01",
       "limit": {
         "context": 131072,
+        "input": 65536,
         "output": 65536
       },
       "modalities": {
@@ -4903,6 +5038,7 @@
       "last_updated": "2024-06-26",
       "limit": {
         "context": 200000,
+        "input": 100000,
         "output": 100000
       },
       "modalities": {
@@ -4967,6 +5103,7 @@
       "last_updated": "2025-04-16",
       "limit": {
         "context": 200000,
+        "input": 100000,
         "output": 100000
       },
       "modalities": {
@@ -5031,6 +5168,7 @@
       "last_updated": "2024-01-25",
       "limit": {
         "context": 8192,
+        "input": 6656,
         "output": 1536
       },
       "modalities": {
@@ -5060,6 +5198,7 @@
       "last_updated": "2024-01-25",
       "limit": {
         "context": 8192,
+        "input": 6656,
         "output": 1536
       },
       "modalities": {
@@ -5089,6 +5228,7 @@
       "last_updated": "2022-12-15",
       "limit": {
         "context": 8192,
+        "input": 6656,
         "output": 1536
       },
       "modalities": {
@@ -5453,6 +5593,81 @@
       "reasoning": false,
       "release_date": "2025-05-20",
       "temperature": false,
+      "tool_call": false
+    },
+    "voyage/voyage-4": {
+      "attachment": false,
+      "description": "voyage-4 は vercel によって提供される AI モデルです。",
+      "family": "voyage",
+      "id": "voyage/voyage-4",
+      "last_updated": "2026-03-06",
+      "limit": {
+        "context": 32000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "voyage-4",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-06",
+      "temperature": true,
+      "tool_call": false
+    },
+    "voyage/voyage-4-large": {
+      "attachment": false,
+      "description": "voyage-4-large は vercel によって提供される AI モデルです。",
+      "family": "voyage",
+      "id": "voyage/voyage-4-large",
+      "last_updated": "2026-03-06",
+      "limit": {
+        "context": 32000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "voyage-4-large",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-06",
+      "temperature": true,
+      "tool_call": false
+    },
+    "voyage/voyage-4-lite": {
+      "attachment": false,
+      "description": "voyage-4-lite は vercel によって提供される AI モデルです。",
+      "family": "voyage",
+      "id": "voyage/voyage-4-lite",
+      "last_updated": "2026-03-06",
+      "limit": {
+        "context": 32000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "voyage-4-lite",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-06",
+      "temperature": true,
       "tool_call": false
     },
     "voyage/voyage-code-2": {
