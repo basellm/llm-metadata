@@ -10912,7 +10912,7 @@
       "id": "MiniMax-M2.5",
       "knowledge": null,
       "lastUpdated": "2026-02-12",
-      "maxCtxTokens": 16608,
+      "maxCtxTokens": 196608,
       "maxOutputTokens": 24576,
       "modalities": {
         "input": [
@@ -41372,7 +41372,7 @@
       "id": "gpt-5.2",
       "knowledge": "2025-08-31",
       "lastUpdated": "2025-12-11",
-      "maxCtxTokens": 128000,
+      "maxCtxTokens": 264000,
       "maxOutputTokens": 64000,
       "modalities": {
         "input": [
@@ -41409,7 +41409,7 @@
       "id": "gpt-5.2-codex",
       "knowledge": "2025-08-31",
       "lastUpdated": "2025-12-11",
-      "maxCtxTokens": 272000,
+      "maxCtxTokens": 400000,
       "maxOutputTokens": 128000,
       "modalities": {
         "input": [
@@ -85668,7 +85668,7 @@
         "tool_call": false
       },
       "icon": "",
-      "id": "THUDM 2/GLM-4-32B-0414",
+      "id": "THUDM/GLM-4-32B-0414",
       "knowledge": null,
       "lastUpdated": "2025-04-14",
       "maxCtxTokens": 128000,
@@ -85704,7 +85704,7 @@
         "tool_call": false
       },
       "icon": "",
-      "id": "THUDM 2/GLM-4-9B-0414",
+      "id": "THUDM/GLM-4-9B-0414",
       "knowledge": null,
       "lastUpdated": "2025-04-14",
       "maxCtxTokens": 32000,
@@ -85740,7 +85740,7 @@
         "tool_call": false
       },
       "icon": "",
-      "id": "THUDM 2/GLM-Z1-32B-0414",
+      "id": "THUDM/GLM-Z1-32B-0414",
       "knowledge": null,
       "lastUpdated": "2025-04-15",
       "maxCtxTokens": 128000,
@@ -85776,7 +85776,7 @@
         "tool_call": false
       },
       "icon": "",
-      "id": "THUDM 2/GLM-Z1-9B-0414",
+      "id": "THUDM/GLM-Z1-9B-0414",
       "knowledge": null,
       "lastUpdated": "2025-04-14",
       "maxCtxTokens": 32000,
@@ -85812,7 +85812,7 @@
         "tool_call": false
       },
       "icon": "",
-      "id": "THUDM 2/GLM-Z1-Rumination-32B-0414",
+      "id": "THUDM/GLM-Z1-Rumination-32B-0414",
       "knowledge": null,
       "lastUpdated": "2025-04-15",
       "maxCtxTokens": 32000,
@@ -104141,6 +104141,83 @@
         "output": null
       },
       "releaseDate": "2026-02-01",
+      "tags": []
+    },
+    {
+      "description": "Healer Alpha 是由 openrouter 提供的人工智能模型。",
+      "firm": "openrouter",
+      "flags": {
+        "attachment": true,
+        "audio": true,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:openrouter-color",
+      "id": "openrouter/healer-alpha",
+      "knowledge": "2026-03-11",
+      "lastUpdated": "2026-03-11",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 64000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Healer Alpha",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-03-11",
+      "tags": []
+    },
+    {
+      "description": "Hunter Alpha 是由 openrouter 提供的人工智能模型。",
+      "firm": "openrouter",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:openrouter-color",
+      "id": "openrouter/hunter-alpha",
+      "knowledge": "2026-03-11",
+      "lastUpdated": "2026-03-11",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 64000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hunter Alpha",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-03-11",
       "tags": []
     },
     {
@@ -125180,6 +125257,42 @@
       "tags": []
     },
     {
+      "description": "MiniMax-M2.5 是由 synthetic 提供的人工智能模型。",
+      "firm": "synthetic",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:synthetic",
+      "id": "hf:MiniMaxAI/MiniMax-M2.5",
+      "knowledge": null,
+      "lastUpdated": "2026-02-07",
+      "maxCtxTokens": 191488,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.5",
+      "price": {
+        "cacheRead": 0.6,
+        "cacheWrite": null,
+        "input": 0.6,
+        "output": 3
+      },
+      "releaseDate": "2026-02-07",
+      "tags": []
+    },
+    {
       "description": "Kimi K2 0905 是由 synthetic 提供的人工智能模型。",
       "firm": "synthetic",
       "flags": {
@@ -125575,6 +125688,42 @@
         "output": 2.19
       },
       "releaseDate": "2025-12-22",
+      "tags": []
+    },
+    {
+      "description": "GLM-4.7-Flash 是由 synthetic 提供的人工智能模型。",
+      "firm": "synthetic",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:synthetic",
+      "id": "hf:zai-org/GLM-4.7-Flash",
+      "knowledge": null,
+      "lastUpdated": "2026-01-18",
+      "maxCtxTokens": 196608,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.7-Flash",
+      "price": {
+        "cacheRead": 0.06,
+        "cacheWrite": null,
+        "input": 0.06,
+        "output": 0.4
+      },
+      "releaseDate": "2026-01-18",
       "tags": []
     },
     {

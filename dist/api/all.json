@@ -9171,7 +9171,8 @@
         },
         "last_updated": "2026-02-12",
         "limit": {
-          "context": 16608,
+          "context": 196608,
+          "input": 196601,
           "output": 24576
         },
         "modalities": {
@@ -33134,7 +33135,8 @@
         "knowledge": "2025-08-31",
         "last_updated": "2025-12-11",
         "limit": {
-          "context": 128000,
+          "context": 264000,
+          "input": 128000,
           "output": 64000
         },
         "modalities": {
@@ -33165,7 +33167,8 @@
         "knowledge": "2025-08-31",
         "last_updated": "2025-12-11",
         "limit": {
-          "context": 272000,
+          "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -33197,6 +33200,7 @@
         "last_updated": "2026-02-24",
         "limit": {
           "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -33228,6 +33232,7 @@
         "last_updated": "2026-03-05",
         "limit": {
           "context": 400000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -59917,7 +59922,7 @@
         "structured_output": false,
         "tool_call": false
       },
-      "THUDM 2/GLM-4-32B-0414": {
+      "THUDM/GLM-4-32B-0414": {
         "attachment": false,
         "cost": {
           "input": 0.2,
@@ -59925,7 +59930,7 @@
         },
         "description": "GLM 4 32B 0414 is an AI model provided by nano-gpt.",
         "family": "glm",
-        "id": "THUDM 2/GLM-4-32B-0414",
+        "id": "THUDM/GLM-4-32B-0414",
         "last_updated": "2025-04-14",
         "limit": {
           "context": 128000,
@@ -59947,7 +59952,7 @@
         "structured_output": false,
         "tool_call": false
       },
-      "THUDM 2/GLM-4-9B-0414": {
+      "THUDM/GLM-4-9B-0414": {
         "attachment": false,
         "cost": {
           "input": 0.2,
@@ -59955,7 +59960,7 @@
         },
         "description": "GLM 4 9B 0414 is an AI model provided by nano-gpt.",
         "family": "glm",
-        "id": "THUDM 2/GLM-4-9B-0414",
+        "id": "THUDM/GLM-4-9B-0414",
         "last_updated": "2025-04-14",
         "limit": {
           "context": 32000,
@@ -59977,7 +59982,7 @@
         "structured_output": false,
         "tool_call": false
       },
-      "THUDM 2/GLM-Z1-32B-0414": {
+      "THUDM/GLM-Z1-32B-0414": {
         "attachment": false,
         "cost": {
           "input": 0.2,
@@ -59985,7 +59990,7 @@
         },
         "description": "GLM Z1 32B 0414 is an AI model provided by nano-gpt.",
         "family": "glm-z",
-        "id": "THUDM 2/GLM-Z1-32B-0414",
+        "id": "THUDM/GLM-Z1-32B-0414",
         "last_updated": "2025-04-15",
         "limit": {
           "context": 128000,
@@ -60007,7 +60012,7 @@
         "structured_output": false,
         "tool_call": false
       },
-      "THUDM 2/GLM-Z1-9B-0414": {
+      "THUDM/GLM-Z1-9B-0414": {
         "attachment": false,
         "cost": {
           "input": 0.2,
@@ -60015,7 +60020,7 @@
         },
         "description": "GLM Z1 9B 0414 is an AI model provided by nano-gpt.",
         "family": "glm-z",
-        "id": "THUDM 2/GLM-Z1-9B-0414",
+        "id": "THUDM/GLM-Z1-9B-0414",
         "last_updated": "2025-04-14",
         "limit": {
           "context": 32000,
@@ -60037,7 +60042,7 @@
         "structured_output": false,
         "tool_call": false
       },
-      "THUDM 2/GLM-Z1-Rumination-32B-0414": {
+      "THUDM/GLM-Z1-Rumination-32B-0414": {
         "attachment": false,
         "cost": {
           "input": 0.2,
@@ -60045,7 +60050,7 @@
         },
         "description": "GLM Z1 Rumination 32B 0414 is an AI model provided by nano-gpt.",
         "family": "glm-z",
-        "id": "THUDM 2/GLM-Z1-Rumination-32B-0414",
+        "id": "THUDM/GLM-Z1-Rumination-32B-0414",
         "last_updated": "2025-04-15",
         "limit": {
           "context": 32000,
@@ -86415,6 +86420,73 @@
         "temperature": true,
         "tool_call": true
       },
+      "openrouter/healer-alpha": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Healer Alpha is an AI model provided by openrouter.",
+        "family": "alpha",
+        "id": "openrouter/healer-alpha",
+        "knowledge": "2026-03-11",
+        "last_updated": "2026-03-11",
+        "limit": {
+          "context": 262144,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Healer Alpha",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openrouter/hunter-alpha": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Hunter Alpha is an AI model provided by openrouter.",
+        "family": "alpha",
+        "id": "openrouter/hunter-alpha",
+        "knowledge": "2026-03-11",
+        "last_updated": "2026-03-11",
+        "limit": {
+          "context": 1048576,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hunter Alpha",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "openrouter/sherlock-dash-alpha": {
         "attachment": true,
         "cost": {
@@ -103340,6 +103412,40 @@
         "temperature": true,
         "tool_call": true
       },
+      "hf:MiniMaxAI/MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.6,
+          "input": 0.6,
+          "output": 3
+        },
+        "description": "MiniMax-M2.5 is an AI model provided by synthetic.",
+        "family": "minimax",
+        "id": "hf:MiniMaxAI/MiniMax-M2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-07",
+        "limit": {
+          "context": 191488,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-07",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "hf:Qwen/Qwen2.5-Coder-32B-Instruct": {
         "attachment": false,
         "cost": {
@@ -104068,6 +104174,40 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "hf:zai-org/GLM-4.7-Flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.06,
+          "output": 0.4
+        },
+        "description": "GLM-4.7-Flash is an AI model provided by synthetic.",
+        "family": "glm",
+        "id": "hf:zai-org/GLM-4.7-Flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-01-18",
+        "limit": {
+          "context": 196608,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-18",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       }
