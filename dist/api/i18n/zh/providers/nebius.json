@@ -1283,6 +1283,44 @@
       "temperature": true,
       "tool_call": true
     },
+    "moonshotai/Kimi-K2.5-fast": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 0.625,
+        "input": 0.5,
+        "output": 2.5
+      },
+      "description": "Kimi-K2.5-fast 是由 nebius 提供的人工智能模型。",
+      "family": "kimi",
+      "id": "moonshotai/Kimi-K2.5-fast",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-06",
+      "last_updated": "2026-02-04",
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi-K2.5-fast",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "nvidia/Llama-3_1-Nemotron-Ultra-253B-v1": {
       "attachment": false,
       "cost": {
@@ -1349,37 +1387,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "nvidia/Nemotron-3-Super-120B-A12B": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 0.9
-      },
-      "description": "Nemotron-3-Super-120B-A12B 是由 nebius 提供的人工智能模型。",
-      "id": "nvidia/Nemotron-3-Super-120B-A12B",
-      "knowledge": "2026-02",
-      "last_updated": "2026-03-12",
-      "limit": {
-        "context": 256000,
-        "input": 256000,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Nemotron-3-Super-120B-A12B",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-03-11",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "nvidia/Nemotron-Nano-V2-12b": {
       "attachment": false,
       "cost": {
@@ -1409,6 +1416,37 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-03-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-3-super-120b-a12b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 0.9
+      },
+      "description": "Nemotron-3-Super-120B-A12B 是由 nebius 提供的人工智能模型。",
+      "id": "nvidia/nemotron-3-super-120b-a12b",
+      "knowledge": "2026-02",
+      "last_updated": "2026-03-12",
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron-3-Super-120B-A12B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-11",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
