@@ -21619,6 +21619,39 @@
         "temperature": true,
         "tool_call": true
       },
+      "nvidia/Nemotron-3-Super": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 0.75
+        },
+        "description": "Nemotron 3 Super is an AI model provided by baseten.",
+        "family": "nemotron",
+        "id": "nvidia/Nemotron-3-Super",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-02",
+        "last_updated": "2026-03-11",
+        "limit": {
+          "context": 262144,
+          "output": 32678
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nemotron 3 Super",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-11",
+        "temperature": true,
+        "tool_call": true
+      },
       "zai-org/GLM-4.6": {
         "attachment": false,
         "cost": {
@@ -71503,6 +71536,66 @@
         "temperature": true,
         "tool_call": false
       },
+      "zai-org/glm-4.7": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 0.8
+        },
+        "description": "GLM 4.7 is an AI model provided by nano-gpt.",
+        "family": "glm",
+        "id": "zai-org/glm-4.7",
+        "last_updated": "2026-01-29",
+        "limit": {
+          "context": 200000,
+          "input": 200000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-29",
+        "structured_output": true,
+        "tool_call": true
+      },
+      "zai-org/glm-4.7-flash": {
+        "attachment": false,
+        "cost": {
+          "input": 0.07,
+          "output": 0.4
+        },
+        "description": "GLM 4.7 Flash is an AI model provided by nano-gpt.",
+        "family": "glm-flash",
+        "id": "zai-org/glm-4.7-flash",
+        "last_updated": "2026-01-19",
+        "limit": {
+          "context": 200000,
+          "input": 200000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 4.7 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-19",
+        "structured_output": true,
+        "tool_call": true
+      },
       "zai-org/glm-5": {
         "attachment": false,
         "cost": {
@@ -72831,8 +72924,8 @@
         "knowledge": "2025-06",
         "last_updated": "2026-02-04",
         "limit": {
-          "context": 262144,
-          "input": 250000,
+          "context": 256000,
+          "input": 256000,
           "output": 8192
         },
         "modalities": {
@@ -72914,6 +73007,37 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-08-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia/Nemotron-3-Super-120B-A12B": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 0.9
+        },
+        "description": "Nemotron-3-Super-120B-A12B is an AI model provided by nebius.",
+        "id": "nvidia/Nemotron-3-Super-120B-A12B",
+        "knowledge": "2026-02",
+        "last_updated": "2026-03-12",
+        "limit": {
+          "context": 256000,
+          "input": 256000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nemotron-3-Super-120B-A12B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-11",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -73136,7 +73260,7 @@
         "knowledge": "2026-01",
         "last_updated": "2026-03-10",
         "limit": {
-          "context": 202752,
+          "context": 200000,
           "input": 200000,
           "output": 16384
         },
@@ -95944,6 +96068,47 @@
         "temperature": true,
         "tool_call": true
       },
+      "anthropic/claude-opus-4-6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "context_over_200k": {
+            "cache_read": 1,
+            "cache_write": 12.5,
+            "input": 10,
+            "output": 37.5
+          },
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.6 is an AI model provided by requesty.",
+        "family": "claude-opus",
+        "id": "anthropic/claude-opus-4-6",
+        "knowledge": "2025-05-30",
+        "last_updated": "2026-02-05",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-05",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "anthropic/claude-sonnet-4": {
         "attachment": true,
         "cost": {
@@ -96009,6 +96174,45 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-09-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-4-6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "context_over_200k": {
+            "cache_read": 0.6,
+            "cache_write": 7.5,
+            "input": 6,
+            "output": 22.5
+          },
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4.6 is an AI model provided by requesty.",
+        "family": "claude-sonnet",
+        "id": "anthropic/claude-sonnet-4-6",
+        "last_updated": "2026-02-17",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-17",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -113314,7 +113518,7 @@
   },
   "wandb": {
     "api": "https://api.inference.wandb.ai/v1",
-    "doc": "https://weave-docs.wandb.ai/guides/integrations/inference/",
+    "doc": "https://docs.wandb.ai/guides/integrations/inference/",
     "env": [
       "WANDB_API_KEY"
     ],
@@ -113322,6 +113526,66 @@
     "id": "wandb",
     "lobeIcon": "WeightsBiases",
     "models": {
+      "MiniMaxAI/MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.5 is an AI model provided by wandb.",
+        "family": "minimax",
+        "id": "MiniMaxAI/MiniMax-M2.5",
+        "last_updated": "2026-03-12",
+        "limit": {
+          "context": 196608,
+          "output": 196608
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-02-12",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "OpenPipe/Qwen3-14B-Instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.05,
+          "output": 0.22
+        },
+        "description": "OpenPipe Qwen3 14B Instruct is an AI model provided by wandb.",
+        "family": "qwen",
+        "id": "OpenPipe/Qwen3-14B-Instruct",
+        "last_updated": "2026-03-12",
+        "limit": {
+          "context": 32768,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "OpenPipe Qwen3 14B Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-04-29",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "Qwen/Qwen3-235B-A22B-Instruct-2507": {
         "attachment": false,
         "cost": {
@@ -113332,10 +113596,10 @@
         "family": "qwen",
         "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
         "knowledge": "2025-04",
-        "last_updated": "2025-07-21",
+        "last_updated": "2026-03-12",
         "limit": {
           "context": 262144,
-          "output": 131072
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -113349,6 +113613,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-04-28",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -113362,10 +113627,10 @@
         "family": "qwen",
         "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
         "knowledge": "2025-04",
-        "last_updated": "2025-07-25",
+        "last_updated": "2026-03-12",
         "limit": {
           "context": 262144,
-          "output": 131072
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -113379,6 +113644,37 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-07-25",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.3
+        },
+        "description": "Qwen3 30B A3B Instruct 2507 is an AI model provided by wandb.",
+        "family": "qwen",
+        "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+        "last_updated": "2026-03-12",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 30B A3B Instruct 2507",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-07-29",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -113392,10 +113688,10 @@
         "family": "qwen",
         "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
         "knowledge": "2025-04",
-        "last_updated": "2025-07-23",
+        "last_updated": "2026-03-12",
         "limit": {
           "context": 262144,
-          "output": 66536
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -113409,53 +113705,23 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-23",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
-      "deepseek-ai/DeepSeek-R1-0528": {
+      "deepseek-ai/DeepSeek-V3.1": {
         "attachment": false,
         "cost": {
-          "input": 1.35,
-          "output": 5.4
+          "input": 0.55,
+          "output": 1.65
         },
-        "description": "DeepSeek-R1-0528 is an AI model provided by wandb.",
-        "family": "deepseek-thinking",
-        "id": "deepseek-ai/DeepSeek-R1-0528",
-        "knowledge": "2025-05",
-        "last_updated": "2025-05-28",
-        "limit": {
-          "context": 161000,
-          "output": 163840
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek-R1-0528",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-05-28",
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek-ai/DeepSeek-V3-0324": {
-        "attachment": false,
-        "cost": {
-          "input": 1.14,
-          "output": 2.75
-        },
-        "description": "DeepSeek-V3-0324 is an AI model provided by wandb.",
+        "description": "DeepSeek V3.1 is an AI model provided by wandb.",
         "family": "deepseek",
-        "id": "deepseek-ai/DeepSeek-V3-0324",
-        "knowledge": "2024-10",
-        "last_updated": "2025-03-24",
+        "id": "deepseek-ai/DeepSeek-V3.1",
+        "last_updated": "2026-03-12",
         "limit": {
           "context": 161000,
-          "output": 8192
+          "output": 161000
         },
         "modalities": {
           "input": [
@@ -113465,10 +113731,41 @@
             "text"
           ]
         },
-        "name": "DeepSeek-V3-0324",
+        "name": "DeepSeek V3.1",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2025-03-24",
+        "release_date": "2025-08-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "meta-llama/Llama-3.1-70B-Instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.8,
+          "output": 0.8
+        },
+        "description": "Llama 3.1 70B is an AI model provided by wandb.",
+        "family": "llama",
+        "id": "meta-llama/Llama-3.1-70B-Instruct",
+        "last_updated": "2026-03-12",
+        "limit": {
+          "context": 128000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.1 70B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-07-23",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -113482,10 +113779,10 @@
         "family": "llama",
         "id": "meta-llama/Llama-3.1-8B-Instruct",
         "knowledge": "2023-12",
-        "last_updated": "2024-07-23",
+        "last_updated": "2026-03-12",
         "limit": {
           "context": 128000,
-          "output": 32768
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -113499,6 +113796,7 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2024-07-23",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -113512,10 +113810,10 @@
         "family": "llama",
         "id": "meta-llama/Llama-3.3-70B-Instruct",
         "knowledge": "2023-12",
-        "last_updated": "2024-12-06",
+        "last_updated": "2026-03-12",
         "limit": {
           "context": 128000,
-          "output": 32768
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -113529,6 +113827,7 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2024-12-06",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -113542,10 +113841,10 @@
         "family": "llama",
         "id": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
         "knowledge": "2024-12",
-        "last_updated": "2025-01-31",
+        "last_updated": "2026-03-12",
         "limit": {
           "context": 64000,
-          "output": 8192
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -113560,6 +113859,7 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-01-31",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -113573,10 +113873,10 @@
         "family": "phi",
         "id": "microsoft/Phi-4-mini-instruct",
         "knowledge": "2023-10",
-        "last_updated": "2024-12-11",
+        "last_updated": "2026-03-12",
         "limit": {
           "context": 128000,
-          "output": 4096
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -113590,23 +113890,54 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2024-12-11",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
-      "moonshotai/Kimi-K2-Instruct": {
+      "moonshotai/Kimi-K2.5": {
+        "attachment": true,
+        "cost": {
+          "input": 0.5,
+          "output": 2.85
+        },
+        "description": "Kimi K2.5 is an AI model provided by wandb.",
+        "family": "kimi",
+        "id": "moonshotai/Kimi-K2.5",
+        "last_updated": "2026-03-12",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-01-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8": {
         "attachment": false,
         "cost": {
-          "input": 1.35,
-          "output": 4
+          "input": 0.2,
+          "output": 0.8
         },
-        "description": "Kimi-K2-Instruct is an AI model provided by wandb.",
-        "family": "kimi",
-        "id": "moonshotai/Kimi-K2-Instruct",
-        "knowledge": "2024-10",
-        "last_updated": "2025-07-14",
+        "description": "NVIDIA Nemotron 3 Super 120B is an AI model provided by wandb.",
+        "family": "nemotron",
+        "id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
+        "last_updated": "2026-03-12",
         "limit": {
-          "context": 128000,
-          "output": 16384
+          "context": 262144,
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -113616,10 +113947,101 @@
             "text"
           ]
         },
-        "name": "Kimi-K2-Instruct",
+        "name": "NVIDIA Nemotron 3 Super 120B",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2025-07-14",
+        "release_date": "2026-03-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-oss-120b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "gpt-oss-120b is an AI model provided by wandb.",
+        "family": "gpt-oss",
+        "id": "openai/gpt-oss-120b",
+        "last_updated": "2026-03-12",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "gpt-oss-120b",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-08-05",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-oss-20b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.05,
+          "output": 0.2
+        },
+        "description": "gpt-oss-20b is an AI model provided by wandb.",
+        "family": "gpt-oss",
+        "id": "openai/gpt-oss-20b",
+        "last_updated": "2026-03-12",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "gpt-oss-20b",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-08-05",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-5-FP8": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM 5 is an AI model provided by wandb.",
+        "family": "glm",
+        "id": "zai-org/GLM-5-FP8",
+        "last_updated": "2026-03-12",
+        "limit": {
+          "context": 200000,
+          "output": 200000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-02-11",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       }

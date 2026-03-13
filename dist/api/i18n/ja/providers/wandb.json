@@ -1,6 +1,6 @@
 {
   "api": "https://api.inference.wandb.ai/v1",
-  "doc": "https://weave-docs.wandb.ai/guides/integrations/inference/",
+  "doc": "https://docs.wandb.ai/guides/integrations/inference/",
   "env": [
     "WANDB_API_KEY"
   ],
@@ -8,6 +8,66 @@
   "id": "wandb",
   "lobeIcon": "WeightsBiases",
   "models": {
+    "MiniMaxAI/MiniMax-M2.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax M2.5 は wandb によって提供される AI モデルです。",
+      "family": "minimax",
+      "id": "MiniMaxAI/MiniMax-M2.5",
+      "last_updated": "2026-03-12",
+      "limit": {
+        "context": 196608,
+        "output": 196608
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2.5",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-02-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "OpenPipe/Qwen3-14B-Instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0.22
+      },
+      "description": "OpenPipe Qwen3 14B Instruct は wandb によって提供される AI モデルです。",
+      "family": "qwen",
+      "id": "OpenPipe/Qwen3-14B-Instruct",
+      "last_updated": "2026-03-12",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenPipe Qwen3 14B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "Qwen/Qwen3-235B-A22B-Instruct-2507": {
       "attachment": false,
       "cost": {
@@ -18,10 +78,10 @@
       "family": "qwen",
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
       "knowledge": "2025-04",
-      "last_updated": "2025-07-21",
+      "last_updated": "2026-03-12",
       "limit": {
         "context": 262144,
-        "output": 131072
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -35,6 +95,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-04-28",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -48,10 +109,10 @@
       "family": "qwen",
       "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
       "knowledge": "2025-04",
-      "last_updated": "2025-07-25",
+      "last_updated": "2026-03-12",
       "limit": {
         "context": 262144,
-        "output": 131072
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -65,6 +126,37 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-07-25",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 0.1,
+        "output": 0.3
+      },
+      "description": "Qwen3 30B A3B Instruct 2507 は wandb によって提供される AI モデルです。",
+      "family": "qwen",
+      "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "last_updated": "2026-03-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 30B A3B Instruct 2507",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-29",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -78,10 +170,10 @@
       "family": "qwen",
       "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
       "knowledge": "2025-04",
-      "last_updated": "2025-07-23",
+      "last_updated": "2026-03-12",
       "limit": {
         "context": 262144,
-        "output": 66536
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -95,53 +187,23 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-07-23",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "deepseek-ai/DeepSeek-R1-0528": {
+    "deepseek-ai/DeepSeek-V3.1": {
       "attachment": false,
       "cost": {
-        "input": 1.35,
-        "output": 5.4
+        "input": 0.55,
+        "output": 1.65
       },
-      "description": "DeepSeek-R1-0528 は wandb によって提供される AI モデルです。",
-      "family": "deepseek-thinking",
-      "id": "deepseek-ai/DeepSeek-R1-0528",
-      "knowledge": "2025-05",
-      "last_updated": "2025-05-28",
-      "limit": {
-        "context": 161000,
-        "output": 163840
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek-R1-0528",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-05-28",
-      "temperature": true,
-      "tool_call": true
-    },
-    "deepseek-ai/DeepSeek-V3-0324": {
-      "attachment": false,
-      "cost": {
-        "input": 1.14,
-        "output": 2.75
-      },
-      "description": "DeepSeek-V3-0324 は wandb によって提供される AI モデルです。",
+      "description": "DeepSeek V3.1 は wandb によって提供される AI モデルです。",
       "family": "deepseek",
-      "id": "deepseek-ai/DeepSeek-V3-0324",
-      "knowledge": "2024-10",
-      "last_updated": "2025-03-24",
+      "id": "deepseek-ai/DeepSeek-V3.1",
+      "last_updated": "2026-03-12",
       "limit": {
         "context": 161000,
-        "output": 8192
+        "output": 161000
       },
       "modalities": {
         "input": [
@@ -151,10 +213,41 @@
           "text"
         ]
       },
-      "name": "DeepSeek-V3-0324",
+      "name": "DeepSeek V3.1",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-03-24",
+      "release_date": "2025-08-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "meta-llama/Llama-3.1-70B-Instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.8,
+        "output": 0.8
+      },
+      "description": "Llama 3.1 70B は wandb によって提供される AI モデルです。",
+      "family": "llama",
+      "id": "meta-llama/Llama-3.1-70B-Instruct",
+      "last_updated": "2026-03-12",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 70B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-07-23",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -168,10 +261,10 @@
       "family": "llama",
       "id": "meta-llama/Llama-3.1-8B-Instruct",
       "knowledge": "2023-12",
-      "last_updated": "2024-07-23",
+      "last_updated": "2026-03-12",
       "limit": {
         "context": 128000,
-        "output": 32768
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -185,6 +278,7 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2024-07-23",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -198,10 +292,10 @@
       "family": "llama",
       "id": "meta-llama/Llama-3.3-70B-Instruct",
       "knowledge": "2023-12",
-      "last_updated": "2024-12-06",
+      "last_updated": "2026-03-12",
       "limit": {
         "context": 128000,
-        "output": 32768
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -215,6 +309,7 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2024-12-06",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -228,10 +323,10 @@
       "family": "llama",
       "id": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
       "knowledge": "2024-12",
-      "last_updated": "2025-01-31",
+      "last_updated": "2026-03-12",
       "limit": {
         "context": 64000,
-        "output": 8192
+        "output": 64000
       },
       "modalities": {
         "input": [
@@ -246,6 +341,7 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-01-31",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -259,10 +355,10 @@
       "family": "phi",
       "id": "microsoft/Phi-4-mini-instruct",
       "knowledge": "2023-10",
-      "last_updated": "2024-12-11",
+      "last_updated": "2026-03-12",
       "limit": {
         "context": 128000,
-        "output": 4096
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -276,23 +372,54 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2024-12-11",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "moonshotai/Kimi-K2-Instruct": {
+    "moonshotai/Kimi-K2.5": {
+      "attachment": true,
+      "cost": {
+        "input": 0.5,
+        "output": 2.85
+      },
+      "description": "Kimi K2.5 は wandb によって提供される AI モデルです。",
+      "family": "kimi",
+      "id": "moonshotai/Kimi-K2.5",
+      "last_updated": "2026-03-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8": {
       "attachment": false,
       "cost": {
-        "input": 1.35,
-        "output": 4
+        "input": 0.2,
+        "output": 0.8
       },
-      "description": "Kimi-K2-Instruct は wandb によって提供される AI モデルです。",
-      "family": "kimi",
-      "id": "moonshotai/Kimi-K2-Instruct",
-      "knowledge": "2024-10",
-      "last_updated": "2025-07-14",
+      "description": "NVIDIA Nemotron 3 Super 120B は wandb によって提供される AI モデルです。",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
+      "last_updated": "2026-03-12",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -302,10 +429,101 @@
           "text"
         ]
       },
-      "name": "Kimi-K2-Instruct",
+      "name": "NVIDIA Nemotron 3 Super 120B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-14",
+      "release_date": "2026-03-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "gpt-oss-120b は wandb によって提供される AI モデルです。",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-120b",
+      "last_updated": "2026-03-12",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-oss-120b",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-20b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0.2
+      },
+      "description": "gpt-oss-20b は wandb によって提供される AI モデルです。",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-20b",
+      "last_updated": "2026-03-12",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-oss-20b",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5-FP8": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 3.2
+      },
+      "description": "GLM 5 は wandb によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "zai-org/GLM-5-FP8",
+      "last_updated": "2026-03-12",
+      "limit": {
+        "context": 200000,
+        "output": 200000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-02-11",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     }
