@@ -7,20 +7,20 @@
   "iconURL": "https://models.dev/logos/vultr.svg",
   "id": "vultr",
   "models": {
-    "deepseek-r1-distill-llama-70b": {
+    "DeepSeek-R1-Distill-Llama-70B": {
       "attachment": false,
       "cost": {
-        "input": 0.2,
-        "output": 0.2
+        "input": 0.55,
+        "output": 2.75
       },
       "description": "DeepSeek R1 Distill Llama 70B is an AI model provided by vultr.",
       "family": "deepseek-thinking",
-      "id": "deepseek-r1-distill-llama-70b",
+      "id": "DeepSeek-R1-Distill-Llama-70B",
       "knowledge": "2024-10",
       "last_updated": "2025-01-20",
       "limit": {
-        "context": 121808,
-        "output": 8192
+        "context": 130000,
+        "output": 4096
       },
       "modalities": {
         "input": [
@@ -37,20 +37,20 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepseek-r1-distill-qwen-32b": {
+    "DeepSeek-R1-Distill-Qwen-32B": {
       "attachment": false,
       "cost": {
-        "input": 0.2,
-        "output": 0.2
+        "input": 0.55,
+        "output": 2.75
       },
       "description": "DeepSeek R1 Distill Qwen 32B is an AI model provided by vultr.",
       "family": "qwen",
-      "id": "deepseek-r1-distill-qwen-32b",
+      "id": "DeepSeek-R1-Distill-Qwen-32B",
       "knowledge": "2024-10",
       "last_updated": "2025-01-20",
       "limit": {
-        "context": 121808,
-        "output": 8192
+        "context": 130000,
+        "output": 4096
       },
       "modalities": {
         "input": [
@@ -67,20 +67,20 @@
       "temperature": true,
       "tool_call": true
     },
-    "gpt-oss-120b": {
+    "DeepSeek-V3.2": {
       "attachment": false,
       "cost": {
-        "input": 0.2,
-        "output": 0.2
+        "input": 0.55,
+        "output": 2.75
       },
-      "description": "GPT OSS 120B is an AI model provided by vultr.",
-      "family": "gpt-oss",
-      "id": "gpt-oss-120b",
+      "description": "DeepSeek V3.2 is an AI model provided by vultr.",
+      "family": "deepseek",
+      "id": "DeepSeek-V3.2",
       "knowledge": "2024-10",
-      "last_updated": "2025-06-23",
+      "last_updated": "2025-01-20",
       "limit": {
-        "context": 121808,
-        "output": 8192
+        "context": 163000,
+        "output": 4096
       },
       "modalities": {
         "input": [
@@ -90,27 +90,57 @@
           "text"
         ]
       },
-      "name": "GPT OSS 120B",
+      "name": "DeepSeek V3.2",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-06-23",
+      "release_date": "2025-01-20",
       "temperature": true,
       "tool_call": true
     },
-    "kimi-k2-instruct": {
+    "GLM-5-FP8": {
       "attachment": false,
       "cost": {
-        "input": 0.2,
-        "output": 0.2
+        "input": 0.55,
+        "output": 2.75
+      },
+      "description": "GLM 5 FP8 is an AI model provided by vultr.",
+      "family": "glm",
+      "id": "GLM-5-FP8",
+      "knowledge": "2024-10",
+      "last_updated": "2025-01-20",
+      "limit": {
+        "context": 202000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5 FP8",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-01-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Kimi-K2.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0.55,
+        "output": 2.75
       },
       "description": "Kimi K2 Instruct is an AI model provided by vultr.",
       "family": "kimi",
-      "id": "kimi-k2-instruct",
+      "id": "Kimi-K2.5",
       "knowledge": "2024-10",
       "last_updated": "2024-07-18",
       "limit": {
-        "context": 58904,
-        "output": 4096
+        "context": 261000,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -127,20 +157,110 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen2.5-coder-32b-instruct": {
+    "Llama-3_1-Nemotron-Ultra-253B-v1": {
       "attachment": false,
       "cost": {
-        "input": 0.2,
-        "output": 0.2
+        "input": 0.55,
+        "output": 2.75
+      },
+      "description": "Llama 3.1 Nemotron Ultra 253B v1 is an AI model provided by vultr.",
+      "family": "llama",
+      "id": "Llama-3_1-Nemotron-Ultra-253B-v1",
+      "knowledge": "2024-10",
+      "last_updated": "2025-01-20",
+      "limit": {
+        "context": 32000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 Nemotron Ultra 253B v1",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-01-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "MiniMax-M2.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0.55,
+        "output": 2.75
+      },
+      "description": "MiniMax M2.5 is an AI model provided by vultr.",
+      "family": "minimax",
+      "id": "MiniMax-M2.5",
+      "knowledge": "2024-10",
+      "last_updated": "2025-01-20",
+      "limit": {
+        "context": 196000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2.5",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-01-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4": {
+      "attachment": false,
+      "cost": {
+        "input": 0.55,
+        "output": 2.75
+      },
+      "description": "NVIDIA Nemotron 3 Super 120B A12B NVFP4 is an AI model provided by vultr.",
+      "family": "nemotron",
+      "id": "NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
+      "knowledge": "2024-10",
+      "last_updated": "2025-01-20",
+      "limit": {
+        "context": 260000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA Nemotron 3 Super 120B A12B NVFP4",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-01-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen2.5-Coder-32B-Instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.55,
+        "output": 2.75
       },
       "description": "Qwen2.5 Coder 32B Instruct is an AI model provided by vultr.",
       "family": "qwen",
-      "id": "qwen2.5-coder-32b-instruct",
+      "id": "Qwen2.5-Coder-32B-Instruct",
       "knowledge": "2024-10",
       "last_updated": "2024-11-06",
       "limit": {
-        "context": 12952,
-        "output": 2048
+        "context": 15000,
+        "output": 256
       },
       "modalities": {
         "input": [
@@ -154,6 +274,36 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-11-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-oss-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.55,
+        "output": 2.75
+      },
+      "description": "GPT OSS 120B is an AI model provided by vultr.",
+      "family": "gpt-oss",
+      "id": "gpt-oss-120b",
+      "knowledge": "2024-10",
+      "last_updated": "2025-06-23",
+      "limit": {
+        "context": 130000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-06-23",
       "temperature": true,
       "tool_call": true
     }

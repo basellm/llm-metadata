@@ -187,7 +187,7 @@
       "description": "anthropic--claude-4-opus is an AI model provided by sap-ai-core.",
       "family": "claude-opus",
       "id": "anthropic--claude-4-opus",
-      "knowledge": "2025-01-31",
+      "knowledge": "2025-03-31",
       "last_updated": "2025-05-22",
       "limit": {
         "context": 200000,
@@ -221,7 +221,7 @@
       "description": "anthropic--claude-4-sonnet is an AI model provided by sap-ai-core.",
       "family": "claude-sonnet",
       "id": "anthropic--claude-4-sonnet",
-      "knowledge": "2025-01-31",
+      "knowledge": "2025-03-31",
       "last_updated": "2025-05-22",
       "limit": {
         "context": 200000,
@@ -256,7 +256,7 @@
       "family": "claude-haiku",
       "id": "anthropic--claude-4.5-haiku",
       "knowledge": "2025-02-28",
-      "last_updated": "2025-10-01",
+      "last_updated": "2025-10-15",
       "limit": {
         "context": 200000,
         "output": 64000
@@ -274,7 +274,7 @@
       "name": "anthropic--claude-4.5-haiku",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2025-10-01",
+      "release_date": "2025-10-15",
       "temperature": true,
       "tool_call": true
     },
@@ -289,7 +289,7 @@
       "description": "anthropic--claude-4.5-opus is an AI model provided by sap-ai-core.",
       "family": "claude-opus",
       "id": "anthropic--claude-4.5-opus",
-      "knowledge": "2025-04-30",
+      "knowledge": "2025-05",
       "last_updated": "2025-11-24",
       "limit": {
         "context": 200000,
@@ -323,7 +323,7 @@
       "description": "anthropic--claude-4.5-sonnet is an AI model provided by sap-ai-core.",
       "family": "claude-sonnet",
       "id": "anthropic--claude-4.5-sonnet",
-      "knowledge": "2025-01-31",
+      "knowledge": "2025-07-31",
       "last_updated": "2025-09-29",
       "limit": {
         "context": 200000,
@@ -351,12 +351,6 @@
       "cost": {
         "cache_read": 0.5,
         "cache_write": 6.25,
-        "context_over_200k": {
-          "cache_read": 1,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 37.5
-        },
         "input": 5,
         "output": 25
       },
@@ -364,9 +358,9 @@
       "family": "claude-opus",
       "id": "anthropic--claude-4.6-opus",
       "knowledge": "2025-05",
-      "last_updated": "2026-02-05",
+      "last_updated": "2026-03-13",
       "limit": {
-        "context": 200000,
+        "context": 1000000,
         "output": 128000
       },
       "modalities": {
@@ -391,12 +385,6 @@
       "cost": {
         "cache_read": 0.3,
         "cache_write": 3.75,
-        "context_over_200k": {
-          "cache_read": 0.6,
-          "cache_write": 7.5,
-          "input": 6,
-          "output": 22.5
-        },
         "input": 3,
         "output": 15
       },
@@ -404,9 +392,9 @@
       "family": "claude-sonnet",
       "id": "anthropic--claude-4.6-sonnet",
       "knowledge": "2025-08",
-      "last_updated": "2026-02-17",
+      "last_updated": "2026-03-13",
       "limit": {
-        "context": 200000,
+        "context": 1000000,
         "output": 64000
       },
       "modalities": {
@@ -604,7 +592,7 @@
     "gpt-5": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.13,
+        "cache_read": 0.125,
         "input": 1.25,
         "output": 10
       },
@@ -670,7 +658,7 @@
     "gpt-5-nano": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.01,
+        "cache_read": 0.005,
         "input": 0.05,
         "output": 0.4
       },

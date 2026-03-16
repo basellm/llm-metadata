@@ -12,19 +12,13 @@
       "cost": {
         "cache_read": 0.6,
         "cache_write": 7.5,
-        "context_over_200k": {
-          "cache_read": 1.1,
-          "cache_write": 13.75,
-          "input": 11,
-          "output": 41.25
-        },
         "input": 6,
         "output": 30
       },
       "description": "Claude Opus 4.6 は venice によって提供される AI モデルです。",
       "family": "claude-opus",
       "id": "claude-opus-4-6",
-      "last_updated": "2026-02-18",
+      "last_updated": "2026-03-16",
       "limit": {
         "context": 1000000,
         "output": 128000
@@ -86,19 +80,13 @@
       "cost": {
         "cache_read": 0.36,
         "cache_write": 4.5,
-        "context_over_200k": {
-          "cache_read": 0.72,
-          "cache_write": 9,
-          "input": 7.2,
-          "output": 27
-        },
         "input": 3.6,
         "output": 18
       },
       "description": "Claude Sonnet 4.6 は venice によって提供される AI モデルです。",
       "family": "claude-sonnet",
       "id": "claude-sonnet-4-6",
-      "last_updated": "2026-02-28",
+      "last_updated": "2026-03-16",
       "limit": {
         "context": 1000000,
         "output": 64000
@@ -339,7 +327,7 @@
       "cost": {
         "cache_read": 0.25,
         "context_over_200k": {
-          "cache_read": 0.5,
+          "cache_read": 0.25,
           "input": 5,
           "output": 15
         },
@@ -349,7 +337,7 @@
       "description": "Grok 4.20 Beta は venice によって提供される AI モデルです。",
       "family": "grok-beta",
       "id": "grok-4-20-beta",
-      "last_updated": "2026-03-13",
+      "last_updated": "2026-03-16",
       "limit": {
         "context": 2000000,
         "output": 128000
@@ -376,7 +364,7 @@
       "cost": {
         "cache_read": 0.25,
         "context_over_200k": {
-          "cache_read": 0.5,
+          "cache_read": 0.25,
           "input": 5,
           "output": 15
         },
@@ -386,7 +374,7 @@
       "description": "Grok 4.20 Multi-Agent Beta は venice によって提供される AI モデルです。",
       "family": "grok-beta",
       "id": "grok-4-20-multi-agent-beta",
-      "last_updated": "2026-03-13",
+      "last_updated": "2026-03-16",
       "limit": {
         "context": 2000000,
         "output": 128000
@@ -505,9 +493,9 @@
     "kimi-k2-5": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.125,
-        "input": 0.75,
-        "output": 3.75
+        "cache_read": 0.11,
+        "input": 0.56,
+        "output": 3.5
       },
       "description": "Kimi K2.5 は venice によって提供される AI モデルです。",
       "family": "kimi",
@@ -516,7 +504,7 @@
         "field": "reasoning_content"
       },
       "knowledge": "2024-04",
-      "last_updated": "2026-03-12",
+      "last_updated": "2026-03-16",
       "limit": {
         "context": 256000,
         "output": 65536
@@ -634,8 +622,8 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.04,
-        "input": 0.4,
-        "output": 1.6
+        "input": 0.35,
+        "output": 1.5
       },
       "description": "MiniMax M2.1 は venice によって提供される AI モデルです。",
       "family": "minimax",
@@ -643,7 +631,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-03-12",
+      "last_updated": "2026-03-16",
       "limit": {
         "context": 198000,
         "output": 32768
@@ -668,8 +656,8 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.04,
-        "input": 0.4,
-        "output": 1.6
+        "input": 0.34,
+        "output": 1.19
       },
       "description": "MiniMax M2.5 は venice によって提供される AI モデルです。",
       "family": "minimax",
@@ -677,7 +665,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-03-12",
+      "last_updated": "2026-03-16",
       "limit": {
         "context": 198000,
         "output": 32768
@@ -725,6 +713,36 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-03-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistral-small-3-2-24b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.09375,
+        "output": 0.25
+      },
+      "description": "Mistral Small 3.2 24B Instruct は venice によって提供される AI モデルです。",
+      "family": "mistral-small",
+      "id": "mistral-small-3-2-24b-instruct",
+      "last_updated": "2026-03-16",
+      "limit": {
+        "context": 256000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Small 3.2 24B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-15",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1175,6 +1193,37 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen3-5-9b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.05,
+        "output": 0.15
+      },
+      "description": "Qwen 3.5 9B は venice によって提供される AI モデルです。",
+      "family": "qwen",
+      "id": "qwen3-5-9b",
+      "last_updated": "2026-03-16",
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3.5 9B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "qwen3-coder-480b-a35b-instruct": {
       "attachment": false,
       "cost": {
@@ -1329,6 +1378,71 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": false
+    },
+    "venice-uncensored-role-play": {
+      "attachment": true,
+      "cost": {
+        "input": 0.5,
+        "output": 2
+      },
+      "description": "Venice Role Play Uncensored は venice によって提供される AI モデルです。",
+      "family": "venice",
+      "id": "venice-uncensored-role-play",
+      "last_updated": "2026-03-16",
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Venice Role Play Uncensored",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-02-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org-glm-4.6": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3,
+        "input": 0.85,
+        "output": 2.75
+      },
+      "description": "GLM 4.6 は venice によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "zai-org-glm-4.6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-16",
+      "limit": {
+        "context": 198000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.6",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-04-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "zai-org-glm-4.7": {
       "attachment": false,
