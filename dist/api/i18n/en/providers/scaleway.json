@@ -10,7 +10,7 @@
     "bge-multilingual-gemma2": {
       "attachment": false,
       "cost": {
-        "input": 0.13,
+        "input": 0.1,
         "output": 0
       },
       "description": "BGE Multilingual Gemma2 is an AI model provided by scaleway.",
@@ -46,10 +46,10 @@
       "family": "deepseek-thinking",
       "id": "deepseek-r1-distill-llama-70b",
       "knowledge": "2024-07",
-      "last_updated": "2025-01-20",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 32000,
-        "output": 4096
+        "output": 8196
       },
       "modalities": {
         "input": [
@@ -75,10 +75,10 @@
       "description": "Devstral 2 123B Instruct (2512) is an AI model provided by scaleway.",
       "family": "devstral",
       "id": "devstral-2-123b-instruct-2512",
-      "last_updated": "2026-01-07",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 256000,
-        "output": 8192
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -105,7 +105,7 @@
       "family": "gemma",
       "id": "gemma-3-27b-it",
       "knowledge": "2024-12",
-      "last_updated": "2025-09-05",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 40000,
         "output": 8192
@@ -135,10 +135,10 @@
       "description": "GPT-OSS 120B is an AI model provided by scaleway.",
       "family": "gpt-oss",
       "id": "gpt-oss-120b",
-      "last_updated": "2024-01-01",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 128000,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -165,7 +165,7 @@
       "family": "llama",
       "id": "llama-3.1-8b-instruct",
       "knowledge": "2023-12",
-      "last_updated": "2025-01-01",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 128000,
         "output": 16384
@@ -195,10 +195,10 @@
       "family": "llama",
       "id": "llama-3.3-70b-instruct",
       "knowledge": "2023-12",
-      "last_updated": "2024-12-06",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 100000,
-        "output": 4096
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -224,7 +224,7 @@
       "description": "Mistral Nemo Instruct 2407 is an AI model provided by scaleway.",
       "family": "mistral-nemo",
       "id": "mistral-nemo-instruct-2407",
-      "last_updated": "2024-07-25",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 128000,
         "output": 8192
@@ -253,10 +253,10 @@
       "description": "Mistral Small 3.2 24B Instruct (2506) is an AI model provided by scaleway.",
       "family": "mistral-small",
       "id": "mistral-small-3.2-24b-instruct-2506",
-      "last_updated": "2025-06-20",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 128000,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -283,7 +283,7 @@
       "description": "Pixtral 12B 2409 is an AI model provided by scaleway.",
       "family": "pixtral",
       "id": "pixtral-12b-2409",
-      "last_updated": "2024-09-25",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 128000,
         "output": 4096
@@ -313,10 +313,10 @@
       "description": "Qwen3 235B A22B Instruct 2507 is an AI model provided by scaleway.",
       "family": "qwen",
       "id": "qwen3-235b-a22b-instruct-2507",
-      "last_updated": "2025-07-01",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 260000,
-        "output": 8192
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -343,10 +343,10 @@
       "family": "qwen",
       "id": "qwen3-coder-30b-a3b-instruct",
       "knowledge": "2025-04",
-      "last_updated": "2025-04",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 128000,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -363,6 +363,66 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen3-embedding-8b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.1,
+        "output": 0
+      },
+      "description": "Qwen3 Embedding 8B is an AI model provided by scaleway.",
+      "family": "qwen",
+      "id": "qwen3-embedding-8b",
+      "last_updated": "2026-03-17",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Embedding 8B",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-25-11",
+      "temperature": false,
+      "tool_call": false
+    },
+    "qwen3.5-397b-a17b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 3.6
+      },
+      "description": "Qwen3.5 397B A17B is an AI model provided by scaleway.",
+      "family": "devstral",
+      "id": "qwen3.5-397b-a17b",
+      "last_updated": "2026-03-17",
+      "limit": {
+        "context": 256000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 397B A17B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-17",
+      "temperature": true,
+      "tool_call": true
+    },
     "voxtral-small-24b-2507": {
       "attachment": true,
       "cost": {
@@ -372,10 +432,10 @@
       "description": "Voxtral Small 24B 2507 is an AI model provided by scaleway.",
       "family": "voxtral",
       "id": "voxtral-small-24b-2507",
-      "last_updated": "2025-07-01",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 32000,
-        "output": 8192
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -403,10 +463,10 @@
       "family": "whisper",
       "id": "whisper-large-v3",
       "knowledge": "2023-09",
-      "last_updated": "2025-09-05",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 0,
-        "output": 4096
+        "output": 8192
       },
       "modalities": {
         "input": [

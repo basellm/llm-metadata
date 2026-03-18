@@ -1,0 +1,279 @@
+{
+  "api": "https://api.lkeap.cloud.tencent.com/coding/v3",
+  "doc": "https://cloud.tencent.com/document/product/1772/128947",
+  "env": [
+    "TENCENT_CODING_PLAN_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/tencent-coding-plan.svg",
+  "id": "tencent-coding-plan",
+  "models": {
+    "glm-5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "GLM-5 は tencent-coding-plan によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "glm-5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-11",
+      "limit": {
+        "context": 202752,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "hunyuan-2.0-instruct": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Tencent HY 2.0 Instruct は tencent-coding-plan によって提供される AI モデルです。",
+      "family": "hunyuan",
+      "id": "hunyuan-2.0-instruct",
+      "last_updated": "2026-03-08",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Tencent HY 2.0 Instruct",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-08",
+      "temperature": true,
+      "tool_call": true
+    },
+    "hunyuan-2.0-thinking": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Tencent HY 2.0 Think は tencent-coding-plan によって提供される AI モデルです。",
+      "family": "hunyuan",
+      "id": "hunyuan-2.0-thinking",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-08",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Tencent HY 2.0 Think",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-08",
+      "temperature": true,
+      "tool_call": true
+    },
+    "hunyuan-t1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Hunyuan-T1 は tencent-coding-plan によって提供される AI モデルです。",
+      "family": "hunyuan",
+      "id": "hunyuan-t1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-08",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hunyuan-T1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-08",
+      "temperature": true,
+      "tool_call": true
+    },
+    "hunyuan-turbos": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Hunyuan-TurboS は tencent-coding-plan によって提供される AI モデルです。",
+      "family": "hunyuan",
+      "id": "hunyuan-turbos",
+      "last_updated": "2026-03-08",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hunyuan-TurboS",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-08",
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Kimi-K2.5 は tencent-coding-plan によって提供される AI モデルです。",
+      "family": "kimi",
+      "id": "kimi-k2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-01-27",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi-K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m2.5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "MiniMax-M2.5 は tencent-coding-plan によって提供される AI モデルです。",
+      "family": "minimax",
+      "id": "minimax-m2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-12",
+      "limit": {
+        "context": 204800,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "tc-code-latest": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Auto は tencent-coding-plan によって提供される AI モデルです。",
+      "family": "auto",
+      "id": "tc-code-latest",
+      "last_updated": "2026-03-08",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Auto",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-08",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Tencent Coding Plan (China)",
+  "npm": "@ai-sdk/openai-compatible"
+}

@@ -6861,6 +6861,38 @@
     "iconURL": "https://models.dev/logos/alibaba-cn.svg",
     "id": "alibaba-cn",
     "models": {
+      "MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax-M2.5 は alibaba-cn によって提供される AI モデルです。",
+        "family": "minimax",
+        "id": "MiniMax-M2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
       "MiniMax/MiniMax-M2.5": {
         "attachment": false,
         "cost": {
@@ -7345,38 +7377,6 @@
         "release_date": "2026-01-27",
         "structured_output": true,
         "temperature": false,
-        "tool_call": true
-      },
-      "minimax-m2.5": {
-        "attachment": false,
-        "cost": {
-          "input": 0.3,
-          "output": 1.2
-        },
-        "description": "MiniMax-M2.5 は alibaba-cn によって提供される AI モデルです。",
-        "family": "minimax",
-        "id": "minimax-m2.5",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-02-12",
-        "limit": {
-          "context": 204800,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax-M2.5",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2026-02-12",
-        "temperature": true,
         "tool_call": true
       },
       "moonshot-kimi-k2-instruct": {
@@ -15097,7 +15097,7 @@
         },
         "name": "Command R",
         "open_weights": true,
-        "reasoning": true,
+        "reasoning": false,
         "release_date": "2024-08-30",
         "temperature": true,
         "tool_call": true
@@ -15127,7 +15127,7 @@
         },
         "name": "Command R+",
         "open_weights": true,
-        "reasoning": true,
+        "reasoning": false,
         "release_date": "2024-08-30",
         "temperature": true,
         "tool_call": true
@@ -18296,7 +18296,7 @@
         },
         "name": "Command R",
         "open_weights": true,
-        "reasoning": true,
+        "reasoning": false,
         "release_date": "2024-08-30",
         "temperature": true,
         "tool_call": true
@@ -18326,7 +18326,7 @@
         },
         "name": "Command R+",
         "open_weights": true,
-        "reasoning": true,
+        "reasoning": false,
         "release_date": "2024-08-30",
         "temperature": true,
         "tool_call": true
@@ -27954,7 +27954,7 @@
         "reasoning": false,
         "release_date": "2024-10-24",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "c4ai-aya-expanse-8b": {
         "attachment": false,
@@ -27978,7 +27978,7 @@
         "reasoning": false,
         "release_date": "2024-10-24",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "c4ai-aya-vision-32b": {
         "attachment": true,
@@ -28003,7 +28003,7 @@
         "reasoning": false,
         "release_date": "2025-03-04",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "c4ai-aya-vision-8b": {
         "attachment": true,
@@ -28028,7 +28028,7 @@
         "reasoning": false,
         "release_date": "2025-03-04",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "command-a-03-2025": {
         "attachment": false,
@@ -28055,7 +28055,7 @@
         },
         "name": "Command A",
         "open_weights": true,
-        "reasoning": true,
+        "reasoning": false,
         "release_date": "2025-03-13",
         "temperature": true,
         "tool_call": true
@@ -28176,7 +28176,7 @@
         },
         "name": "Command R",
         "open_weights": true,
-        "reasoning": true,
+        "reasoning": false,
         "release_date": "2024-08-30",
         "temperature": true,
         "tool_call": true
@@ -28206,7 +28206,7 @@
         },
         "name": "Command R+",
         "open_weights": true,
-        "reasoning": true,
+        "reasoning": false,
         "release_date": "2024-08-30",
         "temperature": true,
         "tool_call": true
@@ -29968,6 +29968,113 @@
       }
     },
     "name": "DeepSeek",
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "dinference": {
+    "api": "https://api.dinference.com/v1",
+    "doc": "https://dinference.com",
+    "env": [
+      "DINFERENCE_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/dinference.svg",
+    "id": "dinference",
+    "models": {
+      "glm-4.7": {
+        "attachment": false,
+        "cost": {
+          "input": 0.45,
+          "output": 1.65
+        },
+        "description": "GLM-4.7 は dinference によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "glm-4.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2025-12",
+        "limit": {
+          "context": 200000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-12",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.75,
+          "output": 2.4
+        },
+        "description": "GLM-5 は dinference によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2026-02",
+        "limit": {
+          "context": 200000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gpt-oss-120b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.0675,
+          "output": 0.27
+        },
+        "description": "GPT OSS 120B は dinference によって提供される AI モデルです。",
+        "id": "gpt-oss-120b",
+        "last_updated": "2025-08",
+        "limit": {
+          "context": 131072,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT OSS 120B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-08",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "DInference",
     "npm": "@ai-sdk/openai-compatible"
   },
   "doubao": {
@@ -33251,6 +33358,39 @@
         "temperature": false,
         "tool_call": true
       },
+      "gpt-5.4-mini": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "GPT-5.4 mini は github-copilot によって提供される AI モデルです。",
+        "family": "gpt-mini",
+        "id": "gpt-5.4-mini",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-17",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4 mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-17",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "grok-code-fast-1": {
         "attachment": false,
         "cost": {
@@ -33440,7 +33580,7 @@
         },
         "name": "Cohere Command R 08-2024",
         "open_weights": false,
-        "reasoning": true,
+        "reasoning": false,
         "release_date": "2024-08-01",
         "temperature": true,
         "tool_call": true
@@ -33470,7 +33610,7 @@
         },
         "name": "Cohere Command R+",
         "open_weights": false,
-        "reasoning": true,
+        "reasoning": false,
         "release_date": "2024-04-04",
         "temperature": true,
         "tool_call": true
@@ -33500,7 +33640,7 @@
         },
         "name": "Cohere Command R+ 08-2024",
         "open_weights": false,
-        "reasoning": true,
+        "reasoning": false,
         "release_date": "2024-08-01",
         "temperature": true,
         "tool_call": true
@@ -46735,7 +46875,7 @@
         "reasoning": false,
         "release_date": "2024-02-27",
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "corethink:free": {
         "attachment": false,
@@ -64842,7 +64982,7 @@
         "reasoning": false,
         "release_date": "2024-08-30",
         "structured_output": false,
-        "tool_call": false
+        "tool_call": true
       },
       "command-a-reasoning-08-2025": {
         "attachment": false,
@@ -82096,6 +82236,74 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-05",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.4-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "output": 4.5
+        },
+        "description": "GPT-5.4 mini は openai によって提供される AI モデルです。",
+        "family": "gpt-mini",
+        "id": "gpt-5.4-mini",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-17",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4 mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-17",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.4-nano": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.2,
+          "output": 1.25
+        },
+        "description": "GPT-5.4 nano は openai によって提供される AI モデルです。",
+        "family": "gpt-nano",
+        "id": "gpt-5.4-nano",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-17",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4 nano",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-17",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -100181,7 +100389,7 @@
       "bge-multilingual-gemma2": {
         "attachment": false,
         "cost": {
-          "input": 0.13,
+          "input": 0.1,
           "output": 0
         },
         "description": "BGE Multilingual Gemma2 は scaleway によって提供される AI モデルです。",
@@ -100217,10 +100425,10 @@
         "family": "deepseek-thinking",
         "id": "deepseek-r1-distill-llama-70b",
         "knowledge": "2024-07",
-        "last_updated": "2025-01-20",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 32000,
-          "output": 4096
+          "output": 8196
         },
         "modalities": {
           "input": [
@@ -100246,10 +100454,10 @@
         "description": "Devstral 2 123B Instruct (2512) は scaleway によって提供される AI モデルです。",
         "family": "devstral",
         "id": "devstral-2-123b-instruct-2512",
-        "last_updated": "2026-01-07",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 256000,
-          "output": 8192
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -100276,7 +100484,7 @@
         "family": "gemma",
         "id": "gemma-3-27b-it",
         "knowledge": "2024-12",
-        "last_updated": "2025-09-05",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 40000,
           "output": 8192
@@ -100306,10 +100514,10 @@
         "description": "GPT-OSS 120B は scaleway によって提供される AI モデルです。",
         "family": "gpt-oss",
         "id": "gpt-oss-120b",
-        "last_updated": "2024-01-01",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 128000,
-          "output": 8192
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -100336,7 +100544,7 @@
         "family": "llama",
         "id": "llama-3.1-8b-instruct",
         "knowledge": "2023-12",
-        "last_updated": "2025-01-01",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 128000,
           "output": 16384
@@ -100366,10 +100574,10 @@
         "family": "llama",
         "id": "llama-3.3-70b-instruct",
         "knowledge": "2023-12",
-        "last_updated": "2024-12-06",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 100000,
-          "output": 4096
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -100395,7 +100603,7 @@
         "description": "Mistral Nemo Instruct 2407 は scaleway によって提供される AI モデルです。",
         "family": "mistral-nemo",
         "id": "mistral-nemo-instruct-2407",
-        "last_updated": "2024-07-25",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 128000,
           "output": 8192
@@ -100424,10 +100632,10 @@
         "description": "Mistral Small 3.2 24B Instruct (2506) は scaleway によって提供される AI モデルです。",
         "family": "mistral-small",
         "id": "mistral-small-3.2-24b-instruct-2506",
-        "last_updated": "2025-06-20",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 128000,
-          "output": 8192
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -100454,7 +100662,7 @@
         "description": "Pixtral 12B 2409 は scaleway によって提供される AI モデルです。",
         "family": "pixtral",
         "id": "pixtral-12b-2409",
-        "last_updated": "2024-09-25",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 128000,
           "output": 4096
@@ -100484,10 +100692,10 @@
         "description": "Qwen3 235B A22B Instruct 2507 は scaleway によって提供される AI モデルです。",
         "family": "qwen",
         "id": "qwen3-235b-a22b-instruct-2507",
-        "last_updated": "2025-07-01",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 260000,
-          "output": 8192
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -100514,10 +100722,10 @@
         "family": "qwen",
         "id": "qwen3-coder-30b-a3b-instruct",
         "knowledge": "2025-04",
-        "last_updated": "2025-04",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 128000,
-          "output": 8192
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -100534,6 +100742,66 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3-embedding-8b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0
+        },
+        "description": "Qwen3 Embedding 8B は scaleway によって提供される AI モデルです。",
+        "family": "qwen",
+        "id": "qwen3-embedding-8b",
+        "last_updated": "2026-03-17",
+        "limit": {
+          "context": 32768,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Embedding 8B",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-25-11",
+        "temperature": false,
+        "tool_call": false
+      },
+      "qwen3.5-397b-a17b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.6,
+          "output": 3.6
+        },
+        "description": "Qwen3.5 397B A17B は scaleway によって提供される AI モデルです。",
+        "family": "devstral",
+        "id": "qwen3.5-397b-a17b",
+        "last_updated": "2026-03-17",
+        "limit": {
+          "context": 256000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 397B A17B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-17",
+        "temperature": true,
+        "tool_call": true
+      },
       "voxtral-small-24b-2507": {
         "attachment": true,
         "cost": {
@@ -100543,10 +100811,10 @@
         "description": "Voxtral Small 24B 2507 は scaleway によって提供される AI モデルです。",
         "family": "voxtral",
         "id": "voxtral-small-24b-2507",
-        "last_updated": "2025-07-01",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 32000,
-          "output": 8192
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -100574,10 +100842,10 @@
         "family": "whisper",
         "id": "whisper-large-v3",
         "knowledge": "2023-09",
-        "last_updated": "2025-09-05",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 0,
-          "output": 4096
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -106634,6 +106902,285 @@
       }
     },
     "name": "Synthetic",
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "tencent-coding-plan": {
+    "api": "https://api.lkeap.cloud.tencent.com/coding/v3",
+    "doc": "https://cloud.tencent.com/document/product/1772/128947",
+    "env": [
+      "TENCENT_CODING_PLAN_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/tencent-coding-plan.svg",
+    "id": "tencent-coding-plan",
+    "models": {
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-5 は tencent-coding-plan によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 202752,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "hunyuan-2.0-instruct": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Tencent HY 2.0 Instruct は tencent-coding-plan によって提供される AI モデルです。",
+        "family": "hunyuan",
+        "id": "hunyuan-2.0-instruct",
+        "last_updated": "2026-03-08",
+        "limit": {
+          "context": 131072,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Tencent HY 2.0 Instruct",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-08",
+        "temperature": true,
+        "tool_call": true
+      },
+      "hunyuan-2.0-thinking": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Tencent HY 2.0 Think は tencent-coding-plan によって提供される AI モデルです。",
+        "family": "hunyuan",
+        "id": "hunyuan-2.0-thinking",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-08",
+        "limit": {
+          "context": 131072,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Tencent HY 2.0 Think",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-08",
+        "temperature": true,
+        "tool_call": true
+      },
+      "hunyuan-t1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Hunyuan-T1 は tencent-coding-plan によって提供される AI モデルです。",
+        "family": "hunyuan",
+        "id": "hunyuan-t1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-08",
+        "limit": {
+          "context": 131072,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hunyuan-T1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-08",
+        "temperature": true,
+        "tool_call": true
+      },
+      "hunyuan-turbos": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Hunyuan-TurboS は tencent-coding-plan によって提供される AI モデルです。",
+        "family": "hunyuan",
+        "id": "hunyuan-turbos",
+        "last_updated": "2026-03-08",
+        "limit": {
+          "context": 131072,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hunyuan-TurboS",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-08",
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Kimi-K2.5 は tencent-coding-plan によって提供される AI モデルです。",
+        "family": "kimi",
+        "id": "kimi-k2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi-K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01-27",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiniMax-M2.5 は tencent-coding-plan によって提供される AI モデルです。",
+        "family": "minimax",
+        "id": "minimax-m2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
+      "tc-code-latest": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Auto は tencent-coding-plan によって提供される AI モデルです。",
+        "family": "auto",
+        "id": "tc-code-latest",
+        "last_updated": "2026-03-08",
+        "limit": {
+          "context": 131072,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Auto",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-08",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Tencent Coding Plan (China)",
     "npm": "@ai-sdk/openai-compatible"
   },
   "togetherai": {
@@ -113811,6 +114358,72 @@
         "temperature": true,
         "tool_call": true
       },
+      "openai/gpt-5.4-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "output": 4.5
+        },
+        "description": "GPT 5.4 Mini は vercel によって提供される AI モデルです。",
+        "family": "gpt",
+        "id": "openai/gpt-5.4-mini",
+        "last_updated": "2026-03-17",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT 5.4 Mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai/gpt-5.4-nano": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.19999999999999998,
+          "output": 1.25
+        },
+        "description": "GPT 5.4 Nano は vercel によって提供される AI モデルです。",
+        "family": "gpt",
+        "id": "openai/gpt-5.4-nano",
+        "last_updated": "2026-03-17",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT 5.4 Nano",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-17",
+        "temperature": true,
+        "tool_call": true
+      },
       "openai/gpt-5.4-pro": {
         "attachment": true,
         "cost": {
@@ -115590,6 +116203,36 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai/glm-5-turbo": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.24,
+          "input": 1.2,
+          "output": 4
+        },
+        "description": "GLM 5 Turbo は vercel によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "zai/glm-5-turbo",
+        "last_updated": "2026-03-17",
+        "limit": {
+          "context": 202800,
+          "output": 131100
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5 Turbo",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-15",
         "temperature": true,
         "tool_call": true
       }
