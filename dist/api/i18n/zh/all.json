@@ -81178,6 +81178,30 @@
         "release_date": "2026-02-12",
         "tool_call": true
       },
+      "minimax-m2.7": {
+        "attachment": false,
+        "description": "minimax-m2.7 是由 ollama-cloud 提供的人工智能模型。",
+        "family": "minimax",
+        "id": "minimax-m2.7",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "minimax-m2.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "tool_call": true
+      },
       "ministral-3:14b": {
         "attachment": true,
         "description": "ministral-3:14b 是由 ollama-cloud 提供的人工智能模型。",
@@ -91140,6 +91164,75 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-14",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2-omni": {
+        "attachment": true,
+        "cost": {
+          "input": 0.4,
+          "output": 2
+        },
+        "description": "MiMo-V2-Omni 是由 openrouter 提供的人工智能模型。",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2-omni",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2-Omni",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2-pro": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 3
+        },
+        "description": "MiMo-V2-Pro 是由 openrouter 提供的人工智能模型。",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2-pro",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2-Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -108620,15 +108713,15 @@
       "deepseek-v3.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.2,
-          "input": 0.4,
-          "output": 1
+          "cache_read": 0.16,
+          "input": 0.33,
+          "output": 0.48
         },
         "description": "DeepSeek V3.2 是由 venice 提供的人工智能模型。",
         "family": "deepseek",
         "id": "deepseek-v3.2",
         "knowledge": "2025-10",
-        "last_updated": "2026-03-12",
+        "last_updated": "2026-03-18",
         "limit": {
           "context": 160000,
           "output": 32768
@@ -109154,6 +109247,36 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m27": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.375,
+          "output": 1.5
+        },
+        "description": "MiniMax M2.7 是由 venice 提供的人工智能模型。",
+        "family": "minimax",
+        "id": "minimax-m27",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 198000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
         "temperature": true,
         "tool_call": true
       },
@@ -118873,6 +118996,78 @@
         "release_date": "2025-12-16",
         "temperature": true,
         "tool_call": true
+      },
+      "mimo-v2-omni": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.08,
+          "input": 0.4,
+          "output": 2
+        },
+        "description": "MiMo-V2-Omni 是由 xiaomi 提供的人工智能模型。",
+        "family": "mimo",
+        "id": "mimo-v2-omni",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 256000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2-Omni",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1,
+          "output": 3
+        },
+        "description": "MiMo-V2-Pro 是由 xiaomi 提供的人工智能模型。",
+        "family": "mimo",
+        "id": "mimo-v2-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2-Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Xiaomi",
@@ -122389,6 +122584,41 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5-turbo": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-5-Turbo 是由 zhipuai-coding-plan 提供的人工智能模型。",
+        "family": "glm",
+        "id": "glm-5-turbo",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-16",
+        "limit": {
+          "context": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5-Turbo",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-16",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       }
