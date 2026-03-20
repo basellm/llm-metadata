@@ -879,6 +879,42 @@
       "temperature": true,
       "tool_call": false
     },
+    "@cf/moonshotai/kimi-k2.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "input": 0.6,
+        "output": 3
+      },
+      "description": "Kimi K2.5 は cloudflare-workers-ai によって提供される AI モデルです。",
+      "family": "kimi",
+      "id": "@cf/moonshotai/kimi-k2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-01-27",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "@cf/myshell-ai/melotts": {
       "attachment": false,
       "cost": {
@@ -907,6 +943,38 @@
       "release_date": "2025-11-14",
       "temperature": true,
       "tool_call": false
+    },
+    "@cf/nvidia/nemotron-3-120b-a12b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.5,
+        "output": 1.5
+      },
+      "description": "Nemotron 3 Super 120B は cloudflare-workers-ai によって提供される AI モデルです。",
+      "family": "nemotron",
+      "id": "@cf/nvidia/nemotron-3-120b-a12b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Super 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-11",
+      "temperature": true,
+      "tool_call": true
     },
     "@cf/openai/gpt-oss-120b": {
       "attachment": false,
