@@ -12818,6 +12818,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "minimax.minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.5 is an AI model provided by amazon-bedrock.",
+        "family": "minimax-m2.5",
+        "id": "minimax.minimax-m2.5",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "mistral.devstral-2-123b": {
         "attachment": false,
         "cost": {
@@ -13921,6 +13951,38 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-01-19",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai.glm-5": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5 is an AI model provided by amazon-bedrock.",
+        "family": "glm",
+        "id": "zai.glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
         "temperature": true,
         "tool_call": true
       }
@@ -21436,7 +21498,7 @@
         "temperature": true,
         "tool_call": true
       },
-      "nvidia/Nemotron-3-Super": {
+      "nvidia/Nemotron-120B-A12B": {
         "attachment": false,
         "cost": {
           "input": 0.3,
@@ -21444,7 +21506,7 @@
         },
         "description": "Nemotron 3 Super is an AI model provided by baseten.",
         "family": "nemotron",
-        "id": "nvidia/Nemotron-3-Super",
+        "id": "nvidia/Nemotron-120B-A12B",
         "interleaved": {
           "field": "reasoning_content"
         },
@@ -28573,6 +28635,134 @@
         "temperature": true,
         "tool_call": true
       },
+      "claude-4-6-sonnet": {
+        "attachment": true,
+        "cost": {
+          "input": 3.59,
+          "output": 17.92
+        },
+        "description": "Claude Sonnet 4.6 is an AI model provided by cortecs.",
+        "family": "claude-sonnet",
+        "id": "claude-4-6-sonnet",
+        "knowledge": "2025-08",
+        "last_updated": "2026-03-13",
+        "limit": {
+          "context": 1000000,
+          "output": 1000000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-haiku-4-5": {
+        "attachment": true,
+        "cost": {
+          "input": 1.09,
+          "output": 5.43
+        },
+        "description": "Claude Haiku 4.5 is an AI model provided by cortecs.",
+        "family": "claude-haiku",
+        "id": "claude-haiku-4-5",
+        "knowledge": "2025-02-28",
+        "last_updated": "2025-10-15",
+        "limit": {
+          "context": 200000,
+          "output": 200000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Haiku 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-10-15",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-opus4-5": {
+        "attachment": true,
+        "cost": {
+          "input": 5.98,
+          "output": 29.89
+        },
+        "description": "Claude Opus 4.5 is an AI model provided by cortecs.",
+        "family": "claude-opus",
+        "id": "claude-opus4-5",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-11-24",
+        "limit": {
+          "context": 200000,
+          "output": 200000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-24",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-opus4-6": {
+        "attachment": true,
+        "cost": {
+          "input": 5.98,
+          "output": 29.89
+        },
+        "description": "Claude Opus 4.6 is an AI model provided by cortecs.",
+        "family": "claude-opus",
+        "id": "claude-opus4-6",
+        "knowledge": "2025-05",
+        "last_updated": "2026-03-13",
+        "limit": {
+          "context": 1000000,
+          "output": 1000000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-05",
+        "temperature": true,
+        "tool_call": true
+      },
       "claude-sonnet-4": {
         "attachment": false,
         "cost": {
@@ -31441,6 +31631,38 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-07-09",
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.95,
+          "output": 3.15
+        },
+        "description": "GLM-5 is an AI model provided by fastrouter.",
+        "family": "glm",
+        "id": "z-ai/glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
         "temperature": true,
         "tool_call": true
       }
@@ -80432,6 +80654,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "nvidia/nemotron-3-super-120b-a12b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.2,
+          "output": 0.8
+        },
+        "description": "Nemotron 3 Super is an AI model provided by nvidia.",
+        "family": "nemotron",
+        "id": "nvidia/nemotron-3-super-120b-a12b",
+        "knowledge": "2024-04",
+        "last_updated": "2026-03-11",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nemotron 3 Super",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-11",
+        "temperature": true,
+        "tool_call": true
+      },
       "nvidia/nemotron-4-340b-instruct": {
         "attachment": false,
         "cost": {
@@ -88601,6 +88853,66 @@
         "reasoning": true,
         "release_date": "2025-12-14",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia/nemotron-3-super-120b-a12b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.5
+        },
+        "description": "Nemotron 3 Super is an AI model provided by openrouter.",
+        "family": "nemotron",
+        "id": "nvidia/nemotron-3-super-120b-a12b",
+        "knowledge": "2024-04",
+        "last_updated": "2026-03-11",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nemotron 3 Super",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia/nemotron-3-super-120b-a12b-free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Nemotron 3 Super (free) is an AI model provided by openrouter.",
+        "family": "nemotron",
+        "id": "nvidia/nemotron-3-super-120b-a12b-free",
+        "knowledge": "2024-04",
+        "last_updated": "2026-03-11",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nemotron 3 Super (free)",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-11",
         "temperature": true,
         "tool_call": true
       },
