@@ -116701,23 +116701,19 @@
         "temperature": true,
         "tool_call": true
       },
-      "gemini-3-flash-preview": {
+      "gemini-3.1-flash-lite-preview": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.05,
-          "context_over_200k": {
-            "cache_read": 0.05,
-            "input": 0.5,
-            "output": 3
-          },
-          "input": 0.5,
-          "output": 3
+          "cache_read": 0.025,
+          "cache_write": 1,
+          "input": 0.25,
+          "output": 1.5
         },
-        "description": "Gemini 3 Flash Preview 是由 vivgrid 提供的人工智能模型。",
-        "family": "gemini-flash",
-        "id": "gemini-3-flash-preview",
+        "description": "Gemini 3.1 Flash Lite Preview 是由 vivgrid 提供的人工智能模型。",
+        "family": "gemini-flash-lite",
+        "id": "gemini-3.1-flash-lite-preview",
         "knowledge": "2025-01",
-        "last_updated": "2025-12-17",
+        "last_updated": "2026-03-03",
         "limit": {
           "context": 1048576,
           "output": 65536
@@ -116734,18 +116730,18 @@
             "text"
           ]
         },
-        "name": "Gemini 3 Flash Preview",
+        "name": "Gemini 3.1 Flash Lite Preview",
         "open_weights": false,
         "provider": {
           "npm": "@ai-sdk/openai-compatible"
         },
         "reasoning": true,
-        "release_date": "2025-12-17",
+        "release_date": "2026-03-03",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
-      "gemini-3-pro-preview": {
+      "gemini-3.1-pro-preview": {
         "attachment": true,
         "cost": {
           "cache_read": 0.2,
@@ -116757,11 +116753,11 @@
           "input": 2,
           "output": 12
         },
-        "description": "Gemini 3 Pro Preview 是由 vivgrid 提供的人工智能模型。",
+        "description": "Gemini 3.1 Pro Preview 是由 vivgrid 提供的人工智能模型。",
         "family": "gemini-pro",
-        "id": "gemini-3-pro-preview",
+        "id": "gemini-3.1-pro-preview",
         "knowledge": "2025-01",
-        "last_updated": "2025-11-18",
+        "last_updated": "2026-02-19",
         "limit": {
           "context": 1048576,
           "output": 65536
@@ -116778,13 +116774,13 @@
             "text"
           ]
         },
-        "name": "Gemini 3 Pro Preview",
+        "name": "Gemini 3.1 Pro Preview",
         "open_weights": false,
         "provider": {
           "npm": "@ai-sdk/openai-compatible"
         },
         "reasoning": true,
-        "release_date": "2025-11-18",
+        "release_date": "2026-02-19",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -116956,6 +116952,44 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-01-14",
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.4": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 15
+        },
+        "description": "GPT-5.4 是由 vivgrid 提供的人工智能模型。",
+        "family": "gpt",
+        "id": "gpt-5.4",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-05",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-03-05",
+        "structured_output": true,
         "temperature": false,
         "tool_call": true
       }
@@ -117209,36 +117243,6 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-01-20",
-        "temperature": true,
-        "tool_call": true
-      },
-      "Qwen2.5-Coder-32B-Instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.2,
-          "output": 0.6
-        },
-        "description": "Qwen2.5 Coder 32B Instruct 是由 vultr 提供的人工智能模型。",
-        "family": "qwen",
-        "id": "Qwen2.5-Coder-32B-Instruct",
-        "knowledge": "2024-10",
-        "last_updated": "2024-11-06",
-        "limit": {
-          "context": 15000,
-          "output": 256
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen2.5 Coder 32B Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-11-06",
         "temperature": true,
         "tool_call": true
       },
