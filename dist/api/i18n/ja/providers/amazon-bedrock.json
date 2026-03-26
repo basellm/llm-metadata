@@ -1571,12 +1571,12 @@
         "output": 1.2
       },
       "description": "MiniMax M2.5 は amazon-bedrock によって提供される AI モデルです。",
-      "family": "minimax-m2.5",
+      "family": "minimax",
       "id": "minimax.minimax-m2.5",
       "last_updated": "2026-03-18",
       "limit": {
-        "context": 1000000,
-        "output": 131072
+        "context": 196608,
+        "output": 98304
       },
       "modalities": {
         "input": [
@@ -1589,7 +1589,7 @@
       "name": "MiniMax M2.5",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2026-02-12",
+      "release_date": "2026-03-18",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -2007,6 +2007,35 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-12-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia.nemotron-super-3-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.65
+      },
+      "description": "NVIDIA Nemotron 3 Super 120B A12B は amazon-bedrock によって提供される AI モデルです。",
+      "family": "nemotron",
+      "id": "nvidia.nemotron-super-3-120b",
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA Nemotron 3 Super 120B A12B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-11",
       "temperature": true,
       "tool_call": true
     },
@@ -2714,8 +2743,8 @@
       },
       "last_updated": "2026-03-18",
       "limit": {
-        "context": 200000,
-        "output": 131072
+        "context": 202752,
+        "output": 101376
       },
       "modalities": {
         "input": [
@@ -2728,7 +2757,7 @@
       "name": "GLM-5",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2026-02-11",
+      "release_date": "2026-03-18",
       "temperature": true,
       "tool_call": true
     }
