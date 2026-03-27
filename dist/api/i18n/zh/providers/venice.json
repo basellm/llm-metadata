@@ -7,6 +7,36 @@
   "id": "venice",
   "lobeIcon": "VeniceAI",
   "models": {
+    "aion-labs.aion-2-0": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 1,
+        "output": 2
+      },
+      "description": "Aion 2.0 是由 venice 提供的人工智能模型。",
+      "family": "o",
+      "id": "aion-labs.aion-2-0",
+      "last_updated": "2026-03-27",
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Aion 2.0",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-24",
+      "temperature": true,
+      "tool_call": false
+    },
     "claude-opus-4-6": {
       "attachment": true,
       "cost": {
@@ -156,7 +186,7 @@
       "family": "deepseek",
       "id": "deepseek-v3.2",
       "knowledge": "2025-10",
-      "last_updated": "2026-03-18",
+      "last_updated": "2026-03-24",
       "limit": {
         "context": 160000,
         "output": 32768
@@ -173,8 +203,9 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-12-04",
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "gemini-3-1-pro-preview": {
       "attachment": true,
@@ -251,41 +282,6 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-12-19",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "gemini-3-pro-preview": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.625,
-        "input": 2.5,
-        "output": 15
-      },
-      "description": "Gemini 3 Pro Preview 是由 venice 提供的人工智能模型。",
-      "family": "gemini-pro",
-      "id": "gemini-3-pro-preview",
-      "knowledge": "2024-04",
-      "last_updated": "2026-03-12",
-      "limit": {
-        "context": 198000,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 3 Pro Preview",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-12-02",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
