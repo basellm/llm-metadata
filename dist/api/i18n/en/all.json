@@ -3947,7 +3947,6 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "aihubmix": {
-    "api": "https://aihubmix.com/v1",
     "doc": "https://docs.aihubmix.com",
     "env": [
       "AIHUBMIX_API_KEY"
@@ -5528,7 +5527,7 @@
       }
     },
     "name": "AIHubMix",
-    "npm": "@ai-sdk/openai-compatible"
+    "npm": "@aihubmix/ai-sdk-provider"
   },
   "alibaba": {
     "api": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
@@ -113618,6 +113617,42 @@
         "temperature": true,
         "tool_call": true
       },
+      "hf:Qwen/Qwen3.5-397B-A17B": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.6,
+          "input": 0.6,
+          "output": 3
+        },
+        "description": "Qwen3.5-97B-A17B is an AI model provided by synthetic.",
+        "family": "qwen",
+        "id": "hf:Qwen/Qwen3.5-397B-A17B",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5-97B-A17B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "hf:deepseek-ai/DeepSeek-R1": {
         "attachment": false,
         "cost": {
@@ -115298,7 +115333,7 @@
         "description": "Aion 2.0 is an AI model provided by venice.",
         "family": "o",
         "id": "aion-labs.aion-2-0",
-        "last_updated": "2026-03-27",
+        "last_updated": "2026-03-31",
         "limit": {
           "context": 128000,
           "output": 32768
@@ -115313,7 +115348,7 @@
         },
         "name": "Aion 2.0",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2026-03-24",
         "temperature": true,
         "tool_call": false
@@ -115992,38 +116027,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "mistral-31-24b": {
-        "attachment": true,
-        "cost": {
-          "input": 0.5,
-          "output": 2
-        },
-        "description": "Venice Medium is an AI model provided by venice.",
-        "family": "mistral",
-        "id": "mistral-31-24b",
-        "knowledge": "2023-10",
-        "last_updated": "2026-03-12",
-        "limit": {
-          "context": 128000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Venice Medium",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-03-18",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "mistral-small-3-2-24b-instruct": {
         "attachment": false,
         "cost": {
@@ -116306,6 +116309,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "openai-gpt-54-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.09375,
+          "input": 0.9375,
+          "output": 5.625
+        },
+        "description": "GPT-5.4 Mini is an AI model provided by venice.",
+        "family": "gpt-mini",
+        "id": "openai-gpt-54-mini",
+        "last_updated": "2026-03-31",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4 Mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "openai-gpt-54-pro": {
         "attachment": true,
         "cost": {
@@ -116429,37 +116464,6 @@
           ]
         },
         "name": "Qwen 3 235B A22B Thinking 2507",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-04-29",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-4b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.05,
-          "output": 0.15
-        },
-        "description": "Venice Small is an AI model provided by venice.",
-        "family": "qwen",
-        "id": "qwen3-4b",
-        "knowledge": "2024-07",
-        "last_updated": "2026-03-12",
-        "limit": {
-          "context": 32000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Venice Small",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-04-29",
