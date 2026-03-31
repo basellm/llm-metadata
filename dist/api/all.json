@@ -92461,6 +92461,40 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3.6-plus-free": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3.6 Plus Free is an AI model provided by opencode.",
+        "family": "qwen-free",
+        "id": "qwen3.6-plus-free",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-03-30",
+        "limit": {
+          "context": 1048576,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 Plus Free",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-30",
+        "temperature": true,
+        "tool_call": true
+      },
       "trinity-large-preview-free": {
         "attachment": false,
         "cost": {
@@ -97137,6 +97171,36 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-16",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3.6-plus-preview:free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3.6 Plus Preview (free) is an AI model provided by openrouter.",
+        "family": "qwen",
+        "id": "qwen/qwen3.6-plus-preview:free",
+        "last_updated": "2026-03-30",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 Plus Preview (free)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-30",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -119377,6 +119441,36 @@
         "temperature": true,
         "tool_call": false
       },
+      "kwaipilot/kat-coder-pro-v2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "Kat Coder Pro V2 is an AI model provided by vercel.",
+        "family": "kat-coder",
+        "id": "kwaipilot/kat-coder-pro-v2",
+        "last_updated": "2026-03-30",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kat Coder Pro V2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-27",
+        "temperature": true,
+        "tool_call": true
+      },
       "meituan/longcat-flash-chat": {
         "attachment": false,
         "description": "LongCat Flash Chat is an AI model provided by vercel.",
@@ -120767,6 +120861,35 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2024-12",
+        "temperature": true,
+        "tool_call": false
+      },
+      "nvidia/nemotron-3-super-120b-a12b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 0.65
+        },
+        "description": "NVIDIA Nemotron 3 Super 120B A12B is an AI model provided by vercel.",
+        "family": "nemotron",
+        "id": "nvidia/nemotron-3-super-120b-a12b",
+        "last_updated": "2026-03-30",
+        "limit": {
+          "context": 256000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "NVIDIA Nemotron 3 Super 120B A12B",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-18",
         "temperature": true,
         "tool_call": false
       },
@@ -124120,66 +124243,6 @@
     "iconURL": "https://models.dev/logos/vultr.svg",
     "id": "vultr",
     "models": {
-      "DeepSeek-R1-Distill-Llama-70B": {
-        "attachment": false,
-        "cost": {
-          "input": 2,
-          "output": 2
-        },
-        "description": "DeepSeek R1 Distill Llama 70B is an AI model provided by vultr.",
-        "family": "deepseek-thinking",
-        "id": "DeepSeek-R1-Distill-Llama-70B",
-        "knowledge": "2024-10",
-        "last_updated": "2025-01-20",
-        "limit": {
-          "context": 130000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek R1 Distill Llama 70B",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-01-20",
-        "temperature": true,
-        "tool_call": true
-      },
-      "DeepSeek-R1-Distill-Qwen-32B": {
-        "attachment": false,
-        "cost": {
-          "input": 0.3,
-          "output": 0.3
-        },
-        "description": "DeepSeek R1 Distill Qwen 32B is an AI model provided by vultr.",
-        "family": "qwen",
-        "id": "DeepSeek-R1-Distill-Qwen-32B",
-        "knowledge": "2024-10",
-        "last_updated": "2025-01-20",
-        "limit": {
-          "context": 130000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek R1 Distill Qwen 32B",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-01-20",
-        "temperature": true,
-        "tool_call": true
-      },
       "DeepSeek-V3.2": {
         "attachment": false,
         "cost": {
@@ -124270,36 +124333,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "Llama-3_1-Nemotron-Ultra-253B-v1": {
-        "attachment": false,
-        "cost": {
-          "input": 0.55,
-          "output": 1.8
-        },
-        "description": "Llama 3.1 Nemotron Ultra 253B v1 is an AI model provided by vultr.",
-        "family": "llama",
-        "id": "Llama-3_1-Nemotron-Ultra-253B-v1",
-        "knowledge": "2024-10",
-        "last_updated": "2025-01-20",
-        "limit": {
-          "context": 32000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama 3.1 Nemotron Ultra 253B v1",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-01-20",
-        "temperature": true,
-        "tool_call": true
-      },
       "MiniMax-M2.5": {
         "attachment": false,
         "cost": {
@@ -124327,66 +124360,6 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-01-20",
-        "temperature": true,
-        "tool_call": true
-      },
-      "NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4": {
-        "attachment": false,
-        "cost": {
-          "input": 0.2,
-          "output": 0.8
-        },
-        "description": "NVIDIA Nemotron 3 Super 120B A12B NVFP4 is an AI model provided by vultr.",
-        "family": "nemotron",
-        "id": "NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
-        "knowledge": "2024-10",
-        "last_updated": "2025-01-20",
-        "limit": {
-          "context": 260000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "NVIDIA Nemotron 3 Super 120B A12B NVFP4",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-01-20",
-        "temperature": true,
-        "tool_call": true
-      },
-      "gpt-oss-120b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 0.6
-        },
-        "description": "GPT OSS 120B is an AI model provided by vultr.",
-        "family": "gpt-oss",
-        "id": "gpt-oss-120b",
-        "knowledge": "2024-10",
-        "last_updated": "2025-06-23",
-        "limit": {
-          "context": 130000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT OSS 120B",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-06-23",
         "temperature": true,
         "tool_call": true
       }
@@ -126648,7 +126621,7 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "zenmux": {
-    "api": "https://zenmux.ai/api/anthropic/v1",
+    "api": "https://zenmux.ai/api/v1",
     "doc": "https://docs.zenmux.ai",
     "env": [
       "ZENMUX_API_KEY"
@@ -126683,42 +126656,12 @@
         },
         "name": "Claude 3.5 Haiku",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": false,
         "release_date": "2024-11-04",
-        "temperature": true,
-        "tool_call": true
-      },
-      "anthropic/claude-3.5-sonnet": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
-          "input": 3,
-          "output": 15
-        },
-        "description": "Claude 3.5 Sonnet (Retiring Soon) is an AI model provided by zenmux.",
-        "id": "anthropic/claude-3.5-sonnet",
-        "knowledge": "2025-01-01",
-        "last_updated": "2024-10-22",
-        "limit": {
-          "context": 200000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude 3.5 Sonnet (Retiring Soon)",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-10-22",
-        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -126750,6 +126693,10 @@
         },
         "name": "Claude 3.7 Sonnet",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2025-02-24",
         "temperature": true,
@@ -126782,6 +126729,10 @@
         },
         "name": "Claude Haiku 4.5",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": false,
         "release_date": "2025-10-15",
         "temperature": true,
@@ -126801,7 +126752,7 @@
         "last_updated": "2025-05-22",
         "limit": {
           "context": 200000,
-          "output": 64000
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -126815,6 +126766,10 @@
         },
         "name": "Claude Opus 4",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2025-05-22",
         "temperature": true,
@@ -126848,6 +126803,10 @@
         },
         "name": "Claude Opus 4.1",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2025-08-05",
         "temperature": true,
@@ -126881,6 +126840,10 @@
         },
         "name": "Claude Opus 4.5",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2025-11-24",
         "temperature": true,
@@ -126913,6 +126876,10 @@
         },
         "name": "Claude Opus 4.6",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2026-02-06",
         "temperature": true,
@@ -126946,6 +126913,10 @@
         },
         "name": "Claude Sonnet 4",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2025-05-22",
         "temperature": true,
@@ -126979,6 +126950,10 @@
         },
         "name": "Claude Sonnet 4.5",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2025-09-29",
         "temperature": true,
@@ -127011,6 +126986,10 @@
         },
         "name": "Claude Sonnet 4.6",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2026-02-18",
         "temperature": true,
@@ -127272,41 +127251,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "google/gemini-3-pro-image-preview": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.2,
-          "cache_write": 4.5,
-          "input": 2,
-          "output": 12
-        },
-        "description": "Gemini 3 Pro Image Preview is an AI model provided by zenmux.",
-        "id": "google/gemini-3-pro-image-preview",
-        "knowledge": "2025-01-01",
-        "last_updated": "2025-03-20",
-        "limit": {
-          "context": 1048000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemini 3 Pro Image Preview",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-03-20",
-        "temperature": true,
-        "tool_call": true
-      },
       "google/gemini-3-pro-preview": {
         "attachment": true,
         "cost": {
@@ -127553,6 +127497,10 @@
         },
         "name": "MiniMax M2",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2025-10-27",
         "temperature": true,
@@ -127584,6 +127532,10 @@
         },
         "name": "MiniMax M2.1",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2025-12-22",
         "temperature": true,
@@ -127599,9 +127551,6 @@
         },
         "description": "MiniMax M2.5 is an AI model provided by zenmux.",
         "id": "minimax/minimax-m2.5",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
         "knowledge": "2025-01-01",
         "last_updated": "2026-02-13",
         "limit": {
@@ -127618,6 +127567,10 @@
         },
         "name": "MiniMax M2.5",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2026-02-13",
         "temperature": true,
@@ -127633,9 +127586,6 @@
         },
         "description": "MiniMax M2.5 highspeed is an AI model provided by zenmux.",
         "id": "minimax/minimax-m2.5-lightning",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
         "knowledge": "2025-01-01",
         "last_updated": "2026-02-13",
         "limit": {
@@ -127652,6 +127602,10 @@
         },
         "name": "MiniMax M2.5 highspeed",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2026-02-13",
         "temperature": true,
@@ -127681,6 +127635,10 @@
         },
         "name": "MiniMax M2.7",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2026-03-20",
         "temperature": true,
@@ -127710,6 +127668,10 @@
         },
         "name": "MiniMax M2.7 highspeed",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2026-03-20",
         "temperature": true,
@@ -127837,7 +127799,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-01-27",
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "openai/gpt-5": {
@@ -127867,6 +127829,10 @@
         },
         "name": "GPT-5",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "release_date": "2025-08-07",
         "temperature": true,
@@ -127898,6 +127864,10 @@
         },
         "name": "GPT-5 Codex",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "release_date": "2025-09-23",
         "temperature": true,
@@ -127930,6 +127900,10 @@
         },
         "name": "GPT-5.1",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "release_date": "2025-11-13",
         "temperature": true,
@@ -127962,6 +127936,10 @@
         },
         "name": "GPT-5.1 Chat",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": false,
         "release_date": "2025-11-13",
         "temperature": true,
@@ -127993,6 +127971,10 @@
         },
         "name": "GPT-5.1-Codex",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "release_date": "2025-11-13",
         "temperature": true,
@@ -128024,6 +128006,10 @@
         },
         "name": "GPT-5.1-Codex-Mini",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "release_date": "2025-11-13",
         "temperature": true,
@@ -128056,6 +128042,10 @@
         },
         "name": "GPT-5.2",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "release_date": "2025-12-11",
         "temperature": false,
@@ -128088,6 +128078,10 @@
         },
         "name": "GPT-5.2-Codex",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "release_date": "2026-01-15",
         "temperature": false,
@@ -128119,6 +128113,10 @@
         },
         "name": "GPT-5.2-Pro",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "release_date": "2025-12-11",
         "temperature": false,
@@ -128148,6 +128146,10 @@
         },
         "name": "GPT-5.3 Chat",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": false,
         "release_date": "2026-03-20",
         "temperature": true,
@@ -128177,6 +128179,10 @@
         },
         "name": "GPT-5.3 Codex",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "release_date": "2026-03-20",
         "temperature": true,
@@ -128207,6 +128213,10 @@
         },
         "name": "GPT-5.4",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "release_date": "2026-03-20",
         "temperature": true,
@@ -128236,6 +128246,10 @@
         },
         "name": "GPT-5.4 Mini",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": false,
         "release_date": "2026-03-20",
         "temperature": true,
@@ -128265,6 +128279,10 @@
         },
         "name": "GPT-5.4 Nano",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": false,
         "release_date": "2026-03-20",
         "temperature": true,
@@ -128295,6 +128313,10 @@
         },
         "name": "GPT-5.4 Pro",
         "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/v1",
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "release_date": "2026-03-20",
         "temperature": true,
@@ -129231,6 +129253,9 @@
         },
         "description": "GLM 4.7 is an AI model provided by zenmux.",
         "id": "z-ai/glm-4.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "knowledge": "2025-01-01",
         "last_updated": "2025-12-23",
         "limit": {
@@ -129260,6 +129285,9 @@
         },
         "description": "GLM 4.7 Flash (Free) is an AI model provided by zenmux.",
         "id": "z-ai/glm-4.7-flash-free",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "knowledge": "2025-01-01",
         "last_updated": "2026-01-19",
         "limit": {
@@ -129378,7 +129406,7 @@
       }
     },
     "name": "ZenMux",
-    "npm": "@ai-sdk/anthropic"
+    "npm": "@ai-sdk/openai-compatible"
   },
   "zhipuai": {
     "api": "https://open.bigmodel.cn/api/paas/v4",
