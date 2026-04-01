@@ -89113,6 +89113,34 @@
     "id": "openai",
     "lobeIcon": "OpenAI.Color",
     "models": {
+      "chatgpt-image-latest": {
+        "attachment": true,
+        "description": "chatgpt-image-latest is an AI model provided by openai.",
+        "family": "gpt-image",
+        "id": "chatgpt-image-latest",
+        "last_updated": "2025-12-16",
+        "limit": {
+          "context": 0,
+          "input": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "chatgpt-image-latest",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-12-16",
+        "temperature": false,
+        "tool_call": false
+      },
       "codex-mini-latest": {
         "attachment": true,
         "cost": {
@@ -90327,11 +90355,13 @@
           "output": 20
         },
         "description": "An advanced AI model for generating images from textual descriptions.",
+        "family": "gpt-image",
         "id": "gpt-image-1",
         "knowledge": "2023-10",
         "last_updated": "2024-10-01",
         "limit": {
           "context": 1000,
+          "input": 0,
           "output": 512
         },
         "modalities": {
@@ -90348,6 +90378,62 @@
         "release_date": "2024-01-15",
         "temperature": true,
         "tool_call": true
+      },
+      "gpt-image-1-mini": {
+        "attachment": true,
+        "description": "gpt-image-1-mini is an AI model provided by openai.",
+        "family": "gpt-image",
+        "id": "gpt-image-1-mini",
+        "last_updated": "2025-09-26",
+        "limit": {
+          "context": 0,
+          "input": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "gpt-image-1-mini",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-09-26",
+        "temperature": false,
+        "tool_call": false
+      },
+      "gpt-image-1.5": {
+        "attachment": true,
+        "description": "gpt-image-1.5 is an AI model provided by openai.",
+        "family": "gpt-image",
+        "id": "gpt-image-1.5",
+        "last_updated": "2025-11-25",
+        "limit": {
+          "context": 0,
+          "input": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text",
+            "image"
+          ]
+        },
+        "name": "gpt-image-1.5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-11-25",
+        "temperature": false,
+        "tool_call": false
       },
       "o1": {
         "attachment": true,
@@ -102046,7 +102132,7 @@
         "reasoning": false,
         "release_date": "2025-12-16",
         "temperature": false,
-        "tool_call": true
+        "tool_call": false
       },
       "openai/o1": {
         "attachment": true,
@@ -114616,6 +114702,97 @@
     "name": "Tencent Coding Plan (China)",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "the-grid-ai": {
+    "api": "https://api.thegrid.ai/v1",
+    "doc": "https://thegrid.ai/docs",
+    "env": [
+      "THEGRIDAI_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/the-grid-ai.svg",
+    "id": "the-grid-ai",
+    "models": {
+      "text-max": {
+        "attachment": false,
+        "description": "Text Max is an AI model provided by the-grid-ai.",
+        "id": "text-max",
+        "last_updated": "2026-03-24",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Text Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-24",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "text-prime": {
+        "attachment": false,
+        "description": "Text Prime is an AI model provided by the-grid-ai.",
+        "id": "text-prime",
+        "last_updated": "2026-02-26",
+        "limit": {
+          "context": 128000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Text Prime",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-26",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "text-standard": {
+        "attachment": false,
+        "description": "Text Standard is an AI model provided by the-grid-ai.",
+        "id": "text-standard",
+        "last_updated": "2026-02-26",
+        "limit": {
+          "context": 128000,
+          "output": 16000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Text Standard",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-26",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "The Grid AI",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "togetherai": {
     "doc": "https://docs.together.ai/docs/serverless-models",
     "env": [
@@ -126252,6 +126429,43 @@
         "structured_output": true,
         "temperature": true,
         "tool_call": true
+      },
+      "glm-5v-turbo": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.24,
+          "cache_write": 0,
+          "input": 1.2,
+          "output": 4
+        },
+        "description": "glm-5v-turbo is an AI model provided by zai.",
+        "family": "glm",
+        "id": "glm-5v-turbo",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-01",
+        "limit": {
+          "context": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "glm-5v-turbo",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-01",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Z.AI",
@@ -126658,6 +126872,43 @@
         "reasoning": true,
         "release_date": "2026-03-27",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5v-turbo": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "glm-5v-turbo is an AI model provided by zai-coding-plan.",
+        "family": "glm",
+        "id": "glm-5v-turbo",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-01",
+        "limit": {
+          "context": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "glm-5v-turbo",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-01",
         "temperature": true,
         "tool_call": true
       }
@@ -129787,6 +130038,43 @@
         "release_date": "2026-02-11",
         "temperature": true,
         "tool_call": true
+      },
+      "glm-5v-turbo": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.2,
+          "cache_write": 0,
+          "input": 5,
+          "output": 22
+        },
+        "description": "glm-5v-turbo is an AI model provided by zhipuai.",
+        "family": "glm",
+        "id": "glm-5v-turbo",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-01",
+        "limit": {
+          "context": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "glm-5v-turbo",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-01",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Zhipu AI",
@@ -130225,6 +130513,43 @@
         "reasoning": true,
         "release_date": "2026-03-27",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5v-turbo": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "glm-5v-turbo is an AI model provided by zhipuai-coding-plan.",
+        "family": "glm",
+        "id": "glm-5v-turbo",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-01",
+        "limit": {
+          "context": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "glm-5v-turbo",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-01",
         "temperature": true,
         "tool_call": true
       }

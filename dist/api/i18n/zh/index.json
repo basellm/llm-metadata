@@ -32339,6 +32339,17 @@
     {
       "flags": {
         "attachment": true,
+        "reasoning": false,
+        "tool_call": false
+      },
+      "id": "chatgpt-image-latest",
+      "name": "chatgpt-image-latest",
+      "providerId": "openai",
+      "updated": "2025-12-16"
+    },
+    {
+      "flags": {
+        "attachment": true,
         "reasoning": true,
         "tool_call": true
       },
@@ -32742,6 +32753,28 @@
       "name": "GPT-IMAGE-1",
       "providerId": "openai",
       "updated": "2024-10-01"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": false,
+        "tool_call": false
+      },
+      "id": "gpt-image-1-mini",
+      "name": "gpt-image-1-mini",
+      "providerId": "openai",
+      "updated": "2025-09-26"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": false,
+        "tool_call": false
+      },
+      "id": "gpt-image-1.5",
+      "name": "gpt-image-1.5",
+      "providerId": "openai",
+      "updated": "2025-11-25"
     },
     {
       "flags": {
@@ -36729,7 +36762,7 @@
       "flags": {
         "attachment": true,
         "reasoning": false,
-        "tool_call": true
+        "tool_call": false
       },
       "id": "openai/gpt-image-1.5",
       "name": "gpt-image-1.5",
@@ -41294,6 +41327,39 @@
       "flags": {
         "attachment": false,
         "reasoning": true,
+        "tool_call": true
+      },
+      "id": "text-max",
+      "name": "Text Max",
+      "providerId": "the-grid-ai",
+      "updated": "2026-03-24"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "text-prime",
+      "name": "Text Prime",
+      "providerId": "the-grid-ai",
+      "updated": "2026-02-26"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "text-standard",
+      "name": "Text Standard",
+      "providerId": "the-grid-ai",
+      "updated": "2026-02-26"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": true,
         "tool_call": false
       },
       "id": "deepseek-ai/DeepSeek-R1",
@@ -45318,6 +45384,17 @@
     },
     {
       "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "glm-5v-turbo",
+      "name": "glm-5v-turbo",
+      "providerId": "zai",
+      "updated": "2026-04-01"
+    },
+    {
+      "flags": {
         "attachment": false,
         "reasoning": true,
         "tool_call": true
@@ -45447,6 +45524,17 @@
       "name": "GLM-5.1",
       "providerId": "zai-coding-plan",
       "updated": "2026-03-27"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "glm-5v-turbo",
+      "name": "glm-5v-turbo",
+      "providerId": "zai-coding-plan",
+      "updated": "2026-04-01"
     },
     {
       "flags": {
@@ -46495,6 +46583,17 @@
     },
     {
       "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "glm-5v-turbo",
+      "name": "glm-5v-turbo",
+      "providerId": "zhipuai",
+      "updated": "2026-04-01"
+    },
+    {
+      "flags": {
         "attachment": false,
         "reasoning": true,
         "tool_call": true
@@ -46635,6 +46734,17 @@
       "name": "GLM-5.1",
       "providerId": "zhipuai-coding-plan",
       "updated": "2026-03-27"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "glm-5v-turbo",
+      "name": "glm-5v-turbo",
+      "providerId": "zhipuai-coding-plan",
+      "updated": "2026-04-01"
     }
   ],
   "providers": [
@@ -47236,7 +47346,7 @@
       "iconURL": "https://models.dev/logos/openai.svg",
       "id": "openai",
       "lobeIcon": "OpenAI.Color",
-      "modelCount": 50,
+      "modelCount": 53,
       "name": "OpenAI"
     },
     {
@@ -47403,6 +47513,14 @@
       "name": "Tencent Coding Plan (China)"
     },
     {
+      "api": "https://api.thegrid.ai/v1",
+      "doc": "https://thegrid.ai/docs",
+      "iconURL": "https://models.dev/logos/the-grid-ai.svg",
+      "id": "the-grid-ai",
+      "modelCount": 3,
+      "name": "The Grid AI"
+    },
+    {
       "doc": "https://docs.together.ai/docs/serverless-models",
       "iconURL": "https://models.dev/logos/togetherai.svg",
       "id": "togetherai",
@@ -47490,7 +47608,7 @@
       "iconURL": "https://models.dev/logos/zai.svg",
       "id": "zai",
       "lobeIcon": "ZAI",
-      "modelCount": 11,
+      "modelCount": 12,
       "name": "Z.AI"
     },
     {
@@ -47498,7 +47616,7 @@
       "doc": "https://docs.z.ai/devpack/overview",
       "iconURL": "https://models.dev/logos/zai-coding-plan.svg",
       "id": "zai-coding-plan",
-      "modelCount": 12,
+      "modelCount": 13,
       "name": "Z.AI Coding Plan"
     },
     {
@@ -47515,7 +47633,7 @@
       "iconURL": "https://models.dev/logos/zhipuai.svg",
       "id": "zhipuai",
       "lobeIcon": "Zhipu.Color",
-      "modelCount": 10,
+      "modelCount": 11,
       "name": "Zhipu AI"
     },
     {
@@ -47523,7 +47641,7 @@
       "doc": "https://docs.bigmodel.cn/cn/coding-plan/overview",
       "iconURL": "https://models.dev/logos/zhipuai-coding-plan.svg",
       "id": "zhipuai-coding-plan",
-      "modelCount": 13,
+      "modelCount": 14,
       "name": "Zhipu AI Coding Plan"
     }
   ]
