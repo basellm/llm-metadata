@@ -801,6 +801,44 @@
       "temperature": true,
       "tool_call": true
     },
+    "moonshotai/kimi-k2-thinking-maas": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 2.5
+      },
+      "description": "Kimi K2 Thinking は google-vertex によって提供される AI モデルです。",
+      "family": "kimi-thinking",
+      "id": "moonshotai/kimi-k2-thinking-maas",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-08",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 Thinking",
+      "open_weights": true,
+      "provider": {
+        "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+        "npm": "@ai-sdk/openai-compatible"
+      },
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-oss-120b-maas": {
       "attachment": false,
       "cost": {

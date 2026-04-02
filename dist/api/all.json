@@ -14197,40 +14197,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "claude-3-7-sonnet-latest": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
-          "input": 3,
-          "output": 15
-        },
-        "description": "Claude Sonnet 3.7 (latest) is an AI model provided by anthropic.",
-        "family": "claude-sonnet",
-        "id": "claude-3-7-sonnet-latest",
-        "knowledge": "2024-10-31",
-        "last_updated": "2025-02-19",
-        "limit": {
-          "context": 200000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Sonnet 3.7 (latest)",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-02-19",
-        "temperature": true,
-        "tool_call": true
-      },
       "claude-3-haiku-20240307": {
         "attachment": true,
         "cost": {
@@ -38222,6 +38188,44 @@
         },
         "reasoning": false,
         "release_date": "2025-04-29",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/kimi-k2-thinking-maas": {
+        "attachment": false,
+        "cost": {
+          "input": 0.6,
+          "output": 2.5
+        },
+        "description": "Kimi K2 Thinking is an AI model provided by google-vertex.",
+        "family": "kimi-thinking",
+        "id": "moonshotai/kimi-k2-thinking-maas",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-08",
+        "last_updated": "2025-11-13",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2 Thinking",
+        "open_weights": true,
+        "provider": {
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2025-11-13",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -92694,6 +92698,82 @@
         "temperature": true,
         "tool_call": true
       },
+      "mimo-v2-omni": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.08,
+          "input": 0.4,
+          "output": 2
+        },
+        "description": "MiMo V2 Omni is an AI model provided by opencode-go.",
+        "family": "mimo-omni",
+        "id": "mimo-v2-omni",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 262144,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2 Omni",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6
+          },
+          "input": 1,
+          "output": 3
+        },
+        "description": "MiMo V2 Pro is an AI model provided by opencode-go.",
+        "family": "mimo-pro",
+        "id": "mimo-v2-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 1048576,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2 Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
       "minimax-m2.5": {
         "attachment": false,
         "cost": {
@@ -97286,6 +97366,38 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-30",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3.6-plus:free": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3.6 Plus (free) is an AI model provided by openrouter.",
+        "family": "qwen",
+        "id": "qwen/qwen3.6-plus:free",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 Plus (free)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-02",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
