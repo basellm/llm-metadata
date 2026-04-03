@@ -39,16 +39,18 @@
       "temperature": true,
       "tool_call": true
     },
-    "MiniMax/MiniMax-M2.5": {
+    "MiniMax/MiniMax-M2.7": {
       "attachment": false,
       "cost": {
-        "input": 0.301,
-        "output": 1.205
+        "cache_read": 0.06,
+        "cache_write": 0.375,
+        "input": 0.3,
+        "output": 1.2
       },
-      "description": "MiniMax M2.5 は alibaba-cn によって提供される AI モデルです。",
+      "description": "MiniMax-M2.7 は alibaba-cn によって提供される AI モデルです。",
       "family": "minimax",
-      "id": "MiniMax/MiniMax-M2.5",
-      "last_updated": "2026-02-12",
+      "id": "MiniMax/MiniMax-M2.7",
+      "last_updated": "2026-03-18",
       "limit": {
         "context": 204800,
         "output": 131072
@@ -61,10 +63,10 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.5",
+      "name": "MiniMax-M2.7",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2026-02-12",
+      "release_date": "2026-03-18",
       "temperature": true,
       "tool_call": true
     },
@@ -2077,6 +2079,39 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-02-16",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.6-plus": {
+      "attachment": false,
+      "cost": {
+        "input": 1.146,
+        "output": 6.88,
+        "reasoning": 6.88
+      },
+      "description": "Qwen3.6 Plus は alibaba-cn によって提供される AI モデルです。",
+      "family": "qwen",
+      "id": "qwen3.6-plus",
+      "knowledge": "2025-04",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 Plus",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-02",
       "temperature": true,
       "tool_call": true
     },
