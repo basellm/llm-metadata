@@ -1,0 +1,113 @@
+{
+  "api": "https://token-plan-ams.xiaomimimo.com/v1",
+  "doc": "https://platform.xiaomimimo.com/#/docs",
+  "env": [
+    "XIAOMI_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/xiaomi-token-plan-ams.svg",
+  "id": "xiaomi-token-plan-ams",
+  "models": {
+    "mimo-v2-omni": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "MiMo-V2-Omni は xiaomi-token-plan-ams によって提供される AI モデルです。",
+      "family": "mimo",
+      "id": "mimo-v2-omni",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2026-03-18",
+      "limit": {
+        "context": 256000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2-Omni",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mimo-v2-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "MiMo-V2-Pro は xiaomi-token-plan-ams によって提供される AI モデルです。",
+      "family": "mimo",
+      "id": "mimo-v2-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2026-03-18",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2-Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mimo-v2-tts": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "MiMo-V2-TTS は xiaomi-token-plan-ams によって提供される AI モデルです。",
+      "family": "mimo",
+      "id": "mimo-v2-tts",
+      "last_updated": "2026-03-18",
+      "limit": {
+        "context": 8000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "MiMo-V2-TTS",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-03-18",
+      "tool_call": false
+    }
+  },
+  "name": "Xiaomi Token Plan (Europe)",
+  "npm": "@ai-sdk/openai-compatible"
+}
