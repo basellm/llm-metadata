@@ -37595,6 +37595,42 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek-ai/deepseek-v3.2-maas": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.056,
+          "input": 0.56,
+          "output": 1.68
+        },
+        "description": "DeepSeek V3.2 是由 google-vertex 提供的人工智能模型。",
+        "family": "deepseek",
+        "id": "deepseek-ai/deepseek-v3.2-maas",
+        "last_updated": "2026-04-04",
+        "limit": {
+          "context": 163840,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.2",
+        "open_weights": true,
+        "provider": {
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2025-12-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gemini-2.0-flash": {
         "attachment": true,
         "cost": {
@@ -86660,6 +86696,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemma-4-31b-it": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemma-4-31B-IT 是由 nvidia 提供的人工智能模型。",
+        "family": "gemma",
+        "id": "google/gemma-4-31b-it",
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 256000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma-4-31B-IT",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-02",
+        "temperature": true,
+        "tool_call": true
+      },
       "meta/codellama-70b": {
         "attachment": false,
         "cost": {
@@ -89510,7 +89578,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -89543,7 +89612,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -89609,7 +89679,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -89740,7 +89811,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -90616,7 +90688,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -90744,7 +90817,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -97502,36 +97576,6 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-16",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen/qwen3.6-plus-preview:free": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Qwen3.6 Plus Preview (free) 是由 openrouter 提供的人工智能模型。",
-        "family": "qwen",
-        "id": "qwen/qwen3.6-plus-preview:free",
-        "last_updated": "2026-03-30",
-        "limit": {
-          "context": 1000000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.6 Plus Preview (free)",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2026-03-30",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -115254,36 +115298,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "Qwen/Qwen3-Next-80B-A3B-Instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 1.5
-        },
-        "description": "Qwen3-Next-80B-A3B-Instruct 是由 togetherai 提供的人工智能模型。",
-        "family": "qwen",
-        "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
-        "knowledge": "2025-07",
-        "last_updated": "2025-07-25",
-        "limit": {
-          "context": 262144,
-          "output": 262144
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3-Next-80B-A3B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-07-25",
-        "temperature": true,
-        "tool_call": true
-      },
       "Qwen/Qwen3.5-397B-A17B": {
         "attachment": false,
         "cost": {
@@ -115464,36 +115478,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "moonshotai/Kimi-K2-Instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 1,
-          "output": 3
-        },
-        "description": "Kimi K2 Instruct 是由 togetherai 提供的人工智能模型。",
-        "family": "kimi",
-        "id": "moonshotai/Kimi-K2-Instruct",
-        "knowledge": "2024-10",
-        "last_updated": "2025-07-14",
-        "limit": {
-          "context": 131072,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi K2 Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-07-14",
-        "temperature": true,
-        "tool_call": true
-      },
       "moonshotai/Kimi-K2.5": {
         "attachment": false,
         "cost": {
@@ -115553,66 +115537,6 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-08-05",
-        "temperature": true,
-        "tool_call": true
-      },
-      "zai-org/GLM-4.6": {
-        "attachment": false,
-        "cost": {
-          "input": 0.6,
-          "output": 2.2
-        },
-        "description": "GLM 4.6 是由 togetherai 提供的人工智能模型。",
-        "family": "glm",
-        "id": "zai-org/GLM-4.6",
-        "knowledge": "2025-09",
-        "last_updated": "2025-09-30",
-        "limit": {
-          "context": 200000,
-          "output": 200000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 4.6",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-09-30",
-        "temperature": true,
-        "tool_call": true
-      },
-      "zai-org/GLM-4.7": {
-        "attachment": false,
-        "cost": {
-          "input": 0.45,
-          "output": 2
-        },
-        "description": "GLM-4.7 是由 togetherai 提供的人工智能模型。",
-        "family": "glm",
-        "id": "zai-org/GLM-4.7",
-        "knowledge": "2025-07",
-        "last_updated": "2025-07-25",
-        "limit": {
-          "context": 200000,
-          "output": 200000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.7",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-07-25",
         "temperature": true,
         "tool_call": true
       },
@@ -121779,7 +121703,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -121812,7 +121737,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -121878,7 +121804,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -121911,7 +121838,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -122778,7 +122706,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -122811,7 +122740,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -124902,6 +124832,39 @@
         "temperature": false,
         "tool_call": true
       },
+      "gpt-5.3-codex": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.175,
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.3 Codex 是由 vivgrid 提供的人工智能模型。",
+        "family": "gpt-codex",
+        "id": "gpt-5.3-codex",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-02-24",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.3 Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-24",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "gpt-5.4": {
         "attachment": true,
         "cost": {
@@ -124936,6 +124899,82 @@
         },
         "reasoning": true,
         "release_date": "2026-03-05",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.4-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "output": 4.5
+        },
+        "description": "GPT-5.4 Mini 是由 vivgrid 提供的人工智能模型。",
+        "family": "gpt-mini",
+        "id": "gpt-5.4-mini",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-17",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4 Mini",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-03-17",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.4-nano": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.2,
+          "output": 1.25
+        },
+        "description": "GPT-5.4 Nano 是由 vivgrid 提供的人工智能模型。",
+        "family": "gpt-nano",
+        "id": "gpt-5.4-nano",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-17",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4 Nano",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-03-17",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
