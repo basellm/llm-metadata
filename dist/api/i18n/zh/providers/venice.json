@@ -37,6 +37,40 @@
       "temperature": true,
       "tool_call": false
     },
+    "arcee-trinity-large-thinking": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.3125,
+        "output": 1.125
+      },
+      "description": "Trinity Large Thinking 是由 venice 提供的人工智能模型。",
+      "family": "trinity",
+      "id": "arcee-trinity-large-thinking",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-04",
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Trinity Large Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "claude-opus-4-6": {
       "attachment": true,
       "cost": {
@@ -314,6 +348,70 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-11-04",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google.gemma-4-26b-a4b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.1625,
+        "output": 0.5
+      },
+      "description": "Google Gemma 4 26B A4B Instruct 是由 venice 提供的人工智能模型。",
+      "family": "gemma",
+      "id": "google.gemma-4-26b-a4b-it",
+      "last_updated": "2026-04-04",
+      "limit": {
+        "context": 256000,
+        "output": 12288
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Google Gemma 4 26B A4B Instruct",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google.gemma-4-31b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.175,
+        "output": 0.5
+      },
+      "description": "Google Gemma 4 31B Instruct 是由 venice 提供的人工智能模型。",
+      "family": "gemma",
+      "id": "google.gemma-4-31b-it",
+      "last_updated": "2026-04-04",
+      "limit": {
+        "context": 256000,
+        "output": 12288
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Google Gemma 4 31B Instruct",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-03",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1197,10 +1295,10 @@
       "description": "Qwen 3.5 9B 是由 venice 提供的人工智能模型。",
       "family": "qwen",
       "id": "qwen3-5-9b",
-      "last_updated": "2026-03-16",
+      "last_updated": "2026-04-04",
       "limit": {
         "context": 256000,
-        "output": 65536
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -1418,7 +1516,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-03-16",
+      "last_updated": "2026-04-04",
       "limit": {
         "context": 198000,
         "output": 16384
@@ -1433,7 +1531,7 @@
       },
       "name": "GLM 4.6",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
       "release_date": "2024-04-01",
       "structured_output": true,
       "temperature": true,

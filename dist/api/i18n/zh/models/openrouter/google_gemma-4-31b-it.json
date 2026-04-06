@@ -1,17 +1,23 @@
 {
-  "attachment": false,
-  "description": "Gemma 4 31B は google によって提供される AI モデルです。",
+  "attachment": true,
+  "cost": {
+    "input": 0.14,
+    "output": 0.4
+  },
+  "description": "Gemma 4 31B 是由 openrouter 提供的人工智能模型。",
   "family": "gemma",
-  "id": "gemma-4-31b",
+  "id": "google/gemma-4-31b-it",
+  "knowledge": "2025-01",
   "last_updated": "2026-04-02",
   "limit": {
-    "context": 256000,
-    "output": 8192
+    "context": 262144,
+    "output": 262144
   },
   "modalities": {
     "input": [
       "text",
-      "image"
+      "image",
+      "video"
     ],
     "output": [
       "text"

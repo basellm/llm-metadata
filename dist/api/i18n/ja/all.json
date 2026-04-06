@@ -30595,7 +30595,7 @@
         "knowledge": "2025-09",
         "last_updated": "2026-02-28",
         "limit": {
-          "context": 128000,
+          "context": 131072,
           "output": 8192
         },
         "modalities": {
@@ -34129,7 +34129,7 @@
           "input": 0,
           "output": 0
         },
-        "description": "GPT-5.4 mini は github-copilot によって提供される AI モデルです。",
+        "description": "GPT-5.4 Mini は github-copilot によって提供される AI モデルです。",
         "family": "gpt-mini",
         "id": "gpt-5.4-mini",
         "knowledge": "2025-08-31",
@@ -34148,7 +34148,7 @@
             "text"
           ]
         },
-        "name": "GPT-5.4 mini",
+        "name": "GPT-5.4 Mini",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-17",
@@ -37593,11 +37593,11 @@
         "temperature": true,
         "tool_call": false
       },
-      "gemma-4-26b": {
+      "gemma-4-26b-it": {
         "attachment": false,
         "description": "Gemma 4 26B は google によって提供される AI モデルです。",
         "family": "gemma",
-        "id": "gemma-4-26b",
+        "id": "gemma-4-26b-it",
         "last_updated": "2026-04-02",
         "limit": {
           "context": 256000,
@@ -37620,11 +37620,11 @@
         "temperature": true,
         "tool_call": true
       },
-      "gemma-4-31b": {
+      "gemma-4-31b-it": {
         "attachment": false,
         "description": "Gemma 4 31B は google によって提供される AI モデルです。",
         "family": "gemma",
-        "id": "gemma-4-31b",
+        "id": "gemma-4-31b-it",
         "last_updated": "2026-04-02",
         "limit": {
           "context": 256000,
@@ -93597,6 +93597,35 @@
         "temperature": true,
         "tool_call": true
       },
+      "arcee-ai/trinity-large-thinking": {
+        "attachment": false,
+        "cost": {
+          "input": 0.22,
+          "output": 0.85
+        },
+        "description": "Trinity Large Thinking は openrouter によって提供される AI モデルです。",
+        "family": "trinity",
+        "id": "arcee-ai/trinity-large-thinking",
+        "last_updated": "2026-04-03",
+        "limit": {
+          "context": 262144,
+          "output": 80000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Trinity Large Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-01",
+        "temperature": true,
+        "tool_call": true
+      },
       "arcee-ai/trinity-mini:free": {
         "attachment": false,
         "cost": {
@@ -94830,6 +94859,72 @@
         "release_date": "2025-05-20",
         "temperature": true,
         "tool_call": false
+      },
+      "google/gemma-4-26b-a4b-it": {
+        "attachment": true,
+        "cost": {
+          "input": 0.13,
+          "output": 0.4
+        },
+        "description": "Gemma 4 26B A4B は openrouter によって提供される AI モデルです。",
+        "family": "gemma",
+        "id": "google/gemma-4-26b-a4b-it",
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-03",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 26B A4B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemma-4-31b-it": {
+        "attachment": true,
+        "cost": {
+          "input": 0.14,
+          "output": 0.4
+        },
+        "description": "Gemma 4 31B は openrouter によって提供される AI モデルです。",
+        "family": "gemma",
+        "id": "google/gemma-4-31b-it",
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 31B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-02",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
       },
       "inception/mercury": {
         "attachment": false,
@@ -115923,6 +116018,40 @@
         "temperature": true,
         "tool_call": false
       },
+      "arcee-trinity-large-thinking": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.3125,
+          "output": 1.125
+        },
+        "description": "Trinity Large Thinking は venice によって提供される AI モデルです。",
+        "family": "trinity",
+        "id": "arcee-trinity-large-thinking",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-04",
+        "limit": {
+          "context": 256000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Trinity Large Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-02",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "claude-opus-4-6": {
         "attachment": true,
         "cost": {
@@ -116200,6 +116329,70 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-11-04",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google.gemma-4-26b-a4b-it": {
+        "attachment": true,
+        "cost": {
+          "input": 0.1625,
+          "output": 0.5
+        },
+        "description": "Google Gemma 4 26B A4B Instruct は venice によって提供される AI モデルです。",
+        "family": "gemma",
+        "id": "google.gemma-4-26b-a4b-it",
+        "last_updated": "2026-04-04",
+        "limit": {
+          "context": 256000,
+          "output": 12288
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Google Gemma 4 26B A4B Instruct",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-02",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google.gemma-4-31b-it": {
+        "attachment": true,
+        "cost": {
+          "input": 0.175,
+          "output": 0.5
+        },
+        "description": "Google Gemma 4 31B Instruct は venice によって提供される AI モデルです。",
+        "family": "gemma",
+        "id": "google.gemma-4-31b-it",
+        "last_updated": "2026-04-04",
+        "limit": {
+          "context": 256000,
+          "output": 12288
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Google Gemma 4 31B Instruct",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-03",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -117083,10 +117276,10 @@
         "description": "Qwen 3.5 9B は venice によって提供される AI モデルです。",
         "family": "qwen",
         "id": "qwen3-5-9b",
-        "last_updated": "2026-03-16",
+        "last_updated": "2026-04-04",
         "limit": {
           "context": 256000,
-          "output": 65536
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -117304,7 +117497,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2026-03-16",
+        "last_updated": "2026-04-04",
         "limit": {
           "context": 198000,
           "output": 16384
@@ -117319,7 +117512,7 @@
         },
         "name": "GLM 4.6",
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2024-04-01",
         "structured_output": true,
         "temperature": true,
@@ -118802,7 +118995,7 @@
           ]
         },
         "name": "Trinity Large Thinking",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-01",
         "temperature": true,
@@ -125103,10 +125296,10 @@
         "description": "DeepSeek V3.2 は vultr によって提供される AI モデルです。",
         "family": "deepseek",
         "id": "DeepSeek-V3.2",
-        "knowledge": "2024-10",
-        "last_updated": "2025-01-20",
+        "knowledge": "2024-07",
+        "last_updated": "2025-12-01",
         "limit": {
-          "context": 163000,
+          "context": 127000,
           "output": 4096
         },
         "modalities": {
@@ -125120,7 +125313,7 @@
         "name": "DeepSeek V3.2",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2025-01-20",
+        "release_date": "2025-12-01",
         "temperature": true,
         "tool_call": true
       },
@@ -125133,10 +125326,10 @@
         "description": "GLM 5 FP8 は vultr によって提供される AI モデルです。",
         "family": "glm",
         "id": "GLM-5-FP8",
-        "knowledge": "2024-10",
-        "last_updated": "2025-01-20",
+        "knowledge": "2025-05",
+        "last_updated": "2026-02-11",
         "limit": {
-          "context": 202000,
+          "context": 200000,
           "output": 131072
         },
         "modalities": {
@@ -125150,7 +125343,7 @@
         "name": "GLM 5 FP8",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2025-01-20",
+        "release_date": "2026-02-11",
         "temperature": true,
         "tool_call": true
       },
@@ -125163,10 +125356,10 @@
         "description": "Kimi K2 Instruct は vultr によって提供される AI モデルです。",
         "family": "kimi",
         "id": "Kimi-K2.5",
-        "knowledge": "2024-10",
-        "last_updated": "2024-07-18",
+        "knowledge": "2024-04",
+        "last_updated": "2026-01-27",
         "limit": {
-          "context": 261000,
+          "context": 254000,
           "output": 32768
         },
         "modalities": {
@@ -125180,7 +125373,7 @@
         "name": "Kimi K2 Instruct",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2024-07-18",
+        "release_date": "2026-01-27",
         "temperature": true,
         "tool_call": true
       },
@@ -125193,10 +125386,10 @@
         "description": "MiniMax M2.5 は vultr によって提供される AI モデルです。",
         "family": "minimax",
         "id": "MiniMax-M2.5",
-        "knowledge": "2024-10",
-        "last_updated": "2025-01-20",
+        "knowledge": "2024-09",
+        "last_updated": "2025-02-11",
         "limit": {
-          "context": 196000,
+          "context": 194000,
           "output": 4096
         },
         "modalities": {
@@ -125210,7 +125403,37 @@
         "name": "MiniMax M2.5",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2025-01-20",
+        "release_date": "2025-02-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gpt-oss-120b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "GPT OSS 120B は vultr によって提供される AI モデルです。",
+        "family": "gpt-oss",
+        "id": "gpt-oss-120b",
+        "knowledge": "2024-06",
+        "last_updated": "2025-08-05",
+        "limit": {
+          "context": 129000,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT OSS 120B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-08-05",
         "temperature": true,
         "tool_call": true
       }
