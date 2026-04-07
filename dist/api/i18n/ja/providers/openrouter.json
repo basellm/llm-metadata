@@ -5505,10 +5505,10 @@
     "z-ai/glm-5-turbo": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.24,
+        "cache_read": 0.192,
         "cache_write": 0,
-        "input": 1.2,
-        "output": 4
+        "input": 0.96,
+        "output": 3.2
       },
       "description": "GLM-5-Turbo は openrouter によって提供される AI モデルです。",
       "family": "glm",
@@ -5518,7 +5518,7 @@
       },
       "last_updated": "2026-03-16",
       "limit": {
-        "context": 200000,
+        "context": 202752,
         "output": 131072
       },
       "modalities": {
@@ -5533,6 +5533,40 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-16",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "GLM-5.1 は openrouter によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "z-ai/glm-5.1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-07",
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-07",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

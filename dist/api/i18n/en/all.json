@@ -13700,6 +13700,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen.qwen3-coder-next": {
+        "attachment": false,
+        "cost": {
+          "input": 0.22,
+          "output": 1.8
+        },
+        "description": "Qwen3 Coder Next is an AI model provided by amazon-bedrock.",
+        "family": "qwen",
+        "id": "qwen.qwen3-coder-next",
+        "last_updated": "2026-02-06",
+        "limit": {
+          "context": 131072,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder Next",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-06",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen.qwen3-next-80b-a3b": {
         "attachment": false,
         "cost": {
@@ -32307,7 +32337,7 @@
           "input": 0,
           "output": 0
         },
-        "description": "Kimi K2.5 Turbo is an AI model provided by fireworks-ai.",
+        "description": "Kimi K2.5 Turbo (firepass) is an AI model provided by fireworks-ai.",
         "family": "kimi-thinking",
         "id": "accounts/fireworks/routers/kimi-k2p5-turbo",
         "interleaved": {
@@ -32328,7 +32358,7 @@
             "text"
           ]
         },
-        "name": "Kimi K2.5 Turbo",
+        "name": "Kimi K2.5 Turbo (firepass)",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-01-27",
@@ -43450,6 +43480,39 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-5.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM-5.1 is an AI model provided by huggingface.",
+        "family": "glm",
+        "id": "zai-org/GLM-5.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-03",
+        "limit": {
+          "context": 202752,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-03",
         "temperature": true,
         "tool_call": true
       }
@@ -65650,6 +65713,164 @@
     },
     "name": "Mistral",
     "npm": "@ai-sdk/mistral"
+  },
+  "mixlayer": {
+    "api": "https://models.mixlayer.ai/v1",
+    "doc": "https://docs.mixlayer.com",
+    "env": [
+      "MIXLAYER_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/mixlayer.svg",
+    "id": "mixlayer",
+    "models": {
+      "qwen/qwen3.5-122b-a10b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.4,
+          "output": 3.2
+        },
+        "description": "Qwen3.5 122B A10B is an AI model provided by mixlayer.",
+        "family": "qwen",
+        "id": "qwen/qwen3.5-122b-a10b",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 122B A10B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3.5-27b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 2.4
+        },
+        "description": "Qwen3.5 27B is an AI model provided by mixlayer.",
+        "family": "qwen",
+        "id": "qwen/qwen3.5-27b",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 27B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3.5-35b-a3b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.25,
+          "output": 1.3
+        },
+        "description": "Qwen3.5 35B A3B is an AI model provided by mixlayer.",
+        "family": "qwen",
+        "id": "qwen/qwen3.5-35b-a3b",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 35B A3B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3.5-397b-a17b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.6,
+          "output": 3.6
+        },
+        "description": "Qwen3.5 397B A17B is an AI model provided by mixlayer.",
+        "family": "qwen",
+        "id": "qwen/qwen3.5-397b-a17b",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 397B A17B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3.5-9b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.4
+        },
+        "description": "Qwen3.5 9B is an AI model provided by mixlayer.",
+        "family": "qwen",
+        "id": "qwen/qwen3.5-9b",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 9B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Mixlayer",
+    "npm": "@ai-sdk/openai-compatible"
   },
   "moark": {
     "api": "https://moark.com/v1",
@@ -88890,6 +89111,33 @@
         "release_date": "2026-02-11",
         "tool_call": true
       },
+      "glm-5.1": {
+        "attachment": false,
+        "description": "glm-5.1 is an AI model provided by ollama-cloud.",
+        "family": "glm",
+        "id": "glm-5.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-07",
+        "limit": {
+          "context": 202752,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "glm-5.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-27",
+        "tool_call": true
+      },
       "gpt-oss:120b": {
         "attachment": false,
         "description": "gpt-oss:120b is an AI model provided by ollama-cloud.",
@@ -93127,9 +93375,6 @@
         "description": "MiniMax M2.5 is an AI model provided by opencode-go.",
         "family": "minimax-m2.5",
         "id": "minimax-m2.5",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
         "knowledge": "2025-01",
         "last_updated": "2026-02-12",
         "limit": {
@@ -93146,6 +93391,9 @@
         },
         "name": "MiniMax M2.5",
         "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2026-02-12",
         "temperature": true,
@@ -98696,10 +98944,10 @@
       "z-ai/glm-5-turbo": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.24,
+          "cache_read": 0.192,
           "cache_write": 0,
-          "input": 1.2,
-          "output": 4
+          "input": 0.96,
+          "output": 3.2
         },
         "description": "GLM-5-Turbo is an AI model provided by openrouter.",
         "family": "glm",
@@ -98709,7 +98957,7 @@
         },
         "last_updated": "2026-03-16",
         "limit": {
-          "context": 200000,
+          "context": 202752,
           "output": 131072
         },
         "modalities": {
@@ -98724,6 +98972,40 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-16",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-5.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "GLM-5.1 is an AI model provided by openrouter.",
+        "family": "glm",
+        "id": "z-ai/glm-5.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-07",
+        "limit": {
+          "context": 202752,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-07",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -113807,6 +114089,37 @@
         "release_date": "2026-01-29",
         "temperature": true,
         "tool_call": true
+      },
+      "step-3.5-flash-2603": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.1,
+          "output": 0.3
+        },
+        "description": "Step 3.5 Flash 2603 is an AI model provided by stepfun.",
+        "id": "step-3.5-flash-2603",
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 256000,
+          "input": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 3.5 Flash 2603",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-02",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "StepFun",
@@ -117167,6 +117480,40 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-11-06",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen-3-6-plus": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0625,
+          "cache_write": 0.78,
+          "input": 0.625,
+          "output": 3.75
+        },
+        "description": "Qwen 3.6 Plus is an AI model provided by venice.",
+        "family": "qwen",
+        "id": "qwen-3-6-plus",
+        "last_updated": "2026-04-07",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.6 Plus",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-06",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
