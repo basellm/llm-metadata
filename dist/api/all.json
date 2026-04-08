@@ -28721,6 +28721,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3-coder-next": {
+        "attachment": false,
+        "cost": {
+          "input": 0.158,
+          "output": 0.84
+        },
+        "description": "Qwen3 Coder Next 80B is an AI model provided by cortecs.",
+        "family": "qwen",
+        "id": "qwen3-coder-next",
+        "knowledge": "2025-04",
+        "last_updated": "2026-02-04",
+        "limit": {
+          "context": 256000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder Next 80B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-04",
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3-next-80b-a3b-thinking": {
         "attachment": false,
         "cost": {
@@ -31146,6 +31176,39 @@
         "temperature": true,
         "tool_call": true
       },
+      "accounts/fireworks/models/glm-5p1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "GLM 5.1 is an AI model provided by fireworks-ai.",
+        "family": "glm",
+        "id": "accounts/fireworks/models/glm-5p1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-01",
+        "limit": {
+          "context": 202800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-01",
+        "temperature": true,
+        "tool_call": true
+      },
       "accounts/fireworks/models/gpt-oss-120b": {
         "attachment": false,
         "cost": {
@@ -31366,6 +31429,37 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
+      "accounts/fireworks/models/qwen3p6-plus": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.1,
+          "input": 0.5,
+          "output": 3
+        },
+        "description": "Qwen 3.6 Plus is an AI model provided by fireworks-ai.",
+        "family": "qwen",
+        "id": "accounts/fireworks/models/qwen3p6-plus",
+        "last_updated": "2026-04-04",
+        "limit": {
+          "context": 128000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.6 Plus",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-04",
         "temperature": true,
         "tool_call": true
       },
@@ -94250,6 +94344,39 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemma-4-26b-a4b-it:free": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemma 4 26B A4B (free) is an AI model provided by openrouter.",
+        "family": "gemma",
+        "id": "google/gemma-4-26b-a4b-it:free",
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-03",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 26B A4B (free)",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "google/gemma-4-31b-it": {
         "attachment": true,
         "cost": {
@@ -94276,6 +94403,39 @@
           ]
         },
         "name": "Gemma 4 31B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-02",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemma-4-31b-it:free": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemma 4 31B (free) is an AI model provided by openrouter.",
+        "family": "gemma",
+        "id": "google/gemma-4-31b-it:free",
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 31B (free)",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-02",
@@ -97134,15 +97294,16 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen/qwen3.6-plus:free": {
+      "qwen/qwen3.6-plus": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "input": 0.325,
+          "output": 1.95
         },
-        "description": "Qwen3.6 Plus (free) is an AI model provided by openrouter.",
+        "description": "Qwen3.6 Plus is an AI model provided by openrouter.",
         "family": "qwen",
-        "id": "qwen/qwen3.6-plus:free",
+        "id": "qwen/qwen3.6-plus",
+        "knowledge": "2025-04",
         "last_updated": "2026-04-02",
         "limit": {
           "context": 1000000,
@@ -97158,7 +97319,7 @@
             "text"
           ]
         },
-        "name": "Qwen3.6 Plus (free)",
+        "name": "Qwen3.6 Plus",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-04-02",
@@ -115536,6 +115697,39 @@
         "temperature": true,
         "tool_call": true
       },
+      "claude-opus-4-6-fast": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 3.6,
+          "cache_write": 45,
+          "input": 36,
+          "output": 180
+        },
+        "description": "Claude Opus 4.6 Fast is an AI model provided by venice.",
+        "family": "claude-opus",
+        "id": "claude-opus-4-6-fast",
+        "last_updated": "2026-04-08",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.6 Fast",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-08",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "claude-opus-45": {
         "attachment": true,
         "cost": {
@@ -117098,6 +117292,40 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org-glm-5-1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.325,
+          "input": 1.75,
+          "output": 5.5
+        },
+        "description": "GLM 5.1 is an AI model provided by venice.",
+        "family": "glm",
+        "id": "zai-org-glm-5-1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-08",
+        "limit": {
+          "context": 200000,
+          "output": 24000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.1",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-07",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
