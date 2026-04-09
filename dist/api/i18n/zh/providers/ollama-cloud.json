@@ -129,19 +129,20 @@
       "tool_call": true
     },
     "gemini-3-flash-preview": {
-      "attachment": false,
+      "attachment": true,
       "description": "gemini-3-flash-preview 是由 ollama-cloud 提供的人工智能模型。",
       "family": "gemini-flash",
       "id": "gemini-3-flash-preview",
       "knowledge": "2025-01",
-      "last_updated": "2026-01-19",
+      "last_updated": "2026-04-08",
       "limit": {
         "context": 1048576,
         "output": 65536
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -227,6 +228,32 @@
       "reasoning": false,
       "release_date": "2024-12-01",
       "tool_call": false
+    },
+    "gemma4:31b": {
+      "attachment": true,
+      "description": "gemma4:31b 是由 ollama-cloud 提供的人工智能模型。",
+      "family": "gemma",
+      "id": "gemma4:31b",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-08",
+      "limit": {
+        "context": 262144,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemma4:31b",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-02",
+      "tool_call": true
     },
     "glm-4.6": {
       "attachment": false,

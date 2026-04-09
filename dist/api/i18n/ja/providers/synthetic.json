@@ -778,6 +778,41 @@
       "temperature": true,
       "tool_call": true
     },
+    "hf:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3,
+        "input": 0.3,
+        "output": 1
+      },
+      "description": "Nemotron 3 Super 120B は synthetic によって提供される AI モデルです。",
+      "family": "nemotron",
+      "id": "hf:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-04",
+      "last_updated": "2026-04-03",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Super 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "hf:openai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
@@ -900,6 +935,40 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-01-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "hf:zai-org/GLM-5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 1,
+        "input": 1,
+        "output": 3
+      },
+      "description": "GLM-5 は synthetic によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "hf:zai-org/GLM-5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-08",
+      "limit": {
+        "context": 196608,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-12",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
