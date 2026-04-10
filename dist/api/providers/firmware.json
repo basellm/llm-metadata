@@ -766,16 +766,48 @@
       "temperature": true,
       "tool_call": true
     },
-    "zai-glm-5": {
+    "qwen-3-6-plus": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.2,
-        "input": 1,
-        "output": 3.2
+        "cache_read": 0.1,
+        "input": 0.5,
+        "output": 3
+      },
+      "description": "Qwen 3.6 Plus is an AI model provided by firmware.",
+      "family": "qwen",
+      "id": "qwen-3-6-plus",
+      "last_updated": "2026-04-03",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3.6 Plus",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-glm-5-1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
       },
       "description": "GLM-5 is an AI model provided by firmware.",
       "family": "glm",
-      "id": "zai-glm-5",
+      "id": "zai-glm-5-1",
       "knowledge": "2024-10",
       "last_updated": "2025-02-22",
       "limit": {
@@ -791,7 +823,7 @@
         ]
       },
       "name": "GLM-5",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
       "release_date": "2025-01-20",
       "temperature": true,

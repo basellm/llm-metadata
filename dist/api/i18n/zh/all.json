@@ -16895,6 +16895,68 @@
         "temperature": true,
         "tool_call": true
       },
+      "grok-4-20-non-reasoning": {
+        "attachment": false,
+        "cost": {
+          "input": 2,
+          "output": 6
+        },
+        "description": "Grok 4.20 (Non-Reasoning) 是由 azure 提供的人工智能模型。",
+        "family": "grok",
+        "id": "grok-4-20-non-reasoning",
+        "knowledge": "2025-09",
+        "last_updated": "2026-04-08",
+        "limit": {
+          "context": 262000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.20 (Non-Reasoning)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-04-08",
+        "status": "beta",
+        "temperature": true,
+        "tool_call": true
+      },
+      "grok-4-20-reasoning": {
+        "attachment": false,
+        "cost": {
+          "input": 2,
+          "output": 6
+        },
+        "description": "Grok 4.20 (Reasoning) 是由 azure 提供的人工智能模型。",
+        "family": "grok",
+        "id": "grok-4-20-reasoning",
+        "knowledge": "2025-09",
+        "last_updated": "2026-04-08",
+        "limit": {
+          "context": 262000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.20 (Reasoning)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-08",
+        "status": "beta",
+        "temperature": true,
+        "tool_call": true
+      },
       "grok-4-fast-non-reasoning": {
         "attachment": true,
         "cost": {
@@ -32272,16 +32334,48 @@
         "temperature": true,
         "tool_call": true
       },
-      "zai-glm-5": {
+      "qwen-3-6-plus": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.2,
-          "input": 1,
-          "output": 3.2
+          "cache_read": 0.1,
+          "input": 0.5,
+          "output": 3
+        },
+        "description": "Qwen 3.6 Plus 是由 firmware 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "qwen-3-6-plus",
+        "last_updated": "2026-04-03",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.6 Plus",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-02",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-glm-5-1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
         },
         "description": "GLM-5 是由 firmware 提供的人工智能模型。",
         "family": "glm",
-        "id": "zai-glm-5",
+        "id": "zai-glm-5-1",
         "knowledge": "2024-10",
         "last_updated": "2025-02-22",
         "limit": {
@@ -32297,7 +32391,7 @@
           ]
         },
         "name": "GLM-5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": false,
         "release_date": "2025-01-20",
         "temperature": true,
@@ -115359,6 +115453,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemma-4-31B-it": {
+        "attachment": true,
+        "cost": {
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Gemma 4 31B Instruct 是由 togetherai 提供的人工智能模型。",
+        "family": "gemma",
+        "id": "google/gemma-4-31B-it",
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-07",
+        "limit": {
+          "context": 262144,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 31B Instruct",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-07",
+        "temperature": true,
+        "tool_call": true
+      },
       "meta-llama/Llama-3.3-70B-Instruct-Turbo": {
         "attachment": false,
         "cost": {
@@ -115451,17 +115576,17 @@
         "temperature": true,
         "tool_call": true
       },
-      "zai-org/GLM-5": {
+      "zai-org/GLM-5.1": {
         "attachment": false,
         "cost": {
-          "input": 1,
-          "output": 3.2
+          "input": 1.4,
+          "output": 4.4
         },
-        "description": "GLM-5 是由 togetherai 提供的人工智能模型。",
+        "description": "GLM-5.1 是由 togetherai 提供的人工智能模型。",
         "family": "glm",
-        "id": "zai-org/GLM-5",
+        "id": "zai-org/GLM-5.1",
         "knowledge": "2025-11",
-        "last_updated": "2026-02-11",
+        "last_updated": "2026-04-07",
         "limit": {
           "context": 202752,
           "output": 131072
@@ -115474,10 +115599,10 @@
             "text"
           ]
         },
-        "name": "GLM-5",
+        "name": "GLM-5.1",
         "open_weights": true,
         "reasoning": true,
-        "release_date": "2026-02-11",
+        "release_date": "2026-04-07",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -116089,10 +116214,10 @@
         "description": "Google Gemma 4 26B A4B Instruct 是由 venice 提供的人工智能模型。",
         "family": "gemma",
         "id": "google.gemma-4-26b-a4b-it",
-        "last_updated": "2026-04-04",
+        "last_updated": "2026-04-09",
         "limit": {
           "context": 256000,
-          "output": 12288
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -116121,10 +116246,10 @@
         "description": "Google Gemma 4 31B Instruct 是由 venice 提供的人工智能模型。",
         "family": "gemma",
         "id": "google.gemma-4-31b-it",
-        "last_updated": "2026-04-04",
+        "last_updated": "2026-04-09",
         "limit": {
           "context": 256000,
-          "output": 12288
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -116147,19 +116272,19 @@
       "grok-4-20-beta": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.25,
+          "cache_read": 0.23,
           "context_over_200k": {
-            "cache_read": 0.25,
-            "input": 5,
-            "output": 15
+            "cache_read": 0.23,
+            "input": 4.53,
+            "output": 13.6
           },
-          "input": 2.5,
-          "output": 7.5
+          "input": 2.27,
+          "output": 6.8
         },
         "description": "Grok 4.20 Beta 是由 venice 提供的人工智能模型。",
         "family": "grok-beta",
         "id": "grok-4-20-beta",
-        "last_updated": "2026-03-16",
+        "last_updated": "2026-04-09",
         "limit": {
           "context": 2000000,
           "output": 128000
@@ -116184,19 +116309,19 @@
       "grok-4-20-multi-agent-beta": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.25,
+          "cache_read": 0.23,
           "context_over_200k": {
-            "cache_read": 0.25,
-            "input": 5,
-            "output": 15
+            "cache_read": 0.23,
+            "input": 4.53,
+            "output": 13.6
           },
-          "input": 2.5,
-          "output": 7.5
+          "input": 2.27,
+          "output": 6.8
         },
         "description": "Grok 4.20 Multi-Agent Beta 是由 venice 提供的人工智能模型。",
         "family": "grok-beta",
         "id": "grok-4-20-multi-agent-beta",
-        "last_updated": "2026-03-16",
+        "last_updated": "2026-04-09",
         "limit": {
           "context": 2000000,
           "output": 128000
@@ -116221,15 +116346,15 @@
       "grok-41-fast": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0625,
-          "input": 0.25,
-          "output": 0.625
+          "cache_read": 0.06,
+          "input": 0.23,
+          "output": 0.57
         },
         "description": "Grok 4.1 Fast 是由 venice 提供的人工智能模型。",
         "family": "grok",
         "id": "grok-41-fast",
         "knowledge": "2025-07",
-        "last_updated": "2026-03-12",
+        "last_updated": "2026-04-09",
         "limit": {
           "context": 1000000,
           "output": 30000
@@ -116440,6 +116565,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "mercury-2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03125,
+          "input": 0.3125,
+          "output": 0.9375
+        },
+        "description": "Mercury 2 是由 venice 提供的人工智能模型。",
+        "family": "mercury",
+        "id": "mercury-2",
+        "last_updated": "2026-04-09",
+        "limit": {
+          "context": 128000,
+          "output": 50000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mercury 2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-20",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "minimax-m21": {
         "attachment": false,
         "cost": {
@@ -116537,6 +116693,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "mistral-small-2603": {
+        "attachment": true,
+        "cost": {
+          "input": 0.1875,
+          "output": 0.75
+        },
+        "description": "Mistral Small 4 是由 venice 提供的人工智能模型。",
+        "family": "mistral-small",
+        "id": "mistral-small-2603",
+        "last_updated": "2026-04-09",
+        "limit": {
+          "context": 256000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mistral Small 4",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-16",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "mistral-small-3-2-24b-instruct": {
         "attachment": false,
         "cost": {
@@ -116593,6 +116780,36 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-01-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia-nemotron-cascade-2-30b-a3b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.14,
+          "output": 0.8
+        },
+        "description": "Nemotron Cascade 2 30B A3B 是由 venice 提供的人工智能模型。",
+        "family": "nemotron",
+        "id": "nvidia-nemotron-cascade-2-30b-a3b",
+        "last_updated": "2026-04-09",
+        "limit": {
+          "context": 256000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nemotron Cascade 2 30B A3B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-24",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -116921,13 +117138,17 @@
         "cost": {
           "cache_read": 0.0625,
           "cache_write": 0.78,
+          "context_over_200k": {
+            "input": 2.5,
+            "output": 7.5
+          },
           "input": 0.625,
           "output": 3.75
         },
-        "description": "Qwen 3.6 Plus 是由 venice 提供的人工智能模型。",
+        "description": "Qwen 3.6 Plus Uncensored 是由 venice 提供的人工智能模型。",
         "family": "qwen",
         "id": "qwen-3-6-plus",
-        "last_updated": "2026-04-07",
+        "last_updated": "2026-04-09",
         "limit": {
           "context": 1000000,
           "output": 65536
@@ -116942,7 +117163,7 @@
             "text"
           ]
         },
-        "name": "Qwen 3.6 Plus",
+        "name": "Qwen 3.6 Plus Uncensored",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-04-06",
@@ -117044,6 +117265,38 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-02-25",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-5-397b-a17b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.75,
+          "output": 4.5
+        },
+        "description": "Qwen 3.5 397B 是由 venice 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "qwen3-5-397b-a17b",
+        "last_updated": "2026-04-09",
+        "limit": {
+          "context": 128000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.5 397B",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-16",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
