@@ -3965,16 +3965,17 @@
       "temperature": true,
       "tool_call": true
     },
-    "minimax/minimax-m2.5:free": {
+    "minimax/minimax-m2.7": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 1.2
       },
-      "description": "MiniMax: MiniMax M2.5 (free) は kilo によって提供される AI モデルです。",
-      "id": "minimax/minimax-m2.5:free",
-      "last_updated": "2026-02-12",
+      "description": "MiniMax: MiniMax M2.7 は kilo によって提供される AI モデルです。",
+      "family": "minimax-m2.7",
+      "id": "minimax/minimax-m2.7",
+      "last_updated": "2026-03-18",
       "limit": {
         "context": 204800,
         "output": 131072
@@ -3987,10 +3988,10 @@
           "text"
         ]
       },
-      "name": "MiniMax: MiniMax M2.5 (free)",
+      "name": "MiniMax: MiniMax M2.7",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2026-02-12",
+      "release_date": "2026-03-18",
       "temperature": true,
       "tool_call": true
     },
@@ -9768,6 +9769,34 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-02-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.1": {
+      "attachment": false,
+      "cost": {
+        "input": 1.26,
+        "output": 3.96
+      },
+      "description": "Z.ai: GLM 5.1 は kilo によって提供される AI モデルです。",
+      "id": "z-ai/glm-5.1",
+      "last_updated": "2026-03-27",
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Z.ai: GLM 5.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-27",
       "temperature": true,
       "tool_call": true
     }
