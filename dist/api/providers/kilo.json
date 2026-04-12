@@ -203,36 +203,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "allenai/molmo-2-8b": {
-      "attachment": true,
-      "cost": {
-        "input": 0.2,
-        "output": 0.2
-      },
-      "description": "AllenAI: Molmo2 8B is an AI model provided by kilo.",
-      "id": "allenai/molmo-2-8b",
-      "last_updated": "2026-01-31",
-      "limit": {
-        "context": 36864,
-        "output": 36864
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "AllenAI: Molmo2 8B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-01-09",
-      "temperature": true,
-      "tool_call": false
-    },
     "allenai/olmo-2-0325-32b-instruct": {
       "attachment": false,
       "cost": {
@@ -288,62 +258,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "allenai/olmo-3-7b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.1,
-        "output": 0.2
-      },
-      "description": "AllenAI: Olmo 3 7B Instruct is an AI model provided by kilo.",
-      "id": "allenai/olmo-3-7b-instruct",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 65536,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "AllenAI: Olmo 3 7B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-11-22",
-      "temperature": true,
-      "tool_call": false
-    },
-    "allenai/olmo-3-7b-think": {
-      "attachment": false,
-      "cost": {
-        "input": 0.12,
-        "output": 0.2
-      },
-      "description": "AllenAI: Olmo 3 7B Think is an AI model provided by kilo.",
-      "id": "allenai/olmo-3-7b-think",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 65536,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "AllenAI: Olmo 3 7B Think",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-11-22",
-      "temperature": true,
-      "tool_call": false
-    },
     "allenai/olmo-3.1-32b-instruct": {
       "attachment": false,
       "cost": {
@@ -371,34 +285,6 @@
       "release_date": "2026-01-07",
       "temperature": true,
       "tool_call": true
-    },
-    "allenai/olmo-3.1-32b-think": {
-      "attachment": false,
-      "cost": {
-        "input": 0.15,
-        "output": 0.5
-      },
-      "description": "AllenAI: Olmo 3.1 32B Think is an AI model provided by kilo.",
-      "id": "allenai/olmo-3.1-32b-think",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 65536,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "AllenAI: Olmo 3.1 32B Think",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-17",
-      "temperature": true,
-      "tool_call": false
     },
     "alpindale/goliath-120b": {
       "attachment": false,
@@ -664,36 +550,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-3.5-sonnet": {
-      "attachment": true,
-      "cost": {
-        "input": 6,
-        "output": 30
-      },
-      "description": "Anthropic: Claude 3.5 Sonnet is an AI model provided by kilo.",
-      "id": "anthropic/claude-3.5-sonnet",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 200000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "pdf",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Anthropic: Claude 3.5 Sonnet",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-10-22",
-      "temperature": true,
-      "tool_call": true
-    },
     "anthropic/claude-3.7-sonnet": {
       "attachment": true,
       "cost": {
@@ -916,6 +772,37 @@
       "temperature": true,
       "tool_call": true
     },
+    "anthropic/claude-opus-4.6-fast": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 3,
+        "cache_write": 37.5,
+        "input": 30,
+        "output": 150
+      },
+      "description": "Anthropic: Claude Opus 4.6 (Fast) is an AI model provided by kilo.",
+      "id": "anthropic/claude-opus-4.6-fast",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Anthropic: Claude Opus 4.6 (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-07",
+      "temperature": true,
+      "tool_call": true
+    },
     "anthropic/claude-sonnet-4": {
       "attachment": true,
       "cost": {
@@ -1094,18 +981,18 @@
       "temperature": true,
       "tool_call": false
     },
-    "arcee-ai/trinity-large-preview:free": {
+    "arcee-ai/trinity-large-thinking": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "input": 0.22,
+        "output": 0.85
       },
-      "description": "Arcee AI: Trinity Large Preview (free) is an AI model provided by kilo.",
-      "id": "arcee-ai/trinity-large-preview:free",
-      "last_updated": "2026-01-28",
+      "description": "Arcee AI: Trinity Large Thinking is an AI model provided by kilo.",
+      "id": "arcee-ai/trinity-large-thinking",
+      "last_updated": "2026-04-11",
       "limit": {
-        "context": 131000,
-        "output": 26200
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -1115,10 +1002,38 @@
           "text"
         ]
       },
-      "name": "Arcee AI: Trinity Large Preview (free)",
+      "name": "Arcee AI: Trinity Large Thinking",
       "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-01-28",
+      "reasoning": true,
+      "release_date": "2026-04-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "arcee-ai/trinity-large-thinking:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Arcee AI: Trinity Large Thinking (free) is an AI model provided by kilo.",
+      "id": "arcee-ai/trinity-large-thinking:free",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Arcee AI: Trinity Large Thinking (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-26",
       "temperature": true,
       "tool_call": true
     },
@@ -1319,6 +1234,35 @@
       "release_date": "2025-06-30",
       "temperature": true,
       "tool_call": false
+    },
+    "bytedance-seed/dola-seed-2.0-pro:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "ByteDance Seed: Dola Seed 2.0 Pro (free) is an AI model provided by kilo.",
+      "id": "bytedance-seed/dola-seed-2.0-pro:free",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 256000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "ByteDance Seed: Dola Seed 2.0 Pro (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-26",
+      "temperature": true,
+      "tool_call": true
     },
     "bytedance-seed/seed-1.6": {
       "attachment": true,
@@ -1578,34 +1522,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-02-27",
-      "temperature": true,
-      "tool_call": true
-    },
-    "corethink:free": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "CoreThink (free) is an AI model provided by kilo.",
-      "id": "corethink:free",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 78000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "CoreThink (free)",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-08-27",
       "temperature": true,
       "tool_call": true
     },
@@ -2008,64 +1924,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "giga-potato": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Giga Potato (free) is an AI model provided by kilo.",
-      "id": "giga-potato",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 256000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Giga Potato (free)",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-08-27",
-      "temperature": true,
-      "tool_call": true
-    },
-    "giga-potato-thinking": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Giga Potato Thinking (free) is an AI model provided by kilo.",
-      "id": "giga-potato-thinking",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 256000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Giga Potato Thinking (free)",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-08-27",
-      "temperature": true,
-      "tool_call": true
-    },
     "google/gemini-2.0-flash-001": {
       "attachment": true,
       "cost": {
@@ -2437,41 +2295,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "google/gemini-3-pro-preview": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.2,
-        "cache_write": 0.375,
-        "input": 2,
-        "output": 12,
-        "reasoning": 12
-      },
-      "description": "Google: Gemini 3 Pro Preview is an AI model provided by kilo.",
-      "id": "google/gemini-3-pro-preview",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 1048576,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "audio",
-          "image",
-          "pdf",
-          "text",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Google: Gemini 3 Pro Preview",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-11-18",
-      "temperature": true,
-      "tool_call": true
-    },
     "google/gemini-3.1-flash-image-preview": {
       "attachment": true,
       "cost": {
@@ -2771,6 +2594,126 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-05-20",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemma-4-26b-a4b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.12,
+        "output": 0.4
+      },
+      "description": "Google: Gemma 4 26B A4B is an AI model provided by kilo.",
+      "id": "google/gemma-4-26b-a4b-it",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Google: Gemma 4 26B A4B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-03",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-4-31b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.14,
+        "output": 0.4
+      },
+      "description": "Google: Gemma 4 31B is an AI model provided by kilo.",
+      "id": "google/gemma-4-31b-it",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Google: Gemma 4 31B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/lyria-3-clip-preview": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Google: Lyria 3 Clip Preview is an AI model provided by kilo.",
+      "id": "google/lyria-3-clip-preview",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "audio",
+          "text"
+        ]
+      },
+      "name": "Google: Lyria 3 Clip Preview",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-30",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/lyria-3-pro-preview": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Google: Lyria 3 Pro Preview is an AI model provided by kilo.",
+      "id": "google/lyria-3-pro-preview",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "audio",
+          "text"
+        ]
+      },
+      "name": "Google: Lyria 3 Pro Preview",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-30",
       "temperature": true,
       "tool_call": false
     },
@@ -3085,105 +3028,19 @@
       "temperature": true,
       "tool_call": true
     },
-    "kilo/auto": {
-      "attachment": true,
-      "cost": {
-        "input": 5,
-        "output": 25
-      },
-      "description": "Kilo: Auto is an AI model provided by kilo.",
-      "id": "kilo/auto",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 1000000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kilo: Auto",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2024-06-01",
-      "temperature": true,
-      "tool_call": true
-    },
-    "kilo/auto-free": {
+    "kwaipilot/kat-coder-pro-v2": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 1.2
       },
-      "description": "Deprecated Kilo Auto Free is an AI model provided by kilo.",
-      "id": "kilo/auto-free",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 204800,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Deprecated Kilo Auto Free",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-03-15",
-      "temperature": true,
-      "tool_call": true
-    },
-    "kilo/auto-small": {
-      "attachment": true,
-      "cost": {
-        "input": 0.05,
-        "output": 0.4
-      },
-      "description": "Deprecated Kilo Auto Small is an AI model provided by kilo.",
-      "id": "kilo/auto-small",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Deprecated Kilo Auto Small",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-03-15",
-      "temperature": true,
-      "tool_call": true
-    },
-    "kwaipilot/kat-coder-pro": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.0414,
-        "input": 0.207,
-        "output": 0.828
-      },
-      "description": "Kwaipilot: KAT-Coder-Pro V1 is an AI model provided by kilo.",
-      "id": "kwaipilot/kat-coder-pro",
-      "last_updated": "2025-10-24",
+      "description": "Kwaipilot: KAT-Coder-Pro V2 is an AI model provided by kilo.",
+      "id": "kwaipilot/kat-coder-pro-v2",
+      "last_updated": "2026-04-11",
       "limit": {
         "context": 256000,
-        "output": 128000
+        "output": 80000
       },
       "modalities": {
         "input": [
@@ -3193,10 +3050,10 @@
           "text"
         ]
       },
-      "name": "Kwaipilot: KAT-Coder-Pro V1",
+      "name": "Kwaipilot: KAT-Coder-Pro V2",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-09-30",
+      "release_date": "2026-03-27",
       "temperature": true,
       "tool_call": true
     },
@@ -3225,62 +3082,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-02-26",
-      "temperature": true,
-      "tool_call": false
-    },
-    "liquid/lfm-2.2-6b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.01,
-        "output": 0.02
-      },
-      "description": "LiquidAI: LFM2-2.6B is an AI model provided by kilo.",
-      "id": "liquid/lfm-2.2-6b",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "LiquidAI: LFM2-2.6B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-10-20",
-      "temperature": true,
-      "tool_call": false
-    },
-    "liquid/lfm2-8b-a1b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.01,
-        "output": 0.02
-      },
-      "description": "LiquidAI: LFM2-8B-A1B is an AI model provided by kilo.",
-      "id": "liquid/lfm2-8b-a1b",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "LiquidAI: LFM2-8B-A1B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-10-20",
       "temperature": true,
       "tool_call": false
     },
@@ -3396,62 +3197,6 @@
       "release_date": "2024-04-25",
       "temperature": true,
       "tool_call": true
-    },
-    "meta-llama/llama-3.1-405b": {
-      "attachment": false,
-      "cost": {
-        "input": 4,
-        "output": 4
-      },
-      "description": "Meta: Llama 3.1 405B (base) is an AI model provided by kilo.",
-      "id": "meta-llama/llama-3.1-405b",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Meta: Llama 3.1 405B (base)",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-08-02",
-      "temperature": true,
-      "tool_call": false
-    },
-    "meta-llama/llama-3.1-405b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 4,
-        "output": 4
-      },
-      "description": "Meta: Llama 3.1 405B Instruct is an AI model provided by kilo.",
-      "id": "meta-llama/llama-3.1-405b-instruct",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 131000,
-        "output": 26200
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Meta: Llama 3.1 405B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-07-16",
-      "temperature": true,
-      "tool_call": false
     },
     "meta-llama/llama-3.1-70b-instruct": {
       "attachment": false,
@@ -4478,6 +4223,36 @@
       "temperature": true,
       "tool_call": true
     },
+    "mistralai/mistral-small-2603": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Mistral: Mistral Small 4 is an AI model provided by kilo.",
+      "id": "mistralai/mistral-small-2603",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral: Mistral Small 4",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-16",
+      "temperature": true,
+      "tool_call": true
+    },
     "mistralai/mistral-small-3.1-24b-instruct": {
       "attachment": true,
       "cost": {
@@ -4794,34 +4569,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "morph-warp-grep-v2": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Morph: WarpGrep V2 is an AI model provided by kilo.",
-      "id": "morph-warp-grep-v2",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 256000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Morph: WarpGrep V2",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-08-27",
-      "temperature": true,
-      "tool_call": true
-    },
     "morph/morph-v3-fast": {
       "attachment": false,
       "cost": {
@@ -5075,6 +4822,34 @@
       "temperature": true,
       "tool_call": true
     },
+    "nvidia/llama-3.1-nemotron-ultra-253b-v1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 1.8
+      },
+      "description": "NVIDIA: Llama 3.1 Nemotron Ultra 253B v1 is an AI model provided by kilo.",
+      "id": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA: Llama 3.1 Nemotron Ultra 253B v1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-04-08",
+      "temperature": true,
+      "tool_call": false
+    },
     "nvidia/llama-3.3-nemotron-super-49b-v1.5": {
       "attachment": false,
       "cost": {
@@ -5128,6 +4903,35 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2024-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-3-super-120b-a12b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.1,
+        "input": 0.1,
+        "output": 0.5
+      },
+      "description": "NVIDIA: Nemotron 3 Super is an AI model provided by kilo.",
+      "id": "nvidia/nemotron-3-super-120b-a12b",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA: Nemotron 3 Super",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-11",
       "temperature": true,
       "tool_call": true
     },
@@ -6468,6 +6272,68 @@
       "release_date": "2026-03-06",
       "tool_call": true
     },
+    "openai/gpt-5.4-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.75,
+        "output": 4.5
+      },
+      "description": "OpenAI: GPT-5.4 Mini is an AI model provided by kilo.",
+      "id": "openai/gpt-5.4-mini",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-5.4 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-17",
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.4-nano": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.2,
+        "output": 1.25
+      },
+      "description": "OpenAI: GPT-5.4 Nano is an AI model provided by kilo.",
+      "id": "openai/gpt-5.4-nano",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-5.4 Nano",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-17",
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/gpt-5.4-pro": {
       "attachment": true,
       "cost": {
@@ -7036,65 +6902,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "openrouter/healer-alpha": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Healer Alpha is an AI model provided by kilo.",
-      "id": "openrouter/healer-alpha",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 262144,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "audio",
-          "image",
-          "text",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Healer Alpha",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-03-12",
-      "temperature": true,
-      "tool_call": true
-    },
-    "openrouter/hunter-alpha": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Hunter Alpha is an AI model provided by kilo.",
-      "id": "openrouter/hunter-alpha",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 1048576,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Hunter Alpha",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-03-12",
-      "temperature": true,
-      "tool_call": true
-    },
     "perplexity/sonar": {
       "attachment": true,
       "cost": {
@@ -7349,35 +7156,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-11-11",
-      "temperature": true,
-      "tool_call": false
-    },
-    "qwen/qwen-2.5-vl-7b-instruct": {
-      "attachment": true,
-      "cost": {
-        "input": 0.2,
-        "output": 0.2
-      },
-      "description": "Qwen: Qwen2.5-VL 7B Instruct is an AI model provided by kilo.",
-      "id": "qwen/qwen-2.5-vl-7b-instruct",
-      "last_updated": "2024-09",
-      "limit": {
-        "context": 32768,
-        "output": 6554
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen: Qwen2.5-VL 7B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-08-28",
       "temperature": true,
       "tool_call": false
     },
@@ -8600,6 +8378,37 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen/qwen3.6-plus": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0325,
+        "cache_write": 0.40625,
+        "input": 0.325,
+        "output": 1.95
+      },
+      "description": "Qwen: Qwen3.6 Plus is an AI model provided by kilo.",
+      "id": "qwen/qwen3.6-plus",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen3.6 Plus",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-26",
+      "temperature": true,
+      "tool_call": true
+    },
     "qwen/qwq-32b": {
       "attachment": false,
       "cost": {
@@ -8627,6 +8436,64 @@
       "release_date": "2024-11-28",
       "temperature": true,
       "tool_call": true
+    },
+    "rekaai/reka-edge": {
+      "attachment": true,
+      "cost": {
+        "input": 0.1,
+        "output": 0.1
+      },
+      "description": "Reka Edge is an AI model provided by kilo.",
+      "id": "rekaai/reka-edge",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 16384,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Reka Edge",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-03-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "rekaai/reka-flash-3": {
+      "attachment": false,
+      "cost": {
+        "input": 0.1,
+        "output": 0.2
+      },
+      "description": "Reka Flash 3 is an AI model provided by kilo.",
+      "id": "rekaai/reka-flash-3",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Reka Flash 3",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-03-12",
+      "temperature": true,
+      "tool_call": false
     },
     "relace/relace-apply-3": {
       "attachment": false,
@@ -8846,34 +8713,6 @@
         ]
       },
       "name": "StepFun: Step 3.5 Flash",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-01-29",
-      "temperature": true,
-      "tool_call": true
-    },
-    "stepfun/step-3.5-flash:free": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "StepFun: Step 3.5 Flash (free) is an AI model provided by kilo.",
-      "id": "stepfun/step-3.5-flash:free",
-      "last_updated": "2026-01-29",
-      "limit": {
-        "context": 256000,
-        "output": 256000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "StepFun: Step 3.5 Flash (free)",
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-01-29",
@@ -9367,61 +9206,65 @@
       "temperature": true,
       "tool_call": true
     },
-    "x-ai/grok-4.20-beta": {
+    "x-ai/grok-4.20": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.2,
         "input": 2,
         "output": 6
       },
-      "description": "xAI: Grok 4.20 Beta is an AI model provided by kilo.",
-      "id": "x-ai/grok-4.20-beta",
-      "last_updated": "2026-03-15",
+      "description": "xAI: Grok 4.20 is an AI model provided by kilo.",
+      "id": "x-ai/grok-4.20",
+      "last_updated": "2026-04-11",
       "limit": {
         "context": 2000000,
-        "output": 32768
+        "output": 2000000
       },
       "modalities": {
         "input": [
           "image",
+          "pdf",
           "text"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "xAI: Grok 4.20 Beta",
+      "name": "xAI: Grok 4.20",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2026-03-12",
+      "release_date": "2026-03-31",
       "temperature": true,
       "tool_call": true
     },
-    "x-ai/grok-4.20-multi-agent-beta": {
+    "x-ai/grok-4.20-multi-agent": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.2,
         "input": 2,
         "output": 6
       },
-      "description": "xAI: Grok 4.20 Multi-Agent Beta is an AI model provided by kilo.",
-      "id": "x-ai/grok-4.20-multi-agent-beta",
-      "last_updated": "2026-03-15",
+      "description": "xAI: Grok 4.20 Multi-Agent is an AI model provided by kilo.",
+      "id": "x-ai/grok-4.20-multi-agent",
+      "last_updated": "2026-04-11",
       "limit": {
         "context": 2000000,
-        "output": 32768
+        "output": 2000000
       },
       "modalities": {
         "input": [
           "image",
+          "pdf",
           "text"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "xAI: Grok 4.20 Multi-Agent Beta",
+      "name": "xAI: Grok 4.20 Multi-Agent",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2026-03-12",
+      "release_date": "2026-03-31",
       "temperature": true,
       "tool_call": false
     },
@@ -9508,6 +9351,67 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-12-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "xiaomi/mimo-v2-omni": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.08,
+        "input": 0.4,
+        "output": 2
+      },
+      "description": "Xiaomi: MiMo-V2-Omni is an AI model provided by kilo.",
+      "id": "xiaomi/mimo-v2-omni",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "audio",
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Xiaomi: MiMo-V2-Omni",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "xiaomi/mimo-v2-pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 1,
+        "output": 3
+      },
+      "description": "Xiaomi: MiMo-V2-Pro is an AI model provided by kilo.",
+      "id": "xiaomi/mimo-v2-pro",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Xiaomi: MiMo-V2-Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-18",
       "temperature": true,
       "tool_call": true
     },
@@ -9772,6 +9676,35 @@
       "temperature": true,
       "tool_call": true
     },
+    "z-ai/glm-5-turbo": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.24,
+        "input": 1.2,
+        "output": 4
+      },
+      "description": "Z.ai: GLM 5 Turbo is an AI model provided by kilo.",
+      "id": "z-ai/glm-5-turbo",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Z.ai: GLM 5 Turbo",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-15",
+      "temperature": true,
+      "tool_call": true
+    },
     "z-ai/glm-5.1": {
       "attachment": false,
       "cost": {
@@ -9797,6 +9730,37 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-03-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5v-turbo": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.24,
+        "input": 1.2,
+        "output": 4
+      },
+      "description": "Z.ai: GLM 5V Turbo is an AI model provided by kilo.",
+      "id": "z-ai/glm-5v-turbo",
+      "last_updated": "2026-04-11",
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Z.ai: GLM 5V Turbo",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-01",
       "temperature": true,
       "tool_call": true
     }
