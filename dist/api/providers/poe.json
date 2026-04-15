@@ -267,6 +267,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-06-05",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": true
     },
@@ -300,6 +301,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-11-18",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": true
     },
@@ -436,11 +438,15 @@
     },
     "cerebras/gpt-oss-120b-cs": {
       "attachment": true,
-      "description": "gpt-oss-120b-cs is an AI model provided by poe.",
+      "cost": {
+        "input": 0.35,
+        "output": 0.75
+      },
+      "description": "GPT-OSS-120B-CS is an AI model provided by poe.",
       "id": "cerebras/gpt-oss-120b-cs",
       "last_updated": "2025-08-06",
       "limit": {
-        "context": 0,
+        "context": 128000,
         "output": 0
       },
       "modalities": {
@@ -451,7 +457,7 @@
           "text"
         ]
       },
-      "name": "gpt-oss-120b-cs",
+      "name": "GPT-OSS-120B-CS",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-08-06",
@@ -460,11 +466,15 @@
     },
     "cerebras/llama-3.1-8b-cs": {
       "attachment": true,
-      "description": "llama-3.1-8b-cs is an AI model provided by poe.",
+      "cost": {
+        "input": 0.1,
+        "output": 0.1
+      },
+      "description": "Llama-3.1-8B-CS is an AI model provided by poe.",
       "id": "cerebras/llama-3.1-8b-cs",
       "last_updated": "2025-05-13",
       "limit": {
-        "context": 0,
+        "context": 128000,
         "output": 0
       },
       "modalities": {
@@ -475,7 +485,7 @@
           "text"
         ]
       },
-      "name": "llama-3.1-8b-cs",
+      "name": "Llama-3.1-8B-CS",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-05-13",
@@ -503,6 +513,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-05-13",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": false
     },
@@ -527,6 +538,7 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-08-06",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": true
     },
@@ -551,6 +563,7 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-05-15",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": true
     },
@@ -883,6 +896,7 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-10-22",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": true
     },
@@ -976,6 +990,7 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-12-11",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": true
     },
@@ -1575,6 +1590,7 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-12-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -1628,9 +1644,14 @@
     },
     "novita/glm-5": {
       "attachment": true,
-      "description": "glm-5 is an AI model provided by poe.",
+      "cost": {
+        "cache_read": 0.2,
+        "input": 1,
+        "output": 3.2
+      },
+      "description": "GLM-5 is an AI model provided by poe.",
       "id": "novita/glm-5",
-      "last_updated": "2026-02-11",
+      "last_updated": "2026-02-15",
       "limit": {
         "context": 205000,
         "output": 131072
@@ -1643,10 +1664,10 @@
           "text"
         ]
       },
-      "name": "glm-5",
+      "name": "GLM-5",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2026-02-11",
+      "release_date": "2026-02-15",
       "temperature": true,
       "tool_call": true
     },
@@ -1677,11 +1698,16 @@
     },
     "novita/kimi-k2.5": {
       "attachment": true,
-      "description": "kimi-k2.5 is an AI model provided by poe.",
+      "cost": {
+        "cache_read": 0.1,
+        "input": 0.6,
+        "output": 3
+      },
+      "description": "Kimi-K2.5 is an AI model provided by poe.",
       "id": "novita/kimi-k2.5",
       "last_updated": "2026-01-27",
       "limit": {
-        "context": 256000,
+        "context": 128000,
         "output": 262144
       },
       "modalities": {
@@ -1694,11 +1720,11 @@
           "text"
         ]
       },
-      "name": "kimi-k2.5",
+      "name": "Kimi-K2.5",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-01-27",
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "novita/minimax-m2.1": {
@@ -1752,6 +1778,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-08-14",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": true
     },
@@ -1897,6 +1924,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-03-25",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": true
     },
@@ -1927,6 +1955,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-08-26",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": true
     },
@@ -2452,7 +2481,7 @@
         "input": 1.1,
         "output": 9
       },
-      "description": "GPT 5.1 Codex Max is an AI model provided by poe.",
+      "description": "GPT-5.1-Codex-Max is an AI model provided by poe.",
       "id": "openai/gpt-5.1-codex-max",
       "last_updated": "2025-12-08",
       "limit": {
@@ -2468,7 +2497,7 @@
           "text"
         ]
       },
-      "name": "GPT 5.1 Codex Max",
+      "name": "GPT-5.1-Codex-Max",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-12-08",
