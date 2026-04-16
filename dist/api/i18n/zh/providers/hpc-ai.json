@@ -1,0 +1,115 @@
+{
+  "api": "https://api.hpc-ai.com/inference/v1",
+  "doc": "https://www.hpc-ai.com/doc/docs/quickstart/",
+  "env": [
+    "HPC_AI_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/hpc-ai.svg",
+  "id": "hpc-ai",
+  "models": {
+    "minimax/minimax-m2.5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.014,
+        "input": 0.14,
+        "output": 0.56
+      },
+      "description": "MiniMax M2.5 是由 hpc-ai 提供的人工智能模型。",
+      "family": "minimax-m2.5",
+      "id": "minimax/minimax-m2.5",
+      "last_updated": "2026-03-25",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-12",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2.5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.21,
+        "output": 1
+      },
+      "description": "Kimi K2.5 是由 hpc-ai 提供的人工智能模型。",
+      "family": "kimi",
+      "id": "moonshotai/kimi-k2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01-01",
+      "last_updated": "2026-03-25",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-01",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "zai-org/glm-5.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.12,
+        "input": 0.66,
+        "output": 2
+      },
+      "description": "GLM 5.1 是由 hpc-ai 提供的人工智能模型。",
+      "family": "glm",
+      "id": "zai-org/glm-5.1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-08",
+      "limit": {
+        "context": 202000,
+        "output": 202000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-08",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "HPC-AI",
+  "npm": "@ai-sdk/openai-compatible"
+}
