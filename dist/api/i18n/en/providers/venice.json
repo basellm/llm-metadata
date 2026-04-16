@@ -170,6 +170,39 @@
       "temperature": true,
       "tool_call": true
     },
+    "claude-opus-4-7": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.6,
+        "cache_write": 7.5,
+        "input": 6,
+        "output": 30
+      },
+      "description": "Claude Opus 4.7 is an AI model provided by venice.",
+      "family": "claude-opus",
+      "id": "claude-opus-4-7",
+      "last_updated": "2026-04-16",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.7",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-16",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "claude-sonnet-4-5": {
       "attachment": true,
       "cost": {
@@ -550,37 +583,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "grok-code-fast-1": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.03,
-        "input": 0.25,
-        "output": 1.87
-      },
-      "description": "Grok Code Fast 1 is an AI model provided by venice.",
-      "family": "grok",
-      "id": "grok-code-fast-1",
-      "last_updated": "2026-03-12",
-      "limit": {
-        "context": 256000,
-        "output": 10000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Grok Code Fast 1",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-12-01",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "hermes-3-llama-3.1-405b": {
       "attachment": false,
       "cost": {
@@ -766,69 +768,6 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-02-20",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "mercury-edit-2": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.025,
-        "input": 0.25,
-        "output": 0.75
-      },
-      "description": "Mercury Edit 2 is an AI model provided by venice.",
-      "id": "mercury-edit-2",
-      "last_updated": "2026-03-30",
-      "limit": {
-        "context": 128000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mercury Edit 2",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-03-30",
-      "temperature": true,
-      "tool_call": false
-    },
-    "minimax-m21": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.04,
-        "input": 0.35,
-        "output": 1.5
-      },
-      "description": "MiniMax M2.1 is an AI model provided by venice.",
-      "family": "minimax",
-      "id": "minimax-m21",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-03-16",
-      "limit": {
-        "context": 198000,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax M2.1",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-01",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1451,7 +1390,7 @@
       "description": "Qwen 3.5 35B A3B is an AI model provided by venice.",
       "family": "qwen",
       "id": "qwen3-5-35b-a3b",
-      "last_updated": "2026-04-12",
+      "last_updated": "2026-04-16",
       "limit": {
         "context": 256000,
         "output": 65536
@@ -1467,7 +1406,7 @@
         ]
       },
       "name": "Qwen 3.5 35B A3B",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "release_date": "2026-02-25",
       "structured_output": true,
@@ -1483,7 +1422,7 @@
       "description": "Qwen 3.5 397B is an AI model provided by venice.",
       "family": "qwen",
       "id": "qwen3-5-397b-a17b",
-      "last_updated": "2026-04-09",
+      "last_updated": "2026-04-16",
       "limit": {
         "context": 128000,
         "output": 32768
@@ -1499,7 +1438,7 @@
         ]
       },
       "name": "Qwen 3.5 397B",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "release_date": "2026-02-16",
       "structured_output": true,
