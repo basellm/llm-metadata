@@ -365,7 +365,7 @@
       "description": "Claude Opus 4.6 (latest) は cloudflare-ai-gateway によって提供される AI モデルです。",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4-6",
-      "knowledge": "2025-08-31",
+      "knowledge": "2025-05-31",
       "last_updated": "2026-02-05",
       "limit": {
         "context": 1000000,
@@ -386,6 +386,43 @@
       "reasoning": true,
       "release_date": "2026-02-05",
       "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-4-7": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Claude Opus 4.7 は cloudflare-ai-gateway によって提供される AI モデルです。",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4-7",
+      "knowledge": "2026-01",
+      "last_updated": "2026-04-16",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.7",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/anthropic"
+      },
+      "reasoning": true,
+      "release_date": "2026-04-16",
+      "temperature": false,
       "tool_call": true
     },
     "anthropic/claude-sonnet-4": {
@@ -474,7 +511,7 @@
       "family": "claude-sonnet",
       "id": "anthropic/claude-sonnet-4-6",
       "interleaved": true,
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-08-31",
       "last_updated": "2026-02-17",
       "limit": {
         "context": 1000000,

@@ -232,7 +232,7 @@
       "description": "Claude Opus 4.6 is an AI model provided by openrouter.",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4.6",
-      "knowledge": "2025-05-30",
+      "knowledge": "2025-05-31",
       "last_updated": "2026-02-05",
       "limit": {
         "context": 1000000,
@@ -254,6 +254,47 @@
       "release_date": "2026-02-05",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-4.7": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "context_over_200k": {
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 37.5
+        },
+        "input": 5,
+        "output": 25
+      },
+      "description": "Claude Opus 4.7 is an AI model provided by openrouter.",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.7",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-04-16",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.7",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-16",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "anthropic/claude-sonnet-4": {
@@ -354,6 +395,7 @@
       "description": "Claude Sonnet 4.6 is an AI model provided by openrouter.",
       "family": "claude-sonnet",
       "id": "anthropic/claude-sonnet-4.6",
+      "knowledge": "2025-08-31",
       "last_updated": "2026-02-17",
       "limit": {
         "context": 1000000,
