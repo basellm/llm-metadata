@@ -11734,7 +11734,7 @@
         "description": "Claude Haiku 3.5 は amazon-bedrock によって提供される AI モデルです。",
         "family": "claude-haiku",
         "id": "anthropic.claude-3-5-haiku-20241022-v1:0",
-        "knowledge": "2024-07",
+        "knowledge": "2024-07-31",
         "last_updated": "2024-10-22",
         "limit": {
           "context": 200000,
@@ -12041,7 +12041,7 @@
         "family": "claude-opus",
         "id": "anthropic.claude-opus-4-6-v1",
         "knowledge": "2025-05-31",
-        "last_updated": "2026-03-18",
+        "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
           "output": 128000
@@ -12375,7 +12375,7 @@
         "family": "claude-opus",
         "id": "eu.anthropic.claude-opus-4-6-v1",
         "knowledge": "2025-05-31",
-        "last_updated": "2026-03-18",
+        "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
           "output": 128000
@@ -12618,7 +12618,7 @@
         "family": "claude-opus",
         "id": "global.anthropic.claude-opus-4-6-v1",
         "knowledge": "2025-05-31",
-        "last_updated": "2026-03-18",
+        "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
           "output": 128000
@@ -14207,7 +14207,7 @@
         "family": "claude-opus",
         "id": "us.anthropic.claude-opus-4-6-v1",
         "knowledge": "2025-05-31",
-        "last_updated": "2026-03-18",
+        "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
           "output": 128000
@@ -30285,6 +30285,1504 @@
     "name": "DeepSeek",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "digitalocean": {
+    "api": "https://inference.do-ai.run/v1",
+    "doc": "https://docs.digitalocean.com/products/gradient-ai-platform/details/models/",
+    "env": [
+      "DIGITALOCEAN_ACCESS_TOKEN"
+    ],
+    "iconURL": "https://models.dev/logos/digitalocean.svg",
+    "id": "digitalocean",
+    "models": {
+      "alibaba-qwen3-32b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.25,
+          "output": 0.55
+        },
+        "description": "Qwen3-32B は digitalocean によって提供される AI モデルです。",
+        "family": "qwen",
+        "id": "alibaba-qwen3-32b",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 131000,
+          "output": 40960
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3-32B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-04-30",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "all-mini-lm-l6-v2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.009,
+          "output": 0
+        },
+        "description": "All-MiniLM-L6-v2 は digitalocean によって提供される AI モデルです。",
+        "family": "text-embedding",
+        "id": "all-mini-lm-l6-v2",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 256,
+          "output": 384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "All-MiniLM-L6-v2",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2021-08-30",
+        "temperature": false,
+        "tool_call": false
+      },
+      "anthropic-claude-4.1-opus": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.5,
+          "cache_write": 18.75,
+          "input": 15,
+          "output": 75
+        },
+        "description": "Claude Opus 4.1 は digitalocean によって提供される AI モデルです。",
+        "family": "claude-opus",
+        "id": "anthropic-claude-4.1-opus",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-08-05",
+        "limit": {
+          "context": 200000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic-claude-4.5-sonnet": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "context_over_200k": {
+            "cache_read": 0.3,
+            "cache_write": 3.75,
+            "input": 6,
+            "output": 22.5
+          },
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4.5 は digitalocean によって提供される AI モデルです。",
+        "family": "claude-sonnet",
+        "id": "anthropic-claude-4.5-sonnet",
+        "knowledge": "2025-07-31",
+        "last_updated": "2025-09-29",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-09-29",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic-claude-4.6-sonnet": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "context_over_200k": {
+            "cache_read": 0.3,
+            "cache_write": 3.75,
+            "input": 6,
+            "output": 22.5
+          },
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4.6 は digitalocean によって提供される AI モデルです。",
+        "family": "claude-sonnet",
+        "id": "anthropic-claude-4.6-sonnet",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-13",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic-claude-haiku-4.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1,
+          "cache_write": 1.25,
+          "input": 1,
+          "output": 5
+        },
+        "description": "Claude Haiku 4.5 は digitalocean によって提供される AI モデルです。",
+        "family": "claude-haiku",
+        "id": "anthropic-claude-haiku-4.5",
+        "knowledge": "2025-02-28",
+        "last_updated": "2025-10-15",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Haiku 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-10-15",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic-claude-opus-4": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.5,
+          "cache_write": 18.75,
+          "input": 15,
+          "output": 75
+        },
+        "description": "Claude Opus 4 は digitalocean によって提供される AI モデルです。",
+        "family": "claude-opus",
+        "id": "anthropic-claude-opus-4",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 200000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic-claude-opus-4.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.5 は digitalocean によって提供される AI モデルです。",
+        "family": "claude-opus",
+        "id": "anthropic-claude-opus-4.5",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-11-24",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-24",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic-claude-opus-4.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "context_over_200k": {
+            "cache_read": 0.5,
+            "cache_write": 6.25,
+            "input": 10,
+            "output": 37.5
+          },
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.6 は digitalocean によって提供される AI モデルです。",
+        "family": "claude-opus",
+        "id": "anthropic-claude-opus-4.6",
+        "knowledge": "2025-05-31",
+        "last_updated": "2026-03-13",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic-claude-opus-4.7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.7 は digitalocean によって提供される AI モデルです。",
+        "family": "claude-opus",
+        "id": "anthropic-claude-opus-4.7",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-16",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic-claude-sonnet-4": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "context_over_200k": {
+            "cache_read": 0.3,
+            "cache_write": 3.75,
+            "input": 6,
+            "output": 22.5
+          },
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4 は digitalocean によって提供される AI モデルです。",
+        "family": "claude-sonnet",
+        "id": "anthropic-claude-sonnet-4",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-05-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "arcee-trinity-large-thinking": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.25,
+          "output": 0.9
+        },
+        "description": "Trinity Large Thinking は digitalocean によって提供される AI モデルです。",
+        "family": "trinity",
+        "id": "arcee-trinity-large-thinking",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 256000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Trinity Large Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-02",
+        "status": "beta",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-r1-distill-llama-70b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.99,
+          "output": 0.99
+        },
+        "description": "DeepSeek R1 Distill Llama 70B は digitalocean によって提供される AI モデルです。",
+        "family": "deepseek-thinking",
+        "id": "deepseek-r1-distill-llama-70b",
+        "last_updated": "2025-01-30",
+        "limit": {
+          "context": 131072,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek R1 Distill Llama 70B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-01-30",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "fal-ai/elevenlabs/tts/multilingual-v2": {
+        "attachment": false,
+        "description": "ElevenLabs Multilingual TTS v2 は digitalocean によって提供される AI モデルです。",
+        "family": "elevenlabs",
+        "id": "fal-ai/elevenlabs/tts/multilingual-v2",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "ElevenLabs Multilingual TTS v2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2023-08-22",
+        "temperature": false,
+        "tool_call": false
+      },
+      "fal-ai/fast-sdxl": {
+        "attachment": false,
+        "description": "Fast SDXL は digitalocean によって提供される AI モデルです。",
+        "family": "stable-diffusion",
+        "id": "fal-ai/fast-sdxl",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Fast SDXL",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2023-07-26",
+        "temperature": false,
+        "tool_call": false
+      },
+      "fal-ai/flux/schnell": {
+        "attachment": false,
+        "description": "FLUX.1 [schnell] は digitalocean によって提供される AI モデルです。",
+        "family": "flux",
+        "id": "fal-ai/flux/schnell",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "FLUX.1 [schnell]",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-08-01",
+        "temperature": false,
+        "tool_call": false
+      },
+      "fal-ai/stable-audio-25/text-to-audio": {
+        "attachment": false,
+        "description": "Stable Audio 2.5 (Text-to-Audio) は digitalocean によって提供される AI モデルです。",
+        "id": "fal-ai/stable-audio-25/text-to-audio",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "Stable Audio 2.5 (Text-to-Audio)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-10-08",
+        "temperature": false,
+        "tool_call": false
+      },
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "input": 1,
+          "output": 3.2
+        },
+        "description": "GLM 5 は digitalocean によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 202752,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "tool_call": true
+      },
+      "gte-large-en-v1.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.09,
+          "output": 0
+        },
+        "description": "GTE Large (v1.5) は digitalocean によって提供される AI モデルです。",
+        "family": "text-embedding",
+        "id": "gte-large-en-v1.5",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 8192,
+          "output": 1024
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GTE Large (v1.5)",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-03-27",
+        "temperature": false,
+        "tool_call": false
+      },
+      "kimi-k2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.5,
+          "output": 2.7
+        },
+        "description": "Kimi K2.5 は digitalocean によって提供される AI モデルです。",
+        "family": "kimi",
+        "id": "kimi-k2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "llama3.3-70b-instruct": {
+        "attachment": false,
+        "cost": {
+          "input": 0.65,
+          "output": 0.65
+        },
+        "description": "Llama 3.3 Instruct 70B は digitalocean によって提供される AI モデルです。",
+        "family": "llama",
+        "id": "llama3.3-70b-instruct",
+        "knowledge": "2023-12",
+        "last_updated": "2024-12-06",
+        "limit": {
+          "context": 128000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.3 Instruct 70B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-12-06",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M2.5 は digitalocean によって提供される AI モデルです。",
+        "family": "minimax-m2.5",
+        "id": "minimax-m2.5",
+        "knowledge": "2025-08",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 204800,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "status": "beta",
+        "temperature": true,
+        "tool_call": true
+      },
+      "multi-qa-mpnet-base-dot-v1": {
+        "attachment": false,
+        "cost": {
+          "input": 0.009,
+          "output": 0
+        },
+        "description": "Multi-QA-mpnet-base-dot-v1 は digitalocean によって提供される AI モデルです。",
+        "family": "text-embedding",
+        "id": "multi-qa-mpnet-base-dot-v1",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 512,
+          "output": 768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Multi-QA-mpnet-base-dot-v1",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2021-08-30",
+        "temperature": false,
+        "tool_call": false
+      },
+      "nvidia-nemotron-3-super-120b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 0.65
+        },
+        "description": "Nemotron-3-Super-120B は digitalocean によって提供される AI モデルです。",
+        "family": "nemotron",
+        "id": "nvidia-nemotron-3-super-120b",
+        "knowledge": "2026-02",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 256000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nemotron-3-Super-120B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-11",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai-gpt-4.1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "input": 2,
+          "output": 8
+        },
+        "description": "GPT-4.1 は digitalocean によって提供される AI モデルです。",
+        "family": "gpt",
+        "id": "openai-gpt-4.1",
+        "knowledge": "2024-04",
+        "last_updated": "2025-04-14",
+        "limit": {
+          "context": 1047576,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4.1",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-04-14",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai-gpt-4o": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.25,
+          "input": 2.5,
+          "output": 10
+        },
+        "description": "GPT-4o は digitalocean によって提供される AI モデルです。",
+        "family": "gpt",
+        "id": "openai-gpt-4o",
+        "knowledge": "2023-09",
+        "last_updated": "2024-08-06",
+        "limit": {
+          "context": 128000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4o",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-05-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai-gpt-4o-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "GPT-4o mini は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-mini",
+        "id": "openai-gpt-4o-mini",
+        "knowledge": "2023-09",
+        "last_updated": "2024-07-18",
+        "limit": {
+          "context": 128000,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-4o mini",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2024-07-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai-gpt-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5 は digitalocean によって提供される AI モデルです。",
+        "family": "gpt",
+        "id": "openai-gpt-5",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-5-2-pro": {
+        "attachment": true,
+        "cost": {
+          "input": 21,
+          "output": 168
+        },
+        "description": "GPT-5.2 pro は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-pro",
+        "id": "openai-gpt-5-2-pro",
+        "knowledge": "2025-08-31",
+        "last_updated": "2025-12-11",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.2 pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-11",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-5-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.25,
+          "output": 2
+        },
+        "description": "GPT-5 mini は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-mini",
+        "id": "openai-gpt-5-mini",
+        "knowledge": "2024-05-30",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5 mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-5-nano": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.005,
+          "input": 0.05,
+          "output": 0.4
+        },
+        "description": "GPT-5 nano は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-nano",
+        "id": "openai-gpt-5-nano",
+        "knowledge": "2024-05-30",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5 nano",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-5.1-codex-max": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 10
+        },
+        "description": "GPT-5.1 Codex Max は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-codex",
+        "id": "openai-gpt-5.1-codex-max",
+        "knowledge": "2024-09-30",
+        "last_updated": "2025-11-13",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.1 Codex Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-11-13",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-5.2": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.175,
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.2 は digitalocean によって提供される AI モデルです。",
+        "family": "gpt",
+        "id": "openai-gpt-5.2",
+        "knowledge": "2025-08-31",
+        "last_updated": "2025-12-11",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.2",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-12-11",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-5.3-codex": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.175,
+          "input": 1.75,
+          "output": 14
+        },
+        "description": "GPT-5.3 Codex は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-codex",
+        "id": "openai-gpt-5.3-codex",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-02-05",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.3 Codex",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-05",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-5.4": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 15
+        },
+        "description": "GPT-5.4 は digitalocean によって提供される AI モデルです。",
+        "family": "gpt",
+        "id": "openai-gpt-5.4",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-05",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-05",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-5.4-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "output": 4.5
+        },
+        "description": "GPT-5.4 mini は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-mini",
+        "id": "openai-gpt-5.4-mini",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-17",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4 mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-17",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-5.4-nano": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.2,
+          "output": 1.25
+        },
+        "description": "GPT-5.4 nano は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-nano",
+        "id": "openai-gpt-5.4-nano",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-17",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4 nano",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-17",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-5.4-pro": {
+        "attachment": true,
+        "cost": {
+          "input": 30,
+          "output": 180
+        },
+        "description": "GPT-5.4 pro は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-pro",
+        "id": "openai-gpt-5.4-pro",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-05",
+        "limit": {
+          "context": 400000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4 pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-05",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-image-1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1.25,
+          "input": 5,
+          "output": 40
+        },
+        "description": "GPT Image 1 は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-image",
+        "id": "openai-gpt-image-1",
+        "last_updated": "2025-04-24",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "GPT Image 1",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-04-24",
+        "temperature": false,
+        "tool_call": false
+      },
+      "openai-gpt-image-1.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1,
+          "input": 5,
+          "output": 10
+        },
+        "description": "GPT Image 1.5 は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-image",
+        "id": "openai-gpt-image-1.5",
+        "last_updated": "2025-11-25",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "GPT Image 1.5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-11-25",
+        "temperature": false,
+        "tool_call": false
+      },
+      "openai-gpt-oss-120b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.7
+        },
+        "description": "gpt-oss-120b は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-oss",
+        "id": "openai-gpt-oss-120b",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-06",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "gpt-oss-120b",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-05",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai-gpt-oss-20b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.05,
+          "output": 0.45
+        },
+        "description": "gpt-oss-20b は digitalocean によって提供される AI モデルです。",
+        "family": "gpt-oss",
+        "id": "openai-gpt-oss-20b",
+        "knowledge": "2024-06",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "gpt-oss-20b",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2025-08-05",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai-o1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 7.5,
+          "input": 15,
+          "output": 60
+        },
+        "description": "o1 は digitalocean によって提供される AI モデルです。",
+        "family": "o",
+        "id": "openai-o1",
+        "knowledge": "2023-09",
+        "last_updated": "2024-12-05",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2024-12-05",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-o3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "input": 2,
+          "output": 8
+        },
+        "description": "o3 は digitalocean によって提供される AI モデルです。",
+        "family": "o",
+        "id": "openai-o3",
+        "knowledge": "2024-05",
+        "last_updated": "2025-04-16",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o3",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-04-16",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-o3-mini": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.55,
+          "input": 1.1,
+          "output": 4.4
+        },
+        "description": "o3-mini は digitalocean によって提供される AI モデルです。",
+        "family": "o-mini",
+        "id": "openai-o3-mini",
+        "knowledge": "2024-05",
+        "last_updated": "2025-01-29",
+        "limit": {
+          "context": 200000,
+          "output": 100000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "o3-mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2024-12-20",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "qwen3-embedding-0.6b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.04,
+          "output": 0
+        },
+        "description": "Qwen3 Embedding 0.6B は digitalocean によって提供される AI モデルです。",
+        "family": "text-embedding",
+        "id": "qwen3-embedding-0.6b",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 8000,
+          "output": 1024
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Embedding 0.6B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-06-03",
+        "status": "beta",
+        "temperature": false,
+        "tool_call": false
+      }
+    },
+    "name": "DigitalOcean",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "dinference": {
     "api": "https://api.dinference.com/v1",
     "doc": "https://dinference.com",
@@ -33179,6 +34677,38 @@
         "reasoning": true,
         "release_date": "2026-02-05",
         "temperature": true,
+        "tool_call": true
+      },
+      "claude-opus-4.7": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Claude Opus 4.7 は github-copilot によって提供される AI モデルです。",
+        "family": "claude-opus",
+        "id": "claude-opus-4.7",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 144000,
+          "input": 128000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-16",
+        "temperature": false,
         "tool_call": true
       },
       "claude-opus-41": {
@@ -38632,7 +40162,7 @@
         "family": "claude-opus",
         "id": "claude-opus-4-5@20251101",
         "knowledge": "2025-03-31",
-        "last_updated": "2025-11-24",
+        "last_updated": "2025-11-01",
         "limit": {
           "context": 200000,
           "output": 64000
@@ -38650,7 +40180,7 @@
         "name": "Claude Opus 4.5",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-11-24",
+        "release_date": "2025-11-01",
         "temperature": true,
         "tool_call": true
       },
@@ -38672,7 +40202,7 @@
         "family": "claude-opus",
         "id": "claude-opus-4-6@default",
         "knowledge": "2025-05-31",
-        "last_updated": "2026-02-05",
+        "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
           "output": 128000
@@ -40185,38 +41715,6 @@
         "reasoning": true,
         "release_date": "2025-09-29",
         "temperature": true,
-        "tool_call": true
-      },
-      "codex-mini-latest": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.375,
-          "input": 1.5,
-          "output": 6
-        },
-        "description": "OpenAI Codex Mini Latest は helicone によって提供される AI モデルです。",
-        "family": "gpt-codex-mini",
-        "id": "codex-mini-latest",
-        "knowledge": "2025-01",
-        "last_updated": "2025-01-01",
-        "limit": {
-          "context": 200000,
-          "output": 100000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "OpenAI Codex Mini Latest",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-01-01",
-        "temperature": false,
         "tool_call": true
       },
       "deepseek-r1-distill-llama-70b": {
@@ -89784,37 +91282,6 @@
         "temperature": false,
         "tool_call": false
       },
-      "codex-mini-latest": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.375,
-          "input": 1.5,
-          "output": 6
-        },
-        "description": "Codex Mini は openai によって提供される AI モデルです。",
-        "family": "gpt-codex-mini",
-        "id": "codex-mini-latest",
-        "knowledge": "2024-04",
-        "last_updated": "2025-05-16",
-        "limit": {
-          "context": 200000,
-          "output": 100000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Codex Mini",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-05-16",
-        "temperature": false,
-        "tool_call": true
-      },
       "dall-e-2": {
         "attachment": true,
         "cost": {
@@ -91743,7 +93210,7 @@
         "family": "claude-opus",
         "id": "claude-opus-4-6",
         "knowledge": "2025-05-31",
-        "last_updated": "2026-02-05",
+        "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
           "output": 128000
@@ -93655,11 +95122,14 @@
         "description": "MiniMax M2.5 は opencode-go によって提供される AI モデルです。",
         "family": "minimax-m2.5",
         "id": "minimax-m2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "knowledge": "2025-01",
         "last_updated": "2026-02-12",
         "limit": {
           "context": 204800,
-          "output": 131072
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -93671,9 +95141,6 @@
         },
         "name": "MiniMax M2.5",
         "open_weights": true,
-        "provider": {
-          "npm": "@ai-sdk/anthropic"
-        },
         "reasoning": true,
         "release_date": "2026-02-12",
         "temperature": true,
@@ -99402,35 +100869,6 @@
     "iconURL": "https://models.dev/logos/ovhcloud.svg",
     "id": "ovhcloud",
     "models": {
-      "deepseek-r1-distill-llama-70b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.74,
-          "output": 0.74
-        },
-        "description": "DeepSeek-R1-Distill-Llama-70B は ovhcloud によって提供される AI モデルです。",
-        "id": "deepseek-r1-distill-llama-70b",
-        "last_updated": "2025-01-30",
-        "limit": {
-          "context": 131072,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek-R1-Distill-Llama-70B",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-01-30",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "gpt-oss-120b": {
         "attachment": false,
         "cost": {
@@ -99632,64 +101070,6 @@
         "structured_output": true,
         "temperature": true,
         "tool_call": true
-      },
-      "mixtral-8x7b-instruct-v0.1": {
-        "attachment": false,
-        "cost": {
-          "input": 0.7,
-          "output": 0.7
-        },
-        "description": "Mixtral-8x7B-Instruct-v0.1 は ovhcloud によって提供される AI モデルです。",
-        "id": "mixtral-8x7b-instruct-v0.1",
-        "last_updated": "2025-04-01",
-        "limit": {
-          "context": 32768,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Mixtral-8x7B-Instruct-v0.1",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-04-01",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": false
-      },
-      "qwen2.5-coder-32b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.96,
-          "output": 0.96
-        },
-        "description": "Qwen2.5-Coder-32B-Instruct は ovhcloud によって提供される AI モデルです。",
-        "id": "qwen2.5-coder-32b-instruct",
-        "last_updated": "2025-03-24",
-        "limit": {
-          "context": 32768,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen2.5-Coder-32B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-03-24",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": false
       },
       "qwen2.5-vl-72b-instruct": {
         "attachment": true,
@@ -107465,7 +108845,7 @@
         "family": "gemini-pro",
         "id": "google/gemini-2.5-pro",
         "knowledge": "2025-01",
-        "last_updated": "2025-06-17",
+        "last_updated": "2025-06-05",
         "limit": {
           "context": 1048576,
           "output": 65536
@@ -107485,7 +108865,7 @@
         "name": "Gemini 2.5 Pro",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-06-17",
+        "release_date": "2025-03-20",
         "temperature": true,
         "tool_call": true
       },
