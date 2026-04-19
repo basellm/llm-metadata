@@ -1,21 +1,24 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
-    "cache_read": 0.01,
+    "cache_read": 0.005,
     "input": 0.05,
     "output": 0.4
   },
   "description": "GPT-5 Nano is an AI model provided by llmgateway.",
-  "family": "gpt",
+  "family": "gpt-nano",
   "id": "gpt-5-nano",
-  "last_updated": "2025-08-01",
+  "knowledge": "2024-05-30",
+  "last_updated": "2025-08-07",
   "limit": {
     "context": 400000,
+    "input": 272000,
     "output": 128000
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image"
     ],
     "output": [
       "text"
@@ -24,8 +27,8 @@
   "name": "GPT-5 Nano",
   "open_weights": false,
   "reasoning": true,
-  "release_date": "2025-08-01",
+  "release_date": "2025-08-07",
   "structured_output": true,
-  "temperature": true,
+  "temperature": false,
   "tool_call": true
 }

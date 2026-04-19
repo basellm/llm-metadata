@@ -2,16 +2,18 @@
   "attachment": false,
   "cost": {
     "cache_read": 0.03,
+    "cache_write": 0,
     "input": 0.2,
     "output": 1.1
   },
-  "description": "GLM-4.5 Air is an AI model provided by llmgateway.",
-  "family": "glm",
+  "description": "GLM-4.5-Air is an AI model provided by llmgateway.",
+  "family": "glm-air",
   "id": "glm-4.5-air",
-  "last_updated": "2025-07-25",
+  "knowledge": "2025-04",
+  "last_updated": "2025-07-28",
   "limit": {
-    "context": 128000,
-    "output": 16384
+    "context": 131072,
+    "output": 98304
   },
   "modalities": {
     "input": [
@@ -21,11 +23,10 @@
       "text"
     ]
   },
-  "name": "GLM-4.5 Air",
-  "open_weights": false,
-  "reasoning": false,
-  "release_date": "2025-07-25",
-  "structured_output": true,
+  "name": "GLM-4.5-Air",
+  "open_weights": true,
+  "reasoning": true,
+  "release_date": "2025-07-28",
   "temperature": true,
   "tool_call": true
 }

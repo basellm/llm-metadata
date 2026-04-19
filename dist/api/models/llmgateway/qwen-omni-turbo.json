@@ -1,31 +1,36 @@
 {
-  "attachment": true,
+  "attachment": false,
   "cost": {
-    "input": 0.2,
-    "output": 0.8
+    "input": 0.07,
+    "input_audio": 4.44,
+    "output": 0.27,
+    "output_audio": 8.89
   },
-  "description": "Qwen Omni Turbo is an AI model provided by llmgateway.",
+  "description": "Qwen-Omni Turbo is an AI model provided by llmgateway.",
   "family": "qwen",
   "id": "qwen-omni-turbo",
+  "knowledge": "2024-04",
   "last_updated": "2025-03-26",
   "limit": {
     "context": 32768,
-    "output": 8192
+    "output": 2048
   },
   "modalities": {
     "input": [
       "text",
-      "image"
+      "image",
+      "audio",
+      "video"
     ],
     "output": [
-      "text"
+      "text",
+      "audio"
     ]
   },
-  "name": "Qwen Omni Turbo",
-  "open_weights": true,
+  "name": "Qwen-Omni Turbo",
+  "open_weights": false,
   "reasoning": false,
-  "release_date": "2025-03-26",
-  "structured_output": true,
+  "release_date": "2025-01-19",
   "temperature": true,
-  "tool_call": false
+  "tool_call": true
 }

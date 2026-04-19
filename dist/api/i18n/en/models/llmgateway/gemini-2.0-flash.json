@@ -1,21 +1,26 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
-    "cache_read": 0.03,
+    "cache_read": 0.025,
     "input": 0.1,
     "output": 0.4
   },
   "description": "Gemini 2.0 Flash is an AI model provided by llmgateway.",
-  "family": "gemini",
+  "family": "gemini-flash",
   "id": "gemini-2.0-flash",
-  "last_updated": "2025-02-05",
+  "knowledge": "2024-06",
+  "last_updated": "2024-12-11",
   "limit": {
     "context": 1048576,
     "output": 8192
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image",
+      "audio",
+      "video",
+      "pdf"
     ],
     "output": [
       "text"
@@ -24,8 +29,7 @@
   "name": "Gemini 2.0 Flash",
   "open_weights": false,
   "reasoning": false,
-  "release_date": "2025-02-05",
-  "status": "deprecated",
+  "release_date": "2024-12-11",
   "structured_output": true,
   "temperature": true,
   "tool_call": true

@@ -1,13 +1,15 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
     "cache_read": 0.3,
+    "cache_write": 3.75,
     "input": 3,
     "output": 15
   },
-  "description": "Claude 3.5 Sonnet (2024-10-22) は llmgateway によって提供される AI モデルです。",
-  "family": "claude",
+  "description": "Claude Sonnet 3.5 v2 は llmgateway によって提供される AI モデルです。",
+  "family": "claude-sonnet",
   "id": "claude-3-5-sonnet-20241022",
+  "knowledge": "2024-04-30",
   "last_updated": "2024-10-22",
   "limit": {
     "context": 200000,
@@ -15,18 +17,18 @@
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image",
+      "pdf"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Claude 3.5 Sonnet (2024-10-22)",
+  "name": "Claude Sonnet 3.5 v2",
   "open_weights": false,
   "reasoning": false,
   "release_date": "2024-10-22",
-  "status": "deprecated",
-  "structured_output": false,
   "temperature": true,
   "tool_call": true
 }

@@ -1,32 +1,32 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.05,
     "input": 0.3,
     "output": 0.9
   },
   "description": "GLM-4.6V is an AI model provided by llmgateway.",
   "family": "glm",
   "id": "glm-4.6v",
+  "knowledge": "2025-04",
   "last_updated": "2025-12-08",
   "limit": {
     "context": 128000,
-    "output": 16000
+    "output": 32768
   },
   "modalities": {
     "input": [
       "text",
-      "image"
+      "image",
+      "video"
     ],
     "output": [
       "text"
     ]
   },
   "name": "GLM-4.6V",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
   "release_date": "2025-12-08",
-  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

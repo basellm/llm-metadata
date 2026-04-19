@@ -2,16 +2,20 @@
   "attachment": false,
   "cost": {
     "cache_read": 0.2,
+    "cache_write": 0,
     "input": 1,
     "output": 3.2
   },
   "description": "GLM-5 是由 llmgateway 提供的人工智能模型。",
   "family": "glm",
   "id": "glm-5",
-  "last_updated": "2026-02-15",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-02-11",
   "limit": {
-    "context": 202800,
-    "output": 131100
+    "context": 204800,
+    "output": 131072
   },
   "modalities": {
     "input": [
@@ -22,10 +26,9 @@
     ]
   },
   "name": "GLM-5",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
-  "release_date": "2026-02-15",
-  "structured_output": true,
+  "release_date": "2026-02-11",
   "temperature": true,
   "tool_call": true
 }

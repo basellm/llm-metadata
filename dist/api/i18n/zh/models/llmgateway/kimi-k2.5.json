@@ -1,5 +1,5 @@
 {
-  "attachment": true,
+  "attachment": false,
   "cost": {
     "cache_read": 0.1,
     "input": 0.6,
@@ -8,25 +8,30 @@
   "description": "Kimi K2.5 是由 llmgateway 提供的人工智能模型。",
   "family": "kimi",
   "id": "kimi-k2.5",
-  "last_updated": "2026-01-26",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "knowledge": "2025-01",
+  "last_updated": "2026-01",
   "limit": {
     "context": 262144,
-    "output": 32768
+    "output": 262144
   },
   "modalities": {
     "input": [
       "text",
-      "image"
+      "image",
+      "video"
     ],
     "output": [
       "text"
     ]
   },
   "name": "Kimi K2.5",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
-  "release_date": "2026-01-26",
+  "release_date": "2026-01",
   "structured_output": true,
-  "temperature": true,
+  "temperature": false,
   "tool_call": true
 }

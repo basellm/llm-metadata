@@ -1,31 +1,34 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
     "cache_read": 1.5,
+    "cache_write": 18.75,
     "input": 15,
     "output": 75
   },
-  "description": "Claude Opus 4 (2025-05-14) 是由 llmgateway 提供的人工智能模型。",
-  "family": "claude",
+  "description": "Claude Opus 4 是由 llmgateway 提供的人工智能模型。",
+  "family": "claude-opus",
   "id": "claude-opus-4-20250514",
+  "knowledge": "2025-03-31",
   "last_updated": "2025-05-22",
   "limit": {
     "context": 200000,
-    "output": 16384
+    "output": 32000
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image",
+      "pdf"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Claude Opus 4 (2025-05-14)",
+  "name": "Claude Opus 4",
   "open_weights": false,
   "reasoning": true,
   "release_date": "2025-05-22",
-  "structured_output": false,
   "temperature": true,
   "tool_call": true
 }

@@ -1,17 +1,18 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.08,
     "input": 0.4,
-    "output": 1.2
+    "output": 1.2,
+    "reasoning": 4
   },
   "description": "Qwen Plus は llmgateway によって提供される AI モデルです。",
   "family": "qwen",
   "id": "qwen-plus",
-  "last_updated": "2025-01-25",
+  "knowledge": "2024-04",
+  "last_updated": "2025-09-11",
   "limit": {
-    "context": 131072,
-    "output": 32000
+    "context": 1000000,
+    "output": 32768
   },
   "modalities": {
     "input": [
@@ -22,10 +23,9 @@
     ]
   },
   "name": "Qwen Plus",
-  "open_weights": true,
-  "reasoning": false,
-  "release_date": "2025-01-25",
-  "structured_output": true,
+  "open_weights": false,
+  "reasoning": true,
+  "release_date": "2024-01-25",
   "temperature": true,
   "tool_call": true
 }

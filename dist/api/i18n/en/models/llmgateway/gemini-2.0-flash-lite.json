@@ -1,20 +1,25 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
-    "input": 0.08,
+    "input": 0.075,
     "output": 0.3
   },
   "description": "Gemini 2.0 Flash Lite is an AI model provided by llmgateway.",
-  "family": "gemini",
+  "family": "gemini-flash-lite",
   "id": "gemini-2.0-flash-lite",
-  "last_updated": "2025-02-25",
+  "knowledge": "2024-06",
+  "last_updated": "2024-12-11",
   "limit": {
     "context": 1048576,
     "output": 8192
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image",
+      "audio",
+      "video",
+      "pdf"
     ],
     "output": [
       "text"
@@ -23,8 +28,7 @@
   "name": "Gemini 2.0 Flash Lite",
   "open_weights": false,
   "reasoning": false,
-  "release_date": "2025-02-25",
-  "status": "deprecated",
+  "release_date": "2024-12-11",
   "structured_output": true,
   "temperature": true,
   "tool_call": true

@@ -71053,48 +71053,12 @@
       "tags": []
     },
     {
-      "description": "Claude 3.5 Sonnet は llmgateway によって提供される AI モデルです。",
+      "description": "Claude Sonnet 3.5 v2 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "",
-      "id": "claude-3-5-sonnet",
-      "knowledge": null,
-      "lastUpdated": "2024-06-20",
-      "maxCtxTokens": 200000,
-      "maxOutputTokens": 16384,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude 3.5 Sonnet",
-      "price": {
-        "cacheRead": 0.3,
-        "cacheWrite": null,
-        "input": 3,
-        "output": 15
-      },
-      "releaseDate": "2024-06-20",
-      "tags": []
-    },
-    {
-      "description": "Claude 3.5 Sonnet (2024-10-22) は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": false,
         "temperature": true,
@@ -71102,22 +71066,24 @@
       },
       "icon": "",
       "id": "claude-3-5-sonnet-20241022",
-      "knowledge": null,
+      "knowledge": "2024-04-30",
       "lastUpdated": "2024-10-22",
       "maxCtxTokens": 200000,
       "maxOutputTokens": 8192,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude 3.5 Sonnet (2024-10-22)",
+      "name": "Claude Sonnet 3.5 v2",
       "price": {
         "cacheRead": 0.3,
-        "cacheWrite": null,
+        "cacheWrite": 3.75,
         "input": 3,
         "output": 15
       },
@@ -71161,12 +71127,12 @@
       "tags": []
     },
     {
-      "description": "Claude 3.7 Sonnet (2025-02-19) は llmgateway によって提供される AI モデルです。",
+      "description": "Claude Sonnet 3.7 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": true,
         "temperature": true,
@@ -71174,100 +71140,28 @@
       },
       "icon": "",
       "id": "claude-3-7-sonnet-20250219",
-      "knowledge": null,
+      "knowledge": "2024-10-31",
       "lastUpdated": "2025-02-19",
       "maxCtxTokens": 200000,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 64000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude 3.7 Sonnet (2025-02-19)",
+      "name": "Claude Sonnet 3.7",
       "price": {
         "cacheRead": 0.3,
-        "cacheWrite": null,
+        "cacheWrite": 3.75,
         "input": 3,
         "output": 15
       },
       "releaseDate": "2025-02-19",
-      "tags": []
-    },
-    {
-      "description": "Claude 3 Haiku は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "",
-      "id": "claude-3-haiku",
-      "knowledge": null,
-      "lastUpdated": "2024-03-04",
-      "maxCtxTokens": 200000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude 3 Haiku",
-      "price": {
-        "cacheRead": 0.03,
-        "cacheWrite": null,
-        "input": 0.25,
-        "output": 1.25
-      },
-      "releaseDate": "2024-03-04",
-      "tags": []
-    },
-    {
-      "description": "Claude 3 Haiku (2024-03-07) は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "",
-      "id": "claude-3-haiku-20240307",
-      "knowledge": null,
-      "lastUpdated": "2024-03-04",
-      "maxCtxTokens": 200000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude 3 Haiku (2024-03-07)",
-      "price": {
-        "cacheRead": 0.03,
-        "cacheWrite": null,
-        "input": 0.25,
-        "output": 1.25
-      },
-      "releaseDate": "2024-03-04",
       "tags": []
     },
     {
@@ -71308,26 +71202,66 @@
       "tags": []
     },
     {
-      "description": "Claude Haiku 4.5 は llmgateway によって提供される AI モデルです。",
+      "description": "Claude Haiku 4.5 (latest) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "claude-haiku-4-5",
-      "knowledge": null,
+      "knowledge": "2025-02-28",
       "lastUpdated": "2025-10-15",
       "maxCtxTokens": 200000,
       "maxOutputTokens": 64000,
       "modalities": {
         "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
           "text"
+        ]
+      },
+      "name": "Claude Haiku 4.5 (latest)",
+      "price": {
+        "cacheRead": 0.1,
+        "cacheWrite": 1.25,
+        "input": 1,
+        "output": 5
+      },
+      "releaseDate": "2025-10-15",
+      "tags": []
+    },
+    {
+      "description": "Claude Haiku 4.5 は llmgateway によって提供される AI モデルです。",
+      "firm": "llmgateway",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "claude-haiku-4-5-20251001",
+      "knowledge": "2025-02-28",
+      "lastUpdated": "2025-10-15",
+      "maxCtxTokens": 200000,
+      "maxOutputTokens": 64000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -71336,43 +71270,7 @@
       "name": "Claude Haiku 4.5",
       "price": {
         "cacheRead": 0.1,
-        "cacheWrite": null,
-        "input": 1,
-        "output": 5
-      },
-      "releaseDate": "2025-10-15",
-      "tags": []
-    },
-    {
-      "description": "Claude Haiku 4.5 (2025-10-01) は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "",
-      "id": "claude-haiku-4-5-20251001",
-      "knowledge": null,
-      "lastUpdated": "2025-10-15",
-      "maxCtxTokens": 200000,
-      "maxOutputTokens": 64000,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Haiku 4.5 (2025-10-01)",
-      "price": {
-        "cacheRead": 0.1,
-        "cacheWrite": null,
+        "cacheWrite": 1.25,
         "input": 1,
         "output": 5
       },
@@ -71393,14 +71291,15 @@
       },
       "icon": "",
       "id": "claude-opus-4-1-20250805",
-      "knowledge": null,
+      "knowledge": "2025-03-31",
       "lastUpdated": "2025-08-05",
       "maxCtxTokens": 200000,
       "maxOutputTokens": 32000,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -71409,7 +71308,7 @@
       "name": "Claude Opus 4.1",
       "price": {
         "cacheRead": 1.5,
-        "cacheWrite": null,
+        "cacheWrite": 18.75,
         "input": 15,
         "output": 75
       },
@@ -71417,12 +71316,12 @@
       "tags": []
     },
     {
-      "description": "Claude Opus 4 (2025-05-14) は llmgateway によって提供される AI モデルです。",
+      "description": "Claude Opus 4 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": true,
         "temperature": true,
@@ -71430,22 +71329,24 @@
       },
       "icon": "",
       "id": "claude-opus-4-20250514",
-      "knowledge": null,
+      "knowledge": "2025-03-31",
       "lastUpdated": "2025-05-22",
       "maxCtxTokens": 200000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 32000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Opus 4 (2025-05-14)",
+      "name": "Claude Opus 4",
       "price": {
         "cacheRead": 1.5,
-        "cacheWrite": null,
+        "cacheWrite": 18.75,
         "input": 15,
         "output": 75
       },
@@ -71466,14 +71367,15 @@
       },
       "icon": "",
       "id": "claude-opus-4-5-20251101",
-      "knowledge": null,
-      "lastUpdated": "2025-11-24",
+      "knowledge": "2025-03-31",
+      "lastUpdated": "2025-11-01",
       "maxCtxTokens": 200000,
-      "maxOutputTokens": 32000,
+      "maxOutputTokens": 64000,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -71482,11 +71384,11 @@
       "name": "Claude Opus 4.5",
       "price": {
         "cacheRead": 0.5,
-        "cacheWrite": null,
+        "cacheWrite": 6.25,
         "input": 5,
         "output": 25
       },
-      "releaseDate": "2025-11-24",
+      "releaseDate": "2025-11-01",
       "tags": []
     },
     {
@@ -71504,13 +71406,14 @@
       "icon": "",
       "id": "claude-opus-4-6",
       "knowledge": "2025-05-31",
-      "lastUpdated": "2026-02-05",
+      "lastUpdated": "2026-03-13",
       "maxCtxTokens": 1000000,
       "maxOutputTokens": 128000,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -71519,7 +71422,7 @@
       "name": "Claude Opus 4.6",
       "price": {
         "cacheRead": 0.5,
-        "cacheWrite": null,
+        "cacheWrite": 6.25,
         "input": 5,
         "output": 25
       },
@@ -71527,12 +71430,50 @@
       "tags": []
     },
     {
-      "description": "Claude Sonnet 4 (2025-05-14) は llmgateway によって提供される AI モデルです。",
+      "description": "Claude Opus 4.7 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "claude-opus-4-7",
+      "knowledge": "2026-01-31",
+      "lastUpdated": "2026-04-16",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 128000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.7",
+      "price": {
+        "cacheRead": 0.5,
+        "cacheWrite": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "releaseDate": "2026-04-16",
+      "tags": []
+    },
+    {
+      "description": "Claude Sonnet 4 は llmgateway によって提供される AI モデルです。",
+      "firm": "llmgateway",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
         "open_weights": false,
         "reasoning": true,
         "temperature": true,
@@ -71540,35 +71481,37 @@
       },
       "icon": "",
       "id": "claude-sonnet-4-20250514",
-      "knowledge": null,
-      "lastUpdated": "2025-05-14",
+      "knowledge": "2025-03-31",
+      "lastUpdated": "2025-05-22",
       "maxCtxTokens": 200000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 64000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Sonnet 4 (2025-05-14)",
+      "name": "Claude Sonnet 4",
       "price": {
         "cacheRead": 0.3,
-        "cacheWrite": null,
+        "cacheWrite": 3.75,
         "input": 3,
         "output": 15
       },
-      "releaseDate": "2025-05-14",
+      "releaseDate": "2025-05-22",
       "tags": []
     },
     {
-      "description": "Claude Sonnet 4.5 は llmgateway によって提供される AI モデルです。",
+      "description": "Claude Sonnet 4.5 (latest) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": true,
         "temperature": true,
@@ -71576,13 +71519,53 @@
       },
       "icon": "",
       "id": "claude-sonnet-4-5",
-      "knowledge": null,
+      "knowledge": "2025-07-31",
       "lastUpdated": "2025-09-29",
       "maxCtxTokens": 200000,
       "maxOutputTokens": 64000,
       "modalities": {
         "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
           "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.5 (latest)",
+      "price": {
+        "cacheRead": 0.3,
+        "cacheWrite": 3.75,
+        "input": 3,
+        "output": 15
+      },
+      "releaseDate": "2025-09-29",
+      "tags": []
+    },
+    {
+      "description": "Claude Sonnet 4.5 は llmgateway によって提供される AI モデルです。",
+      "firm": "llmgateway",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "claude-sonnet-4-5-20250929",
+      "knowledge": "2025-07-31",
+      "lastUpdated": "2025-09-29",
+      "maxCtxTokens": 200000,
+      "maxOutputTokens": 64000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -71591,43 +71574,7 @@
       "name": "Claude Sonnet 4.5",
       "price": {
         "cacheRead": 0.3,
-        "cacheWrite": null,
-        "input": 3,
-        "output": 15
-      },
-      "releaseDate": "2025-09-29",
-      "tags": []
-    },
-    {
-      "description": "Claude Sonnet 4.5 (2025-09-29) は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": false,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "",
-      "id": "claude-sonnet-4-5-20250929",
-      "knowledge": null,
-      "lastUpdated": "2025-09-29",
-      "maxCtxTokens": 200000,
-      "maxOutputTokens": 64000,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 4.5 (2025-09-29)",
-      "price": {
-        "cacheRead": 0.3,
-        "cacheWrite": null,
+        "cacheWrite": 3.75,
         "input": 3,
         "output": 15
       },
@@ -71638,9 +71585,9 @@
       "description": "Claude Sonnet 4.6 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": true,
         "temperature": true,
@@ -71649,12 +71596,14 @@
       "icon": "",
       "id": "claude-sonnet-4-6",
       "knowledge": "2025-08-31",
-      "lastUpdated": "2026-02-17",
-      "maxCtxTokens": 200000,
+      "lastUpdated": "2026-03-13",
+      "maxCtxTokens": 1000000,
       "maxOutputTokens": 64000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -71663,7 +71612,7 @@
       "name": "Claude Sonnet 4.6",
       "price": {
         "cacheRead": 0.3,
-        "cacheWrite": null,
+        "cacheWrite": 3.75,
         "input": 3,
         "output": 15
       },
@@ -71704,43 +71653,6 @@
         "output": 0.9
       },
       "releaseDate": "2025-07-30",
-      "tags": []
-    },
-    {
-      "description": "CogView-4 は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "cogview-4",
-      "knowledge": null,
-      "lastUpdated": "2025-03-04",
-      "maxCtxTokens": 2000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "CogView-4",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2025-03-04",
       "tags": []
     },
     {
@@ -71900,14 +71812,14 @@
         "open_weights": true,
         "reasoning": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "devstral-2512",
-      "knowledge": null,
+      "knowledge": "2025-12",
       "lastUpdated": "2025-12-09",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 262144,
       "modalities": {
         "input": [
           "text"
@@ -71927,7 +71839,7 @@
       "tags": []
     },
     {
-      "description": "Devstral Small 1.1 は llmgateway によって提供される AI モデルです。",
+      "description": "Devstral Small は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -71936,14 +71848,14 @@
         "open_weights": true,
         "reasoning": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "devstral-small-2507",
-      "knowledge": null,
-      "lastUpdated": "2025-07-21",
-      "maxCtxTokens": 131072,
-      "maxOutputTokens": 16384,
+      "knowledge": "2025-05",
+      "lastUpdated": "2025-07-10",
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 128000,
       "modalities": {
         "input": [
           "text"
@@ -71952,23 +71864,23 @@
           "text"
         ]
       },
-      "name": "Devstral Small 1.1",
+      "name": "Devstral Small",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
         "input": 0.1,
         "output": 0.3
       },
-      "releaseDate": "2025-07-21",
+      "releaseDate": "2025-07-10",
       "tags": []
     },
     {
       "description": "Gemini 2.0 Flash は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
+        "attachment": true,
+        "audio": true,
+        "image": true,
         "open_weights": false,
         "reasoning": false,
         "temperature": true,
@@ -71976,13 +71888,17 @@
       },
       "icon": "",
       "id": "gemini-2.0-flash",
-      "knowledge": null,
-      "lastUpdated": "2025-02-05",
+      "knowledge": "2024-06",
+      "lastUpdated": "2024-12-11",
       "maxCtxTokens": 1048576,
       "maxOutputTokens": 8192,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
@@ -71990,21 +71906,21 @@
       },
       "name": "Gemini 2.0 Flash",
       "price": {
-        "cacheRead": 0.03,
+        "cacheRead": 0.025,
         "cacheWrite": null,
         "input": 0.1,
         "output": 0.4
       },
-      "releaseDate": "2025-02-05",
+      "releaseDate": "2024-12-11",
       "tags": []
     },
     {
       "description": "Gemini 2.0 Flash Lite は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
+        "attachment": true,
+        "audio": true,
+        "image": true,
         "open_weights": false,
         "reasoning": false,
         "temperature": true,
@@ -72012,13 +71928,17 @@
       },
       "icon": "",
       "id": "gemini-2.0-flash-lite",
-      "knowledge": null,
-      "lastUpdated": "2025-02-25",
+      "knowledge": "2024-06",
+      "lastUpdated": "2024-12-11",
       "maxCtxTokens": 1048576,
       "maxOutputTokens": 8192,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
@@ -72028,10 +71948,10 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.08,
+        "input": 0.075,
         "output": 0.3
       },
-      "releaseDate": "2025-02-25",
+      "releaseDate": "2024-12-11",
       "tags": []
     },
     {
@@ -72039,7 +71959,7 @@
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
-        "audio": false,
+        "audio": true,
         "image": true,
         "open_weights": false,
         "reasoning": true,
@@ -72048,14 +71968,17 @@
       },
       "icon": "",
       "id": "gemini-2.5-flash",
-      "knowledge": null,
-      "lastUpdated": "2025-08-26",
+      "knowledge": "2025-01",
+      "lastUpdated": "2025-06-05",
       "maxCtxTokens": 1048576,
-      "maxOutputTokens": 65535,
+      "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "audio",
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
@@ -72063,88 +71986,12 @@
       },
       "name": "Gemini 2.5 Flash",
       "price": {
-        "cacheRead": 0.03,
+        "cacheRead": 0.075,
         "cacheWrite": null,
         "input": 0.3,
         "output": 2.5
       },
-      "releaseDate": "2025-08-26",
-      "tags": []
-    },
-    {
-      "description": "Gemini 2.5 Flash Image は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "gemini-2.5-flash-image",
-      "knowledge": null,
-      "lastUpdated": "2025-10-02",
-      "maxCtxTokens": 32768,
-      "maxOutputTokens": 32768,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Gemini 2.5 Flash Image",
-      "price": {
-        "cacheRead": 0.03,
-        "cacheWrite": null,
-        "input": 0.3,
-        "output": 30
-      },
-      "releaseDate": "2025-10-02",
-      "tags": []
-    },
-    {
-      "description": "Gemini 2.5 Flash Image (Preview) は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "gemini-2.5-flash-image-preview",
-      "knowledge": null,
-      "lastUpdated": "2025-10-02",
-      "maxCtxTokens": 32768,
-      "maxOutputTokens": 32768,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Gemini 2.5 Flash Image (Preview)",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 0.3,
-        "output": 2.5
-      },
-      "releaseDate": "2025-10-02",
+      "releaseDate": "2025-03-20",
       "tags": []
     },
     {
@@ -72152,23 +71999,26 @@
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
-        "audio": false,
+        "audio": true,
         "image": true,
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "gemini-2.5-flash-lite",
-      "knowledge": null,
-      "lastUpdated": "2025-07-22",
+      "knowledge": "2025-01",
+      "lastUpdated": "2025-06-17",
       "maxCtxTokens": 1048576,
-      "maxOutputTokens": 65535,
+      "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "audio",
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
@@ -72176,44 +72026,47 @@
       },
       "name": "Gemini 2.5 Flash Lite",
       "price": {
-        "cacheRead": 0.01,
+        "cacheRead": 0.025,
         "cacheWrite": null,
         "input": 0.1,
         "output": 0.4
       },
-      "releaseDate": "2025-07-22",
+      "releaseDate": "2025-06-17",
       "tags": []
     },
     {
-      "description": "Gemini 2.5 Flash Lite Preview (09-2025) は llmgateway によって提供される AI モデルです。",
+      "description": "Gemini 2.5 Flash Lite Preview 09-25 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
-        "audio": false,
+        "audio": true,
         "image": true,
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "gemini-2.5-flash-lite-preview-09-2025",
-      "knowledge": null,
+      "knowledge": "2025-01",
       "lastUpdated": "2025-09-25",
       "maxCtxTokens": 1048576,
-      "maxOutputTokens": 65535,
+      "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "audio",
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Gemini 2.5 Flash Lite Preview (09-2025)",
+      "name": "Gemini 2.5 Flash Lite Preview 09-25",
       "price": {
-        "cacheRead": 0.01,
+        "cacheRead": 0.025,
         "cacheWrite": null,
         "input": 0.1,
         "output": 0.4
@@ -72226,7 +72079,7 @@
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
-        "audio": false,
+        "audio": true,
         "image": true,
         "open_weights": false,
         "reasoning": true,
@@ -72235,14 +72088,17 @@
       },
       "icon": "",
       "id": "gemini-2.5-pro",
-      "knowledge": null,
-      "lastUpdated": "2025-03-25",
+      "knowledge": "2025-01",
+      "lastUpdated": "2025-06-05",
       "maxCtxTokens": 1048576,
       "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "audio",
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
@@ -72250,20 +72106,20 @@
       },
       "name": "Gemini 2.5 Pro",
       "price": {
-        "cacheRead": 0.13,
+        "cacheRead": 0.31,
         "cacheWrite": null,
         "input": 1.25,
         "output": 10
       },
-      "releaseDate": "2025-03-25",
+      "releaseDate": "2025-03-20",
       "tags": []
     },
     {
-      "description": "Gemini 3 Flash (Preview) は llmgateway によって提供される AI モデルです。",
+      "description": "Gemini 3 Flash Preview は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
-        "audio": false,
+        "audio": true,
         "image": true,
         "open_weights": false,
         "reasoning": true,
@@ -72272,20 +72128,23 @@
       },
       "icon": "",
       "id": "gemini-3-flash-preview",
-      "knowledge": null,
+      "knowledge": "2025-01",
       "lastUpdated": "2025-12-17",
       "maxCtxTokens": 1048576,
-      "maxOutputTokens": 65535,
+      "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video",
+          "audio",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Gemini 3 Flash (Preview)",
+      "name": "Gemini 3 Flash Preview",
       "price": {
         "cacheRead": 0.05,
         "cacheWrite": null,
@@ -72296,112 +72155,39 @@
       "tags": []
     },
     {
-      "description": "Gemini 3 Pro Image (Preview) は llmgateway によって提供される AI モデルです。",
+      "description": "Gemini 3.1 Flash Lite Preview は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
-        "audio": false,
+        "audio": true,
         "image": true,
         "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "gemini-3-pro-image-preview",
-      "knowledge": null,
-      "lastUpdated": "2025-11-20",
-      "maxCtxTokens": 65536,
-      "maxOutputTokens": 32768,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Gemini 3 Pro Image (Preview)",
-      "price": {
-        "cacheRead": 0.2,
-        "cacheWrite": null,
-        "input": 2,
-        "output": 12
-      },
-      "releaseDate": "2025-11-20",
-      "tags": []
-    },
-    {
-      "description": "Gemini 3.1 Flash Image (Preview) は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "gemini-3.1-flash-image-preview",
-      "knowledge": null,
-      "lastUpdated": "2026-02-26",
-      "maxCtxTokens": 65536,
-      "maxOutputTokens": 65536,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Gemini 3.1 Flash Image (Preview)",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 0.25,
-        "output": 1.5
-      },
-      "releaseDate": "2026-02-26",
-      "tags": []
-    },
-    {
-      "description": "Gemini 3.1 Flash Lite (Preview) は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "gemini-3.1-flash-lite-preview",
-      "knowledge": null,
+      "knowledge": "2025-01",
       "lastUpdated": "2026-03-03",
       "maxCtxTokens": 1048576,
       "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video",
+          "audio",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Gemini 3.1 Flash Lite (Preview)",
+      "name": "Gemini 3.1 Flash Lite Preview",
       "price": {
-        "cacheRead": 0.03,
-        "cacheWrite": null,
+        "cacheRead": 0.025,
+        "cacheWrite": 1,
         "input": 0.25,
         "output": 1.5
       },
@@ -72409,11 +72195,11 @@
       "tags": []
     },
     {
-      "description": "Gemini 3.1 Pro (Preview) は llmgateway によって提供される AI モデルです。",
+      "description": "Gemini 3.1 Pro Preview は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
-        "audio": false,
+        "audio": true,
         "image": true,
         "open_weights": false,
         "reasoning": true,
@@ -72422,20 +72208,23 @@
       },
       "icon": "",
       "id": "gemini-3.1-pro-preview",
-      "knowledge": null,
+      "knowledge": "2025-01",
       "lastUpdated": "2026-02-19",
       "maxCtxTokens": 1048576,
       "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video",
+          "audio",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Gemini 3.1 Pro (Preview)",
+      "name": "Gemini 3.1 Pro Preview",
       "price": {
         "cacheRead": 0.2,
         "cacheWrite": null,
@@ -72519,12 +72308,12 @@
       "tags": []
     },
     {
-      "description": "Gemma 3 12B IT は llmgateway によって提供される AI モデルです。",
+      "description": "Gemma 3 12B は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": true,
         "reasoning": false,
         "temperature": true,
@@ -72532,26 +72321,27 @@
       },
       "icon": "",
       "id": "gemma-3-12b-it",
-      "knowledge": null,
-      "lastUpdated": "2025-03-10",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 16384,
+      "knowledge": "2024-10",
+      "lastUpdated": "2025-03-13",
+      "maxCtxTokens": 32768,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Gemma 3 12B IT",
+      "name": "Gemma 3 12B",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.08,
-        "output": 0.3
+        "input": null,
+        "output": null
       },
-      "releaseDate": "2025-03-10",
+      "releaseDate": "2025-03-13",
       "tags": []
     },
     {
@@ -72628,12 +72418,12 @@
       "tags": []
     },
     {
-      "description": "Gemma 3 4B IT は llmgateway によって提供される AI モデルです。",
+      "description": "Gemma 3 4B は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": true,
         "reasoning": false,
         "temperature": true,
@@ -72641,33 +72431,34 @@
       },
       "icon": "",
       "id": "gemma-3-4b-it",
-      "knowledge": null,
-      "lastUpdated": "2025-03-10",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 16384,
+      "knowledge": "2024-10",
+      "lastUpdated": "2025-03-13",
+      "maxCtxTokens": 32768,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Gemma 3 4B IT",
+      "name": "Gemma 3 4B",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.08,
-        "output": 0.3
+        "input": null,
+        "output": null
       },
-      "releaseDate": "2025-03-10",
+      "releaseDate": "2025-03-13",
       "tags": []
     },
     {
-      "description": "Gemma 3n E2B IT は llmgateway によって提供される AI モデルです。",
+      "description": "Gemma 3n 2B は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
         "image": false,
         "open_weights": true,
@@ -72677,10 +72468,10 @@
       },
       "icon": "",
       "id": "gemma-3n-e2b-it",
-      "knowledge": null,
-      "lastUpdated": "2025-06-26",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 16384,
+      "knowledge": "2024-10",
+      "lastUpdated": "2025-07-09",
+      "maxCtxTokens": 8192,
+      "maxOutputTokens": 2000,
       "modalities": {
         "input": [
           "text"
@@ -72689,21 +72480,21 @@
           "text"
         ]
       },
-      "name": "Gemma 3n E2B IT",
+      "name": "Gemma 3n 2B",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.08,
-        "output": 0.3
+        "input": null,
+        "output": null
       },
-      "releaseDate": "2025-06-26",
+      "releaseDate": "2025-07-09",
       "tags": []
     },
     {
-      "description": "Gemma 3n E4B IT は llmgateway によって提供される AI モデルです。",
+      "description": "Gemma 3n 4B は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
         "image": false,
         "open_weights": true,
@@ -72713,10 +72504,10 @@
       },
       "icon": "",
       "id": "gemma-3n-e4b-it",
-      "knowledge": null,
-      "lastUpdated": "2025-06-26",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 16384,
+      "knowledge": "2024-10",
+      "lastUpdated": "2025-05-20",
+      "maxCtxTokens": 8192,
+      "maxOutputTokens": 2000,
       "modalities": {
         "input": [
           "text"
@@ -72725,14 +72516,14 @@
           "text"
         ]
       },
-      "name": "Gemma 3n E4B IT",
+      "name": "Gemma 3n 4B",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.08,
-        "output": 0.3
+        "input": null,
+        "output": null
       },
-      "releaseDate": "2025-06-26",
+      "releaseDate": "2025-05-20",
       "tags": []
     },
     {
@@ -72778,17 +72569,17 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "glm-4.5",
-      "knowledge": null,
+      "knowledge": "2025-04",
       "lastUpdated": "2025-07-28",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 16384,
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 98304,
       "modalities": {
         "input": [
           "text"
@@ -72808,23 +72599,23 @@
       "tags": []
     },
     {
-      "description": "GLM-4.5 Air は llmgateway によって提供される AI モデルです。",
+      "description": "GLM-4.5-Air は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": false,
-        "reasoning": false,
+        "open_weights": true,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "glm-4.5-air",
-      "knowledge": null,
-      "lastUpdated": "2025-07-25",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 16384,
+      "knowledge": "2025-04",
+      "lastUpdated": "2025-07-28",
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 98304,
       "modalities": {
         "input": [
           "text"
@@ -72833,14 +72624,14 @@
           "text"
         ]
       },
-      "name": "GLM-4.5 Air",
+      "name": "GLM-4.5-Air",
       "price": {
         "cacheRead": 0.03,
         "cacheWrite": null,
         "input": 0.2,
         "output": 1.1
       },
-      "releaseDate": "2025-07-25",
+      "releaseDate": "2025-07-28",
       "tags": []
     },
     {
@@ -72880,23 +72671,23 @@
       "tags": []
     },
     {
-      "description": "GLM-4.5 Flash は llmgateway によって提供される AI モデルです。",
+      "description": "GLM-4.5-Flash は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": false,
-        "reasoning": false,
+        "open_weights": true,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "glm-4.5-flash",
-      "knowledge": null,
-      "lastUpdated": "2025-08-13",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 16384,
+      "knowledge": "2025-04",
+      "lastUpdated": "2025-07-28",
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 98304,
       "modalities": {
         "input": [
           "text"
@@ -72905,14 +72696,14 @@
           "text"
         ]
       },
-      "name": "GLM-4.5 Flash",
+      "name": "GLM-4.5-Flash",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
         "input": null,
         "output": null
       },
-      "releaseDate": "2025-08-13",
+      "releaseDate": "2025-07-28",
       "tags": []
     },
     {
@@ -72958,21 +72749,22 @@
         "attachment": true,
         "audio": false,
         "image": true,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "glm-4.5v",
-      "knowledge": null,
+      "knowledge": "2025-04",
       "lastUpdated": "2025-08-11",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 16000,
+      "maxCtxTokens": 64000,
+      "maxOutputTokens": 16384,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -72980,7 +72772,7 @@
       },
       "name": "GLM-4.5V",
       "price": {
-        "cacheRead": 0.11,
+        "cacheRead": null,
         "cacheWrite": null,
         "input": 0.6,
         "output": 1.8
@@ -72995,17 +72787,17 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "glm-4.6",
-      "knowledge": null,
+      "knowledge": "2025-04",
       "lastUpdated": "2025-09-30",
-      "maxCtxTokens": 200000,
-      "maxOutputTokens": 16384,
+      "maxCtxTokens": 204800,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -73031,21 +72823,22 @@
         "attachment": true,
         "audio": false,
         "image": true,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "glm-4.6v",
-      "knowledge": null,
+      "knowledge": "2025-04",
       "lastUpdated": "2025-12-08",
       "maxCtxTokens": 128000,
-      "maxOutputTokens": 16000,
+      "maxOutputTokens": 32768,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -73053,7 +72846,7 @@
       },
       "name": "GLM-4.6V",
       "price": {
-        "cacheRead": 0.05,
+        "cacheRead": null,
         "cacheWrite": null,
         "input": 0.3,
         "output": 0.9
@@ -73068,7 +72861,7 @@
         "attachment": true,
         "audio": false,
         "image": true,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
@@ -73142,17 +72935,17 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "glm-4.7",
-      "knowledge": null,
+      "knowledge": "2025-04",
       "lastUpdated": "2025-12-22",
-      "maxCtxTokens": 200000,
-      "maxOutputTokens": 128000,
+      "maxCtxTokens": 204800,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -73172,23 +72965,23 @@
       "tags": []
     },
     {
-      "description": "GLM-4.7 Flash は llmgateway によって提供される AI モデルです。",
+      "description": "GLM-4.7-Flash は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "glm-4.7-flash",
-      "knowledge": null,
-      "lastUpdated": "2025-12-22",
+      "knowledge": "2025-04",
+      "lastUpdated": "2026-01-19",
       "maxCtxTokens": 200000,
-      "maxOutputTokens": 128000,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -73197,34 +72990,34 @@
           "text"
         ]
       },
-      "name": "GLM-4.7 Flash",
+      "name": "GLM-4.7-Flash",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
         "input": null,
         "output": null
       },
-      "releaseDate": "2025-12-22",
+      "releaseDate": "2026-01-19",
       "tags": []
     },
     {
-      "description": "GLM-4.7 FlashX は llmgateway によって提供される AI モデルです。",
+      "description": "GLM-4.7-FlashX は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "glm-4.7-flashx",
-      "knowledge": null,
-      "lastUpdated": "2025-12-22",
+      "knowledge": "2025-04",
+      "lastUpdated": "2026-01-19",
       "maxCtxTokens": 200000,
-      "maxOutputTokens": 128000,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -73233,14 +73026,14 @@
           "text"
         ]
       },
-      "name": "GLM-4.7 FlashX",
+      "name": "GLM-4.7-FlashX",
       "price": {
         "cacheRead": 0.01,
         "cacheWrite": null,
         "input": 0.07,
         "output": 0.4
       },
-      "releaseDate": "2025-12-22",
+      "releaseDate": "2026-01-19",
       "tags": []
     },
     {
@@ -73250,7 +73043,7 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
@@ -73258,9 +73051,9 @@
       "icon": "",
       "id": "glm-5",
       "knowledge": null,
-      "lastUpdated": "2026-02-15",
-      "maxCtxTokens": 202800,
-      "maxOutputTokens": 131100,
+      "lastUpdated": "2026-02-11",
+      "maxCtxTokens": 204800,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -73276,48 +73069,47 @@
         "input": 1,
         "output": 3.2
       },
-      "releaseDate": "2026-02-15",
+      "releaseDate": "2026-02-11",
       "tags": []
     },
     {
-      "description": "GLM-Image は llmgateway によって提供される AI モデルです。",
+      "description": "GLM-5.1 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
         "audio": false,
-        "image": true,
+        "image": false,
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
-      "id": "glm-image",
+      "id": "glm-5.1",
       "knowledge": null,
-      "lastUpdated": "2025-01-14",
-      "maxCtxTokens": 2000,
-      "maxOutputTokens": 4096,
+      "lastUpdated": "2026-03-27",
+      "maxCtxTokens": 200000,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
         ],
         "output": [
-          "text",
-          "image"
+          "text"
         ]
       },
-      "name": "GLM-Image",
+      "name": "GLM-5.1",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 1.3,
         "cacheWrite": null,
-        "input": null,
-        "output": null
+        "input": 6,
+        "output": 24
       },
-      "releaseDate": "2025-01-14",
+      "releaseDate": "2026-03-27",
       "tags": []
     },
     {
-      "description": "GPT-3.5 Turbo は llmgateway によって提供される AI モデルです。",
+      "description": "GPT-3.5-turbo は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -73326,14 +73118,14 @@
         "open_weights": false,
         "reasoning": false,
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "icon": "",
       "id": "gpt-3.5-turbo",
-      "knowledge": null,
-      "lastUpdated": "2022-11-30",
+      "knowledge": "2021-09-01",
+      "lastUpdated": "2023-11-06",
       "maxCtxTokens": 16385,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 4096,
       "modalities": {
         "input": [
           "text"
@@ -73342,21 +73134,21 @@
           "text"
         ]
       },
-      "name": "GPT-3.5 Turbo",
+      "name": "GPT-3.5-turbo",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 1.25,
         "cacheWrite": null,
         "input": 0.5,
         "output": 1.5
       },
-      "releaseDate": "2022-11-30",
+      "releaseDate": "2023-03-01",
       "tags": []
     },
     {
       "description": "GPT-4 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
         "image": false,
         "open_weights": false,
@@ -73366,8 +73158,8 @@
       },
       "icon": "",
       "id": "gpt-4",
-      "knowledge": null,
-      "lastUpdated": "2023-03-14",
+      "knowledge": "2023-11",
+      "lastUpdated": "2024-04-09",
       "maxCtxTokens": 8192,
       "maxOutputTokens": 8192,
       "modalities": {
@@ -73385,7 +73177,7 @@
         "input": 30,
         "output": 60
       },
-      "releaseDate": "2023-03-14",
+      "releaseDate": "2023-11-06",
       "tags": []
     },
     {
@@ -73402,10 +73194,10 @@
       },
       "icon": "",
       "id": "gpt-4-turbo",
-      "knowledge": null,
-      "lastUpdated": "2023-11-06",
+      "knowledge": "2023-12",
+      "lastUpdated": "2024-04-09",
       "maxCtxTokens": 128000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 4096,
       "modalities": {
         "input": [
           "text",
@@ -73439,14 +73231,15 @@
       },
       "icon": "",
       "id": "gpt-4.1",
-      "knowledge": null,
+      "knowledge": "2024-04",
       "lastUpdated": "2025-04-14",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 16384,
+      "maxCtxTokens": 1047576,
+      "maxOutputTokens": 32768,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -73463,7 +73256,7 @@
       "tags": []
     },
     {
-      "description": "GPT-4.1 Mini は llmgateway によって提供される AI モデルです。",
+      "description": "GPT-4.1 mini は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
@@ -73476,20 +73269,21 @@
       },
       "icon": "",
       "id": "gpt-4.1-mini",
-      "knowledge": null,
+      "knowledge": "2024-04",
       "lastUpdated": "2025-04-14",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 16384,
+      "maxCtxTokens": 1047576,
+      "maxOutputTokens": 32768,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "GPT-4.1 Mini",
+      "name": "GPT-4.1 mini",
       "price": {
         "cacheRead": 0.1,
         "cacheWrite": null,
@@ -73500,7 +73294,7 @@
       "tags": []
     },
     {
-      "description": "GPT-4.1 Nano は llmgateway によって提供される AI モデルです。",
+      "description": "GPT-4.1 nano は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
@@ -73513,10 +73307,10 @@
       },
       "icon": "",
       "id": "gpt-4.1-nano",
-      "knowledge": null,
+      "knowledge": "2024-04",
       "lastUpdated": "2025-04-14",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 16384,
+      "maxCtxTokens": 1047576,
+      "maxOutputTokens": 32768,
       "modalities": {
         "input": [
           "text",
@@ -73526,7 +73320,7 @@
           "text"
         ]
       },
-      "name": "GPT-4.1 Nano",
+      "name": "GPT-4.1 nano",
       "price": {
         "cacheRead": 0.03,
         "cacheWrite": null,
@@ -73550,14 +73344,15 @@
       },
       "icon": "",
       "id": "gpt-4o",
-      "knowledge": null,
-      "lastUpdated": "2024-05-13",
+      "knowledge": "2023-09",
+      "lastUpdated": "2024-08-06",
       "maxCtxTokens": 128000,
       "maxOutputTokens": 16384,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -73574,12 +73369,12 @@
       "tags": []
     },
     {
-      "description": "GPT-4o Mini は llmgateway によって提供される AI モデルです。",
+      "description": "GPT-4o mini は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": false,
         "temperature": true,
@@ -73587,19 +73382,21 @@
       },
       "icon": "",
       "id": "gpt-4o-mini",
-      "knowledge": null,
+      "knowledge": "2023-09",
       "lastUpdated": "2024-07-18",
       "maxCtxTokens": 128000,
       "maxOutputTokens": 16384,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "GPT-4o Mini",
+      "name": "GPT-4o mini",
       "price": {
         "cacheRead": 0.08,
         "cacheWrite": null,
@@ -73692,13 +73489,13 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5",
-      "knowledge": null,
-      "lastUpdated": "2025-08-01",
+      "knowledge": "2024-09-30",
+      "lastUpdated": "2025-08-07",
       "maxCtxTokens": 400000,
       "maxOutputTokens": 128000,
       "modalities": {
@@ -73712,30 +73509,30 @@
       },
       "name": "GPT-5",
       "price": {
-        "cacheRead": 0.13,
+        "cacheRead": 0.125,
         "cacheWrite": null,
         "input": 1.25,
         "output": 10
       },
-      "releaseDate": "2025-08-01",
+      "releaseDate": "2025-08-07",
       "tags": []
     },
     {
-      "description": "GPT-5 Chat Latest は llmgateway によって提供される AI モデルです。",
+      "description": "GPT-5 Chat (latest) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
         "audio": false,
         "image": true,
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": false
       },
       "icon": "",
       "id": "gpt-5-chat-latest",
-      "knowledge": null,
-      "lastUpdated": "2025-08-01",
+      "knowledge": "2024-09-30",
+      "lastUpdated": "2025-08-07",
       "maxCtxTokens": 400000,
       "maxOutputTokens": 128000,
       "modalities": {
@@ -73747,14 +73544,14 @@
           "text"
         ]
       },
-      "name": "GPT-5 Chat Latest",
+      "name": "GPT-5 Chat (latest)",
       "price": {
-        "cacheRead": 0.13,
+        "cacheRead": null,
         "cacheWrite": null,
         "input": 1.25,
         "output": 10
       },
-      "releaseDate": "2025-08-01",
+      "releaseDate": "2025-08-07",
       "tags": []
     },
     {
@@ -73766,13 +73563,13 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5-mini",
-      "knowledge": null,
-      "lastUpdated": "2025-08-01",
+      "knowledge": "2024-05-30",
+      "lastUpdated": "2025-08-07",
       "maxCtxTokens": 400000,
       "maxOutputTokens": 128000,
       "modalities": {
@@ -73786,35 +73583,36 @@
       },
       "name": "GPT-5 Mini",
       "price": {
-        "cacheRead": 0.03,
+        "cacheRead": 0.025,
         "cacheWrite": null,
         "input": 0.25,
         "output": 2
       },
-      "releaseDate": "2025-08-01",
+      "releaseDate": "2025-08-07",
       "tags": []
     },
     {
       "description": "GPT-5 Nano は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5-nano",
-      "knowledge": null,
-      "lastUpdated": "2025-08-01",
+      "knowledge": "2024-05-30",
+      "lastUpdated": "2025-08-07",
       "maxCtxTokens": 400000,
       "maxOutputTokens": 128000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -73822,12 +73620,12 @@
       },
       "name": "GPT-5 Nano",
       "price": {
-        "cacheRead": 0.01,
+        "cacheRead": 0.005,
         "cacheWrite": null,
         "input": 0.05,
         "output": 0.4
       },
-      "releaseDate": "2025-08-01",
+      "releaseDate": "2025-08-07",
       "tags": []
     },
     {
@@ -73839,13 +73637,13 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5-pro",
-      "knowledge": null,
-      "lastUpdated": "2025-08-01",
+      "knowledge": "2024-09-30",
+      "lastUpdated": "2025-10-06",
       "maxCtxTokens": 400000,
       "maxOutputTokens": 272000,
       "modalities": {
@@ -73864,7 +73662,7 @@
         "input": 15,
         "output": 120
       },
-      "releaseDate": "2025-08-01",
+      "releaseDate": "2025-10-06",
       "tags": []
     },
     {
@@ -73876,13 +73674,13 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.1",
-      "knowledge": null,
-      "lastUpdated": "2025-11-01",
+      "knowledge": "2024-09-30",
+      "lastUpdated": "2025-11-13",
       "maxCtxTokens": 400000,
       "maxOutputTokens": 128000,
       "modalities": {
@@ -73901,7 +73699,7 @@
         "input": 1.25,
         "output": 10
       },
-      "releaseDate": "2025-11-01",
+      "releaseDate": "2025-11-13",
       "tags": []
     },
     {
@@ -73913,15 +73711,15 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.1-codex",
-      "knowledge": null,
+      "knowledge": "2024-09-30",
       "lastUpdated": "2025-11-13",
       "maxCtxTokens": 400000,
-      "maxOutputTokens": 272000,
+      "maxOutputTokens": 128000,
       "modalities": {
         "input": [
           "text",
@@ -73933,7 +73731,7 @@
       },
       "name": "GPT-5.1 Codex",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.125,
         "cacheWrite": null,
         "input": 1.25,
         "output": 10
@@ -73950,13 +73748,13 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.1-codex-mini",
-      "knowledge": null,
-      "lastUpdated": "2025-11-12",
+      "knowledge": "2024-09-30",
+      "lastUpdated": "2025-11-13",
       "maxCtxTokens": 400000,
       "maxOutputTokens": 128000,
       "modalities": {
@@ -73970,12 +73768,12 @@
       },
       "name": "GPT-5.1 Codex mini",
       "price": {
-        "cacheRead": 0.03,
+        "cacheRead": 0.025,
         "cacheWrite": null,
         "input": 0.25,
         "output": 2
       },
-      "releaseDate": "2025-11-12",
+      "releaseDate": "2025-11-13",
       "tags": []
     },
     {
@@ -73987,12 +73785,12 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.2",
-      "knowledge": null,
+      "knowledge": "2025-08-31",
       "lastUpdated": "2025-12-11",
       "maxCtxTokens": 400000,
       "maxOutputTokens": 128000,
@@ -74007,7 +73805,7 @@
       },
       "name": "GPT-5.2",
       "price": {
-        "cacheRead": 0.18,
+        "cacheRead": 0.175,
         "cacheWrite": null,
         "input": 1.75,
         "output": 14
@@ -74024,15 +73822,15 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.2-chat-latest",
-      "knowledge": null,
+      "knowledge": "2025-08-31",
       "lastUpdated": "2025-12-11",
       "maxCtxTokens": 128000,
-      "maxOutputTokens": 16400,
+      "maxOutputTokens": 16384,
       "modalities": {
         "input": [
           "text",
@@ -74044,7 +73842,7 @@
       },
       "name": "GPT-5.2 Chat",
       "price": {
-        "cacheRead": 0.18,
+        "cacheRead": 0.175,
         "cacheWrite": null,
         "input": 1.75,
         "output": 14
@@ -74061,19 +73859,20 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.2-codex",
-      "knowledge": null,
-      "lastUpdated": "2026-01-14",
+      "knowledge": "2025-08-31",
+      "lastUpdated": "2025-12-11",
       "maxCtxTokens": 400000,
       "maxOutputTokens": 128000,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -74081,12 +73880,12 @@
       },
       "name": "GPT-5.2 Codex",
       "price": {
-        "cacheRead": 0.18,
+        "cacheRead": 0.175,
         "cacheWrite": null,
         "input": 1.75,
         "output": 14
       },
-      "releaseDate": "2026-01-14",
+      "releaseDate": "2025-12-11",
       "tags": []
     },
     {
@@ -74098,15 +73897,15 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.2-pro",
-      "knowledge": null,
+      "knowledge": "2025-08-31",
       "lastUpdated": "2025-12-11",
       "maxCtxTokens": 400000,
-      "maxOutputTokens": 272000,
+      "maxOutputTokens": 128000,
       "modalities": {
         "input": [
           "text",
@@ -74127,20 +73926,20 @@
       "tags": []
     },
     {
-      "description": "GPT-5.3 Chat は llmgateway によって提供される AI モデルです。",
+      "description": "GPT-5.3 Chat (latest) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
         "audio": false,
         "image": true,
         "open_weights": false,
-        "reasoning": true,
+        "reasoning": false,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.3-chat-latest",
-      "knowledge": null,
+      "knowledge": "2025-08-31",
       "lastUpdated": "2026-03-03",
       "maxCtxTokens": 128000,
       "maxOutputTokens": 16384,
@@ -74153,9 +73952,9 @@
           "text"
         ]
       },
-      "name": "GPT-5.3 Chat",
+      "name": "GPT-5.3 Chat (latest)",
       "price": {
-        "cacheRead": 0.18,
+        "cacheRead": 0.175,
         "cacheWrite": null,
         "input": 1.75,
         "output": 14
@@ -74172,19 +73971,20 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.3-codex",
-      "knowledge": null,
-      "lastUpdated": "2026-02-24",
+      "knowledge": "2025-08-31",
+      "lastUpdated": "2026-02-05",
       "maxCtxTokens": 400000,
       "maxOutputTokens": 128000,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -74192,12 +73992,12 @@
       },
       "name": "GPT-5.3 Codex",
       "price": {
-        "cacheRead": 0.18,
+        "cacheRead": 0.175,
         "cacheWrite": null,
         "input": 1.75,
         "output": 14
       },
-      "releaseDate": "2026-02-24",
+      "releaseDate": "2026-02-05",
       "tags": []
     },
     {
@@ -74209,19 +74009,20 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.4",
-      "knowledge": null,
-      "lastUpdated": "2026-03-06",
+      "knowledge": "2025-08-31",
+      "lastUpdated": "2026-03-05",
       "maxCtxTokens": 1050000,
       "maxOutputTokens": 128000,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -74234,11 +74035,11 @@
         "input": 2.5,
         "output": 15
       },
-      "releaseDate": "2026-03-06",
+      "releaseDate": "2026-03-05",
       "tags": []
     },
     {
-      "description": "GPT-5.4 Mini は llmgateway によって提供される AI モデルです。",
+      "description": "GPT-5.4 mini は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
@@ -74246,12 +74047,12 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.4-mini",
-      "knowledge": null,
+      "knowledge": "2025-08-31",
       "lastUpdated": "2026-03-17",
       "maxCtxTokens": 400000,
       "maxOutputTokens": 128000,
@@ -74264,9 +74065,9 @@
           "text"
         ]
       },
-      "name": "GPT-5.4 Mini",
+      "name": "GPT-5.4 mini",
       "price": {
-        "cacheRead": 0.08,
+        "cacheRead": 0.075,
         "cacheWrite": null,
         "input": 0.75,
         "output": 4.5
@@ -74275,7 +74076,7 @@
       "tags": []
     },
     {
-      "description": "GPT-5.4 Nano は llmgateway によって提供される AI モデルです。",
+      "description": "GPT-5.4 nano は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
@@ -74283,12 +74084,12 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.4-nano",
-      "knowledge": null,
+      "knowledge": "2025-08-31",
       "lastUpdated": "2026-03-17",
       "maxCtxTokens": 400000,
       "maxOutputTokens": 128000,
@@ -74301,7 +74102,7 @@
           "text"
         ]
       },
-      "name": "GPT-5.4 Nano",
+      "name": "GPT-5.4 nano",
       "price": {
         "cacheRead": 0.02,
         "cacheWrite": null,
@@ -74320,13 +74121,13 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "gpt-5.4-pro",
-      "knowledge": null,
-      "lastUpdated": "2026-03-01",
+      "knowledge": "2025-08-31",
+      "lastUpdated": "2026-03-05",
       "maxCtxTokens": 1050000,
       "maxOutputTokens": 128000,
       "modalities": {
@@ -74345,7 +74146,7 @@
         "input": 30,
         "output": 180
       },
-      "releaseDate": "2026-03-01",
+      "releaseDate": "2026-03-05",
       "tags": []
     },
     {
@@ -74421,7 +74222,7 @@
       "tags": []
     },
     {
-      "description": "Grok-3 は llmgateway によって提供される AI モデルです。",
+      "description": "Grok 3 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -74434,10 +74235,10 @@
       },
       "icon": "",
       "id": "grok-3",
-      "knowledge": null,
+      "knowledge": "2024-11",
       "lastUpdated": "2025-02-17",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text"
@@ -74446,9 +74247,9 @@
           "text"
         ]
       },
-      "name": "Grok-3",
+      "name": "Grok 3",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.75,
         "cacheWrite": null,
         "input": 3,
         "output": 15
@@ -74460,24 +74261,23 @@
       "description": "Grok 4 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
-        "image": true,
+        "image": false,
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "grok-4",
-      "knowledge": null,
+      "knowledge": "2025-07",
       "lastUpdated": "2025-07-09",
       "maxCtxTokens": 256000,
-      "maxOutputTokens": 256000,
+      "maxOutputTokens": 64000,
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -74485,7 +74285,7 @@
       },
       "name": "Grok 4",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.75,
         "cacheWrite": null,
         "input": 3,
         "output": 15
@@ -74543,7 +74343,7 @@
       },
       "icon": "",
       "id": "grok-4-1-fast",
-      "knowledge": null,
+      "knowledge": "2025-07",
       "lastUpdated": "2025-11-19",
       "maxCtxTokens": 2000000,
       "maxOutputTokens": 30000,
@@ -74567,7 +74367,7 @@
       "tags": []
     },
     {
-      "description": "Grok 4.1 Fast Non-Reasoning は llmgateway によって提供される AI モデルです。",
+      "description": "Grok 4.1 Fast (Non-Reasoning) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
@@ -74580,7 +74380,7 @@
       },
       "icon": "",
       "id": "grok-4-1-fast-non-reasoning",
-      "knowledge": null,
+      "knowledge": "2025-07",
       "lastUpdated": "2025-11-19",
       "maxCtxTokens": 2000000,
       "maxOutputTokens": 30000,
@@ -74593,7 +74393,7 @@
           "text"
         ]
       },
-      "name": "Grok 4.1 Fast Non-Reasoning",
+      "name": "Grok 4.1 Fast (Non-Reasoning)",
       "price": {
         "cacheRead": 0.05,
         "cacheWrite": null,
@@ -74641,7 +74441,7 @@
       "tags": []
     },
     {
-      "description": "Grok 4.20 Beta Non-Reasoning (0309) は llmgateway によって提供される AI モデルです。",
+      "description": "Grok 4.20 (Non-Reasoning) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
@@ -74667,7 +74467,7 @@
           "text"
         ]
       },
-      "name": "Grok 4.20 Beta Non-Reasoning (0309)",
+      "name": "Grok 4.20 (Non-Reasoning)",
       "price": {
         "cacheRead": 0.2,
         "cacheWrite": null,
@@ -74678,7 +74478,7 @@
       "tags": []
     },
     {
-      "description": "Grok 4.20 Beta Reasoning (0309) は llmgateway によって提供される AI モデルです。",
+      "description": "Grok 4.20 (Reasoning) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
@@ -74704,44 +74504,7 @@
           "text"
         ]
       },
-      "name": "Grok 4.20 Beta Reasoning (0309)",
-      "price": {
-        "cacheRead": 0.2,
-        "cacheWrite": null,
-        "input": 2,
-        "output": 6
-      },
-      "releaseDate": "2026-03-09",
-      "tags": []
-    },
-    {
-      "description": "Grok 4.20 Multi-Agent Beta (0309) は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "",
-      "id": "grok-4-20-multi-agent-beta-0309",
-      "knowledge": null,
-      "lastUpdated": "2026-03-09",
-      "maxCtxTokens": 2000000,
-      "maxOutputTokens": 30000,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Grok 4.20 Multi-Agent Beta (0309)",
+      "name": "Grok 4.20 (Reasoning)",
       "price": {
         "cacheRead": 0.2,
         "cacheWrite": null,
@@ -74765,8 +74528,8 @@
       },
       "icon": "",
       "id": "grok-4-fast",
-      "knowledge": null,
-      "lastUpdated": "2025-07-09",
+      "knowledge": "2025-07",
+      "lastUpdated": "2025-09-19",
       "maxCtxTokens": 2000000,
       "maxOutputTokens": 30000,
       "modalities": {
@@ -74785,11 +74548,11 @@
         "input": 0.2,
         "output": 0.5
       },
-      "releaseDate": "2025-07-09",
+      "releaseDate": "2025-09-19",
       "tags": []
     },
     {
-      "description": "Grok 4 Fast Non-Reasoning は llmgateway によって提供される AI モデルです。",
+      "description": "Grok 4 Fast (Non-Reasoning) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
@@ -74802,8 +74565,8 @@
       },
       "icon": "",
       "id": "grok-4-fast-non-reasoning",
-      "knowledge": null,
-      "lastUpdated": "2025-10-10",
+      "knowledge": "2025-07",
+      "lastUpdated": "2025-09-19",
       "maxCtxTokens": 2000000,
       "maxOutputTokens": 30000,
       "modalities": {
@@ -74815,14 +74578,14 @@
           "text"
         ]
       },
-      "name": "Grok 4 Fast Non-Reasoning",
+      "name": "Grok 4 Fast (Non-Reasoning)",
       "price": {
         "cacheRead": 0.05,
         "cacheWrite": null,
         "input": 0.2,
         "output": 0.5
       },
-      "releaseDate": "2025-10-10",
+      "releaseDate": "2025-09-19",
       "tags": []
     },
     {
@@ -74870,13 +74633,13 @@
         "audio": false,
         "image": false,
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "grok-code-fast-1",
-      "knowledge": null,
+      "knowledge": "2023-10",
       "lastUpdated": "2025-08-28",
       "maxCtxTokens": 256000,
       "maxOutputTokens": 10000,
@@ -74890,88 +74653,12 @@
       },
       "name": "Grok Code Fast 1",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.02,
         "cacheWrite": null,
         "input": 0.2,
         "output": 1.5
       },
       "releaseDate": "2025-08-28",
-      "tags": []
-    },
-    {
-      "description": "Grok Imagine Image は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "grok-imagine-image",
-      "knowledge": null,
-      "lastUpdated": "2026-03-02",
-      "maxCtxTokens": 2000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Grok Imagine Image",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2026-03-02",
-      "tags": []
-    },
-    {
-      "description": "Grok Imagine Image Pro は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "grok-imagine-image-pro",
-      "knowledge": null,
-      "lastUpdated": "2026-03-02",
-      "maxCtxTokens": 2000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Grok Imagine Image Pro",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2026-03-02",
       "tags": []
     },
     {
@@ -75017,7 +74704,7 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": false,
         "temperature": true,
         "tool_call": true
@@ -75053,14 +74740,14 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "kimi-k2-thinking",
-      "knowledge": null,
+      "knowledge": "2024-08",
       "lastUpdated": "2025-11-06",
       "maxCtxTokens": 262144,
       "maxOutputTokens": 262144,
@@ -75089,14 +74776,14 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "kimi-k2-thinking-turbo",
-      "knowledge": null,
+      "knowledge": "2024-08",
       "lastUpdated": "2025-11-06",
       "maxCtxTokens": 262144,
       "maxOutputTokens": 262144,
@@ -75122,24 +74809,25 @@
       "description": "Kimi K2.5 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
         "image": true,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "kimi-k2.5",
-      "knowledge": null,
-      "lastUpdated": "2026-01-26",
+      "knowledge": "2025-01",
+      "lastUpdated": "2026-01",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 32768,
+      "maxOutputTokens": 262144,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -75152,7 +74840,7 @@
         "input": 0.6,
         "output": 3
       },
-      "releaseDate": "2026-01-26",
+      "releaseDate": "2026-01",
       "tags": []
     },
     {
@@ -75316,7 +75004,7 @@
       "knowledge": null,
       "lastUpdated": "2025-04-07",
       "maxCtxTokens": 128000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text"
@@ -75352,7 +75040,7 @@
       "knowledge": null,
       "lastUpdated": "2024-09-25",
       "maxCtxTokens": 128000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text"
@@ -75408,10 +75096,10 @@
       "tags": []
     },
     {
-      "description": "Llama 3.3 70B Instruct は llmgateway によって提供される AI モデルです。",
+      "description": "Llama-3.3-70B-Instruct は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
         "image": false,
         "open_weights": true,
@@ -75421,10 +75109,10 @@
       },
       "icon": "",
       "id": "llama-3.3-70b-instruct",
-      "knowledge": null,
+      "knowledge": "2023-12",
       "lastUpdated": "2024-12-06",
       "maxCtxTokens": 128000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 4096,
       "modalities": {
         "input": [
           "text"
@@ -75433,12 +75121,12 @@
           "text"
         ]
       },
-      "name": "Llama 3.3 70B Instruct",
+      "name": "Llama-3.3-70B-Instruct",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.13,
-        "output": 0.4
+        "input": null,
+        "output": null
       },
       "releaseDate": "2024-12-06",
       "tags": []
@@ -75554,23 +75242,23 @@
       "tags": []
     },
     {
-      "description": "Llama Guard 4 12B は llmgateway によって提供される AI モデルです。",
+      "description": "MiMo-V2-Flash は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
         "audio": false,
         "image": false,
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
-      "id": "llama-guard-4-12b",
-      "knowledge": null,
-      "lastUpdated": "2025-04-30",
-      "maxCtxTokens": 131072,
-      "maxOutputTokens": 16384,
+      "id": "mimo-v2-flash",
+      "knowledge": "2024-12-01",
+      "lastUpdated": "2026-02-04",
+      "maxCtxTokens": 256000,
+      "maxOutputTokens": 64000,
       "modalities": {
         "input": [
           "text"
@@ -75579,18 +75267,18 @@
           "text"
         ]
       },
-      "name": "Llama Guard 4 12B",
+      "name": "MiMo-V2-Flash",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.01,
         "cacheWrite": null,
-        "input": 0.2,
-        "output": 0.2
+        "input": 0.1,
+        "output": 0.3
       },
-      "releaseDate": "2025-04-30",
+      "releaseDate": "2025-12-16",
       "tags": []
     },
     {
-      "description": "MiniMax M2 は llmgateway によって提供される AI モデルです。",
+      "description": "MiniMax-M2 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -75606,7 +75294,7 @@
       "knowledge": null,
       "lastUpdated": "2025-10-27",
       "maxCtxTokens": 196608,
-      "maxOutputTokens": 131072,
+      "maxOutputTokens": 128000,
       "modalities": {
         "input": [
           "text"
@@ -75615,18 +75303,18 @@
           "text"
         ]
       },
-      "name": "MiniMax M2",
+      "name": "MiniMax-M2",
       "price": {
-        "cacheRead": 0.03,
+        "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.2,
-        "output": 1
+        "input": 0.3,
+        "output": 1.2
       },
       "releaseDate": "2025-10-27",
       "tags": []
     },
     {
-      "description": "MiniMax M2.1 は llmgateway によって提供される AI モデルです。",
+      "description": "MiniMax-M2.1 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -75641,7 +75329,7 @@
       "id": "minimax-m2.1",
       "knowledge": null,
       "lastUpdated": "2025-12-23",
-      "maxCtxTokens": 196608,
+      "maxCtxTokens": 204800,
       "maxOutputTokens": 131072,
       "modalities": {
         "input": [
@@ -75651,12 +75339,12 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.1",
+      "name": "MiniMax-M2.1",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.27,
-        "output": 1.1
+        "input": 0.3,
+        "output": 1.2
       },
       "releaseDate": "2025-12-23",
       "tags": []
@@ -75698,7 +75386,7 @@
       "tags": []
     },
     {
-      "description": "MiniMax M2.5 は llmgateway によって提供される AI モデルです。",
+      "description": "MiniMax-M2.5 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -75712,9 +75400,9 @@
       "icon": "",
       "id": "minimax-m2.5",
       "knowledge": null,
-      "lastUpdated": "2026-02-15",
+      "lastUpdated": "2026-02-12",
       "maxCtxTokens": 204800,
-      "maxOutputTokens": 131100,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -75723,18 +75411,18 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.5",
+      "name": "MiniMax-M2.5",
       "price": {
         "cacheRead": 0.03,
-        "cacheWrite": null,
+        "cacheWrite": 0.375,
         "input": 0.3,
         "output": 1.2
       },
-      "releaseDate": "2026-02-15",
+      "releaseDate": "2026-02-12",
       "tags": []
     },
     {
-      "description": "MiniMax M2.5 Highspeed は llmgateway によって提供される AI モデルです。",
+      "description": "MiniMax-M2.5-highspeed は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -75743,14 +75431,14 @@
         "open_weights": true,
         "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "minimax-m2.5-highspeed",
       "knowledge": null,
-      "lastUpdated": "2024-01-01",
+      "lastUpdated": "2026-02-13",
       "maxCtxTokens": 204800,
-      "maxOutputTokens": 131100,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -75759,18 +75447,18 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.5 Highspeed",
+      "name": "MiniMax-M2.5-highspeed",
       "price": {
-        "cacheRead": 0.03,
-        "cacheWrite": null,
+        "cacheRead": 0.06,
+        "cacheWrite": 0.375,
         "input": 0.6,
         "output": 2.4
       },
-      "releaseDate": "2024-01-01",
+      "releaseDate": "2026-02-13",
       "tags": []
     },
     {
-      "description": "MiniMax M2.7 は llmgateway によって提供される AI モデルです。",
+      "description": "MiniMax-M2.7 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -75784,9 +75472,9 @@
       "icon": "",
       "id": "minimax-m2.7",
       "knowledge": null,
-      "lastUpdated": "2024-01-01",
+      "lastUpdated": "2026-03-18",
       "maxCtxTokens": 204800,
-      "maxOutputTokens": 131100,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -75795,18 +75483,18 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.7",
+      "name": "MiniMax-M2.7",
       "price": {
         "cacheRead": 0.06,
-        "cacheWrite": null,
+        "cacheWrite": 0.375,
         "input": 0.3,
         "output": 1.2
       },
-      "releaseDate": "2024-01-01",
+      "releaseDate": "2026-03-18",
       "tags": []
     },
     {
-      "description": "MiniMax M2.7 Highspeed は llmgateway によって提供される AI モデルです。",
+      "description": "MiniMax-M2.7-highspeed は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -75815,14 +75503,14 @@
         "open_weights": true,
         "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "minimax-m2.7-highspeed",
       "knowledge": null,
-      "lastUpdated": "2024-01-01",
+      "lastUpdated": "2026-03-18",
       "maxCtxTokens": 204800,
-      "maxOutputTokens": 131100,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -75831,14 +75519,14 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.7 Highspeed",
+      "name": "MiniMax-M2.7-highspeed",
       "price": {
         "cacheRead": 0.06,
-        "cacheWrite": null,
+        "cacheWrite": 0.375,
         "input": 0.6,
         "output": 2.4
       },
-      "releaseDate": "2024-01-01",
+      "releaseDate": "2026-03-18",
       "tags": []
     },
     {
@@ -75849,7 +75537,7 @@
         "audio": false,
         "image": false,
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": false
       },
@@ -75894,7 +75582,7 @@
       "knowledge": null,
       "lastUpdated": "2025-12-02",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -75931,7 +75619,7 @@
       "knowledge": null,
       "lastUpdated": "2025-12-02",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -75968,7 +75656,7 @@
       "knowledge": null,
       "lastUpdated": "2025-12-02",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -75998,14 +75686,14 @@
         "open_weights": true,
         "reasoning": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "mistral-large-2512",
-      "knowledge": null,
+      "knowledge": "2024-11",
       "lastUpdated": "2025-12-02",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 262144,
       "modalities": {
         "input": [
           "text",
@@ -76022,47 +75710,11 @@
         "input": 0.5,
         "output": 1.5
       },
-      "releaseDate": "2025-12-02",
+      "releaseDate": "2024-11-01",
       "tags": []
     },
     {
-      "description": "Mistral Large Latest は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": true,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "mistral-large-latest",
-      "knowledge": null,
-      "lastUpdated": "2025-12-02",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 16384,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Large Latest",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 4,
-        "output": 12
-      },
-      "releaseDate": "2025-12-02",
-      "tags": []
-    },
-    {
-      "description": "Mistral Small 3.2 は llmgateway によって提供される AI モデルです。",
+      "description": "Mistral Large (latest) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
@@ -76071,11 +75723,48 @@
         "open_weights": true,
         "reasoning": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "mistral-large-latest",
+      "knowledge": "2024-11",
+      "lastUpdated": "2025-12-02",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Large (latest)",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.5,
+        "output": 1.5
+      },
+      "releaseDate": "2024-11-01",
+      "tags": []
+    },
+    {
+      "description": "Mistral Small 3.2 は llmgateway によって提供される AI モデルです。",
+      "firm": "llmgateway",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
       },
       "icon": "",
       "id": "mistral-small-2506",
-      "knowledge": null,
+      "knowledge": "2025-03",
       "lastUpdated": "2025-06-20",
       "maxCtxTokens": 128000,
       "maxOutputTokens": 16384,
@@ -76099,42 +75788,6 @@
       "tags": []
     },
     {
-      "description": "Mixtral 8x7B Instruct は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": true,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "mixtral-8x7b-instruct-together",
-      "knowledge": null,
-      "lastUpdated": "2023-12-10",
-      "maxCtxTokens": 32768,
-      "maxOutputTokens": 16384,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mixtral 8x7B Instruct",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 0.06,
-        "output": 0.06
-      },
-      "releaseDate": "2023-12-10",
-      "tags": []
-    },
-    {
       "description": "o1 は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
@@ -76143,19 +75796,20 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
-        "tool_call": false
+        "temperature": false,
+        "tool_call": true
       },
       "icon": "",
       "id": "o1",
-      "knowledge": null,
-      "lastUpdated": "2024-09-12",
+      "knowledge": "2023-09",
+      "lastUpdated": "2024-12-05",
       "maxCtxTokens": 200000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 100000,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -76168,7 +75822,7 @@
         "input": 15,
         "output": 60
       },
-      "releaseDate": "2024-09-12",
+      "releaseDate": "2024-12-05",
       "tags": []
     },
     {
@@ -76180,19 +75834,20 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
-        "tool_call": false
+        "temperature": false,
+        "tool_call": true
       },
       "icon": "",
       "id": "o3",
-      "knowledge": null,
-      "lastUpdated": "2025-06-01",
+      "knowledge": "2024-05",
+      "lastUpdated": "2025-04-16",
       "maxCtxTokens": 200000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 100000,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -76205,11 +75860,11 @@
         "input": 2,
         "output": 8
       },
-      "releaseDate": "2025-06-01",
+      "releaseDate": "2025-04-16",
       "tags": []
     },
     {
-      "description": "o3 Mini は llmgateway によって提供される AI モデルです。",
+      "description": "o3-mini は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -76217,15 +75872,15 @@
         "image": false,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
-        "tool_call": false
+        "temperature": false,
+        "tool_call": true
       },
       "icon": "",
       "id": "o3-mini",
-      "knowledge": null,
-      "lastUpdated": "2025-06-01",
+      "knowledge": "2024-05",
+      "lastUpdated": "2025-01-29",
       "maxCtxTokens": 200000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 100000,
       "modalities": {
         "input": [
           "text"
@@ -76234,18 +75889,18 @@
           "text"
         ]
       },
-      "name": "o3 Mini",
+      "name": "o3-mini",
       "price": {
         "cacheRead": 0.55,
         "cacheWrite": null,
         "input": 1.1,
         "output": 4.4
       },
-      "releaseDate": "2025-06-01",
+      "releaseDate": "2024-12-20",
       "tags": []
     },
     {
-      "description": "o4 Mini は llmgateway によって提供される AI モデルです。",
+      "description": "o4-mini は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
@@ -76253,15 +75908,15 @@
         "image": true,
         "open_weights": false,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "",
       "id": "o4-mini",
-      "knowledge": null,
+      "knowledge": "2024-05",
       "lastUpdated": "2025-04-16",
       "maxCtxTokens": 200000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 100000,
       "modalities": {
         "input": [
           "text",
@@ -76271,7 +75926,7 @@
           "text"
         ]
       },
-      "name": "o4 Mini",
+      "name": "o4-mini",
       "price": {
         "cacheRead": 0.28,
         "cacheWrite": null,
@@ -76282,7 +75937,7 @@
       "tags": []
     },
     {
-      "description": "Pixtral Large Latest は llmgateway によって提供される AI モデルです。",
+      "description": "Pixtral Large (latest) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": true,
@@ -76291,14 +75946,14 @@
         "open_weights": true,
         "reasoning": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "pixtral-large-latest",
-      "knowledge": null,
-      "lastUpdated": "2024-11-18",
+      "knowledge": "2024-11",
+      "lastUpdated": "2024-11-04",
       "maxCtxTokens": 128000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 128000,
       "modalities": {
         "input": [
           "text",
@@ -76308,14 +75963,14 @@
           "text"
         ]
       },
-      "name": "Pixtral Large Latest",
+      "name": "Pixtral Large (latest)",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 4,
-        "output": 12
+        "input": 2,
+        "output": 6
       },
-      "releaseDate": "2024-11-18",
+      "releaseDate": "2024-11-01",
       "tags": []
     },
     {
@@ -76325,7 +75980,7 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": true,
         "tool_call": true
@@ -76348,8 +76003,8 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 1,
-        "output": 5
+        "input": 0.5,
+        "output": 1
       },
       "releaseDate": "2024-09-18",
       "tags": []
@@ -76361,17 +76016,17 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": true,
-        "reasoning": false,
+        "open_weights": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "qwen-flash",
-      "knowledge": null,
-      "lastUpdated": "2024-09-09",
+      "knowledge": "2024-04",
+      "lastUpdated": "2025-07-28",
       "maxCtxTokens": 1000000,
-      "maxOutputTokens": 32000,
+      "maxOutputTokens": 32768,
       "modalities": {
         "input": [
           "text"
@@ -76382,260 +76037,35 @@
       },
       "name": "Qwen Flash",
       "price": {
-        "cacheRead": 0.01,
+        "cacheRead": null,
         "cacheWrite": null,
         "input": 0.05,
         "output": 0.4
       },
-      "releaseDate": "2024-09-09",
-      "tags": []
-    },
-    {
-      "description": "Qwen Image は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": true,
-        "open_weights": true,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "qwen-image",
-      "knowledge": null,
-      "lastUpdated": "2025-08-04",
-      "maxCtxTokens": 2000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Qwen Image",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2025-08-04",
-      "tags": []
-    },
-    {
-      "description": "Qwen Image Edit Max は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": true,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "qwen-image-edit-max",
-      "knowledge": null,
-      "lastUpdated": "2026-01-16",
-      "maxCtxTokens": 2000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Qwen Image Edit Max",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2026-01-16",
-      "tags": []
-    },
-    {
-      "description": "Qwen Image Edit Plus は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": true,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "qwen-image-edit-plus",
-      "knowledge": null,
-      "lastUpdated": "2025-08-19",
-      "maxCtxTokens": 2000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Qwen Image Edit Plus",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2025-08-19",
-      "tags": []
-    },
-    {
-      "description": "Qwen Image Max は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": true,
-        "open_weights": true,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "qwen-image-max",
-      "knowledge": null,
-      "lastUpdated": "2025-08-04",
-      "maxCtxTokens": 2000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Qwen Image Max",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2025-08-04",
-      "tags": []
-    },
-    {
-      "description": "Qwen Image Max 2025-12-30 は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": true,
-        "open_weights": true,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "qwen-image-max-2025-12-30",
-      "knowledge": null,
-      "lastUpdated": "2025-12-31",
-      "maxCtxTokens": 2000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Qwen Image Max 2025-12-30",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2025-12-31",
-      "tags": []
-    },
-    {
-      "description": "Qwen Image Plus は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": true,
-        "open_weights": true,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "qwen-image-plus",
-      "knowledge": null,
-      "lastUpdated": "2025-08-04",
-      "maxCtxTokens": 2000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Qwen Image Plus",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2025-08-04",
+      "releaseDate": "2025-07-28",
       "tags": []
     },
     {
       "description": "Qwen Max は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
-        "image": true,
-        "open_weights": true,
+        "image": false,
+        "open_weights": false,
         "reasoning": false,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "qwen-max",
-      "knowledge": null,
-      "lastUpdated": "2025-09-05",
-      "maxCtxTokens": 131072,
-      "maxOutputTokens": 32000,
+      "knowledge": "2024-04",
+      "lastUpdated": "2025-01-25",
+      "maxCtxTokens": 32768,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -76648,7 +76078,7 @@
         "input": 1.6,
         "output": 6.4
       },
-      "releaseDate": "2025-09-05",
+      "releaseDate": "2024-04-03",
       "tags": []
     },
     {
@@ -76658,7 +76088,7 @@
         "attachment": true,
         "audio": false,
         "image": true,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": true,
         "tool_call": true
@@ -76667,8 +76097,8 @@
       "id": "qwen-max-latest",
       "knowledge": null,
       "lastUpdated": "2025-01-25",
-      "maxCtxTokens": 131072,
-      "maxOutputTokens": 32000,
+      "maxCtxTokens": 32768,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -76689,40 +76119,43 @@
       "tags": []
     },
     {
-      "description": "Qwen Omni Turbo は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen-Omni Turbo は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": true,
-        "audio": false,
+        "attachment": false,
+        "audio": true,
         "image": true,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwen-omni-turbo",
-      "knowledge": null,
+      "knowledge": "2024-04",
       "lastUpdated": "2025-03-26",
       "maxCtxTokens": 32768,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 2048,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "audio",
+          "video"
         ],
         "output": [
-          "text"
+          "text",
+          "audio"
         ]
       },
-      "name": "Qwen Omni Turbo",
+      "name": "Qwen-Omni Turbo",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.2,
-        "output": 0.8
+        "input": 0.07,
+        "output": 0.27
       },
-      "releaseDate": "2025-03-26",
+      "releaseDate": "2025-01-19",
       "tags": []
     },
     {
@@ -76732,17 +76165,17 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": true,
-        "reasoning": false,
+        "open_weights": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "qwen-plus",
-      "knowledge": null,
-      "lastUpdated": "2025-01-25",
-      "maxCtxTokens": 131072,
-      "maxOutputTokens": 32000,
+      "knowledge": "2024-04",
+      "lastUpdated": "2025-09-11",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 32768,
       "modalities": {
         "input": [
           "text"
@@ -76753,22 +76186,22 @@
       },
       "name": "Qwen Plus",
       "price": {
-        "cacheRead": 0.08,
+        "cacheRead": null,
         "cacheWrite": null,
         "input": 0.4,
         "output": 1.2
       },
-      "releaseDate": "2025-01-25",
+      "releaseDate": "2024-01-25",
       "tags": []
     },
     {
       "description": "Qwen Plus Latest は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
-        "open_weights": true,
+        "image": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": true,
         "tool_call": true
@@ -76776,12 +76209,13 @@
       "icon": "",
       "id": "qwen-plus-latest",
       "knowledge": null,
-      "lastUpdated": "2024-09-09",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 32000,
+      "lastUpdated": "2025-01-25",
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -76789,12 +76223,12 @@
       },
       "name": "Qwen Plus Latest",
       "price": {
-        "cacheRead": 0.08,
+        "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.4,
-        "output": 1.2
+        "input": 0.3,
+        "output": 0.9
       },
-      "releaseDate": "2024-09-09",
+      "releaseDate": "2025-01-25",
       "tags": []
     },
     {
@@ -76804,17 +76238,17 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": true,
-        "reasoning": false,
+        "open_weights": false,
+        "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwen-turbo",
-      "knowledge": null,
-      "lastUpdated": "2025-02-01",
+      "knowledge": "2024-04",
+      "lastUpdated": "2025-04-28",
       "maxCtxTokens": 1000000,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 16384,
       "modalities": {
         "input": [
           "text"
@@ -76830,27 +76264,27 @@
         "input": 0.05,
         "output": 0.2
       },
-      "releaseDate": "2025-02-01",
+      "releaseDate": "2024-11-01",
       "tags": []
     },
     {
-      "description": "Qwen VL Max は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen-VL Max は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
         "image": true,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwen-vl-max",
-      "knowledge": null,
-      "lastUpdated": "2025-02-01",
+      "knowledge": "2024-04",
+      "lastUpdated": "2025-08-13",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 32000,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -76860,34 +76294,34 @@
           "text"
         ]
       },
-      "name": "Qwen VL Max",
+      "name": "Qwen-VL Max",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
         "input": 0.8,
         "output": 3.2
       },
-      "releaseDate": "2025-02-01",
+      "releaseDate": "2024-04-08",
       "tags": []
     },
     {
-      "description": "Qwen VL Plus は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen-VL Plus は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
         "image": true,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwen-vl-plus",
-      "knowledge": null,
-      "lastUpdated": "2025-02-05",
+      "knowledge": "2024-04",
+      "lastUpdated": "2025-08-15",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 32000,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -76897,14 +76331,14 @@
           "text"
         ]
       },
-      "name": "Qwen VL Plus",
+      "name": "Qwen-VL Plus",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
         "input": 0.21,
-        "output": 0.64
+        "output": 0.63
       },
-      "releaseDate": "2025-02-05",
+      "releaseDate": "2024-01-25",
       "tags": []
     },
     {
@@ -76917,14 +76351,14 @@
         "open_weights": true,
         "reasoning": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwen2-5-vl-32b-instruct",
       "knowledge": null,
-      "lastUpdated": "2025-02-19",
+      "lastUpdated": "2025-03-15",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 32768,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -76938,29 +76372,29 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 1.4,
-        "output": 4.2
+        "input": 0.3,
+        "output": 0.3
       },
-      "releaseDate": "2025-02-19",
+      "releaseDate": "2025-03-15",
       "tags": []
     },
     {
-      "description": "Qwen2.5 VL 72B Instruct は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen2.5-VL 72B Instruct は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
         "image": true,
         "open_weights": true,
         "reasoning": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwen2-5-vl-72b-instruct",
-      "knowledge": null,
-      "lastUpdated": "2025-01-26",
-      "maxCtxTokens": 32768,
+      "knowledge": "2024-04",
+      "lastUpdated": "2024-09",
+      "maxCtxTokens": 131072,
       "maxOutputTokens": 8192,
       "modalities": {
         "input": [
@@ -76971,14 +76405,14 @@
           "text"
         ]
       },
-      "name": "Qwen2.5 VL 72B Instruct",
+      "name": "Qwen2.5-VL 72B Instruct",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.13,
-        "output": 0.4
+        "input": 2.8,
+        "output": 8.4
       },
-      "releaseDate": "2025-01-26",
+      "releaseDate": "2024-09",
       "tags": []
     },
     {
@@ -76997,7 +76431,7 @@
       "id": "qwen25-coder-7b",
       "knowledge": null,
       "lastUpdated": "2024-09-19",
-      "maxCtxTokens": 32768,
+      "maxCtxTokens": 131072,
       "maxOutputTokens": 8192,
       "modalities": {
         "input": [
@@ -77011,8 +76445,8 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.01,
-        "output": 0.03
+        "input": 0.05,
+        "output": 0.05
       },
       "releaseDate": "2024-09-19",
       "tags": []
@@ -77025,16 +76459,16 @@
         "audio": false,
         "image": false,
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwen3-235b-a22b-fp8",
       "knowledge": null,
       "lastUpdated": "2025-04-28",
-      "maxCtxTokens": 40960,
-      "maxOutputTokens": 20000,
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text"
@@ -77047,14 +76481,14 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.2,
-        "output": 0.8
+        "input": 0.5,
+        "output": 2.5
       },
       "releaseDate": "2025-04-28",
       "tags": []
     },
     {
-      "description": "Qwen3 235B A22B Instruct 2507 は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen3 235B A22B Instruct (2507) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -77068,8 +76502,8 @@
       "icon": "",
       "id": "qwen3-235b-a22b-instruct-2507",
       "knowledge": null,
-      "lastUpdated": "2025-07-21",
-      "maxCtxTokens": 262000,
+      "lastUpdated": "2025-07-08",
+      "maxCtxTokens": 131072,
       "maxOutputTokens": 8192,
       "modalities": {
         "input": [
@@ -77079,18 +76513,18 @@
           "text"
         ]
       },
-      "name": "Qwen3 235B A22B Instruct 2507",
+      "name": "Qwen3 235B A22B Instruct (2507)",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.2,
-        "output": 0.6
+        "input": 0.8,
+        "output": 2.4
       },
-      "releaseDate": "2025-07-21",
+      "releaseDate": "2025-07-08",
       "tags": []
     },
     {
-      "description": "Qwen3 235B A22B Thinking 2507 は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen3 235B A22B Thinking (2507) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -77104,8 +76538,8 @@
       "icon": "",
       "id": "qwen3-235b-a22b-thinking-2507",
       "knowledge": null,
-      "lastUpdated": "2025-07-25",
-      "maxCtxTokens": 262000,
+      "lastUpdated": "2025-07-08",
+      "maxCtxTokens": 131072,
       "maxOutputTokens": 8192,
       "modalities": {
         "input": [
@@ -77115,14 +76549,14 @@
           "text"
         ]
       },
-      "name": "Qwen3 235B A22B Thinking 2507",
+      "name": "Qwen3 235B A22B Thinking (2507)",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.2,
-        "output": 0.6
+        "input": 0.8,
+        "output": 2.4
       },
-      "releaseDate": "2025-07-25",
+      "releaseDate": "2025-07-08",
       "tags": []
     },
     {
@@ -77133,16 +76567,16 @@
         "audio": false,
         "image": false,
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwen3-30b-a3b-fp8",
       "knowledge": null,
       "lastUpdated": "2025-04-28",
-      "maxCtxTokens": 40960,
-      "maxOutputTokens": 20000,
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text"
@@ -77155,14 +76589,14 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.09,
-        "output": 0.45
+        "input": 0.1,
+        "output": 0.1
       },
       "releaseDate": "2025-04-28",
       "tags": []
     },
     {
-      "description": "Qwen3 30B A3B Instruct 2507 は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen3 30B A3B Instruct (2507) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -77176,8 +76610,8 @@
       "icon": "",
       "id": "qwen3-30b-a3b-instruct-2507",
       "knowledge": null,
-      "lastUpdated": "2025-07-30",
-      "maxCtxTokens": 262000,
+      "lastUpdated": "2025-07-08",
+      "maxCtxTokens": 131072,
       "maxOutputTokens": 8192,
       "modalities": {
         "input": [
@@ -77187,18 +76621,18 @@
           "text"
         ]
       },
-      "name": "Qwen3 30B A3B Instruct 2507",
+      "name": "Qwen3 30B A3B Instruct (2507)",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
         "input": 0.1,
-        "output": 0.3
+        "output": 0.1
       },
-      "releaseDate": "2025-07-30",
+      "releaseDate": "2025-07-08",
       "tags": []
     },
     {
-      "description": "Qwen3 30B A3B Thinking 2507 は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen3 30B A3B Thinking (2507) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -77212,8 +76646,8 @@
       "icon": "",
       "id": "qwen3-30b-a3b-thinking-2507",
       "knowledge": null,
-      "lastUpdated": "2025-07-30",
-      "maxCtxTokens": 262000,
+      "lastUpdated": "2025-07-08",
+      "maxCtxTokens": 131072,
       "maxOutputTokens": 8192,
       "modalities": {
         "input": [
@@ -77223,14 +76657,14 @@
           "text"
         ]
       },
-      "name": "Qwen3 30B A3B Thinking 2507",
+      "name": "Qwen3 30B A3B Thinking (2507)",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
         "input": 0.1,
-        "output": 0.3
+        "output": 0.1
       },
-      "releaseDate": "2025-07-30",
+      "releaseDate": "2025-07-08",
       "tags": []
     },
     {
@@ -77241,16 +76675,16 @@
         "audio": false,
         "image": false,
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "qwen3-32b",
-      "knowledge": null,
-      "lastUpdated": "2025-04-28",
-      "maxCtxTokens": 32768,
-      "maxOutputTokens": 8192,
+      "knowledge": "2025-04",
+      "lastUpdated": "2025-04",
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 16384,
       "modalities": {
         "input": [
           "text"
@@ -77263,10 +76697,10 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.1,
-        "output": 0.3
+        "input": 0.7,
+        "output": 2.8
       },
-      "releaseDate": "2025-04-28",
+      "releaseDate": "2025-04",
       "tags": []
     },
     {
@@ -77277,16 +76711,16 @@
         "audio": false,
         "image": false,
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwen3-32b-fp8",
       "knowledge": null,
       "lastUpdated": "2025-04-28",
-      "maxCtxTokens": 40960,
-      "maxOutputTokens": 20000,
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text"
@@ -77300,7 +76734,7 @@
         "cacheRead": null,
         "cacheWrite": null,
         "input": 0.1,
-        "output": 0.45
+        "output": 0.1
       },
       "releaseDate": "2025-04-28",
       "tags": []
@@ -77313,16 +76747,16 @@
         "audio": false,
         "image": false,
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwen3-4b-fp8",
       "knowledge": null,
       "lastUpdated": "2025-04-28",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 20000,
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text"
@@ -77336,13 +76770,13 @@
         "cacheRead": null,
         "cacheWrite": null,
         "input": 0.03,
-        "output": 0.03
+        "output": 0.05
       },
       "releaseDate": "2025-04-28",
       "tags": []
     },
     {
-      "description": "Qwen3 Coder 30B A3B Instruct は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen3-Coder 30B-A3B Instruct は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -77355,10 +76789,10 @@
       },
       "icon": "",
       "id": "qwen3-coder-30b-a3b-instruct",
-      "knowledge": null,
-      "lastUpdated": "2025-07-31",
-      "maxCtxTokens": 262000,
-      "maxOutputTokens": 8192,
+      "knowledge": "2025-04",
+      "lastUpdated": "2025-04",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text"
@@ -77367,18 +76801,18 @@
           "text"
         ]
       },
-      "name": "Qwen3 Coder 30B A3B Instruct",
+      "name": "Qwen3-Coder 30B-A3B Instruct",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.1,
-        "output": 0.3
+        "input": 0.45,
+        "output": 2.25
       },
-      "releaseDate": "2025-07-31",
+      "releaseDate": "2025-04",
       "tags": []
     },
     {
-      "description": "Qwen3 Coder 480B A35B Instruct は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen3-Coder 480B-A35B Instruct は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -77391,10 +76825,10 @@
       },
       "icon": "",
       "id": "qwen3-coder-480b-a35b-instruct",
-      "knowledge": null,
-      "lastUpdated": "2025-01-31",
-      "maxCtxTokens": 262000,
-      "maxOutputTokens": 8192,
+      "knowledge": "2025-04",
+      "lastUpdated": "2025-04",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text"
@@ -77403,14 +76837,14 @@
           "text"
         ]
       },
-      "name": "Qwen3 Coder 480B A35B Instruct",
+      "name": "Qwen3-Coder 480B-A35B Instruct",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.4,
-        "output": 1.8
+        "input": 1.5,
+        "output": 7.5
       },
-      "releaseDate": "2025-01-31",
+      "releaseDate": "2025-04",
       "tags": []
     },
     {
@@ -77420,15 +76854,15 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "qwen3-coder-flash",
-      "knowledge": null,
-      "lastUpdated": "2025-07-22",
+      "knowledge": "2025-04",
+      "lastUpdated": "2025-07-28",
       "maxCtxTokens": 1000000,
       "maxOutputTokens": 65536,
       "modalities": {
@@ -77441,12 +76875,12 @@
       },
       "name": "Qwen3 Coder Flash",
       "price": {
-        "cacheRead": 0.06,
+        "cacheRead": null,
         "cacheWrite": null,
         "input": 0.3,
         "output": 1.5
       },
-      "releaseDate": "2025-07-22",
+      "releaseDate": "2025-07-28",
       "tags": []
     },
     {
@@ -77456,17 +76890,17 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": true,
-        "reasoning": false,
+        "open_weights": false,
+        "reasoning": true,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "qwen3-coder-next",
       "knowledge": null,
-      "lastUpdated": "2024-01-01",
+      "lastUpdated": "2025-10-15",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 262144,
+      "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text"
@@ -77477,12 +76911,12 @@
       },
       "name": "Qwen3 Coder Next",
       "price": {
-        "cacheRead": 0.06,
+        "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.11,
-        "output": 0.68
+        "input": 0.8,
+        "output": 4
       },
-      "releaseDate": "2024-01-01",
+      "releaseDate": "2025-10-15",
       "tags": []
     },
     {
@@ -77499,10 +76933,10 @@
       },
       "icon": "",
       "id": "qwen3-coder-plus",
-      "knowledge": null,
-      "lastUpdated": "2025-09-23",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 66000,
+      "knowledge": "2025-04",
+      "lastUpdated": "2025-07-23",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text"
@@ -77515,28 +76949,64 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 6,
-        "output": 60
+        "input": 1,
+        "output": 5
       },
-      "releaseDate": "2025-09-23",
+      "releaseDate": "2025-07-23",
       "tags": []
     },
     {
       "description": "Qwen3 Max は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
-        "image": true,
-        "open_weights": true,
-        "reasoning": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
         "temperature": true,
         "tool_call": true
       },
       "icon": "",
       "id": "qwen3-max",
+      "knowledge": "2025-04",
+      "lastUpdated": "2025-09-23",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Max",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 1.2,
+        "output": 6
+      },
+      "releaseDate": "2025-09-23",
+      "tags": []
+    },
+    {
+      "description": "Qwen3 Max (2026-01-23) は llmgateway によって提供される AI モデルです。",
+      "firm": "llmgateway",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "qwen3-max-2026-01-23",
       "knowledge": null,
-      "lastUpdated": "2025-09-24",
+      "lastUpdated": "2026-01-23",
       "maxCtxTokens": 256000,
       "maxOutputTokens": 32800,
       "modalities": {
@@ -77548,55 +77018,18 @@
           "text"
         ]
       },
-      "name": "Qwen3 Max",
+      "name": "Qwen3 Max (2026-01-23)",
       "price": {
         "cacheRead": 0.6,
         "cacheWrite": null,
         "input": 3,
         "output": 15
       },
-      "releaseDate": "2025-09-24",
-      "tags": []
-    },
-    {
-      "description": "Qwen3 Max 2026-01-23 は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": true,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "",
-      "id": "qwen3-max-2026-01-23",
-      "knowledge": null,
-      "lastUpdated": "2026-01-23",
-      "maxCtxTokens": 262144,
-      "maxOutputTokens": 65536,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 Max 2026-01-23",
-      "price": {
-        "cacheRead": 0.24,
-        "cacheWrite": null,
-        "input": 1.2,
-        "output": 6
-      },
       "releaseDate": "2026-01-23",
       "tags": []
     },
     {
-      "description": "Qwen3 Next 80B A3B Instruct は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen3-Next 80B-A3B Instruct は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -77609,9 +77042,9 @@
       },
       "icon": "",
       "id": "qwen3-next-80b-a3b-instruct",
-      "knowledge": null,
-      "lastUpdated": "2025-09-10",
-      "maxCtxTokens": 129024,
+      "knowledge": "2025-04",
+      "lastUpdated": "2025-09",
+      "maxCtxTokens": 131072,
       "maxOutputTokens": 32768,
       "modalities": {
         "input": [
@@ -77621,18 +77054,18 @@
           "text"
         ]
       },
-      "name": "Qwen3 Next 80B A3B Instruct",
+      "name": "Qwen3-Next 80B-A3B Instruct",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
         "input": 0.5,
         "output": 2
       },
-      "releaseDate": "2025-09-10",
+      "releaseDate": "2025-09",
       "tags": []
     },
     {
-      "description": "Qwen3 Next 80B A3B Thinking は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen3-Next 80B-A3B (Thinking) は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
         "attachment": false,
@@ -77645,8 +77078,8 @@
       },
       "icon": "",
       "id": "qwen3-next-80b-a3b-thinking",
-      "knowledge": null,
-      "lastUpdated": "2025-09-10",
+      "knowledge": "2025-04",
+      "lastUpdated": "2025-09",
       "maxCtxTokens": 131072,
       "maxOutputTokens": 32768,
       "modalities": {
@@ -77657,14 +77090,14 @@
           "text"
         ]
       },
-      "name": "Qwen3 Next 80B A3B Thinking",
+      "name": "Qwen3-Next 80B-A3B (Thinking)",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
         "input": 0.5,
         "output": 6
       },
-      "releaseDate": "2025-09-10",
+      "releaseDate": "2025-09",
       "tags": []
     },
     {
@@ -77682,9 +77115,9 @@
       "icon": "",
       "id": "qwen3-vl-235b-a22b-instruct",
       "knowledge": null,
-      "lastUpdated": "2025-09-23",
+      "lastUpdated": "2025-09-15",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 32768,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -77698,10 +77131,10 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.5,
-        "output": 2
+        "input": 0.8,
+        "output": 2.4
       },
-      "releaseDate": "2025-09-23",
+      "releaseDate": "2025-09-15",
       "tags": []
     },
     {
@@ -77714,14 +77147,14 @@
         "open_weights": true,
         "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwen3-vl-235b-a22b-thinking",
       "knowledge": null,
-      "lastUpdated": "2025-09-23",
+      "lastUpdated": "2025-09-15",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 32768,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -77735,10 +77168,10 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.5,
-        "output": 2
+        "input": 0.8,
+        "output": 2.4
       },
-      "releaseDate": "2025-09-23",
+      "releaseDate": "2025-09-15",
       "tags": []
     },
     {
@@ -77756,9 +77189,9 @@
       "icon": "",
       "id": "qwen3-vl-30b-a3b-instruct",
       "knowledge": null,
-      "lastUpdated": "2025-10-05",
+      "lastUpdated": "2025-10-02",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 32768,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -77772,10 +77205,10 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.2,
-        "output": 0.7
+        "input": 0.1,
+        "output": 0.1
       },
-      "releaseDate": "2025-10-05",
+      "releaseDate": "2025-10-02",
       "tags": []
     },
     {
@@ -77793,9 +77226,9 @@
       "icon": "",
       "id": "qwen3-vl-30b-a3b-thinking",
       "knowledge": null,
-      "lastUpdated": "2025-10-11",
+      "lastUpdated": "2025-10-02",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 32768,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -77809,10 +77242,10 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.2,
-        "output": 1
+        "input": 0.1,
+        "output": 0.1
       },
-      "releaseDate": "2025-10-11",
+      "releaseDate": "2025-10-02",
       "tags": []
     },
     {
@@ -77830,7 +77263,7 @@
       "icon": "",
       "id": "qwen3-vl-8b-instruct",
       "knowledge": null,
-      "lastUpdated": "2025-10-14",
+      "lastUpdated": "2025-08-19",
       "maxCtxTokens": 131072,
       "maxOutputTokens": 8192,
       "modalities": {
@@ -77846,10 +77279,10 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.08,
-        "output": 0.5
+        "input": 0.1,
+        "output": 0.1
       },
-      "releaseDate": "2025-10-14",
+      "releaseDate": "2025-08-19",
       "tags": []
     },
     {
@@ -77859,7 +77292,7 @@
         "attachment": true,
         "audio": false,
         "image": true,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": true,
         "tool_call": true
@@ -77867,9 +77300,9 @@
       "icon": "",
       "id": "qwen3-vl-flash",
       "knowledge": null,
-      "lastUpdated": "2025-10-15",
-      "maxCtxTokens": 262144,
-      "maxOutputTokens": 32768,
+      "lastUpdated": "2025-10-09",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 32000,
       "modalities": {
         "input": [
           "text",
@@ -77886,24 +77319,24 @@
         "input": 0.05,
         "output": 0.4
       },
-      "releaseDate": "2025-10-15",
+      "releaseDate": "2025-10-09",
       "tags": []
     },
     {
-      "description": "Qwen3 VL Plus は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen3-VL Plus は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
         "image": true,
-        "open_weights": true,
-        "reasoning": false,
+        "open_weights": false,
+        "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwen3-vl-plus",
-      "knowledge": null,
+      "knowledge": "2025-04",
       "lastUpdated": "2025-09-23",
       "maxCtxTokens": 262144,
       "maxOutputTokens": 32768,
@@ -77916,9 +77349,9 @@
           "text"
         ]
       },
-      "name": "Qwen3 VL Plus",
+      "name": "Qwen3-VL Plus",
       "price": {
-        "cacheRead": 0.04,
+        "cacheRead": null,
         "cacheWrite": null,
         "input": 0.2,
         "output": 1.6
@@ -77927,10 +77360,10 @@
       "tags": []
     },
     {
-      "description": "Qwen3.5 397B A17B は llmgateway によって提供される AI モデルです。",
+      "description": "Qwen3.5 397B-A17B は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
         "image": true,
         "open_weights": true,
@@ -77940,20 +77373,21 @@
       },
       "icon": "",
       "id": "qwen35-397b-a17b",
-      "knowledge": null,
+      "knowledge": "2025-04",
       "lastUpdated": "2026-02-16",
       "maxCtxTokens": 262144,
       "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Qwen3.5 397B A17B",
+      "name": "Qwen3.5 397B-A17B",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
@@ -77970,15 +77404,15 @@
         "attachment": false,
         "audio": false,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "",
       "id": "qwq-plus",
-      "knowledge": null,
-      "lastUpdated": "2025-03-06",
+      "knowledge": "2024-04",
+      "lastUpdated": "2025-03-05",
       "maxCtxTokens": 131072,
       "maxOutputTokens": 8192,
       "modalities": {
@@ -77996,7 +77430,7 @@
         "input": 0.8,
         "output": 2.4
       },
-      "releaseDate": "2025-03-06",
+      "releaseDate": "2025-03-05",
       "tags": []
     },
     {
@@ -78006,7 +77440,7 @@
         "attachment": true,
         "audio": false,
         "image": true,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
@@ -78016,7 +77450,7 @@
       "knowledge": null,
       "lastUpdated": "2025-06-25",
       "maxCtxTokens": 256000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -78043,7 +77477,7 @@
         "attachment": true,
         "audio": false,
         "image": true,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
@@ -78053,7 +77487,7 @@
       "knowledge": null,
       "lastUpdated": "2025-09-15",
       "maxCtxTokens": 256000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -78080,7 +77514,7 @@
         "attachment": true,
         "audio": false,
         "image": true,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
@@ -78090,7 +77524,7 @@
       "knowledge": null,
       "lastUpdated": "2025-07-26",
       "maxCtxTokens": 256000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -78102,7 +77536,7 @@
       },
       "name": "Seed 1.6 Flash (250715)",
       "price": {
-        "cacheRead": 0.02,
+        "cacheRead": 0.01,
         "cacheWrite": null,
         "input": 0.07,
         "output": 0.3
@@ -78117,7 +77551,7 @@
         "attachment": true,
         "audio": false,
         "image": true,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": true,
         "tool_call": true
@@ -78127,7 +77561,7 @@
       "knowledge": null,
       "lastUpdated": "2025-12-18",
       "maxCtxTokens": 256000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -78148,80 +77582,6 @@
       "tags": []
     },
     {
-      "description": "Seedream 4.0 は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "seedream-4-0",
-      "knowledge": null,
-      "lastUpdated": "2025-09-16",
-      "maxCtxTokens": 2000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Seedream 4.0",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2025-09-16",
-      "tags": []
-    },
-    {
-      "description": "Seedream 4.5 は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "seedream-4-5",
-      "knowledge": null,
-      "lastUpdated": "2025-12-03",
-      "maxCtxTokens": 2000,
-      "maxOutputTokens": 4096,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Seedream 4.5",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2025-12-03",
-      "tags": []
-    },
-    {
       "description": "Sonar は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
@@ -78235,10 +77595,10 @@
       },
       "icon": "",
       "id": "sonar",
-      "knowledge": null,
-      "lastUpdated": "2025-01-01",
-      "maxCtxTokens": 130000,
-      "maxOutputTokens": 16384,
+      "knowledge": "2025-09-01",
+      "lastUpdated": "2025-09-01",
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 4096,
       "modalities": {
         "input": [
           "text"
@@ -78254,16 +77614,16 @@
         "input": 1,
         "output": 1
       },
-      "releaseDate": "2025-01-01",
+      "releaseDate": "2024-01-01",
       "tags": []
     },
     {
       "description": "Sonar Pro は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": false,
         "temperature": true,
@@ -78271,13 +77631,14 @@
       },
       "icon": "",
       "id": "sonar-pro",
-      "knowledge": null,
-      "lastUpdated": "2025-03-07",
+      "knowledge": "2025-09-01",
+      "lastUpdated": "2025-09-01",
       "maxCtxTokens": 200000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -78290,16 +77651,16 @@
         "input": 3,
         "output": 15
       },
-      "releaseDate": "2025-03-07",
+      "releaseDate": "2024-01-01",
       "tags": []
     },
     {
       "description": "Sonar Reasoning Pro は llmgateway によって提供される AI モデルです。",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": true,
         "temperature": true,
@@ -78307,13 +77668,14 @@
       },
       "icon": "",
       "id": "sonar-reasoning-pro",
-      "knowledge": null,
-      "lastUpdated": "2025-03-07",
+      "knowledge": "2025-09-01",
+      "lastUpdated": "2025-09-01",
       "maxCtxTokens": 128000,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 4096,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -78326,79 +77688,7 @@
         "input": 2,
         "output": 8
       },
-      "releaseDate": "2025-03-07",
-      "tags": []
-    },
-    {
-      "description": "Veo 3.1 Fast は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "veo-3.1-fast-generate-preview",
-      "knowledge": null,
-      "lastUpdated": "2026-03-14",
-      "maxCtxTokens": 32768,
-      "maxOutputTokens": 1,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Veo 3.1 Fast",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2026-03-14",
-      "tags": []
-    },
-    {
-      "description": "Veo 3.1 は llmgateway によって提供される AI モデルです。",
-      "firm": "llmgateway",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "icon": "",
-      "id": "veo-3.1-generate-preview",
-      "knowledge": null,
-      "lastUpdated": "2026-03-14",
-      "maxCtxTokens": 32768,
-      "maxOutputTokens": 1,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Veo 3.1",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2026-03-14",
+      "releaseDate": "2024-01-01",
       "tags": []
     },
     {
@@ -108851,6 +108141,42 @@
         "output": null
       },
       "releaseDate": "2026-02-02",
+      "tags": []
+    },
+    {
+      "description": "GLM-5.1 は nvidia によって提供される AI モデルです。",
+      "firm": "nvidia",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "z-ai/glm-5.1",
+      "knowledge": null,
+      "lastUpdated": "2026-03-27",
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.1",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-03-27",
       "tags": []
     },
     {

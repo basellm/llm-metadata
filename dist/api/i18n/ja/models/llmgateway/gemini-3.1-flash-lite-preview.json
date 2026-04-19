@@ -1,13 +1,15 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.03,
+    "cache_read": 0.025,
+    "cache_write": 1,
     "input": 0.25,
     "output": 1.5
   },
-  "description": "Gemini 3.1 Flash Lite (Preview) は llmgateway によって提供される AI モデルです。",
-  "family": "gemini",
+  "description": "Gemini 3.1 Flash Lite Preview は llmgateway によって提供される AI モデルです。",
+  "family": "gemini-flash-lite",
   "id": "gemini-3.1-flash-lite-preview",
+  "knowledge": "2025-01",
   "last_updated": "2026-03-03",
   "limit": {
     "context": 1048576,
@@ -16,15 +18,18 @@
   "modalities": {
     "input": [
       "text",
-      "image"
+      "image",
+      "video",
+      "audio",
+      "pdf"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Gemini 3.1 Flash Lite (Preview)",
+  "name": "Gemini 3.1 Flash Lite Preview",
   "open_weights": false,
-  "reasoning": false,
+  "reasoning": true,
   "release_date": "2026-03-03",
   "structured_output": true,
   "temperature": true,
