@@ -974,7 +974,12 @@
     "gemini-2.5-pro": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.31,
+        "cache_read": 0.125,
+        "context_over_200k": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 15
+        },
         "input": 1.25,
         "output": 10
       },

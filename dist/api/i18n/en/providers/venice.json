@@ -383,6 +383,37 @@
       "temperature": true,
       "tool_call": true
     },
+    "gemma-4-uncensored": {
+      "attachment": true,
+      "cost": {
+        "input": 0.1625,
+        "output": 0.5
+      },
+      "description": "Gemma 4 Uncensored is an AI model provided by venice.",
+      "family": "gemma",
+      "id": "gemma-4-uncensored",
+      "last_updated": "2026-04-19",
+      "limit": {
+        "context": 256000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 Uncensored",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-04-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "google-gemma-3-27b-it": {
       "attachment": true,
       "cost": {
@@ -484,7 +515,7 @@
       "cost": {
         "cache_read": 0.23,
         "context_over_200k": {
-          "cache_read": 0.23,
+          "cache_read": 0.45,
           "input": 4.53,
           "output": 13.6
         },
@@ -494,7 +525,7 @@
       "description": "Grok 4.20 is an AI model provided by venice.",
       "family": "grok",
       "id": "grok-4-20",
-      "last_updated": "2026-04-12",
+      "last_updated": "2026-04-19",
       "limit": {
         "context": 2000000,
         "output": 128000
@@ -521,7 +552,7 @@
       "cost": {
         "cache_read": 0.23,
         "context_over_200k": {
-          "cache_read": 0.23,
+          "cache_read": 0.45,
           "input": 4.53,
           "output": 13.6
         },
@@ -531,7 +562,7 @@
       "description": "Grok 4.20 Multi-Agent is an AI model provided by venice.",
       "family": "grok",
       "id": "grok-4-20-multi-agent",
-      "last_updated": "2026-04-12",
+      "last_updated": "2026-04-19",
       "limit": {
         "context": 2000000,
         "output": 128000
@@ -1451,13 +1482,13 @@
     "qwen3-5-9b": {
       "attachment": true,
       "cost": {
-        "input": 0.05,
+        "input": 0.1,
         "output": 0.15
       },
       "description": "Qwen 3.5 9B is an AI model provided by venice.",
       "family": "qwen",
       "id": "qwen3-5-9b",
-      "last_updated": "2026-04-04",
+      "last_updated": "2026-04-19",
       "limit": {
         "context": 256000,
         "output": 32768
@@ -1633,6 +1664,37 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": false
+    },
+    "venice-uncensored-1-2": {
+      "attachment": true,
+      "cost": {
+        "input": 0.2,
+        "output": 0.9
+      },
+      "description": "Venice Uncensored 1.2 is an AI model provided by venice.",
+      "family": "venice",
+      "id": "venice-uncensored-1-2",
+      "last_updated": "2026-04-19",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Venice Uncensored 1.2",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-04-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "venice-uncensored-role-play": {
       "attachment": true,
