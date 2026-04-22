@@ -8477,6 +8477,42 @@
         "temperature": true,
         "tool_call": true
       },
+      "kimi-k2.6": {
+        "attachment": true,
+        "cost": {
+          "input": 0.929,
+          "output": 3.858
+        },
+        "description": "Moonshot Kimi K2.6 は alibaba-cn によって提供される AI モデルです。",
+        "family": "kimi",
+        "id": "kimi-k2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Moonshot Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "kimi/kimi-k2.5": {
         "attachment": false,
         "cost": {
@@ -35324,6 +35360,37 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-08-28",
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2-6": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.16,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Kimi-K2.6 は firmware によって提供される AI モデルです。",
+        "id": "kimi-k2-6",
+        "last_updated": "1970-01-01",
+        "limit": {
+          "context": 256000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi-K2.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "1970-01-01",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -100236,9 +100303,9 @@
       "openai/gpt-5.4-mini": {
         "attachment": true,
         "cost": {
-          "cache_read": 7.5e-8,
-          "input": 7.5e-7,
-          "output": 0.0000045
+          "cache_read": 0.075,
+          "input": 0.75,
+          "output": 4.5
         },
         "description": "GPT-5.4 Mini は openrouter によって提供される AI モデルです。",
         "family": "gpt-mini",
@@ -100270,9 +100337,9 @@
       "openai/gpt-5.4-nano": {
         "attachment": true,
         "cost": {
-          "cache_read": 2e-8,
-          "input": 2e-7,
-          "output": 0.00000125
+          "cache_read": 0.02,
+          "input": 0.2,
+          "output": 1.25
         },
         "description": "GPT-5.4 Nano は openrouter によって提供される AI モデルです。",
         "family": "gpt-nano",
@@ -118908,50 +118975,6 @@
       }
     },
     "name": "Tencent Coding Plan (China)",
-    "npm": "@ai-sdk/openai-compatible"
-  },
-  "tencent-token-plan": {
-    "api": "https://api.lkeap.cloud.tencent.com/plan/v3",
-    "doc": "https://cloud.tencent.com/document/product/1823/130060",
-    "env": [
-      "TENCENT_TOKEN_PLAN_API_KEY"
-    ],
-    "iconURL": "https://models.dev/logos/tencent-token-plan.svg",
-    "id": "tencent-token-plan",
-    "models": {
-      "hy3-preview": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "Hy3 preview は tencent-token-plan によって提供される AI モデルです。",
-        "family": "Hy",
-        "id": "hy3-preview",
-        "last_updated": "2026-04-20",
-        "limit": {
-          "context": 256000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Hy3 preview",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2026-04-20",
-        "temperature": true,
-        "tool_call": true
-      }
-    },
-    "name": "Tencent Token Plan",
     "npm": "@ai-sdk/openai-compatible"
   },
   "tencent-tokenhub": {
