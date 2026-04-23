@@ -1736,12 +1736,15 @@
     "moonshotai/Kimi-K2.5": {
       "attachment": false,
       "cost": {
-        "input": 0.55,
-        "output": 3
+        "input": 0.45,
+        "output": 2.25
       },
       "description": "moonshotai/Kimi-K2.5 は siliconflow によって提供される AI モデルです。",
       "family": "kimi",
       "id": "moonshotai/Kimi-K2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-01-27",
       "limit": {
         "context": 262000,
@@ -1757,9 +1760,44 @@
         ]
       },
       "name": "moonshotai/Kimi-K2.5",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "release_date": "2026-01-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.6": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.16,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "moonshotai/Kimi-K2.6 は siliconflow によって提供される AI モデルです。",
+      "family": "kimi",
+      "id": "moonshotai/Kimi-K2.6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262000,
+        "output": 262000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "moonshotai/Kimi-K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-21",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

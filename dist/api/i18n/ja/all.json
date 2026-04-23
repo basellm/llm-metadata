@@ -31036,6 +31036,43 @@
         "temperature": true,
         "tool_call": true
       },
+      "moonshotai/Kimi-K2.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 0.75,
+          "output": 3.5
+        },
+        "description": "Kimi K2.6 は deepinfra によって提供される AI モデルです。",
+        "family": "kimi",
+        "id": "moonshotai/Kimi-K2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-04",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "openai/gpt-oss-120b": {
         "attachment": false,
         "cost": {
@@ -40059,11 +40096,11 @@
         "temperature": true,
         "tool_call": false
       },
-      "gemma-4-26b-it": {
+      "gemma-4-26b-a4b-it": {
         "attachment": false,
         "description": "Gemma 4 26B は google によって提供される AI モデルです。",
         "family": "gemma",
-        "id": "gemma-4-26b-it",
+        "id": "gemma-4-26b-a4b-it",
         "last_updated": "2026-04-02",
         "limit": {
           "context": 256000,
@@ -95499,6 +95536,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "hy3-preview-free": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Hy3 Preview Free は opencode によって提供される AI モデルです。",
+        "family": "hy3-free",
+        "id": "hy3-preview-free",
+        "knowledge": "2025-06",
+        "last_updated": "2026-04-20",
+        "limit": {
+          "context": 256000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hy3 Preview Free",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-20",
+        "temperature": true,
+        "tool_call": true
+      },
       "kimi-k2": {
         "attachment": false,
         "cost": {
@@ -114607,12 +114675,15 @@
       "moonshotai/Kimi-K2.5": {
         "attachment": false,
         "cost": {
-          "input": 0.55,
-          "output": 3
+          "input": 0.45,
+          "output": 2.25
         },
         "description": "moonshotai/Kimi-K2.5 は siliconflow によって提供される AI モデルです。",
         "family": "kimi",
         "id": "moonshotai/Kimi-K2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-01-27",
         "limit": {
           "context": 262000,
@@ -114628,9 +114699,44 @@
           ]
         },
         "name": "moonshotai/Kimi-K2.5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-01-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/Kimi-K2.6": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.16,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "moonshotai/Kimi-K2.6 は siliconflow によって提供される AI モデルです。",
+        "family": "kimi",
+        "id": "moonshotai/Kimi-K2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262000,
+          "output": 262000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "moonshotai/Kimi-K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -115478,12 +115584,15 @@
       "Pro/moonshotai/Kimi-K2.5": {
         "attachment": false,
         "cost": {
-          "input": 0.55,
-          "output": 3
+          "input": 0.45,
+          "output": 2.25
         },
         "description": "Pro/moonshotai/Kimi-K2.5 は siliconflow-cn によって提供される AI モデルです。",
         "family": "kimi",
         "id": "Pro/moonshotai/Kimi-K2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-01-27",
         "limit": {
           "context": 262000,
@@ -115499,9 +115608,44 @@
           ]
         },
         "name": "Pro/moonshotai/Kimi-K2.5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-01-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "Pro/moonshotai/Kimi-K2.6": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.16,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Pro/moonshotai/Kimi-K2.6 は siliconflow-cn によって提供される AI モデルです。",
+        "family": "kimi",
+        "id": "Pro/moonshotai/Kimi-K2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262000,
+          "output": 262000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Pro/moonshotai/Kimi-K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -116739,6 +116883,38 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-03-03",
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen/Qwen3.6-35B-A3B": {
+        "attachment": false,
+        "cost": {
+          "input": 0.23,
+          "output": 1.86
+        },
+        "description": "Qwen/Qwen3.6-35B-A3B は siliconflow-cn によって提供される AI モデルです。",
+        "family": "qwen",
+        "id": "Qwen/Qwen3.6-35B-A3B",
+        "knowledge": "2025-04",
+        "last_updated": "2026-04-17",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen/Qwen3.6-35B-A3B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-17",
         "temperature": true,
         "tool_call": true
       },
@@ -120023,6 +120199,40 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-01-27",
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/Kimi-K2.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1.2,
+          "output": 4.5
+        },
+        "description": "Kimi K2.6 は togetherai によって提供される AI モデルです。",
+        "family": "kimi-k2.6",
+        "id": "moonshotai/Kimi-K2.6",
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 131000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
