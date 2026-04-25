@@ -31563,8 +31563,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.028,
-          "input": 0.28,
-          "output": 0.42
+          "input": 0.14,
+          "output": 0.28
         },
         "description": "DeepSeek Chat is an AI model provided by deepseek.",
         "family": "deepseek",
@@ -31572,8 +31572,8 @@
         "knowledge": "2025-09",
         "last_updated": "2026-02-28",
         "limit": {
-          "context": 131072,
-          "output": 8192
+          "context": 1000000,
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -31594,8 +31594,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.028,
-          "input": 0.28,
-          "output": 0.42
+          "input": 0.14,
+          "output": 0.28
         },
         "description": "DeepSeek Reasoner is an AI model provided by deepseek.",
         "family": "deepseek-thinking",
@@ -31606,8 +31606,8 @@
         "knowledge": "2025-09",
         "last_updated": "2026-02-28",
         "limit": {
-          "context": 128000,
-          "output": 64000
+          "context": 1000000,
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -36867,6 +36867,38 @@
         "reasoning": true,
         "release_date": "2026-03-17",
         "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "GPT-5.5 is an AI model provided by github-copilot.",
+        "family": "gpt",
+        "id": "gpt-5.5",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-22",
         "temperature": false,
         "tool_call": true
       },
@@ -60633,6 +60665,76 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek-v4-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.028,
+          "input": 0.14,
+          "output": 0.28
+        },
+        "description": "DeepSeek V4 Flash is an AI model provided by llmgateway.",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4-pro": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.145,
+          "input": 1.74,
+          "output": 3.48
+        },
+        "description": "DeepSeek V4 Pro is an AI model provided by llmgateway.",
+        "family": "deepseek-thinking",
+        "id": "deepseek-v4-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "devstral-2512": {
         "attachment": false,
         "cost": {
@@ -63343,6 +63445,43 @@
         "release_date": "2026-01",
         "structured_output": true,
         "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k2.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.16,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Kimi K2.6 is an AI model provided by llmgateway.",
+        "family": "kimi-k2.6",
+        "id": "kimi-k2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "llama-3-70b-instruct": {
@@ -89847,6 +89986,41 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-12-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-ai/deepseek-v4-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.028,
+          "input": 0.14,
+          "output": 0.28
+        },
+        "description": "DeepSeek V4 Flash is an AI model provided by nvidia.",
+        "family": "deepseek-flash",
+        "id": "deepseek-ai/deepseek-v4-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1048576,
+          "output": 393216
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -120904,6 +121078,40 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek-ai/DeepSeek-V4-Pro": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 2.1,
+          "output": 4.4
+        },
+        "description": "DeepSeek V4 Pro is an AI model provided by togetherai.",
+        "family": "deepseek",
+        "id": "deepseek-ai/DeepSeek-V4-Pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 512000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "essentialai/Rnj-1-Instruct": {
         "attachment": false,
         "cost": {
@@ -121646,12 +121854,12 @@
           "output": 0.35
         },
         "description": "DeepSeek V4 Flash is an AI model provided by venice.",
-        "family": "deepseek",
+        "family": "deepseek-flash",
         "id": "deepseek-v4-flash",
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2026-04-24",
+        "last_updated": "2026-04-25",
         "limit": {
           "context": 1000000,
           "output": 32768
@@ -122715,6 +122923,74 @@
         "temperature": true,
         "tool_call": true
       },
+      "openai-gpt-55": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.625,
+          "context_over_200k": {
+            "cache_read": 1.25,
+            "input": 12.5,
+            "output": 56.25
+          },
+          "input": 6.25,
+          "output": 37.5
+        },
+        "description": "GPT-5.5 is an AI model provided by venice.",
+        "family": "gpt",
+        "id": "openai-gpt-55",
+        "last_updated": "2026-04-25",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "openai-gpt-55-pro": {
+        "attachment": true,
+        "cost": {
+          "input": 37.5,
+          "output": 225
+        },
+        "description": "GPT-5.5 Pro is an AI model provided by venice.",
+        "family": "gpt-pro",
+        "id": "openai-gpt-55-pro",
+        "last_updated": "2026-04-25",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.5 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "openai-gpt-oss-120b": {
         "attachment": false,
         "cost": {
@@ -122942,6 +123218,38 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-03-05",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-6-27b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.325,
+          "output": 3.25
+        },
+        "description": "Qwen3.6 27B is an AI model provided by venice.",
+        "family": "qwen",
+        "id": "qwen3-6-27b",
+        "last_updated": "2026-04-25",
+        "limit": {
+          "context": 256000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 27B",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-24",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -133165,6 +133473,78 @@
         "reasoning": false,
         "release_date": "2026-03-18",
         "tool_call": false
+      },
+      "mimo-v2.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5 is an AI model provided by xiaomi-token-plan-ams.",
+        "family": "mimo-v2.5",
+        "id": "mimo-v2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.5-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5-Pro is an AI model provided by xiaomi-token-plan-ams.",
+        "family": "mimo-v2.5-pro",
+        "id": "mimo-v2.5-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5-Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Xiaomi Token Plan (Europe)",
@@ -133278,6 +133658,78 @@
         "reasoning": false,
         "release_date": "2026-03-18",
         "tool_call": false
+      },
+      "mimo-v2.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5 is an AI model provided by xiaomi-token-plan-cn.",
+        "family": "mimo-v2.5",
+        "id": "mimo-v2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.5-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5-Pro is an AI model provided by xiaomi-token-plan-cn.",
+        "family": "mimo-v2.5-pro",
+        "id": "mimo-v2.5-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5-Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Xiaomi Token Plan (China)",
@@ -133391,6 +133843,78 @@
         "reasoning": false,
         "release_date": "2026-03-18",
         "tool_call": false
+      },
+      "mimo-v2.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5 is an AI model provided by xiaomi-token-plan-sgp.",
+        "family": "mimo-v2.5",
+        "id": "mimo-v2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.5-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5-Pro is an AI model provided by xiaomi-token-plan-sgp.",
+        "family": "mimo-v2.5-pro",
+        "id": "mimo-v2.5-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5-Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Xiaomi Token Plan (Singapore)",
@@ -133851,38 +134375,6 @@
     "iconURL": "https://models.dev/logos/zai-coding-plan.svg",
     "id": "zai-coding-plan",
     "models": {
-      "glm-4.5": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.5 is an AI model provided by zai-coding-plan.",
-        "family": "glm",
-        "id": "glm-4.5",
-        "knowledge": "2025-04",
-        "last_updated": "2025-07-28",
-        "limit": {
-          "context": 131072,
-          "output": 98304
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.5",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-07-28",
-        "temperature": true,
-        "tool_call": true
-      },
       "glm-4.5-air": {
         "attachment": false,
         "cost": {
@@ -133912,134 +134404,6 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-07-28",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.5-flash": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.5-Flash is an AI model provided by zai-coding-plan.",
-        "family": "glm-flash",
-        "id": "glm-4.5-flash",
-        "knowledge": "2025-04",
-        "last_updated": "2025-07-28",
-        "limit": {
-          "context": 131072,
-          "output": 98304
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.5-Flash",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-07-28",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.5v": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.5V is an AI model provided by zai-coding-plan.",
-        "family": "glm",
-        "id": "glm-4.5v",
-        "knowledge": "2025-04",
-        "last_updated": "2025-08-11",
-        "limit": {
-          "context": 64000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.5V",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-08-11",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.6": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.6 is an AI model provided by zai-coding-plan.",
-        "family": "glm",
-        "id": "glm-4.6",
-        "knowledge": "2025-04",
-        "last_updated": "2025-09-30",
-        "limit": {
-          "context": 204800,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.6",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-09-30",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.6v": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.6V is an AI model provided by zai-coding-plan.",
-        "family": "glm",
-        "id": "glm-4.6v",
-        "knowledge": "2025-04",
-        "last_updated": "2025-12-08",
-        "limit": {
-          "context": 128000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.6V",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-12-08",
         "temperature": true,
         "tool_call": true
       },
@@ -134075,104 +134439,6 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-22",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.7-flash": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.7-Flash is an AI model provided by zai-coding-plan.",
-        "family": "glm-flash",
-        "id": "glm-4.7-flash",
-        "knowledge": "2025-04",
-        "last_updated": "2026-01-19",
-        "limit": {
-          "context": 200000,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.7-Flash",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2026-01-19",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.7-flashx": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.01,
-          "cache_write": 0,
-          "input": 0.07,
-          "output": 0.4
-        },
-        "description": "GLM-4.7-FlashX is an AI model provided by zai-coding-plan.",
-        "family": "glm-flash",
-        "id": "glm-4.7-flashx",
-        "knowledge": "2025-04",
-        "last_updated": "2026-01-19",
-        "limit": {
-          "context": 200000,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.7-FlashX",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2026-01-19",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-5": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-5 is an AI model provided by zai-coding-plan.",
-        "family": "glm",
-        "id": "glm-5",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-02-11",
-        "limit": {
-          "context": 204800,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-5",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2026-02-11",
         "temperature": true,
         "tool_call": true
       },
@@ -134243,43 +134509,6 @@
         "reasoning": true,
         "release_date": "2026-03-27",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-5v-turbo": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "glm-5v-turbo is an AI model provided by zai-coding-plan.",
-        "family": "glm",
-        "id": "glm-5v-turbo",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-04-01",
-        "limit": {
-          "context": 200000,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "glm-5v-turbo",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2026-04-01",
         "temperature": true,
         "tool_call": true
       }
@@ -137634,38 +137863,6 @@
     "iconURL": "https://models.dev/logos/zhipuai-coding-plan.svg",
     "id": "zhipuai-coding-plan",
     "models": {
-      "glm-4.5": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.5 is an AI model provided by zhipuai-coding-plan.",
-        "family": "glm",
-        "id": "glm-4.5",
-        "knowledge": "2025-04",
-        "last_updated": "2025-07-28",
-        "limit": {
-          "context": 131072,
-          "output": 98304
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.5",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-07-28",
-        "temperature": true,
-        "tool_call": true
-      },
       "glm-4.5-air": {
         "attachment": false,
         "cost": {
@@ -137695,166 +137892,6 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-07-28",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.5-flash": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.5-Flash is an AI model provided by zhipuai-coding-plan.",
-        "family": "glm-flash",
-        "id": "glm-4.5-flash",
-        "knowledge": "2025-04",
-        "last_updated": "2025-07-28",
-        "limit": {
-          "context": 131072,
-          "output": 98304
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.5-Flash",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-07-28",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.5v": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.5V is an AI model provided by zhipuai-coding-plan.",
-        "family": "glm",
-        "id": "glm-4.5v",
-        "knowledge": "2025-04",
-        "last_updated": "2025-08-11",
-        "limit": {
-          "context": 64000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.5V",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-08-11",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.6": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.6 is an AI model provided by zhipuai-coding-plan.",
-        "family": "glm",
-        "id": "glm-4.6",
-        "knowledge": "2025-04",
-        "last_updated": "2025-09-30",
-        "limit": {
-          "context": 204800,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.6",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-09-30",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.6v": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.6V is an AI model provided by zhipuai-coding-plan.",
-        "family": "glm",
-        "id": "glm-4.6v",
-        "knowledge": "2025-04",
-        "last_updated": "2025-12-08",
-        "limit": {
-          "context": 128000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.6V",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-12-08",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.6v-flash": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.6V-Flash is an AI model provided by zhipuai-coding-plan.",
-        "family": "glm",
-        "id": "glm-4.6v-flash",
-        "knowledge": "2025-04",
-        "last_updated": "2025-12-08",
-        "limit": {
-          "context": 128000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.6V-Flash",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-12-08",
         "temperature": true,
         "tool_call": true
       },
@@ -137890,104 +137927,6 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-22",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.7-flash": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-4.7-Flash is an AI model provided by zhipuai-coding-plan.",
-        "family": "glm-flash",
-        "id": "glm-4.7-flash",
-        "knowledge": "2025-04",
-        "last_updated": "2026-01-19",
-        "limit": {
-          "context": 200000,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.7-Flash",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2026-01-19",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-4.7-flashx": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.01,
-          "cache_write": 0,
-          "input": 0.07,
-          "output": 0.4
-        },
-        "description": "GLM-4.7-FlashX is an AI model provided by zhipuai-coding-plan.",
-        "family": "glm-flash",
-        "id": "glm-4.7-flashx",
-        "knowledge": "2025-04",
-        "last_updated": "2026-01-19",
-        "limit": {
-          "context": 200000,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-4.7-FlashX",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2026-01-19",
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-5": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM-5 is an AI model provided by zhipuai-coding-plan.",
-        "family": "glm",
-        "id": "glm-5",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-02-11",
-        "limit": {
-          "context": 204800,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM-5",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2026-02-11",
         "temperature": true,
         "tool_call": true
       },
@@ -138058,43 +137997,6 @@
         "reasoning": true,
         "release_date": "2026-03-27",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "glm-5v-turbo": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "glm-5v-turbo is an AI model provided by zhipuai-coding-plan.",
-        "family": "glm",
-        "id": "glm-5v-turbo",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-04-01",
-        "limit": {
-          "context": 200000,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "glm-5v-turbo",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2026-04-01",
         "temperature": true,
         "tool_call": true
       }
