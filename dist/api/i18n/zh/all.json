@@ -10105,6 +10105,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3.6-max-preview": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.132,
+          "input": 1.32,
+          "output": 7.9
+        },
+        "description": "Qwen3.6 Max Preview 是由 alibaba-cn 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "qwen3.6-max-preview",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 245800,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 Max Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-20",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3.6-plus": {
         "attachment": false,
         "cost": {
@@ -27366,6 +27397,46 @@
         "temperature": false,
         "tool_call": true
       },
+      "openai/gpt-5.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "context_over_200k": {
+            "cache_read": 1,
+            "input": 10,
+            "output": 45
+          },
+          "input": 5,
+          "output": 30
+        },
+        "description": "GPT-5.5 是由 cloudflare-ai-gateway 提供的人工智能模型。",
+        "family": "gpt",
+        "id": "openai/gpt-5.5",
+        "knowledge": "2025-12-01",
+        "last_updated": "2026-04-23",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-23",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "openai/o1": {
         "attachment": true,
         "cost": {
@@ -41022,6 +41093,43 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-11-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-3.1-flash-lite-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "cache_write": 1,
+          "input": 0.25,
+          "output": 1.5
+        },
+        "description": "Gemini 3.1 Flash Lite Preview 是由 google-vertex 提供的人工智能模型。",
+        "family": "gemini-flash-lite",
+        "id": "gemini-3.1-flash-lite-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2026-03-03",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.1 Flash Lite Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-03",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
