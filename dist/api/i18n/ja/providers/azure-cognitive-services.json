@@ -1526,6 +1526,11 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.25,
+        "context_over_200k": {
+          "cache_read": 0.5,
+          "input": 5,
+          "output": 22.5
+        },
         "input": 2.5,
         "output": 15
       },
@@ -1535,8 +1540,8 @@
       "knowledge": "2025-08-31",
       "last_updated": "2026-03-05",
       "limit": {
-        "context": 400000,
-        "input": 272000,
+        "context": 1050000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
@@ -1630,6 +1635,10 @@
     "gpt-5.4-pro": {
       "attachment": true,
       "cost": {
+        "context_over_200k": {
+          "input": 60,
+          "output": 270
+        },
         "input": 30,
         "output": 180
       },
@@ -1639,8 +1648,8 @@
       "knowledge": "2025-08-31",
       "last_updated": "2026-03-05",
       "limit": {
-        "context": 400000,
-        "input": 272000,
+        "context": 1050000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {

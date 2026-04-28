@@ -1632,6 +1632,11 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.25,
+        "context_over_200k": {
+          "cache_read": 0.5,
+          "input": 5,
+          "output": 22.5
+        },
         "input": 2.5,
         "output": 15
       },
@@ -1641,8 +1646,8 @@
       "knowledge": "2025-08-31",
       "last_updated": "2026-03-05",
       "limit": {
-        "context": 400000,
-        "input": 272000,
+        "context": 1050000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
@@ -1736,6 +1741,10 @@
     "gpt-5.4-pro": {
       "attachment": true,
       "cost": {
+        "context_over_200k": {
+          "input": 60,
+          "output": 270
+        },
         "input": 30,
         "output": 180
       },
@@ -1745,8 +1754,8 @@
       "knowledge": "2025-08-31",
       "last_updated": "2026-03-05",
       "limit": {
-        "context": 400000,
-        "input": 272000,
+        "context": 1050000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
@@ -2190,6 +2199,44 @@
       },
       "reasoning": true,
       "release_date": "2026-02-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.6": {
+      "attachment": false,
+      "cost": {
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Kimi K2.6 は azure によって提供される AI モデルです。",
+      "family": "kimi",
+      "id": "kimi-k2.6",
+      "interleaved": true,
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "provider": {
+        "api": "https://${AZURE_RESOURCE_NAME}.services.ai.azure.com/models",
+        "npm": "@ai-sdk/openai-compatible",
+        "shape": "completions"
+      },
+      "reasoning": true,
+      "release_date": "2026-04-22",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
