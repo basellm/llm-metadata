@@ -307,7 +307,8 @@
     "deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "input": 0.175,
+        "cache_read": 0.028,
+        "input": 0.17,
         "output": 0.35
       },
       "description": "DeepSeek V4 Flash は venice によって提供される AI モデルです。",
@@ -316,7 +317,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-04-25",
+      "last_updated": "2026-04-29",
       "limit": {
         "context": 1000000,
         "output": 32768
@@ -330,7 +331,7 @@
         ]
       },
       "name": "DeepSeek V4 Flash",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "release_date": "2026-04-24",
       "structured_output": true,
@@ -340,8 +341,9 @@
     "deepseek-v4-pro": {
       "attachment": false,
       "cost": {
-        "input": 2.175,
-        "output": 4.35
+        "cache_read": 0.33,
+        "input": 1.73,
+        "output": 3.796
       },
       "description": "DeepSeek V4 Pro は venice によって提供される AI モデルです。",
       "family": "deepseek",
@@ -349,7 +351,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-04-24",
+      "last_updated": "2026-04-29",
       "limit": {
         "context": 1000000,
         "output": 32768
@@ -363,7 +365,7 @@
         ]
       },
       "name": "DeepSeek V4 Pro",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "release_date": "2026-04-24",
       "structured_output": true,
@@ -1685,10 +1687,10 @@
         "input": 0.325,
         "output": 3.25
       },
-      "description": "Qwen3.6 27B は venice によって提供される AI モデルです。",
+      "description": "Qwen 3.6 27B は venice によって提供される AI モデルです。",
       "family": "qwen",
       "id": "qwen3-6-27b",
-      "last_updated": "2026-04-25",
+      "last_updated": "2026-04-29",
       "limit": {
         "context": 256000,
         "output": 65536
@@ -1703,7 +1705,7 @@
           "text"
         ]
       },
-      "name": "Qwen3.6 27B",
+      "name": "Qwen 3.6 27B",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-04-24",
