@@ -1,21 +1,21 @@
 {
-  "attachment": true,
+  "attachment": false,
   "cost": {
-    "cache_read": 0.1,
+    "cache_read": 0.105,
     "input": 0.6,
     "output": 3
   },
   "description": "Kimi K2.5 は aihubmix によって提供される AI モデルです。",
-  "family": "kimi",
+  "family": "kimi-k2.5",
   "id": "kimi-k2.5",
   "interleaved": {
     "field": "reasoning_content"
   },
-  "knowledge": "2025-07",
-  "last_updated": "2026-01-27",
+  "knowledge": "2025-01",
+  "last_updated": "2026-01",
   "limit": {
-    "context": 262144,
-    "output": 262144
+    "context": 256000,
+    "output": 0
   },
   "modalities": {
     "input": [
@@ -30,7 +30,8 @@
   "name": "Kimi K2.5",
   "open_weights": true,
   "reasoning": true,
-  "release_date": "2026-01-27",
-  "temperature": true,
+  "release_date": "2026-01",
+  "structured_output": true,
+  "temperature": false,
   "tool_call": true
 }

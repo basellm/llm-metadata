@@ -1,25 +1,26 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.02,
-    "input": 0.075,
-    "output": 0.3
+    "cache_read": 0.03,
+    "input": 0.3,
+    "output": 2.499
   },
   "description": "Gemini 2.5 Flash は aihubmix によって提供される AI モデルです。",
   "family": "gemini-flash",
   "id": "gemini-2.5-flash",
-  "knowledge": "2025-04",
-  "last_updated": "2025-09-15",
+  "knowledge": "2025-01",
+  "last_updated": "2025-06-05",
   "limit": {
-    "context": 1000000,
-    "output": 65000
+    "context": 1048576,
+    "output": 65536
   },
   "modalities": {
     "input": [
       "text",
       "image",
       "audio",
-      "video"
+      "video",
+      "pdf"
     ],
     "output": [
       "text"
@@ -27,8 +28,9 @@
   },
   "name": "Gemini 2.5 Flash",
   "open_weights": false,
-  "reasoning": false,
-  "release_date": "2025-09-15",
+  "reasoning": true,
+  "release_date": "2025-03-20",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }
