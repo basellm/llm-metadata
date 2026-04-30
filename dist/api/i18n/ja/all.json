@@ -21879,6 +21879,44 @@
         "temperature": true,
         "tool_call": true
       },
+      "kimi-k2.6": {
+        "attachment": false,
+        "cost": {
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Kimi K2.6 は azure-cognitive-services によって提供される AI モデルです。",
+        "family": "kimi",
+        "id": "kimi-k2.6",
+        "interleaved": true,
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "provider": {
+          "api": "https://${AZURE_RESOURCE_NAME}.services.ai.azure.com/models",
+          "npm": "@ai-sdk/openai-compatible",
+          "shape": "completions"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "llama-3.2-11b-vision-instruct": {
         "attachment": true,
         "cost": {
@@ -127527,35 +127565,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "inception/mercury-coder-small": {
-        "attachment": false,
-        "cost": {
-          "input": 0.25,
-          "output": 1
-        },
-        "description": "Mercury Coder Small Beta は vercel によって提供される AI モデルです。",
-        "family": "mercury",
-        "id": "inception/mercury-coder-small",
-        "last_updated": "2026-04-16",
-        "limit": {
-          "context": 32000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Mercury Coder Small Beta",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-02-26",
-        "temperature": true,
-        "tool_call": true
-      },
       "inception/mercury-edit-2": {
         "attachment": false,
         "cost": {
@@ -132880,6 +132889,42 @@
     "iconURL": "https://models.dev/logos/wafer.ai.svg",
     "id": "wafer.ai",
     "models": {
+      "DeepSeek-V4-Pro": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "DeepSeek V4 Pro は wafer.ai によって提供される AI モデルです。",
+        "family": "deepseek-thinking",
+        "id": "DeepSeek-V4-Pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "GLM-5.1": {
         "attachment": false,
         "cost": {
