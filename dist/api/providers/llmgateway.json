@@ -2899,6 +2899,100 @@
       "temperature": false,
       "tool_call": true
     },
+    "gpt-5.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 1,
+          "input": 10,
+          "output": 45
+        },
+        "input": 5,
+        "output": 30
+      },
+      "description": "GPT-5.5 is an AI model provided by llmgateway.",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 1.25,
+              "input": 12.5,
+              "output": 75
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
+      "family": "gpt",
+      "id": "gpt-5.5",
+      "knowledge": "2025-12-01",
+      "last_updated": "2026-04-23",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.5-pro": {
+      "attachment": true,
+      "cost": {
+        "context_over_200k": {
+          "input": 60,
+          "output": 270
+        },
+        "input": 30,
+        "output": 180
+      },
+      "description": "GPT-5.5 Pro is an AI model provided by llmgateway.",
+      "family": "gpt-pro",
+      "id": "gpt-5.5-pro",
+      "knowledge": "2025-12-01",
+      "last_updated": "2026-04-23",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.5 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "gpt-oss-120b": {
       "attachment": false,
       "cost": {
@@ -5674,6 +5768,104 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-09-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.6-35b-a3b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.248,
+        "output": 1.485
+      },
+      "description": "Qwen3.6 35B-A3B is an AI model provided by llmgateway.",
+      "family": "qwen",
+      "id": "qwen3.6-35b-a3b",
+      "last_updated": "2026-04-17",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B-A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.6-max-preview": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.13,
+        "input": 1.3,
+        "output": 7.8
+      },
+      "description": "Qwen3.6 Max Preview is an AI model provided by llmgateway.",
+      "family": "qwen",
+      "id": "qwen3.6-max-preview",
+      "knowledge": "2025-04",
+      "last_updated": "2026-04-20",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 Max Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.6-plus": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.028,
+        "cache_write": 0.344,
+        "input": 0.276,
+        "output": 1.651
+      },
+      "description": "Qwen3.6 Plus is an AI model provided by llmgateway.",
+      "family": "qwen",
+      "id": "qwen3.6-plus",
+      "knowledge": "2025-04",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 Plus",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-02",
       "temperature": true,
       "tool_call": true
     },
