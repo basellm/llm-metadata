@@ -1,0 +1,444 @@
+{
+  "api": "https://api.neuralwatt.com/v1",
+  "doc": "https://portal.neuralwatt.com/docs",
+  "env": [
+    "NEURALWATT_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/neuralwatt.svg",
+  "id": "neuralwatt",
+  "models": {
+    "MiniMaxAI/MiniMax-M2.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0.35,
+        "output": 1.38
+      },
+      "description": "MiniMax M2.5 is an AI model provided by neuralwatt.",
+      "family": "minimax",
+      "id": "MiniMaxAI/MiniMax-M2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-12",
+      "limit": {
+        "context": 196608,
+        "output": 196608
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.5-397B-A17B-FP8": {
+      "attachment": false,
+      "cost": {
+        "input": 0.69,
+        "output": 4.14
+      },
+      "description": "Qwen3.5 397B A17B FP8 is an AI model provided by neuralwatt.",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.5-397B-A17B-FP8",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-01",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 397B A17B FP8",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.6-35B-A3B": {
+      "attachment": true,
+      "cost": {
+        "input": 0.05,
+        "output": 0.1
+      },
+      "description": "Qwen3.6 35B A3B is an AI model provided by neuralwatt.",
+      "family": "qwen3.6",
+      "id": "Qwen/Qwen3.6-35B-A3B",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-01",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5-fast": {
+      "attachment": false,
+      "cost": {
+        "input": 1.1,
+        "output": 3.6
+      },
+      "description": "GLM 5 Fast is an AI model provided by neuralwatt.",
+      "family": "glm",
+      "id": "glm-5-fast",
+      "last_updated": "2026-04-07",
+      "limit": {
+        "context": 200000,
+        "output": 200000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5 Fast",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-04-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.1-fast": {
+      "attachment": false,
+      "cost": {
+        "input": 1.1,
+        "output": 3.6
+      },
+      "description": "GLM 5.1 Fast is an AI model provided by neuralwatt.",
+      "family": "glm",
+      "id": "glm-5.1-fast",
+      "last_updated": "2026-04-07",
+      "limit": {
+        "context": 200000,
+        "output": 200000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.1 Fast",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-04-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.5-fast": {
+      "attachment": true,
+      "cost": {
+        "input": 0.52,
+        "output": 2.59
+      },
+      "description": "Kimi K2.5 Fast is an AI model provided by neuralwatt.",
+      "family": "kimi",
+      "id": "kimi-k2.5-fast",
+      "last_updated": "2026-01-27",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5 Fast",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.6-fast": {
+      "attachment": true,
+      "cost": {
+        "input": 0.69,
+        "output": 3.22
+      },
+      "description": "Kimi K2.6 Fast is an AI model provided by neuralwatt.",
+      "family": "kimi",
+      "id": "kimi-k2.6-fast",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6 Fast",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-04-21",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/Devstral-Small-2-24B-Instruct-2512": {
+      "attachment": true,
+      "cost": {
+        "input": 0.12,
+        "output": 0.35
+      },
+      "description": "Devstral Small 2 24B Instruct 2512 is an AI model provided by neuralwatt.",
+      "family": "devstral",
+      "id": "mistralai/Devstral-Small-2-24B-Instruct-2512",
+      "last_updated": "2025-12-09",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral Small 2 24B Instruct 2512",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-09",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.5": {
+      "attachment": true,
+      "cost": {
+        "input": 0.52,
+        "output": 2.59
+      },
+      "description": "Kimi K2.5 is an AI model provided by neuralwatt.",
+      "family": "kimi",
+      "id": "moonshotai/Kimi-K2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-01-27",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-01-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.6": {
+      "attachment": true,
+      "cost": {
+        "input": 0.69,
+        "output": 3.22
+      },
+      "description": "Kimi K2.6 is an AI model provided by neuralwatt.",
+      "family": "kimi",
+      "id": "moonshotai/Kimi-K2.6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-21",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-20b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.03,
+        "output": 0.16
+      },
+      "description": "GPT OSS 20B is an AI model provided by neuralwatt.",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-20b",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 16384,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 20B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.5-397b-fast": {
+      "attachment": false,
+      "cost": {
+        "input": 0.69,
+        "output": 4.14
+      },
+      "description": "Qwen3.5 397B Fast is an AI model provided by neuralwatt.",
+      "family": "qwen",
+      "id": "qwen3.5-397b-fast",
+      "last_updated": "2026-02-01",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 397B Fast",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-02-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.6-35b-fast": {
+      "attachment": true,
+      "cost": {
+        "input": 0.05,
+        "output": 0.1
+      },
+      "description": "Qwen3.6 35B Fast is an AI model provided by neuralwatt.",
+      "family": "qwen3.6",
+      "id": "qwen3.6-35b-fast",
+      "last_updated": "2026-04-01",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B Fast",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-04-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.1-FP8": {
+      "attachment": false,
+      "cost": {
+        "input": 1.1,
+        "output": 3.6
+      },
+      "description": "GLM 5.1 FP8 is an AI model provided by neuralwatt.",
+      "family": "glm",
+      "id": "zai-org/GLM-5.1-FP8",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-07",
+      "limit": {
+        "context": 200000,
+        "output": 200000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.1 FP8",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-07",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Neuralwatt",
+  "npm": "@ai-sdk/openai-compatible"
+}

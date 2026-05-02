@@ -143,18 +143,18 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepseek-v3-2": {
+    "deepseek-v4-pro": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.28,
-        "input": 0.58,
-        "output": 1.68
+        "cache_read": 0.14,
+        "input": 1.74,
+        "output": 3.48
       },
-      "description": "DeepSeek v3.2 は firmware によって提供される AI モデルです。",
+      "description": "DeepSeek v4 Pro は firmware によって提供される AI モデルです。",
       "family": "deepseek",
-      "id": "deepseek-v3-2",
-      "knowledge": "2024-07",
-      "last_updated": "2025-09-29",
+      "id": "deepseek-v4-pro",
+      "knowledge": "2026-01",
+      "last_updated": "2026-04-24",
       "limit": {
         "context": 128000,
         "output": 8192
@@ -167,10 +167,10 @@
           "text"
         ]
       },
-      "name": "DeepSeek v3.2",
+      "name": "DeepSeek v4 Pro",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2024-12-26",
+      "release_date": "2026-04-24",
       "temperature": true,
       "tool_call": true
     },
@@ -316,42 +316,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "gemini-3-pro-preview": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.2,
-        "input": 2,
-        "output": 12
-      },
-      "description": "Gemini 3 Pro Preview は firmware によって提供される AI モデルです。",
-      "family": "gemini-pro",
-      "id": "gemini-3-pro-preview",
-      "knowledge": "2025-01",
-      "last_updated": "2025-11-18",
-      "limit": {
-        "context": 1000000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video",
-          "audio",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 3 Pro Preview",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-11-18",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "gpt-4o": {
       "attachment": true,
       "cost": {
@@ -417,16 +381,82 @@
       "temperature": false,
       "tool_call": true
     },
-    "gpt-5-4": {
+    "gpt-5-4-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.75,
+        "output": 4.5
+      },
+      "description": "GPT-5.4 Mini は firmware によって提供される AI モデルです。",
+      "family": "gpt-mini",
+      "id": "gpt-5-4-mini",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-17",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.4 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-4-nano": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.2,
+        "output": 1.25
+      },
+      "description": "GPT-5.4 Nano は firmware によって提供される AI モデルです。",
+      "family": "gpt-nano",
+      "id": "gpt-5-4-nano",
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.4 Nano",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-5": {
       "attachment": true,
       "cost": {
         "cache_read": 0.25,
         "input": 2.5,
         "output": 15
       },
-      "description": "GPT-5.4 は firmware によって提供される AI モデルです。",
+      "description": "GPT-5.5 は firmware によって提供される AI モデルです。",
       "family": "gpt",
-      "id": "gpt-5-4",
+      "id": "gpt-5-5",
       "knowledge": "2025-08-31",
       "last_updated": "2026-03-05",
       "limit": {
@@ -442,76 +472,10 @@
           "text"
         ]
       },
-      "name": "GPT-5.4",
+      "name": "GPT-5.5",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-05",
-      "temperature": false,
-      "tool_call": true
-    },
-    "gpt-5-mini": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.03,
-        "input": 0.25,
-        "output": 2
-      },
-      "description": "GPT-5 Mini は firmware によって提供される AI モデルです。",
-      "family": "gpt-mini",
-      "id": "gpt-5-mini",
-      "knowledge": "2024-05-30",
-      "last_updated": "2025-08-07",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5 Mini",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-08-07",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "gpt-5-nano": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.01,
-        "input": 0.05,
-        "output": 0.4
-      },
-      "description": "GPT-5 Nano は firmware によって提供される AI モデルです。",
-      "family": "gpt-nano",
-      "id": "gpt-5-nano",
-      "knowledge": "2024-05-30",
-      "last_updated": "2025-08-07",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5 Nano",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-08-07",
-      "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
@@ -639,6 +603,40 @@
       "temperature": true,
       "tool_call": true
     },
+    "grok-4-3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 1.25,
+        "output": 2.5
+      },
+      "description": "Grok 4.3 は firmware によって提供される AI モデルです。",
+      "family": "grok",
+      "id": "grok-4-3",
+      "knowledge": "2024-11",
+      "last_updated": "2026-04-30",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.3",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-30",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "grok-code-fast-1": {
       "attachment": false,
       "cost": {
@@ -760,6 +758,37 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-01-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m2-7": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax-M2.7 は firmware によって提供される AI モデルです。",
+      "family": "minimax",
+      "id": "minimax-m2-7",
+      "knowledge": "2024-09",
+      "last_updated": "2026-03-18",
+      "limit": {
+        "context": 192000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.7",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-18",
       "temperature": true,
       "tool_call": true
     },
