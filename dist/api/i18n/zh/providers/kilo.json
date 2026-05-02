@@ -203,33 +203,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "allenai/olmo-2-0325-32b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.05,
-        "output": 0.2
-      },
-      "description": "AllenAI: Olmo 2 32B Instruct 是由 kilo 提供的人工智能模型。",
-      "id": "allenai/olmo-2-0325-32b-instruct",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 128000,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "AllenAI: Olmo 2 32B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-03-15",
-      "tool_call": false
-    },
     "allenai/olmo-3-32b-think": {
       "attachment": false,
       "cost": {
@@ -805,6 +778,38 @@
       "temperature": true,
       "tool_call": true
     },
+    "anthropic/claude-opus-4.7": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Anthropic: Claude Opus 4.7 是由 kilo 提供的人工智能模型。",
+      "id": "anthropic/claude-opus-4.7",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Anthropic: Claude Opus 4.7",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-16",
+      "temperature": false,
+      "tool_call": true
+    },
     "anthropic/claude-sonnet-4": {
       "attachment": true,
       "cost": {
@@ -984,6 +989,34 @@
       "temperature": true,
       "tool_call": false
     },
+    "arcee-ai/trinity-large-preview": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.45
+      },
+      "description": "Arcee AI: Trinity Large Preview 是由 kilo 提供的人工智能模型。",
+      "id": "arcee-ai/trinity-large-preview",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 131000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Arcee AI: Trinity Large Preview",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01-28",
+      "temperature": true,
+      "tool_call": true
+    },
     "arcee-ai/trinity-large-thinking": {
       "attachment": false,
       "cost": {
@@ -1009,34 +1042,6 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-04-01",
-      "temperature": true,
-      "tool_call": true
-    },
-    "arcee-ai/trinity-large-thinking:free": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Arcee AI: Trinity Large Thinking (free) 是由 kilo 提供的人工智能模型。",
-      "id": "arcee-ai/trinity-large-thinking:free",
-      "last_updated": "2026-04-11",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Arcee AI: Trinity Large Thinking (free)",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-08-26",
       "temperature": true,
       "tool_call": true
     },
@@ -1238,18 +1243,18 @@
       "temperature": true,
       "tool_call": false
     },
-    "bytedance-seed/dola-seed-2.0-pro:free": {
+    "baidu/qianfan-ocr-fast:free": {
       "attachment": true,
       "cost": {
         "input": 0,
         "output": 0
       },
-      "description": "ByteDance Seed: Dola Seed 2.0 Pro (free) 是由 kilo 提供的人工智能模型。",
-      "id": "bytedance-seed/dola-seed-2.0-pro:free",
-      "last_updated": "2026-04-11",
+      "description": "Baidu: Qianfan-OCR-Fast (free) 是由 kilo 提供的人工智能模型。",
+      "id": "baidu/qianfan-ocr-fast:free",
+      "last_updated": "2026-05-01",
       "limit": {
-        "context": 256000,
-        "output": 128000
+        "context": 65536,
+        "output": 28672
       },
       "modalities": {
         "input": [
@@ -1260,12 +1265,12 @@
           "text"
         ]
       },
-      "name": "ByteDance Seed: Dola Seed 2.0 Pro (free)",
-      "open_weights": true,
+      "name": "Baidu: Qianfan-OCR-Fast (free)",
+      "open_weights": false,
       "reasoning": true,
-      "release_date": "2025-08-26",
+      "release_date": "2026-04-20",
       "temperature": true,
-      "tool_call": true
+      "tool_call": false
     },
     "bytedance-seed/seed-1.6": {
       "attachment": true,
@@ -1871,18 +1876,19 @@
       "temperature": true,
       "tool_call": false
     },
-    "eleutherai/llemma_7b": {
+    "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "input": 0.8,
-        "output": 1.2
+        "cache_read": 0.0028,
+        "input": 0.14,
+        "output": 0.28
       },
-      "description": "EleutherAI: Llemma 7b 是由 kilo 提供的人工智能模型。",
-      "id": "eleutherai/llemma_7b",
-      "last_updated": "2026-03-15",
+      "description": "DeepSeek: DeepSeek V4 Flash 是由 kilo 提供的人工智能模型。",
+      "id": "deepseek/deepseek-v4-flash",
+      "last_updated": "2026-05-01",
       "limit": {
-        "context": 4096,
-        "output": 4096
+        "context": 1048576,
+        "output": 384000
       },
       "modalities": {
         "input": [
@@ -1892,12 +1898,41 @@
           "text"
         ]
       },
-      "name": "EleutherAI: Llemma 7b",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-04-14",
+      "name": "DeepSeek: DeepSeek V4 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-24",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
+    },
+    "deepseek/deepseek-v4-pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.003625,
+        "input": 0.435,
+        "output": 0.87
+      },
+      "description": "DeepSeek: DeepSeek V4 Pro 是由 kilo 提供的人工智能模型。",
+      "id": "deepseek/deepseek-v4-pro",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek: DeepSeek V4 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-24",
+      "temperature": true,
+      "tool_call": true
     },
     "essentialai/rnj-1-instruct": {
       "attachment": false,
@@ -2455,34 +2490,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "google/gemma-2-9b-it": {
-      "attachment": false,
-      "cost": {
-        "input": 0.03,
-        "output": 0.09
-      },
-      "description": "Google: Gemma 2 9B 是由 kilo 提供的人工智能模型。",
-      "id": "google/gemma-2-9b-it",
-      "last_updated": "2024-06-28",
-      "limit": {
-        "context": 8192,
-        "output": 1639
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Google: Gemma 2 9B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-06-28",
-      "temperature": true,
-      "tool_call": false
-    },
     "google/gemma-3-12b-it": {
       "attachment": true,
       "cost": {
@@ -2776,6 +2783,35 @@
       "temperature": true,
       "tool_call": false
     },
+    "ibm-granite/granite-4.1-8b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.05,
+        "output": 0.1
+      },
+      "description": "IBM: Granite 4.1 8B 是由 kilo 提供的人工智能模型。",
+      "id": "ibm-granite/granite-4.1-8b",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "IBM: Granite 4.1 8B",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-30",
+      "temperature": true,
+      "tool_call": true
+    },
     "inception/mercury-2": {
       "attachment": false,
       "cost": {
@@ -2805,19 +2841,18 @@
       "temperature": true,
       "tool_call": true
     },
-    "inception/mercury-edit-2": {
+    "inclusionai/ling-2.6-1t:free": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.025,
-        "input": 0.25,
-        "output": 0.75
+        "input": 0,
+        "output": 0
       },
-      "description": "Mercury Edit 2 是由 kilo 提供的人工智能模型。",
-      "id": "inception/mercury-edit-2",
-      "last_updated": "2026-03-30",
+      "description": "inclusionAI: Ling-2.6-1T (free) 是由 kilo 提供的人工智能模型。",
+      "id": "inclusionai/ling-2.6-1t:free",
+      "last_updated": "2026-05-01",
       "limit": {
-        "context": 128000,
-        "output": 8192
+        "context": 262144,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -2827,12 +2862,41 @@
           "text"
         ]
       },
-      "name": "Mercury Edit 2",
+      "name": "inclusionAI: Ling-2.6-1T (free)",
       "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-03-30",
+      "reasoning": false,
+      "release_date": "2026-04-23",
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
+    },
+    "inclusionai/ling-2.6-flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.016,
+        "input": 0.08,
+        "output": 0.24
+      },
+      "description": "inclusionAI: Ling-2.6 Flash 是由 kilo 提供的人工智能模型。",
+      "id": "inclusionai/ling-2.6-flash",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "inclusionAI: Ling-2.6 Flash",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-21",
+      "temperature": true,
+      "tool_call": true
     },
     "inflection/inflection-3-pi": {
       "attachment": false,
@@ -3088,35 +3152,6 @@
       "release_date": "2023-08-02",
       "temperature": true,
       "tool_call": false
-    },
-    "meituan/longcat-flash-chat": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.2,
-        "input": 0.2,
-        "output": 0.8
-      },
-      "description": "Meituan: LongCat Flash Chat 是由 kilo 提供的人工智能模型。",
-      "id": "meituan/longcat-flash-chat",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Meituan: LongCat Flash Chat",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-08-30",
-      "temperature": true,
-      "tool_call": true
     },
     "meta-llama/llama-3-70b-instruct": {
       "attachment": false,
@@ -4289,33 +4324,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "mistralai/mistral-small-creative": {
-      "attachment": false,
-      "cost": {
-        "input": 0.1,
-        "output": 0.3
-      },
-      "description": "Mistral: Mistral Small Creative 是由 kilo 提供的人工智能模型。",
-      "id": "mistralai/mistral-small-creative",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral: Mistral Small Creative",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-17",
-      "tool_call": true
-    },
     "mistralai/mixtral-8x22b-instruct": {
       "attachment": false,
       "cost": {
@@ -4832,34 +4840,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "nvidia/llama-3.1-nemotron-ultra-253b-v1": {
-      "attachment": false,
-      "cost": {
-        "input": 0.6,
-        "output": 1.8
-      },
-      "description": "NVIDIA: Llama 3.1 Nemotron Ultra 253B v1 是由 kilo 提供的人工智能模型。",
-      "id": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
-      "last_updated": "2026-04-11",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "NVIDIA: Llama 3.1 Nemotron Ultra 253B v1",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-04-08",
-      "temperature": true,
-      "tool_call": false
-    },
     "nvidia/llama-3.3-nemotron-super-49b-v1.5": {
       "attachment": false,
       "cost": {
@@ -4913,6 +4893,37 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2024-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "NVIDIA: Nemotron 3 Nano Omni (free) 是由 kilo 提供的人工智能模型。",
+      "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "audio",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-28",
       "temperature": true,
       "tool_call": true
     },
@@ -5646,36 +5657,6 @@
       "release_date": "2025-03-13",
       "tool_call": false
     },
-    "openai/gpt-4o:extended": {
-      "attachment": true,
-      "cost": {
-        "input": 6,
-        "output": 18
-      },
-      "description": "OpenAI: GPT-4o (extended) 是由 kilo 提供的人工智能模型。",
-      "id": "openai/gpt-4o:extended",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 128000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "pdf",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "OpenAI: GPT-4o (extended)",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-05-13",
-      "temperature": true,
-      "tool_call": true
-    },
     "openai/gpt-5": {
       "attachment": true,
       "cost": {
@@ -6282,6 +6263,38 @@
       "release_date": "2026-03-06",
       "tool_call": true
     },
+    "openai/gpt-5.4-image-2": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 2,
+        "input": 8,
+        "output": 15
+      },
+      "description": "OpenAI: GPT-5.4 Image 2 是由 kilo 提供的人工智能模型。",
+      "id": "openai/gpt-5.4-image-2",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text",
+          "pdf"
+        ],
+        "output": [
+          "image",
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-5.4 Image 2",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-21",
+      "temperature": false,
+      "tool_call": false
+    },
     "openai/gpt-5.4-mini": {
       "attachment": true,
       "cost": {
@@ -6371,6 +6384,67 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-06",
+      "tool_call": true
+    },
+    "openai/gpt-5.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 5,
+        "output": 30
+      },
+      "description": "OpenAI: GPT-5.5 是由 kilo 提供的人工智能模型。",
+      "id": "openai/gpt-5.5",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-5.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-24",
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.5-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 30,
+        "output": 180
+      },
+      "description": "OpenAI: GPT-5.5 Pro 是由 kilo 提供的人工智能模型。",
+      "id": "openai/gpt-5.5-pro",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-5.5 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-24",
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-audio": {
@@ -6883,36 +6957,6 @@
       "status": "beta",
       "tool_call": false
     },
-    "openrouter/elephant-alpha": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Elephant (new) 是由 kilo 提供的人工智能模型。",
-      "id": "openrouter/elephant-alpha",
-      "last_updated": "2026-04-13",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Elephant (new)",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-01-15",
-      "status": "alpha",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "openrouter/free": {
       "attachment": true,
       "cost": {
@@ -6941,6 +6985,64 @@
       "release_date": "2026-02-01",
       "temperature": true,
       "tool_call": true
+    },
+    "openrouter/owl-alpha": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Owl Alpha 是由 kilo 提供的人工智能模型。",
+      "id": "openrouter/owl-alpha",
+      "last_updated": "2026-04-30",
+      "limit": {
+        "context": 1048756,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Owl Alpha",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-28",
+      "status": "alpha",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openrouter/pareto-code": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Pareto Code Router 是由 kilo 提供的人工智能模型。",
+      "id": "openrouter/pareto-code",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 200000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Pareto Code Router",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-21",
+      "temperature": false,
+      "tool_call": false
     },
     "perplexity/sonar": {
       "attachment": true,
@@ -7085,6 +7187,62 @@
       "release_date": "2024-01-01",
       "temperature": true,
       "tool_call": false
+    },
+    "poolside/laguna-m.1:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Poolside: Laguna M.1 (free) 是由 kilo 提供的人工智能模型。",
+      "id": "poolside/laguna-m.1:free",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Poolside: Laguna M.1 (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "poolside/laguna-xs.2:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Poolside: Laguna XS.2 (free) 是由 kilo 提供的人工智能模型。",
+      "id": "poolside/laguna-xs.2:free",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Poolside: Laguna XS.2 (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-28",
+      "temperature": true,
+      "tool_call": true
     },
     "prime-intellect/intellect-3": {
       "attachment": false,
@@ -7398,64 +7556,6 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-01-25",
-      "temperature": true,
-      "tool_call": false
-    },
-    "qwen/qwen2.5-coder-7b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.03,
-        "output": 0.09
-      },
-      "description": "Qwen: Qwen2.5 Coder 7B Instruct 是由 kilo 提供的人工智能模型。",
-      "id": "qwen/qwen2.5-coder-7b-instruct",
-      "last_updated": "2024-11",
-      "limit": {
-        "context": 32768,
-        "output": 6554
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen: Qwen2.5 Coder 7B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-09-17",
-      "temperature": true,
-      "tool_call": false
-    },
-    "qwen/qwen2.5-vl-32b-instruct": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.025,
-        "input": 0.2,
-        "output": 0.6
-      },
-      "description": "Qwen: Qwen2.5 VL 32B Instruct 是由 kilo 提供的人工智能模型。",
-      "id": "qwen/qwen2.5-vl-32b-instruct",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen: Qwen2.5 VL 32B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-03-24",
       "temperature": true,
       "tool_call": false
     },
@@ -8418,6 +8518,157 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen/qwen3.5-plus-20260420": {
+      "attachment": true,
+      "cost": {
+        "input": 0.4,
+        "output": 2.4
+      },
+      "description": "Qwen: Qwen3.5 Plus 2026-04-20 是由 kilo 提供的人工智能模型。",
+      "id": "qwen/qwen3.5-plus-20260420",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen3.5 Plus 2026-04-20",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3.6-27b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.325,
+        "output": 3.25
+      },
+      "description": "Qwen: Qwen3.6 27B 是由 kilo 提供的人工智能模型。",
+      "id": "qwen/qwen3.6-27b",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen3.6 27B",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3.6-35b-a3b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1612,
+        "input": 0.1612,
+        "output": 0.96525
+      },
+      "description": "Qwen: Qwen3.6 35B A3B 是由 kilo 提供的人工智能模型。",
+      "id": "qwen/qwen3.6-35b-a3b",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen3.6 35B A3B",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-27",
+      "temperature": true,
+      "tool_call": false
+    },
+    "qwen/qwen3.6-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_write": 0.3125,
+        "input": 0.25,
+        "output": 1.5
+      },
+      "description": "Qwen: Qwen3.6 Flash 是由 kilo 提供的人工智能模型。",
+      "id": "qwen/qwen3.6-flash",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen3.6 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3.6-max-preview": {
+      "attachment": false,
+      "cost": {
+        "cache_write": 1.3,
+        "input": 1.04,
+        "output": 6.24
+      },
+      "description": "Qwen: Qwen3.6 Max Preview 是由 kilo 提供的人工智能模型。",
+      "id": "qwen/qwen3.6-max-preview",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen3.6 Max Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-27",
+      "temperature": true,
+      "tool_call": true
+    },
     "qwen/qwen3.6-plus": {
       "attachment": true,
       "cost": {
@@ -8446,34 +8697,6 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-08-26",
-      "temperature": true,
-      "tool_call": true
-    },
-    "qwen/qwq-32b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.15,
-        "output": 0.4
-      },
-      "description": "Qwen: QwQ 32B 是由 kilo 提供的人工智能模型。",
-      "id": "qwen/qwq-32b",
-      "last_updated": "2025-04-11",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen: QwQ 32B",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2024-11-28",
       "temperature": true,
       "tool_call": true
     },
@@ -8759,6 +8982,34 @@
       "temperature": true,
       "tool_call": true
     },
+    "stepfun/step-3.5-flash:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "StepFun: Step 3.5 Flash (free) 是由 kilo 提供的人工智能模型。",
+      "id": "stepfun/step-3.5-flash:free",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "StepFun: Step 3.5 Flash (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-26",
+      "temperature": true,
+      "tool_call": true
+    },
     "switchpoint/router": {
       "attachment": false,
       "cost": {
@@ -8814,6 +9065,34 @@
       "release_date": "2025-06-30",
       "temperature": true,
       "tool_call": false
+    },
+    "tencent/hy3-preview:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Tencent: Hy3 Preview (free) 是由 kilo 提供的人工智能模型。",
+      "id": "tencent/hy3-preview:free",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Tencent: Hy3 Preview (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-22",
+      "temperature": true,
+      "tool_call": true
     },
     "thedrummer/cydonia-24b-v4.1": {
       "attachment": false,
@@ -9307,6 +9586,37 @@
       "release_date": "2026-03-31",
       "temperature": true,
       "tool_call": false
+    },
+    "x-ai/grok-4.3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 1.25,
+        "output": 2.5
+      },
+      "description": "xAI: Grok 4.3 是由 kilo 提供的人工智能模型。",
+      "id": "x-ai/grok-4.3",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1000000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "xAI: Grok 4.3",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-01",
+      "temperature": true,
+      "tool_call": true
     },
     "x-ai/grok-code-fast-1": {
       "attachment": false,
@@ -9878,6 +10188,262 @@
       "reasoning": true,
       "release_date": "2026-04-01",
       "temperature": true,
+      "tool_call": true
+    },
+    "~anthropic/claude-haiku-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 1.25,
+        "input": 1,
+        "output": 5
+      },
+      "description": "Anthropic: Claude Haiku Latest 是由 kilo 提供的人工智能模型。",
+      "id": "~anthropic/claude-haiku-latest",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Anthropic: Claude Haiku Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "~anthropic/claude-opus-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Anthropic: Claude Opus Latest 是由 kilo 提供的人工智能模型。",
+      "id": "~anthropic/claude-opus-latest",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Anthropic: Claude Opus Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-16",
+      "temperature": false,
+      "tool_call": true
+    },
+    "~anthropic/claude-sonnet-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Anthropic: Claude Sonnet Latest 是由 kilo 提供的人工智能模型。",
+      "id": "~anthropic/claude-sonnet-latest",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Anthropic: Claude Sonnet Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "~google/gemini-flash-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 0.08333333333333334,
+        "input": 0.5,
+        "output": 3
+      },
+      "description": "Google: Gemini Flash Latest 是由 kilo 提供的人工智能模型。",
+      "id": "~google/gemini-flash-latest",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Google: Gemini Flash Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "~google/gemini-pro-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 0.375,
+        "input": 2,
+        "output": 12
+      },
+      "description": "Google: Gemini Pro Latest 是由 kilo 提供的人工智能模型。",
+      "id": "~google/gemini-pro-latest",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Google: Gemini Pro Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "~moonshotai/kimi-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.14,
+        "input": 0.74,
+        "output": 3.49
+      },
+      "description": "MoonshotAI: Kimi Latest 是由 kilo 提供的人工智能模型。",
+      "id": "~moonshotai/kimi-latest",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 262142,
+        "output": 262142
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MoonshotAI: Kimi Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "~openai/gpt-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 5,
+        "output": 30
+      },
+      "description": "OpenAI: GPT Latest 是由 kilo 提供的人工智能模型。",
+      "id": "~openai/gpt-latest",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-27",
+      "temperature": false,
+      "tool_call": true
+    },
+    "~openai/gpt-mini-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.75,
+        "output": 4.5
+      },
+      "description": "OpenAI: GPT Mini Latest 是由 kilo 提供的人工智能模型。",
+      "id": "~openai/gpt-mini-latest",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT Mini Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-27",
+      "temperature": false,
       "tool_call": true
     }
   },
