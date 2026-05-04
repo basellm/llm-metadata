@@ -5470,6 +5470,43 @@
       "temperature": true,
       "tool_call": false
     },
+    "x-ai/grok-4.3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2.5,
+          "output": 5
+        },
+        "input": 1.25,
+        "output": 2.5
+      },
+      "description": "Grok 4.3 は openrouter によって提供される AI モデルです。",
+      "family": "grok",
+      "id": "x-ai/grok-4.3",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.3",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "x-ai/grok-code-fast-1": {
       "attachment": false,
       "cost": {
