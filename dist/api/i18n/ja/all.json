@@ -1740,7 +1740,7 @@
           "input": 0.72,
           "output": 3.2
         },
-        "description": "glm-5v-turbo は 302ai によって提供される AI モデルです。",
+        "description": "GLM-5V-Turbo は 302ai によって提供される AI モデルです。",
         "family": "glm",
         "id": "glm-5v-turbo",
         "interleaved": {
@@ -1763,7 +1763,7 @@
             "text"
           ]
         },
-        "name": "glm-5v-turbo",
+        "name": "GLM-5V-Turbo",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-04-02",
@@ -94299,6 +94299,42 @@
         "temperature": true,
         "tool_call": true
       },
+      "moonshotai/kimi-k2.6": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Kimi K2.6 は nvidia によって提供される AI モデルです。",
+        "family": "kimi-k2.6",
+        "id": "moonshotai/kimi-k2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "nvidia/cosmos-nemotron-34b": {
         "attachment": false,
         "cost": {
@@ -107292,6 +107328,39 @@
         "temperature": true,
         "tool_call": true
       },
+      "anthropic/claude-opus-4-7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.7 は perplexity-agent によって提供される AI モデルです。",
+        "family": "claude-opus",
+        "id": "anthropic/claude-opus-4-7",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-16",
+        "temperature": false,
+        "tool_call": true
+      },
       "anthropic/claude-sonnet-4-5": {
         "attachment": true,
         "cost": {
@@ -107672,6 +107741,40 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-05",
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai/gpt-5.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "input": 5,
+          "output": 30
+        },
+        "description": "GPT-5.5 は perplexity-agent によって提供される AI モデルです。",
+        "family": "gpt",
+        "id": "openai/gpt-5.5",
+        "knowledge": "2025-12-01",
+        "last_updated": "2026-04-23",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-23",
         "temperature": false,
         "tool_call": true
       },
@@ -123612,6 +123715,42 @@
         "temperature": true,
         "tool_call": true
       },
+      "hf:moonshotai/Kimi-K2.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.95,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Kimi K2.6 は synthetic によって提供される AI モデルです。",
+        "family": "kimi-k2.6",
+        "id": "hf:moonshotai/Kimi-K2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "hf:nvidia/Kimi-K2.5-NVFP4": {
         "attachment": false,
         "cost": {
@@ -138277,7 +138416,7 @@
           "input": 1.2,
           "output": 4
         },
-        "description": "glm-5v-turbo は zai によって提供される AI モデルです。",
+        "description": "GLM-5V-Turbo は zai によって提供される AI モデルです。",
         "family": "glm",
         "id": "glm-5v-turbo",
         "interleaved": {
@@ -138299,7 +138438,7 @@
             "text"
           ]
         },
-        "name": "glm-5v-turbo",
+        "name": "GLM-5V-Turbo",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-04-01",
@@ -138464,7 +138603,7 @@
           "input": 0,
           "output": 0
         },
-        "description": "glm-5v-turbo は zai-coding-plan によって提供される AI モデルです。",
+        "description": "GLM-5V-Turbo は zai-coding-plan によって提供される AI モデルです。",
         "family": "glm",
         "id": "glm-5v-turbo",
         "interleaved": {
@@ -138486,7 +138625,7 @@
             "text"
           ]
         },
-        "name": "glm-5v-turbo",
+        "name": "GLM-5V-Turbo",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-04-01",
@@ -142079,7 +142218,7 @@
           "input": 5,
           "output": 22
         },
-        "description": "glm-5v-turbo は zhipuai によって提供される AI モデルです。",
+        "description": "GLM-5V-Turbo は zhipuai によって提供される AI モデルです。",
         "family": "glm",
         "id": "glm-5v-turbo",
         "interleaved": {
@@ -142101,7 +142240,7 @@
             "text"
           ]
         },
-        "name": "glm-5v-turbo",
+        "name": "GLM-5V-Turbo",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-04-01",
@@ -142255,6 +142394,43 @@
         "reasoning": true,
         "release_date": "2026-03-27",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5v-turbo": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM-5V-Turbo は zhipuai-coding-plan によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "glm-5v-turbo",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-01",
+        "limit": {
+          "context": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5V-Turbo",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-01",
         "temperature": true,
         "tool_call": true
       }
