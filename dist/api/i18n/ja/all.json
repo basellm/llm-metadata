@@ -26687,7 +26687,8 @@
         "last_updated": "2026-03-05",
         "limit": {
           "context": 196000,
-          "output": 196000
+          "input": 180000,
+          "output": 16000
         },
         "modalities": {
           "input": [
@@ -26701,6 +26702,7 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-03-05",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -61631,8 +61633,10 @@
           "output": 0.29
         },
         "description": "Xiaomi: MiMo-V2-Flash は kilo によって提供される AI モデルです。",
+        "family": "mimo",
         "id": "xiaomi/mimo-v2-flash",
-        "last_updated": "2026-03-15",
+        "knowledge": "2024-12-01",
+        "last_updated": "2026-02-04",
         "limit": {
           "context": 262144,
           "output": 65536
@@ -61648,7 +61652,7 @@
         "name": "Xiaomi: MiMo-V2-Flash",
         "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-12-14",
+        "release_date": "2025-12-16",
         "temperature": true,
         "tool_call": true
       },
@@ -61660,40 +61664,50 @@
           "output": 2
         },
         "description": "Xiaomi: MiMo-V2-Omni は kilo によって提供される AI モデルです。",
+        "family": "mimo",
         "id": "xiaomi/mimo-v2-omni",
-        "last_updated": "2026-04-11",
+        "knowledge": "2024-12",
+        "last_updated": "2026-03-18",
         "limit": {
           "context": 262144,
           "output": 65536
         },
         "modalities": {
           "input": [
-            "audio",
-            "image",
             "text",
-            "video"
+            "image",
+            "audio",
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
         "name": "Xiaomi: MiMo-V2-Omni",
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-18",
         "temperature": true,
         "tool_call": true
       },
       "xiaomi/mimo-v2-pro": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6
+          },
           "input": 1,
           "output": 3
         },
         "description": "Xiaomi: MiMo-V2-Pro は kilo によって提供される AI モデルです。",
+        "family": "mimo",
         "id": "xiaomi/mimo-v2-pro",
-        "last_updated": "2026-04-11",
+        "knowledge": "2024-12",
+        "last_updated": "2026-03-18",
         "limit": {
           "context": 1048576,
           "output": 131072
@@ -61707,7 +61721,7 @@
           ]
         },
         "name": "Xiaomi: MiMo-V2-Pro",
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-18",
         "temperature": true,
@@ -61726,6 +61740,7 @@
           "output": 2
         },
         "description": "Xiaomi: MiMo-V2.5 は kilo によって提供される AI モデルです。",
+        "family": "mimo",
         "id": "xiaomi/mimo-v2.5",
         "interleaved": {
           "field": "reasoning_content"
@@ -61738,14 +61753,17 @@
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image",
+            "audio",
+            "video"
           ],
           "output": [
             "text"
           ]
         },
         "name": "Xiaomi: MiMo-V2.5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-22",
         "temperature": true,
@@ -61764,6 +61782,7 @@
           "output": 3
         },
         "description": "Xiaomi: MiMo V2.5 Pro は kilo によって提供される AI モデルです。",
+        "family": "mimo",
         "id": "xiaomi/mimo-v2.5-pro",
         "interleaved": {
           "field": "reasoning_content"
@@ -61772,7 +61791,7 @@
         "last_updated": "2026-04-22",
         "limit": {
           "context": 1048576,
-          "output": 128000
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -62513,6 +62532,378 @@
     },
     "name": "Kimi For Coding",
     "npm": "@ai-sdk/anthropic"
+  },
+  "kiro": {
+    "api": "https://q.us-east-1.amazonaws.com",
+    "doc": "https://kiro.dev",
+    "env": [
+      "KIRO_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/kiro.svg",
+    "id": "kiro",
+    "models": {
+      "auto": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Auto は kiro によって提供される AI モデルです。",
+        "family": "claude-sonnet",
+        "id": "auto",
+        "last_updated": "2026-03-23",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Auto",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-haiku-4.5": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Claude Haiku 4.5 は kiro によって提供される AI モデルです。",
+        "family": "claude-haiku",
+        "id": "claude-haiku-4.5",
+        "last_updated": "2026-03-23",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Haiku 4.5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-opus-4.5": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Claude Opus 4.5 は kiro によって提供される AI モデルです。",
+        "family": "claude-opus",
+        "id": "claude-opus-4.5",
+        "last_updated": "2026-03-23",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-opus-4.6": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Claude Opus 4.6 は kiro によって提供される AI モデルです。",
+        "family": "claude-opus",
+        "id": "claude-opus-4.6",
+        "last_updated": "2026-03-23",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.6",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-opus-4.7": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Claude Opus 4.7 は kiro によって提供される AI モデルです。",
+        "family": "claude-opus",
+        "id": "claude-opus-4.7",
+        "last_updated": "2026-04-15",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-04-15",
+        "temperature": false,
+        "tool_call": true
+      },
+      "claude-sonnet-4": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Claude Sonnet 4 は kiro によって提供される AI モデルです。",
+        "family": "claude-sonnet",
+        "id": "claude-sonnet-4",
+        "last_updated": "2026-03-23",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-sonnet-4.5": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Claude Sonnet 4.5 は kiro によって提供される AI モデルです。",
+        "family": "claude-sonnet",
+        "id": "claude-sonnet-4.5",
+        "last_updated": "2026-03-23",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.5",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-sonnet-4.6": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Claude Sonnet 4.6 は kiro によって提供される AI モデルです。",
+        "family": "claude-sonnet",
+        "id": "claude-sonnet-4.6",
+        "last_updated": "2026-03-23",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.6",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-3.2": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Deepseek v3.2 は kiro によって提供される AI モデルです。",
+        "family": "deepseek",
+        "id": "deepseek-3.2",
+        "last_updated": "2026-03-23",
+        "limit": {
+          "context": 164000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Deepseek v3.2",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-03-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m2.1": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiniMax M2.1 は kiro によって提供される AI モデルです。",
+        "family": "minimax",
+        "id": "minimax-m2.1",
+        "last_updated": "2026-03-23",
+        "limit": {
+          "context": 196000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.1",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-03-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiniMax M2.5 は kiro によって提供される AI モデルです。",
+        "family": "minimax",
+        "id": "minimax-m2.5",
+        "last_updated": "2026-03-23",
+        "limit": {
+          "context": 196000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-03-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-coder-next": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3 Coder Next は kiro によって提供される AI モデルです。",
+        "family": "qwen",
+        "id": "qwen3-coder-next",
+        "last_updated": "2026-03-23",
+        "limit": {
+          "context": 256000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder Next",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-03-23",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Kiro",
+    "npm": "kiro-acp-ai-provider"
   },
   "kuae-cloud-coding-plan": {
     "api": "https://coding-plan-endpoint.kuaecloud.net/v1",
@@ -66785,8 +67176,8 @@
         "knowledge": "2024-12-01",
         "last_updated": "2026-02-04",
         "limit": {
-          "context": 256000,
-          "output": 64000
+          "context": 262144,
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -101121,6 +101512,7 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-03-18",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -101160,6 +101552,7 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-03-18",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -106971,11 +107364,14 @@
           "input": 0.1,
           "output": 0.3
         },
-        "description": "MiMo-V2-Flash は openrouter によって提供される AI モデルです。",
+        "description": "Xiaomi: MiMo-V2-Flash は openrouter によって提供される AI モデルです。",
         "family": "mimo",
         "id": "xiaomi/mimo-v2-flash",
-        "knowledge": "2024-12",
-        "last_updated": "2025-12-14",
+        "interleaved": {
+          "field": "reasoning_details"
+        },
+        "knowledge": "2024-12-01",
+        "last_updated": "2026-02-04",
         "limit": {
           "context": 262144,
           "output": 65536
@@ -106988,11 +107384,10 @@
             "text"
           ]
         },
-        "name": "MiMo-V2-Flash",
+        "name": "Xiaomi: MiMo-V2-Flash",
         "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-12-14",
-        "structured_output": true,
+        "release_date": "2025-12-16",
         "temperature": true,
         "tool_call": true
       },
@@ -107003,53 +107398,60 @@
           "input": 0.4,
           "output": 2
         },
-        "description": "MiMo-V2-Omni は openrouter によって提供される AI モデルです。",
+        "description": "Xiaomi: MiMo-V2-Omni は openrouter によって提供される AI モデルです。",
         "family": "mimo",
         "id": "xiaomi/mimo-v2-omni",
         "interleaved": {
           "field": "reasoning_details"
         },
+        "knowledge": "2024-12",
         "last_updated": "2026-03-18",
         "limit": {
           "context": 262144,
-          "output": 65536
+          "output": 131072
         },
         "modalities": {
           "input": [
             "text",
             "image",
+            "audio",
             "video",
-            "audio"
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "MiMo-V2-Omni",
-        "open_weights": true,
+        "name": "Xiaomi: MiMo-V2-Omni",
+        "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-18",
-        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
       "xiaomi/mimo-v2-pro": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6
+          },
           "input": 1,
           "output": 3
         },
-        "description": "MiMo-V2-Pro は openrouter によって提供される AI モデルです。",
+        "description": "Xiaomi: MiMo-V2-Pro は openrouter によって提供される AI モデルです。",
         "family": "mimo",
         "id": "xiaomi/mimo-v2-pro",
         "interleaved": {
           "field": "reasoning_details"
         },
+        "knowledge": "2024-12",
         "last_updated": "2026-03-18",
         "limit": {
           "context": 1048576,
-          "output": 65536
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -107059,11 +107461,10 @@
             "text"
           ]
         },
-        "name": "MiMo-V2-Pro",
-        "open_weights": true,
+        "name": "Xiaomi: MiMo-V2-Pro",
+        "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-18",
-        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -107079,11 +107480,11 @@
           "input": 0.4,
           "output": 2
         },
-        "description": "MiMo-V2.5 は openrouter によって提供される AI モデルです。",
+        "description": "Xiaomi: MiMo-V2.5 は openrouter によって提供される AI モデルです。",
         "family": "mimo",
         "id": "xiaomi/mimo-v2.5",
         "interleaved": {
-          "field": "reasoning_content"
+          "field": "reasoning_details"
         },
         "knowledge": "2024-12",
         "last_updated": "2026-04-22",
@@ -107102,8 +107503,8 @@
             "text"
           ]
         },
-        "name": "MiMo-V2.5",
-        "open_weights": false,
+        "name": "Xiaomi: MiMo-V2.5",
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-22",
         "temperature": true,
@@ -107121,7 +107522,7 @@
           "input": 1,
           "output": 3
         },
-        "description": "MiMo-V2.5-Pro は openrouter によって提供される AI モデルです。",
+        "description": "Xiaomi: MiMo-V2.5-Pro は openrouter によって提供される AI モデルです。",
         "family": "mimo",
         "id": "xiaomi/mimo-v2.5-pro",
         "interleaved": {
@@ -107141,8 +107542,8 @@
             "text"
           ]
         },
-        "name": "MiMo-V2.5-Pro",
-        "open_weights": false,
+        "name": "Xiaomi: MiMo-V2.5-Pro",
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-22",
         "temperature": true,
@@ -114204,9 +114605,16 @@
       },
       "mimo-v2-flash": {
         "attachment": false,
+        "cost": {
+          "cache_read": 0.01,
+          "input": 0.1,
+          "output": 0.3
+        },
         "description": "Mimo-V2-Flash は qiniu-ai によって提供される AI モデルです。",
+        "family": "mimo",
         "id": "mimo-v2-flash",
-        "last_updated": "2025-12-17",
+        "knowledge": "2024-12-01",
+        "last_updated": "2026-02-04",
         "limit": {
           "context": 256000,
           "output": 256000
@@ -114220,10 +114628,9 @@
           ]
         },
         "name": "Mimo-V2-Flash",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-12-17",
-        "structured_output": false,
+        "release_date": "2025-12-16",
         "temperature": true,
         "tool_call": true
       },
@@ -115186,9 +115593,16 @@
       },
       "xiaomi/mimo-v2-flash": {
         "attachment": false,
+        "cost": {
+          "cache_read": 0.01,
+          "input": 0.1,
+          "output": 0.3
+        },
         "description": "Xiaomi/Mimo-V2-Flash は qiniu-ai によって提供される AI モデルです。",
+        "family": "mimo",
         "id": "xiaomi/mimo-v2-flash",
-        "last_updated": "2025-12-26",
+        "knowledge": "2024-12-01",
+        "last_updated": "2026-02-04",
         "limit": {
           "context": 256000,
           "output": 256000
@@ -115202,12 +115616,11 @@
           ]
         },
         "name": "Xiaomi/Mimo-V2-Flash",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-12-26",
-        "structured_output": false,
+        "release_date": "2025-12-16",
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "z-ai/autoglm-phone-9b": {
         "attachment": true,
@@ -126788,38 +127201,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "kimi-k2-thinking": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.375,
-          "input": 0.75,
-          "output": 3.2
-        },
-        "description": "Kimi K2 Thinking は venice によって提供される AI モデルです。",
-        "family": "kimi-thinking",
-        "id": "kimi-k2-thinking",
-        "knowledge": "2024-04",
-        "last_updated": "2026-03-12",
-        "limit": {
-          "context": 256000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi K2 Thinking",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-12-10",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "llama-3.2-3b": {
         "attachment": false,
         "cost": {
@@ -127462,7 +127843,7 @@
         "family": "gpt-oss",
         "id": "openai-gpt-oss-120b",
         "knowledge": "2025-07",
-        "last_updated": "2026-03-12",
+        "last_updated": "2026-05-06",
         "limit": {
           "context": 128000,
           "output": 16384
@@ -127477,7 +127858,7 @@
         },
         "name": "OpenAI GPT OSS 120B",
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2025-11-06",
         "temperature": true,
         "tool_call": true
@@ -127715,37 +128096,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3-coder-480b-a35b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.75,
-          "output": 3
-        },
-        "description": "Qwen 3 Coder 480b は venice によって提供される AI モデルです。",
-        "family": "qwen",
-        "id": "qwen3-coder-480b-a35b-instruct",
-        "knowledge": "2025-07",
-        "last_updated": "2026-03-12",
-        "limit": {
-          "context": 256000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen 3 Coder 480b",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-04-29",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen3-coder-480b-a35b-instruct-turbo": {
         "attachment": false,
         "cost": {
@@ -127838,37 +128188,6 @@
         "structured_output": true,
         "temperature": true,
         "tool_call": true
-      },
-      "venice-uncensored": {
-        "attachment": false,
-        "cost": {
-          "input": 0.2,
-          "output": 0.9
-        },
-        "description": "Venice Uncensored 1.1 は venice によって提供される AI モデルです。",
-        "family": "venice",
-        "id": "venice-uncensored",
-        "knowledge": "2023-10",
-        "last_updated": "2026-03-12",
-        "limit": {
-          "context": 32000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Venice Uncensored 1.1",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-03-18",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": false
       },
       "venice-uncensored-1-2": {
         "attachment": true,
@@ -138067,8 +138386,8 @@
         "knowledge": "2024-12-01",
         "last_updated": "2026-02-04",
         "limit": {
-          "context": 256000,
-          "output": 64000
+          "context": 262144,
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -138101,8 +138420,8 @@
         "knowledge": "2024-12",
         "last_updated": "2026-03-18",
         "limit": {
-          "context": 256000,
-          "output": 128000
+          "context": 262144,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -138117,7 +138436,7 @@
           ]
         },
         "name": "MiMo-V2-Omni",
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-18",
         "temperature": true,
@@ -138127,6 +138446,11 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6
+          },
           "input": 1,
           "output": 3
         },
@@ -138139,8 +138463,8 @@
         "knowledge": "2024-12",
         "last_updated": "2026-03-18",
         "limit": {
-          "context": 1000000,
-          "output": 128000
+          "context": 1048576,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -138151,7 +138475,7 @@
           ]
         },
         "name": "MiMo-V2-Pro",
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-18",
         "temperature": true,
@@ -138193,7 +138517,7 @@
           ]
         },
         "name": "MiMo-V2.5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-22",
         "temperature": true,
@@ -138232,7 +138556,7 @@
           ]
         },
         "name": "MiMo-V2.5-Pro",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-22",
         "temperature": true,
@@ -142051,12 +142375,13 @@
           "output": 0.3
         },
         "description": "MiMo-V2-Flash は zenmux によって提供される AI モデルです。",
+        "family": "mimo",
         "id": "xiaomi/mimo-v2-flash",
-        "knowledge": "2025-01-01",
-        "last_updated": "2025-12-17",
+        "knowledge": "2024-12-01",
+        "last_updated": "2026-02-04",
         "limit": {
-          "context": 262000,
-          "output": 64000
+          "context": 262144,
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -142067,22 +142392,24 @@
           ]
         },
         "name": "MiMo-V2-Flash",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
-        "release_date": "2025-12-17",
+        "release_date": "2025-12-16",
         "temperature": true,
         "tool_call": true
       },
       "xiaomi/mimo-v2-omni": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.08,
           "input": 0.4,
           "output": 2
         },
         "description": "MiMo V2 Omni は zenmux によって提供される AI モデルです。",
+        "family": "mimo",
         "id": "xiaomi/mimo-v2-omni",
-        "knowledge": "2025-01-01",
-        "last_updated": "2026-03-20",
+        "knowledge": "2024-12",
+        "last_updated": "2026-03-18",
         "limit": {
           "context": 265000,
           "output": 265000
@@ -142091,7 +142418,9 @@
           "input": [
             "text",
             "image",
-            "video"
+            "audio",
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
@@ -142099,30 +142428,35 @@
         },
         "name": "MiMo V2 Omni",
         "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-03-20",
+        "reasoning": true,
+        "release_date": "2026-03-18",
         "temperature": true,
         "tool_call": true
       },
       "xiaomi/mimo-v2-pro": {
         "attachment": true,
         "cost": {
-          "input": 1.5,
-          "output": 4.5
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6
+          },
+          "input": 1,
+          "output": 3
         },
         "description": "MiMo V2 Pro は zenmux によって提供される AI モデルです。",
+        "family": "mimo",
         "id": "xiaomi/mimo-v2-pro",
-        "knowledge": "2025-01-01",
-        "last_updated": "2026-03-20",
+        "knowledge": "2024-12",
+        "last_updated": "2026-03-18",
         "limit": {
           "context": 1000000,
           "output": 256000
         },
         "modalities": {
           "input": [
-            "text",
-            "image",
-            "video"
+            "text"
           ],
           "output": [
             "text"
@@ -142131,7 +142465,7 @@
         "name": "MiMo V2 Pro",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2026-03-20",
+        "release_date": "2026-03-18",
         "temperature": true,
         "tool_call": true
       },
@@ -142171,7 +142505,7 @@
           ]
         },
         "name": "MiMo-V2.5",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-22",
         "temperature": true,
@@ -142210,7 +142544,7 @@
           ]
         },
         "name": "MiMo-V2.5-Pro",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-22",
         "temperature": true,
