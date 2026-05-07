@@ -7,6 +7,40 @@
   "iconURL": "https://models.dev/logos/xiaomi-token-plan-cn.svg",
   "id": "xiaomi-token-plan-cn",
   "models": {
+    "mimo-v2-flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "MiMo-V2-Flash 是由 xiaomi-token-plan-cn 提供的人工智能模型。",
+      "family": "mimo",
+      "id": "mimo-v2-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12-01",
+      "last_updated": "2026-02-04",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-16",
+      "temperature": true,
+      "tool_call": true
+    },
     "mimo-v2-omni": {
       "attachment": true,
       "cost": {
@@ -23,8 +57,8 @@
       "knowledge": "2024-12",
       "last_updated": "2026-03-18",
       "limit": {
-        "context": 256000,
-        "output": 128000
+        "context": 262144,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -39,7 +73,7 @@
         ]
       },
       "name": "MiMo-V2-Omni",
-      "open_weights": true,
+      "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-18",
       "temperature": true,
@@ -49,6 +83,11 @@
       "attachment": true,
       "cost": {
         "cache_read": 0,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2,
+          "output": 6
+        },
         "input": 0,
         "output": 0
       },
@@ -61,8 +100,8 @@
       "knowledge": "2024-12",
       "last_updated": "2026-03-18",
       "limit": {
-        "context": 1000000,
-        "output": 128000
+        "context": 1048576,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -73,7 +112,7 @@
         ]
       },
       "name": "MiMo-V2-Pro",
-      "open_weights": true,
+      "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-18",
       "temperature": true,
@@ -90,8 +129,8 @@
       "id": "mimo-v2-tts",
       "last_updated": "2026-03-18",
       "limit": {
-        "context": 8000,
-        "output": 16000
+        "context": 8192,
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -111,11 +150,16 @@
       "attachment": true,
       "cost": {
         "cache_read": 0,
+        "context_over_200k": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
         "input": 0,
         "output": 0
       },
       "description": "MiMo-V2.5 是由 xiaomi-token-plan-cn 提供的人工智能模型。",
-      "family": "mimo-v2.5",
+      "family": "mimo",
       "id": "mimo-v2.5",
       "interleaved": {
         "field": "reasoning_content"
@@ -123,16 +167,15 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1000000,
-        "output": 128000
+        "context": 1048576,
+        "output": 131072
       },
       "modalities": {
         "input": [
           "text",
           "image",
           "audio",
-          "video",
-          "pdf"
+          "video"
         ],
         "output": [
           "text"
@@ -149,11 +192,16 @@
       "attachment": true,
       "cost": {
         "cache_read": 0,
+        "context_over_200k": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
         "input": 0,
         "output": 0
       },
       "description": "MiMo-V2.5-Pro 是由 xiaomi-token-plan-cn 提供的人工智能模型。",
-      "family": "mimo-v2.5-pro",
+      "family": "mimo",
       "id": "mimo-v2.5-pro",
       "interleaved": {
         "field": "reasoning_content"
@@ -161,8 +209,8 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1000000,
-        "output": 128000
+        "context": 1048576,
+        "output": 131072
       },
       "modalities": {
         "input": [

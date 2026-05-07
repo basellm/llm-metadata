@@ -231,34 +231,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "allenai/olmo-3.1-32b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.2,
-        "output": 0.6
-      },
-      "description": "AllenAI: Olmo 3.1 32B Instruct 是由 kilo 提供的人工智能模型。",
-      "id": "allenai/olmo-3.1-32b-instruct",
-      "last_updated": "2026-03-15",
-      "limit": {
-        "context": 65536,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "AllenAI: Olmo 3.1 32B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-01-07",
-      "temperature": true,
-      "tool_call": true
-    },
     "alpindale/goliath-120b": {
       "attachment": false,
       "cost": {
@@ -1099,6 +1071,34 @@
       "reasoning": false,
       "release_date": "2025-05-06",
       "temperature": true,
+      "tool_call": true
+    },
+    "baidu/cobuddy:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Baidu: CoBuddy (free) 是由 kilo 提供的人工智能模型。",
+      "id": "baidu/cobuddy:free",
+      "last_updated": "2026-05-07",
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Baidu: CoBuddy (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-06",
+      "temperature": false,
       "tool_call": true
     },
     "baidu/ernie-4.5-21b-a3b": {
@@ -3521,6 +3521,36 @@
       "temperature": true,
       "tool_call": false
     },
+    "microsoft/phi-4-mini-instruct": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.08,
+        "input": 0.08,
+        "output": 0.35
+      },
+      "description": "Microsoft: Phi 4 Mini Instruct 是由 kilo 提供的人工智能模型。",
+      "id": "microsoft/phi-4-mini-instruct",
+      "last_updated": "2026-05-07",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Microsoft: Phi 4 Mini Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
     "microsoft/wizardlm-2-8x22b": {
       "attachment": false,
       "cost": {
@@ -4118,6 +4148,36 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-05-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/mistral-medium-3-5": {
+      "attachment": true,
+      "cost": {
+        "input": 1.5,
+        "output": 7.5
+      },
+      "description": "Mistral: Mistral Medium 3.5 是由 kilo 提供的人工智能模型。",
+      "id": "mistralai/mistral-medium-3-5",
+      "last_updated": "2026-05-07",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral: Mistral Medium 3.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-30",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -4983,36 +5043,6 @@
       "release_date": "2026-03-12",
       "temperature": true,
       "tool_call": true
-    },
-    "nvidia/nemotron-nano-12b-v2-vl": {
-      "attachment": true,
-      "cost": {
-        "input": 0.2,
-        "output": 0.6
-      },
-      "description": "NVIDIA: Nemotron Nano 12B 2 VL 是由 kilo 提供的人工智能模型。",
-      "id": "nvidia/nemotron-nano-12b-v2-vl",
-      "last_updated": "2026-01-31",
-      "limit": {
-        "context": 131072,
-        "output": 26215
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "NVIDIA: Nemotron Nano 12B 2 VL",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-10-28",
-      "temperature": true,
-      "tool_call": false
     },
     "nvidia/nemotron-nano-9b-v2": {
       "attachment": false,
@@ -6506,6 +6536,38 @@
       "release_date": "2026-01-20",
       "temperature": true,
       "tool_call": false
+    },
+    "openai/gpt-chat-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 5,
+        "output": 30
+      },
+      "description": "OpenAI: GPT Chat Latest 是由 kilo 提供的人工智能模型。",
+      "id": "openai/gpt-chat-latest",
+      "last_updated": "2026-05-07",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT Chat Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-05",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
     },
     "openai/gpt-oss-120b": {
       "attachment": false,

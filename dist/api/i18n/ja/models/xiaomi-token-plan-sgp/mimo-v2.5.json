@@ -2,11 +2,16 @@
   "attachment": true,
   "cost": {
     "cache_read": 0,
+    "context_over_200k": {
+      "cache_read": 0,
+      "input": 0,
+      "output": 0
+    },
     "input": 0,
     "output": 0
   },
   "description": "MiMo-V2.5 は xiaomi-token-plan-sgp によって提供される AI モデルです。",
-  "family": "mimo-v2.5",
+  "family": "mimo",
   "id": "mimo-v2.5",
   "interleaved": {
     "field": "reasoning_content"
@@ -14,16 +19,15 @@
   "knowledge": "2024-12",
   "last_updated": "2026-04-22",
   "limit": {
-    "context": 1000000,
-    "output": 128000
+    "context": 1048576,
+    "output": 131072
   },
   "modalities": {
     "input": [
       "text",
       "image",
       "audio",
-      "video",
-      "pdf"
+      "video"
     ],
     "output": [
       "text"
