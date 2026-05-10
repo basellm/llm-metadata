@@ -5204,6 +5204,40 @@
         "temperature": false,
         "tool_call": true
       },
+      "claude-opus-4-7-think": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.7 Thinking is an AI model provided by aihubmix.",
+        "family": "claude-opus",
+        "id": "claude-opus-4-7-think",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 200000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7 Thinking",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-16",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "claude-sonnet-4-6": {
         "attachment": true,
         "cost": {
@@ -5284,38 +5318,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "coding-glm-5-free": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Coding-GLM-5-Free is an AI model provided by aihubmix.",
-        "family": "glm",
-        "id": "coding-glm-5-free",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-02-11",
-        "limit": {
-          "context": 204800,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Coding-GLM-5-Free",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2026-02-11",
-        "temperature": true,
-        "tool_call": true
-      },
       "coding-glm-5.1": {
         "attachment": false,
         "cost": {
@@ -5348,6 +5350,70 @@
         "temperature": true,
         "tool_call": true
       },
+      "coding-glm-5.1-free": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Coding GLM 5.1 (free) is an AI model provided by aihubmix.",
+        "family": "glm",
+        "id": "coding-glm-5.1-free",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-11",
+        "limit": {
+          "context": 204800,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Coding GLM 5.1 (free)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "coding-minimax-m2.7": {
+        "attachment": false,
+        "cost": {
+          "input": 0.2,
+          "output": 0.2
+        },
+        "description": "Coding MiniMax M2.7 is an AI model provided by aihubmix.",
+        "family": "minimax",
+        "id": "coding-minimax-m2.7",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 204800,
+          "output": 13100
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Coding MiniMax M2.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "coding-minimax-m2.7-free": {
         "attachment": false,
         "cost": {
@@ -5374,6 +5440,36 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "coding-minimax-m2.7-highspeed": {
+        "attachment": false,
+        "cost": {
+          "input": 0.2,
+          "output": 0.2
+        },
+        "description": "Coding MiniMax M2.7 Highspeed is an AI model provided by aihubmix.",
+        "family": "minimax",
+        "id": "coding-minimax-m2.7-highspeed",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 204800,
+          "output": 13100
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Coding MiniMax M2.7 Highspeed",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -5590,16 +5686,16 @@
         "temperature": true,
         "tool_call": true
       },
-      "gemini-3.1-flash-lite-preview": {
+      "gemini-3.1-flash-lite": {
         "attachment": true,
         "cost": {
           "cache_read": 0.25,
           "input": 0.25,
           "output": 1.5
         },
-        "description": "Gemini 3.1 Flash Lite Preview is an AI model provided by aihubmix.",
+        "description": "Gemini 3.1 Flash Lite is an AI model provided by aihubmix.",
         "family": "gemini-flash-lite",
-        "id": "gemini-3.1-flash-lite-preview",
+        "id": "gemini-3.1-flash-lite",
         "knowledge": "2025-01",
         "last_updated": "2026-03-03",
         "limit": {
@@ -5618,7 +5714,7 @@
             "text"
           ]
         },
-        "name": "Gemini 3.1 Flash Lite Preview",
+        "name": "Gemini 3.1 Flash Lite",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-03",
@@ -5662,36 +5758,44 @@
         "temperature": true,
         "tool_call": true
       },
-      "glm-5": {
-        "attachment": false,
+      "gemini-3.1-pro-preview-customtools": {
+        "attachment": true,
         "cost": {
-          "cache_read": 0.176,
-          "input": 0.88,
-          "output": 2.816
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18
+          },
+          "input": 2,
+          "output": 12
         },
-        "description": "GLM-5 is an AI model provided by aihubmix.",
-        "family": "glm",
-        "id": "glm-5",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-02-11",
+        "description": "Gemini 3.1 Pro Preview Custom Tools is an AI model provided by aihubmix.",
+        "family": "gemini-pro",
+        "id": "gemini-3.1-pro-preview-customtools",
+        "knowledge": "2025-01",
+        "last_updated": "2026-02-19",
         "limit": {
-          "context": 202752,
-          "output": 0
+          "context": 1048576,
+          "output": 65536
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "GLM-5",
-        "open_weights": true,
+        "name": "Gemini 3.1 Pro Preview Custom Tools",
+        "open_weights": false,
         "reasoning": true,
-        "release_date": "2026-02-11",
+        "release_date": "2026-02-19",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -5725,6 +5829,42 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5v-turbo": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.169008,
+          "input": 0.7042,
+          "output": 3.09848
+        },
+        "description": "GLM 5 Vision Turbo is an AI model provided by aihubmix.",
+        "family": "glm",
+        "id": "glm-5v-turbo",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-05-09",
+        "limit": {
+          "context": 200000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5 Vision Turbo",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-09",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -6090,6 +6230,43 @@
         "temperature": false,
         "tool_call": true
       },
+      "grok-4.3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2.5,
+            "output": 5
+          },
+          "input": 1.25,
+          "output": 2.5
+        },
+        "description": "Grok 4.3 is an AI model provided by aihubmix.",
+        "family": "grok",
+        "id": "grok-4.3",
+        "last_updated": "2026-05-01",
+        "limit": {
+          "context": 1000000,
+          "output": 1000000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.3",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-01",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "kimi-k2.5": {
         "attachment": false,
         "cost": {
@@ -6164,38 +6341,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "minimax-m2.1": {
-        "attachment": false,
-        "cost": {
-          "input": 0.288,
-          "output": 1.152
-        },
-        "description": "MiniMax-M2.1 is an AI model provided by aihubmix.",
-        "family": "minimax",
-        "id": "minimax-m2.1",
-        "interleaved": {
-          "field": "reasoning_details"
-        },
-        "last_updated": "2025-12-23",
-        "limit": {
-          "context": 204800,
-          "output": 192000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax-M2.1",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-12-23",
-        "temperature": true,
-        "tool_call": true
-      },
       "minimax-m2.7": {
         "attachment": false,
         "cost": {
@@ -6259,82 +6404,19 @@
         "temperature": false,
         "tool_call": true
       },
-      "qwen3-coder-next": {
-        "attachment": false,
+      "qwen3.6-flash": {
+        "attachment": true,
         "cost": {
-          "cache_read": 0.137,
-          "input": 0.137,
-          "output": 0.548
+          "cache_read": 0.0169,
+          "cache_write": 0.21125,
+          "input": 0.169,
+          "output": 1.014
         },
-        "description": "Qwen3 Coder Plus is an AI model provided by aihubmix.",
+        "description": "Qwen3.6 Flash is an AI model provided by aihubmix.",
         "family": "qwen",
-        "id": "qwen3-coder-next",
+        "id": "qwen3.6-flash",
         "knowledge": "2025-04",
-        "last_updated": "2025-07-23",
-        "limit": {
-          "context": 2000000,
-          "input": 262144,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 Coder Plus",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-07-23",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-max-2026-01-23": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.34246,
-          "input": 0.34246,
-          "output": 1.36984
-        },
-        "description": "Qwen3 Max is an AI model provided by aihubmix.",
-        "family": "qwen",
-        "id": "qwen3-max-2026-01-23",
-        "knowledge": "2025-04",
-        "last_updated": "2025-09-23",
-        "limit": {
-          "context": 252000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 Max",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-09-23",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3.5-plus": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.01096,
-          "cache_write": 0.137,
-          "input": 0.1096,
-          "output": 0.6576
-        },
-        "description": "Qwen3.5 Plus is an AI model provided by aihubmix.",
-        "family": "qwen",
-        "id": "qwen3.5-plus",
-        "knowledge": "2025-04",
-        "last_updated": "2026-02-16",
+        "last_updated": "2026-04-02",
         "limit": {
           "context": 991000,
           "output": 64000
@@ -6349,29 +6431,63 @@
             "text"
           ]
         },
-        "name": "Qwen3.5 Plus",
+        "name": "Qwen3.6 Flash",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2026-02-16",
+        "release_date": "2026-04-02",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
-      "qwen3.6-flash": {
+      "qwen3.6-max-preview": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0169,
-          "cache_write": 0.21125,
-          "input": 0.169,
-          "output": 1.014
+          "cache_read": 0.1268,
+          "cache_write": 1.585,
+          "input": 1.268,
+          "output": 7.608
+        },
+        "description": "Qwen3.6 Max Preview is an AI model provided by aihubmix.",
+        "family": "qwen",
+        "id": "qwen3.6-max-preview",
+        "knowledge": "2025-04",
+        "last_updated": "2026-05-09",
+        "limit": {
+          "context": 240000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 Max Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-09",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.6-plus": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0282,
+          "cache_write": 0.3525,
+          "input": 0.282,
+          "output": 1.692
         },
         "description": "Qwen3.6 Plus is an AI model provided by aihubmix.",
         "family": "qwen",
-        "id": "qwen3.6-flash",
+        "id": "qwen3.6-plus",
         "knowledge": "2025-04",
-        "last_updated": "2026-04-02",
+        "last_updated": "2026-05-09",
         "limit": {
-          "context": 1000000,
-          "output": 65536
+          "context": 991000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -6386,7 +6502,8 @@
         "name": "Qwen3.6 Plus",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2026-04-02",
+        "release_date": "2026-05-09",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       }
@@ -38008,6 +38125,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-08-05",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": false
       },
@@ -38040,6 +38158,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-05-22",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -38207,6 +38326,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-11-18",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -38336,6 +38456,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-08-07",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -38400,6 +38521,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-11-13",
+        "status": "deprecated",
         "temperature": false,
         "tool_call": true
       },
@@ -38432,6 +38554,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-11-13",
+        "status": "deprecated",
         "temperature": false,
         "tool_call": true
       },
@@ -38464,6 +38587,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-12-04",
+        "status": "deprecated",
         "temperature": false,
         "tool_call": true
       },
@@ -38496,6 +38620,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-11-13",
+        "status": "deprecated",
         "temperature": false,
         "tool_call": true
       },
@@ -40929,7 +41054,7 @@
     "npm": "gitlab-ai-provider"
   },
   "google": {
-    "doc": "https://ai.google.dev/gemini-api/docs/pricing",
+    "doc": "https://ai.google.dev/gemini-api/docs/models",
     "env": [
       "GOOGLE_GENERATIVE_AI_API_KEY",
       "GEMINI_API_KEY"
