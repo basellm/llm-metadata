@@ -8,45 +8,12 @@
   "id": "chutes",
   "lobeIcon": "Chutes",
   "models": {
-    "MiniMaxAI/MiniMax-M2.1-TEE": {
-      "attachment": false,
-      "cost": {
-        "input": 0.27,
-        "output": 1.12
-      },
-      "description": "MiniMax M2.1 TEE は chutes によって提供される AI モデルです。",
-      "family": "minimax",
-      "id": "MiniMaxAI/MiniMax-M2.1-TEE",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-27",
-      "limit": {
-        "context": 196608,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax M2.1 TEE",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "MiniMaxAI/MiniMax-M2.5-TEE": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.15,
-        "input": 0.3,
-        "output": 1.1
+        "cache_read": 0.075,
+        "input": 0.15,
+        "output": 1.2
       },
       "description": "MiniMax M2.5 TEE は chutes によって提供される AI モデルです。",
       "family": "minimax",
@@ -54,7 +21,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-02-15",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 196608,
         "output": 65536
@@ -78,13 +45,14 @@
     "NousResearch/DeepHermes-3-Mistral-24B-Preview": {
       "attachment": false,
       "cost": {
-        "input": 0.02,
-        "output": 0.1
+        "cache_read": 0.01225,
+        "input": 0.0245,
+        "output": 0.0978
       },
       "description": "DeepHermes 3 Mistral 24B Preview は chutes によって提供される AI モデルです。",
       "family": "nousresearch",
       "id": "NousResearch/DeepHermes-3-Mistral-24B-Preview",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 32768,
         "output": 32768
@@ -108,8 +76,9 @@
     "NousResearch/Hermes-4-14B": {
       "attachment": false,
       "cost": {
-        "input": 0.01,
-        "output": 0.05
+        "cache_read": 0.0068,
+        "input": 0.0136,
+        "output": 0.0543
       },
       "description": "Hermes 4 14B は chutes によって提供される AI モデルです。",
       "family": "nousresearch",
@@ -117,7 +86,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 40960,
         "output": 40960
@@ -138,143 +107,17 @@
       "temperature": true,
       "tool_call": true
     },
-    "NousResearch/Hermes-4-405B-FP8-TEE": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "Hermes 4 405B FP8 TEE は chutes によって提供される AI モデルです。",
-      "family": "nousresearch",
-      "id": "NousResearch/Hermes-4-405B-FP8-TEE",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 131072,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Hermes 4 405B FP8 TEE",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "NousResearch/Hermes-4-70B": {
-      "attachment": false,
-      "cost": {
-        "input": 0.11,
-        "output": 0.38
-      },
-      "description": "Hermes 4 70B は chutes によって提供される AI モデルです。",
-      "family": "nousresearch",
-      "id": "NousResearch/Hermes-4-70B",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Hermes 4 70B",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "NousResearch/Hermes-4.3-36B": {
-      "attachment": false,
-      "cost": {
-        "input": 0.1,
-        "output": 0.39
-      },
-      "description": "Hermes 4.3 36B は chutes によって提供される AI モデルです。",
-      "family": "nousresearch",
-      "id": "NousResearch/Hermes-4.3-36B",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 32768,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Hermes 4.3 36B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-29",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
-    },
-    "OpenGVLab/InternVL3-78B-TEE": {
-      "attachment": false,
-      "cost": {
-        "input": 0.1,
-        "output": 0.39
-      },
-      "description": "InternVL3 78B TEE は chutes によって提供される AI モデルです。",
-      "family": "opengvlab",
-      "id": "OpenGVLab/InternVL3-78B-TEE",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "InternVL3 78B TEE",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-01-06",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
     "Qwen/Qwen2.5-72B-Instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.13,
-        "output": 0.52
+        "cache_read": 0.14945,
+        "input": 0.2989,
+        "output": 1.1957
       },
       "description": "Qwen2.5 72B Instruct は chutes によって提供される AI モデルです。",
       "family": "qwen",
       "id": "Qwen/Qwen2.5-72B-Instruct",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 32768,
         "output": 32768
@@ -298,13 +141,14 @@
     "Qwen/Qwen2.5-Coder-32B-Instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.03,
-        "output": 0.11
+        "cache_read": 0.0136,
+        "input": 0.0272,
+        "output": 0.1087
       },
       "description": "Qwen2.5 Coder 32B Instruct は chutes によって提供される AI モデルです。",
       "family": "qwen",
       "id": "Qwen/Qwen2.5-Coder-32B-Instruct",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 32768,
         "output": 32768
@@ -326,15 +170,16 @@
       "tool_call": false
     },
     "Qwen/Qwen2.5-VL-32B-Instruct": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
-        "input": 0.05,
-        "output": 0.22
+        "cache_read": 0.02715,
+        "input": 0.0543,
+        "output": 0.2174
       },
       "description": "Qwen2.5 VL 32B Instruct は chutes によって提供される AI モデルです。",
       "family": "qwen",
       "id": "Qwen/Qwen2.5-VL-32B-Instruct",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 16384,
         "output": 16384
@@ -356,114 +201,17 @@
       "temperature": true,
       "tool_call": false
     },
-    "Qwen/Qwen2.5-VL-72B-Instruct-TEE": {
-      "attachment": false,
-      "cost": {
-        "input": 0.15,
-        "output": 0.6
-      },
-      "description": "Qwen2.5 VL 72B Instruct TEE は chutes によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "Qwen/Qwen2.5-VL-72B-Instruct-TEE",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen2.5 VL 72B Instruct TEE",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
-    "Qwen/Qwen3-14B": {
-      "attachment": false,
-      "cost": {
-        "input": 0.05,
-        "output": 0.22
-      },
-      "description": "Qwen3 14B は chutes によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "Qwen/Qwen3-14B",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 40960,
-        "output": 40960
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 14B",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "Qwen/Qwen3-235B-A22B": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "Qwen3 235B A22B は chutes によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "Qwen/Qwen3-235B-A22B",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 40960,
-        "output": 40960
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 235B A22B",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "Qwen/Qwen3-235B-A22B-Instruct-2507-TEE": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.04,
-        "input": 0.08,
-        "output": 0.55
+        "cache_read": 0.05,
+        "input": 0.1,
+        "output": 0.6
       },
       "description": "Qwen3 235B A22B Instruct 2507 TEE は chutes によって提供される AI モデルです。",
       "family": "qwen",
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507-TEE",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -487,6 +235,7 @@
     "Qwen/Qwen3-235B-A22B-Thinking-2507": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.055,
         "input": 0.11,
         "output": 0.6
       },
@@ -496,7 +245,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -520,6 +269,7 @@
     "Qwen/Qwen3-30B-A3B": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.03,
         "input": 0.06,
         "output": 0.22
       },
@@ -529,7 +279,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 40960,
         "output": 40960
@@ -550,50 +300,17 @@
       "temperature": true,
       "tool_call": true
     },
-    "Qwen/Qwen3-30B-A3B-Instruct-2507": {
-      "attachment": false,
-      "cost": {
-        "input": 0.08,
-        "output": 0.33
-      },
-      "description": "Qwen3 30B A3B Instruct 2507 は chutes によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 30B A3B Instruct 2507",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "Qwen/Qwen3-32B": {
+    "Qwen/Qwen3-32B-TEE": {
       "attachment": false,
       "cost": {
         "cache_read": 0.04,
         "input": 0.08,
         "output": 0.24
       },
-      "description": "Qwen3 32B は chutes によって提供される AI モデルです。",
+      "description": "Qwen3 32B TEE は chutes によって提供される AI モデルです。",
       "family": "qwen",
-      "id": "Qwen/Qwen3-32B",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
+      "id": "Qwen/Qwen3-32B-TEE",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 40960,
         "output": 40960
@@ -606,55 +323,25 @@
           "text"
         ]
       },
-      "name": "Qwen3 32B",
+      "name": "Qwen3 32B TEE",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2025-12-29",
+      "release_date": "2026-04-25",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8-TEE": {
+    "Qwen/Qwen3-Coder-Next-TEE": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.11,
-        "input": 0.22,
-        "output": 0.95
+        "cache_read": 0.06,
+        "input": 0.12,
+        "output": 0.75
       },
-      "description": "Qwen3 Coder 480B A35B Instruct FP8 TEE は chutes によって提供される AI モデルです。",
+      "description": "Qwen3 Coder Next TEE は chutes によって提供される AI モデルです。",
       "family": "qwen",
-      "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8-TEE",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 Coder 480B A35B Instruct FP8 TEE",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "Qwen/Qwen3-Coder-Next": {
-      "attachment": false,
-      "cost": {
-        "input": 0.07,
-        "output": 0.3
-      },
-      "description": "Qwen3 Coder Next は chutes によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "Qwen/Qwen3-Coder-Next",
-      "last_updated": "2026-02-05",
+      "id": "Qwen/Qwen3-Coder-Next-TEE",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -667,10 +354,10 @@
           "text"
         ]
       },
-      "name": "Qwen3 Coder Next",
+      "name": "Qwen3 Coder Next TEE",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2026-02-05",
+      "release_date": "2026-04-25",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -678,13 +365,14 @@
     "Qwen/Qwen3-Next-80B-A3B-Instruct": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.05,
         "input": 0.1,
         "output": 0.8
       },
       "description": "Qwen3 Next 80B A3B Instruct は chutes によって提供される AI モデルです。",
       "family": "qwen",
       "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -705,37 +393,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "Qwen/Qwen3-VL-235B-A22B-Instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "Qwen3 VL 235B A22B Instruct は chutes によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 VL 235B A22B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "Qwen/Qwen3.5-397B-A17B-TEE": {
       "attachment": true,
       "cost": {
@@ -749,7 +406,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-02-18",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -771,17 +428,49 @@
       "temperature": true,
       "tool_call": true
     },
+    "Qwen/Qwen3.6-27B-TEE": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0975,
+        "input": 0.195,
+        "output": 1.56
+      },
+      "description": "Qwen3.6 27B TEE は chutes によって提供される AI モデルです。",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.6-27B-TEE",
+      "last_updated": "2026-04-25",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 27B TEE",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-25",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "Qwen/Qwen3Guard-Gen-0.6B": {
       "attachment": false,
       "cost": {
         "cache_read": 0.005,
         "input": 0.01,
-        "output": 0.01
+        "output": 0.0109
       },
       "description": "Qwen3Guard Gen 0.6B は chutes によって提供される AI モデルです。",
       "family": "qwen",
       "id": "Qwen/Qwen3Guard-Gen-0.6B",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 32768,
         "output": 8192
@@ -798,23 +487,23 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-12-29",
-      "structured_output": false,
       "temperature": true,
       "tool_call": false
     },
-    "XiaomiMiMo/MiMo-V2-Flash": {
+    "XiaomiMiMo/MiMo-V2-Flash-TEE": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.045,
         "input": 0.09,
         "output": 0.29
       },
-      "description": "MiMo V2 Flash は chutes によって提供される AI モデルです。",
+      "description": "MiMo V2 Flash TEE は chutes によって提供される AI モデルです。",
       "family": "mimo",
-      "id": "XiaomiMiMo/MiMo-V2-Flash",
-      "last_updated": "2026-01-27",
+      "id": "XiaomiMiMo/MiMo-V2-Flash-TEE",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 262144,
-        "output": 32000
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -824,73 +513,10 @@
           "text"
         ]
       },
-      "name": "MiMo V2 Flash",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "chutesai/Mistral-Small-3.1-24B-Instruct-2503": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.015,
-        "input": 0.03,
-        "output": 0.11
-      },
-      "description": "Mistral Small 3.1 24B Instruct 2503 は chutes によって提供される AI モデルです。",
-      "family": "chutesai",
-      "id": "chutesai/Mistral-Small-3.1-24B-Instruct-2503",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Small 3.1 24B Instruct 2503",
+      "name": "MiMo V2 Flash TEE",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "chutesai/Mistral-Small-3.2-24B-Instruct-2506": {
-      "attachment": false,
-      "cost": {
-        "input": 0.06,
-        "output": 0.18
-      },
-      "description": "Mistral Small 3.2 24B Instruct 2506 は chutes によって提供される AI モデルです。",
-      "family": "chutesai",
-      "id": "chutesai/Mistral-Small-3.2-24B-Instruct-2506",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Small 3.2 24B Instruct 2506",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-29",
+      "release_date": "2026-04-25",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -898,8 +524,9 @@
     "deepseek-ai/DeepSeek-R1-0528-TEE": {
       "attachment": false,
       "cost": {
-        "input": 0.4,
-        "output": 1.75
+        "cache_read": 0.225,
+        "input": 0.45,
+        "output": 2.15
       },
       "description": "DeepSeek R1 0528 TEE は chutes によって提供される AI モデルです。",
       "family": "deepseek-thinking",
@@ -907,7 +534,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 163840,
         "output": 65536
@@ -931,8 +558,9 @@
     "deepseek-ai/DeepSeek-R1-Distill-Llama-70B": {
       "attachment": false,
       "cost": {
-        "input": 0.03,
-        "output": 0.11
+        "cache_read": 0.0136,
+        "input": 0.0272,
+        "output": 0.1087
       },
       "description": "DeepSeek R1 Distill Llama 70B は chutes によって提供される AI モデルです。",
       "family": "deepseek-thinking",
@@ -940,7 +568,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 131072,
         "output": 131072
@@ -961,80 +589,17 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepseek-ai/DeepSeek-R1-TEE": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "DeepSeek R1 TEE は chutes によって提供される AI モデルです。",
-      "family": "deepseek-thinking",
-      "id": "deepseek-ai/DeepSeek-R1-TEE",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 163840,
-        "output": 163840
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek R1 TEE",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
-    "deepseek-ai/DeepSeek-V3": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "DeepSeek V3 は chutes によって提供される AI モデルです。",
-      "family": "deepseek",
-      "id": "deepseek-ai/DeepSeek-V3",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 163840,
-        "output": 163840
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V3",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
     "deepseek-ai/DeepSeek-V3-0324-TEE": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.095,
-        "input": 0.19,
-        "output": 0.87
+        "cache_read": 0.125,
+        "input": 0.25,
+        "output": 1
       },
       "description": "DeepSeek V3 0324 TEE は chutes によって提供される AI モデルです。",
       "family": "deepseek",
       "id": "deepseek-ai/DeepSeek-V3-0324-TEE",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 163840,
         "output": 65536
@@ -1058,8 +623,9 @@
     "deepseek-ai/DeepSeek-V3.1-TEE": {
       "attachment": false,
       "cost": {
-        "input": 0.2,
-        "output": 0.8
+        "cache_read": 0.135,
+        "input": 0.27,
+        "output": 1
       },
       "description": "DeepSeek V3.1 TEE は chutes によって提供される AI モデルです。",
       "family": "deepseek",
@@ -1067,7 +633,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 163840,
         "output": 65536
@@ -1088,72 +654,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepseek-ai/DeepSeek-V3.1-Terminus-TEE": {
-      "attachment": false,
-      "cost": {
-        "input": 0.23,
-        "output": 0.9
-      },
-      "description": "DeepSeek V3.1 Terminus TEE は chutes によって提供される AI モデルです。",
-      "family": "deepseek",
-      "id": "deepseek-ai/DeepSeek-V3.1-Terminus-TEE",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 163840,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V3.1 Terminus TEE",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "deepseek-ai/DeepSeek-V3.2-Speciale-TEE": {
-      "attachment": false,
-      "cost": {
-        "input": 0.27,
-        "output": 0.41
-      },
-      "description": "DeepSeek V3.2 Speciale TEE は chutes によって提供される AI モデルです。",
-      "family": "deepseek",
-      "id": "deepseek-ai/DeepSeek-V3.2-Speciale-TEE",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 163840,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V3.2 Speciale TEE",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
     "deepseek-ai/DeepSeek-V3.2-TEE": {
       "attachment": false,
       "cost": {
@@ -1167,7 +667,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 131072,
         "output": 65536
@@ -1188,134 +688,44 @@
       "temperature": true,
       "tool_call": true
     },
-    "miromind-ai/MiroThinker-v1.5-235B": {
-      "attachment": false,
+    "google/gemma-4-31B-turbo-TEE": {
+      "attachment": true,
       "cost": {
-        "cache_read": 0.15,
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.065,
+        "input": 0.13,
+        "output": 0.38
       },
-      "description": "MiroThinker V1.5 235B は chutes によって提供される AI モデルです。",
-      "id": "miromind-ai/MiroThinker-v1.5-235B",
-      "last_updated": "2026-01-10",
+      "description": "gemma 4 31B turbo TEE は chutes によって提供される AI モデルです。",
+      "family": "gemma",
+      "id": "google/gemma-4-31B-turbo-TEE",
+      "last_updated": "2026-04-25",
       "limit": {
-        "context": 262144,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiroThinker V1.5 235B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-01-10",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
-    },
-    "mistralai/Devstral-2-123B-Instruct-2512-TEE": {
-      "attachment": false,
-      "cost": {
-        "input": 0.05,
-        "output": 0.22
-      },
-      "description": "Devstral 2 123B Instruct 2512 TEE は chutes によって提供される AI モデルです。",
-      "id": "mistralai/Devstral-2-123B-Instruct-2512-TEE",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 262144,
+        "context": 131072,
         "output": 65536
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Devstral 2 123B Instruct 2512 TEE",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-01-10",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "moonshotai/Kimi-K2-Instruct-0905": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.195,
-        "input": 0.39,
-        "output": 1.9
-      },
-      "description": "Kimi K2 Instruct 0905 は chutes によって提供される AI モデルです。",
-      "family": "kimi",
-      "id": "moonshotai/Kimi-K2-Instruct-0905",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2 Instruct 0905",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "moonshotai/Kimi-K2-Thinking-TEE": {
-      "attachment": false,
-      "cost": {
-        "input": 0.4,
-        "output": 1.75
-      },
-      "description": "Kimi K2 Thinking TEE は chutes によって提供される AI モデルです。",
-      "family": "kimi-thinking",
-      "id": "moonshotai/Kimi-K2-Thinking-TEE",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 262144,
-        "output": 65535
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2 Thinking TEE",
+      "name": "gemma 4 31B turbo TEE",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2025-12-29",
+      "release_date": "2026-04-25",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "moonshotai/Kimi-K2.5-TEE": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
-        "input": 0.6,
-        "output": 3
+        "cache_read": 0.22,
+        "input": 0.44,
+        "output": 2
       },
       "description": "Kimi K2.5 TEE は chutes によって提供される AI モデルです。",
       "family": "kimi",
@@ -1324,7 +734,7 @@
         "field": "reasoning_content"
       },
       "knowledge": "2024-10",
-      "last_updated": "2026-01-27",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 262144,
         "output": 65535
@@ -1350,8 +760,9 @@
     "moonshotai/Kimi-K2.6-TEE": {
       "attachment": true,
       "cost": {
-        "input": 0.44,
-        "output": 2
+        "cache_read": 0.475,
+        "input": 0.95,
+        "output": 4
       },
       "description": "Kimi K2.6 TEE は chutes によって提供される AI モデルです。",
       "family": "kimi",
@@ -1360,10 +771,10 @@
         "field": "reasoning_content"
       },
       "knowledge": "2025-12",
-      "last_updated": "2026-04-23",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 65535
       },
       "modalities": {
         "input": [
@@ -1383,41 +794,12 @@
       "temperature": true,
       "tool_call": true
     },
-    "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16": {
-      "attachment": false,
-      "cost": {
-        "input": 0.06,
-        "output": 0.24
-      },
-      "description": "NVIDIA Nemotron 3 Nano 30B A3B BF16 は chutes によって提供される AI モデルです。",
-      "family": "nemotron",
-      "id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "NVIDIA Nemotron 3 Nano 30B A3B BF16",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "openai/gpt-oss-120b-TEE": {
       "attachment": false,
       "cost": {
-        "input": 0.04,
-        "output": 0.18
+        "cache_read": 0.045,
+        "input": 0.09,
+        "output": 0.36
       },
       "description": "gpt oss 120b TEE は chutes によって提供される AI モデルです。",
       "family": "gpt-oss",
@@ -1425,7 +807,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 131072,
         "output": 65536
@@ -1446,50 +828,17 @@
       "temperature": true,
       "tool_call": true
     },
-    "openai/gpt-oss-20b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.02,
-        "output": 0.1
-      },
-      "description": "gpt oss 20b は chutes によって提供される AI モデルです。",
-      "family": "gpt-oss",
-      "id": "openai/gpt-oss-20b",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "gpt oss 20b",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "rednote-hilab/dots.ocr": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.005,
         "input": 0.01,
-        "output": 0.01
+        "output": 0.0109
       },
       "description": "dots.ocr は chutes によって提供される AI モデルです。",
       "family": "rednote",
       "id": "rednote-hilab/dots.ocr",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 131072,
         "output": 131072
@@ -1511,19 +860,17 @@
       "temperature": true,
       "tool_call": false
     },
-    "tngtech/DeepSeek-R1T-Chimera": {
+    "tngtech/DeepSeek-TNG-R1T2-Chimera-TEE": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.15,
         "input": 0.3,
-        "output": 1.2
+        "output": 1.1
       },
-      "description": "DeepSeek R1T Chimera は chutes によって提供される AI モデルです。",
-      "family": "tngtech",
-      "id": "tngtech/DeepSeek-R1T-Chimera",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
+      "description": "DeepSeek TNG R1T2 Chimera TEE は chutes によって提供される AI モデルです。",
+      "family": "deepseek",
+      "id": "tngtech/DeepSeek-TNG-R1T2-Chimera-TEE",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 163840,
         "output": 163840
@@ -1536,105 +883,10 @@
           "text"
         ]
       },
-      "name": "DeepSeek R1T Chimera",
+      "name": "DeepSeek TNG R1T2 Chimera TEE",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
-    "tngtech/DeepSeek-TNG-R1T2-Chimera": {
-      "attachment": false,
-      "cost": {
-        "input": 0.25,
-        "output": 0.85
-      },
-      "description": "DeepSeek TNG R1T2 Chimera は chutes によって提供される AI モデルです。",
-      "family": "tngtech",
-      "id": "tngtech/DeepSeek-TNG-R1T2-Chimera",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 163840,
-        "output": 163840
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek TNG R1T2 Chimera",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "tngtech/TNG-R1T-Chimera-TEE": {
-      "attachment": false,
-      "cost": {
-        "input": 0.25,
-        "output": 0.85
-      },
-      "description": "TNG R1T Chimera TEE は chutes によって提供される AI モデルです。",
-      "family": "tngtech",
-      "id": "tngtech/TNG-R1T-Chimera-TEE",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 163840,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "TNG R1T Chimera TEE",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "tngtech/TNG-R1T-Chimera-Turbo": {
-      "attachment": false,
-      "cost": {
-        "input": 0.22,
-        "output": 0.6
-      },
-      "description": "TNG R1T Chimera Turbo は chutes によって提供される AI モデルです。",
-      "id": "tngtech/TNG-R1T-Chimera-Turbo",
-      "last_updated": "2026-01-27",
-      "limit": {
-        "context": 163840,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "TNG R1T Chimera Turbo",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-01-27",
+      "release_date": "2026-04-25",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1644,13 +896,14 @@
       "cost": {
         "cache_read": 0.005,
         "input": 0.01,
-        "output": 0.01
+        "output": 0.0109
       },
       "description": "Llama 3.2 1B Instruct は chutes によって提供される AI モデルです。",
+      "family": "unsloth",
       "id": "unsloth/Llama-3.2-1B-Instruct",
-      "last_updated": "2026-01-27",
+      "last_updated": "2026-04-25",
       "limit": {
-        "context": 32768,
+        "context": 16384,
         "output": 8192
       },
       "modalities": {
@@ -1665,7 +918,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-01-27",
-      "structured_output": false,
       "temperature": true,
       "tool_call": false
     },
@@ -1674,12 +926,12 @@
       "cost": {
         "cache_read": 0.005,
         "input": 0.01,
-        "output": 0.01
+        "output": 0.0136
       },
       "description": "Llama 3.2 3B Instruct は chutes によって提供される AI モデルです。",
       "family": "unsloth",
       "id": "unsloth/Llama-3.2-3B-Instruct",
-      "last_updated": "2025-02-12",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 16384,
         "output": 16384
@@ -1696,7 +948,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-02-12",
-      "structured_output": false,
       "temperature": true,
       "tool_call": false
     },
@@ -1710,7 +961,7 @@
       "description": "Mistral Nemo Instruct 2407 は chutes によって提供される AI モデルです。",
       "family": "unsloth",
       "id": "unsloth/Mistral-Nemo-Instruct-2407",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 131072,
         "output": 131072
@@ -1731,47 +982,17 @@
       "temperature": true,
       "tool_call": false
     },
-    "unsloth/Mistral-Small-24B-Instruct-2501": {
-      "attachment": false,
-      "cost": {
-        "input": 0.03,
-        "output": 0.11
-      },
-      "description": "Mistral Small 24B Instruct 2501 は chutes によって提供される AI モデルです。",
-      "family": "unsloth",
-      "id": "unsloth/Mistral-Small-24B-Instruct-2501",
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Small 24B Instruct 2501",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "unsloth/gemma-3-12b-it": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
+        "cache_read": 0.015,
         "input": 0.03,
         "output": 0.1
       },
       "description": "gemma 3 12b it は chutes によって提供される AI モデルです。",
       "family": "unsloth",
       "id": "unsloth/gemma-3-12b-it",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 131072,
         "output": 131072
@@ -1789,21 +1010,20 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-12-29",
-      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
     "unsloth/gemma-3-27b-it": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
-        "cache_read": 0.02,
-        "input": 0.04,
-        "output": 0.15
+        "cache_read": 0.0136,
+        "input": 0.0272,
+        "output": 0.1087
       },
       "description": "gemma 3 27b it は chutes によって提供される AI モデルです。",
       "family": "unsloth",
       "id": "unsloth/gemma-3-27b-it",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 128000,
         "output": 65536
@@ -1826,15 +1046,16 @@
       "tool_call": true
     },
     "unsloth/gemma-3-4b-it": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
+        "cache_read": 0.005,
         "input": 0.01,
-        "output": 0.03
+        "output": 0.0272
       },
       "description": "gemma 3 4b it は chutes によって提供される AI モデルです。",
       "family": "unsloth",
       "id": "unsloth/gemma-3-4b-it",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 96000,
         "output": 96000
@@ -1856,166 +1077,8 @@
       "temperature": true,
       "tool_call": false
     },
-    "zai-org/GLM-4.5-Air": {
-      "attachment": false,
-      "cost": {
-        "input": 0.05,
-        "output": 0.22
-      },
-      "description": "GLM 4.5 Air は chutes によって提供される AI モデルです。",
-      "family": "glm",
-      "id": "zai-org/GLM-4.5-Air",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 4.5 Air",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai-org/GLM-4.5-FP8": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "GLM 4.5 FP8 は chutes によって提供される AI モデルです。",
-      "id": "zai-org/GLM-4.5-FP8",
-      "last_updated": "2026-01-27",
-      "limit": {
-        "context": 131072,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 4.5 FP8",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-01-27",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai-org/GLM-4.5-TEE": {
-      "attachment": false,
-      "cost": {
-        "input": 0.35,
-        "output": 1.55
-      },
-      "description": "GLM 4.5 TEE は chutes によって提供される AI モデルです。",
-      "family": "glm",
-      "id": "zai-org/GLM-4.5-TEE",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 131072,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 4.5 TEE",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai-org/GLM-4.6-FP8": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "GLM 4.6 FP8 は chutes によって提供される AI モデルです。",
-      "id": "zai-org/GLM-4.6-FP8",
-      "last_updated": "2026-01-27",
-      "limit": {
-        "context": 202752,
-        "output": 65535
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 4.6 FP8",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-01-27",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai-org/GLM-4.6-TEE": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.2,
-        "input": 0.4,
-        "output": 1.7
-      },
-      "description": "GLM 4.6 TEE は chutes によって提供される AI モデルです。",
-      "family": "glm",
-      "id": "zai-org/GLM-4.6-TEE",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-10",
-      "limit": {
-        "context": 202752,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 4.6 TEE",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "zai-org/GLM-4.6V": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.15,
         "input": 0.3,
@@ -2027,7 +1090,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 131072,
         "output": 65536
@@ -2052,12 +1115,14 @@
     "zai-org/GLM-4.7-FP8": {
       "attachment": false,
       "cost": {
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.14945,
+        "input": 0.2989,
+        "output": 1.1957
       },
       "description": "GLM 4.7 FP8 は chutes によって提供される AI モデルです。",
+      "family": "glm",
       "id": "zai-org/GLM-4.7-FP8",
-      "last_updated": "2026-01-27",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 202752,
         "output": 65535
@@ -2078,40 +1143,12 @@
       "temperature": true,
       "tool_call": true
     },
-    "zai-org/GLM-4.7-Flash": {
-      "attachment": false,
-      "cost": {
-        "input": 0.06,
-        "output": 0.35
-      },
-      "description": "GLM 4.7 Flash は chutes によって提供される AI モデルです。",
-      "id": "zai-org/GLM-4.7-Flash",
-      "last_updated": "2026-01-27",
-      "limit": {
-        "context": 202752,
-        "output": 65535
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 4.7 Flash",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-01-27",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "zai-org/GLM-4.7-TEE": {
       "attachment": false,
       "cost": {
-        "input": 0.4,
-        "output": 1.5
+        "cache_read": 0.195,
+        "input": 0.39,
+        "output": 1.75
       },
       "description": "GLM 4.7 TEE は chutes によって提供される AI モデルです。",
       "family": "glm",
@@ -2119,7 +1156,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 202752,
         "output": 65535
@@ -2145,7 +1182,7 @@
       "cost": {
         "cache_read": 0.475,
         "input": 0.95,
-        "output": 3.15
+        "output": 2.55
       },
       "description": "GLM 5 TEE は chutes によって提供される AI モデルです。",
       "family": "glm",
@@ -2153,7 +1190,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-02-14",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 202752,
         "output": 65535
@@ -2177,9 +1214,9 @@
     "zai-org/GLM-5-Turbo": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.245,
-        "input": 0.49,
-        "output": 1.96
+        "cache_read": 0.24455,
+        "input": 0.4891,
+        "output": 1.9565
       },
       "description": "GLM 5 Turbo は chutes によって提供される AI モデルです。",
       "family": "glm",
@@ -2187,7 +1224,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-03-11",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 202752,
         "output": 65535
@@ -2211,9 +1248,9 @@
     "zai-org/GLM-5.1-TEE": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.475,
-        "input": 0.95,
-        "output": 3.15
+        "cache_read": 0.525,
+        "input": 1.05,
+        "output": 3.5
       },
       "description": "GLM 5.1 TEE は chutes によって提供される AI モデルです。",
       "family": "glm",
@@ -2221,7 +1258,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-04-08",
+      "last_updated": "2026-04-25",
       "limit": {
         "context": 202752,
         "output": 65535
