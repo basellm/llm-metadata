@@ -1,0 +1,69 @@
+{
+  "api": "https://api.sarvam.ai/v1",
+  "doc": "https://docs.sarvam.ai/api-reference-docs/getting-started/models",
+  "env": [
+    "SARVAM_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/sarvam.svg",
+  "id": "sarvam",
+  "models": {
+    "sarvam-105b": {
+      "attachment": false,
+      "description": "Sarvam-105B 是由 sarvam 提供的人工智能模型。",
+      "family": "sarvam",
+      "id": "sarvam-105b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-06",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Sarvam-105B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "sarvam-30b": {
+      "attachment": false,
+      "description": "Sarvam-30B 是由 sarvam 提供的人工智能模型。",
+      "family": "sarvam",
+      "id": "sarvam-30b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-06",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Sarvam-30B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-18",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Sarvam AI",
+  "npm": "@ai-sdk/openai-compatible"
+}

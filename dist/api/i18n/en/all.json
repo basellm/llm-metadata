@@ -90388,6 +90388,35 @@
     "iconURL": "https://models.dev/logos/novita-ai.svg",
     "id": "novita-ai",
     "models": {
+      "Sao10K/L3-8B-Stheno-v3.2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.05,
+          "output": 0.05
+        },
+        "description": "L3 8B Stheno V3.2 is an AI model provided by novita-ai.",
+        "family": "llama",
+        "id": "Sao10K/L3-8B-Stheno-v3.2",
+        "last_updated": "2024-11-29",
+        "limit": {
+          "context": 8192,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "L3 8B Stheno V3.2",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-11-29",
+        "temperature": true,
+        "tool_call": true
+      },
       "baichuan/baichuan-m2-32b": {
         "attachment": false,
         "cost": {
@@ -90797,9 +90826,8 @@
         },
         "name": "DeepSeek R1 Distill Qwen 14B",
         "open_weights": true,
-        "reasoning": true,
+        "reasoning": false,
         "release_date": "2025-01-20",
-        "structured_output": true,
         "temperature": true,
         "tool_call": false
       },
@@ -90827,9 +90855,8 @@
         },
         "name": "DeepSeek R1 Distill Qwen 32B",
         "open_weights": true,
-        "reasoning": true,
+        "reasoning": false,
         "release_date": "2025-01-20",
-        "structured_output": true,
         "temperature": true,
         "tool_call": false
       },
@@ -91125,7 +91152,6 @@
         "description": "Gemma 3 12B is an AI model provided by novita-ai.",
         "family": "gemma",
         "id": "google/gemma-3-12b-it",
-        "knowledge": "2024-10",
         "last_updated": "2025-03-13",
         "limit": {
           "context": 131072,
@@ -91204,6 +91230,7 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-02",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -91234,6 +91261,7 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-02",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -91291,6 +91319,37 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-04-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "inclusionai/ling-2.6-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.1,
+          "output": 0.3
+        },
+        "description": "Ling-2.6-flash is an AI model provided by novita-ai.",
+        "family": "ling",
+        "id": "inclusionai/ling-2.6-flash",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ling-2.6-flash",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-04-24",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -91439,7 +91498,6 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09-18",
-        "structured_output": true,
         "temperature": true,
         "tool_call": false
       },
@@ -91925,7 +91983,7 @@
           "output": 4
         },
         "description": "Kimi K2.6 is an AI model provided by novita-ai.",
-        "family": "kimi",
+        "family": "kimi-k2.6",
         "id": "moonshotai/kimi-k2.6",
         "interleaved": {
           "field": "reasoning_content"
@@ -92921,70 +92979,6 @@
         "reasoning": true,
         "release_date": "2026-02-17",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen/qwen3.6-27b": {
-        "attachment": true,
-        "cost": {
-          "input": 0.6,
-          "output": 3.6
-        },
-        "description": "Qwen3.6-27B is an AI model provided by novita-ai.",
-        "family": "qwen3.6",
-        "id": "qwen/qwen3.6-27b",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2025-04",
-        "last_updated": "2026-04-02",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.6-27B",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2026-04-02",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "sao10k/L3-8B-Stheno-v3.2": {
-        "attachment": false,
-        "cost": {
-          "input": 0.05,
-          "output": 0.05
-        },
-        "description": "L3 8B Stheno V3.2 is an AI model provided by novita-ai.",
-        "id": "sao10k/L3-8B-Stheno-v3.2",
-        "last_updated": "2024-11-29",
-        "limit": {
-          "context": 8192,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "L3 8B Stheno V3.2",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-11-29",
         "temperature": true,
         "tool_call": true
       },
@@ -118373,6 +118367,75 @@
     },
     "name": "SAP AI Core",
     "npm": "@jerome-benoit/sap-ai-provider-v2"
+  },
+  "sarvam": {
+    "api": "https://api.sarvam.ai/v1",
+    "doc": "https://docs.sarvam.ai/api-reference-docs/getting-started/models",
+    "env": [
+      "SARVAM_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/sarvam.svg",
+    "id": "sarvam",
+    "models": {
+      "sarvam-105b": {
+        "attachment": false,
+        "description": "Sarvam-105B is an AI model provided by sarvam.",
+        "family": "sarvam",
+        "id": "sarvam-105b",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-06",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Sarvam-105B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "sarvam-30b": {
+        "attachment": false,
+        "description": "Sarvam-30B is an AI model provided by sarvam.",
+        "family": "sarvam",
+        "id": "sarvam-30b",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-06",
+        "limit": {
+          "context": 65536,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Sarvam-30B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-18",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Sarvam AI",
+    "npm": "@ai-sdk/openai-compatible"
   },
   "scaleway": {
     "api": "https://api.scaleway.ai/v1",
