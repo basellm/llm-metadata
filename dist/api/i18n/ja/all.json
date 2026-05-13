@@ -571,7 +571,19 @@
             "output": 37.5
           },
           "input": 5,
-          "output": 25
+          "output": 25,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "claude-opus-4-7 は 302ai によって提供される AI モデルです。",
         "family": "claude-opus",
@@ -2199,7 +2211,17 @@
             "output": 22.5
           },
           "input": 2.5,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "input": 5,
+              "output": 22.5,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "gpt-5.4 は 302ai によって提供される AI モデルです。",
         "family": "gpt",
@@ -2371,7 +2393,17 @@
             "output": 270
           },
           "input": 30,
-          "output": 180
+          "output": 180,
+          "tiers": [
+            {
+              "input": 60,
+              "output": 270,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "gpt-5.4-pro は 302ai によって提供される AI モデルです。",
         "family": "gpt-pro",
@@ -5250,7 +5282,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.6,
+              "cache_write": 7.5,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4.6 は aihubmix によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -5290,7 +5334,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.6,
+              "cache_write": 7.5,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4.6 Think は aihubmix によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -5768,7 +5824,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview Custom Tools は aihubmix によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -6240,7 +6307,18 @@
             "output": 5
           },
           "input": 1.25,
-          "output": 2.5
+          "output": 2.5,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2.5,
+              "output": 5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.3 は aihubmix によって提供される AI モデルです。",
         "family": "grok",
@@ -7999,10 +8077,28 @@
       "qwen3.6-plus": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
-          "cache_write": 0.344,
-          "input": 0.276,
-          "output": 1.651
+          "cache_read": 0.05,
+          "cache_write": 0.625,
+          "context_over_200k": {
+            "cache_read": 0.2,
+            "cache_write": 2.5,
+            "input": 2,
+            "output": 6
+          },
+          "input": 0.5,
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.2,
+              "cache_write": 2.5,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen3.6 Plus は alibaba によって提供される AI モデルです。",
         "family": "qwen",
@@ -10322,10 +10418,28 @@
       "qwen3.6-plus": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
-          "cache_write": 0.344,
-          "input": 0.276,
-          "output": 1.651
+          "cache_read": 0.05,
+          "cache_write": 0.625,
+          "context_over_200k": {
+            "cache_read": 0.2,
+            "cache_write": 2.5,
+            "input": 2,
+            "output": 6
+          },
+          "input": 0.5,
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.2,
+              "cache_write": 2.5,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen3.6 Plus は alibaba-cn によって提供される AI モデルです。",
         "family": "qwen",
@@ -13050,7 +13164,6 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-04-16",
-        "structured_output": true,
         "temperature": false,
         "tool_call": true
       },
@@ -13120,6 +13233,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-17",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -13154,6 +13268,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-10-15",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -13223,6 +13338,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-09-29",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -13488,7 +13604,6 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-04-16",
-        "structured_output": true,
         "temperature": false,
         "tool_call": true
       },
@@ -13558,6 +13673,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-17",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -13697,7 +13813,6 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-04-16",
-        "structured_output": true,
         "temperature": false,
         "tool_call": true
       },
@@ -13767,6 +13882,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-17",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -13929,6 +14045,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-09-29",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -13963,6 +14080,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-17",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -15168,7 +15286,6 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-04-16",
-        "structured_output": true,
         "temperature": false,
         "tool_call": true
       },
@@ -15238,6 +15355,7 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-17",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -16106,6 +16224,26 @@
           "output": 25
         },
         "description": "Claude Opus 4.7 は anthropic によって提供される AI モデルです。",
+        "experimental": {
+          "modes": {
+            "fast": {
+              "cost": {
+                "cache_read": 3,
+                "cache_write": 37.5,
+                "input": 30,
+                "output": 150
+              },
+              "provider": {
+                "body": {
+                  "speed": "fast"
+                },
+                "headers": {
+                  "anthropic-beta": "fast-mode-2026-02-01"
+                }
+              }
+            }
+          }
+        },
         "family": "claude-opus",
         "id": "claude-opus-4-7",
         "knowledge": "2026-01-31",
@@ -16305,6 +16443,616 @@
     "name": "Anthropic",
     "npm": "@ai-sdk/anthropic"
   },
+  "auriko": {
+    "api": "https://api.auriko.ai/v1",
+    "doc": "https://docs.auriko.ai",
+    "env": [
+      "AURIKO_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/auriko.svg",
+    "id": "auriko",
+    "models": {
+      "claude-opus-4-6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.6 は auriko によって提供される AI モデルです。",
+        "family": "claude-opus",
+        "id": "claude-opus-4-6",
+        "knowledge": "2025-05-31",
+        "last_updated": "2026-03-13",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-opus-4-7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.7 は auriko によって提供される AI モデルです。",
+        "experimental": {
+          "modes": {
+            "fast": {
+              "cost": {
+                "cache_read": 3,
+                "cache_write": 37.5,
+                "input": 30,
+                "output": 150
+              },
+              "provider": {
+                "body": {
+                  "speed": "fast"
+                },
+                "headers": {
+                  "anthropic-beta": "fast-mode-2026-02-01"
+                }
+              }
+            }
+          }
+        },
+        "family": "claude-opus",
+        "id": "claude-opus-4-7",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-16",
+        "temperature": false,
+        "tool_call": true
+      },
+      "claude-sonnet-4-6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4.6 は auriko によって提供される AI モデルです。",
+        "family": "claude-sonnet",
+        "id": "claude-sonnet-4-6",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-13",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.0028,
+          "input": 0.14,
+          "output": 0.28
+        },
+        "description": "DeepSeek V4 Flash は auriko によって提供される AI モデルです。",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4-pro": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.003625,
+          "input": 0.435,
+          "output": 0.87
+        },
+        "description": "DeepSeek V4 Pro は auriko によって提供される AI モデルです。",
+        "family": "deepseek-thinking",
+        "id": "deepseek-v4-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-2.5-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Gemini 2.5 Flash は auriko によって提供される AI モデルです。",
+        "family": "gemini-flash",
+        "id": "gemini-2.5-flash",
+        "knowledge": "2025-01",
+        "last_updated": "2025-06-05",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-03-20",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-2.5-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.125,
+          "context_over_200k": {
+            "cache_read": 0.25,
+            "input": 2.5,
+            "output": 15
+          },
+          "input": 1.25,
+          "output": 10,
+          "tiers": [
+            {
+              "cache_read": 0.25,
+              "input": 2.5,
+              "output": 15,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Gemini 2.5 Pro は auriko によって提供される AI モデルです。",
+        "family": "gemini-pro",
+        "id": "gemini-2.5-pro",
+        "knowledge": "2025-01",
+        "last_updated": "2025-06-05",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 2.5 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-03-20",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-3.1-pro-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18
+          },
+          "input": 2,
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Gemini 3.1 Pro Preview は auriko によって提供される AI モデルです。",
+        "family": "gemini-pro",
+        "id": "gemini-3.1-pro-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.1 Pro Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-19",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "GLM-5.1 は auriko によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "glm-5.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-27",
+        "limit": {
+          "context": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "grok-4.3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2.5,
+            "output": 5
+          },
+          "input": 1.25,
+          "output": 2.5,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2.5,
+              "output": 5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Grok 4.3 は auriko によって提供される AI モデルです。",
+        "family": "grok",
+        "id": "grok-4.3",
+        "last_updated": "2026-05-01",
+        "limit": {
+          "context": 1000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.3",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2.5": {
+        "attachment": false,
+        "cost": {
+          "input": 0.5,
+          "output": 2.8
+        },
+        "description": "Kimi K2.5 は auriko によって提供される AI モデルです。",
+        "family": "kimi-k2.5",
+        "id": "kimi-k2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-01",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-01",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k2.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.16,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Kimi K2.6 は auriko によって提供される AI モデルです。",
+        "family": "kimi-k2.6",
+        "id": "kimi-k2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m2-7": {
+        "attachment": false,
+        "cost": {
+          "cache_write": 0.375,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax-M2.7 は auriko によって提供される AI モデルです。",
+        "family": "minimax",
+        "id": "minimax-m2-7",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m2-7-highspeed": {
+        "attachment": false,
+        "cost": {
+          "cache_write": 0.375,
+          "input": 0.6,
+          "output": 2.4
+        },
+        "description": "MiniMax-M2.7-highspeed は auriko によって提供される AI モデルです。",
+        "family": "minimax",
+        "id": "minimax-m2-7-highspeed",
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.7-highspeed",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen-3.6-plus": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.1,
+          "context_over_200k": {
+            "cache_read": 0.2,
+            "cache_write": 2.5,
+            "input": 2,
+            "output": 6
+          },
+          "input": 0.5,
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.2,
+              "cache_write": 2.5,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Qwen3.6 Plus は auriko によって提供される AI モデルです。",
+        "family": "qwen",
+        "id": "qwen-3.6-plus",
+        "knowledge": "2025-04",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 Plus",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-02",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Auriko",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "azure": {
     "doc": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models",
     "env": [
@@ -16443,7 +17191,19 @@
             "output": 37.5
           },
           "input": 5,
-          "output": 25
+          "output": 25,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Opus 4.6 は azure によって提供される AI モデルです。",
         "family": "claude-opus",
@@ -17945,7 +18705,18 @@
             "output": 22.5
           },
           "input": 2.5,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.5,
+              "input": 5,
+              "output": 22.5,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.4 は azure によって提供される AI モデルです。",
         "family": "gpt",
@@ -18053,7 +18824,17 @@
             "output": 270
           },
           "input": 30,
-          "output": 180
+          "output": 180,
+          "tiers": [
+            {
+              "input": 60,
+              "output": 270,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.4 Pro は azure によって提供される AI モデルです。",
         "family": "gpt-pro",
@@ -18092,7 +18873,18 @@
             "output": 45
           },
           "input": 5,
-          "output": 30
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 は azure によって提供される AI モデルです。",
         "family": "gpt",
@@ -19900,7 +20692,19 @@
             "output": 37.5
           },
           "input": 5,
-          "output": 25
+          "output": 25,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Opus 4.6 は azure-cognitive-services によって提供される AI モデルです。",
         "family": "claude-opus",
@@ -21297,7 +22101,18 @@
             "output": 22.5
           },
           "input": 2.5,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.5,
+              "input": 5,
+              "output": 22.5,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.4 は azure-cognitive-services によって提供される AI モデルです。",
         "family": "gpt",
@@ -21405,7 +22220,17 @@
             "output": 270
           },
           "input": 30,
-          "output": 180
+          "output": 180,
+          "tiers": [
+            {
+              "input": 60,
+              "output": 270,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.4 Pro は azure-cognitive-services によって提供される AI モデルです。",
         "family": "gpt-pro",
@@ -21444,7 +22269,18 @@
             "output": 45
           },
           "input": 5,
-          "output": 30
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 は azure-cognitive-services によって提供される AI モデルです。",
         "family": "gpt",
@@ -25525,6 +26361,49 @@
     "name": "Clarifai",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "claudinio": {
+    "api": "https://api.claudin.io/v1",
+    "doc": "https://claudin.io",
+    "env": [
+      "CLAUDINIO_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/claudinio.svg",
+    "id": "claudinio",
+    "models": {
+      "claudinio": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.5,
+          "output": 2
+        },
+        "description": "Claudinio は claudinio によって提供される AI モデルです。",
+        "id": "claudinio",
+        "knowledge": "2026-05",
+        "last_updated": "2026-05-12",
+        "limit": {
+          "context": 256000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claudinio",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-12",
+        "tool_call": true
+      }
+    },
+    "name": "Claudinio",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "cloudferro-sherlock": {
     "api": "https://api-sherlock.cloudferro.com/openai/v1/",
     "doc": "https://docs.sherlock.cloudferro.com/",
@@ -26052,7 +26931,19 @@
             "output": 37.5
           },
           "input": 5,
-          "output": 25
+          "output": 25,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Opus 4.6 (latest) は cloudflare-ai-gateway によって提供される AI モデルです。",
         "family": "claude-opus",
@@ -26197,7 +27088,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.6,
+              "cache_write": 7.5,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4.6 は cloudflare-ai-gateway によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -26611,7 +27514,18 @@
             "output": 45
           },
           "input": 5,
-          "output": 30
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 は cloudflare-ai-gateway によって提供される AI モデルです。",
         "family": "gpt",
@@ -30402,6 +31316,26 @@
           "output": 25
         },
         "description": "Claude Opus 4.7 は databricks によって提供される AI モデルです。",
+        "experimental": {
+          "modes": {
+            "fast": {
+              "cost": {
+                "cache_read": 3,
+                "cache_write": 37.5,
+                "input": 30,
+                "output": 150
+              },
+              "provider": {
+                "body": {
+                  "speed": "fast"
+                },
+                "headers": {
+                  "anthropic-beta": "fast-mode-2026-02-01"
+                }
+              }
+            }
+          }
+        },
         "family": "claude-opus",
         "id": "databricks-claude-opus-4-7",
         "knowledge": "2026-01-31",
@@ -30576,7 +31510,18 @@
             "output": 15
           },
           "input": 1.25,
-          "output": 10
+          "output": 10,
+          "tiers": [
+            {
+              "cache_read": 0.25,
+              "input": 2.5,
+              "output": 15,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 2.5 Pro は databricks によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -30611,8 +31556,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.025,
-          "cache_write": 1,
           "input": 0.25,
+          "input_audio": 0.5,
           "output": 1.5
         },
         "description": "Gemini 3.1 Flash Lite Preview は databricks によって提供される AI モデルです。",
@@ -30654,7 +31599,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview Custom Tools は databricks によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -30689,12 +31645,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.05,
-          "context_over_200k": {
-            "cache_read": 0.05,
-            "input": 0.5,
-            "output": 3
-          },
           "input": 0.5,
+          "input_audio": 1,
           "output": 3
         },
         "description": "Gemini 3 Flash Preview は databricks によって提供される AI モデルです。",
@@ -30736,7 +31688,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3 Pro Preview は databricks によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -30879,7 +31842,18 @@
             "output": 22.5
           },
           "input": 2.5,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.5,
+              "input": 5,
+              "output": 22.5,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.4 は databricks によって提供される AI モデルです。",
         "experimental": {
@@ -31019,7 +31993,18 @@
             "output": 45
           },
           "input": 5,
-          "output": 30
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 は databricks によって提供される AI モデルです。",
         "experimental": {
@@ -32145,6 +33130,109 @@
         "temperature": true,
         "tool_call": true
       },
+      "xiaomi/mimo-v2.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.08,
+          "context_over_200k": {
+            "cache_read": 0.16,
+            "input": 0.8,
+            "output": 4
+          },
+          "input": 0.4,
+          "output": 2,
+          "tiers": [
+            {
+              "cache_read": 0.16,
+              "input": 0.8,
+              "output": 4,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "MiMo-V2.5 は deepinfra によって提供される AI モデルです。",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 262144,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2.5-pro": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6
+          },
+          "input": 1,
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "MiMo-V2.5-Pro は deepinfra によって提供される AI モデルです。",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2.5-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 1048576,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5-Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
+      },
       "zai-org/GLM-4.5": {
         "attachment": false,
         "cost": {
@@ -32815,7 +33903,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.3,
+              "cache_write": 3.75,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4.5 は digitalocean によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -32855,7 +33955,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.3,
+              "cache_write": 3.75,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4.6 は digitalocean によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -32997,7 +34109,19 @@
             "output": 37.5
           },
           "input": 5,
-          "output": 25
+          "output": 25,
+          "tiers": [
+            {
+              "cache_read": 0.5,
+              "cache_write": 6.25,
+              "input": 10,
+              "output": 37.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Opus 4.6 は digitalocean によって提供される AI モデルです。",
         "family": "claude-opus",
@@ -33071,7 +34195,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.3,
+              "cache_write": 3.75,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4 は digitalocean によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -34456,7 +35592,18 @@
             "output": 45
           },
           "input": 5,
-          "output": 30
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 は digitalocean によって提供される AI モデルです。",
         "family": "gpt",
@@ -41350,8 +42497,9 @@
       "gemini-2.5-flash-lite": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.025,
+          "cache_read": 0.01,
           "input": 0.1,
+          "input_audio": 0.3,
           "output": 0.4
         },
         "description": "費用対効果と高スループット向けに最適化された Gemini 2.5 Flash モデル。",
@@ -41603,7 +42751,18 @@
             "output": 15
           },
           "input": 1.25,
-          "output": 10
+          "output": 10,
+          "tiers": [
+            {
+              "cache_read": 0.25,
+              "input": 2.5,
+              "output": 15,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 2.5 Pro は google によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -41740,12 +42899,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.05,
-          "context_over_200k": {
-            "cache_read": 0.05,
-            "input": 0.5,
-            "output": 3
-          },
           "input": 0.5,
+          "input_audio": 1,
           "output": 3
         },
         "description": "Gemini 3 Flash Preview は google によって提供される AI モデルです。",
@@ -41787,7 +42942,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3 Pro Preview は google によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -41821,7 +42987,7 @@
       "gemini-3.1-flash-image-preview": {
         "attachment": true,
         "cost": {
-          "input": 0.25,
+          "input": 0.5,
           "output": 60
         },
         "description": "Gemini 3.1 Flash Image (Preview) は google によって提供される AI モデルです。",
@@ -41855,8 +43021,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.025,
-          "cache_write": 1,
           "input": 0.25,
+          "input_audio": 0.5,
           "output": 1.5
         },
         "description": "Gemini 3.1 Flash Lite は google によって提供される AI モデルです。",
@@ -41892,8 +43058,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.025,
-          "cache_write": 1,
           "input": 0.25,
+          "input_audio": 0.5,
           "output": 1.5
         },
         "description": "Gemini 3.1 Flash Lite Preview は google によって提供される AI モデルです。",
@@ -41935,7 +43101,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview は google によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -41976,7 +43153,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview Custom Tools は google によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -42641,7 +43829,19 @@
             "output": 37.5
           },
           "input": 5,
-          "output": 25
+          "output": 25,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Opus 4.6 は google-vertex によって提供される AI モデルです。",
         "family": "claude-opus",
@@ -42684,7 +43884,19 @@
             "output": 37.5
           },
           "input": 5,
-          "output": 25
+          "output": 25,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Opus 4.7 は google-vertex によって提供される AI モデルです。",
         "family": "claude-opus",
@@ -42801,7 +44013,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.6,
+              "cache_write": 7.5,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4.6 は google-vertex によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -43048,8 +44272,9 @@
       "gemini-2.5-flash-lite": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.025,
+          "cache_read": 0.01,
           "input": 0.1,
+          "input_audio": 0.3,
           "output": 0.4
         },
         "description": "Gemini 2.5 Flash Lite は google-vertex によって提供される AI モデルです。",
@@ -43266,7 +44491,18 @@
             "output": 15
           },
           "input": 1.25,
-          "output": 10
+          "output": 10,
+          "tiers": [
+            {
+              "cache_read": 0.25,
+              "input": 2.5,
+              "output": 15,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 2.5 Pro は google-vertex によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -43370,12 +44606,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.05,
-          "context_over_200k": {
-            "cache_read": 0.05,
-            "input": 0.5,
-            "output": 3
-          },
           "input": 0.5,
+          "input_audio": 1,
           "output": 3
         },
         "description": "Gemini 3 Flash Preview は google-vertex によって提供される AI モデルです。",
@@ -43417,7 +44649,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3 Pro Preview は google-vertex によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -43452,8 +44695,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.025,
-          "cache_write": 1,
           "input": 0.25,
+          "input_audio": 0.5,
           "output": 1.5
         },
         "description": "Gemini 3.1 Flash Lite は google-vertex によって提供される AI モデルです。",
@@ -43489,8 +44732,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.025,
-          "cache_write": 1,
           "input": 0.25,
+          "input_audio": 0.5,
           "output": 1.5
         },
         "description": "Gemini 3.1 Flash Lite Preview は google-vertex によって提供される AI モデルです。",
@@ -43532,7 +44775,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview は google-vertex によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -43573,7 +44827,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview Custom Tools は google-vertex によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -44213,7 +45478,19 @@
             "output": 37.5
           },
           "input": 5,
-          "output": 25
+          "output": 25,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Opus 4.6 は google-vertex-anthropic によって提供される AI モデルです。",
         "family": "claude-opus",
@@ -44253,7 +45530,19 @@
             "output": 37.5
           },
           "input": 5,
-          "output": 25
+          "output": 25,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Opus 4.7 は google-vertex-anthropic によって提供される AI モデルです。",
         "family": "claude-opus",
@@ -44361,7 +45650,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.6,
+              "cache_write": 7.5,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4.6 は google-vertex-anthropic によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -56881,19 +58182,16 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.16,
-          "input": 0.95,
-          "output": 4
+          "cache_read": 0.375,
+          "input": 0.75,
+          "output": 3.5
         },
         "description": "MoonshotAI: Kimi K2.6 は kilo によって提供される AI モデルです。",
         "id": "moonshotai/kimi-k2.6",
-        "interleaved": {
-          "field": "reasoning_details"
-        },
-        "last_updated": "2026-04-20",
+        "last_updated": "2026-05-12",
         "limit": {
           "context": 262144,
-          "output": 262144
+          "output": 65535
         },
         "modalities": {
           "input": [
@@ -62078,7 +63376,18 @@
             "output": 6
           },
           "input": 1,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Xiaomi: MiMo-V2-Pro は kilo によって提供される AI モデルです。",
         "family": "mimo",
@@ -62114,7 +63423,18 @@
             "output": 4
           },
           "input": 0.4,
-          "output": 2
+          "output": 2,
+          "tiers": [
+            {
+              "cache_read": 0.16,
+              "input": 0.8,
+              "output": 4,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Xiaomi: MiMo-V2.5 は kilo によって提供される AI モデルです。",
         "family": "mimo",
@@ -62156,7 +63476,18 @@
             "output": 6
           },
           "input": 1,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Xiaomi: MiMo V2.5 Pro は kilo によって提供される AI モデルです。",
         "family": "mimo",
@@ -64158,8 +65489,9 @@
       "gemini-2.5-flash-lite": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.025,
+          "cache_read": 0.01,
           "input": 0.1,
+          "input_audio": 0.3,
           "output": 0.4
         },
         "description": "Gemini 2.5 Flash Lite は llmgateway によって提供される AI モデルです。",
@@ -64237,7 +65569,18 @@
             "output": 15
           },
           "input": 1.25,
-          "output": 10
+          "output": 10,
+          "tiers": [
+            {
+              "cache_read": 0.25,
+              "input": 2.5,
+              "output": 15,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 2.5 Pro は llmgateway によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -64272,12 +65615,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.05,
-          "context_over_200k": {
-            "cache_read": 0.05,
-            "input": 0.5,
-            "output": 3
-          },
           "input": 0.5,
+          "input_audio": 1,
           "output": 3
         },
         "description": "Gemini 3 Flash Preview は llmgateway によって提供される AI モデルです。",
@@ -64313,8 +65652,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.025,
-          "cache_write": 1,
           "input": 0.25,
+          "input_audio": 0.5,
           "output": 1.5
         },
         "description": "Gemini 3.1 Flash Lite は llmgateway によって提供される AI モデルです。",
@@ -64350,8 +65689,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.025,
-          "cache_write": 1,
           "input": 0.25,
+          "input_audio": 0.5,
           "output": 1.5
         },
         "description": "Gemini 3.1 Flash Lite Preview は llmgateway によって提供される AI モデルです。",
@@ -64393,7 +65732,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview は llmgateway によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -66132,7 +67482,18 @@
             "output": 45
           },
           "input": 5,
-          "output": 30
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 は llmgateway によって提供される AI モデルです。",
         "experimental": {
@@ -66186,7 +67547,17 @@
             "output": 270
           },
           "input": 30,
-          "output": 180
+          "output": 180,
+          "tiers": [
+            {
+              "input": 60,
+              "output": 270,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 Pro は llmgateway によって提供される AI モデルです。",
         "family": "gpt-pro",
@@ -66475,7 +67846,18 @@
             "output": 12
           },
           "input": 2,
-          "output": 6
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 12,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.20 (Non-Reasoning) は llmgateway によって提供される AI モデルです。",
         "family": "grok",
@@ -66511,7 +67893,18 @@
             "output": 12
           },
           "input": 2,
-          "output": 6
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 12,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.20 (Reasoning) は llmgateway によって提供される AI モデルです。",
         "family": "grok",
@@ -66547,7 +67940,18 @@
             "output": 5
           },
           "input": 1.25,
-          "output": 2.5
+          "output": 2.5,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2.5,
+              "output": 5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.3 は llmgateway によって提供される AI モデルです。",
         "family": "grok",
@@ -67320,7 +68724,18 @@
             "output": 6
           },
           "input": 1,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "MiMo-V2-Pro は llmgateway によって提供される AI モデルです。",
         "family": "mimo",
@@ -67359,7 +68774,18 @@
             "output": 4
           },
           "input": 0.4,
-          "output": 2
+          "output": 2,
+          "tiers": [
+            {
+              "cache_read": 0.16,
+              "input": 0.8,
+              "output": 4,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "MiMo-V2.5 は llmgateway によって提供される AI モデルです。",
         "family": "mimo",
@@ -67401,7 +68827,18 @@
             "output": 6
           },
           "input": 1,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "MiMo-V2.5-Pro は llmgateway によって提供される AI モデルです。",
         "family": "mimo",
@@ -69256,10 +70693,28 @@
       "qwen3.6-plus": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
-          "cache_write": 0.344,
-          "input": 0.276,
-          "output": 1.651
+          "cache_read": 0.05,
+          "cache_write": 0.625,
+          "context_over_200k": {
+            "cache_read": 0.2,
+            "cache_write": 2.5,
+            "input": 2,
+            "output": 6
+          },
+          "input": 0.5,
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.2,
+              "cache_write": 2.5,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen3.6 Plus は llmgateway によって提供される AI モデルです。",
         "family": "qwen",
@@ -98243,7 +99698,18 @@
             "output": 22.5
           },
           "input": 2.5,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.5,
+              "input": 5,
+              "output": 22.5,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.4 は openai によって提供される AI モデルです。",
         "experimental": {
@@ -98381,7 +99847,17 @@
             "output": 270
           },
           "input": 30,
-          "output": 180
+          "output": 180,
+          "tiers": [
+            {
+              "input": 60,
+              "output": 270,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.4 Pro は openai によって提供される AI モデルです。",
         "family": "gpt-pro",
@@ -98420,7 +99896,18 @@
             "output": 45
           },
           "input": 5,
-          "output": 30
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 は openai によって提供される AI モデルです。",
         "experimental": {
@@ -98474,7 +99961,17 @@
             "output": 270
           },
           "input": 30,
-          "output": 180
+          "output": 180,
+          "tiers": [
+            {
+              "input": 60,
+              "output": 270,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 Pro は openai によって提供される AI モデルです。",
         "family": "gpt-pro",
@@ -99298,7 +100795,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.6,
+              "cache_write": 7.5,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4 は opencode によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -99341,7 +100850,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.6,
+              "cache_write": 7.5,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4.5 は opencode によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -99495,7 +101016,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3 Pro は opencode によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -99540,7 +101072,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview は opencode によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -100197,7 +101740,18 @@
             "output": 22.5
           },
           "input": 2.5,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.5,
+              "input": 5,
+              "output": 22.5,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.4 は opencode によって提供される AI モデルです。",
         "family": "gpt",
@@ -100354,7 +101908,18 @@
             "output": 45
           },
           "input": 5,
-          "output": 30
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 は opencode によって提供される AI モデルです。",
         "family": "gpt",
@@ -101485,7 +103050,18 @@
             "output": 6
           },
           "input": 1,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "MiMo V2 Pro は opencode-go によって提供される AI モデルです。",
         "family": "mimo-v2-pro",
@@ -101525,7 +103101,18 @@
             "output": 4
           },
           "input": 0.4,
-          "output": 2
+          "output": 2,
+          "tiers": [
+            {
+              "cache_read": 0.16,
+              "input": 0.8,
+              "output": 4,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "MiMo V2.5 は opencode-go によって提供される AI モデルです。",
         "family": "mimo-v2.5",
@@ -101567,7 +103154,18 @@
             "output": 6
           },
           "input": 1,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "MiMo V2.5 Pro は opencode-go によって提供される AI モデルです。",
         "family": "mimo-v2.5-pro",
@@ -101606,9 +103204,6 @@
         "description": "MiniMax M2.5 は opencode-go によって提供される AI モデルです。",
         "family": "minimax-m2.5",
         "id": "minimax-m2.5",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
         "knowledge": "2025-01",
         "last_updated": "2026-02-12",
         "limit": {
@@ -101625,6 +103220,9 @@
         },
         "name": "MiniMax M2.5",
         "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
         "release_date": "2026-02-12",
         "temperature": true,
@@ -101971,7 +103569,19 @@
             "output": 37.5
           },
           "input": 5,
-          "output": 25
+          "output": 25,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Opus 4.6 は openrouter によって提供される AI モデルです。",
         "family": "claude-opus",
@@ -102012,7 +103622,19 @@
             "output": 37.5
           },
           "input": 5,
-          "output": 25
+          "output": 25,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Opus 4.7 は openrouter によって提供される AI モデルです。",
         "family": "claude-opus",
@@ -102053,7 +103675,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.6,
+              "cache_write": 7.5,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4 は openrouter によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -102093,7 +103727,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.6,
+              "cache_write": 7.5,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4.5 は openrouter によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -102134,7 +103780,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.6,
+              "cache_write": 7.5,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4.6 は openrouter によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -102916,7 +104574,18 @@
             "output": 15
           },
           "input": 1.25,
-          "output": 10
+          "output": 10,
+          "tiers": [
+            {
+              "cache_read": 0.25,
+              "input": 2.5,
+              "output": 15,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 2.5 Pro は openrouter によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -103178,7 +104847,18 @@
           },
           "input": 2,
           "output": 12,
-          "reasoning": 12
+          "reasoning": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview は openrouter によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -103222,7 +104902,18 @@
           },
           "input": 2,
           "output": 12,
-          "reasoning": 12
+          "reasoning": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview Custom Tools は openrouter によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -105620,7 +107311,18 @@
             "output": 22.5
           },
           "input": 2.5,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.5,
+              "input": 5,
+              "output": 22.5,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.4 は openrouter によって提供される AI モデルです。",
         "family": "gpt",
@@ -105763,7 +107465,18 @@
             "output": 45
           },
           "input": 5,
-          "output": 30
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 は openrouter によって提供される AI モデルです。",
         "family": "gpt",
@@ -105801,7 +107514,17 @@
             "output": 270
           },
           "input": 30,
-          "output": 180
+          "output": 180,
+          "tiers": [
+            {
+              "input": 60,
+              "output": 270,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 Pro は openrouter によって提供される AI モデルです。",
         "family": "gpt-pro",
@@ -107183,7 +108906,17 @@
           "cache_read": 0.75,
           "cache_write": 15,
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "input": 6,
+              "output": 30,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4 は openrouter によって提供される AI モデルです。",
         "family": "grok",
@@ -107283,11 +109016,23 @@
         "cost": {
           "cache_read": 0.2,
           "context_over_200k": {
+            "cache_read": 0.4,
             "input": 4,
             "output": 12
           },
           "input": 2,
-          "output": 6
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 12,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.20 Beta は openrouter によって提供される AI モデルです。",
         "family": "grok",
@@ -107319,11 +109064,23 @@
         "cost": {
           "cache_read": 0.2,
           "context_over_200k": {
+            "cache_read": 0.4,
             "input": 4,
             "output": 12
           },
           "input": 2,
-          "output": 6
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 12,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.20 Multi - Agent Beta は openrouter によって提供される AI モデルです。",
         "family": "grok",
@@ -107360,7 +109117,18 @@
             "output": 5
           },
           "input": 1.25,
-          "output": 2.5
+          "output": 2.5,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2.5,
+              "output": 5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.3 は openrouter によって提供される AI モデルです。",
         "family": "grok",
@@ -107501,7 +109269,18 @@
             "output": 6
           },
           "input": 1,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Xiaomi: MiMo-V2-Pro は openrouter によって提供される AI モデルです。",
         "family": "mimo",
@@ -107540,7 +109319,18 @@
             "output": 4
           },
           "input": 0.4,
-          "output": 2
+          "output": 2,
+          "tiers": [
+            {
+              "cache_read": 0.16,
+              "input": 0.8,
+              "output": 4,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Xiaomi: MiMo-V2.5 は openrouter によって提供される AI モデルです。",
         "family": "mimo",
@@ -107582,7 +109372,18 @@
             "output": 6
           },
           "input": 1,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Xiaomi: MiMo-V2.5-Pro は openrouter によって提供される AI モデルです。",
         "family": "mimo",
@@ -108694,7 +110495,18 @@
             "output": 15
           },
           "input": 1.25,
-          "output": 10
+          "output": 10,
+          "tiers": [
+            {
+              "cache_read": 0.25,
+              "input": 2.5,
+              "output": 15,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 2.5 Pro は perplexity-agent によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -108734,7 +110546,18 @@
             "output": 3
           },
           "input": 0.5,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.05,
+              "input": 0.5,
+              "output": 3,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3 Flash Preview は perplexity-agent によって提供される AI モデルです。",
         "family": "gemini-flash",
@@ -108774,7 +110597,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview は perplexity-agent によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -113288,7 +115122,17 @@
             "output": 0.71
           },
           "input": 0.09,
-          "output": 0.71
+          "output": 0.71,
+          "tiers": [
+            {
+              "input": 0.09,
+              "output": 0.71,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 2.5 Flash は qihang-ai によって提供される AI モデルです。",
         "family": "gemini-flash",
@@ -113327,7 +115171,17 @@
             "output": 0.43
           },
           "input": 0.07,
-          "output": 0.43
+          "output": 0.43,
+          "tiers": [
+            {
+              "input": 0.07,
+              "output": 0.43,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3 Flash Preview は qihang-ai によって提供される AI モデルです。",
         "family": "gemini-flash",
@@ -116463,7 +118317,19 @@
             "output": 37.5
           },
           "input": 5,
-          "output": 25
+          "output": 25,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Opus 4.6 は requesty によって提供される AI モデルです。",
         "family": "claude-opus",
@@ -116572,7 +118438,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.6,
+              "cache_write": 7.5,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4.6 は requesty によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -116647,7 +118525,18 @@
             "output": 15
           },
           "input": 1.25,
-          "output": 10
+          "output": 10,
+          "tiers": [
+            {
+              "cache_read": 0.25,
+              "input": 2.5,
+              "output": 15,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 2.5 Pro は requesty によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -117415,7 +119304,18 @@
             "output": 22.5
           },
           "input": 2.5,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.5,
+              "input": 5,
+              "output": 22.5,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.4 は requesty によって提供される AI モデルです。",
         "family": "gpt",
@@ -126981,7 +128881,18 @@
             "output": 22.5
           },
           "input": 2.5,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.5,
+              "input": 5,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview は venice によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -127186,7 +129097,18 @@
             "output": 5.67
           },
           "input": 1.42,
-          "output": 2.83
+          "output": 2.83,
+          "tiers": [
+            {
+              "cache_read": 0.45,
+              "input": 2.83,
+              "output": 5.67,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.20 は venice によって提供される AI モデルです。",
         "family": "grok",
@@ -127223,7 +129145,18 @@
             "output": 5.67
           },
           "input": 1.42,
-          "output": 2.83
+          "output": 2.83,
+          "tiers": [
+            {
+              "cache_read": 0.45,
+              "input": 2.83,
+              "output": 5.67,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.20 Multi-Agent は venice によって提供される AI モデルです。",
         "family": "grok",
@@ -127260,7 +129193,18 @@
             "output": 5.67
           },
           "input": 1.42,
-          "output": 2.83
+          "output": 2.83,
+          "tiers": [
+            {
+              "cache_read": 0.45,
+              "input": 2.83,
+              "output": 5.67,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.3 は venice によって提供される AI モデルです。",
         "family": "grok",
@@ -127958,7 +129902,17 @@
             "output": 337.5
           },
           "input": 37.5,
-          "output": 225
+          "output": 225,
+          "tiers": [
+            {
+              "input": 75,
+              "output": 337.5,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.4 Pro は venice によって提供される AI モデルです。",
         "family": "gpt-pro",
@@ -127995,7 +129949,18 @@
             "output": 56.25
           },
           "input": 6.25,
-          "output": 37.5
+          "output": 37.5,
+          "tiers": [
+            {
+              "cache_read": 1.25,
+              "input": 12.5,
+              "output": 56.25,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 は venice によって提供される AI モデルです。",
         "family": "gpt",
@@ -128095,7 +130060,19 @@
             "output": 7.5
           },
           "input": 0.625,
-          "output": 3.75
+          "output": 3.75,
+          "tiers": [
+            {
+              "cache_read": 0.0625,
+              "cache_write": 0.78,
+              "input": 2.5,
+              "output": 7.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen 3.6 Plus Uncensored は venice によって提供される AI モデルです。",
         "family": "qwen",
@@ -130124,7 +132101,19 @@
             "output": 22.5
           },
           "input": 3,
-          "output": 15
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.6,
+              "cache_write": 7.5,
+              "input": 6,
+              "output": 22.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Claude Sonnet 4.6 は vercel によって提供される AI モデルです。",
         "family": "claude-sonnet",
@@ -131048,7 +133037,18 @@
             "output": 15
           },
           "input": 1.25,
-          "output": 10
+          "output": 10,
+          "tiers": [
+            {
+              "cache_read": 0.25,
+              "input": 2.5,
+              "output": 15,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 2.5 Pro は vercel によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -131153,7 +133153,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3 Pro Preview は vercel によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -136549,7 +138560,18 @@
             "output": 18
           },
           "input": 2,
-          "output": 12
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview は vivgrid によって提供される AI モデルです。",
         "family": "gemini-pro",
@@ -136873,7 +138895,18 @@
             "output": 45
           },
           "input": 5,
-          "output": 30
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 は vivgrid によって提供される AI モデルです。",
         "family": "gpt",
@@ -137082,42 +139115,6 @@
     "iconURL": "https://models.dev/logos/wafer.ai.svg",
     "id": "wafer.ai",
     "models": {
-      "DeepSeek-V4-Pro": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "DeepSeek V4 Pro は wafer.ai によって提供される AI モデルです。",
-        "family": "deepseek-thinking",
-        "id": "DeepSeek-V4-Pro",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2025-05",
-        "last_updated": "2026-04-24",
-        "limit": {
-          "context": 1000000,
-          "output": 384000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Pro",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2026-04-24",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "GLM-5.1": {
         "attachment": false,
         "cost": {
@@ -137148,37 +139145,6 @@
         "reasoning": true,
         "release_date": "2026-04-07",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "MiniMax-M2.7": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "MiniMax-M2.7 は wafer.ai によって提供される AI モデルです。",
-        "family": "minimax",
-        "id": "MiniMax-M2.7",
-        "last_updated": "2026-03-18",
-        "limit": {
-          "context": 204800,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax-M2.7",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2026-03-18",
         "temperature": true,
         "tool_call": true
       },
@@ -138412,7 +140378,18 @@
             "output": 12
           },
           "input": 2,
-          "output": 6
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 12,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.20 (Non-Reasoning) は xai によって提供される AI モデルです。",
         "family": "grok",
@@ -138448,7 +140425,18 @@
             "output": 12
           },
           "input": 2,
-          "output": 6
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 12,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.20 (Reasoning) は xai によって提供される AI モデルです。",
         "family": "grok",
@@ -138484,7 +140472,18 @@
             "output": 12
           },
           "input": 2,
-          "output": 6
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 12,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.20 Multi-Agent は xai によって提供される AI モデルです。",
         "family": "grok",
@@ -138520,7 +140519,18 @@
             "output": 5
           },
           "input": 1.25,
-          "output": 2.5
+          "output": 2.5,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2.5,
+              "output": 5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok 4.3 は xai によって提供される AI モデルです。",
         "family": "grok",
@@ -138735,7 +140745,18 @@
             "output": 6
           },
           "input": 1,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "MiMo-V2-Pro は xiaomi によって提供される AI モデルです。",
         "family": "mimo",
@@ -138774,7 +140795,18 @@
             "output": 4
           },
           "input": 0.4,
-          "output": 2
+          "output": 2,
+          "tiers": [
+            {
+              "cache_read": 0.16,
+              "input": 0.8,
+              "output": 4,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "MiMo-V2.5 は xiaomi によって提供される AI モデルです。",
         "family": "mimo",
@@ -138816,7 +140848,18 @@
             "output": 6
           },
           "input": 1,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "MiMo-V2.5-Pro は xiaomi によって提供される AI モデルです。",
         "family": "mimo",
@@ -138934,11 +140977,6 @@
         "attachment": false,
         "cost": {
           "cache_read": 0,
-          "context_over_200k": {
-            "cache_read": 0.4,
-            "input": 2,
-            "output": 6
-          },
           "input": 0,
           "output": 0
         },
@@ -139001,11 +141039,6 @@
         "attachment": true,
         "cost": {
           "cache_read": 0,
-          "context_over_200k": {
-            "cache_read": 0,
-            "input": 0,
-            "output": 0
-          },
           "input": 0,
           "output": 0
         },
@@ -139043,11 +141076,6 @@
         "attachment": false,
         "cost": {
           "cache_read": 0,
-          "context_over_200k": {
-            "cache_read": 0,
-            "input": 0,
-            "output": 0
-          },
           "input": 0,
           "output": 0
         },
@@ -139167,11 +141195,6 @@
         "attachment": false,
         "cost": {
           "cache_read": 0,
-          "context_over_200k": {
-            "cache_read": 0.4,
-            "input": 2,
-            "output": 6
-          },
           "input": 0,
           "output": 0
         },
@@ -139234,11 +141257,6 @@
         "attachment": true,
         "cost": {
           "cache_read": 0,
-          "context_over_200k": {
-            "cache_read": 0,
-            "input": 0,
-            "output": 0
-          },
           "input": 0,
           "output": 0
         },
@@ -139276,11 +141294,6 @@
         "attachment": false,
         "cost": {
           "cache_read": 0,
-          "context_over_200k": {
-            "cache_read": 0,
-            "input": 0,
-            "output": 0
-          },
           "input": 0,
           "output": 0
         },
@@ -139400,11 +141413,6 @@
         "attachment": false,
         "cost": {
           "cache_read": 0,
-          "context_over_200k": {
-            "cache_read": 0.4,
-            "input": 2,
-            "output": 6
-          },
           "input": 0,
           "output": 0
         },
@@ -139467,11 +141475,6 @@
         "attachment": true,
         "cost": {
           "cache_read": 0,
-          "context_over_200k": {
-            "cache_read": 0,
-            "input": 0,
-            "output": 0
-          },
           "input": 0,
           "output": 0
         },
@@ -139509,11 +141512,6 @@
         "attachment": false,
         "cost": {
           "cache_read": 0,
-          "context_over_200k": {
-            "cache_read": 0,
-            "input": 0,
-            "output": 0
-          },
           "input": 0,
           "output": 0
         },
@@ -141970,7 +143968,18 @@
             "output": 45
           },
           "input": 5,
-          "output": 30
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 は zenmux によって提供される AI モデルです。",
         "experimental": {
@@ -142024,7 +144033,17 @@
             "output": 270
           },
           "input": 30,
-          "output": 180
+          "output": 180,
+          "tiers": [
+            {
+              "input": 60,
+              "output": 270,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.5 Pro は zenmux によって提供される AI モデルです。",
         "family": "gpt-pro",
@@ -142186,7 +144205,19 @@
             "output": 6
           },
           "input": 0.5,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.2,
+              "cache_write": 2.5,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen3.6-Plus は zenmux によって提供される AI モデルです。",
         "id": "qwen/qwen3.6-plus",
@@ -142870,7 +144901,18 @@
             "output": 6
           },
           "input": 1,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "MiMo V2 Pro は zenmux によって提供される AI モデルです。",
         "family": "mimo",
@@ -142906,7 +144948,18 @@
             "output": 4
           },
           "input": 0.4,
-          "output": 2
+          "output": 2,
+          "tiers": [
+            {
+              "cache_read": 0.16,
+              "input": 0.8,
+              "output": 4,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "MiMo-V2.5 は zenmux によって提供される AI モデルです。",
         "family": "mimo",
@@ -142948,7 +145001,18 @@
             "output": 6
           },
           "input": 1,
-          "output": 3
+          "output": 3,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "MiMo-V2.5-Pro は zenmux によって提供される AI モデルです。",
         "family": "mimo",

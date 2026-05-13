@@ -136,7 +136,19 @@
           "output": 37.5
         },
         "input": 5,
-        "output": 25
+        "output": 25,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "cache_write": 12.5,
+            "input": 10,
+            "output": 37.5,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Claude Opus 4.6 is an AI model provided by azure.",
       "family": "claude-opus",
@@ -1638,7 +1650,18 @@
           "output": 22.5
         },
         "input": 2.5,
-        "output": 15
+        "output": 15,
+        "tiers": [
+          {
+            "cache_read": 0.5,
+            "input": 5,
+            "output": 22.5,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "GPT-5.4 is an AI model provided by azure.",
       "family": "gpt",
@@ -1746,7 +1769,17 @@
           "output": 270
         },
         "input": 30,
-        "output": 180
+        "output": 180,
+        "tiers": [
+          {
+            "input": 60,
+            "output": 270,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "GPT-5.4 Pro is an AI model provided by azure.",
       "family": "gpt-pro",
@@ -1785,7 +1818,18 @@
           "output": 45
         },
         "input": 5,
-        "output": 30
+        "output": 30,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "input": 10,
+            "output": 45,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "GPT-5.5 is an AI model provided by azure.",
       "family": "gpt",

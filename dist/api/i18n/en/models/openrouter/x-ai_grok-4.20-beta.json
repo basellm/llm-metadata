@@ -3,11 +3,23 @@
   "cost": {
     "cache_read": 0.2,
     "context_over_200k": {
+      "cache_read": 0.4,
       "input": 4,
       "output": 12
     },
     "input": 2,
-    "output": 6
+    "output": 6,
+    "tiers": [
+      {
+        "cache_read": 0.4,
+        "input": 4,
+        "output": 12,
+        "tier": {
+          "size": 200000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Grok 4.20 Beta is an AI model provided by openrouter.",
   "family": "grok",

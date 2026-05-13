@@ -946,6 +946,109 @@
       "temperature": true,
       "tool_call": true
     },
+    "xiaomi/mimo-v2.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.08,
+        "context_over_200k": {
+          "cache_read": 0.16,
+          "input": 0.8,
+          "output": 4
+        },
+        "input": 0.4,
+        "output": 2,
+        "tiers": [
+          {
+            "cache_read": 0.16,
+            "input": 0.8,
+            "output": 4,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "MiMo-V2.5 is an AI model provided by deepinfra.",
+      "family": "mimo",
+      "id": "xiaomi/mimo-v2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "xiaomi/mimo-v2.5-pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2,
+          "output": 6
+        },
+        "input": 1,
+        "output": 3,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "MiMo-V2.5-Pro is an AI model provided by deepinfra.",
+      "family": "mimo",
+      "id": "xiaomi/mimo-v2.5-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 1048576,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.5-Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-22",
+      "temperature": true,
+      "tool_call": true
+    },
     "zai-org/GLM-4.5": {
       "attachment": false,
       "cost": {

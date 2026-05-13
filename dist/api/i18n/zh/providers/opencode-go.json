@@ -265,7 +265,18 @@
           "output": 6
         },
         "input": 1,
-        "output": 3
+        "output": 3,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "MiMo V2 Pro 是由 opencode-go 提供的人工智能模型。",
       "family": "mimo-v2-pro",
@@ -305,7 +316,18 @@
           "output": 4
         },
         "input": 0.4,
-        "output": 2
+        "output": 2,
+        "tiers": [
+          {
+            "cache_read": 0.16,
+            "input": 0.8,
+            "output": 4,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "MiMo V2.5 是由 opencode-go 提供的人工智能模型。",
       "family": "mimo-v2.5",
@@ -347,7 +369,18 @@
           "output": 6
         },
         "input": 1,
-        "output": 3
+        "output": 3,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "MiMo V2.5 Pro 是由 opencode-go 提供的人工智能模型。",
       "family": "mimo-v2.5-pro",
@@ -386,9 +419,6 @@
       "description": "MiniMax M2.5 是由 opencode-go 提供的人工智能模型。",
       "family": "minimax-m2.5",
       "id": "minimax-m2.5",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
       "knowledge": "2025-01",
       "last_updated": "2026-02-12",
       "limit": {
@@ -405,6 +435,9 @@
       },
       "name": "MiniMax M2.5",
       "open_weights": true,
+      "provider": {
+        "npm": "@ai-sdk/anthropic"
+      },
       "reasoning": true,
       "release_date": "2026-02-12",
       "temperature": true,

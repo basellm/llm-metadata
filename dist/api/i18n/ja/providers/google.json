@@ -287,8 +287,9 @@
     "gemini-2.5-flash-lite": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.025,
+        "cache_read": 0.01,
         "input": 0.1,
+        "input_audio": 0.3,
         "output": 0.4
       },
       "description": "費用対効果と高スループット向けに最適化された Gemini 2.5 Flash モデル。",
@@ -540,7 +541,18 @@
           "output": 15
         },
         "input": 1.25,
-        "output": 10
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.25,
+            "input": 2.5,
+            "output": 15,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Gemini 2.5 Pro は google によって提供される AI モデルです。",
       "family": "gemini-pro",
@@ -677,12 +689,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.05,
-        "context_over_200k": {
-          "cache_read": 0.05,
-          "input": 0.5,
-          "output": 3
-        },
         "input": 0.5,
+        "input_audio": 1,
         "output": 3
       },
       "description": "Gemini 3 Flash Preview は google によって提供される AI モデルです。",
@@ -724,7 +732,18 @@
           "output": 18
         },
         "input": 2,
-        "output": 12
+        "output": 12,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Gemini 3 Pro Preview は google によって提供される AI モデルです。",
       "family": "gemini-pro",
@@ -758,7 +777,7 @@
     "gemini-3.1-flash-image-preview": {
       "attachment": true,
       "cost": {
-        "input": 0.25,
+        "input": 0.5,
         "output": 60
       },
       "description": "Gemini 3.1 Flash Image (Preview) は google によって提供される AI モデルです。",
@@ -792,8 +811,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.025,
-        "cache_write": 1,
         "input": 0.25,
+        "input_audio": 0.5,
         "output": 1.5
       },
       "description": "Gemini 3.1 Flash Lite は google によって提供される AI モデルです。",
@@ -829,8 +848,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.025,
-        "cache_write": 1,
         "input": 0.25,
+        "input_audio": 0.5,
         "output": 1.5
       },
       "description": "Gemini 3.1 Flash Lite Preview は google によって提供される AI モデルです。",
@@ -872,7 +891,18 @@
           "output": 18
         },
         "input": 2,
-        "output": 12
+        "output": 12,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Gemini 3.1 Pro Preview は google によって提供される AI モデルです。",
       "family": "gemini-pro",
@@ -913,7 +943,18 @@
           "output": 18
         },
         "input": 2,
-        "output": 12
+        "output": 12,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Gemini 3.1 Pro Preview Custom Tools は google によって提供される AI モデルです。",
       "family": "gemini-pro",
