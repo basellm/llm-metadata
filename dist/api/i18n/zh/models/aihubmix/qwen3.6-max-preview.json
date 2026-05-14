@@ -3,12 +3,27 @@
   "cost": {
     "cache_read": 0.1268,
     "cache_write": 1.585,
-    "input": 1.268,
-    "output": 7.608
+    "input": 1.27,
+    "output": 7.61,
+    "tiers": [
+      {
+        "cache_read": 0.2112,
+        "cache_write": 2.64,
+        "input": 2.11,
+        "output": 12.67,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen3.6 Max Preview 是由 aihubmix 提供的人工智能模型。",
-  "family": "qwen",
+  "family": "qwen3.6",
   "id": "qwen3.6-max-preview",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "knowledge": "2025-04",
   "last_updated": "2026-05-09",
   "limit": {

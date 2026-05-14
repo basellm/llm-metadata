@@ -2,8 +2,24 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.125,
+    "context_over_200k": {
+      "cache_read": 0.25,
+      "input": 2.5,
+      "output": 15
+    },
     "input": 1.25,
-    "output": 10
+    "output": 10,
+    "tiers": [
+      {
+        "cache_read": 0.25,
+        "input": 2.5,
+        "output": 15,
+        "tier": {
+          "size": 200000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Gemini 2.5 Pro は aihubmix によって提供される AI モデルです。",
   "family": "gemini-pro",

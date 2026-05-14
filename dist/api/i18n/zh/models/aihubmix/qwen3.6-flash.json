@@ -3,12 +3,33 @@
   "cost": {
     "cache_read": 0.0169,
     "cache_write": 0.21125,
-    "input": 0.169,
-    "output": 1.014
+    "context_over_200k": {
+      "cache_read": 0.0676,
+      "cache_write": 0.845,
+      "input": 0.68,
+      "output": 4.06
+    },
+    "input": 0.17,
+    "output": 1.01,
+    "tiers": [
+      {
+        "cache_read": 0.0676,
+        "cache_write": 0.845,
+        "input": 0.68,
+        "output": 4.06,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen3.6 Flash 是由 aihubmix 提供的人工智能模型。",
-  "family": "qwen",
+  "family": "qwen3.6",
   "id": "qwen3.6-flash",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "knowledge": "2025-04",
   "last_updated": "2026-04-02",
   "limit": {

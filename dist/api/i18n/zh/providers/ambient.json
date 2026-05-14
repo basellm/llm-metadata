@@ -1,0 +1,85 @@
+{
+  "api": "https://api.ambient.xyz/v1",
+  "doc": "https://ambient.xyz",
+  "env": [
+    "AMBIENT_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/ambient.svg",
+  "id": "ambient",
+  "models": {
+    "moonshotai/kimi-k2.6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 0,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Kimi K2.6 是由 ambient 提供的人工智能模型。",
+      "family": "kimi-k2.6",
+      "id": "moonshotai/kimi-k2.6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.1-FP8": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "GLM-5.1 是由 ambient 提供的人工智能模型。",
+      "family": "glm",
+      "id": "zai-org/GLM-5.1-FP8",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-27",
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Ambient",
+  "npm": "@ai-sdk/openai-compatible"
+}

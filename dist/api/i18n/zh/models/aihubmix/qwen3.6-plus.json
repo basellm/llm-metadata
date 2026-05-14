@@ -3,12 +3,33 @@
   "cost": {
     "cache_read": 0.0282,
     "cache_write": 0.3525,
-    "input": 0.282,
-    "output": 1.692
+    "context_over_200k": {
+      "cache_read": 0.1128,
+      "cache_write": 1.41,
+      "input": 1.13,
+      "output": 6.77
+    },
+    "input": 0.28,
+    "output": 1.69,
+    "tiers": [
+      {
+        "cache_read": 0.1128,
+        "cache_write": 1.41,
+        "input": 1.13,
+        "output": 6.77,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen3.6 Plus 是由 aihubmix 提供的人工智能模型。",
-  "family": "qwen",
+  "family": "qwen3.6",
   "id": "qwen3.6-plus",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "knowledge": "2025-04",
   "last_updated": "2026-05-09",
   "limit": {

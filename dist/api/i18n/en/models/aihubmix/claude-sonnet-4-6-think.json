@@ -24,13 +24,16 @@
       }
     ]
   },
-  "description": "Claude Sonnet 4.6 Think is an AI model provided by aihubmix.",
+  "description": "Claude Sonnet 4.6 Thinking is an AI model provided by aihubmix.",
   "family": "claude-sonnet",
   "id": "claude-sonnet-4-6-think",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "knowledge": "2025-08-31",
-  "last_updated": "2026-02-17",
+  "last_updated": "2026-03-13",
   "limit": {
-    "context": 200000,
+    "context": 1000000,
     "output": 64000
   },
   "modalities": {
@@ -43,10 +46,11 @@
       "text"
     ]
   },
-  "name": "Claude Sonnet 4.6 Think",
+  "name": "Claude Sonnet 4.6 Thinking",
   "open_weights": false,
   "reasoning": true,
   "release_date": "2026-02-17",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

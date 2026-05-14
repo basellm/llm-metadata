@@ -1,16 +1,20 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.05916,
-    "input": 0.2958,
-    "output": 1.1832
+    "cache_read": 0.06,
+    "cache_write": 0.375,
+    "input": 0.3,
+    "output": 1.2
   },
-  "description": "MiniMax-M2.7 是由 aihubmix 提供的人工智能模型。",
+  "description": "MiniMax M2.7 是由 aihubmix 提供的人工智能模型。",
   "family": "minimax",
   "id": "minimax-m2.7",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "last_updated": "2026-03-18",
   "limit": {
-    "context": 200000,
+    "context": 204800,
     "output": 128000
   },
   "modalities": {
@@ -21,10 +25,11 @@
       "text"
     ]
   },
-  "name": "MiniMax-M2.7",
+  "name": "MiniMax M2.7",
   "open_weights": true,
   "reasoning": true,
   "release_date": "2026-03-18",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

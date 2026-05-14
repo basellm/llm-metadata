@@ -2,8 +2,24 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.2,
+    "context_over_200k": {
+      "cache_read": 0.4,
+      "input": 4,
+      "output": 18
+    },
     "input": 2,
-    "output": 12
+    "output": 12,
+    "tiers": [
+      {
+        "cache_read": 0.4,
+        "input": 4,
+        "output": 18,
+        "tier": {
+          "size": 200000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Gemini 3.1 Pro Preview 是由 aihubmix 提供的人工智能模型。",
   "family": "gemini-pro",

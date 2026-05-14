@@ -3,12 +3,31 @@
   "cost": {
     "cache_read": 0.5,
     "cache_write": 6.25,
+    "context_over_200k": {
+      "cache_read": 1,
+      "cache_write": 12.5,
+      "input": 10,
+      "output": 37.5
+    },
     "input": 5,
-    "output": 25
+    "output": 25,
+    "tiers": [
+      {
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "input": 10,
+        "output": 37.5,
+        "tier": {
+          "size": 200000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Claude Opus 4.7 is an AI model provided by aihubmix.",
   "family": "claude-opus",
   "id": "claude-opus-4-7",
+  "interleaved": true,
   "knowledge": "2026-01-31",
   "last_updated": "2026-04-16",
   "limit": {
@@ -29,6 +48,7 @@
   "open_weights": false,
   "reasoning": true,
   "release_date": "2026-04-16",
+  "structured_output": true,
   "temperature": false,
   "tool_call": true
 }
