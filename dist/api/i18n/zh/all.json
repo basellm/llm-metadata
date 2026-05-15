@@ -17322,6 +17322,166 @@
     "name": "Anthropic",
     "npm": "@ai-sdk/anthropic"
   },
+  "atomic-chat": {
+    "api": "http://127.0.0.1:1337/v1",
+    "doc": "https://atomic.chat",
+    "env": [
+      "ATOMIC_CHAT_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/atomic-chat.svg",
+    "id": "atomic-chat",
+    "models": {
+      "Meta-Llama-3_1-8B-Instruct-GGUF": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Meta Llama 3.1 8B Instruct (GGUF) 是由 atomic-chat 提供的人工智能模型。",
+        "family": "llama",
+        "id": "Meta-Llama-3_1-8B-Instruct-GGUF",
+        "last_updated": "2024-07-23",
+        "limit": {
+          "context": 131072,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Meta Llama 3.1 8B Instruct (GGUF)",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-07-23",
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen3_5-9B-MLX-4bit": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen 3.5 9B (MLX 4-bit) 是由 atomic-chat 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "Qwen3_5-9B-MLX-4bit",
+        "last_updated": "2026-04-04",
+        "limit": {
+          "context": 32768,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.5 9B (MLX 4-bit)",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-03-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen3_5-9B-Q4_K_M": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen 3.5 9B (Q4_K_M) 是由 atomic-chat 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "Qwen3_5-9B-Q4_K_M",
+        "last_updated": "2026-04-04",
+        "limit": {
+          "context": 32768,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.5 9B (Q4_K_M)",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-03-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemma-4-E4B-it-IQ4_XS": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemma 4 E4B Instruct (IQ4_XS) 是由 atomic-chat 提供的人工智能模型。",
+        "family": "gemma",
+        "id": "gemma-4-E4B-it-IQ4_XS",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 32768,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 E4B Instruct (IQ4_XS)",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-04-02",
+        "temperature": true,
+        "tool_call": false
+      },
+      "gemma-4-E4B-it-MLX-4bit": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Gemma 4 E4B Instruct (MLX 4-bit) 是由 atomic-chat 提供的人工智能模型。",
+        "family": "gemma",
+        "id": "gemma-4-E4B-it-MLX-4bit",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 32768,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 E4B Instruct (MLX 4-bit)",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-04-02",
+        "temperature": true,
+        "tool_call": false
+      }
+    },
+    "name": "Atomic Chat",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "auriko": {
     "api": "https://api.auriko.ai/v1",
     "doc": "https://docs.auriko.ai",
@@ -43087,6 +43247,304 @@
     },
     "name": "GitLab Duo",
     "npm": "gitlab-ai-provider"
+  },
+  "gmicloud": {
+    "api": "https://api.gmi-serving.com/v1",
+    "doc": "https://docs.gmicloud.ai/inference-engine/api-reference/llm-api-reference",
+    "env": [
+      "GMICLOUD_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/gmicloud.svg",
+    "id": "gmicloud",
+    "models": {
+      "anthropic/claude-opus-4.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "input": 5,
+          "output": 25
+        },
+        "description": "Claude Opus 4.6 是由 gmicloud 提供的人工智能模型。",
+        "family": "claude-opus",
+        "id": "anthropic/claude-opus-4.6",
+        "knowledge": "2025-05-31",
+        "last_updated": "2026-03-13",
+        "limit": {
+          "context": 409600,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-opus-4.7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.45,
+          "input": 4.5,
+          "output": 22.5
+        },
+        "description": "Claude Opus 4.7 是由 gmicloud 提供的人工智能模型。",
+        "experimental": {
+          "modes": {
+            "fast": {
+              "cost": {
+                "cache_read": 3,
+                "cache_write": 37.5,
+                "input": 30,
+                "output": 150
+              },
+              "provider": {
+                "body": {
+                  "speed": "fast"
+                },
+                "headers": {
+                  "anthropic-beta": "fast-mode-2026-02-01"
+                }
+              }
+            }
+          }
+        },
+        "family": "claude-opus",
+        "id": "anthropic/claude-opus-4.7",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-04-16",
+        "limit": {
+          "context": 409600,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-04-16",
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-sonnet-4.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude Sonnet 4.6 是由 gmicloud 提供的人工智能模型。",
+        "family": "claude-sonnet",
+        "id": "anthropic/claude-sonnet-4.6",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-13",
+        "limit": {
+          "context": 409600,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-02-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-ai/DeepSeek-V4-Flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.022,
+          "input": 0.112,
+          "output": 0.224
+        },
+        "description": "DeepSeek V4 Flash 是由 gmicloud 提供的人工智能模型。",
+        "family": "deepseek-flash",
+        "id": "deepseek-ai/DeepSeek-V4-Flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1048575,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-ai/DeepSeek-V4-Pro": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.116,
+          "input": 1.392,
+          "output": 2.784
+        },
+        "description": "DeepSeek V4 Pro 是由 gmicloud 提供的人工智能模型。",
+        "family": "deepseek-thinking",
+        "id": "deepseek-ai/DeepSeek-V4-Pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1048576,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/Kimi-K2.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.144,
+          "input": 0.855,
+          "output": 3.6
+        },
+        "description": "Kimi K2.6 是由 gmicloud 提供的人工智能模型。",
+        "family": "kimi-k2.6",
+        "id": "moonshotai/Kimi-K2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 65536,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-5-FP8": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.12,
+          "input": 0.6,
+          "output": 1.92
+        },
+        "description": "GLM-5 是由 gmicloud 提供的人工智能模型。",
+        "family": "glm",
+        "id": "zai-org/GLM-5-FP8",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 202752,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-5.1-FP8": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.182,
+          "input": 0.98,
+          "output": 3.08
+        },
+        "description": "GLM-5.1 是由 gmicloud 提供的人工智能模型。",
+        "family": "glm",
+        "id": "zai-org/GLM-5.1-FP8",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-27",
+        "limit": {
+          "context": 202752,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "GMI Cloud",
+    "npm": "@ai-sdk/openai-compatible"
   },
   "google": {
     "doc": "https://ai.google.dev/gemini-api/docs/models",
@@ -73095,7 +73553,7 @@
   },
   "minimax-cn-coding-plan": {
     "api": "https://api.minimaxi.com/anthropic/v1",
-    "doc": "https://platform.minimaxi.com/docs/coding-plan/intro",
+    "doc": "https://platform.minimaxi.com/docs/token-plan/intro",
     "env": [
       "MINIMAX_API_KEY"
     ],
@@ -73285,12 +73743,12 @@
         "tool_call": true
       }
     },
-    "name": "MiniMax Coding Plan (minimaxi.com)",
+    "name": "MiniMax Token Plan (minimaxi.com)",
     "npm": "@ai-sdk/anthropic"
   },
   "minimax-coding-plan": {
     "api": "https://api.minimax.io/anthropic/v1",
-    "doc": "https://platform.minimax.io/docs/coding-plan/intro",
+    "doc": "https://platform.minimax.io/docs/token-plan/intro",
     "env": [
       "MINIMAX_API_KEY"
     ],
@@ -73480,7 +73938,7 @@
         "tool_call": true
       }
     },
-    "name": "MiniMax Coding Plan (minimax.io)",
+    "name": "MiniMax Token Plan (minimax.io)",
     "npm": "@ai-sdk/anthropic"
   },
   "mistral": {
@@ -104718,7 +105176,7 @@
         "tool_call": true
       },
       "qwen3.6-plus-free": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -104727,18 +105185,17 @@
         "description": "Qwen3.6 Plus Free 是由 opencode 提供的人工智能模型。",
         "family": "qwen-free",
         "id": "qwen3.6-plus-free",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-03-30",
+        "knowledge": "2025-04",
+        "last_updated": "2026-04-02",
         "limit": {
-          "context": 1048576,
-          "output": 64000
+          "context": 262144,
+          "output": 65536
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image",
+            "video"
           ],
           "output": [
             "text"
@@ -104746,9 +105203,11 @@
         },
         "name": "Qwen3.6 Plus Free",
         "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/anthropic"
+        },
         "reasoning": true,
-        "release_date": "2026-03-30",
-        "status": "deprecated",
+        "release_date": "2026-04-02",
         "temperature": true,
         "tool_call": true
       },
@@ -130397,6 +130856,194 @@
     "name": "Together AI",
     "npm": "@ai-sdk/togetherai"
   },
+  "umans-ai-coding-plan": {
+    "api": "https://api.code.umans.ai/v1",
+    "doc": "https://app.umans.ai/offers/code/docs",
+    "env": [
+      "UMANS_AI_CODING_PLAN_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/umans-ai-coding-plan.svg",
+    "id": "umans-ai-coding-plan",
+    "models": {
+      "umans-coder": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Umans Coder 是由 umans-ai-coding-plan 提供的人工智能模型。",
+        "family": "kimi-k2.6",
+        "id": "umans-coder",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Umans Coder",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "umans-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Umans Flash 是由 umans-ai-coding-plan 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "umans-flash",
+        "last_updated": "2026-04-17",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Umans Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-17",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "umans-glm-5.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM 5.1 是由 umans-ai-coding-plan 提供的人工智能模型。",
+        "family": "glm",
+        "id": "umans-glm-5.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-27",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "umans-kimi-k2.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Kimi K2.6 是由 umans-ai-coding-plan 提供的人工智能模型。",
+        "family": "kimi-k2.6",
+        "id": "umans-kimi-k2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "umans-qwen3.6-35b-a3b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen3.6 35B A3B 是由 umans-ai-coding-plan 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "umans-qwen3.6-35b-a3b",
+        "last_updated": "2026-04-17",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 35B A3B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-17",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      }
+    },
+    "name": "Umans AI Coding Plan",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "upstage": {
     "api": "https://api.upstage.ai/v1/solar",
     "doc": "https://developers.upstage.ai/docs/apis/chat",
@@ -130809,6 +131456,39 @@
         "release_date": "2026-04-16",
         "structured_output": true,
         "temperature": false,
+        "tool_call": true
+      },
+      "claude-opus-4-7-fast": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 3.6,
+          "cache_write": 45,
+          "input": 36,
+          "output": 180
+        },
+        "description": "Claude Opus 4.7 Fast 是由 venice 提供的人工智能模型。",
+        "family": "claude-opus",
+        "id": "claude-opus-4-7-fast",
+        "last_updated": "2026-05-14",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.7 Fast",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-14",
+        "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "claude-sonnet-4-5": {

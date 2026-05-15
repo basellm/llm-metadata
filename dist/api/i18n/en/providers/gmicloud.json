@@ -1,0 +1,298 @@
+{
+  "api": "https://api.gmi-serving.com/v1",
+  "doc": "https://docs.gmicloud.ai/inference-engine/api-reference/llm-api-reference",
+  "env": [
+    "GMICLOUD_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/gmicloud.svg",
+  "id": "gmicloud",
+  "models": {
+    "anthropic/claude-opus-4.6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Claude Opus 4.6 is an AI model provided by gmicloud.",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.6",
+      "knowledge": "2025-05-31",
+      "last_updated": "2026-03-13",
+      "limit": {
+        "context": 409600,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-4.7": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.45,
+        "input": 4.5,
+        "output": 22.5
+      },
+      "description": "Claude Opus 4.7 is an AI model provided by gmicloud.",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 3,
+              "cache_write": 37.5,
+              "input": 30,
+              "output": 150
+            },
+            "provider": {
+              "body": {
+                "speed": "fast"
+              },
+              "headers": {
+                "anthropic-beta": "fast-mode-2026-02-01"
+              }
+            }
+          }
+        }
+      },
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.7",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-04-16",
+      "limit": {
+        "context": 409600,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.7",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-16",
+      "temperature": false,
+      "tool_call": true
+    },
+    "anthropic/claude-sonnet-4.6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Claude Sonnet 4.6 is an AI model provided by gmicloud.",
+      "family": "claude-sonnet",
+      "id": "anthropic/claude-sonnet-4.6",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-13",
+      "limit": {
+        "context": 409600,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-ai/DeepSeek-V4-Flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.022,
+        "input": 0.112,
+        "output": 0.224
+      },
+      "description": "DeepSeek V4 Flash is an AI model provided by gmicloud.",
+      "family": "deepseek-flash",
+      "id": "deepseek-ai/DeepSeek-V4-Flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1048575,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-ai/DeepSeek-V4-Pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.116,
+        "input": 1.392,
+        "output": 2.784
+      },
+      "description": "DeepSeek V4 Pro is an AI model provided by gmicloud.",
+      "family": "deepseek-thinking",
+      "id": "deepseek-ai/DeepSeek-V4-Pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.144,
+        "input": 0.855,
+        "output": 3.6
+      },
+      "description": "Kimi K2.6 is an AI model provided by gmicloud.",
+      "family": "kimi-k2.6",
+      "id": "moonshotai/Kimi-K2.6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5-FP8": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.12,
+        "input": 0.6,
+        "output": 1.92
+      },
+      "description": "GLM-5 is an AI model provided by gmicloud.",
+      "family": "glm",
+      "id": "zai-org/GLM-5-FP8",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-11",
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.1-FP8": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.182,
+        "input": 0.98,
+        "output": 3.08
+      },
+      "description": "GLM-5.1 is an AI model provided by gmicloud.",
+      "family": "glm",
+      "id": "zai-org/GLM-5.1-FP8",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-27",
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "GMI Cloud",
+  "npm": "@ai-sdk/openai-compatible"
+}

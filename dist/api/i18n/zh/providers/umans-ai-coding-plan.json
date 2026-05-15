@@ -1,0 +1,188 @@
+{
+  "api": "https://api.code.umans.ai/v1",
+  "doc": "https://app.umans.ai/offers/code/docs",
+  "env": [
+    "UMANS_AI_CODING_PLAN_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/umans-ai-coding-plan.svg",
+  "id": "umans-ai-coding-plan",
+  "models": {
+    "umans-coder": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Umans Coder 是由 umans-ai-coding-plan 提供的人工智能模型。",
+      "family": "kimi-k2.6",
+      "id": "umans-coder",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Umans Coder",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "umans-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Umans Flash 是由 umans-ai-coding-plan 提供的人工智能模型。",
+      "family": "qwen",
+      "id": "umans-flash",
+      "last_updated": "2026-04-17",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Umans Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "umans-glm-5.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "GLM 5.1 是由 umans-ai-coding-plan 提供的人工智能模型。",
+      "family": "glm",
+      "id": "umans-glm-5.1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-27",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "umans-kimi-k2.6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Kimi K2.6 是由 umans-ai-coding-plan 提供的人工智能模型。",
+      "family": "kimi-k2.6",
+      "id": "umans-kimi-k2.6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "umans-qwen3.6-35b-a3b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen3.6 35B A3B 是由 umans-ai-coding-plan 提供的人工智能模型。",
+      "family": "qwen",
+      "id": "umans-qwen3.6-35b-a3b",
+      "last_updated": "2026-04-17",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    }
+  },
+  "name": "Umans AI Coding Plan",
+  "npm": "@ai-sdk/openai-compatible"
+}
