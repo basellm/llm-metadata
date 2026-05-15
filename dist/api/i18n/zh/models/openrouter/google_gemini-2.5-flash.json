@@ -1,26 +1,28 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.0375,
+    "cache_read": 0.03,
+    "cache_write": 0.083333,
     "input": 0.3,
-    "output": 2.5
+    "output": 2.5,
+    "reasoning": 2.5
   },
   "description": "Gemini 2.5 Flash 是由 openrouter 提供的人工智能模型。",
   "family": "gemini-flash",
   "id": "google/gemini-2.5-flash",
-  "knowledge": "2025-01",
-  "last_updated": "2025-07-17",
+  "knowledge": "2025-01-31",
+  "last_updated": "2025-06-17",
   "limit": {
     "context": 1048576,
-    "output": 65536
+    "output": 65535
   },
   "modalities": {
     "input": [
-      "text",
+      "pdf",
       "image",
+      "text",
       "audio",
-      "video",
-      "pdf"
+      "video"
     ],
     "output": [
       "text"
@@ -29,7 +31,7 @@
   "name": "Gemini 2.5 Flash",
   "open_weights": false,
   "reasoning": true,
-  "release_date": "2025-07-17",
+  "release_date": "2025-06-17",
   "structured_output": true,
   "temperature": true,
   "tool_call": true
