@@ -1,5 +1,5 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
     "input": 0.4928,
     "output": 0.7392
@@ -7,6 +7,9 @@
   "description": "DeepSeek V3.2 は routing-run によって提供される AI モデルです。",
   "family": "deepseek",
   "id": "route/deepseek-v3.2",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "knowledge": "2024-07",
   "last_updated": "2025-12-01",
   "limit": {
@@ -15,7 +18,9 @@
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image",
+      "video"
     ],
     "output": [
       "text"

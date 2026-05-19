@@ -8,7 +8,7 @@
   "id": "routing-run",
   "models": {
     "route/deepseek-v3.2": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "input": 0.4928,
         "output": 0.7392
@@ -16,6 +16,9 @@
       "description": "DeepSeek V3.2 は routing-run によって提供される AI モデルです。",
       "family": "deepseek",
       "id": "route/deepseek-v3.2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2024-07",
       "last_updated": "2025-12-01",
       "limit": {
@@ -24,7 +27,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -73,16 +78,16 @@
       "temperature": true,
       "tool_call": true
     },
-    "route/deepseek-v4-flash-full": {
+    "route/deepseek-v4-flash-6bit": {
       "attachment": false,
       "cost": {
         "cache_read": 0.028,
         "input": 0.4928,
         "output": 0.7392
       },
-      "description": "DeepSeek V4 Flash Full は routing-run によって提供される AI モデルです。",
+      "description": "DeepSeek V4 Flash 6bit は routing-run によって提供される AI モデルです。",
       "family": "deepseek-flash",
-      "id": "route/deepseek-v4-flash-full",
+      "id": "route/deepseek-v4-flash-6bit",
       "interleaved": {
         "field": "reasoning_content"
       },
@@ -100,7 +105,7 @@
           "text"
         ]
       },
-      "name": "DeepSeek V4 Flash Full",
+      "name": "DeepSeek V4 Flash 6bit",
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-04-24",
@@ -143,16 +148,16 @@
       "temperature": true,
       "tool_call": true
     },
-    "route/deepseek-v4-pro-precision": {
+    "route/deepseek-v4-pro-6bit": {
       "attachment": false,
       "cost": {
         "cache_read": 0.145,
-        "input": 0.7392,
-        "output": 1.1088
+        "input": 0.4928,
+        "output": 0.7392
       },
-      "description": "DeepSeek V4 Pro Precision は routing-run によって提供される AI モデルです。",
+      "description": "DeepSeek V4 Pro 6bit は routing-run によって提供される AI モデルです。",
       "family": "deepseek-thinking",
-      "id": "route/deepseek-v4-pro-precision",
+      "id": "route/deepseek-v4-pro-6bit",
       "interleaved": {
         "field": "reasoning_content"
       },
@@ -170,7 +175,7 @@
           "text"
         ]
       },
-      "name": "DeepSeek V4 Pro Precision",
+      "name": "DeepSeek V4 Pro 6bit",
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-04-24",
@@ -179,7 +184,7 @@
       "tool_call": true
     },
     "route/gemma-4-31b-it": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "input": 0.1,
         "output": 0.3
@@ -195,7 +200,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -203,144 +209,9 @@
       },
       "name": "Gemma 4 31B IT",
       "open_weights": true,
-      "reasoning": true,
+      "reasoning": false,
       "release_date": "2026-04-02",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "route/glm-4.7": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.11,
-        "cache_write": 0,
-        "input": 1.32,
-        "output": 4.4
-      },
-      "description": "GLM 4.7 は routing-run によって提供される AI モデルです。",
-      "family": "glm",
-      "id": "route/glm-4.7",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2025-04",
-      "last_updated": "2025-12-22",
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 4.7",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-22",
-      "temperature": true,
-      "tool_call": true
-    },
-    "route/glm-4.7-flash": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0,
-        "cache_write": 0,
-        "input": 1.32,
-        "output": 4.4
-      },
-      "description": "GLM 4.7 Flash は routing-run によって提供される AI モデルです。",
-      "family": "glm-flash",
-      "id": "route/glm-4.7-flash",
-      "knowledge": "2025-04",
-      "last_updated": "2026-01-19",
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 4.7 Flash",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-01-19",
-      "temperature": true,
-      "tool_call": true
-    },
-    "route/glm-5": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.2,
-        "cache_write": 0,
-        "input": 0.792,
-        "output": 2.53
-      },
-      "description": "GLM 5 は routing-run によって提供される AI モデルです。",
-      "family": "glm",
-      "id": "route/glm-5",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-02-11",
-      "limit": {
-        "context": 202752,
-        "output": 202752
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-02-11",
-      "temperature": true,
-      "tool_call": true
-    },
-    "route/glm-5-highspeed": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.2,
-        "cache_write": 0,
-        "input": 1.1088,
-        "output": 3.542
-      },
-      "description": "GLM 5 Highspeed は routing-run によって提供される AI モデルです。",
-      "family": "glm",
-      "id": "route/glm-5-highspeed",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-02-11",
-      "limit": {
-        "context": 202752,
-        "output": 202752
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5 Highspeed",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-02-11",
       "temperature": true,
       "tool_call": true
     },
@@ -379,17 +250,17 @@
       "temperature": true,
       "tool_call": true
     },
-    "route/glm-5.1-fp16": {
+    "route/glm-5.1-6bit": {
       "attachment": false,
       "cost": {
         "cache_read": 0.26,
         "cache_write": 0,
-        "input": 1.2,
-        "output": 3.5
+        "input": 1,
+        "output": 3
       },
-      "description": "GLM 5.1 FP16 は routing-run によって提供される AI モデルです。",
+      "description": "GLM 5.1 6bit は routing-run によって提供される AI モデルです。",
       "family": "glm",
-      "id": "route/glm-5.1-fp16",
+      "id": "route/glm-5.1-6bit",
       "interleaved": {
         "field": "reasoning_content"
       },
@@ -406,77 +277,7 @@
           "text"
         ]
       },
-      "name": "GLM 5.1 FP16",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-03-27",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "route/glm-5.1-full": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.26,
-        "cache_write": 0,
-        "input": 1.2,
-        "output": 3.5
-      },
-      "description": "GLM 5.1 Full は routing-run によって提供される AI モデルです。",
-      "family": "glm",
-      "id": "route/glm-5.1-full",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-03-27",
-      "limit": {
-        "context": 202752,
-        "output": 202752
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5.1 Full",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-03-27",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "route/glm-5.1-precision": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.26,
-        "cache_write": 0,
-        "input": 1.2,
-        "output": 3.5
-      },
-      "description": "GLM 5.1 Precision は routing-run によって提供される AI モデルです。",
-      "family": "glm",
-      "id": "route/glm-5.1-precision",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-03-27",
-      "limit": {
-        "context": 202752,
-        "output": 202752
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5.1 Precision",
+      "name": "GLM 5.1 6bit",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-27",
@@ -485,7 +286,7 @@
       "tool_call": true
     },
     "route/kimi-k2.5": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.1,
         "input": 0.462,
@@ -494,46 +295,6 @@
       "description": "Kimi K2.5 は routing-run によって提供される AI モデルです。",
       "family": "kimi-k2.5",
       "id": "route/kimi-k2.5",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2025-01",
-      "last_updated": "2026-01",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2.5",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-01",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "route/kimi-k2.5-highspeed": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.1,
-        "input": 0.6468,
-        "output": 3.388
-      },
-      "description": "Kimi K2.5 Highspeed は routing-run によって提供される AI モデルです。",
-      "family": "kimi-k2.5",
-      "id": "route/kimi-k2.5-highspeed",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
       "knowledge": "2025-01",
       "last_updated": "2026-01",
       "limit": {
@@ -550,9 +311,9 @@
           "text"
         ]
       },
-      "name": "Kimi K2.5 Highspeed",
+      "name": "Kimi K2.5",
       "open_weights": true,
-      "reasoning": true,
+      "reasoning": false,
       "release_date": "2026-01",
       "structured_output": true,
       "temperature": false,
@@ -595,16 +356,16 @@
       "temperature": true,
       "tool_call": true
     },
-    "route/kimi-k2.6-full": {
+    "route/kimi-k2.6-6bit": {
       "attachment": true,
       "cost": {
         "cache_read": 0.16,
         "input": 0.462,
         "output": 2.42
       },
-      "description": "Kimi K2.6 Full は routing-run によって提供される AI モデルです。",
+      "description": "Kimi K2.6 6bit は routing-run によって提供される AI モデルです。",
       "family": "kimi-k2.6",
-      "id": "route/kimi-k2.6-full",
+      "id": "route/kimi-k2.6-6bit",
       "interleaved": {
         "field": "reasoning_content"
       },
@@ -624,106 +385,16 @@
           "text"
         ]
       },
-      "name": "Kimi K2.6 Full",
+      "name": "Kimi K2.6 6bit",
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-04-21",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "route/kimi-k2.6-precision": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.16,
-        "input": 0.6468,
-        "output": 3.388
-      },
-      "description": "Kimi K2.6 Precision は routing-run によって提供される AI モデルです。",
-      "family": "kimi-k2.6",
-      "id": "route/kimi-k2.6-precision",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2025-01",
-      "last_updated": "2026-04-21",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2.6 Precision",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-04-21",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "route/mimo-v2.5": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.08,
-        "context_over_200k": {
-          "cache_read": 0.16,
-          "input": 0.8,
-          "output": 4
-        },
-        "input": 0.4,
-        "output": 2,
-        "tiers": [
-          {
-            "cache_read": 0.16,
-            "input": 0.8,
-            "output": 4,
-            "tier": {
-              "size": 256000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "MiMo V2.5 は routing-run によって提供される AI モデルです。",
-      "family": "mimo",
-      "id": "route/mimo-v2.5",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2024-12",
-      "last_updated": "2026-04-22",
-      "limit": {
-        "context": 256000,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiMo V2.5",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-04-22",
       "temperature": true,
       "tool_call": true
     },
     "route/mimo-v2.5-pro": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.2,
         "context_over_200k": {
@@ -759,7 +430,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -772,8 +445,8 @@
       "temperature": true,
       "tool_call": true
     },
-    "route/mimo-v2.5-pro-precision": {
-      "attachment": false,
+    "route/mimo-v2.5-pro-6bit": {
+      "attachment": true,
       "cost": {
         "cache_read": 0.2,
         "context_over_200k": {
@@ -795,9 +468,9 @@
           }
         ]
       },
-      "description": "MiMo V2.5 Pro Precision は routing-run によって提供される AI モデルです。",
+      "description": "MiMo V2.5 Pro 6bit は routing-run によって提供される AI モデルです。",
       "family": "mimo",
-      "id": "route/mimo-v2.5-pro-precision",
+      "id": "route/mimo-v2.5-pro-6bit",
       "interleaved": {
         "field": "reasoning_content"
       },
@@ -805,17 +478,19 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 1000000,
-        "output": 131072
+        "output": 262144
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "MiMo V2.5 Pro Precision",
+      "name": "MiMo V2.5 Pro 6bit",
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-04-22",
@@ -848,7 +523,7 @@
       },
       "name": "MiniMax M2.5",
       "open_weights": true,
-      "reasoning": true,
+      "reasoning": false,
       "release_date": "2026-02-12",
       "temperature": true,
       "tool_call": true
@@ -879,7 +554,7 @@
       },
       "name": "MiniMax M2.5 Highspeed",
       "open_weights": true,
-      "reasoning": true,
+      "reasoning": false,
       "release_date": "2026-02-13",
       "temperature": true,
       "tool_call": true
@@ -895,6 +570,9 @@
       "description": "MiniMax M2.7 は routing-run によって提供される AI モデルです。",
       "family": "minimax",
       "id": "route/minimax-m2.7",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-03-18",
       "limit": {
         "context": 100000,
@@ -926,6 +604,9 @@
       "description": "MiniMax M2.7 Highspeed は routing-run によって提供される AI モデルです。",
       "family": "minimax",
       "id": "route/minimax-m2.7-highspeed",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-03-18",
       "limit": {
         "context": 100000,
@@ -947,7 +628,7 @@
       "tool_call": true
     },
     "route/mistral-large-3": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "input": 0.5,
         "output": 1.5
@@ -963,8 +644,7 @@
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -995,7 +675,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -1026,7 +707,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -1034,105 +716,8 @@
       },
       "name": "Mistral Small 2503",
       "open_weights": true,
-      "reasoning": true,
+      "reasoning": false,
       "release_date": "2026-03-16",
-      "temperature": true,
-      "tool_call": true
-    },
-    "route/qwen3.5-397b-a17b": {
-      "attachment": true,
-      "cost": {
-        "input": 1.1,
-        "output": 3.3
-      },
-      "description": "Qwen3.5 397B-A17B は routing-run によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "route/qwen3.5-397b-a17b",
-      "last_updated": "2026-02-15",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video",
-          "audio"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.5 397B-A17B",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-02-15",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "route/qwen3.5-9b": {
-      "attachment": true,
-      "cost": {
-        "input": 0.2,
-        "output": 0.6
-      },
-      "description": "Qwen3.5 9B は routing-run によって提供される AI モデルです。",
-      "family": "qwen3.5",
-      "id": "route/qwen3.5-9b",
-      "last_updated": "2026-03-10",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.5 9B",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-03-10",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "route/qwen3.5-9b-chat": {
-      "attachment": true,
-      "cost": {
-        "input": 0.2,
-        "output": 0.6
-      },
-      "description": "Qwen3.5 9B Chat は routing-run によって提供される AI モデルです。",
-      "family": "qwen3.5",
-      "id": "route/qwen3.5-9b-chat",
-      "last_updated": "2026-03-10",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.5 9B Chat",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-03-10",
-      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -1154,8 +739,7 @@
         "input": [
           "text",
           "image",
-          "video",
-          "audio"
+          "video"
         ],
         "output": [
           "text"
@@ -1163,7 +747,7 @@
       },
       "name": "Qwen3.6 27B",
       "open_weights": true,
-      "reasoning": true,
+      "reasoning": false,
       "release_date": "2026-04-22",
       "structured_output": true,
       "temperature": true,
@@ -1178,6 +762,9 @@
       },
       "description": "Step 3.5 Flash は routing-run によって提供される AI モデルです。",
       "id": "route/step-3.5-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-01",
       "last_updated": "2026-02-13",
       "limit": {
@@ -1209,6 +796,9 @@
       },
       "description": "Step 3.5 Flash 2603 は routing-run によって提供される AI モデルです。",
       "id": "route/step-3.5-flash-2603",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-01",
       "last_updated": "2026-04-02",
       "limit": {
@@ -1231,37 +821,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "route/step-3.5-flash-full": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.019,
-        "input": 0.096,
-        "output": 0.288
-      },
-      "description": "Step 3.5 Flash Full は routing-run によって提供される AI モデルです。",
-      "id": "route/step-3.5-flash-full",
-      "knowledge": "2025-01",
-      "last_updated": "2026-02-13",
-      "limit": {
-        "context": 262144,
-        "input": 256000,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Step 3.5 Flash Full",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-01-29",
-      "temperature": true,
-      "tool_call": true
-    },
     "route/stepfun-3.5-flash": {
       "attachment": false,
       "cost": {
@@ -1271,6 +830,9 @@
       },
       "description": "StepFun 3.5 Flash は routing-run によって提供される AI モデルです。",
       "id": "route/stepfun-3.5-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-01",
       "last_updated": "2026-02-13",
       "limit": {
