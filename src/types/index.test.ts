@@ -27,8 +27,6 @@ import {
   NewApiPriceConfig,
   NewApiSyncPayload,
   VoAPIFirm,
-  VoAPIModel,
-  VoAPIApiSyncPayload,
   BuildStats,
   BuildManifest,
   NormalizedData,
@@ -506,75 +504,6 @@ describe('Type Definitions', () => {
 
     expect(firm.id).toBe('firm-id');
     expect(firm.modelCount).toBe(5);
-  });
-
-  it('should properly define VoAPIModel interface', () => {
-    const voapiModel: VoAPIModel = {
-      id: 'model-id',
-      name: 'Model Name',
-      description: 'Model Description',
-      icon: 'model-icon',
-      tags: ['tag1', 'tag2'],
-      flags: {
-        attachment: true,
-        reasoning: false,
-        tool_call: true,
-        temperature: true,
-        image: false,
-        audio: true,
-      },
-      firm: 'firm-name',
-      maxCtxTokens: 4096,
-      maxOutputTokens: 2048,
-      price: {
-        input: 0.01,
-        output: 0.02,
-        cacheRead: 0.005,
-        cacheWrite: 0.003,
-      },
-    };
-
-    expect(voapiModel.id).toBe('model-id');
-    expect(voapiModel.flags.attachment).toBe(true);
-    expect(voapiModel.price?.input).toBe(0.01);
-  });
-
-  it('should properly define VoAPIApiSyncPayload interface', () => {
-    const voapiPayload: VoAPIApiSyncPayload = {
-      firms: [
-        {
-          id: 'firm-id',
-          name: 'Firm Name',
-          description: 'Firm Description',
-          icon: 'firm-icon',
-          status: 1,
-          modelCount: 1,
-          api: 'https://api.example.com',
-          doc: 'https://docs.example.com',
-        },
-      ],
-      models: [
-        {
-          id: 'model-id',
-          name: 'Model Name',
-          description: 'Model Description',
-          icon: 'model-icon',
-          tags: ['tag1', 'tag2'],
-          flags: {
-            attachment: true,
-            reasoning: false,
-            tool_call: true,
-            temperature: true,
-            image: false,
-            audio: true,
-          },
-          firm: 'firm-name',
-        },
-      ],
-    };
-
-    expect(voapiPayload.firms.length).toBe(1);
-    expect(voapiPayload.models.length).toBe(1);
   });
 
   it('should properly define BuildStats interface', () => {
