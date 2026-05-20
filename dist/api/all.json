@@ -102993,6 +102993,46 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-3.5-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 1.5,
+          "input_audio": 1.5,
+          "output": 9
+        },
+        "description": "Gemini 3.5 Flash is an AI model provided by opencode.",
+        "family": "gemini-flash",
+        "id": "gemini-3.5-flash",
+        "knowledge": "2025-01",
+        "last_updated": "2026-05-19",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.5 Flash",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/google"
+        },
+        "reasoning": true,
+        "release_date": "2026-05-19",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "glm-4.6": {
         "attachment": false,
         "cost": {
@@ -138720,14 +138760,44 @@
     "iconURL": "https://models.dev/logos/the-grid-ai.svg",
     "id": "the-grid-ai",
     "models": {
-      "text-max": {
+      "agent-max": {
         "attachment": false,
-        "description": "Text Max is an AI model provided by the-grid-ai.",
-        "id": "text-max",
-        "last_updated": "2026-03-24",
+        "description": "Agent Max is an AI model provided by the-grid-ai.",
+        "id": "agent-max",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-05-19",
         "limit": {
           "context": 1000000,
           "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Agent Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-04",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "agent-prime": {
+        "attachment": false,
+        "description": "Agent Prime is an AI model provided by the-grid-ai.",
+        "id": "agent-prime",
+        "last_updated": "2026-05-19",
+        "limit": {
+          "context": 128000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -138737,11 +138807,148 @@
             "text"
           ]
         },
+        "name": "Agent Prime",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-04",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "agent-standard": {
+        "attachment": false,
+        "description": "Agent Standard is an AI model provided by the-grid-ai.",
+        "id": "agent-standard",
+        "last_updated": "2026-05-19",
+        "limit": {
+          "context": 128000,
+          "output": 16000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Agent Standard",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-04",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "code-max": {
+        "attachment": false,
+        "description": "Code Max is an AI model provided by the-grid-ai.",
+        "id": "code-max",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-05-19",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Code Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-04",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "code-prime": {
+        "attachment": false,
+        "description": "Code Prime is an AI model provided by the-grid-ai.",
+        "id": "code-prime",
+        "last_updated": "2026-05-19",
+        "limit": {
+          "context": 128000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Code Prime",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-04",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "code-standard": {
+        "attachment": false,
+        "description": "Code Standard is an AI model provided by the-grid-ai.",
+        "id": "code-standard",
+        "last_updated": "2026-05-19",
+        "limit": {
+          "context": 128000,
+          "output": 16000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Code Standard",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-04",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "text-max": {
+        "attachment": false,
+        "description": "Text Max is an AI model provided by the-grid-ai.",
+        "id": "text-max",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-05-19",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
         "name": "Text Max",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-24",
-        "status": "beta",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -138750,7 +138957,7 @@
         "attachment": false,
         "description": "Text Prime is an AI model provided by the-grid-ai.",
         "id": "text-prime",
-        "last_updated": "2026-02-26",
+        "last_updated": "2026-05-19",
         "limit": {
           "context": 128000,
           "output": 30000
@@ -138767,7 +138974,6 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-26",
-        "status": "beta",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -138776,7 +138982,7 @@
         "attachment": false,
         "description": "Text Standard is an AI model provided by the-grid-ai.",
         "id": "text-standard",
-        "last_updated": "2026-02-26",
+        "last_updated": "2026-05-19",
         "limit": {
           "context": 128000,
           "output": 16000
@@ -138793,7 +138999,6 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-02-26",
-        "status": "beta",
         "structured_output": true,
         "temperature": true,
         "tool_call": true

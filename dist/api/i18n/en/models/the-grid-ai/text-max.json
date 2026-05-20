@@ -2,14 +2,18 @@
   "attachment": false,
   "description": "Text Max is an AI model provided by the-grid-ai.",
   "id": "text-max",
-  "last_updated": "2026-03-24",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-05-19",
   "limit": {
     "context": 1000000,
     "output": 128000
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image"
     ],
     "output": [
       "text"
@@ -19,7 +23,6 @@
   "open_weights": false,
   "reasoning": true,
   "release_date": "2026-03-24",
-  "status": "beta",
   "structured_output": true,
   "temperature": true,
   "tool_call": true

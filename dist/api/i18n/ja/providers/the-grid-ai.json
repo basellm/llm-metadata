@@ -7,14 +7,44 @@
   "iconURL": "https://models.dev/logos/the-grid-ai.svg",
   "id": "the-grid-ai",
   "models": {
-    "text-max": {
+    "agent-max": {
       "attachment": false,
-      "description": "Text Max は the-grid-ai によって提供される AI モデルです。",
-      "id": "text-max",
-      "last_updated": "2026-03-24",
+      "description": "Agent Max は the-grid-ai によって提供される AI モデルです。",
+      "id": "agent-max",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-05-19",
       "limit": {
         "context": 1000000,
         "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Agent Max",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-04",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "agent-prime": {
+      "attachment": false,
+      "description": "Agent Prime は the-grid-ai によって提供される AI モデルです。",
+      "id": "agent-prime",
+      "last_updated": "2026-05-19",
+      "limit": {
+        "context": 128000,
+        "output": 64000
       },
       "modalities": {
         "input": [
@@ -24,11 +54,148 @@
           "text"
         ]
       },
+      "name": "Agent Prime",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-04",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "agent-standard": {
+      "attachment": false,
+      "description": "Agent Standard は the-grid-ai によって提供される AI モデルです。",
+      "id": "agent-standard",
+      "last_updated": "2026-05-19",
+      "limit": {
+        "context": 128000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Agent Standard",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-04",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "code-max": {
+      "attachment": false,
+      "description": "Code Max は the-grid-ai によって提供される AI モデルです。",
+      "id": "code-max",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-05-19",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Code Max",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-04",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "code-prime": {
+      "attachment": false,
+      "description": "Code Prime は the-grid-ai によって提供される AI モデルです。",
+      "id": "code-prime",
+      "last_updated": "2026-05-19",
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Code Prime",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-04",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "code-standard": {
+      "attachment": false,
+      "description": "Code Standard は the-grid-ai によって提供される AI モデルです。",
+      "id": "code-standard",
+      "last_updated": "2026-05-19",
+      "limit": {
+        "context": 128000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Code Standard",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-04",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "text-max": {
+      "attachment": false,
+      "description": "Text Max は the-grid-ai によって提供される AI モデルです。",
+      "id": "text-max",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-05-19",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
       "name": "Text Max",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-24",
-      "status": "beta",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -37,7 +204,7 @@
       "attachment": false,
       "description": "Text Prime は the-grid-ai によって提供される AI モデルです。",
       "id": "text-prime",
-      "last_updated": "2026-02-26",
+      "last_updated": "2026-05-19",
       "limit": {
         "context": 128000,
         "output": 30000
@@ -54,7 +221,6 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-02-26",
-      "status": "beta",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -63,7 +229,7 @@
       "attachment": false,
       "description": "Text Standard は the-grid-ai によって提供される AI モデルです。",
       "id": "text-standard",
-      "last_updated": "2026-02-26",
+      "last_updated": "2026-05-19",
       "limit": {
         "context": 128000,
         "output": 16000
@@ -80,7 +246,6 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-02-26",
-      "status": "beta",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
