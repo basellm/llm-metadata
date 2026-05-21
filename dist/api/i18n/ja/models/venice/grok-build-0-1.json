@@ -1,0 +1,48 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.19,
+    "context_over_200k": {
+      "cache_read": 0.38,
+      "input": 1.9,
+      "output": 3.9
+    },
+    "input": 0.95,
+    "output": 1.95,
+    "tiers": [
+      {
+        "cache_read": 0.38,
+        "input": 1.9,
+        "output": 3.9,
+        "tier": {
+          "size": 200000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Grok Build 0.1 は venice によって提供される AI モデルです。",
+  "family": "grok-build",
+  "id": "grok-build-0-1",
+  "last_updated": "2026-05-21",
+  "limit": {
+    "context": 256000,
+    "output": 65536
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Grok Build 0.1",
+  "open_weights": false,
+  "reasoning": true,
+  "release_date": "2026-05-21",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}
