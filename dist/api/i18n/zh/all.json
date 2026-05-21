@@ -32481,6 +32481,788 @@
     "name": "Cortecs",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "crof": {
+    "api": "https://crof.ai/v1",
+    "doc": "https://crof.ai/docs",
+    "env": [
+      "CROF_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/crof.svg",
+    "id": "crof",
+    "models": {
+      "deepseek-v3.2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.28,
+          "output": 0.38
+        },
+        "description": "DeepSeek V3.2 是由 crof 提供的人工智能模型。",
+        "family": "deepseek",
+        "id": "deepseek-v3.2",
+        "last_updated": "2025-07-22",
+        "limit": {
+          "context": 163840,
+          "output": 163840
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V3.2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-07-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.12,
+          "output": 0.21
+        },
+        "description": "DeepSeek V4 Flash 是由 crof 提供的人工智能模型。",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4-pro": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.003,
+          "input": 0.4,
+          "output": 0.85
+        },
+        "description": "DeepSeek V4 Pro 是由 crof 提供的人工智能模型。",
+        "family": "deepseek-thinking",
+        "id": "deepseek-v4-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4-pro-precision": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.1,
+          "input": 1.25,
+          "output": 2.5
+        },
+        "description": "DeepSeek V4 Pro (Precision) 是由 crof 提供的人工智能模型。",
+        "family": "deepseek-thinking",
+        "id": "deepseek-v4-pro-precision",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro (Precision)",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemma-4-31b-it": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.1,
+          "output": 0.3
+        },
+        "description": "Gemma 4 31B IT 是由 crof 提供的人工智能模型。",
+        "family": "gemma",
+        "id": "gemma-4-31b-it",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 31B IT",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-02",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-4.7": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "cache_write": 0,
+          "input": 0.25,
+          "output": 1.1
+        },
+        "description": "GLM-4.7 是由 crof 提供的人工智能模型。",
+        "family": "glm",
+        "id": "glm-4.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-04",
+        "last_updated": "2025-12-22",
+        "limit": {
+          "context": 202752,
+          "output": 202752
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2025-12-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-4.7-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.008,
+          "cache_write": 0,
+          "input": 0.04,
+          "output": 0.3
+        },
+        "description": "GLM-4.7-Flash 是由 crof 提供的人工智能模型。",
+        "family": "glm-flash",
+        "id": "glm-4.7-flash",
+        "knowledge": "2025-04",
+        "last_updated": "2026-01-19",
+        "limit": {
+          "context": 200000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.7-Flash",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-01-19",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.1,
+          "cache_write": 0,
+          "input": 0.48,
+          "output": 1.9
+        },
+        "description": "GLM-5 是由 crof 提供的人工智能模型。",
+        "family": "glm",
+        "id": "glm-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-11",
+        "limit": {
+          "context": 202752,
+          "output": 202752
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-02-11",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.09,
+          "cache_write": 0,
+          "input": 0.45,
+          "output": 2.1
+        },
+        "description": "GLM-5.1 是由 crof 提供的人工智能模型。",
+        "family": "glm",
+        "id": "glm-5.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-27",
+        "limit": {
+          "context": 202752,
+          "output": 202752
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.1",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-03-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.1-precision": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 0.75,
+          "output": 2.9
+        },
+        "description": "GLM 5.1 (Precision) 是由 crof 提供的人工智能模型。",
+        "family": "glm",
+        "id": "glm-5.1-precision",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-27",
+        "limit": {
+          "context": 202752,
+          "output": 202752
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.1 (Precision)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "greg": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.1,
+          "output": 0.2
+        },
+        "description": "Experiment!: Greg 是由 crof 提供的人工智能模型。",
+        "id": "greg",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 229376,
+          "output": 229376
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Experiment!: Greg",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-01-27",
+        "temperature": true,
+        "tool_call": false
+      },
+      "kimi-k2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.07,
+          "input": 0.35,
+          "output": 1.7
+        },
+        "description": "Kimi K2.5 是由 crof 提供的人工智能模型。",
+        "family": "kimi-k2.5",
+        "id": "kimi-k2.5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-01",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-01",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k2.5-lightning": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1,
+          "output": 3
+        },
+        "description": "Kimi K2.5 (Lightning) 是由 crof 提供的人工智能模型。",
+        "family": "kimi-k2.5",
+        "id": "kimi-k2.5-lightning",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-06",
+        "limit": {
+          "context": 131072,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5 (Lightning)",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-06",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k2.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.1,
+          "input": 0.5,
+          "output": 1.99
+        },
+        "description": "Kimi K2.6 是由 crof 提供的人工智能模型。",
+        "family": "kimi-k2.6",
+        "id": "kimi-k2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2.6-precision": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.11,
+          "input": 0.55,
+          "output": 2.7
+        },
+        "description": "Kimi K2.6 (Precision) 是由 crof 提供的人工智能模型。",
+        "family": "kimi-k2.6",
+        "id": "kimi-k2.6-precision",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6 (Precision)",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.5-pro": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.1,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6
+          },
+          "input": 0.5,
+          "output": 1.5,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "MiMo-V2.5-Pro 是由 crof 提供的人工智能模型。",
+        "family": "mimo",
+        "id": "mimo-v2.5-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5-Pro",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.5-pro-precision": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.16,
+          "input": 0.8,
+          "output": 2.5
+        },
+        "description": "MiMo-V2.5-Pro (Precision) 是由 crof 提供的人工智能模型。",
+        "family": "mimo",
+        "id": "mimo-v2.5-pro-precision",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5-Pro (Precision)",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "cache_write": 0.375,
+          "input": 0.11,
+          "output": 0.95
+        },
+        "description": "MiniMax-M2.5 是由 crof 提供的人工智能模型。",
+        "family": "minimax",
+        "id": "minimax-m2.5",
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.5",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": false,
+        "release_date": "2026-02-12",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.5-397b-a17b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.07,
+          "input": 0.35,
+          "output": 1.75
+        },
+        "description": "Qwen3.5 397B-A17B 是由 crof 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "qwen3.5-397b-a17b",
+        "last_updated": "2026-02-15",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 397B-A17B",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-02-15",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.5-9b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.008,
+          "input": 0.04,
+          "output": 0.15
+        },
+        "description": "Qwen3.5 9B 是由 crof 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "qwen3.5-9b",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-13",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 9B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.6-27b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.04,
+          "input": 0.2,
+          "output": 1.5
+        },
+        "description": "Qwen3.6 27B 是由 crof 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "qwen3.6-27b",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 27B",
+        "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "CrofAI",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "databricks": {
     "api": "https://${DATABRICKS_HOST}/ai-gateway/mlflow/v1",
     "doc": "https://docs.databricks.com/aws/en/machine-learning/foundation-models/",
@@ -51769,6 +52551,156 @@
       }
     },
     "name": "Inception",
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "inceptron": {
+    "api": "https://api.inceptron.io/v1",
+    "doc": "https://docs.inceptron.io",
+    "env": [
+      "INCEPTRON_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/inceptron.svg",
+    "id": "inceptron",
+    "models": {
+      "MiniMaxAI/MiniMax-M2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "cache_write": 0,
+          "input": 0.24,
+          "output": 0.9
+        },
+        "description": "MiniMax M2.5 是由 inceptron 提供的人工智能模型。",
+        "family": "minimax",
+        "id": "MiniMaxAI/MiniMax-M2.5",
+        "last_updated": "2026-02-12",
+        "limit": {
+          "context": 196608,
+          "output": 196608
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-02-12",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/Kimi-K2.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "cache_write": 0,
+          "input": 0.78,
+          "output": 3.5
+        },
+        "description": "Kimi K2.6 是由 inceptron 提供的人工智能模型。",
+        "family": "kimi-k2.6",
+        "id": "moonshotai/Kimi-K2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia/llama-3.3-70b-instruct-fp8": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0.12,
+          "output": 0.38
+        },
+        "description": "Llama 3.3 70B Instruct 是由 inceptron 提供的人工智能模型。",
+        "family": "llama",
+        "id": "nvidia/llama-3.3-70b-instruct-fp8",
+        "knowledge": "2023-12",
+        "last_updated": "2024-12-06",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.3 70B Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-12-06",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-5.1-FP8": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.26,
+          "cache_write": 0,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "GLM 5.1 是由 inceptron 提供的人工智能模型。",
+        "family": "glm",
+        "id": "zai-org/GLM-5.1-FP8",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-27",
+        "limit": {
+          "context": 202752,
+          "output": 202752
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Inceptron",
     "npm": "@ai-sdk/openai-compatible"
   },
   "inference": {
@@ -104305,7 +105237,6 @@
         },
         "reasoning": true,
         "release_date": "2026-04-02",
-        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -106009,36 +106940,6 @@
         "structured_output": false,
         "temperature": true,
         "tool_call": false
-      },
-      "arcee-ai/trinity-large-preview": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 0.45
-        },
-        "description": "Trinity Large Preview 是由 openrouter 提供的人工智能模型。",
-        "family": "trinity",
-        "id": "arcee-ai/trinity-large-preview",
-        "last_updated": "2026-01-27",
-        "limit": {
-          "context": 131000,
-          "output": 131000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Trinity Large Preview",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2026-01-27",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
       },
       "arcee-ai/trinity-large-thinking": {
         "attachment": false,
@@ -114852,7 +115753,7 @@
       "qwen/qwen3.6-27b": {
         "attachment": true,
         "cost": {
-          "input": 0.32,
+          "input": 0.317,
           "output": 3.2
         },
         "description": "Qwen3.6 27B 是由 openrouter 提供的人工智能模型。",
@@ -114860,8 +115761,8 @@
         "id": "qwen/qwen3.6-27b",
         "last_updated": "2026-04-27",
         "limit": {
-          "context": 262144,
-          "output": 81920
+          "context": 262140,
+          "output": 262140
         },
         "modalities": {
           "input": [
@@ -114884,7 +115785,8 @@
       "qwen/qwen3.6-35b-a3b": {
         "attachment": true,
         "cost": {
-          "input": 0.149,
+          "cache_read": 0.05,
+          "input": 0.15,
           "output": 1
         },
         "description": "Qwen3.6 35B A3B 是由 openrouter 提供的人工智能模型。",
@@ -115007,6 +115909,37 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-04-02",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3.7-max": {
+        "attachment": false,
+        "cost": {
+          "cache_write": 3.125,
+          "input": 2.5,
+          "output": 7.5
+        },
+        "description": "Qwen3.7 Max 是由 openrouter 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "qwen/qwen3.7-max",
+        "last_updated": "2026-05-21",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.7 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-21",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -115749,7 +116682,7 @@
         "description": "Grok Build 0.1 是由 openrouter 提供的人工智能模型。",
         "family": "grok-build",
         "id": "x-ai/grok-build-0.1",
-        "last_updated": "2026-05-20",
+        "last_updated": "2026-04-16",
         "limit": {
           "context": 256000,
           "output": 256000
@@ -115766,7 +116699,7 @@
         "name": "Grok Build 0.1",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2026-05-20",
+        "release_date": "2026-04-16",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -116318,8 +117251,9 @@
       "z-ai/glm-5.1": {
         "attachment": false,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.182,
+          "input": 0.98,
+          "output": 3.08
         },
         "description": "GLM-5.1 是由 openrouter 提供的人工智能模型。",
         "family": "glm",
@@ -116329,7 +117263,7 @@
         },
         "last_updated": "2026-03-27",
         "limit": {
-          "context": 202800,
+          "context": 202752,
           "output": 202800
         },
         "modalities": {
@@ -151143,7 +152077,7 @@
         "description": "Grok Build 0.1 是由 xai 提供的人工智能模型。",
         "family": "grok-build",
         "id": "grok-build-0.1",
-        "last_updated": "2026-05-20",
+        "last_updated": "2026-04-16",
         "limit": {
           "context": 256000,
           "output": 256000
@@ -151161,7 +152095,7 @@
         "name": "Grok Build 0.1",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2026-05-20",
+        "release_date": "2026-04-16",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -151179,10 +152113,12 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
-            "image"
+            "image",
+            "pdf"
           ]
         },
         "name": "Grok Imagine Image",
@@ -151205,10 +152141,12 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
-            "image"
+            "image",
+            "pdf"
           ]
         },
         "name": "Grok Imagine Image Quality",
@@ -151231,7 +152169,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "video"
@@ -152167,7 +153106,8 @@
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"

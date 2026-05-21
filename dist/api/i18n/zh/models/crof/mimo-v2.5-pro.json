@@ -1,0 +1,53 @@
+{
+  "attachment": false,
+  "cost": {
+    "cache_read": 0.1,
+    "context_over_200k": {
+      "cache_read": 0.4,
+      "input": 2,
+      "output": 6
+    },
+    "input": 0.5,
+    "output": 1.5,
+    "tiers": [
+      {
+        "cache_read": 0.4,
+        "input": 2,
+        "output": 6,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "MiMo-V2.5-Pro 是由 crof 提供的人工智能模型。",
+  "family": "mimo",
+  "id": "mimo-v2.5-pro",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "knowledge": "2024-12",
+  "last_updated": "2026-04-22",
+  "limit": {
+    "context": 1048576,
+    "output": 131072
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "MiMo-V2.5-Pro",
+  "open_weights": true,
+  "provider": {
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "reasoning": true,
+  "release_date": "2026-04-22",
+  "temperature": true,
+  "tool_call": true
+}

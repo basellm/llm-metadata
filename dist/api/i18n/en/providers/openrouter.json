@@ -1073,36 +1073,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "arcee-ai/trinity-large-preview": {
-      "attachment": false,
-      "cost": {
-        "input": 0.15,
-        "output": 0.45
-      },
-      "description": "Trinity Large Preview is an AI model provided by openrouter.",
-      "family": "trinity",
-      "id": "arcee-ai/trinity-large-preview",
-      "last_updated": "2026-01-27",
-      "limit": {
-        "context": 131000,
-        "output": 131000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Trinity Large Preview",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-01-27",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "arcee-ai/trinity-large-thinking": {
       "attachment": false,
       "cost": {
@@ -9915,7 +9885,7 @@
     "qwen/qwen3.6-27b": {
       "attachment": true,
       "cost": {
-        "input": 0.32,
+        "input": 0.317,
         "output": 3.2
       },
       "description": "Qwen3.6 27B is an AI model provided by openrouter.",
@@ -9923,8 +9893,8 @@
       "id": "qwen/qwen3.6-27b",
       "last_updated": "2026-04-27",
       "limit": {
-        "context": 262144,
-        "output": 81920
+        "context": 262140,
+        "output": 262140
       },
       "modalities": {
         "input": [
@@ -9947,7 +9917,8 @@
     "qwen/qwen3.6-35b-a3b": {
       "attachment": true,
       "cost": {
-        "input": 0.149,
+        "cache_read": 0.05,
+        "input": 0.15,
         "output": 1
       },
       "description": "Qwen3.6 35B A3B is an AI model provided by openrouter.",
@@ -10070,6 +10041,37 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3.7-max": {
+      "attachment": false,
+      "cost": {
+        "cache_write": 3.125,
+        "input": 2.5,
+        "output": 7.5
+      },
+      "description": "Qwen3.7 Max is an AI model provided by openrouter.",
+      "family": "qwen",
+      "id": "qwen/qwen3.7-max",
+      "last_updated": "2026-05-21",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-21",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -10812,7 +10814,7 @@
       "description": "Grok Build 0.1 is an AI model provided by openrouter.",
       "family": "grok-build",
       "id": "x-ai/grok-build-0.1",
-      "last_updated": "2026-05-20",
+      "last_updated": "2026-04-16",
       "limit": {
         "context": 256000,
         "output": 256000
@@ -10829,7 +10831,7 @@
       "name": "Grok Build 0.1",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2026-05-20",
+      "release_date": "2026-04-16",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -11381,8 +11383,9 @@
     "z-ai/glm-5.1": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.182,
+        "input": 0.98,
+        "output": 3.08
       },
       "description": "GLM-5.1 is an AI model provided by openrouter.",
       "family": "glm",
@@ -11392,7 +11395,7 @@
       },
       "last_updated": "2026-03-27",
       "limit": {
-        "context": 202800,
+        "context": 202752,
         "output": 202800
       },
       "modalities": {
