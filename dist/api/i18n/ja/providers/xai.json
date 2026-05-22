@@ -13,16 +13,16 @@
         "cache_read": 0.2,
         "context_over_200k": {
           "cache_read": 0.4,
-          "input": 4,
-          "output": 12
+          "input": 2.5,
+          "output": 5
         },
         "input": 1.25,
         "output": 2.5,
         "tiers": [
           {
             "cache_read": 0.4,
-            "input": 4,
-            "output": 12,
+            "input": 2.5,
+            "output": 5,
             "tier": {
               "size": 200000,
               "type": "context"
@@ -61,16 +61,16 @@
         "cache_read": 0.2,
         "context_over_200k": {
           "cache_read": 0.4,
-          "input": 4,
-          "output": 12
+          "input": 2.5,
+          "output": 5
         },
         "input": 1.25,
         "output": 2.5,
         "tiers": [
           {
             "cache_read": 0.4,
-            "input": 4,
-            "output": 12,
+            "input": 2.5,
+            "output": 5,
             "tier": {
               "size": 200000,
               "type": "context"
@@ -109,16 +109,16 @@
         "cache_read": 0.2,
         "context_over_200k": {
           "cache_read": 0.4,
-          "input": 4,
-          "output": 12
+          "input": 2.5,
+          "output": 5
         },
         "input": 1.25,
         "output": 2.5,
         "tiers": [
           {
             "cache_read": 0.4,
-            "input": 4,
-            "output": 12,
+            "input": 2.5,
+            "output": 5,
             "tier": {
               "size": 200000,
               "type": "context"
@@ -203,8 +203,24 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2,
+          "output": 4
+        },
         "input": 1,
-        "output": 2
+        "output": 2,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 4,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Grok Build 0.1 は xai によって提供される AI モデルです。",
       "family": "grok-build",

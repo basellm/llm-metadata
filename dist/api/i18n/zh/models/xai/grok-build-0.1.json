@@ -2,8 +2,24 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.2,
+    "context_over_200k": {
+      "cache_read": 0.4,
+      "input": 2,
+      "output": 4
+    },
     "input": 1,
-    "output": 2
+    "output": 2,
+    "tiers": [
+      {
+        "cache_read": 0.4,
+        "input": 2,
+        "output": 4,
+        "tier": {
+          "size": 200000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Grok Build 0.1 是由 xai 提供的人工智能模型。",
   "family": "grok-build",

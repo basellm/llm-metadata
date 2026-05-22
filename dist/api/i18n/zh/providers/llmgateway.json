@@ -1221,6 +1221,43 @@
       "temperature": true,
       "tool_call": true
     },
+    "gemini-3.5-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 1.5,
+        "input_audio": 1.5,
+        "output": 9
+      },
+      "description": "Gemini 3.5 Flash 是由 llmgateway 提供的人工智能模型。",
+      "family": "gemini-flash",
+      "id": "gemini-3.5-flash",
+      "knowledge": "2025-01",
+      "last_updated": "2026-05-19",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.5 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "gemini-pro-latest": {
       "attachment": true,
       "cost": {
@@ -3039,16 +3076,16 @@
         "cache_read": 0.2,
         "context_over_200k": {
           "cache_read": 0.4,
-          "input": 4,
-          "output": 12
+          "input": 2.5,
+          "output": 5
         },
         "input": 1.25,
         "output": 2.5,
         "tiers": [
           {
             "cache_read": 0.4,
-            "input": 4,
-            "output": 12,
+            "input": 2.5,
+            "output": 5,
             "tier": {
               "size": 200000,
               "type": "context"
@@ -3087,16 +3124,16 @@
         "cache_read": 0.2,
         "context_over_200k": {
           "cache_read": 0.4,
-          "input": 4,
-          "output": 12
+          "input": 2.5,
+          "output": 5
         },
         "input": 1.25,
         "output": 2.5,
         "tiers": [
           {
             "cache_read": 0.4,
-            "input": 4,
-            "output": 12,
+            "input": 2.5,
+            "output": 5,
             "tier": {
               "size": 200000,
               "type": "context"
@@ -3107,6 +3144,102 @@
       "description": "Grok 4.20 (Reasoning) 是由 llmgateway 提供的人工智能模型。",
       "family": "grok",
       "id": "grok-4-20-beta-0309-reasoning",
+      "last_updated": "2026-03-09",
+      "limit": {
+        "context": 2000000,
+        "output": 30000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.20 (Reasoning)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-09",
+      "temperature": true,
+      "tool_call": true
+    },
+    "grok-4-20-non-reasoning": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2.5,
+          "output": 5
+        },
+        "input": 1.25,
+        "output": 2.5,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2.5,
+            "output": 5,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Grok 4.20 (Non-Reasoning) 是由 llmgateway 提供的人工智能模型。",
+      "family": "grok",
+      "id": "grok-4-20-non-reasoning",
+      "last_updated": "2026-03-09",
+      "limit": {
+        "context": 2000000,
+        "output": 30000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.20 (Non-Reasoning)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-09",
+      "temperature": true,
+      "tool_call": true
+    },
+    "grok-4-20-reasoning": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2.5,
+          "output": 5
+        },
+        "input": 1.25,
+        "output": 2.5,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2.5,
+            "output": 5,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Grok 4.20 (Reasoning) 是由 llmgateway 提供的人工智能模型。",
+      "family": "grok",
+      "id": "grok-4-20-reasoning",
       "last_updated": "2026-03-09",
       "limit": {
         "context": 2000000,
@@ -5877,6 +6010,37 @@
       "reasoning": true,
       "release_date": "2026-02-15",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen37-max": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 3.125,
+        "input": 2.5,
+        "output": 7.5
+      },
+      "description": "Qwen3.7 Max 是由 llmgateway 提供的人工智能模型。",
+      "family": "qwen",
+      "id": "qwen37-max",
+      "last_updated": "2026-05-21",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-21",
       "temperature": true,
       "tool_call": true
     },

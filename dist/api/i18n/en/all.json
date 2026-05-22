@@ -8912,6 +8912,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3.7-max": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 3.125,
+          "input": 2.5,
+          "output": 7.5
+        },
+        "description": "Qwen3.7 Max is an AI model provided by alibaba.",
+        "family": "qwen",
+        "id": "qwen3.7-max",
+        "last_updated": "2026-05-21",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.7 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-21",
+        "temperature": true,
+        "tool_call": true
+      },
       "qwq-plus": {
         "attachment": false,
         "cost": {
@@ -67410,6 +67441,43 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-3.5-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 1.5,
+          "input_audio": 1.5,
+          "output": 9
+        },
+        "description": "Gemini 3.5 Flash is an AI model provided by llmgateway.",
+        "family": "gemini-flash",
+        "id": "gemini-3.5-flash",
+        "knowledge": "2025-01",
+        "last_updated": "2026-05-19",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.5 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-19",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gemini-pro-latest": {
         "attachment": true,
         "cost": {
@@ -69228,16 +69296,16 @@
           "cache_read": 0.2,
           "context_over_200k": {
             "cache_read": 0.4,
-            "input": 4,
-            "output": 12
+            "input": 2.5,
+            "output": 5
           },
           "input": 1.25,
           "output": 2.5,
           "tiers": [
             {
               "cache_read": 0.4,
-              "input": 4,
-              "output": 12,
+              "input": 2.5,
+              "output": 5,
               "tier": {
                 "size": 200000,
                 "type": "context"
@@ -69276,16 +69344,16 @@
           "cache_read": 0.2,
           "context_over_200k": {
             "cache_read": 0.4,
-            "input": 4,
-            "output": 12
+            "input": 2.5,
+            "output": 5
           },
           "input": 1.25,
           "output": 2.5,
           "tiers": [
             {
               "cache_read": 0.4,
-              "input": 4,
-              "output": 12,
+              "input": 2.5,
+              "output": 5,
               "tier": {
                 "size": 200000,
                 "type": "context"
@@ -69296,6 +69364,102 @@
         "description": "Grok 4.20 (Reasoning) is an AI model provided by llmgateway.",
         "family": "grok",
         "id": "grok-4-20-beta-0309-reasoning",
+        "last_updated": "2026-03-09",
+        "limit": {
+          "context": 2000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.20 (Reasoning)",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-09",
+        "temperature": true,
+        "tool_call": true
+      },
+      "grok-4-20-non-reasoning": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2.5,
+            "output": 5
+          },
+          "input": 1.25,
+          "output": 2.5,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2.5,
+              "output": 5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Grok 4.20 (Non-Reasoning) is an AI model provided by llmgateway.",
+        "family": "grok",
+        "id": "grok-4-20-non-reasoning",
+        "last_updated": "2026-03-09",
+        "limit": {
+          "context": 2000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.20 (Non-Reasoning)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-03-09",
+        "temperature": true,
+        "tool_call": true
+      },
+      "grok-4-20-reasoning": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2.5,
+            "output": 5
+          },
+          "input": 1.25,
+          "output": 2.5,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2.5,
+              "output": 5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Grok 4.20 (Reasoning) is an AI model provided by llmgateway.",
+        "family": "grok",
+        "id": "grok-4-20-reasoning",
         "last_updated": "2026-03-09",
         "limit": {
           "context": 2000000,
@@ -72066,6 +72230,37 @@
         "reasoning": true,
         "release_date": "2026-02-15",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen37-max": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 3.125,
+          "input": 2.5,
+          "output": 7.5
+        },
+        "description": "Qwen3.7 Max is an AI model provided by llmgateway.",
+        "family": "qwen",
+        "id": "qwen37-max",
+        "last_updated": "2026-05-21",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.7 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-21",
         "temperature": true,
         "tool_call": true
       },
@@ -105237,6 +105432,7 @@
         },
         "reasoning": true,
         "release_date": "2026-04-02",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -116676,8 +116872,24 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 4
+          },
           "input": 1,
-          "output": 2
+          "output": 2,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 4,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok Build 0.1 is an AI model provided by openrouter.",
         "family": "grok-build",
@@ -140068,6 +140280,35 @@
         "temperature": true,
         "tool_call": true
       },
+      "Qwen/Qwen3.7-Max": {
+        "attachment": false,
+        "cost": {
+          "input": 2.5,
+          "output": 7.5
+        },
+        "description": "Qwen3.7 Max is an AI model provided by togetherai.",
+        "family": "qwen",
+        "id": "Qwen/Qwen3.7-Max",
+        "last_updated": "2026-05-21",
+        "limit": {
+          "context": 1000000,
+          "output": 500000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.7 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-21",
+        "temperature": true,
+        "tool_call": true
+      },
       "deepseek-ai/DeepSeek-R1": {
         "attachment": false,
         "cost": {
@@ -143817,6 +144058,39 @@
         "temperature": true,
         "tool_call": true
       },
+      "alibaba/qwen3.7-max": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 3.125,
+          "input": 2.5,
+          "output": 7.5
+        },
+        "description": "Qwen 3.7 Max is an AI model provided by vercel.",
+        "family": "qwen",
+        "id": "alibaba/qwen3.7-max",
+        "last_updated": "2026-05-21",
+        "limit": {
+          "context": 991000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.7 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-21",
+        "temperature": true,
+        "tool_call": true
+      },
       "amazon/nova-2-lite": {
         "attachment": true,
         "cost": {
@@ -145683,6 +145957,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemini-3.5-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 1.5,
+          "output": 9
+        },
+        "description": "Gemini 3.5 Flash is an AI model provided by vercel.",
+        "family": "gemini",
+        "id": "google/gemini-3.5-flash",
+        "last_updated": "2026-05-21",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.5 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-19",
+        "temperature": true,
+        "tool_call": true
+      },
       "google/gemini-embedding-001": {
         "attachment": false,
         "cost": {
@@ -147065,6 +147371,35 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-05-07",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mistral/mistral-medium-3.5": {
+        "attachment": false,
+        "cost": {
+          "input": 1.5,
+          "output": 7.5
+        },
+        "description": "Mistral Medium Latest is an AI model provided by vercel.",
+        "family": "mistral-medium",
+        "id": "mistral/mistral-medium-3.5",
+        "last_updated": "2026-05-21",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mistral Medium Latest",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-21",
         "temperature": true,
         "tool_call": true
       },
@@ -149958,6 +150293,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "xai/grok-build-0.1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.19999999999999998,
+          "input": 1,
+          "output": 2
+        },
+        "description": "Grok Build 0.1 is an AI model provided by vercel.",
+        "family": "grok-build",
+        "id": "xai/grok-build-0.1",
+        "last_updated": "2026-05-21",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok Build 0.1",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-20",
+        "temperature": true,
+        "tool_call": true
+      },
       "xai/grok-imagine-image": {
         "attachment": false,
         "description": "Grok Imagine Image is an AI model provided by vercel.",
@@ -151881,16 +152247,16 @@
           "cache_read": 0.2,
           "context_over_200k": {
             "cache_read": 0.4,
-            "input": 4,
-            "output": 12
+            "input": 2.5,
+            "output": 5
           },
           "input": 1.25,
           "output": 2.5,
           "tiers": [
             {
               "cache_read": 0.4,
-              "input": 4,
-              "output": 12,
+              "input": 2.5,
+              "output": 5,
               "tier": {
                 "size": 200000,
                 "type": "context"
@@ -151929,16 +152295,16 @@
           "cache_read": 0.2,
           "context_over_200k": {
             "cache_read": 0.4,
-            "input": 4,
-            "output": 12
+            "input": 2.5,
+            "output": 5
           },
           "input": 1.25,
           "output": 2.5,
           "tiers": [
             {
               "cache_read": 0.4,
-              "input": 4,
-              "output": 12,
+              "input": 2.5,
+              "output": 5,
               "tier": {
                 "size": 200000,
                 "type": "context"
@@ -151977,16 +152343,16 @@
           "cache_read": 0.2,
           "context_over_200k": {
             "cache_read": 0.4,
-            "input": 4,
-            "output": 12
+            "input": 2.5,
+            "output": 5
           },
           "input": 1.25,
           "output": 2.5,
           "tiers": [
             {
               "cache_read": 0.4,
-              "input": 4,
-              "output": 12,
+              "input": 2.5,
+              "output": 5,
               "tier": {
                 "size": 200000,
                 "type": "context"
@@ -152071,8 +152437,24 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 4
+          },
           "input": 1,
-          "output": 2
+          "output": 2,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 4,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Grok Build 0.1 is an AI model provided by xai.",
         "family": "grok-build",
