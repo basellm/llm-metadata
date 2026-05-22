@@ -9634,7 +9634,7 @@
       "last_updated": "2026-02-25",
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -9885,7 +9885,7 @@
     "qwen/qwen3.6-27b": {
       "attachment": true,
       "cost": {
-        "input": 0.317,
+        "input": 0.3,
         "output": 3.2
       },
       "description": "Qwen3.6 27B 是由 openrouter 提供的人工智能模型。",
@@ -9893,8 +9893,8 @@
       "id": "qwen/qwen3.6-27b",
       "last_updated": "2026-04-27",
       "limit": {
-        "context": 262140,
-        "output": 262140
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -9917,7 +9917,6 @@
     "qwen/qwen3.6-35b-a3b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.05,
         "input": 0.15,
         "output": 1
       },
@@ -9926,8 +9925,8 @@
       "id": "qwen/qwen3.6-35b-a3b",
       "last_updated": "2026-04-27",
       "limit": {
-        "context": 262144,
-        "output": 262144
+        "context": 262140,
+        "output": 262140
       },
       "modalities": {
         "input": [
@@ -10808,24 +10807,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.2,
-        "context_over_200k": {
-          "cache_read": 0.4,
-          "input": 2,
-          "output": 4
-        },
         "input": 1,
-        "output": 2,
-        "tiers": [
-          {
-            "cache_read": 0.4,
-            "input": 2,
-            "output": 4,
-            "tier": {
-              "size": 200000,
-              "type": "context"
-            }
-          }
-        ]
+        "output": 2
       },
       "description": "Grok Build 0.1 是由 openrouter 提供的人工智能模型。",
       "family": "grok-build",

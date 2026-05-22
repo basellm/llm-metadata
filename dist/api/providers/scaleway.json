@@ -36,36 +36,6 @@
       "temperature": false,
       "tool_call": false
     },
-    "deepseek-r1-distill-llama-70b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.9,
-        "output": 0.9
-      },
-      "description": "DeepSeek R1 Distill Llama 70B is an AI model provided by scaleway.",
-      "family": "deepseek-thinking",
-      "id": "deepseek-r1-distill-llama-70b",
-      "knowledge": "2024-07",
-      "last_updated": "2026-03-17",
-      "limit": {
-        "context": 32000,
-        "output": 8196
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek R1 Distill Llama 70B",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-01-20",
-      "temperature": true,
-      "tool_call": true
-    },
     "devstral-2-123b-instruct-2512": {
       "attachment": false,
       "cost": {
@@ -75,6 +45,7 @@
       "description": "Devstral 2 123B Instruct (2512) is an AI model provided by scaleway.",
       "family": "devstral",
       "id": "devstral-2-123b-instruct-2512",
+      "knowledge": "2025-12",
       "last_updated": "2026-03-17",
       "limit": {
         "context": 256000,
@@ -126,6 +97,39 @@
       "temperature": true,
       "tool_call": true
     },
+    "gemma-4-26b-a4b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.25,
+        "output": 0.5
+      },
+      "description": "Gemma 4 26B A4B IT is an AI model provided by scaleway.",
+      "family": "gemma",
+      "id": "gemma-4-26b-a4b-it",
+      "knowledge": "2025-04",
+      "last_updated": "2026-05-22",
+      "limit": {
+        "context": 256000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 26B A4B IT",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-01",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "gpt-oss-120b": {
       "attachment": true,
       "cost": {
@@ -152,36 +156,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-01-01",
-      "temperature": true,
-      "tool_call": true
-    },
-    "llama-3.1-8b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.2,
-        "output": 0.2
-      },
-      "description": "Llama 3.1 8B Instruct is an AI model provided by scaleway.",
-      "family": "llama",
-      "id": "llama-3.1-8b-instruct",
-      "knowledge": "2023-12",
-      "last_updated": "2026-03-17",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.1 8B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-01-01",
       "temperature": true,
       "tool_call": true
     },
@@ -246,35 +220,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "mistral-nemo-instruct-2407": {
-      "attachment": true,
-      "cost": {
-        "input": 0.2,
-        "output": 0.2
-      },
-      "description": "Mistral Nemo Instruct 2407 is an AI model provided by scaleway.",
-      "family": "mistral-nemo",
-      "id": "mistral-nemo-instruct-2407",
-      "last_updated": "2026-03-17",
-      "limit": {
-        "context": 128000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Nemo Instruct 2407",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-07-25",
-      "temperature": true,
-      "tool_call": true
-    },
     "mistral-small-3.2-24b-instruct-2506": {
       "attachment": false,
       "cost": {
@@ -284,6 +229,7 @@
       "description": "Mistral Small 3.2 24B Instruct (2506) is an AI model provided by scaleway.",
       "family": "mistral-small",
       "id": "mistral-small-3.2-24b-instruct-2506",
+      "knowledge": "2025-03",
       "last_updated": "2026-03-17",
       "limit": {
         "context": 128000,
@@ -314,6 +260,7 @@
       "description": "Pixtral 12B 2409 is an AI model provided by scaleway.",
       "family": "pixtral",
       "id": "pixtral-12b-2409",
+      "knowledge": "2024-09",
       "last_updated": "2026-03-17",
       "limit": {
         "context": 128000,
@@ -336,14 +283,16 @@
       "tool_call": true
     },
     "qwen3-235b-a22b-instruct-2507": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "input": 0.75,
-        "output": 2.25
+        "output": 2.25,
+        "reasoning": 8.4
       },
       "description": "Qwen3 235B A22B Instruct 2507 is an AI model provided by scaleway.",
       "family": "qwen",
       "id": "qwen3-235b-a22b-instruct-2507",
+      "knowledge": "2025-04",
       "last_updated": "2026-03-17",
       "limit": {
         "context": 260000,
@@ -359,7 +308,7 @@
       },
       "name": "Qwen3 235B A22B Instruct 2507",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
       "release_date": "2025-07-01",
       "temperature": true,
       "tool_call": true
@@ -424,7 +373,7 @@
       "tool_call": false
     },
     "qwen3.5-397b-a17b": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "input": 0.6,
         "output": 3.6
@@ -452,6 +401,40 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-03-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.6-35b-a3b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.25,
+        "output": 1.5
+      },
+      "description": "Qwen3.6 35B A3B is an AI model provided by scaleway.",
+      "family": "qwen",
+      "id": "qwen3.6-35b-a3b",
+      "knowledge": "2025-04",
+      "last_updated": "2026-05-22",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-05-01",
+      "status": "beta",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
