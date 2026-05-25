@@ -7,7 +7,70 @@
   "iconURL": "https://models.dev/logos/vultr.svg",
   "id": "vultr",
   "models": {
-    "DeepSeek-V3.2": {
+    "MiniMaxAI/MiniMax-M2.7": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax-M2.7 是由 vultr 提供的人工智能模型。",
+      "family": "minimax",
+      "id": "MiniMaxAI/MiniMax-M2.7",
+      "last_updated": "2026-03-18",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.7",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.6": {
+      "attachment": true,
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Kimi K2.6 是由 vultr 提供的人工智能模型。",
+      "family": "kimi-k2.6",
+      "id": "moonshotai/Kimi-K2.6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/DeepSeek-V3.2-NVFP4": {
       "attachment": false,
       "cost": {
         "input": 0.55,
@@ -15,12 +78,12 @@
       },
       "description": "DeepSeek V3.2 是由 vultr 提供的人工智能模型。",
       "family": "deepseek",
-      "id": "DeepSeek-V3.2",
+      "id": "nvidia/DeepSeek-V3.2-NVFP4",
       "knowledge": "2024-07",
       "last_updated": "2025-12-01",
       "limit": {
-        "context": 127000,
-        "output": 4096
+        "context": 131072,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -32,22 +95,114 @@
       },
       "name": "DeepSeek V3.2",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
       "release_date": "2025-12-01",
       "temperature": true,
       "tool_call": true
     },
-    "GLM-5-FP8": {
+    "nvidia/Llama-3.1-Nemotron-Safety-Guard-8B-v3": {
+      "attachment": false,
+      "cost": {
+        "input": 0.01,
+        "output": 0.01
+      },
+      "description": "Llama 3.1 Nemotron Safety Guard 是由 vultr 提供的人工智能模型。",
+      "family": "llama",
+      "id": "nvidia/Llama-3.1-Nemotron-Safety-Guard-8B-v3",
+      "knowledge": "2023-12",
+      "last_updated": "2025-10-28",
+      "limit": {
+        "context": 8192,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 Nemotron Safety Guard",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-10-28",
+      "temperature": true,
+      "tool_call": false
+    },
+    "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16": {
+      "attachment": false,
+      "cost": {
+        "input": 0.13,
+        "output": 0.38
+      },
+      "description": "NVIDIA Nemotron 3 Nano Omni 是由 vultr 提供的人工智能模型。",
+      "family": "nemotron",
+      "id": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16",
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-28",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA Nemotron 3 Nano Omni",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/Nemotron-Cascade-2-30B-A3B": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "NVIDIA Nemotron Cascade 2 是由 vultr 提供的人工智能模型。",
+      "family": "nemotron",
+      "id": "nvidia/Nemotron-Cascade-2-30B-A3B",
+      "knowledge": "2024-07",
+      "last_updated": "2025-12-01",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA Nemotron Cascade 2",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.1-FP8": {
       "attachment": false,
       "cost": {
         "input": 0.85,
         "output": 3.1
       },
-      "description": "GLM 5 FP8 是由 vultr 提供的人工智能模型。",
+      "description": "GLM-5.1 是由 vultr 提供的人工智能模型。",
       "family": "glm",
-      "id": "GLM-5-FP8",
-      "knowledge": "2025-05",
-      "last_updated": "2026-02-11",
+      "id": "zai-org/GLM-5.1-FP8",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-27",
       "limit": {
         "context": 200000,
         "output": 131072
@@ -60,100 +215,11 @@
           "text"
         ]
       },
-      "name": "GLM 5 FP8",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-02-11",
-      "temperature": true,
-      "tool_call": true
-    },
-    "Kimi-K2.5": {
-      "attachment": false,
-      "cost": {
-        "input": 0.55,
-        "output": 2.75
-      },
-      "description": "Kimi K2 Instruct 是由 vultr 提供的人工智能模型。",
-      "family": "kimi",
-      "id": "Kimi-K2.5",
-      "knowledge": "2024-04",
-      "last_updated": "2026-01-27",
-      "limit": {
-        "context": 254000,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2 Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-01-27",
-      "temperature": true,
-      "tool_call": true
-    },
-    "MiniMax-M2.5": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "MiniMax M2.5 是由 vultr 提供的人工智能模型。",
-      "family": "minimax",
-      "id": "MiniMax-M2.5",
-      "knowledge": "2024-09",
-      "last_updated": "2025-02-11",
-      "limit": {
-        "context": 194000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax M2.5",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-02-11",
-      "temperature": true,
-      "tool_call": true
-    },
-    "gpt-oss-120b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.15,
-        "output": 0.6
-      },
-      "description": "GPT OSS 120B 是由 vultr 提供的人工智能模型。",
-      "family": "gpt-oss",
-      "id": "gpt-oss-120b",
-      "knowledge": "2024-06",
-      "last_updated": "2025-08-05",
-      "limit": {
-        "context": 129000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT OSS 120B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-08-05",
+      "name": "GLM-5.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-27",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     }
