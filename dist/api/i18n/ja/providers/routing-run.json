@@ -232,7 +232,7 @@
       "last_updated": "2026-03-27",
       "limit": {
         "context": 202752,
-        "output": 202752
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -267,7 +267,7 @@
       "last_updated": "2026-03-27",
       "limit": {
         "context": 202752,
-        "output": 202752
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -390,6 +390,58 @@
       "reasoning": true,
       "release_date": "2026-04-21",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "route/mimo-v2.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2,
+          "output": 6
+        },
+        "input": 0.45,
+        "output": 1.35,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "MiMo V2.5 は routing-run によって提供される AI モデルです。",
+      "family": "mimo",
+      "id": "route/mimo-v2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 1000000,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo V2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-22",
       "temperature": true,
       "tool_call": true
     },
@@ -722,7 +774,7 @@
       "tool_call": true
     },
     "route/qwen3.6-27b": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "input": 1.1,
         "output": 3.3
@@ -732,20 +784,48 @@
       "id": "route/qwen3.6-27b",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 262144,
-        "output": 262144
+        "context": 202000,
+        "output": 32768
       },
       "modalities": {
         "input": [
-          "text",
-          "image",
-          "video"
+          "text"
         ],
         "output": [
           "text"
         ]
       },
       "name": "Qwen3.6 27B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-04-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "route/qwen3.6-27b-202k": {
+      "attachment": false,
+      "cost": {
+        "input": 1.1,
+        "output": 3.3
+      },
+      "description": "Qwen3.6 27B 202K は routing-run によって提供される AI モデルです。",
+      "family": "qwen",
+      "id": "route/qwen3.6-27b-202k",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 202000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 27B 202K",
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-04-22",
