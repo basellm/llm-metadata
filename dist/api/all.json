@@ -72239,6 +72239,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3.7-max": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 3.125,
+          "input": 2.5,
+          "output": 7.5
+        },
+        "description": "Qwen3.7 Max is an AI model provided by llmgateway.",
+        "family": "qwen",
+        "id": "qwen3.7-max",
+        "last_updated": "2026-05-21",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.7 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-21",
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen35-397b-a17b": {
         "attachment": true,
         "cost": {
@@ -72269,37 +72300,6 @@
         "reasoning": true,
         "release_date": "2026-02-15",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen37-max": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.5,
-          "cache_write": 3.125,
-          "input": 2.5,
-          "output": 7.5
-        },
-        "description": "Qwen3.7 Max is an AI model provided by llmgateway.",
-        "family": "qwen",
-        "id": "qwen37-max",
-        "last_updated": "2026-05-21",
-        "limit": {
-          "context": 1000000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.7 Max",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2026-05-21",
         "temperature": true,
         "tool_call": true
       },
@@ -103358,7 +103358,8 @@
         "last_updated": "2025-10-17",
         "limit": {
           "context": 200000,
-          "output": 128000
+          "input": 160000,
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -153865,10 +153866,10 @@
         "description": "Xpersona Frieren Coder is an AI model provided by xpersona.",
         "id": "xpersona-frieren-coder",
         "knowledge": "2025-12-30",
-        "last_updated": "2026-05-15",
+        "last_updated": "2026-05-25",
         "limit": {
-          "context": 400000,
-          "output": 128000
+          "context": 1000000,
+          "output": 384000
         },
         "modalities": {
           "input": [
