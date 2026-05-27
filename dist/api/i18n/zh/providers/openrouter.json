@@ -8618,7 +8618,6 @@
     "qwen/qwen-plus-2025-07-28": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.325,
         "input": 0.26,
         "output": 0.78
       },
@@ -9724,7 +9723,6 @@
     "qwen/qwen3.5-flash-02-23": {
       "attachment": true,
       "cost": {
-        "cache_write": 0.08125,
         "input": 0.065,
         "output": 0.26
       },
@@ -9757,7 +9755,6 @@
     "qwen/qwen3.5-plus-02-15": {
       "attachment": true,
       "cost": {
-        "cache_write": 0.325,
         "input": 0.26,
         "output": 1.56
       },
@@ -9791,6 +9788,7 @@
     "qwen/qwen3.5-plus-20260420": {
       "attachment": true,
       "cost": {
+        "cache_write": 0.375,
         "input": 0.3,
         "output": 1.8
       },
@@ -9856,6 +9854,7 @@
     "qwen/qwen3.6-35b-a3b": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.05,
         "input": 0.15,
         "output": 1
       },
@@ -9864,8 +9863,8 @@
       "id": "qwen/qwen3.6-35b-a3b",
       "last_updated": "2026-04-27",
       "limit": {
-        "context": 262140,
-        "output": 262140
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -9986,9 +9985,10 @@
     "qwen/qwen3.7-max": {
       "attachment": false,
       "cost": {
-        "cache_write": 3.125,
-        "input": 2.5,
-        "output": 7.5
+        "cache_read": 0.25,
+        "cache_write": 1.5625,
+        "input": 1.25,
+        "output": 3.75
       },
       "description": "Qwen3.7 Max 是由 openrouter 提供的人工智能模型。",
       "family": "qwen",
@@ -11021,9 +11021,8 @@
     "z-ai/glm-4.5-air": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.025,
-        "input": 0.13,
-        "output": 0.85
+        "input": 0.125,
+        "output": 0.84
       },
       "description": "GLM-4.5-Air 是由 openrouter 提供的人工智能模型。",
       "family": "glm-air",
@@ -11031,8 +11030,8 @@
       "knowledge": "2025-04",
       "last_updated": "2025-07-28",
       "limit": {
-        "context": 131072,
-        "output": 98304
+        "context": 131070,
+        "output": 131070
       },
       "modalities": {
         "input": [
