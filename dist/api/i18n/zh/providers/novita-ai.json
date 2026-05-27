@@ -944,6 +944,37 @@
       "temperature": true,
       "tool_call": true
     },
+    "inclusionai/ring-2.6-1t": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 2.5
+      },
+      "description": "Ring-2.6-1T 是由 novita-ai 提供的人工智能模型。",
+      "family": "ring",
+      "id": "inclusionai/ring-2.6-1t",
+      "last_updated": "2026-05-27",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ring-2.6-1T",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-08",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "kwaipilot/kat-coder-pro": {
       "attachment": false,
       "cost": {
@@ -1369,6 +1400,38 @@
         ]
       },
       "name": "MiniMax M2.7",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.7-highspeed": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.06,
+        "cache_write": 0.375,
+        "input": 0.6,
+        "output": 2.4
+      },
+      "description": "MiniMax-M2.7-highspeed 是由 novita-ai 提供的人工智能模型。",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.7-highspeed",
+      "last_updated": "2026-05-27",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.7-highspeed",
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-03-18",
@@ -2572,6 +2635,38 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen/qwen3.7-max": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.125,
+        "cache_write": 1.5625,
+        "input": 1.25,
+        "output": 3.75
+      },
+      "description": "Qwen3.7-Max 是由 novita-ai 提供的人工智能模型。",
+      "family": "qwen",
+      "id": "qwen/qwen3.7-max",
+      "last_updated": "2026-05-27",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7-Max",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "sao10K/L3-8B-stheno-v3.2": {
       "attachment": false,
       "cost": {
@@ -2714,6 +2809,108 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-12-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "xiaomimimo/mimo-v2-pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.4,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2,
+          "output": 6
+        },
+        "input": 2,
+        "output": 6,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "MiMo-V2-Pro 是由 novita-ai 提供的人工智能模型。",
+      "family": "mimo",
+      "id": "xiaomimimo/mimo-v2-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2026-05-27",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2-Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "xiaomimimo/mimo-v2.5-pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.4,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2,
+          "output": 6
+        },
+        "input": 2,
+        "output": 6,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "MiMo-V2.5-Pro 是由 novita-ai 提供的人工智能模型。",
+      "family": "mimo",
+      "id": "xiaomimimo/mimo-v2.5-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2026-05-27",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.5-Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-22",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

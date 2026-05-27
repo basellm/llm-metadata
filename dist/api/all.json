@@ -25651,36 +25651,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen-3-235b-a22b-instruct-2507": {
-        "attachment": false,
-        "cost": {
-          "input": 0.6,
-          "output": 1.2
-        },
-        "description": "Qwen 3 235B Instruct is an AI model provided by cerebras.",
-        "family": "qwen",
-        "id": "qwen-3-235b-a22b-instruct-2507",
-        "knowledge": "2025-04",
-        "last_updated": "2025-07-22",
-        "limit": {
-          "context": 131000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen 3 235B Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-07-22",
-        "temperature": true,
-        "tool_call": true
-      },
       "zai-glm-4.7": {
         "attachment": false,
         "cost": {
@@ -48132,6 +48102,7 @@
       "moonshotai/kimi-k2-instruct-0905": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.5,
           "input": 1,
           "output": 3
         },
@@ -48139,7 +48110,7 @@
         "family": "kimi",
         "id": "moonshotai/kimi-k2-instruct-0905",
         "knowledge": "2024-10",
-        "last_updated": "2025-09-05",
+        "last_updated": "2026-05-27",
         "limit": {
           "context": 262144,
           "output": 16384
@@ -48163,13 +48134,14 @@
       "openai/gpt-oss-120b": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.075,
           "input": 0.15,
           "output": 0.6
         },
         "description": "GPT OSS 120B is an AI model provided by groq.",
         "family": "gpt-oss",
         "id": "openai/gpt-oss-120b",
-        "last_updated": "2025-08-05",
+        "last_updated": "2026-05-27",
         "limit": {
           "context": 131072,
           "output": 65536
@@ -48193,13 +48165,14 @@
       "openai/gpt-oss-20b": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.0375,
           "input": 0.075,
           "output": 0.3
         },
         "description": "GPT OSS 20B is an AI model provided by groq.",
         "family": "gpt-oss",
         "id": "openai/gpt-oss-20b",
-        "last_updated": "2025-08-05",
+        "last_updated": "2026-05-27",
         "limit": {
           "context": 131072,
           "output": 65536
@@ -50597,17 +50570,17 @@
       "mistral-small": {
         "attachment": false,
         "cost": {
-          "input": 75,
-          "output": 200
+          "input": 0.075,
+          "output": 0.2
         },
-        "description": "Mistral Small is an AI model provided by helicone.",
+        "description": "Mistral Small 3.2 is an AI model provided by helicone.",
         "family": "mistral-small",
         "id": "mistral-small",
-        "knowledge": "2024-02",
-        "last_updated": "2024-02-26",
+        "knowledge": "2025-03",
+        "last_updated": "2025-06-20",
         "limit": {
           "context": 128000,
-          "output": 128000
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -50618,12 +50591,12 @@
             "text"
           ]
         },
-        "name": "Mistral Small",
-        "open_weights": false,
+        "name": "Mistral Small 3.2",
+        "open_weights": true,
         "reasoning": false,
-        "release_date": "2024-02-26",
+        "release_date": "2025-06-20",
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "o1": {
         "attachment": false,
@@ -95648,6 +95621,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "inclusionai/ring-2.6-1t": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Ring-2.6-1T is an AI model provided by novita-ai.",
+        "family": "ring",
+        "id": "inclusionai/ring-2.6-1t",
+        "last_updated": "2026-05-27",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ring-2.6-1T",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-08",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "kwaipilot/kat-coder-pro": {
         "attachment": false,
         "cost": {
@@ -96073,6 +96077,38 @@
           ]
         },
         "name": "MiniMax M2.7",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax/minimax-m2.7-highspeed": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.06,
+          "cache_write": 0.375,
+          "input": 0.6,
+          "output": 2.4
+        },
+        "description": "MiniMax-M2.7-highspeed is an AI model provided by novita-ai.",
+        "family": "minimax",
+        "id": "minimax/minimax-m2.7-highspeed",
+        "last_updated": "2026-05-27",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.7-highspeed",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-03-18",
@@ -97276,6 +97312,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen/qwen3.7-max": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.125,
+          "cache_write": 1.5625,
+          "input": 1.25,
+          "output": 3.75
+        },
+        "description": "Qwen3.7-Max is an AI model provided by novita-ai.",
+        "family": "qwen",
+        "id": "qwen/qwen3.7-max",
+        "last_updated": "2026-05-27",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.7-Max",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-05-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "sao10K/L3-8B-stheno-v3.2": {
         "attachment": false,
         "cost": {
@@ -97418,6 +97486,108 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-12-19",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomimimo/mimo-v2-pro": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.4,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6
+          },
+          "input": 2,
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "MiMo-V2-Pro is an AI model provided by novita-ai.",
+        "family": "mimo",
+        "id": "xiaomimimo/mimo-v2-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-05-27",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2-Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-03-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomimimo/mimo-v2.5-pro": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.4,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 6
+          },
+          "input": 2,
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2,
+              "output": 6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "MiMo-V2.5-Pro is an AI model provided by novita-ai.",
+        "family": "mimo",
+        "id": "xiaomimimo/mimo-v2.5-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-05-27",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5-Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-22",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -105311,6 +105481,43 @@
         "temperature": true,
         "tool_call": true
       },
+      "mimo-v2.5-free": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo V2.5 Free is an AI model provided by opencode.",
+        "family": "mimo-v2.5-free",
+        "id": "mimo-v2.5-free",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2.5 Free",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "temperature": true,
+        "tool_call": true
+      },
       "minimax-m2.1": {
         "attachment": false,
         "cost": {
@@ -106040,25 +106247,9 @@
       "mimo-v2.5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.08,
-          "context_over_200k": {
-            "cache_read": 0.16,
-            "input": 0.8,
-            "output": 4
-          },
-          "input": 0.4,
-          "output": 2,
-          "tiers": [
-            {
-              "cache_read": 0.16,
-              "input": 0.8,
-              "output": 4,
-              "tier": {
-                "size": 256000,
-                "type": "context"
-              }
-            }
-          ]
+          "cache_read": 0.0028,
+          "input": 0.14,
+          "output": 0.28
         },
         "description": "MiMo V2.5 is an AI model provided by opencode-go.",
         "family": "mimo-v2.5",
@@ -106093,25 +106284,9 @@
       "mimo-v2.5-pro": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.2,
-          "context_over_200k": {
-            "cache_read": 0.4,
-            "input": 2,
-            "output": 6
-          },
-          "input": 1,
-          "output": 3,
-          "tiers": [
-            {
-              "cache_read": 0.4,
-              "input": 2,
-              "output": 6,
-              "tier": {
-                "size": 256000,
-                "type": "context"
-              }
-            }
-          ]
+          "cache_read": 0.0145,
+          "input": 1.74,
+          "output": 3.48
         },
         "description": "MiMo V2.5 Pro is an AI model provided by opencode-go.",
         "family": "mimo-v2.5-pro",
@@ -107452,35 +107627,6 @@
         "release_date": "2025-05-05",
         "structured_output": false,
         "temperature": true,
-        "tool_call": true
-      },
-      "baidu/cobuddy:free": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "CoBuddy (free) is an AI model provided by openrouter.",
-        "id": "baidu/cobuddy:free",
-        "last_updated": "2026-05-06",
-        "limit": {
-          "context": 131072,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "CoBuddy (free)",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2026-05-06",
-        "structured_output": false,
-        "temperature": false,
         "tool_call": true
       },
       "baidu/ernie-4.5-21b-a3b": {
@@ -113231,7 +113377,7 @@
       "openai/gpt-5.1-chat": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.125,
+          "cache_read": 0.13,
           "input": 1.25,
           "output": 10
         },
@@ -113242,7 +113388,7 @@
         "last_updated": "2025-11-13",
         "limit": {
           "context": 128000,
-          "output": 16384
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -113265,7 +113411,7 @@
       "openai/gpt-5.1-codex": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.125,
+          "cache_read": 0.13,
           "input": 1.25,
           "output": 10
         },
@@ -113331,7 +113477,7 @@
       "openai/gpt-5.1-codex-mini": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.03,
+          "cache_read": 0.025,
           "input": 0.25,
           "output": 2
         },
@@ -113342,7 +113488,7 @@
         "last_updated": "2025-11-13",
         "limit": {
           "context": 400000,
-          "output": 128000
+          "output": 100000
         },
         "modalities": {
           "input": [
@@ -113409,7 +113555,7 @@
         "last_updated": "2025-12-10",
         "limit": {
           "context": 128000,
-          "output": 32000
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -114761,8 +114907,8 @@
         },
         "last_updated": "2026-04-28",
         "limit": {
-          "context": 131072,
-          "output": 8192
+          "context": 262144,
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -116143,17 +116289,16 @@
       "qwen/qwen3.6-27b": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.15,
-          "input": 0.3,
-          "output": 2
+          "input": 0.29,
+          "output": 3.2
         },
         "description": "Qwen3.6 27B is an AI model provided by openrouter.",
         "family": "qwen3.6",
         "id": "qwen/qwen3.6-27b",
         "last_updated": "2026-04-27",
         "limit": {
-          "context": 262144,
-          "output": 65536
+          "context": 262140,
+          "output": 262140
         },
         "modalities": {
           "input": [
@@ -116176,8 +116321,7 @@
       "qwen/qwen3.6-35b-a3b": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.05,
-          "input": 0.15,
+          "input": 0.14,
           "output": 1
         },
         "description": "Qwen3.6 35B A3B is an AI model provided by openrouter.",
@@ -116185,8 +116329,8 @@
         "id": "qwen/qwen3.6-35b-a3b",
         "last_updated": "2026-04-27",
         "limit": {
-          "context": 262144,
-          "output": 262144
+          "context": 262140,
+          "output": 262140
         },
         "modalities": {
           "input": [
@@ -153339,40 +153483,6 @@
     "iconURL": "https://models.dev/logos/xiaomi-token-plan-ams.svg",
     "id": "xiaomi-token-plan-ams",
     "models": {
-      "mimo-v2-flash": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "MiMo-V2-Flash is an AI model provided by xiaomi-token-plan-ams.",
-        "family": "mimo",
-        "id": "mimo-v2-flash",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12-01",
-        "last_updated": "2026-02-04",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2-Flash",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-12-16",
-        "temperature": true,
-        "tool_call": true
-      },
       "mimo-v2-omni": {
         "attachment": true,
         "cost": {
@@ -153457,7 +153567,7 @@
         "last_updated": "2026-03-18",
         "limit": {
           "context": 8192,
-          "output": 16384
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -153543,6 +153653,90 @@
         "release_date": "2026-04-22",
         "temperature": true,
         "tool_call": true
+      },
+      "mimo-v2.5-tts": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5-TTS is an AI model provided by xiaomi-token-plan-ams.",
+        "family": "mimo",
+        "id": "mimo-v2.5-tts",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 8192,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "MiMo-V2.5-TTS",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-04-22",
+        "tool_call": false
+      },
+      "mimo-v2.5-tts-voiceclone": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5-TTS-VoiceClone is an AI model provided by xiaomi-token-plan-ams.",
+        "family": "mimo",
+        "id": "mimo-v2.5-tts-voiceclone",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 8192,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "MiMo-V2.5-TTS-VoiceClone",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-04-22",
+        "tool_call": false
+      },
+      "mimo-v2.5-tts-voicedesign": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5-TTS-VoiceDesign is an AI model provided by xiaomi-token-plan-ams.",
+        "family": "mimo",
+        "id": "mimo-v2.5-tts-voicedesign",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 8192,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "MiMo-V2.5-TTS-VoiceDesign",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-04-22",
+        "tool_call": false
       }
     },
     "name": "Xiaomi Token Plan (Europe)",
@@ -153557,40 +153751,6 @@
     "iconURL": "https://models.dev/logos/xiaomi-token-plan-cn.svg",
     "id": "xiaomi-token-plan-cn",
     "models": {
-      "mimo-v2-flash": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "MiMo-V2-Flash is an AI model provided by xiaomi-token-plan-cn.",
-        "family": "mimo",
-        "id": "mimo-v2-flash",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12-01",
-        "last_updated": "2026-02-04",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2-Flash",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-12-16",
-        "temperature": true,
-        "tool_call": true
-      },
       "mimo-v2-omni": {
         "attachment": true,
         "cost": {
@@ -153675,7 +153835,7 @@
         "last_updated": "2026-03-18",
         "limit": {
           "context": 8192,
-          "output": 16384
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -153761,6 +153921,90 @@
         "release_date": "2026-04-22",
         "temperature": true,
         "tool_call": true
+      },
+      "mimo-v2.5-tts": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5-TTS is an AI model provided by xiaomi-token-plan-cn.",
+        "family": "mimo",
+        "id": "mimo-v2.5-tts",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 8192,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "MiMo-V2.5-TTS",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-04-22",
+        "tool_call": false
+      },
+      "mimo-v2.5-tts-voiceclone": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5-TTS-VoiceClone is an AI model provided by xiaomi-token-plan-cn.",
+        "family": "mimo",
+        "id": "mimo-v2.5-tts-voiceclone",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 8192,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "MiMo-V2.5-TTS-VoiceClone",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-04-22",
+        "tool_call": false
+      },
+      "mimo-v2.5-tts-voicedesign": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5-TTS-VoiceDesign is an AI model provided by xiaomi-token-plan-cn.",
+        "family": "mimo",
+        "id": "mimo-v2.5-tts-voicedesign",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 8192,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "MiMo-V2.5-TTS-VoiceDesign",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-04-22",
+        "tool_call": false
       }
     },
     "name": "Xiaomi Token Plan (China)",
@@ -153775,40 +154019,6 @@
     "iconURL": "https://models.dev/logos/xiaomi-token-plan-sgp.svg",
     "id": "xiaomi-token-plan-sgp",
     "models": {
-      "mimo-v2-flash": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "MiMo-V2-Flash is an AI model provided by xiaomi-token-plan-sgp.",
-        "family": "mimo",
-        "id": "mimo-v2-flash",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12-01",
-        "last_updated": "2026-02-04",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2-Flash",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-12-16",
-        "temperature": true,
-        "tool_call": true
-      },
       "mimo-v2-omni": {
         "attachment": true,
         "cost": {
@@ -153893,7 +154103,7 @@
         "last_updated": "2026-03-18",
         "limit": {
           "context": 8192,
-          "output": 16384
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -153979,6 +154189,90 @@
         "release_date": "2026-04-22",
         "temperature": true,
         "tool_call": true
+      },
+      "mimo-v2.5-tts": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5-TTS is an AI model provided by xiaomi-token-plan-sgp.",
+        "family": "mimo",
+        "id": "mimo-v2.5-tts",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 8192,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "MiMo-V2.5-TTS",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-04-22",
+        "tool_call": false
+      },
+      "mimo-v2.5-tts-voiceclone": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5-TTS-VoiceClone is an AI model provided by xiaomi-token-plan-sgp.",
+        "family": "mimo",
+        "id": "mimo-v2.5-tts-voiceclone",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 8192,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "MiMo-V2.5-TTS-VoiceClone",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-04-22",
+        "tool_call": false
+      },
+      "mimo-v2.5-tts-voicedesign": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo-V2.5-TTS-VoiceDesign is an AI model provided by xiaomi-token-plan-sgp.",
+        "family": "mimo",
+        "id": "mimo-v2.5-tts-voicedesign",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 8192,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "MiMo-V2.5-TTS-VoiceDesign",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-04-22",
+        "tool_call": false
       }
     },
     "name": "Xiaomi Token Plan (Singapore)",
