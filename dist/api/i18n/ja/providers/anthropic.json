@@ -659,6 +659,59 @@
       "temperature": false,
       "tool_call": true
     },
+    "claude-opus-4-8": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Claude Opus 4.8 は anthropic によって提供される AI モデルです。",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 50
+            },
+            "provider": {
+              "body": {
+                "speed": "fast"
+              },
+              "headers": {
+                "anthropic-beta": "fast-mode-2026-02-01"
+              }
+            }
+          }
+        }
+      },
+      "family": "claude-opus",
+      "id": "claude-opus-4-8",
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.8",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-28",
+      "temperature": false,
+      "tool_call": true
+    },
     "claude-sonnet-4-0": {
       "attachment": true,
       "cost": {

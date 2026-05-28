@@ -791,6 +791,74 @@
       "temperature": false,
       "tool_call": true
     },
+    "anthropic/claude-opus-4.8": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Claude Opus 4.8 是由 openrouter 提供的人工智能模型。",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.8",
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.8",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-28",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-4.8-fast": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "input": 10,
+        "output": 50
+      },
+      "description": "Claude Opus 4.8 (Fast) 是由 openrouter 提供的人工智能模型。",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.8-fast",
+      "last_updated": "2026-05-27",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.8 (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-27",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "anthropic/claude-sonnet-4": {
       "attachment": true,
       "cost": {
@@ -1285,36 +1353,6 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-06-30",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
-    },
-    "baidu/qianfan-ocr-fast": {
-      "attachment": true,
-      "cost": {
-        "input": 0.68,
-        "output": 2.81
-      },
-      "description": "Qianfan-OCR-Fast 是由 openrouter 提供的人工智能模型。",
-      "id": "baidu/qianfan-ocr-fast",
-      "last_updated": "2026-04-20",
-      "limit": {
-        "context": 65536,
-        "output": 28672
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qianfan-OCR-Fast",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-04-20",
       "structured_output": false,
       "temperature": true,
       "tool_call": false
@@ -4334,7 +4372,7 @@
       },
       "last_updated": "2026-02-12",
       "limit": {
-        "context": 196608,
+        "context": 262144,
         "output": 8192
       },
       "modalities": {
@@ -5333,6 +5371,41 @@
       "release_date": "2026-04-21",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2.6:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Kimi K2.6 (free) 是由 openrouter 提供的人工智能模型。",
+      "family": "kimi-k2.6",
+      "id": "moonshotai/kimi-k2.6:free",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6 (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-21",
+      "structured_output": false,
+      "temperature": false,
       "tool_call": true
     },
     "morph/morph-v3-fast": {
@@ -10354,9 +10427,9 @@
     "tencent/hy3-preview": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.029,
-        "input": 0.066,
-        "output": 0.26
+        "cache_read": 0.021,
+        "input": 0.063,
+        "output": 0.21
       },
       "description": "Hy3 preview 是由 openrouter 提供的人工智能模型。",
       "family": "Hy",
@@ -10990,8 +11063,9 @@
     "z-ai/glm-4.5-air": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.06,
         "input": 0.125,
-        "output": 0.84
+        "output": 0.85
       },
       "description": "GLM-4.5-Air 是由 openrouter 提供的人工智能模型。",
       "family": "glm-air",
