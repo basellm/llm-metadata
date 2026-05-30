@@ -10,16 +10,16 @@
     "GLM-5.1": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
+        "cache_read": 0.12,
         "cache_write": 0,
-        "input": 0,
-        "output": 0
+        "input": 1.2,
+        "output": 3.6
       },
       "description": "GLM-5.1 は wafer.ai によって提供される AI モデルです。",
       "family": "glm",
       "id": "GLM-5.1",
       "knowledge": "2025-04",
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-05-30",
       "limit": {
         "context": 202752,
         "output": 131072
@@ -43,50 +43,16 @@
     "Kimi-K2.6": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.11,
+        "cache_read": 0.09,
         "cache_write": 0,
-        "input": 1.1,
-        "output": 4.8
+        "input": 0.88,
+        "output": 3.84
       },
-      "description": "Kimi K2.6 は wafer.ai によって提供される AI モデルです。",
+      "description": "Kimi-K2.6 は wafer.ai によって提供される AI モデルです。",
       "family": "kimi",
       "id": "Kimi-K2.6",
       "knowledge": "2025-01",
-      "last_updated": "2026-05-13",
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2.6",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-05-13",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "Qwen3.5-397B-A17B": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0,
-        "cache_write": 0,
-        "input": 0,
-        "output": 0
-      },
-      "description": "Qwen3.5 397B A17B は wafer.ai によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "Qwen3.5-397B-A17B",
-      "knowledge": "2025-04",
-      "last_updated": "2026-02-16",
+      "last_updated": "2026-05-30",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -101,7 +67,42 @@
           "text"
         ]
       },
-      "name": "Qwen3.5 397B A17B",
+      "name": "Kimi-K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-05-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen3.5-397B-A17B": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 0,
+        "input": 0.48,
+        "output": 2.88
+      },
+      "description": "Qwen3.5-397B-A17B は wafer.ai によって提供される AI モデルです。",
+      "family": "qwen",
+      "id": "Qwen3.5-397B-A17B",
+      "knowledge": "2025-04",
+      "last_updated": "2026-05-30",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5-397B-A17B",
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-02-16",
@@ -114,17 +115,18 @@
       "cost": {
         "cache_read": 0.02,
         "cache_write": 0,
-        "input": 0.19,
-        "output": 1.25
+        "input": 0.15,
+        "output": 1
       },
-      "description": "Qwen3.6 35B A3B は wafer.ai によって提供される AI モデルです。",
+      "description": "Qwen3.6-35B-A3B は wafer.ai によって提供される AI モデルです。",
       "family": "qwen",
       "id": "Qwen3.6-35B-A3B",
       "knowledge": "2025-04",
-      "last_updated": "2026-05-11",
+      "last_updated": "2026-05-30",
       "limit": {
-        "context": 32768,
-        "output": 16384
+        "context": 256000,
+        "input": 229376,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -136,10 +138,114 @@
           "text"
         ]
       },
-      "name": "Qwen3.6 35B A3B",
+      "name": "Qwen3.6-35B-A3B",
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-05-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v4-flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "description": "DeepSeek V4 Flash は wafer.ai によって提供される AI モデルです。",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-05-30",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v4-pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.02,
+        "cache_write": 0,
+        "input": 1.74,
+        "output": 3.48
+      },
+      "description": "DeepSeek V4 Pro は wafer.ai によって提供される AI モデルです。",
+      "family": "deepseek-thinking",
+      "id": "deepseek-v4-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-05-30",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.7-max": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 0,
+        "input": 5,
+        "output": 15
+      },
+      "description": "Qwen3.7-Max は wafer.ai によって提供される AI モデルです。",
+      "family": "qwen3.7-max",
+      "id": "qwen3.7-max",
+      "last_updated": "2026-05-30",
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7-Max",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-21",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
