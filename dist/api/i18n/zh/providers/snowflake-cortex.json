@@ -1,0 +1,371 @@
+{
+  "api": "https://${SNOWFLAKE_ACCOUNT}.snowflakecomputing.com/api/v2/cortex/v1",
+  "doc": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-rest-api",
+  "env": [
+    "SNOWFLAKE_ACCOUNT",
+    "SNOWFLAKE_CORTEX_PAT"
+  ],
+  "iconURL": "https://models.dev/logos/snowflake-cortex.svg",
+  "id": "snowflake-cortex",
+  "models": {
+    "claude-haiku-4-5": {
+      "attachment": true,
+      "description": "Claude Haiku 4.5 (latest) 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "claude-haiku",
+      "id": "claude-haiku-4-5",
+      "knowledge": "2025-02-28",
+      "last_updated": "2025-10-15",
+      "limit": {
+        "context": 200000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Haiku 4.5 (latest)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-10-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-4-7": {
+      "attachment": true,
+      "description": "Claude Opus 4.7 是由 snowflake-cortex 提供的人工智能模型。",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 3,
+              "cache_write": 37.5,
+              "input": 30,
+              "output": 150
+            },
+            "provider": {
+              "body": {
+                "speed": "fast"
+              },
+              "headers": {
+                "anthropic-beta": "fast-mode-2026-02-01"
+              }
+            }
+          }
+        }
+      },
+      "family": "claude-opus",
+      "id": "claude-opus-4-7",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-04-16",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.7",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-16",
+      "status": "beta",
+      "temperature": false,
+      "tool_call": true
+    },
+    "claude-sonnet-4-5": {
+      "attachment": true,
+      "description": "Claude Sonnet 4.5 (latest) 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4-5",
+      "knowledge": "2025-07-31",
+      "last_updated": "2025-09-29",
+      "limit": {
+        "context": 200000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.5 (latest)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-09-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-sonnet-4-6": {
+      "attachment": true,
+      "description": "Claude Sonnet 4.6 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4-6",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-13",
+      "limit": {
+        "context": 1000000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai-gpt-4.1": {
+      "attachment": true,
+      "description": "GPT-4.1 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "openai-gpt-4.1",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai-gpt-5": {
+      "attachment": true,
+      "description": "GPT-5 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "openai-gpt-5",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai-gpt-5-mini": {
+      "attachment": true,
+      "description": "GPT-5 Mini 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "gpt-mini",
+      "id": "openai-gpt-5-mini",
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 272000,
+        "input": 272000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai-gpt-5-nano": {
+      "attachment": true,
+      "description": "GPT-5 Nano 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "gpt-nano",
+      "id": "openai-gpt-5-nano",
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Nano",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai-gpt-5.1": {
+      "attachment": true,
+      "description": "GPT-5.1 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "openai-gpt-5.1",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai-gpt-5.2": {
+      "attachment": true,
+      "description": "GPT-5.2 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "openai-gpt-5.2",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.2",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai-gpt-5.4": {
+      "attachment": true,
+      "description": "GPT-5.4 是由 snowflake-cortex 提供的人工智能模型。",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.5,
+              "input": 5,
+              "output": 30
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
+      "family": "gpt",
+      "id": "openai-gpt-5.4",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-05",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.4",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-05",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    }
+  },
+  "name": "Snowflake Cortex",
+  "npm": "@ai-sdk/openai-compatible"
+}
