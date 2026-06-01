@@ -1,10 +1,27 @@
 {
   "attachment": true,
   "cost": {
-    "input": 0,
-    "output": 0
+    "cache_read": 0.075,
+    "input": 0.75,
+    "output": 4.5
   },
-  "description": "GPT-5.4 Mini は github-copilot によって提供される AI モデルです。",
+  "description": "GPT-5.4 mini は github-copilot によって提供される AI モデルです。",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.15,
+          "input": 1.5,
+          "output": 9
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt-mini",
   "id": "gpt-5.4-mini",
   "knowledge": "2025-08-31",
@@ -23,7 +40,7 @@
       "text"
     ]
   },
-  "name": "GPT-5.4 Mini",
+  "name": "GPT-5.4 mini",
   "open_weights": false,
   "reasoning": true,
   "release_date": "2026-03-17",

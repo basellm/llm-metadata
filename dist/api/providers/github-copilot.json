@@ -11,29 +11,31 @@
     "claude-haiku-4.5": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.1,
+        "cache_write": 1.25,
+        "input": 1,
+        "output": 5
       },
-      "description": "Claude Haiku 4.5 is an AI model provided by github-copilot.",
+      "description": "Claude Haiku 4.5 (latest) is an AI model provided by github-copilot.",
       "family": "claude-haiku",
       "id": "claude-haiku-4.5",
       "knowledge": "2025-02-28",
       "last_updated": "2025-10-15",
       "limit": {
         "context": 200000,
-        "input": 136000,
         "output": 64000
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Haiku 4.5",
+      "name": "Claude Haiku 4.5 (latest)",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-10-15",
@@ -43,29 +45,31 @@
     "claude-opus-4.5": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
       },
-      "description": "Claude Opus 4.5 is an AI model provided by github-copilot.",
+      "description": "Claude Opus 4.5 (latest) is an AI model provided by github-copilot.",
       "family": "claude-opus",
       "id": "claude-opus-4.5",
       "knowledge": "2025-03-31",
-      "last_updated": "2025-08-01",
+      "last_updated": "2025-11-24",
       "limit": {
         "context": 200000,
-        "input": 168000,
-        "output": 32000
+        "output": 64000
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Opus 4.5",
+      "name": "Claude Opus 4.5 (latest)",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-11-24",
@@ -75,23 +79,45 @@
     "claude-opus-4.6": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
       },
       "description": "Claude Opus 4.6 is an AI model provided by github-copilot.",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 3,
+              "cache_write": 37.5,
+              "input": 30,
+              "output": 150
+            },
+            "provider": {
+              "body": {
+                "speed": "fast"
+              },
+              "headers": {
+                "anthropic-beta": "fast-mode-2026-02-01"
+              }
+            }
+          }
+        }
+      },
       "family": "claude-opus",
       "id": "claude-opus-4.6",
       "knowledge": "2025-05-31",
-      "last_updated": "2026-02-05",
+      "last_updated": "2026-03-13",
       "limit": {
-        "context": 200000,
-        "input": 168000,
-        "output": 32000
+        "context": 1000000,
+        "output": 128000
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -107,23 +133,45 @@
     "claude-opus-4.7": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
       },
       "description": "Claude Opus 4.7 is an AI model provided by github-copilot.",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 3,
+              "cache_write": 37.5,
+              "input": 30,
+              "output": 150
+            },
+            "provider": {
+              "body": {
+                "speed": "fast"
+              },
+              "headers": {
+                "anthropic-beta": "fast-mode-2026-02-01"
+              }
+            }
+          }
+        }
+      },
       "family": "claude-opus",
       "id": "claude-opus-4.7",
       "knowledge": "2026-01-31",
       "last_updated": "2026-04-16",
       "limit": {
-        "context": 200000,
-        "input": 168000,
-        "output": 32000
+        "context": 1000000,
+        "output": 128000
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -139,23 +187,44 @@
     "claude-opus-4.8": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
       },
       "description": "Claude Opus 4.8 is an AI model provided by github-copilot.",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 50
+            },
+            "provider": {
+              "body": {
+                "speed": "fast"
+              },
+              "headers": {
+                "anthropic-beta": "fast-mode-2026-02-01"
+              }
+            }
+          }
+        }
+      },
       "family": "claude-opus",
       "id": "claude-opus-4.8",
-      "knowledge": "2026-01-31",
       "last_updated": "2026-05-28",
       "limit": {
-        "context": 200000,
-        "input": 168000,
-        "output": 64000
+        "context": 1000000,
+        "output": 128000
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -168,97 +237,68 @@
       "temperature": false,
       "tool_call": true
     },
-    "claude-opus-41": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Claude Opus 4.1 is an AI model provided by github-copilot.",
-      "family": "claude-opus",
-      "id": "claude-opus-41",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-08-05",
-      "limit": {
-        "context": 80000,
-        "output": 16000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Opus 4.1",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-08-05",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": false
-    },
     "claude-sonnet-4": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
       },
-      "description": "Claude Sonnet 4 is an AI model provided by github-copilot.",
+      "description": "Claude Sonnet 4 (latest) is an AI model provided by github-copilot.",
       "family": "claude-sonnet",
       "id": "claude-sonnet-4",
       "knowledge": "2025-03-31",
       "last_updated": "2025-05-22",
       "limit": {
-        "context": 216000,
-        "input": 128000,
-        "output": 16000
+        "context": 200000,
+        "output": 64000
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Sonnet 4",
+      "name": "Claude Sonnet 4 (latest)",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-05-22",
-      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
     "claude-sonnet-4.5": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
       },
-      "description": "Claude Sonnet 4.5 is an AI model provided by github-copilot.",
+      "description": "Claude Sonnet 4.5 (latest) is an AI model provided by github-copilot.",
       "family": "claude-sonnet",
       "id": "claude-sonnet-4.5",
-      "knowledge": "2025-03-31",
+      "knowledge": "2025-07-31",
       "last_updated": "2025-09-29",
       "limit": {
         "context": 200000,
-        "input": 168000,
-        "output": 32000
+        "output": 64000
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Sonnet 4.5",
+      "name": "Claude Sonnet 4.5 (latest)",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-09-29",
@@ -268,23 +308,25 @@
     "claude-sonnet-4.6": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
       },
       "description": "Claude Sonnet 4.6 is an AI model provided by github-copilot.",
       "family": "claude-sonnet",
       "id": "claude-sonnet-4.6",
       "knowledge": "2025-08-31",
-      "last_updated": "2026-02-17",
+      "last_updated": "2026-03-13",
       "limit": {
-        "context": 200000,
-        "input": 168000,
-        "output": 32000
+        "context": 1000000,
+        "output": 64000
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -300,8 +342,25 @@
     "gemini-2.5-pro": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.125,
+        "context_over_200k": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 15
+        },
+        "input": 1.25,
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.25,
+            "input": 2.5,
+            "output": 15,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Gemini 2.5 Pro is an AI model provided by github-copilot.",
       "family": "gemini-pro",
@@ -309,16 +368,16 @@
       "knowledge": "2025-01",
       "last_updated": "2025-06-05",
       "limit": {
-        "context": 128000,
-        "input": 128000,
-        "output": 64000
+        "context": 1048576,
+        "output": 65536
       },
       "modalities": {
         "input": [
           "text",
           "image",
           "audio",
-          "video"
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
@@ -326,39 +385,42 @@
       },
       "name": "Gemini 2.5 Pro",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
       "release_date": "2025-03-20",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "gemini-3-flash-preview": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.05,
+        "input": 0.5,
+        "input_audio": 1,
+        "output": 3
       },
-      "description": "Gemini 3 Flash is an AI model provided by github-copilot.",
+      "description": "Gemini 3 Flash Preview is an AI model provided by github-copilot.",
       "family": "gemini-flash",
       "id": "gemini-3-flash-preview",
       "knowledge": "2025-01",
       "last_updated": "2025-12-17",
       "limit": {
-        "context": 128000,
-        "input": 128000,
-        "output": 64000
+        "context": 1048576,
+        "output": 65536
       },
       "modalities": {
         "input": [
           "text",
           "image",
+          "video",
           "audio",
-          "video"
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Gemini 3 Flash",
+      "name": "Gemini 3 Flash Preview",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-12-17",
@@ -366,47 +428,28 @@
       "temperature": true,
       "tool_call": true
     },
-    "gemini-3-pro-preview": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Gemini 3 Pro Preview is an AI model provided by github-copilot.",
-      "family": "gemini-pro",
-      "id": "gemini-3-pro-preview",
-      "knowledge": "2025-01",
-      "last_updated": "2025-11-18",
-      "limit": {
-        "context": 128000,
-        "input": 128000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 3 Pro Preview",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-11-18",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "gemini-3.1-pro-preview": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 4,
+          "output": 18
+        },
+        "input": 2,
+        "output": 12,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Gemini 3.1 Pro Preview is an AI model provided by github-copilot.",
       "family": "gemini-pro",
@@ -414,14 +457,16 @@
       "knowledge": "2025-01",
       "last_updated": "2026-02-19",
       "limit": {
-        "context": 200000,
-        "input": 136000,
-        "output": 64000
+        "context": 1048576,
+        "output": 65536
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video",
+          "audio",
+          "pdf"
         ],
         "output": [
           "text"
@@ -438,8 +483,10 @@
     "gemini-3.5-flash": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.15,
+        "input": 1.5,
+        "input_audio": 1.5,
+        "output": 9
       },
       "description": "Gemini 3.5 Flash is an AI model provided by github-copilot.",
       "family": "gemini-flash",
@@ -447,16 +494,16 @@
       "knowledge": "2025-01",
       "last_updated": "2026-05-19",
       "limit": {
-        "context": 200000,
-        "input": 128000,
-        "output": 64000
+        "context": 1048576,
+        "output": 65536
       },
       "modalities": {
         "input": [
           "text",
           "image",
+          "video",
           "audio",
-          "video"
+          "pdf"
         ],
         "output": [
           "text"
@@ -473,8 +520,9 @@
     "gpt-4.1": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.5,
+        "input": 2,
+        "output": 8
       },
       "description": "GPT-4.1 is an AI model provided by github-copilot.",
       "family": "gpt",
@@ -482,14 +530,14 @@
       "knowledge": "2024-04",
       "last_updated": "2025-04-14",
       "limit": {
-        "context": 128000,
-        "input": 64000,
-        "output": 16384
+        "context": 1047576,
+        "output": 32768
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -499,152 +547,25 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-04-14",
-      "temperature": true,
-      "tool_call": true
-    },
-    "gpt-4o": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "GPT-4o is an AI model provided by github-copilot.",
-      "family": "gpt",
-      "id": "gpt-4o",
-      "knowledge": "2023-09",
-      "last_updated": "2024-05-13",
-      "limit": {
-        "context": 128000,
-        "input": 64000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-4o",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-05-13",
-      "temperature": true,
-      "tool_call": true
-    },
-    "gpt-5": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "GPT-5 is an AI model provided by github-copilot.",
-      "family": "gpt",
-      "id": "gpt-5",
-      "knowledge": "2024-10",
-      "last_updated": "2025-08-07",
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-08-07",
-      "status": "deprecated",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "gpt-5-mini": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.025,
+        "input": 0.25,
+        "output": 2
       },
-      "description": "GPT-5-mini is an AI model provided by github-copilot.",
+      "description": "GPT-5 Mini is an AI model provided by github-copilot.",
       "family": "gpt-mini",
       "id": "gpt-5-mini",
-      "knowledge": "2024-06",
-      "last_updated": "2025-08-13",
-      "limit": {
-        "context": 264000,
-        "input": 128000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5-mini",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-08-13",
-      "temperature": true,
-      "tool_call": true
-    },
-    "gpt-5.1": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "GPT-5.1 is an AI model provided by github-copilot.",
-      "family": "gpt",
-      "id": "gpt-5.1",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 264000,
-        "input": 128000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.1",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-11-13",
-      "status": "deprecated",
-      "temperature": false,
-      "tool_call": true
-    },
-    "gpt-5.1-codex": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "GPT-5.1-Codex is an AI model provided by github-copilot.",
-      "family": "gpt-codex",
-      "id": "gpt-5.1-codex",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
       "limit": {
         "context": 400000,
-        "input": 128000,
+        "input": 272000,
         "output": 128000
       },
       "modalities": {
@@ -656,85 +577,20 @@
           "text"
         ]
       },
-      "name": "GPT-5.1-Codex",
+      "name": "GPT-5 Mini",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2025-11-13",
-      "status": "deprecated",
-      "temperature": false,
-      "tool_call": true
-    },
-    "gpt-5.1-codex-max": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "GPT-5.1-Codex-max is an AI model provided by github-copilot.",
-      "family": "gpt-codex",
-      "id": "gpt-5.1-codex-max",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-12-04",
-      "limit": {
-        "context": 400000,
-        "input": 128000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.1-Codex-max",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-12-04",
-      "status": "deprecated",
-      "temperature": false,
-      "tool_call": true
-    },
-    "gpt-5.1-codex-mini": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "GPT-5.1-Codex-mini is an AI model provided by github-copilot.",
-      "family": "gpt-codex",
-      "id": "gpt-5.1-codex-mini",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 400000,
-        "input": 128000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.1-Codex-mini",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-11-13",
-      "status": "deprecated",
+      "release_date": "2025-08-07",
+      "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
     "gpt-5.2": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
       },
       "description": "GPT-5.2 is an AI model provided by github-copilot.",
       "family": "gpt",
@@ -759,16 +615,18 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-12-11",
+      "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
     "gpt-5.2-codex": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
       },
-      "description": "GPT-5.2-Codex is an AI model provided by github-copilot.",
+      "description": "GPT-5.2 Codex is an AI model provided by github-copilot.",
       "family": "gpt-codex",
       "id": "gpt-5.2-codex",
       "knowledge": "2025-08-31",
@@ -781,30 +639,33 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "GPT-5.2-Codex",
+      "name": "GPT-5.2 Codex",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-12-11",
+      "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
     "gpt-5.3-codex": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
       },
-      "description": "GPT-5.3-Codex is an AI model provided by github-copilot.",
+      "description": "GPT-5.3 Codex is an AI model provided by github-copilot.",
       "family": "gpt-codex",
       "id": "gpt-5.3-codex",
       "knowledge": "2025-08-31",
-      "last_updated": "2026-02-24",
+      "last_updated": "2026-02-05",
       "limit": {
         "context": 400000,
         "input": 272000,
@@ -813,39 +674,75 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "GPT-5.3-Codex",
+      "name": "GPT-5.3 Codex",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2026-02-24",
+      "release_date": "2026-02-05",
+      "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
     "gpt-5.4": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.25,
+        "context_over_200k": {
+          "cache_read": 0.5,
+          "input": 5,
+          "output": 22.5
+        },
+        "input": 2.5,
+        "output": 15,
+        "tiers": [
+          {
+            "cache_read": 0.5,
+            "input": 5,
+            "output": 22.5,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "GPT-5.4 is an AI model provided by github-copilot.",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.5,
+              "input": 5,
+              "output": 30
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt",
       "id": "gpt-5.4",
       "knowledge": "2025-08-31",
       "last_updated": "2026-03-05",
       "limit": {
-        "context": 400000,
-        "input": 272000,
+        "context": 1050000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -855,16 +752,34 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-05",
+      "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
     "gpt-5.4-mini": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.075,
+        "input": 0.75,
+        "output": 4.5
       },
-      "description": "GPT-5.4 Mini is an AI model provided by github-copilot.",
+      "description": "GPT-5.4 mini is an AI model provided by github-copilot.",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.15,
+              "input": 1.5,
+              "output": 9
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt-mini",
       "id": "gpt-5.4-mini",
       "knowledge": "2025-08-31",
@@ -883,7 +798,7 @@
           "text"
         ]
       },
-      "name": "GPT-5.4 Mini",
+      "name": "GPT-5.4 mini",
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-17",
@@ -891,17 +806,18 @@
       "temperature": false,
       "tool_call": true
     },
-    "gpt-5.5": {
-      "attachment": false,
+    "gpt-5.4-nano": {
+      "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.02,
+        "input": 0.2,
+        "output": 1.25
       },
-      "description": "GPT-5.5 is an AI model provided by github-copilot.",
-      "family": "gpt",
-      "id": "gpt-5.5",
+      "description": "GPT-5.4 nano is an AI model provided by github-copilot.",
+      "family": "gpt-nano",
+      "id": "gpt-5.4-nano",
       "knowledge": "2025-08-31",
-      "last_updated": "2026-04-22",
+      "last_updated": "2026-03-17",
       "limit": {
         "context": 400000,
         "input": 272000,
@@ -916,42 +832,113 @@
           "text"
         ]
       },
-      "name": "GPT-5.5",
+      "name": "GPT-5.4 nano",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2026-04-22",
+      "release_date": "2026-03-17",
+      "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
-    "grok-code-fast-1": {
-      "attachment": false,
+    "gpt-5.5": {
+      "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 1,
+          "input": 10,
+          "output": 45
+        },
+        "input": 5,
+        "output": 30,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "input": 10,
+            "output": 45,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Grok Code Fast 1 is an AI model provided by github-copilot.",
-      "family": "grok",
-      "id": "grok-code-fast-1",
-      "knowledge": "2025-08",
-      "last_updated": "2025-08-27",
+      "description": "GPT-5.5 is an AI model provided by github-copilot.",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 1.25,
+              "input": 12.5,
+              "output": 75
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
+      "family": "gpt",
+      "id": "gpt-5.5",
+      "knowledge": "2025-12-01",
+      "last_updated": "2026-04-23",
       "limit": {
-        "context": 128000,
-        "input": 128000,
-        "output": 64000
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Grok Code Fast 1",
+      "name": "GPT-5.5",
       "open_weights": false,
       "reasoning": true,
-      "release_date": "2025-08-27",
-      "temperature": true,
+      "release_date": "2026-04-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "raptor-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.25,
+        "output": 2
+      },
+      "description": "Raptor mini is an AI model provided by github-copilot.",
+      "family": "gpt-mini",
+      "id": "raptor-mini",
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Raptor mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     }
   },

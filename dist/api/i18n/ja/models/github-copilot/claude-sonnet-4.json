@@ -1,33 +1,34 @@
 {
   "attachment": true,
   "cost": {
-    "input": 0,
-    "output": 0
+    "cache_read": 0.3,
+    "cache_write": 3.75,
+    "input": 3,
+    "output": 15
   },
-  "description": "Claude Sonnet 4 は github-copilot によって提供される AI モデルです。",
+  "description": "Claude Sonnet 4 (latest) は github-copilot によって提供される AI モデルです。",
   "family": "claude-sonnet",
   "id": "claude-sonnet-4",
   "knowledge": "2025-03-31",
   "last_updated": "2025-05-22",
   "limit": {
-    "context": 216000,
-    "input": 128000,
-    "output": 16000
+    "context": 200000,
+    "output": 64000
   },
   "modalities": {
     "input": [
       "text",
-      "image"
+      "image",
+      "pdf"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Claude Sonnet 4",
+  "name": "Claude Sonnet 4 (latest)",
   "open_weights": false,
   "reasoning": true,
   "release_date": "2025-05-22",
-  "status": "deprecated",
   "temperature": true,
   "tool_call": true
 }

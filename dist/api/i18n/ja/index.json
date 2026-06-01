@@ -11772,8 +11772,8 @@
         "reasoning": true,
         "tool_call": true
       },
-      "id": "deepseek-v4-pro-precision",
-      "name": "DeepSeek V4 Pro (Precision)",
+      "id": "deepseek-v4-pro-lightning",
+      "name": "DeepSeek V4 Pro",
       "providerId": "crof",
       "updated": "2026-04-24"
     },
@@ -11835,13 +11835,13 @@
     {
       "flags": {
         "attachment": false,
-        "reasoning": true,
-        "tool_call": true
+        "reasoning": false,
+        "tool_call": false
       },
-      "id": "glm-5.1-precision",
-      "name": "GLM 5.1 (Precision)",
+      "id": "greg-1",
+      "name": "Greg 1 Normal",
       "providerId": "crof",
-      "updated": "2026-03-27"
+      "updated": "2026-01-27"
     },
     {
       "flags": {
@@ -11849,8 +11849,30 @@
         "reasoning": false,
         "tool_call": false
       },
-      "id": "greg",
-      "name": "Experiment!: Greg",
+      "id": "greg-1-mini",
+      "name": "Greg 1 Mini",
+      "providerId": "crof",
+      "updated": "2026-01-27"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": false,
+        "tool_call": false
+      },
+      "id": "greg-1-super",
+      "name": "Greg 1 Super",
+      "providerId": "crof",
+      "updated": "2026-01-27"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": false,
+        "tool_call": false
+      },
+      "id": "greg-rp",
+      "name": "Greg (Roleplay)",
       "providerId": "crof",
       "updated": "2026-01-27"
     },
@@ -11889,34 +11911,12 @@
     },
     {
       "flags": {
-        "attachment": true,
-        "reasoning": true,
-        "tool_call": true
-      },
-      "id": "kimi-k2.6-precision",
-      "name": "Kimi K2.6 (Precision)",
-      "providerId": "crof",
-      "updated": "2026-04-21"
-    },
-    {
-      "flags": {
         "attachment": false,
         "reasoning": true,
         "tool_call": true
       },
       "id": "mimo-v2.5-pro",
       "name": "MiMo-V2.5-Pro",
-      "providerId": "crof",
-      "updated": "2026-04-22"
-    },
-    {
-      "flags": {
-        "attachment": false,
-        "reasoning": true,
-        "tool_call": true
-      },
-      "id": "mimo-v2.5-pro-precision",
-      "name": "MiMo-V2.5-Pro (Precision)",
       "providerId": "crof",
       "updated": "2026-04-22"
     },
@@ -14512,7 +14512,7 @@
         "tool_call": true
       },
       "id": "claude-haiku-4.5",
-      "name": "Claude Haiku 4.5",
+      "name": "Claude Haiku 4.5 (latest)",
       "providerId": "github-copilot",
       "updated": "2025-10-15"
     },
@@ -14523,9 +14523,9 @@
         "tool_call": true
       },
       "id": "claude-opus-4.5",
-      "name": "Claude Opus 4.5",
+      "name": "Claude Opus 4.5 (latest)",
       "providerId": "github-copilot",
-      "updated": "2025-08-01"
+      "updated": "2025-11-24"
     },
     {
       "flags": {
@@ -14536,7 +14536,7 @@
       "id": "claude-opus-4.6",
       "name": "Claude Opus 4.6",
       "providerId": "github-copilot",
-      "updated": "2026-02-05"
+      "updated": "2026-03-13"
     },
     {
       "flags": {
@@ -14564,21 +14564,10 @@
       "flags": {
         "attachment": true,
         "reasoning": true,
-        "tool_call": false
-      },
-      "id": "claude-opus-41",
-      "name": "Claude Opus 4.1",
-      "providerId": "github-copilot",
-      "updated": "2025-08-05"
-    },
-    {
-      "flags": {
-        "attachment": true,
-        "reasoning": true,
         "tool_call": true
       },
       "id": "claude-sonnet-4",
-      "name": "Claude Sonnet 4",
+      "name": "Claude Sonnet 4 (latest)",
       "providerId": "github-copilot",
       "updated": "2025-05-22"
     },
@@ -14589,7 +14578,7 @@
         "tool_call": true
       },
       "id": "claude-sonnet-4.5",
-      "name": "Claude Sonnet 4.5",
+      "name": "Claude Sonnet 4.5 (latest)",
       "providerId": "github-copilot",
       "updated": "2025-09-29"
     },
@@ -14602,12 +14591,12 @@
       "id": "claude-sonnet-4.6",
       "name": "Claude Sonnet 4.6",
       "providerId": "github-copilot",
-      "updated": "2026-02-17"
+      "updated": "2026-03-13"
     },
     {
       "flags": {
         "attachment": true,
-        "reasoning": false,
+        "reasoning": true,
         "tool_call": true
       },
       "id": "gemini-2.5-pro",
@@ -14622,20 +14611,9 @@
         "tool_call": true
       },
       "id": "gemini-3-flash-preview",
-      "name": "Gemini 3 Flash",
+      "name": "Gemini 3 Flash Preview",
       "providerId": "github-copilot",
       "updated": "2025-12-17"
-    },
-    {
-      "flags": {
-        "attachment": true,
-        "reasoning": true,
-        "tool_call": true
-      },
-      "id": "gemini-3-pro-preview",
-      "name": "Gemini 3 Pro Preview",
-      "providerId": "github-copilot",
-      "updated": "2025-11-18"
     },
     {
       "flags": {
@@ -14673,79 +14651,13 @@
     {
       "flags": {
         "attachment": true,
-        "reasoning": false,
-        "tool_call": true
-      },
-      "id": "gpt-4o",
-      "name": "GPT-4o",
-      "providerId": "github-copilot",
-      "updated": "2024-05-13"
-    },
-    {
-      "flags": {
-        "attachment": true,
-        "reasoning": true,
-        "tool_call": true
-      },
-      "id": "gpt-5",
-      "name": "GPT-5",
-      "providerId": "github-copilot",
-      "updated": "2025-08-07"
-    },
-    {
-      "flags": {
-        "attachment": true,
         "reasoning": true,
         "tool_call": true
       },
       "id": "gpt-5-mini",
-      "name": "GPT-5-mini",
+      "name": "GPT-5 Mini",
       "providerId": "github-copilot",
-      "updated": "2025-08-13"
-    },
-    {
-      "flags": {
-        "attachment": true,
-        "reasoning": true,
-        "tool_call": true
-      },
-      "id": "gpt-5.1",
-      "name": "GPT-5.1",
-      "providerId": "github-copilot",
-      "updated": "2025-11-13"
-    },
-    {
-      "flags": {
-        "attachment": false,
-        "reasoning": true,
-        "tool_call": true
-      },
-      "id": "gpt-5.1-codex",
-      "name": "GPT-5.1-Codex",
-      "providerId": "github-copilot",
-      "updated": "2025-11-13"
-    },
-    {
-      "flags": {
-        "attachment": true,
-        "reasoning": true,
-        "tool_call": true
-      },
-      "id": "gpt-5.1-codex-max",
-      "name": "GPT-5.1-Codex-max",
-      "providerId": "github-copilot",
-      "updated": "2025-12-04"
-    },
-    {
-      "flags": {
-        "attachment": false,
-        "reasoning": true,
-        "tool_call": true
-      },
-      "id": "gpt-5.1-codex-mini",
-      "name": "GPT-5.1-Codex-mini",
-      "providerId": "github-copilot",
-      "updated": "2025-11-13"
+      "updated": "2025-08-07"
     },
     {
       "flags": {
@@ -14760,29 +14672,29 @@
     },
     {
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "reasoning": true,
         "tool_call": true
       },
       "id": "gpt-5.2-codex",
-      "name": "GPT-5.2-Codex",
+      "name": "GPT-5.2 Codex",
       "providerId": "github-copilot",
       "updated": "2025-12-11"
     },
     {
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "reasoning": true,
         "tool_call": true
       },
       "id": "gpt-5.3-codex",
-      "name": "GPT-5.3-Codex",
+      "name": "GPT-5.3 Codex",
       "providerId": "github-copilot",
-      "updated": "2026-02-24"
+      "updated": "2026-02-05"
     },
     {
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "reasoning": true,
         "tool_call": true
       },
@@ -14798,31 +14710,42 @@
         "tool_call": true
       },
       "id": "gpt-5.4-mini",
-      "name": "GPT-5.4 Mini",
+      "name": "GPT-5.4 mini",
       "providerId": "github-copilot",
       "updated": "2026-03-17"
     },
     {
       "flags": {
-        "attachment": false,
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "gpt-5.4-nano",
+      "name": "GPT-5.4 nano",
+      "providerId": "github-copilot",
+      "updated": "2026-03-17"
+    },
+    {
+      "flags": {
+        "attachment": true,
         "reasoning": true,
         "tool_call": true
       },
       "id": "gpt-5.5",
       "name": "GPT-5.5",
       "providerId": "github-copilot",
-      "updated": "2026-04-22"
+      "updated": "2026-04-23"
     },
     {
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "reasoning": true,
         "tool_call": true
       },
-      "id": "grok-code-fast-1",
-      "name": "Grok Code Fast 1",
+      "id": "raptor-mini",
+      "name": "Raptor mini",
       "providerId": "github-copilot",
-      "updated": "2025-08-27"
+      "updated": "2025-08-07"
     },
     {
       "flags": {
@@ -42987,13 +42910,57 @@
     {
       "flags": {
         "attachment": true,
-        "reasoning": false,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "qwen3.5-397b-a17b",
+      "name": "Qwen3.5-397B-A17B",
+      "providerId": "ovhcloud",
+      "updated": "2026-05-18"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
         "tool_call": true
       },
       "id": "qwen3.5-9b",
       "name": "Qwen3.5-9B",
       "providerId": "ovhcloud",
-      "updated": "2026-02-15"
+      "updated": "2026-04-22"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "qwen3.6-27b",
+      "name": "Qwen3.6-27B",
+      "providerId": "ovhcloud",
+      "updated": "2026-06-01"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": false,
+        "tool_call": false
+      },
+      "id": "qwen3guard-gen-0.6b",
+      "name": "Qwen3Guard-Gen-0.6B",
+      "providerId": "ovhcloud",
+      "updated": "2026-01-22"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": false,
+        "tool_call": false
+      },
+      "id": "qwen3guard-gen-8b",
+      "name": "Qwen3Guard-Gen-8B",
+      "providerId": "ovhcloud",
+      "updated": "2026-01-22"
     },
     {
       "flags": {
@@ -56426,7 +56393,7 @@
       "iconURL": "https://models.dev/logos/github-copilot.svg",
       "id": "github-copilot",
       "lobeIcon": "GithubCopilot",
-      "modelCount": 29,
+      "modelCount": 22,
       "name": "GitHub Copilot"
     },
     {
@@ -56851,7 +56818,7 @@
       "doc": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog//",
       "iconURL": "https://models.dev/logos/ovhcloud.svg",
       "id": "ovhcloud",
-      "modelCount": 11,
+      "modelCount": 15,
       "name": "OVHcloud AI Endpoints"
     },
     {
