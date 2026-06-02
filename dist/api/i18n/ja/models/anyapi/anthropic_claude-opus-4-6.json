@@ -1,0 +1,48 @@
+{
+  "attachment": true,
+  "description": "Claude Opus 4.6 は anyapi によって提供される AI モデルです。",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 3,
+          "cache_write": 37.5,
+          "input": 30,
+          "output": 150
+        },
+        "provider": {
+          "body": {
+            "speed": "fast"
+          },
+          "headers": {
+            "anthropic-beta": "fast-mode-2026-02-01"
+          }
+        }
+      }
+    }
+  },
+  "family": "claude-opus",
+  "id": "anthropic/claude-opus-4-6",
+  "knowledge": "2025-05-31",
+  "last_updated": "2026-03-13",
+  "limit": {
+    "context": 1000000,
+    "output": 128000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "pdf"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Claude Opus 4.6",
+  "open_weights": false,
+  "reasoning": true,
+  "release_date": "2026-02-05",
+  "temperature": true,
+  "tool_call": true
+}
