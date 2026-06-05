@@ -1,0 +1,39 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.55,
+    "input": 5.5,
+    "output": 33
+  },
+  "description": "GPT-5.5 is an AI model provided by amazon-bedrock.",
+  "family": "gpt",
+  "id": "openai.gpt-5.5",
+  "knowledge": "2025-12-01",
+  "last_updated": "2026-06-01",
+  "limit": {
+    "context": 272000,
+    "output": 128000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "pdf"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "GPT-5.5",
+  "open_weights": false,
+  "provider": {
+    "api": "https://bedrock-mantle.${AWS_REGION}.api.aws/openai/v1",
+    "npm": "@ai-sdk/amazon-bedrock/mantle",
+    "shape": "responses"
+  },
+  "reasoning": true,
+  "release_date": "2026-04-23",
+  "structured_output": true,
+  "temperature": false,
+  "tool_call": true
+}
