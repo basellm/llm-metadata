@@ -1047,37 +1047,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "arcee-ai/spotlight": {
-      "attachment": true,
-      "cost": {
-        "input": 0.18,
-        "output": 0.18
-      },
-      "description": "Spotlight 是由 openrouter 提供的人工智能模型。",
-      "id": "arcee-ai/spotlight",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-05",
-      "limit": {
-        "context": 131072,
-        "output": 65537
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Spotlight",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-05-05",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
-    },
     "arcee-ai/trinity-large-thinking": {
       "attachment": false,
       "cost": {
@@ -1165,38 +1134,6 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-05-05",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "baidu/ernie-4.5-vl-28b-a3b": {
-      "attachment": true,
-      "cost": {
-        "input": 0.14,
-        "output": 0.56
-      },
-      "description": "ERNIE 4.5 VL 28B A3B 是由 openrouter 提供的人工智能模型。",
-      "family": "ernie",
-      "id": "baidu/ernie-4.5-vl-28b-a3b",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-08-12",
-      "limit": {
-        "context": 30000,
-        "output": 8000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "ERNIE 4.5 VL 28B A3B",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-08-12",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -2817,16 +2754,17 @@
     "google/gemma-4-31b-it": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.09,
         "input": 0.12,
-        "output": 0.37
+        "output": 0.36
       },
       "description": "Gemma 4 31B IT 是由 openrouter 提供的人工智能模型。",
       "family": "gemma",
       "id": "google/gemma-4-31b-it",
       "last_updated": "2026-04-02",
       "limit": {
-        "context": 262144,
-        "output": 16384
+        "context": 256000,
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -3405,8 +3343,8 @@
     "meta-llama/llama-3-8b-instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.04,
-        "output": 0.04
+        "input": 0.14,
+        "output": 0.14
       },
       "description": "Llama 3 8B Instruct 是由 openrouter 提供的人工智能模型。",
       "family": "llama",
@@ -4108,7 +4046,7 @@
       "last_updated": "2026-03-18",
       "limit": {
         "context": 196608,
-        "output": 131072
+        "output": 196608
       },
       "modalities": {
         "input": [
@@ -5750,37 +5688,6 @@
         ]
       },
       "name": "GPT-4",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2023-11-06",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-4-1106-preview": {
-      "attachment": false,
-      "cost": {
-        "input": 10,
-        "output": 30
-      },
-      "description": "GPT-4 Turbo (older v1106) 是由 openrouter 提供的人工智能模型。",
-      "family": "gpt",
-      "id": "openai/gpt-4-1106-preview",
-      "knowledge": "2023-04-30",
-      "last_updated": "2023-11-06",
-      "limit": {
-        "context": 128000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-4 Turbo (older v1106)",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2023-11-06",
