@@ -694,14 +694,14 @@
     "google-gemma-4-31b-it": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.12,
-        "input": 0.155,
-        "output": 0.44
+        "cache_read": 0.09,
+        "input": 0.12,
+        "output": 0.36
       },
       "description": "Google Gemma 4 31B Instruct is an AI model provided by venice.",
       "family": "gemma",
       "id": "google-gemma-4-31b-it",
-      "last_updated": "2026-06-04",
+      "last_updated": "2026-06-08",
       "limit": {
         "context": 256000,
         "output": 8192
@@ -1290,6 +1290,38 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-01-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia-nemotron-3-ultra-550b-a55b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1875,
+        "input": 0.625,
+        "output": 3.125
+      },
+      "description": "NVIDIA Nemotron 3 Ultra is an AI model provided by venice.",
+      "family": "nemotron",
+      "id": "nvidia-nemotron-3-ultra-550b-a55b",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 256000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA Nemotron 3 Ultra",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-06-04",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
