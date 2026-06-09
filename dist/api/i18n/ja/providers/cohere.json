@@ -134,6 +134,47 @@
       "temperature": true,
       "tool_call": true
     },
+    "command-a-plus-05-2026": {
+      "attachment": true,
+      "cost": {
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "Command A Plus は cohere によって提供される AI モデルです。",
+      "family": "command-a",
+      "id": "command-a-plus-05-2026",
+      "knowledge": "2025-04-01",
+      "last_updated": "2026-06-09",
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Command A Plus",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-05-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "command-a-reasoning-08-2025": {
       "attachment": false,
       "cost": {
@@ -351,6 +392,53 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-02-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "north-mini-code-1-0": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "North Mini Code は cohere によって提供される AI モデルです。",
+      "family": "north",
+      "id": "north-mini-code-1-0",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-09-23",
+      "last_updated": "2026-06-09",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "North Mini Code",
+      "open_weights": true,
+      "provider": {
+        "api": "https://api.cohere.ai/compatibility/v1",
+        "npm": "@ai-sdk/openai-compatible"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-09",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     }
