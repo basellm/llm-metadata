@@ -7,6 +7,7 @@
   "description": "Gemma 4 26B A4B IT 是由 cloudflare-workers-ai 提供的人工智能模型。",
   "family": "gemma",
   "id": "@cf/google/gemma-4-26b-a4b-it",
+  "interleaved": true,
   "last_updated": "2026-04-02",
   "limit": {
     "context": 256000,
@@ -24,6 +25,19 @@
   "name": "Gemma 4 26B A4B IT",
   "open_weights": true,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-04-02",
   "structured_output": true,
   "temperature": true,

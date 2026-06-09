@@ -7,6 +7,9 @@
   "description": "GLM-4.7-Flash は cloudflare-workers-ai によって提供される AI モデルです。",
   "family": "glm-flash",
   "id": "@cf/zai-org/glm-4.7-flash",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "knowledge": "2025-04",
   "last_updated": "2026-01-19",
   "limit": {
@@ -24,6 +27,19 @@
   "name": "GLM-4.7-Flash",
   "open_weights": true,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-01-19",
   "structured_output": true,
   "temperature": true,
