@@ -70,8 +70,8 @@
     "alibaba/qwen-3-30b": {
       "attachment": false,
       "cost": {
-        "input": 0.08,
-        "output": 0.29
+        "input": 0.12,
+        "output": 0.5
       },
       "description": "Qwen3-30B-A3B は vercel によって提供される AI モデルです。",
       "family": "qwen",
@@ -834,6 +834,156 @@
       "temperature": true,
       "tool_call": true
     },
+    "alibaba/wan-v2.5-t2v-preview": {
+      "attachment": false,
+      "description": "Wan v2.5 Text-to-Video Preview は vercel によって提供される AI モデルです。",
+      "family": "o",
+      "id": "alibaba/wan-v2.5-t2v-preview",
+      "last_updated": "2025-09-24",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Wan v2.5 Text-to-Video Preview",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-09-24",
+      "temperature": true,
+      "tool_call": false
+    },
+    "alibaba/wan-v2.6-i2v": {
+      "attachment": false,
+      "description": "Wan v2.6 Image-to-Video は vercel によって提供される AI モデルです。",
+      "family": "o",
+      "id": "alibaba/wan-v2.6-i2v",
+      "last_updated": "2025-12-16",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Wan v2.6 Image-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-16",
+      "temperature": true,
+      "tool_call": false
+    },
+    "alibaba/wan-v2.6-i2v-flash": {
+      "attachment": false,
+      "description": "Wan v2.6 Image-to-Video Flash は vercel によって提供される AI モデルです。",
+      "family": "o",
+      "id": "alibaba/wan-v2.6-i2v-flash",
+      "last_updated": "2025-12-16",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Wan v2.6 Image-to-Video Flash",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-16",
+      "temperature": true,
+      "tool_call": false
+    },
+    "alibaba/wan-v2.6-r2v": {
+      "attachment": false,
+      "description": "Wan v2.6 Reference-to-Video は vercel によって提供される AI モデルです。",
+      "family": "o",
+      "id": "alibaba/wan-v2.6-r2v",
+      "last_updated": "2025-12-16",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Wan v2.6 Reference-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-16",
+      "temperature": true,
+      "tool_call": false
+    },
+    "alibaba/wan-v2.6-r2v-flash": {
+      "attachment": false,
+      "description": "Wan v2.6 Reference-to-Video Flash は vercel によって提供される AI モデルです。",
+      "family": "o",
+      "id": "alibaba/wan-v2.6-r2v-flash",
+      "last_updated": "2025-12-16",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Wan v2.6 Reference-to-Video Flash",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-16",
+      "temperature": true,
+      "tool_call": false
+    },
+    "alibaba/wan-v2.6-t2v": {
+      "attachment": false,
+      "description": "Wan v2.6 Text-to-Video は vercel によって提供される AI モデルです。",
+      "family": "o",
+      "id": "alibaba/wan-v2.6-t2v",
+      "last_updated": "2025-12-16",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Wan v2.6 Text-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-16",
+      "temperature": true,
+      "tool_call": false
+    },
     "amazon/nova-2-lite": {
       "attachment": true,
       "cost": {
@@ -1023,41 +1173,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-3-opus": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 1.5,
-        "cache_write": 18.75,
-        "input": 15,
-        "output": 75
-      },
-      "description": "Claude Opus 3 は vercel によって提供される AI モデルです。",
-      "family": "claude-opus",
-      "id": "anthropic/claude-3-opus",
-      "knowledge": "2023-08-31",
-      "last_updated": "2024-02-29",
-      "limit": {
-        "context": 200000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Opus 3",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-02-29",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
     "anthropic/claude-3.5-haiku": {
       "attachment": true,
       "cost": {
@@ -1089,114 +1204,6 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-10-22",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
-    "anthropic/claude-3.5-sonnet": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Claude Sonnet 3.5 v2 は vercel によって提供される AI モデルです。",
-      "family": "claude-sonnet",
-      "id": "anthropic/claude-3.5-sonnet",
-      "knowledge": "2024-04-30",
-      "last_updated": "2024-10-22",
-      "limit": {
-        "context": 200000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 3.5 v2",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-10-22",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
-    "anthropic/claude-3.5-sonnet-20240620": {
-      "attachment": true,
-      "cost": {
-        "input": 3,
-        "output": 15
-      },
-      "description": "Claude 3.5 Sonnet (2024-06-20) は vercel によって提供される AI モデルです。",
-      "family": "claude-sonnet",
-      "id": "anthropic/claude-3.5-sonnet-20240620",
-      "knowledge": "2024-04",
-      "last_updated": "2024-06-20",
-      "limit": {
-        "context": 200000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude 3.5 Sonnet (2024-06-20)",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-06-20",
-      "temperature": true,
-      "tool_call": true
-    },
-    "anthropic/claude-3.7-sonnet": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Claude Sonnet 3.7 は vercel によって提供される AI モデルです。",
-      "family": "claude-sonnet",
-      "id": "anthropic/claude-3.7-sonnet",
-      "knowledge": "2024-10-31",
-      "last_updated": "2025-02-19",
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 3.7",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "min": 1024,
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-02-19",
       "status": "deprecated",
       "temperature": true,
       "tool_call": true
@@ -1675,6 +1682,131 @@
       "temperature": true,
       "tool_call": false
     },
+    "bfl/flux-2-flex": {
+      "attachment": false,
+      "description": "FLUX.2 [flex] は vercel によって提供される AI モデルです。",
+      "family": "flux",
+      "id": "bfl/flux-2-flex",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "FLUX.2 [flex]",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-08",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bfl/flux-2-klein-4b": {
+      "attachment": false,
+      "description": "FLUX.2 [klein] 4B は vercel によって提供される AI モデルです。",
+      "family": "flux",
+      "id": "bfl/flux-2-klein-4b",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "FLUX.2 [klein] 4B",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-08",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bfl/flux-2-klein-9b": {
+      "attachment": false,
+      "description": "FLUX.2 [klein] 9B は vercel によって提供される AI モデルです。",
+      "family": "flux",
+      "id": "bfl/flux-2-klein-9b",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "FLUX.2 [klein] 9B",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-08",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bfl/flux-2-max": {
+      "attachment": false,
+      "description": "FLUX.2 [max] は vercel によって提供される AI モデルです。",
+      "family": "flux",
+      "id": "bfl/flux-2-max",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 67300,
+        "output": 67300
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "FLUX.2 [max]",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-08",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bfl/flux-2-pro": {
+      "attachment": false,
+      "description": "FLUX.2 [pro] は vercel によって提供される AI モデルです。",
+      "family": "flux",
+      "id": "bfl/flux-2-pro",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 67300,
+        "output": 67300
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "FLUX.2 [pro]",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-08",
+      "temperature": true,
+      "tool_call": false
+    },
     "bfl/flux-kontext-max": {
       "attachment": false,
       "description": "FLUX.1 Kontext Max は vercel によって提供される AI モデルです。",
@@ -1696,8 +1828,8 @@
       "name": "FLUX.1 Kontext Max",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2025-06",
-      "temperature": false,
+      "release_date": "2025-06-01",
+      "temperature": true,
       "tool_call": false
     },
     "bfl/flux-kontext-pro": {
@@ -1721,8 +1853,8 @@
       "name": "FLUX.1 Kontext Pro",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2025-06",
-      "temperature": false,
+      "release_date": "2025-06-01",
+      "temperature": true,
       "tool_call": false
     },
     "bfl/flux-pro-1.0-fill": {
@@ -1746,8 +1878,8 @@
       "name": "FLUX.1 Fill [pro]",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2024-10",
-      "temperature": false,
+      "release_date": "2024-10-01",
+      "temperature": true,
       "tool_call": false
     },
     "bfl/flux-pro-1.1": {
@@ -1771,8 +1903,8 @@
       "name": "FLUX1.1 [pro]",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2024-10",
-      "temperature": false,
+      "release_date": "2024-10-01",
+      "temperature": true,
       "tool_call": false
     },
     "bfl/flux-pro-1.1-ultra": {
@@ -1796,8 +1928,8 @@
       "name": "FLUX1.1 [pro] Ultra",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2024-11",
-      "temperature": false,
+      "release_date": "2024-11-01",
+      "temperature": true,
       "tool_call": false
     },
     "bytedance/seed-1.6": {
@@ -1863,6 +1995,258 @@
       "temperature": true,
       "tool_call": true
     },
+    "bytedance/seedance-2.0": {
+      "attachment": true,
+      "description": "Seedance 2.0 は vercel によって提供される AI モデルです。",
+      "family": "seed",
+      "id": "bytedance/seedance-2.0",
+      "last_updated": "2026-04-14",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Seedance 2.0",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-14",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bytedance/seedance-2.0-fast": {
+      "attachment": true,
+      "description": "Seedance 2.0 Fast は vercel によって提供される AI モデルです。",
+      "family": "seed",
+      "id": "bytedance/seedance-2.0-fast",
+      "last_updated": "2026-04-14",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Seedance 2.0 Fast",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-14",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bytedance/seedance-v1.0-lite-i2v": {
+      "attachment": false,
+      "description": "Seedance v1.0 Lite Image-to-Video は vercel によって提供される AI モデルです。",
+      "family": "seed",
+      "id": "bytedance/seedance-v1.0-lite-i2v",
+      "last_updated": "2025-06-01",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Seedance v1.0 Lite Image-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-06-01",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bytedance/seedance-v1.0-lite-t2v": {
+      "attachment": false,
+      "description": "Seedance v1.0 Lite Text-to-Video は vercel によって提供される AI モデルです。",
+      "family": "seed",
+      "id": "bytedance/seedance-v1.0-lite-t2v",
+      "last_updated": "2025-06-01",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Seedance v1.0 Lite Text-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-06-01",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bytedance/seedance-v1.0-pro": {
+      "attachment": false,
+      "description": "Seedance v1.0 Pro は vercel によって提供される AI モデルです。",
+      "family": "seed",
+      "id": "bytedance/seedance-v1.0-pro",
+      "last_updated": "2025-06-11",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Seedance v1.0 Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-06-11",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bytedance/seedance-v1.0-pro-fast": {
+      "attachment": false,
+      "description": "Seedance v1.0 Pro Fast は vercel によって提供される AI モデルです。",
+      "family": "seed",
+      "id": "bytedance/seedance-v1.0-pro-fast",
+      "last_updated": "2025-10-31",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Seedance v1.0 Pro Fast",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-10-31",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bytedance/seedance-v1.5-pro": {
+      "attachment": false,
+      "description": "Seedance v1.5 Pro は vercel によって提供される AI モデルです。",
+      "family": "seed",
+      "id": "bytedance/seedance-v1.5-pro",
+      "last_updated": "2025-12-16",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Seedance v1.5 Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-16",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bytedance/seedream-4.0": {
+      "attachment": false,
+      "description": "Seedream 4.0 は vercel によって提供される AI モデルです。",
+      "family": "seed",
+      "id": "bytedance/seedream-4.0",
+      "last_updated": "2025-08-28",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Seedream 4.0",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-08-28",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bytedance/seedream-4.5": {
+      "attachment": false,
+      "description": "Seedream 4.5 は vercel によって提供される AI モデルです。",
+      "family": "seed",
+      "id": "bytedance/seedream-4.5",
+      "last_updated": "2025-11-28",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Seedream 4.5",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-11-28",
+      "temperature": true,
+      "tool_call": false
+    },
+    "bytedance/seedream-5.0-lite": {
+      "attachment": false,
+      "description": "Seedream 5.0 Lite は vercel によって提供される AI モデルです。",
+      "family": "seed",
+      "id": "bytedance/seedream-5.0-lite",
+      "last_updated": "2026-01-28",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Seedream 5.0 Lite",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01-28",
+      "temperature": true,
+      "tool_call": false
+    },
     "cohere/command-a": {
       "attachment": false,
       "cost": {
@@ -1918,6 +2302,81 @@
       "temperature": true,
       "tool_call": false
     },
+    "cohere/rerank-v3.5": {
+      "attachment": false,
+      "description": "Cohere Rerank 3.5 は vercel によって提供される AI モデルです。",
+      "family": "o",
+      "id": "cohere/rerank-v3.5",
+      "last_updated": "2024-12-02",
+      "limit": {
+        "context": 4096,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Cohere Rerank 3.5",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-12-02",
+      "temperature": true,
+      "tool_call": false
+    },
+    "cohere/rerank-v4-fast": {
+      "attachment": false,
+      "description": "Cohere Rerank 4 Fast は vercel によって提供される AI モデルです。",
+      "family": "o",
+      "id": "cohere/rerank-v4-fast",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 32000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Cohere Rerank 4 Fast",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-11",
+      "temperature": true,
+      "tool_call": false
+    },
+    "cohere/rerank-v4-pro": {
+      "attachment": false,
+      "description": "Cohere Rerank 4 Pro は vercel によって提供される AI モデルです。",
+      "family": "o",
+      "id": "cohere/rerank-v4-pro",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 32000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Cohere Rerank 4 Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-11",
+      "temperature": true,
+      "tool_call": false
+    },
     "deepseek/deepseek-r1": {
       "attachment": false,
       "cost": {
@@ -1944,6 +2403,7 @@
       "name": "DeepSeek-R1",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-01-20",
       "temperature": true,
       "tool_call": true
@@ -2074,36 +2534,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "deepseek/deepseek-v3.2-exp": {
-      "attachment": false,
-      "cost": {
-        "input": 0.27,
-        "output": 0.4
-      },
-      "description": "DeepSeek V3.2 Exp は vercel によって提供される AI モデルです。",
-      "family": "deepseek",
-      "id": "deepseek/deepseek-v3.2-exp",
-      "knowledge": "2025-09",
-      "last_updated": "2025-09-29",
-      "limit": {
-        "context": 163840,
-        "output": 163840
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V3.2 Exp",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-09-29",
-      "temperature": true,
-      "tool_call": true
-    },
     "deepseek/deepseek-v3.2-thinking": {
       "attachment": false,
       "cost": {
@@ -2204,79 +2634,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "google/gemini-2.0-flash": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.025,
-        "input": 0.1,
-        "output": 0.4
-      },
-      "description": "Gemini 2.0 Flash は vercel によって提供される AI モデルです。",
-      "family": "gemini-flash",
-      "id": "google/gemini-2.0-flash",
-      "knowledge": "2024-06",
-      "last_updated": "2024-12-11",
-      "limit": {
-        "context": 1048576,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.0 Flash",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-12-11",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "google/gemini-2.0-flash-lite": {
-      "attachment": true,
-      "cost": {
-        "input": 0.075,
-        "output": 0.3
-      },
-      "description": "Gemini 2.0 Flash-Lite は vercel によって提供される AI モデルです。",
-      "family": "gemini-flash-lite",
-      "id": "google/gemini-2.0-flash-lite",
-      "knowledge": "2024-06",
-      "last_updated": "2024-12-11",
-      "limit": {
-        "context": 1048576,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.0 Flash-Lite",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-12-11",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "google/gemini-2.5-flash": {
       "attachment": true,
       "cost": {
@@ -2356,37 +2713,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "google/gemini-2.5-flash-image-preview": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 2.5
-      },
-      "description": "Nano Banana Preview (Gemini 2.5 Flash Image Preview) は vercel によって提供される AI モデルです。",
-      "family": "gemini-flash",
-      "id": "google/gemini-2.5-flash-image-preview",
-      "knowledge": "2025-01",
-      "last_updated": "2025-03-20",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "Nano Banana Preview (Gemini 2.5 Flash Image Preview)",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-03-20",
-      "temperature": true,
-      "tool_call": false
-    },
     "google/gemini-2.5-flash-lite": {
       "attachment": true,
       "cost": {
@@ -2418,77 +2744,6 @@
       "reasoning": true,
       "release_date": "2025-06-17",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "google/gemini-2.5-flash-lite-preview-09-2025": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.01,
-        "input": 0.1,
-        "output": 0.4
-      },
-      "description": "Gemini 2.5 Flash Lite Preview 09-25 は vercel によって提供される AI モデルです。",
-      "family": "gemini-flash-lite",
-      "id": "google/gemini-2.5-flash-lite-preview-09-2025",
-      "knowledge": "2025-01",
-      "last_updated": "2025-09-25",
-      "limit": {
-        "context": 1048576,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.5 Flash Lite Preview 09-25",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-09-25",
-      "temperature": true,
-      "tool_call": true
-    },
-    "google/gemini-2.5-flash-preview-09-2025": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.03,
-        "cache_write": 0.383,
-        "input": 0.3,
-        "output": 2.5
-      },
-      "description": "Gemini 2.5 Flash Preview 09-25 は vercel によって提供される AI モデルです。",
-      "family": "gemini-flash",
-      "id": "google/gemini-2.5-flash-preview-09-2025",
-      "knowledge": "2025-01",
-      "last_updated": "2025-09-25",
-      "limit": {
-        "context": 1048576,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.5 Flash Preview 09-25",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-09-25",
       "temperature": true,
       "tool_call": true
     },
@@ -3004,8 +3259,8 @@
       "name": "Imagen 4 Fast",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2025-06",
-      "temperature": false,
+      "release_date": "2025-06-01",
+      "temperature": true,
       "tool_call": false
     },
     "google/imagen-4.0-generate-001": {
@@ -3108,6 +3363,106 @@
       "temperature": true,
       "tool_call": false
     },
+    "google/veo-3.0-fast-generate-001": {
+      "attachment": false,
+      "description": "Veo 3.0 Fast Generate は vercel によって提供される AI モデルです。",
+      "family": "veo",
+      "id": "google/veo-3.0-fast-generate-001",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Veo 3.0 Fast Generate",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-08",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/veo-3.0-generate-001": {
+      "attachment": false,
+      "description": "Veo 3.0 は vercel によって提供される AI モデルです。",
+      "family": "veo",
+      "id": "google/veo-3.0-generate-001",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Veo 3.0",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-08",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/veo-3.1-fast-generate-001": {
+      "attachment": false,
+      "description": "Veo 3.1 Fast Generate は vercel によって提供される AI モデルです。",
+      "family": "veo",
+      "id": "google/veo-3.1-fast-generate-001",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Veo 3.1 Fast Generate",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-08",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/veo-3.1-generate-001": {
+      "attachment": false,
+      "description": "Veo 3.1 は vercel によって提供される AI モデルです。",
+      "family": "veo",
+      "id": "google/veo-3.1-generate-001",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Veo 3.1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-08",
+      "temperature": true,
+      "tool_call": false
+    },
     "inception/mercury-2": {
       "attachment": false,
       "cost": {
@@ -3167,35 +3522,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "inception/mercury-edit-2": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.025,
-        "input": 0.25,
-        "output": 0.75
-      },
-      "description": "Mercury Edit 2 は vercel によって提供される AI モデルです。",
-      "id": "inception/mercury-edit-2",
-      "last_updated": "2026-03-30",
-      "limit": {
-        "context": 128000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mercury Edit 2",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-03-30",
-      "temperature": true,
-      "tool_call": false
-    },
     "interfaze/interfaze-beta": {
       "attachment": false,
       "cost": {
@@ -3221,6 +3547,206 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-10-07",
+      "temperature": true,
+      "tool_call": false
+    },
+    "klingai/kling-v2.5-turbo-i2v": {
+      "attachment": false,
+      "description": "Kling v2.5 Turbo Image-to-Video は vercel によって提供される AI モデルです。",
+      "family": "ling",
+      "id": "klingai/kling-v2.5-turbo-i2v",
+      "last_updated": "2025-09-23",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Kling v2.5 Turbo Image-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-09-23",
+      "temperature": true,
+      "tool_call": false
+    },
+    "klingai/kling-v2.5-turbo-t2v": {
+      "attachment": false,
+      "description": "Kling v2.5 Turbo Text-to-Video は vercel によって提供される AI モデルです。",
+      "family": "ling",
+      "id": "klingai/kling-v2.5-turbo-t2v",
+      "last_updated": "2025-09-23",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Kling v2.5 Turbo Text-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-09-23",
+      "temperature": true,
+      "tool_call": false
+    },
+    "klingai/kling-v2.6-i2v": {
+      "attachment": false,
+      "description": "Kling v2.6 Image-to-Video は vercel によって提供される AI モデルです。",
+      "family": "ling",
+      "id": "klingai/kling-v2.6-i2v",
+      "last_updated": "2025-12-21",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Kling v2.6 Image-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-21",
+      "temperature": true,
+      "tool_call": false
+    },
+    "klingai/kling-v2.6-motion-control": {
+      "attachment": false,
+      "description": "Kling v2.6 Motion Control は vercel によって提供される AI モデルです。",
+      "family": "ling",
+      "id": "klingai/kling-v2.6-motion-control",
+      "last_updated": "2025-12-21",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Kling v2.6 Motion Control",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-21",
+      "temperature": true,
+      "tool_call": false
+    },
+    "klingai/kling-v2.6-t2v": {
+      "attachment": false,
+      "description": "Kling v2.6 Text-to-Video は vercel によって提供される AI モデルです。",
+      "family": "ling",
+      "id": "klingai/kling-v2.6-t2v",
+      "last_updated": "2025-12-21",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Kling v2.6 Text-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-21",
+      "temperature": true,
+      "tool_call": false
+    },
+    "klingai/kling-v3.0-i2v": {
+      "attachment": false,
+      "description": "Kling v3.0 Image-to-Video は vercel によって提供される AI モデルです。",
+      "family": "ling",
+      "id": "klingai/kling-v3.0-i2v",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Kling v3.0 Image-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-02-05",
+      "temperature": true,
+      "tool_call": false
+    },
+    "klingai/kling-v3.0-motion-control": {
+      "attachment": false,
+      "description": "Kling v3.0 Motion Control は vercel によって提供される AI モデルです。",
+      "family": "ling",
+      "id": "klingai/kling-v3.0-motion-control",
+      "last_updated": "2026-03-04",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Kling v3.0 Motion Control",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-04",
+      "temperature": true,
+      "tool_call": false
+    },
+    "klingai/kling-v3.0-t2v": {
+      "attachment": false,
+      "description": "Kling v3.0 Text-to-Video は vercel によって提供される AI モデルです。",
+      "family": "ling",
+      "id": "klingai/kling-v3.0-t2v",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Kling v3.0 Text-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-02-05",
       "temperature": true,
       "tool_call": false
     },
@@ -3308,36 +3834,6 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-08-30",
-      "temperature": true,
-      "tool_call": true
-    },
-    "meituan/longcat-flash-thinking": {
-      "attachment": false,
-      "cost": {
-        "input": 0.15,
-        "output": 1.5
-      },
-      "description": "LongCat Flash Thinking は vercel によって提供される AI モデルです。",
-      "family": "longcat",
-      "id": "meituan/longcat-flash-thinking",
-      "knowledge": "2024-10",
-      "last_updated": "2025-09-23",
-      "limit": {
-        "context": 128000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "LongCat Flash Thinking",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-09-23",
       "temperature": true,
       "tool_call": true
     },
@@ -4377,36 +4873,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "mistral/mixtral-8x22b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 2,
-        "output": 6
-      },
-      "description": "Mixtral 8x22B は vercel によって提供される AI モデルです。",
-      "family": "mixtral",
-      "id": "mistral/mixtral-8x22b-instruct",
-      "knowledge": "2024-04",
-      "last_updated": "2024-04-17",
-      "limit": {
-        "context": 64000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mixtral 8x22B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-04-17",
-      "temperature": true,
-      "tool_call": true
-    },
     "mistral/pixtral-12b": {
       "attachment": true,
       "cost": {
@@ -4499,36 +4965,6 @@
       "status": "deprecated",
       "temperature": true,
       "tool_call": true
-    },
-    "moonshotai/kimi-k2-0905": {
-      "attachment": false,
-      "cost": {
-        "input": 0.6,
-        "output": 2.5
-      },
-      "description": "Kimi K2 0905 は vercel によって提供される AI モデルです。",
-      "family": "kimi",
-      "id": "moonshotai/kimi-k2-0905",
-      "knowledge": "2024-10",
-      "last_updated": "2025-09-05",
-      "limit": {
-        "context": 131072,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2 0905",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-09-05",
-      "temperature": true,
-      "tool_call": false
     },
     "moonshotai/kimi-k2-thinking": {
       "attachment": false,
@@ -4901,40 +5337,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "openai/codex-mini": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.38,
-        "input": 1.5,
-        "output": 6
-      },
-      "description": "Codex Mini は vercel によって提供される AI モデルです。",
-      "family": "gpt-codex-mini",
-      "id": "openai/codex-mini",
-      "knowledge": "2024-10",
-      "last_updated": "2025-05-16",
-      "limit": {
-        "context": 200000,
-        "input": 100000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Codex Mini",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-05-16",
-      "temperature": true,
-      "tool_call": true
-    },
     "openai/gpt-3.5-turbo": {
       "attachment": false,
       "cost": {
@@ -5260,6 +5662,17 @@
       "name": "GPT-5",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-07",
       "structured_output": true,
       "temperature": false,
@@ -5329,6 +5742,16 @@
       "name": "GPT-5-Codex",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-09-15",
       "structured_output": true,
       "temperature": false,
@@ -5363,6 +5786,17 @@
       "name": "GPT-5 Mini",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-07",
       "structured_output": true,
       "temperature": false,
@@ -5397,6 +5831,17 @@
       "name": "GPT-5 Nano",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-07",
       "structured_output": true,
       "temperature": false,
@@ -6025,6 +6470,126 @@
       "temperature": true,
       "tool_call": true
     },
+    "openai/gpt-image-1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 1.25,
+        "input": 5,
+        "output": 40
+      },
+      "description": "GPT Image 1 は vercel によって提供される AI モデルです。",
+      "family": "gpt-image",
+      "id": "openai/gpt-image-1",
+      "last_updated": "2025-03-25",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GPT Image 1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-03-25",
+      "temperature": true,
+      "tool_call": false
+    },
+    "openai/gpt-image-1-mini": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 2,
+        "output": 8
+      },
+      "description": "GPT Image 1 Mini は vercel によって提供される AI モデルです。",
+      "family": "gpt-image",
+      "id": "openai/gpt-image-1-mini",
+      "last_updated": "2025-10-06",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GPT Image 1 Mini",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-10-06",
+      "temperature": true,
+      "tool_call": false
+    },
+    "openai/gpt-image-1.5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 1.25,
+        "input": 5,
+        "output": 32
+      },
+      "description": "GPT Image 1.5 は vercel によって提供される AI モデルです。",
+      "family": "gpt-image",
+      "id": "openai/gpt-image-1.5",
+      "last_updated": "2025-12-16",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GPT Image 1.5",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-16",
+      "temperature": true,
+      "tool_call": false
+    },
+    "openai/gpt-image-2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 1.25,
+        "input": 5,
+        "output": 30
+      },
+      "description": "GPT Image 2 は vercel によって提供される AI モデルです。",
+      "family": "gpt-image",
+      "id": "openai/gpt-image-2",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GPT Image 2",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-21",
+      "temperature": true,
+      "tool_call": false
+    },
     "openai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
@@ -6149,6 +6714,16 @@
       "name": "o1",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2024-12-05",
       "structured_output": true,
       "temperature": false,
@@ -6183,6 +6758,16 @@
       "name": "o3",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-04-16",
       "structured_output": true,
       "temperature": false,
@@ -6249,6 +6834,16 @@
       "name": "o3-mini",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2024-12-20",
       "structured_output": true,
       "temperature": false,
@@ -6316,6 +6911,16 @@
       "name": "o4-mini",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-04-16",
       "structured_output": true,
       "temperature": false,
@@ -6453,36 +7058,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "perplexity/sonar-reasoning": {
-      "attachment": false,
-      "cost": {
-        "input": 1,
-        "output": 5
-      },
-      "description": "Sonar Reasoning は vercel によって提供される AI モデルです。",
-      "family": "sonar-reasoning",
-      "id": "perplexity/sonar-reasoning",
-      "knowledge": "2025-09",
-      "last_updated": "2025-02-19",
-      "limit": {
-        "context": 127000,
-        "output": 8000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Sonar Reasoning",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-02-19",
-      "temperature": true,
-      "tool_call": false
-    },
     "perplexity/sonar-reasoning-pro": {
       "attachment": false,
       "description": "Sonar Reasoning Pro は vercel によって提供される AI モデルです。",
@@ -6509,35 +7084,30 @@
       "temperature": true,
       "tool_call": false
     },
-    "prime-intellect/intellect-3": {
+    "prodia/flux-fast-schnell": {
       "attachment": false,
-      "cost": {
-        "input": 0.2,
-        "output": 1.1
-      },
-      "description": "INTELLECT 3 は vercel によって提供される AI モデルです。",
-      "family": "intellect",
-      "id": "prime-intellect/intellect-3",
-      "knowledge": "2024-10",
-      "last_updated": "2025-11-26",
+      "description": "Flux Schnell は vercel によって提供される AI モデルです。",
+      "family": "flux",
+      "id": "prodia/flux-fast-schnell",
+      "last_updated": "2026-06-08",
       "limit": {
-        "context": 131072,
-        "output": 131072
+        "context": 512,
+        "output": 0
       },
       "modalities": {
         "input": [
           "text"
         ],
         "output": [
-          "text"
+          "image"
         ]
       },
-      "name": "INTELLECT 3",
+      "name": "Flux Schnell",
       "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-11-26",
+      "reasoning": false,
+      "release_date": "2026-06-08",
       "temperature": true,
-      "tool_call": true
+      "tool_call": false
     },
     "recraft/recraft-v2": {
       "attachment": false,
@@ -6560,8 +7130,8 @@
       "name": "Recraft V2",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2024-03",
-      "temperature": false,
+      "release_date": "2024-03-01",
+      "temperature": true,
       "tool_call": false
     },
     "recraft/recraft-v3": {
@@ -6585,8 +7155,158 @@
       "name": "Recraft V3",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2024-10",
-      "temperature": false,
+      "release_date": "2024-10-01",
+      "temperature": true,
+      "tool_call": false
+    },
+    "recraft/recraft-v4": {
+      "attachment": false,
+      "description": "Recraft V4 は vercel によって提供される AI モデルです。",
+      "family": "recraft",
+      "id": "recraft/recraft-v4",
+      "last_updated": "2026-02-17",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Recraft V4",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-02-17",
+      "temperature": true,
+      "tool_call": false
+    },
+    "recraft/recraft-v4-pro": {
+      "attachment": false,
+      "description": "Recraft V4 Pro は vercel によって提供される AI モデルです。",
+      "family": "recraft",
+      "id": "recraft/recraft-v4-pro",
+      "last_updated": "2026-02-17",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Recraft V4 Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-02-17",
+      "temperature": true,
+      "tool_call": false
+    },
+    "recraft/recraft-v4.1": {
+      "attachment": false,
+      "description": "Recraft V4.1 は vercel によって提供される AI モデルです。",
+      "family": "recraft",
+      "id": "recraft/recraft-v4.1",
+      "last_updated": "2026-05-14",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Recraft V4.1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-05-14",
+      "temperature": true,
+      "tool_call": false
+    },
+    "recraft/recraft-v4.1-pro": {
+      "attachment": false,
+      "description": "Recraft V4.1 Pro は vercel によって提供される AI モデルです。",
+      "family": "recraft",
+      "id": "recraft/recraft-v4.1-pro",
+      "last_updated": "2026-05-14",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Recraft V4.1 Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-05-14",
+      "temperature": true,
+      "tool_call": false
+    },
+    "recraft/recraft-v4.1-utility": {
+      "attachment": false,
+      "description": "Recraft V4.1 Utility は vercel によって提供される AI モデルです。",
+      "family": "recraft",
+      "id": "recraft/recraft-v4.1-utility",
+      "last_updated": "2026-05-14",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Recraft V4.1 Utility",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-05-14",
+      "temperature": true,
+      "tool_call": false
+    },
+    "recraft/recraft-v4.1-utility-pro": {
+      "attachment": false,
+      "description": "Recraft V4.1 Utility Pro は vercel によって提供される AI モデルです。",
+      "family": "recraft",
+      "id": "recraft/recraft-v4.1-utility-pro",
+      "last_updated": "2026-05-14",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Recraft V4.1 Utility Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-05-14",
+      "temperature": true,
       "tool_call": false
     },
     "stepfun/step-3.5-flash": {
@@ -6630,9 +7350,11 @@
       "description": "Step 3.7 Flash は vercel によって提供される AI モデルです。",
       "family": "step",
       "id": "stepfun/step-3.7-flash",
-      "last_updated": "2026-05-28",
+      "knowledge": "2026-01-01",
+      "last_updated": "2026-05-29",
       "limit": {
         "context": 256000,
+        "input": 256000,
         "output": 256000
       },
       "modalities": {
@@ -6651,65 +7373,55 @@
       "temperature": true,
       "tool_call": true
     },
-    "vercel/v0-1.0-md": {
-      "attachment": true,
-      "cost": {
-        "input": 3,
-        "output": 15
-      },
-      "description": "v0-1.0-md は vercel によって提供される AI モデルです。",
-      "family": "v0",
-      "id": "vercel/v0-1.0-md",
-      "last_updated": "2025-05-22",
+    "voyage/rerank-2.5": {
+      "attachment": false,
+      "description": "Voyage Rerank 2.5 は vercel によって提供される AI モデルです。",
+      "family": "voyage",
+      "id": "voyage/rerank-2.5",
+      "last_updated": "2025-08-11",
       "limit": {
-        "context": 128000,
+        "context": 32000,
         "output": 32000
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "v0-1.0-md",
+      "name": "Voyage Rerank 2.5",
       "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-05-22",
+      "reasoning": false,
+      "release_date": "2025-08-11",
       "temperature": true,
-      "tool_call": true
+      "tool_call": false
     },
-    "vercel/v0-1.5-md": {
-      "attachment": true,
-      "cost": {
-        "input": 3,
-        "output": 15
-      },
-      "description": "v0-1.5-md は vercel によって提供される AI モデルです。",
-      "family": "v0",
-      "id": "vercel/v0-1.5-md",
-      "last_updated": "2025-06-09",
+    "voyage/rerank-2.5-lite": {
+      "attachment": false,
+      "description": "Voyage Rerank 2.5 Lite は vercel によって提供される AI モデルです。",
+      "family": "voyage",
+      "id": "voyage/rerank-2.5-lite",
+      "last_updated": "2025-08-11",
       "limit": {
-        "context": 128000,
+        "context": 32000,
         "output": 32000
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "v0-1.5-md",
+      "name": "Voyage Rerank 2.5 Lite",
       "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-06-09",
+      "reasoning": false,
+      "release_date": "2025-08-11",
       "temperature": true,
-      "tool_call": true
+      "tool_call": false
     },
     "voyage/voyage-3-large": {
       "attachment": false,
@@ -6960,37 +7672,6 @@
       "release_date": "2024-03-01",
       "temperature": true,
       "tool_call": false
-    },
-    "xai/grok-4-fast-reasoning": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.05,
-        "input": 0.2,
-        "output": 0.5
-      },
-      "description": "Grok 4 Fast Reasoning は vercel によって提供される AI モデルです。",
-      "family": "grok",
-      "id": "xai/grok-4-fast-reasoning",
-      "knowledge": "2024-10",
-      "last_updated": "2025-07-09",
-      "limit": {
-        "context": 2000000,
-        "output": 256000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Grok 4 Fast Reasoning",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-07-09",
-      "temperature": true,
-      "tool_call": true
     },
     "xai/grok-4.1-fast-non-reasoning": {
       "attachment": false,
@@ -7279,6 +7960,7 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-04-30",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -7340,12 +8022,12 @@
       "temperature": true,
       "tool_call": false
     },
-    "xai/grok-imagine-image-pro": {
+    "xai/grok-imagine-video": {
       "attachment": false,
-      "description": "Grok Imagine Image Pro は vercel によって提供される AI モデルです。",
+      "description": "Grok Imagine は vercel によって提供される AI モデルです。",
       "family": "grok",
-      "id": "xai/grok-imagine-image-pro",
-      "last_updated": "2026-02-19",
+      "id": "xai/grok-imagine-video",
+      "last_updated": "2026-01-28",
       "limit": {
         "context": 0,
         "output": 0
@@ -7355,14 +8037,38 @@
           "text"
         ],
         "output": [
-          "text",
-          "image"
+          "video"
         ]
       },
-      "name": "Grok Imagine Image Pro",
+      "name": "Grok Imagine",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-01-28",
+      "temperature": true,
+      "tool_call": false
+    },
+    "xai/grok-imagine-video-1.5-preview": {
+      "attachment": false,
+      "description": "Grok Imagine Video 1.5 Preview は vercel によって提供される AI モデルです。",
+      "family": "grok",
+      "id": "xai/grok-imagine-video-1.5-preview",
+      "last_updated": "2026-05-30",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Grok Imagine Video 1.5 Preview",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-05-30",
       "temperature": true,
       "tool_call": false
     },

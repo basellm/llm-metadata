@@ -1,10 +1,11 @@
 {
   "attachment": false,
   "cost": {
+    "cache_read": 0.2,
     "input": 0.95,
     "output": 3.15
   },
-  "description": "GLM-5 is an AI model provided by baseten.",
+  "description": "GLM 5 is an AI model provided by baseten.",
   "family": "glm",
   "id": "zai-org/GLM-5",
   "interleaved": {
@@ -13,8 +14,8 @@
   "knowledge": "2026-01",
   "last_updated": "2026-02-12",
   "limit": {
-    "context": 202752,
-    "output": 131072
+    "context": 202800,
+    "output": 202800
   },
   "modalities": {
     "input": [
@@ -24,10 +25,16 @@
       "text"
     ]
   },
-  "name": "GLM-5",
+  "name": "GLM 5",
   "open_weights": true,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    }
+  ],
   "release_date": "2026-02-12",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

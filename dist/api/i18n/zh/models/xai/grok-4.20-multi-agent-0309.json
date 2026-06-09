@@ -26,7 +26,7 @@
   "id": "grok-4.20-multi-agent-0309",
   "last_updated": "2026-03-09",
   "limit": {
-    "context": 2000000,
+    "context": 1000000,
     "output": 30000
   },
   "modalities": {
@@ -42,7 +42,19 @@
   "name": "Grok 4.20 Multi-Agent",
   "open_weights": false,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    }
+  ],
   "release_date": "2026-03-09",
+  "structured_output": true,
   "temperature": true,
   "tool_call": false
 }

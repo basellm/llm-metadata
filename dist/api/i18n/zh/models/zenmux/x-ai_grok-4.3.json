@@ -1,0 +1,52 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.2,
+    "cache_write": 0,
+    "context_over_200k": {
+      "cache_read": 0.4,
+      "cache_write": 0,
+      "input": 2.5,
+      "output": 5
+    },
+    "input": 1.25,
+    "output": 2.5,
+    "tiers": [
+      {
+        "cache_read": 0.4,
+        "cache_write": 0,
+        "input": 2.5,
+        "output": 5,
+        "tier": {
+          "size": 200000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Grok 4.3 是由 zenmux 提供的人工智能模型。",
+  "family": "grok",
+  "id": "x-ai/grok-4.3",
+  "last_updated": "2026-04-17",
+  "limit": {
+    "context": 1000000,
+    "output": 1000000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "pdf"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Grok 4.3",
+  "open_weights": false,
+  "reasoning": true,
+  "release_date": "2026-04-17",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

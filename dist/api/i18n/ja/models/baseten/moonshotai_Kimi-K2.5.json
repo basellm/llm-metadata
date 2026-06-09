@@ -1,6 +1,7 @@
 {
   "attachment": true,
   "cost": {
+    "cache_read": 0.12,
     "input": 0.6,
     "output": 3
   },
@@ -13,12 +14,13 @@
   "knowledge": "2025-12",
   "last_updated": "2026-02-12",
   "limit": {
-    "context": 262144,
-    "output": 8192
+    "context": 262000,
+    "output": 262000
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image"
     ],
     "output": [
       "text"
@@ -27,7 +29,13 @@
   "name": "Kimi K2.5",
   "open_weights": true,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    }
+  ],
   "release_date": "2026-01-30",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

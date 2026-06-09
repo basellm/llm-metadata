@@ -3134,7 +3134,7 @@
       "id": "grok-4-20-beta-0309-non-reasoning",
       "last_updated": "2026-03-09",
       "limit": {
-        "context": 2000000,
+        "context": 1000000,
         "output": 30000
       },
       "modalities": {
@@ -3151,6 +3151,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-03-09",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -3182,7 +3183,7 @@
       "id": "grok-4-20-beta-0309-reasoning",
       "last_updated": "2026-03-09",
       "limit": {
-        "context": 2000000,
+        "context": 1000000,
         "output": 30000
       },
       "modalities": {
@@ -3199,6 +3200,7 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-09",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -3230,7 +3232,7 @@
       "id": "grok-4-20-non-reasoning",
       "last_updated": "2026-03-09",
       "limit": {
-        "context": 2000000,
+        "context": 1000000,
         "output": 30000
       },
       "modalities": {
@@ -3247,6 +3249,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-03-09",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -3278,7 +3281,7 @@
       "id": "grok-4-20-reasoning",
       "last_updated": "2026-03-09",
       "limit": {
-        "context": 2000000,
+        "context": 1000000,
         "output": 30000
       },
       "modalities": {
@@ -3295,6 +3298,7 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-03-09",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -3343,6 +3347,7 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-04-17",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -6093,12 +6098,13 @@
       "knowledge": "2025-04",
       "last_updated": "2026-06-02",
       "limit": {
-        "context": 131072,
-        "output": 16384
+        "context": 1000000,
+        "output": 64000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"

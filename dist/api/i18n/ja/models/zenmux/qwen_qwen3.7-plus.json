@@ -1,0 +1,51 @@
+{
+  "attachment": false,
+  "cost": {
+    "cache_read": 0.08,
+    "cache_write": 0.5,
+    "context_over_200k": {
+      "cache_read": 0.24,
+      "cache_write": 1.5,
+      "input": 1.2,
+      "output": 4.8
+    },
+    "input": 0.4,
+    "output": 1.6,
+    "tiers": [
+      {
+        "cache_read": 0.24,
+        "cache_write": 1.5,
+        "input": 1.2,
+        "output": 4.8,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Qwen3.7 Plus は zenmux によって提供される AI モデルです。",
+  "family": "qwen",
+  "id": "qwen/qwen3.7-plus",
+  "knowledge": "2025-04",
+  "last_updated": "2026-06-02",
+  "limit": {
+    "context": 1000000,
+    "output": 64000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.7 Plus",
+  "open_weights": false,
+  "reasoning": true,
+  "release_date": "2026-06-02",
+  "temperature": true,
+  "tool_call": true
+}

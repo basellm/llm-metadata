@@ -35,7 +35,7 @@
       "id": "grok-4.20-0309-non-reasoning",
       "last_updated": "2026-03-09",
       "limit": {
-        "context": 2000000,
+        "context": 1000000,
         "output": 30000
       },
       "modalities": {
@@ -51,7 +51,9 @@
       "name": "Grok 4.20 (Non-Reasoning)",
       "open_weights": false,
       "reasoning": false,
+      "reasoning_options": [],
       "release_date": "2026-03-09",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -83,7 +85,7 @@
       "id": "grok-4.20-0309-reasoning",
       "last_updated": "2026-03-09",
       "limit": {
-        "context": 2000000,
+        "context": 1000000,
         "output": 30000
       },
       "modalities": {
@@ -99,7 +101,9 @@
       "name": "Grok 4.20 (Reasoning)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-03-09",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -131,7 +135,7 @@
       "id": "grok-4.20-multi-agent-0309",
       "last_updated": "2026-03-09",
       "limit": {
-        "context": 2000000,
+        "context": 1000000,
         "output": 30000
       },
       "modalities": {
@@ -147,7 +151,19 @@
       "name": "Grok 4.20 Multi-Agent",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-03-09",
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -195,7 +211,19 @@
       "name": "Grok 4.3",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-17",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -243,6 +271,7 @@
       "name": "Grok Build 0.1",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-04-16",
       "structured_output": true,
       "temperature": true,

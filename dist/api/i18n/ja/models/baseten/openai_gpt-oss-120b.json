@@ -4,14 +4,14 @@
     "input": 0.1,
     "output": 0.5
   },
-  "description": "GPT OSS 120B は baseten によって提供される AI モデルです。",
+  "description": "OpenAI GPT 120B は baseten によって提供される AI モデルです。",
   "family": "gpt-oss",
   "id": "openai/gpt-oss-120b",
   "knowledge": "2025-08",
   "last_updated": "2025-08-05",
   "limit": {
-    "context": 128000,
-    "output": 128000
+    "context": 128072,
+    "output": 128072
   },
   "modalities": {
     "input": [
@@ -21,10 +21,21 @@
       "text"
     ]
   },
-  "name": "GPT OSS 120B",
+  "name": "OpenAI GPT 120B",
   "open_weights": true,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2025-08-05",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

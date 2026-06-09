@@ -1,5 +1,5 @@
 {
-  "attachment": false,
+  "attachment": true,
   "description": "minimax-m3 は ollama-cloud によって提供される AI モデルです。",
   "family": "minimax-m3",
   "id": "minimax-m3",
@@ -22,6 +22,20 @@
   "name": "minimax-m3",
   "open_weights": true,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2026-05-31",
   "temperature": true,
   "tool_call": true

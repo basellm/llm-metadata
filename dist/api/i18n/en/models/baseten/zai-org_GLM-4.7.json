@@ -1,10 +1,11 @@
 {
   "attachment": false,
   "cost": {
-    "input": 0.6,
+    "cache_read": 0.12,
+    "input": 0.12,
     "output": 2.2
   },
-  "description": "GLM-4.7 is an AI model provided by baseten.",
+  "description": "GLM 4.7 is an AI model provided by baseten.",
   "family": "glm",
   "id": "zai-org/GLM-4.7",
   "interleaved": {
@@ -13,8 +14,8 @@
   "knowledge": "2025-04",
   "last_updated": "2025-12-22",
   "limit": {
-    "context": 204800,
-    "output": 131072
+    "context": 200000,
+    "output": 200000
   },
   "modalities": {
     "input": [
@@ -24,10 +25,16 @@
       "text"
     ]
   },
-  "name": "GLM-4.7",
+  "name": "GLM 4.7",
   "open_weights": true,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    }
+  ],
   "release_date": "2025-12-22",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

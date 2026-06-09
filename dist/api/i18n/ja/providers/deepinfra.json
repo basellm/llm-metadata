@@ -7,71 +7,6 @@
   "id": "deepinfra",
   "lobeIcon": "DeepInfra",
   "models": {
-    "MiniMaxAI/MiniMax-M2": {
-      "attachment": false,
-      "cost": {
-        "input": 0.254,
-        "output": 1.02
-      },
-      "description": "MiniMax M2 は deepinfra によって提供される AI モデルです。",
-      "family": "minimax",
-      "id": "MiniMaxAI/MiniMax-M2",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2024-10",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax M2",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-11-13",
-      "temperature": true,
-      "tool_call": true
-    },
-    "MiniMaxAI/MiniMax-M2.1": {
-      "attachment": false,
-      "cost": {
-        "input": 0.28,
-        "output": 1.2
-      },
-      "description": "MiniMax M2.1 は deepinfra によって提供される AI モデルです。",
-      "id": "MiniMaxAI/MiniMax-M2.1",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2025-06",
-      "last_updated": "2025-12-23",
-      "limit": {
-        "context": 196608,
-        "output": 196608
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax M2.1",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-23",
-      "temperature": true,
-      "tool_call": true
-    },
     "MiniMaxAI/MiniMax-M2.5": {
       "attachment": false,
       "cost": {
@@ -103,37 +38,8 @@
       "name": "MiniMax M2.5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-02-12",
-      "temperature": true,
-      "tool_call": true
-    },
-    "Qwen/Qwen3-Coder-480B-A35B-Instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.4,
-        "output": 1.6
-      },
-      "description": "Qwen3 Coder 480B A35B Instruct は deepinfra によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
-      "knowledge": "2025-04",
-      "last_updated": "2025-07-23",
-      "limit": {
-        "context": 262144,
-        "output": 66536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 Coder 480B A35B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-07-23",
       "temperature": true,
       "tool_call": true
     },
@@ -163,6 +69,7 @@
       "name": "Qwen3 Coder 480B A35B Instruct Turbo",
       "open_weights": true,
       "reasoning": false,
+      "reasoning_options": [],
       "release_date": "2025-07-23",
       "temperature": true,
       "tool_call": true
@@ -195,6 +102,11 @@
       "name": "Qwen 3.5 35B A3B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-02-01",
       "temperature": true,
       "tool_call": true
@@ -227,6 +139,11 @@
       "name": "Qwen 3.5 397B A17B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-02-01",
       "temperature": true,
       "tool_call": true
@@ -258,6 +175,11 @@
       "name": "Qwen3.6 35B A3B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-01",
       "temperature": true,
       "tool_call": true
@@ -311,6 +233,11 @@
       "name": "MiMo-V2.5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-22",
       "temperature": true,
       "tool_call": true
@@ -361,70 +288,12 @@
       "name": "MiMo-V2.5-Pro",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-22",
-      "temperature": true,
-      "tool_call": true
-    },
-    "anthropic/claude-3-7-sonnet-latest": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.33,
-        "input": 3.3,
-        "output": 16.5
-      },
-      "description": "Claude Sonnet 3.7 (Latest) は deepinfra によって提供される AI モデルです。",
-      "family": "claude-sonnet",
-      "id": "anthropic/claude-3-7-sonnet-latest",
-      "knowledge": "2024-10-31",
-      "last_updated": "2025-03-13",
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 3.7 (Latest)",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-03-13",
-      "temperature": true,
-      "tool_call": true
-    },
-    "anthropic/claude-4-opus": {
-      "attachment": true,
-      "cost": {
-        "input": 16.5,
-        "output": 82.5
-      },
-      "description": "Claude Opus 4 は deepinfra によって提供される AI モデルです。",
-      "family": "claude-opus",
-      "id": "anthropic/claude-4-opus",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-06-12",
-      "limit": {
-        "context": 200000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Opus 4",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-06-12",
       "temperature": true,
       "tool_call": true
     },
@@ -457,6 +326,7 @@
       "name": "DeepSeek-R1-0528",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-05-28",
       "temperature": true,
       "tool_call": false
@@ -490,6 +360,11 @@
       "name": "DeepSeek-V3.2",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-12-02",
       "temperature": true,
       "tool_call": true
@@ -524,6 +399,20 @@
       "name": "DeepSeek V4 Flash",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-04-24",
       "structured_output": true,
       "temperature": true,
@@ -559,6 +448,20 @@
       "name": "DeepSeek V4 Pro",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-04-24",
       "structured_output": true,
       "temperature": true,
@@ -590,6 +493,11 @@
       "name": "Gemma 4 26B A4B IT",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-02",
       "structured_output": true,
       "temperature": true,
@@ -621,121 +529,14 @@
       "name": "Gemma 4 31B IT",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-02",
       "structured_output": true,
       "temperature": true,
-      "tool_call": true
-    },
-    "meta-llama/Llama-3.1-70B-Instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.4,
-        "output": 0.4
-      },
-      "description": "Llama 3.1 70B は deepinfra によって提供される AI モデルです。",
-      "family": "llama",
-      "id": "meta-llama/Llama-3.1-70B-Instruct",
-      "last_updated": "2024-07-23",
-      "limit": {
-        "context": 131072,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.1 70B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-07-23",
-      "tool_call": true
-    },
-    "meta-llama/Llama-3.1-70B-Instruct-Turbo": {
-      "attachment": false,
-      "cost": {
-        "input": 0.4,
-        "output": 0.4
-      },
-      "description": "Llama 3.1 70B Turbo は deepinfra によって提供される AI モデルです。",
-      "family": "llama",
-      "id": "meta-llama/Llama-3.1-70B-Instruct-Turbo",
-      "last_updated": "2024-07-23",
-      "limit": {
-        "context": 131072,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.1 70B Turbo",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-07-23",
-      "tool_call": true
-    },
-    "meta-llama/Llama-3.1-8B-Instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.02,
-        "output": 0.05
-      },
-      "description": "Llama 3.1 8B は deepinfra によって提供される AI モデルです。",
-      "family": "llama",
-      "id": "meta-llama/Llama-3.1-8B-Instruct",
-      "last_updated": "2024-07-23",
-      "limit": {
-        "context": 131072,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.1 8B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-07-23",
-      "tool_call": true
-    },
-    "meta-llama/Llama-3.1-8B-Instruct-Turbo": {
-      "attachment": false,
-      "cost": {
-        "input": 0.02,
-        "output": 0.03
-      },
-      "description": "Llama 3.1 8B Turbo は deepinfra によって提供される AI モデルです。",
-      "family": "llama",
-      "id": "meta-llama/Llama-3.1-8B-Instruct-Turbo",
-      "last_updated": "2024-07-23",
-      "limit": {
-        "context": 131072,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.1 8B Turbo",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-07-23",
       "tool_call": true
     },
     "meta-llama/Llama-3.3-70B-Instruct-Turbo": {
@@ -763,6 +564,7 @@
       "name": "Llama 3.3 70B Turbo",
       "open_weights": true,
       "reasoning": false,
+      "reasoning_options": [],
       "release_date": "2024-12-06",
       "tool_call": true
     },
@@ -792,6 +594,7 @@
       "name": "Llama 4 Maverick 17B FP8",
       "open_weights": true,
       "reasoning": false,
+      "reasoning_options": [],
       "release_date": "2025-04-05",
       "tool_call": true
     },
@@ -821,101 +624,8 @@
       "name": "Llama 4 Scout 17B",
       "open_weights": true,
       "reasoning": false,
+      "reasoning_options": [],
       "release_date": "2025-04-05",
-      "tool_call": true
-    },
-    "moonshotai/Kimi-K2-Instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.5,
-        "output": 2
-      },
-      "description": "Kimi K2 は deepinfra によって提供される AI モデルです。",
-      "family": "kimi",
-      "id": "moonshotai/Kimi-K2-Instruct",
-      "knowledge": "2024-10",
-      "last_updated": "2025-07-11",
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-07-11",
-      "temperature": true,
-      "tool_call": true
-    },
-    "moonshotai/Kimi-K2-Instruct-0905": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.15,
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "Kimi K2 0905 は deepinfra によって提供される AI モデルです。",
-      "family": "kimi",
-      "id": "moonshotai/Kimi-K2-Instruct-0905",
-      "knowledge": "2024-10",
-      "last_updated": "2025-09-05",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2 0905",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-09-05",
-      "temperature": true,
-      "tool_call": true
-    },
-    "moonshotai/Kimi-K2-Thinking": {
-      "attachment": false,
-      "cost": {
-        "input": 0.47,
-        "output": 2
-      },
-      "description": "Kimi K2 Thinking は deepinfra によって提供される AI モデルです。",
-      "family": "kimi-thinking",
-      "id": "moonshotai/Kimi-K2-Thinking",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2024-10",
-      "last_updated": "2025-11-07",
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2 Thinking",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-11-06",
-      "temperature": true,
       "tool_call": true
     },
     "moonshotai/Kimi-K2.5": {
@@ -949,6 +659,11 @@
       "name": "Kimi K2.5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-01-27",
       "structured_output": true,
       "temperature": true,
@@ -986,6 +701,11 @@
       "name": "Kimi K2.6",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-21",
       "structured_output": true,
       "temperature": true,
@@ -1016,6 +736,16 @@
       "name": "GPT OSS 120B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-05",
       "temperature": true,
       "tool_call": true
@@ -1045,38 +775,17 @@
       "name": "GPT OSS 20B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-05",
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai-org/GLM-4.5": {
-      "attachment": false,
-      "cost": {
-        "input": 0.6,
-        "output": 2.2
-      },
-      "description": "GLM-4.5 は deepinfra によって提供される AI モデルです。",
-      "family": "glm",
-      "id": "zai-org/GLM-4.5",
-      "knowledge": "2025-04",
-      "last_updated": "2025-07-28",
-      "limit": {
-        "context": 131072,
-        "output": 98304
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM-4.5",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-07-28",
-      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -1110,40 +819,11 @@
       "name": "GLM-4.6",
       "open_weights": true,
       "reasoning": true,
-      "release_date": "2025-09-30",
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai-org/GLM-4.6V": {
-      "attachment": true,
-      "cost": {
-        "input": 0.3,
-        "output": 0.9
-      },
-      "description": "GLM-4.6V は deepinfra によって提供される AI モデルです。",
-      "family": "glm",
-      "id": "zai-org/GLM-4.6V",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2025-04",
-      "last_updated": "2025-09-30",
-      "limit": {
-        "context": 204800,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM-4.6V",
-      "open_weights": true,
-      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-09-30",
       "temperature": true,
       "tool_call": true
@@ -1178,6 +858,11 @@
       "name": "GLM-4.7",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-12-22",
       "temperature": true,
       "tool_call": true
@@ -1211,6 +896,11 @@
       "name": "GLM-4.7-Flash",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-01-19",
       "temperature": true,
       "tool_call": true
@@ -1245,6 +935,11 @@
       "name": "GLM-5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-02-12",
       "temperature": true,
       "tool_call": true
@@ -1279,6 +974,11 @@
       "name": "GLM-5.1",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-07",
       "structured_output": true,
       "temperature": true,

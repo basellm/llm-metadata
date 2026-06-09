@@ -43,80 +43,7 @@
       },
       "reasoning": false,
       "release_date": "2024-10-22",
-      "temperature": true,
-      "tool_call": true
-    },
-    "claude-3-5-sonnet@20241022": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Claude Sonnet 3.5 v2 は google-vertex によって提供される AI モデルです。",
-      "family": "claude-sonnet",
-      "id": "claude-3-5-sonnet@20241022",
-      "knowledge": "2024-04-30",
-      "last_updated": "2024-10-22",
-      "limit": {
-        "context": 200000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 3.5 v2",
-      "open_weights": false,
-      "provider": {
-        "npm": "@ai-sdk/google-vertex/anthropic"
-      },
-      "reasoning": false,
-      "release_date": "2024-10-22",
-      "temperature": true,
-      "tool_call": true
-    },
-    "claude-3-7-sonnet@20250219": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Claude Sonnet 3.7 は google-vertex によって提供される AI モデルです。",
-      "family": "claude-sonnet",
-      "id": "claude-3-7-sonnet@20250219",
-      "knowledge": "2024-10-31",
-      "last_updated": "2025-02-19",
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 3.7",
-      "open_weights": false,
-      "provider": {
-        "npm": "@ai-sdk/google-vertex/anthropic"
-      },
-      "reasoning": true,
-      "release_date": "2025-02-19",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -153,6 +80,12 @@
         "npm": "@ai-sdk/google-vertex/anthropic"
       },
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-10-15",
       "temperature": true,
       "tool_call": true
@@ -190,7 +123,14 @@
         "npm": "@ai-sdk/google-vertex/anthropic"
       },
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-08-05",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -227,6 +167,20 @@
         "npm": "@ai-sdk/google-vertex/anthropic"
       },
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-11-01",
       "temperature": true,
       "tool_call": true
@@ -282,6 +236,21 @@
         "npm": "@ai-sdk/google-vertex/anthropic"
       },
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-05",
       "temperature": true,
       "tool_call": true
@@ -337,6 +306,18 @@
         "npm": "@ai-sdk/google-vertex/anthropic"
       },
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-16",
       "temperature": false,
       "tool_call": true
@@ -391,6 +372,18 @@
         "npm": "@ai-sdk/google-vertex/anthropic"
       },
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-28",
       "temperature": false,
       "tool_call": true
@@ -428,7 +421,14 @@
         "npm": "@ai-sdk/google-vertex/anthropic"
       },
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-05-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -465,6 +465,12 @@
         "npm": "@ai-sdk/google-vertex/anthropic"
       },
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-09-29",
       "temperature": true,
       "tool_call": true
@@ -520,6 +526,21 @@
         "npm": "@ai-sdk/google-vertex/anthropic"
       },
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-17",
       "temperature": true,
       "tool_call": true
@@ -557,7 +578,14 @@
         "npm": "@ai-sdk/google-vertex/anthropic"
       },
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-05-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -632,75 +660,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "gemini-2.0-flash": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.025,
-        "input": 0.15,
-        "output": 0.6
-      },
-      "description": "Gemini 2.0 Flash は google-vertex によって提供される AI モデルです。",
-      "family": "gemini-flash",
-      "id": "gemini-2.0-flash",
-      "knowledge": "2024-06",
-      "last_updated": "2024-12-11",
-      "limit": {
-        "context": 1048576,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.0 Flash",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-12-11",
-      "temperature": true,
-      "tool_call": true
-    },
-    "gemini-2.0-flash-lite": {
-      "attachment": true,
-      "cost": {
-        "input": 0.075,
-        "output": 0.3
-      },
-      "description": "Gemini 2.0 Flash-Lite は google-vertex によって提供される AI モデルです。",
-      "family": "gemini-flash-lite",
-      "id": "gemini-2.0-flash-lite",
-      "knowledge": "2024-06",
-      "last_updated": "2024-12-11",
-      "limit": {
-        "context": 1048576,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.0 Flash-Lite",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-12-11",
-      "temperature": true,
-      "tool_call": true
-    },
     "gemini-2.5-flash": {
       "attachment": true,
       "cost": {
@@ -733,6 +692,16 @@
       "name": "Gemini 2.5 Flash",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 24576,
+          "min": 0,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-06-17",
       "temperature": true,
       "tool_call": true
@@ -769,78 +738,17 @@
       "name": "Gemini 2.5 Flash-Lite",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 24576,
+          "min": 512,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-06-17",
-      "temperature": true,
-      "tool_call": true
-    },
-    "gemini-2.5-flash-lite-preview-06-17": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.025,
-        "input": 0.1,
-        "output": 0.4
-      },
-      "description": "Gemini 2.5 Flash Lite Preview 06-17 は google-vertex によって提供される AI モデルです。",
-      "family": "gemini-flash-lite",
-      "id": "gemini-2.5-flash-lite-preview-06-17",
-      "knowledge": "2025-01",
-      "last_updated": "2025-06-17",
-      "limit": {
-        "context": 65536,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.5 Flash Lite Preview 06-17",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-06-17",
-      "temperature": true,
-      "tool_call": true
-    },
-    "gemini-2.5-flash-preview-09-2025": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.075,
-        "cache_write": 0.383,
-        "input": 0.3,
-        "output": 2.5
-      },
-      "description": "Gemini 2.5 Flash Preview 09-25 は google-vertex によって提供される AI モデルです。",
-      "family": "gemini-flash",
-      "id": "gemini-2.5-flash-preview-09-2025",
-      "knowledge": "2025-01",
-      "last_updated": "2025-09-25",
-      "limit": {
-        "context": 1048576,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.5 Flash Preview 09-25",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-09-25",
       "temperature": true,
       "tool_call": true
     },
@@ -921,6 +829,13 @@
       "name": "Gemini 2.5 Pro",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-03-20",
       "temperature": true,
       "tool_call": true
@@ -987,59 +902,18 @@
       "name": "Gemini 3 Flash Preview",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-12-17",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "gemini-3-pro-preview": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.2,
-        "context_over_200k": {
-          "cache_read": 0.4,
-          "input": 4,
-          "output": 18
-        },
-        "input": 2,
-        "output": 12,
-        "tiers": [
-          {
-            "cache_read": 0.4,
-            "input": 4,
-            "output": 18,
-            "tier": {
-              "size": 200000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "Gemini 3 Pro Preview は google-vertex によって提供される AI モデルです。",
-      "family": "gemini-pro",
-      "id": "gemini-3-pro-preview",
-      "knowledge": "2025-01",
-      "last_updated": "2025-11-18",
-      "limit": {
-        "context": 1048576,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video",
-          "audio",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 3 Pro Preview",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-11-18",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1076,6 +950,17 @@
       "name": "Gemini 3.1 Flash Lite",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-05-07",
       "structured_output": true,
       "temperature": true,
@@ -1113,6 +998,17 @@
       "name": "Gemini 3.1 Flash Lite Preview",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-03-03",
       "structured_output": true,
       "temperature": true,
@@ -1165,6 +1061,16 @@
       "name": "Gemini 3.1 Pro Preview",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-02-19",
       "structured_output": true,
       "temperature": true,
@@ -1217,6 +1123,16 @@
       "name": "Gemini 3.1 Pro Preview Custom Tools",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-02-19",
       "structured_output": true,
       "temperature": true,
@@ -1254,6 +1170,17 @@
       "name": "Gemini 3.5 Flash",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-05-19",
       "structured_output": true,
       "temperature": true,
@@ -1321,6 +1248,17 @@
       "name": "Gemini Flash Latest",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-09-25",
       "temperature": true,
       "tool_call": true
@@ -1356,6 +1294,17 @@
       "name": "Gemini Flash-Lite Latest",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-09-25",
       "temperature": true,
       "tool_call": true

@@ -36,7 +36,20 @@
       },
       "name": "Nova 2 Lite",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2024-12-01",
       "temperature": true,
       "tool_call": true
@@ -168,6 +181,12 @@
       "name": "Claude Haiku 4.5",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-10-15",
       "structured_output": true,
       "temperature": true,
@@ -203,6 +222,12 @@
       "name": "Claude Opus 4.1",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-08-05",
       "temperature": true,
       "tool_call": true
@@ -237,6 +262,20 @@
       "name": "Claude Opus 4.5",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-11-24",
       "structured_output": true,
       "temperature": true,
@@ -272,6 +311,21 @@
       "name": "Claude Opus 4.6",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-05",
       "structured_output": true,
       "temperature": true,
@@ -307,6 +361,18 @@
       "name": "Claude Opus 4.7",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-16",
       "temperature": false,
       "tool_call": true
@@ -340,6 +406,18 @@
       "name": "Claude Opus 4.8",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-28",
       "temperature": false,
       "tool_call": true
@@ -374,6 +452,12 @@
       "name": "Claude Sonnet 4.5",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-09-29",
       "structured_output": true,
       "temperature": true,
@@ -409,6 +493,21 @@
       "name": "Claude Sonnet 4.6",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-17",
       "structured_output": true,
       "temperature": true,
@@ -444,6 +543,12 @@
       "name": "Claude Haiku 4.5 (AU)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-10-15",
       "structured_output": true,
       "temperature": true,
@@ -479,6 +584,21 @@
       "name": "AU Anthropic Claude Opus 4.6",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-05",
       "structured_output": true,
       "temperature": true,
@@ -513,6 +633,18 @@
       "name": "Claude Opus 4.8 (AU)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-28",
       "temperature": false,
       "tool_call": true
@@ -547,6 +679,12 @@
       "name": "Claude Sonnet 4.5 (AU)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-09-29",
       "structured_output": true,
       "temperature": true,
@@ -582,6 +720,21 @@
       "name": "AU Anthropic Claude Sonnet 4.6",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-17",
       "structured_output": true,
       "temperature": true,
@@ -613,6 +766,7 @@
       "name": "DeepSeek-R1",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-01-20",
       "temperature": true,
       "tool_call": true
@@ -643,6 +797,7 @@
       "name": "DeepSeek-V3.1",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-09-18",
       "structured_output": true,
       "temperature": true,
@@ -674,6 +829,7 @@
       "name": "DeepSeek-V3.2",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-02-06",
       "structured_output": true,
       "temperature": true,
@@ -709,6 +865,12 @@
       "name": "Claude Haiku 4.5 (EU)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-10-15",
       "structured_output": true,
       "temperature": true,
@@ -744,6 +906,20 @@
       "name": "Claude Opus 4.5 (EU)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-11-24",
       "structured_output": true,
       "temperature": true,
@@ -779,6 +955,21 @@
       "name": "Claude Opus 4.6 (EU)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-05",
       "structured_output": true,
       "temperature": true,
@@ -814,6 +1005,18 @@
       "name": "Claude Opus 4.7 (EU)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-16",
       "temperature": false,
       "tool_call": true
@@ -847,6 +1050,18 @@
       "name": "Claude Opus 4.8 (EU)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-28",
       "temperature": false,
       "tool_call": true
@@ -881,6 +1096,12 @@
       "name": "Claude Sonnet 4.5 (EU)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-09-29",
       "structured_output": true,
       "temperature": true,
@@ -916,6 +1137,21 @@
       "name": "Claude Sonnet 4.6 (EU)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-17",
       "structured_output": true,
       "temperature": true,
@@ -951,6 +1187,12 @@
       "name": "Claude Haiku 4.5 (Global)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-10-15",
       "structured_output": true,
       "temperature": true,
@@ -986,6 +1228,20 @@
       "name": "Claude Opus 4.5 (Global)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-11-24",
       "structured_output": true,
       "temperature": true,
@@ -1021,6 +1277,21 @@
       "name": "Claude Opus 4.6 (Global)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-05",
       "structured_output": true,
       "temperature": true,
@@ -1056,6 +1327,18 @@
       "name": "Claude Opus 4.7 (Global)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-16",
       "temperature": false,
       "tool_call": true
@@ -1089,6 +1372,18 @@
       "name": "Claude Opus 4.8 (Global)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-28",
       "temperature": false,
       "tool_call": true
@@ -1123,6 +1418,12 @@
       "name": "Claude Sonnet 4.5 (Global)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-09-29",
       "structured_output": true,
       "temperature": true,
@@ -1158,6 +1459,21 @@
       "name": "Claude Sonnet 4.6 (Global)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-17",
       "structured_output": true,
       "temperature": true,
@@ -1287,6 +1603,18 @@
       "name": "Claude Opus 4.7 (JP)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-16",
       "temperature": false,
       "tool_call": true
@@ -1320,6 +1648,18 @@
       "name": "Claude Opus 4.8 (JP)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-28",
       "temperature": false,
       "tool_call": true
@@ -1354,6 +1694,12 @@
       "name": "Claude Sonnet 4.5 (JP)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-09-29",
       "structured_output": true,
       "temperature": true,
@@ -1389,6 +1735,21 @@
       "name": "Claude Sonnet 4.6 (JP)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-17",
       "structured_output": true,
       "temperature": true,
@@ -1571,6 +1932,7 @@
       "name": "MiniMax M2",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-10-27",
       "structured_output": false,
       "temperature": true,
@@ -1601,6 +1963,7 @@
       "name": "MiniMax M2.1",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-12-23",
       "structured_output": false,
       "temperature": true,
@@ -1631,6 +1994,7 @@
       "name": "MiniMax M2.5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-03-18",
       "structured_output": false,
       "temperature": true,
@@ -1692,6 +2056,7 @@
       "name": "Magistral Small 1.2",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-12-02",
       "structured_output": true,
       "temperature": true,
@@ -1937,6 +2302,7 @@
       "name": "Kimi K2 Thinking",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-12-02",
       "structured_output": true,
       "temperature": true,
@@ -1969,6 +2335,7 @@
       "name": "Kimi K2.5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-02-06",
       "structured_output": true,
       "temperature": true,
@@ -2030,6 +2397,7 @@
       "name": "NVIDIA Nemotron Nano 3 30B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-12-23",
       "structured_output": true,
       "temperature": true,
@@ -2090,6 +2458,7 @@
       "name": "NVIDIA Nemotron 3 Super 120B A12B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-03-11",
       "structured_output": true,
       "temperature": true,
@@ -2129,6 +2498,18 @@
         "shape": "responses"
       },
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-03-05",
       "structured_output": true,
       "temperature": false,
@@ -2168,6 +2549,18 @@
         "shape": "responses"
       },
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-04-23",
       "structured_output": true,
       "temperature": false,
@@ -2202,7 +2595,17 @@
         "npm": "@ai-sdk/amazon-bedrock/mantle",
         "shape": "responses"
       },
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-05",
       "structured_output": true,
       "temperature": true,
@@ -2232,7 +2635,17 @@
       },
       "name": "gpt-oss-120b",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-05",
       "structured_output": true,
       "temperature": true,
@@ -2267,7 +2680,17 @@
         "npm": "@ai-sdk/amazon-bedrock/mantle",
         "shape": "responses"
       },
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-05",
       "structured_output": true,
       "temperature": true,
@@ -2297,7 +2720,17 @@
       },
       "name": "gpt-oss-20b",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-05",
       "structured_output": true,
       "temperature": true,
@@ -2420,6 +2853,7 @@
       "name": "Qwen3 32B (dense)",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-09-18",
       "structured_output": true,
       "temperature": true,
@@ -2512,6 +2946,7 @@
       "name": "Qwen3 Coder Next",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-02-06",
       "structured_output": true,
       "temperature": true,
@@ -2608,6 +3043,12 @@
       "name": "Claude Haiku 4.5 (US)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-10-15",
       "structured_output": true,
       "temperature": true,
@@ -2643,6 +3084,12 @@
       "name": "Claude Opus 4.1 (US)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-08-05",
       "temperature": true,
       "tool_call": true
@@ -2677,6 +3124,20 @@
       "name": "Claude Opus 4.5 (US)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-11-24",
       "structured_output": true,
       "temperature": true,
@@ -2712,6 +3173,21 @@
       "name": "Claude Opus 4.6 (US)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-05",
       "structured_output": true,
       "temperature": true,
@@ -2747,6 +3223,18 @@
       "name": "Claude Opus 4.7 (US)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-16",
       "temperature": false,
       "tool_call": true
@@ -2780,6 +3268,18 @@
       "name": "Claude Opus 4.8 (US)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-28",
       "temperature": false,
       "tool_call": true
@@ -2814,6 +3314,12 @@
       "name": "Claude Sonnet 4.5 (US)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-09-29",
       "structured_output": true,
       "temperature": true,
@@ -2849,6 +3355,21 @@
       "name": "Claude Sonnet 4.6 (US)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-17",
       "structured_output": true,
       "temperature": true,
@@ -2880,6 +3401,7 @@
       "name": "DeepSeek-R1 (US)",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-01-20",
       "temperature": true,
       "tool_call": true
@@ -2971,6 +3493,7 @@
       "name": "Palmyra X4",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-04-28",
       "temperature": true,
       "tool_call": true
@@ -3000,6 +3523,7 @@
       "name": "Palmyra X5",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-04-28",
       "temperature": true,
       "tool_call": true
@@ -3033,6 +3557,7 @@
       "name": "GLM-4.7",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-12-22",
       "structured_output": true,
       "temperature": true,
@@ -3064,6 +3589,7 @@
       "name": "GLM-4.7-Flash",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-01-19",
       "structured_output": true,
       "temperature": true,
@@ -3097,6 +3623,7 @@
       "name": "GLM-5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-03-18",
       "structured_output": true,
       "temperature": true,
