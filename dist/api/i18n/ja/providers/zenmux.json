@@ -2504,35 +2504,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "stepfun/step-3.5-flash-free": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Step 3.5 Flash (Free) は zenmux によって提供される AI モデルです。",
-      "id": "stepfun/step-3.5-flash-free",
-      "knowledge": "2025-01-01",
-      "last_updated": "2026-02-02",
-      "limit": {
-        "context": 256000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Step 3.5 Flash (Free)",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-02-02",
-      "temperature": true,
-      "tool_call": true
-    },
     "stepfun/step-3.7-flash": {
       "attachment": true,
       "cost": {
@@ -2558,6 +2529,37 @@
         ]
       },
       "name": "Step 3.7 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-05-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "stepfun/step-3.7-flash-free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Step 3.7 Flash (Free) は zenmux によって提供される AI モデルです。",
+      "id": "stepfun/step-3.7-flash-free",
+      "knowledge": "2026-01-01",
+      "last_updated": "2026-05-29",
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 3.7 Flash (Free)",
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-05-29",

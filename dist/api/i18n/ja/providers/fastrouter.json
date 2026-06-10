@@ -42,6 +42,37 @@
       "temperature": true,
       "tool_call": true
     },
+    "anthropic/claude-opus-4.8": {
+      "attachment": true,
+      "cost": {
+        "input": 5,
+        "output": 25
+      },
+      "description": "Claude Opus 4.8 は fastrouter によって提供される AI モデルです。",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.8",
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.8",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-28",
+      "temperature": false,
+      "tool_call": true
+    },
     "anthropic/claude-sonnet-4": {
       "attachment": true,
       "cost": {
@@ -76,6 +107,64 @@
       "temperature": true,
       "tool_call": true
     },
+    "anthropic/claude-sonnet-4.6": {
+      "attachment": true,
+      "cost": {
+        "input": 3,
+        "output": 15
+      },
+      "description": "Claude Sonnet 4.6 は fastrouter によって提供される AI モデルです。",
+      "family": "claude-sonnet",
+      "id": "anthropic/claude-sonnet-4.6",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-13",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "bytedance/seedance-2": {
+      "attachment": true,
+      "description": "Seedance 2 は fastrouter によって提供される AI モデルです。",
+      "family": "seed",
+      "id": "bytedance/seedance-2",
+      "last_updated": "2026-04-01",
+      "limit": {
+        "context": 4096,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Seedance 2",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-01",
+      "temperature": false,
+      "tool_call": false
+    },
     "deepseek-ai/deepseek-r1-distill-llama-70b": {
       "attachment": false,
       "cost": {
@@ -105,6 +194,37 @@
       "release_date": "2025-01-23",
       "temperature": true,
       "tool_call": false
+    },
+    "deepseek/deepseek-v4-pro": {
+      "attachment": false,
+      "cost": {
+        "input": 1.74,
+        "output": 3.48
+      },
+      "description": "DeepSeek V4 Pro は fastrouter によって提供される AI モデルです。",
+      "family": "deepseek-thinking",
+      "id": "deepseek/deepseek-v4-pro",
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "google/gemini-2.5-flash": {
       "attachment": true,
@@ -172,6 +292,410 @@
       "temperature": true,
       "tool_call": true
     },
+    "google/gemini-3-pro-image-preview": {
+      "attachment": true,
+      "cost": {
+        "input": 2,
+        "output": 12
+      },
+      "description": "Nano Banana Pro は fastrouter によって提供される AI モデルです。",
+      "family": "gemini-pro",
+      "id": "google/gemini-3-pro-image-preview",
+      "knowledge": "2025-01",
+      "last_updated": "2025-11-20",
+      "limit": {
+        "context": 65536,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "Nano Banana Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-11-20",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemini-3.1-flash-image-preview": {
+      "attachment": true,
+      "cost": {
+        "input": 0.5,
+        "output": 3
+      },
+      "description": "Nano Banana 2 は fastrouter によって提供される AI モデルです。",
+      "family": "gemini-flash",
+      "id": "google/gemini-3.1-flash-image-preview",
+      "knowledge": "2025-01",
+      "last_updated": "2026-02-26",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "Nano Banana 2",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-26",
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemini-3.1-pro-preview": {
+      "attachment": true,
+      "cost": {
+        "input": 2,
+        "output": 12
+      },
+      "description": "Gemini 3.1 Pro Preview は fastrouter によって提供される AI モデルです。",
+      "family": "gemini-pro",
+      "id": "google/gemini-3.1-pro-preview",
+      "knowledge": "2025-01",
+      "last_updated": "2026-02-19",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.1 Pro Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-3.5-flash": {
+      "attachment": true,
+      "cost": {
+        "input": 1.5,
+        "output": 9
+      },
+      "description": "Gemini 3.5 Flash は fastrouter によって提供される AI モデルです。",
+      "family": "gemini-flash",
+      "id": "google/gemini-3.5-flash",
+      "knowledge": "2025-01",
+      "last_updated": "2026-05-19",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.5 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-4-31b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.13,
+        "output": 0.38
+      },
+      "description": "Gemma 4 31B IT は fastrouter によって提供される AI モデルです。",
+      "family": "gemma",
+      "id": "google/gemma-4-31b-it",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 31B IT",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/imagen-4.0-fast": {
+      "attachment": false,
+      "description": "Imagen 4 Fast は fastrouter によって提供される AI モデルです。",
+      "family": "imagen",
+      "id": "google/imagen-4.0-fast",
+      "last_updated": "2025-05-20",
+      "limit": {
+        "context": 480,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Imagen 4 Fast",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-05-20",
+      "temperature": false,
+      "tool_call": false
+    },
+    "google/imagen-4.0-ultra": {
+      "attachment": false,
+      "description": "Imagen 4 Ultra は fastrouter によって提供される AI モデルです。",
+      "family": "imagen",
+      "id": "google/imagen-4.0-ultra",
+      "last_updated": "2025-05-20",
+      "limit": {
+        "context": 480,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Imagen 4 Ultra",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-05-20",
+      "temperature": false,
+      "tool_call": false
+    },
+    "google/veo3.1": {
+      "attachment": true,
+      "description": "Veo 3.1 は fastrouter によって提供される AI モデルです。",
+      "family": "veo",
+      "id": "google/veo3.1",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 400000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Veo 3.1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-05-01",
+      "temperature": false,
+      "tool_call": false
+    },
+    "google/veo3.1-fast": {
+      "attachment": true,
+      "description": "Veo 3.1 Fast は fastrouter によって提供される AI モデルです。",
+      "family": "veo",
+      "id": "google/veo3.1-fast",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 400000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Veo 3.1 Fast",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-05-01",
+      "temperature": false,
+      "tool_call": false
+    },
+    "google/veo3.1-lite": {
+      "attachment": true,
+      "description": "Veo 3.1 Lite は fastrouter によって提供される AI モデルです。",
+      "family": "veo",
+      "id": "google/veo3.1-lite",
+      "last_updated": "2026-05-01",
+      "limit": {
+        "context": 400000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Veo 3.1 Lite",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-05-01",
+      "temperature": false,
+      "tool_call": false
+    },
+    "leonardo-ai/lucid-origin": {
+      "attachment": true,
+      "description": "Lucid Origin は fastrouter によって提供される AI モデルです。",
+      "family": "lucid",
+      "id": "leonardo-ai/lucid-origin",
+      "last_updated": "2025-06-01",
+      "limit": {
+        "context": 4096,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Lucid Origin",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-06-01",
+      "temperature": false,
+      "tool_call": false
+    },
+    "leonardo-ai/lucid-realism": {
+      "attachment": true,
+      "description": "Lucid Realism は fastrouter によって提供される AI モデルです。",
+      "family": "lucid",
+      "id": "leonardo-ai/lucid-realism",
+      "last_updated": "2025-06-01",
+      "limit": {
+        "context": 4096,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Lucid Realism",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-06-01",
+      "temperature": false,
+      "tool_call": false
+    },
+    "minimax/minimax-m2.7": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax-M2.7 は fastrouter によって提供される AI モデルです。",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.7",
+      "last_updated": "2026-03-18",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.7",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.7-highspeed": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 2.4
+      },
+      "description": "MiniMax-M2.7-highspeed は fastrouter によって提供される AI モデルです。",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.7-highspeed",
+      "last_updated": "2026-03-18",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.7-highspeed",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-18",
+      "temperature": true,
+      "tool_call": true
+    },
     "moonshotai/kimi-k2": {
       "attachment": false,
       "cost": {
@@ -199,6 +723,39 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-07-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2.6": {
+      "attachment": true,
+      "cost": {
+        "input": 0.75,
+        "output": 3.5
+      },
+      "description": "Kimi K2.6 は fastrouter によって提供される AI モデルです。",
+      "family": "kimi-k2.6",
+      "id": "moonshotai/kimi-k2.6",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-21",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -330,6 +887,200 @@
       "temperature": true,
       "tool_call": true
     },
+    "openai/gpt-5.3-codex": {
+      "attachment": true,
+      "cost": {
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "GPT-5.3 Codex は fastrouter によって提供される AI モデルです。",
+      "family": "gpt-codex",
+      "id": "openai/gpt-5.3-codex",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.3 Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-05",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.4-mini": {
+      "attachment": true,
+      "cost": {
+        "input": 0.75,
+        "output": 4.5
+      },
+      "description": "GPT-5.4 mini は fastrouter によって提供される AI モデルです。",
+      "family": "gpt-mini",
+      "id": "openai/gpt-5.4-mini",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-17",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.4 mini",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.4-nano": {
+      "attachment": true,
+      "cost": {
+        "input": 0.2,
+        "output": 1.25
+      },
+      "description": "GPT-5.4 nano は fastrouter によって提供される AI モデルです。",
+      "family": "gpt-nano",
+      "id": "openai/gpt-5.4-nano",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-17",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.4 nano",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-03-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.5": {
+      "attachment": true,
+      "cost": {
+        "input": 5,
+        "output": 30
+      },
+      "description": "GPT-5.5 は fastrouter によって提供される AI モデルです。",
+      "family": "gpt",
+      "id": "openai/gpt-5.5",
+      "knowledge": "2025-12-01",
+      "last_updated": "2026-04-23",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.5-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 30,
+        "output": 180
+      },
+      "description": "GPT-5.5 Pro は fastrouter によって提供される AI モデルです。",
+      "family": "gpt-pro",
+      "id": "openai/gpt-5.5-pro",
+      "knowledge": "2025-12-01",
+      "last_updated": "2026-04-23",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.5 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-image-2": {
+      "attachment": true,
+      "description": "GPT Image 2 は fastrouter によって提供される AI モデルです。",
+      "family": "gpt-image",
+      "id": "openai/gpt-image-2",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 128000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GPT Image 2",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-21",
+      "temperature": true,
+      "tool_call": false
+    },
     "openai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
@@ -388,6 +1139,38 @@
       "temperature": true,
       "tool_call": true
     },
+    "openai/gpt-realtime-1.5": {
+      "attachment": true,
+      "cost": {
+        "input": 4,
+        "output": 16
+      },
+      "description": "GPT Realtime 1.5 は fastrouter によって提供される AI モデルです。",
+      "family": "gpt",
+      "id": "openai/gpt-realtime-1.5",
+      "last_updated": "2025-06-01",
+      "limit": {
+        "context": 32000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "audio",
+          "image"
+        ],
+        "output": [
+          "text",
+          "audio"
+        ]
+      },
+      "name": "GPT Realtime 1.5",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-06-01",
+      "temperature": true,
+      "tool_call": true
+    },
     "qwen/qwen3-coder": {
       "attachment": false,
       "cost": {
@@ -417,6 +1200,89 @@
       "release_date": "2025-07-23",
       "temperature": true,
       "tool_call": true
+    },
+    "sarvam/sarvam-105b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.04,
+        "output": 0.16
+      },
+      "description": "Sarvam 105B は fastrouter によって提供される AI モデルです。",
+      "family": "sarvam",
+      "id": "sarvam/sarvam-105b",
+      "last_updated": "2025-09-01",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Sarvam 105B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-09-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "sarvam/sarvam-30b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.02,
+        "output": 0.1
+      },
+      "description": "Sarvam 30B は fastrouter によって提供される AI モデルです。",
+      "family": "sarvam",
+      "id": "sarvam/sarvam-30b",
+      "last_updated": "2026-02-18",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Sarvam 30B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "wanx/wan-v2-6": {
+      "attachment": true,
+      "description": "Wan 2.6 は fastrouter によって提供される AI モデルです。",
+      "id": "wanx/wan-v2-6",
+      "last_updated": "2025-12-01",
+      "limit": {
+        "context": 400000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Wan 2.6",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-01",
+      "temperature": false,
+      "tool_call": false
     },
     "x-ai/grok-4": {
       "attachment": false,
@@ -450,6 +1316,70 @@
       "temperature": true,
       "tool_call": true
     },
+    "x-ai/grok-4.3": {
+      "attachment": true,
+      "cost": {
+        "input": 1.25,
+        "output": 2.5
+      },
+      "description": "Grok 4.3 は fastrouter によって提供される AI モデルです。",
+      "family": "grok",
+      "id": "x-ai/grok-4.3",
+      "last_updated": "2026-04-17",
+      "limit": {
+        "context": 1000000,
+        "output": 30000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.3",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-build-0.1": {
+      "attachment": true,
+      "cost": {
+        "input": 1,
+        "output": 2
+      },
+      "description": "Grok Build 0.1 は fastrouter によって提供される AI モデルです。",
+      "family": "grok-build",
+      "id": "x-ai/grok-build-0.1",
+      "last_updated": "2026-04-16",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok Build 0.1",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-16",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "z-ai/glm-5": {
       "attachment": false,
       "cost": {
@@ -479,6 +1409,36 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-02-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.1": {
+      "attachment": false,
+      "cost": {
+        "input": 1.05,
+        "output": 3.5
+      },
+      "description": "GLM-5.1 は fastrouter によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "z-ai/glm-5.1",
+      "last_updated": "2026-03-27",
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-03-27",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     }

@@ -1178,14 +1178,14 @@
     "minimax-m27": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.075,
+        "cache_read": 0.06875,
         "input": 0.375,
         "output": 1.5
       },
       "description": "MiniMax M2.7 は venice によって提供される AI モデルです。",
       "family": "minimax",
       "id": "minimax-m27",
-      "last_updated": "2026-04-12",
+      "last_updated": "2026-06-10",
       "limit": {
         "context": 198000,
         "output": 32768
@@ -1199,8 +1199,18 @@
         ]
       },
       "name": "MiniMax M2.7",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-03-18",
       "temperature": true,
       "tool_call": true
@@ -2215,6 +2225,47 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-01-16",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "tencent-hy3-preview": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.021,
+        "input": 0.063,
+        "output": 0.21
+      },
+      "description": "Hy3 Preview は venice によって提供される AI モデルです。",
+      "family": "Hy",
+      "id": "tencent-hy3-preview",
+      "last_updated": "2026-06-10",
+      "limit": {
+        "context": 256000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hy3 Preview",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-20",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
