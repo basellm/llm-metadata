@@ -215,66 +215,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepseek-ai/deepseek-v3.1-terminus": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "DeepSeek V3.1 Terminus is an AI model provided by nvidia.",
-      "family": "deepseek",
-      "id": "deepseek-ai/deepseek-v3.1-terminus",
-      "knowledge": "2025-01",
-      "last_updated": "2025-09-22",
-      "limit": {
-        "context": 128000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V3.1 Terminus",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-09-22",
-      "temperature": true,
-      "tool_call": true
-    },
-    "deepseek-ai/deepseek-v3.2": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "DeepSeek V3.2 is an AI model provided by nvidia.",
-      "family": "deepseek",
-      "id": "deepseek-ai/deepseek-v3.2",
-      "knowledge": "2024-07",
-      "last_updated": "2025-12-01",
-      "limit": {
-        "context": 163840,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V3.2",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-12-01",
-      "temperature": true,
-      "tool_call": true
-    },
     "deepseek-ai/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
@@ -305,6 +245,16 @@
       "name": "DeepSeek V4 Flash",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-24",
       "structured_output": true,
       "temperature": true,
@@ -340,6 +290,16 @@
       "name": "DeepSeek V4 Pro",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-24",
       "structured_output": true,
       "temperature": true,
@@ -371,37 +331,6 @@
       "reasoning": false,
       "release_date": "2024-07-16",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "google/gemma-3-27b-it": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Gemma-3-27B-IT is an AI model provided by nvidia.",
-      "family": "gemma",
-      "id": "google/gemma-3-27b-it",
-      "knowledge": "2024-12",
-      "last_updated": "2025-09-05",
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemma-3-27B-IT",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2024-12-01",
       "temperature": true,
       "tool_call": true
     },
@@ -495,6 +424,11 @@
       "name": "Gemma-4-31B-IT",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-02",
       "temperature": true,
       "tool_call": true
@@ -856,7 +790,7 @@
       "tool_call": false
     },
     "microsoft/phi-4-mini-instruct": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "input": 0,
         "output": 0
@@ -872,17 +806,15 @@
       },
       "modalities": {
         "input": [
-          "text",
-          "image",
-          "audio"
+          "text"
         ],
         "output": [
           "text"
         ]
       },
       "name": "Phi-4-Mini",
-      "open_weights": false,
-      "reasoning": true,
+      "open_weights": true,
+      "reasoning": false,
       "release_date": "2024-12-01",
       "temperature": true,
       "tool_call": true
@@ -916,36 +848,6 @@
       "structured_output": false,
       "tool_call": false
     },
-    "minimaxai/minimax-m2.5": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "MiniMax-M2.5 is an AI model provided by nvidia.",
-      "family": "minimax",
-      "id": "minimaxai/minimax-m2.5",
-      "knowledge": "2025-08",
-      "last_updated": "2026-02-12",
-      "limit": {
-        "context": 204800,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax-M2.5",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2026-02-12",
-      "temperature": true,
-      "tool_call": true
-    },
     "minimaxai/minimax-m2.7": {
       "attachment": false,
       "cost": {
@@ -971,38 +873,8 @@
       "name": "MiniMax-M2.7",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-03-18",
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistralai/devstral-2-123b-instruct-2512": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Devstral-2-123B-Instruct-2512 is an AI model provided by nvidia.",
-      "family": "devstral",
-      "id": "mistralai/devstral-2-123b-instruct-2512",
-      "knowledge": "2025-12",
-      "last_updated": "2025-12-09",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Devstral-2-123B-Instruct-2512",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-08",
-      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -1157,7 +1029,7 @@
       "tool_call": true
     },
     "mistralai/mistral-small-4-119b-2603": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "input": 0,
         "output": 0
@@ -1171,7 +1043,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -1179,8 +1052,18 @@
       },
       "name": "mistral-small-4-119b-2603",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-03-16",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -1240,36 +1123,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "moonshotai/kimi-k2-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Kimi K2 Instruct is an AI model provided by nvidia.",
-      "family": "kimi",
-      "id": "moonshotai/kimi-k2-instruct",
-      "knowledge": "2024-01",
-      "last_updated": "2025-09-05",
-      "limit": {
-        "context": 128000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2 Instruct",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-01-01",
-      "temperature": true,
-      "tool_call": true
-    },
     "moonshotai/kimi-k2-instruct-0905": {
       "attachment": false,
       "cost": {
@@ -1297,40 +1150,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-09-05",
-      "temperature": true,
-      "tool_call": true
-    },
-    "moonshotai/kimi-k2-thinking": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0,
-        "cache_write": 0,
-        "input": 0,
-        "output": 0
-      },
-      "description": "Kimi K2 Thinking is an AI model provided by nvidia.",
-      "family": "kimi-thinking",
-      "id": "moonshotai/kimi-k2-thinking",
-      "interleaved": true,
-      "knowledge": "2025-07",
-      "last_updated": "2025-12",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2 Thinking",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-11",
-      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -1365,6 +1184,20 @@
       "name": "Kimi K2.6",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-21",
       "structured_output": true,
       "temperature": true,
@@ -1601,66 +1434,6 @@
       "temperature": false,
       "tool_call": false
     },
-    "nvidia/llama-3_3-nemotron-super-49b-v1": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Llama 3.3 Nemotron Super 49B v1 is an AI model provided by nvidia.",
-      "family": "nemotron",
-      "id": "nvidia/llama-3_3-nemotron-super-49b-v1",
-      "knowledge": "2023-12",
-      "last_updated": "2025-04-07",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.3 Nemotron Super 49B v1",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-04-07",
-      "temperature": true,
-      "tool_call": true
-    },
-    "nvidia/llama-3_3-nemotron-super-49b-v1_5": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Llama 3.3 Nemotron Super 49B v1.5 is an AI model provided by nvidia.",
-      "family": "nemotron",
-      "id": "nvidia/llama-3_3-nemotron-super-49b-v1_5",
-      "knowledge": "2023-12",
-      "last_updated": "2025-07-25",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.3 Nemotron Super 49B v1.5",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-07-25",
-      "temperature": true,
-      "tool_call": true
-    },
     "nvidia/llama-nemotron-embed-vl-1b-v2": {
       "attachment": true,
       "cost": {
@@ -1805,6 +1578,11 @@
       "name": "nemotron-3-nano-30b-a3b",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2024-12",
       "temperature": true,
       "tool_call": true
@@ -1837,6 +1615,16 @@
       "name": "Nemotron 3 Nano Omni",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 32768,
+          "min": -1,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-04-28",
       "structured_output": true,
       "temperature": true,
@@ -1868,6 +1656,11 @@
       "name": "Nemotron 3 Super",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-03-11",
       "temperature": true,
       "tool_call": true
@@ -1898,6 +1691,11 @@
       "name": "Nemotron 3 Ultra 550B A55B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-06-04",
       "structured_output": true,
       "temperature": true,
@@ -1928,6 +1726,7 @@
       "name": "nemotron-content-safety-reasoning-4b",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-01-22",
       "temperature": false,
       "tool_call": false
@@ -2073,6 +1872,11 @@
       "name": "nvidia-nemotron-nano-9b-v2",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-08-18",
       "temperature": true,
       "tool_call": true
@@ -2302,7 +2106,7 @@
       "tool_call": false
     },
     "openai/gpt-oss-120b": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "input": 0,
         "output": 0
@@ -2325,11 +2129,22 @@
         ]
       },
       "name": "GPT-OSS-120B",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-04",
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "openai/gpt-oss-20b": {
       "attachment": false,
@@ -2356,6 +2171,16 @@
       "name": "GPT OSS 20B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-05",
       "structured_output": true,
       "temperature": true,
@@ -2542,36 +2367,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen/qwen3-next-80b-a3b-thinking": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Qwen3-Next-80B-A3B-Thinking is an AI model provided by nvidia.",
-      "family": "qwen",
-      "id": "qwen/qwen3-next-80b-a3b-thinking",
-      "knowledge": "2024-12",
-      "last_updated": "2025-09-05",
-      "limit": {
-        "context": 262144,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3-Next-80B-A3B-Thinking",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2024-12-01",
-      "temperature": true,
-      "tool_call": true
-    },
     "qwen/qwen3.5-122b-a10b": {
       "attachment": true,
       "cost": {
@@ -2600,6 +2395,11 @@
       "name": "Qwen3.5 122B-A10B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-02-23",
       "structured_output": true,
       "temperature": true,
@@ -2632,6 +2432,11 @@
       "name": "Qwen3.5-397B-A17B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-02-16",
       "structured_output": true,
       "temperature": true,
@@ -2689,6 +2494,16 @@
       "name": "Step 3.5 Flash",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-02-02",
       "temperature": true,
       "tool_call": true
@@ -2718,6 +2533,19 @@
       "name": "Step 3.7 Flash",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-28",
       "temperature": true,
       "tool_call": true
@@ -2778,41 +2606,13 @@
       "name": "GLM-5.1",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-03-27",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "z-ai/glm4.7": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "GLM-4.7 is an AI model provided by nvidia.",
-      "family": "glm",
-      "id": "z-ai/glm4.7",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2025-04",
-      "last_updated": "2025-12-22",
-      "limit": {
-        "context": 204800,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM-4.7",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-12-22",
       "temperature": true,
       "tool_call": true
     }

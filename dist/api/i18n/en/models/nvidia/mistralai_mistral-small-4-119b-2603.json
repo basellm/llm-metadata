@@ -1,5 +1,5 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
     "input": 0,
     "output": 0
@@ -13,7 +13,8 @@
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image"
     ],
     "output": [
       "text"
@@ -21,8 +22,18 @@
   },
   "name": "mistral-small-4-119b-2603",
   "open_weights": true,
-  "reasoning": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-03-16",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

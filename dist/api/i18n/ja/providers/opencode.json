@@ -505,7 +505,7 @@
     "deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.03,
+        "cache_read": 0.028,
         "input": 0.14,
         "output": 0.28
       },
@@ -565,6 +565,41 @@
         ]
       },
       "name": "DeepSeek V4 Flash Free",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v4-pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.145,
+        "input": 1.74,
+        "output": 3.84
+      },
+      "description": "DeepSeek V4 Pro は opencode によって提供される AI モデルです。",
+      "family": "deepseek-thinking",
+      "id": "deepseek-v4-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro",
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-04-24",
