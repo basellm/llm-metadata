@@ -6,13 +6,13 @@
     "output": 3.75
   },
   "description": "Gemini 3 Flash Preview is an AI model provided by venice.",
-  "family": "gemini-flash",
+  "family": "gemini",
   "id": "gemini-3-flash-preview",
   "interleaved": {
     "field": "reasoning_content"
   },
   "knowledge": "2025-01",
-  "last_updated": "2026-03-12",
+  "last_updated": "2026-06-11",
   "limit": {
     "context": 256000,
     "output": 65536
@@ -21,8 +21,8 @@
     "input": [
       "text",
       "image",
-      "audio",
       "video",
+      "audio",
       "pdf"
     ],
     "output": [
@@ -32,6 +32,16 @@
   "name": "Gemini 3 Flash Preview",
   "open_weights": false,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2025-12-19",
   "structured_output": true,
   "temperature": true,

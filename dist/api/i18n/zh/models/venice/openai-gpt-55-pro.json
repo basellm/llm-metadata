@@ -5,11 +5,13 @@
     "output": 225
   },
   "description": "GPT-5.5 Pro 是由 venice 提供的人工智能模型。",
-  "family": "gpt-pro",
+  "family": "gpt",
   "id": "openai-gpt-55-pro",
-  "last_updated": "2026-04-25",
+  "knowledge": "2025-12-01",
+  "last_updated": "2026-06-11",
   "limit": {
     "context": 1000000,
+    "input": 922000,
     "output": 128000
   },
   "modalities": {
@@ -24,8 +26,20 @@
   "name": "GPT-5.5 Pro",
   "open_weights": false,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-04-24",
   "structured_output": true,
-  "temperature": true,
+  "temperature": false,
   "tool_call": true
 }

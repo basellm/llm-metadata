@@ -1,0 +1,188 @@
+{
+  "api": "https://llmtr.com/v1",
+  "doc": "https://llmtr.com/docs",
+  "env": [
+    "LLMTR_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/llmtr.svg",
+  "id": "llmtr",
+  "models": {
+    "gemma-4": {
+      "attachment": false,
+      "cost": {
+        "input": 5,
+        "output": 10
+      },
+      "description": "Gemma 4 是由 llmtr 提供的人工智能模型。",
+      "id": "gemma-4",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-04-22",
+      "temperature": true,
+      "tool_call": false
+    },
+    "magibu-11b-v8": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Magibu 11B v8 是由 llmtr 提供的人工智能模型。",
+      "id": "magibu-11b-v8",
+      "last_updated": "2026-06-05",
+      "limit": {
+        "context": 8192,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Magibu 11B v8",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-05",
+      "temperature": true,
+      "tool_call": false
+    },
+    "medgemma-4b": {
+      "attachment": true,
+      "cost": {
+        "input": 3,
+        "output": 5
+      },
+      "description": "MedGemma 4B 是由 llmtr 提供的人工智能模型。",
+      "id": "medgemma-4b",
+      "last_updated": "2026-04-26",
+      "limit": {
+        "context": 8192,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MedGemma 4B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-04-26",
+      "temperature": true,
+      "tool_call": false
+    },
+    "qwen3-6-35b": {
+      "attachment": true,
+      "cost": {
+        "input": 5,
+        "output": 10
+      },
+      "description": "Qwen3.6 35B-A3B 是由 llmtr 提供的人工智能模型。",
+      "family": "qwen",
+      "id": "qwen3-6-35b",
+      "last_updated": "2026-04-17",
+      "limit": {
+        "context": 16384,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B-A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "sincap": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Sincap 是由 llmtr 提供的人工智能模型。",
+      "id": "sincap",
+      "last_updated": "2026-05-05",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Sincap",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-05-05",
+      "temperature": true,
+      "tool_call": false
+    },
+    "trendyol-7b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Trendyol 7B 是由 llmtr 提供的人工智能模型。",
+      "family": "qwen",
+      "id": "trendyol-7b",
+      "last_updated": "2026-06-06",
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Trendyol 7B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-06-06",
+      "temperature": true,
+      "tool_call": false
+    }
+  },
+  "name": "LLMTR",
+  "npm": "@ai-sdk/openai-compatible"
+}

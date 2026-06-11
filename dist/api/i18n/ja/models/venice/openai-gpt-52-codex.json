@@ -6,12 +6,13 @@
     "output": 17.5
   },
   "description": "GPT-5.2 Codex は venice によって提供される AI モデルです。",
-  "family": "gpt-codex",
+  "family": "gpt",
   "id": "openai-gpt-52-codex",
   "knowledge": "2025-08",
-  "last_updated": "2026-03-12",
+  "last_updated": "2026-06-11",
   "limit": {
     "context": 256000,
+    "input": 272000,
     "output": 65536
   },
   "modalities": {
@@ -26,8 +27,20 @@
   "name": "GPT-5.2 Codex",
   "open_weights": false,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2025-01-15",
   "structured_output": true,
-  "temperature": true,
+  "temperature": false,
   "tool_call": true
 }

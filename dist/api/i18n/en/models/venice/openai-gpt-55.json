@@ -24,9 +24,11 @@
   "description": "GPT-5.5 is an AI model provided by venice.",
   "family": "gpt",
   "id": "openai-gpt-55",
-  "last_updated": "2026-04-25",
+  "knowledge": "2025-12-01",
+  "last_updated": "2026-06-11",
   "limit": {
     "context": 1000000,
+    "input": 922000,
     "output": 131072
   },
   "modalities": {
@@ -41,8 +43,20 @@
   "name": "GPT-5.5",
   "open_weights": false,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-04-23",
   "structured_output": true,
-  "temperature": true,
+  "temperature": false,
   "tool_call": true
 }

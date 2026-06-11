@@ -8,9 +8,11 @@
   "description": "GPT-5.4 は venice によって提供される AI モデルです。",
   "family": "gpt",
   "id": "openai-gpt-54",
-  "last_updated": "2026-03-09",
+  "knowledge": "2025-08-31",
+  "last_updated": "2026-06-11",
   "limit": {
     "context": 1000000,
+    "input": 922000,
     "output": 131072
   },
   "modalities": {
@@ -25,8 +27,20 @@
   "name": "GPT-5.4",
   "open_weights": false,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-03-05",
   "structured_output": true,
-  "temperature": true,
+  "temperature": false,
   "tool_call": true
 }
