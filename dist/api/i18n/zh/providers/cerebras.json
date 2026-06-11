@@ -10,16 +10,16 @@
     "gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "input": 0.25,
-        "output": 0.69
+        "input": 0.35,
+        "output": 0.75
       },
       "description": "GPT OSS 120B 是由 cerebras 提供的人工智能模型。",
       "family": "gpt-oss",
       "id": "gpt-oss-120b",
-      "last_updated": "2025-08-05",
+      "last_updated": "2026-06-10",
       "limit": {
         "context": 131072,
-        "output": 32768
+        "output": 40960
       },
       "modalities": {
         "input": [
@@ -32,38 +32,18 @@
       "name": "GPT OSS 120B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-05",
-      "temperature": true,
-      "tool_call": true
-    },
-    "llama3.1-8b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.1,
-        "output": 0.1
-      },
-      "description": "Llama 3.1 8B 是由 cerebras 提供的人工智能模型。",
-      "family": "llama",
-      "id": "llama3.1-8b",
-      "knowledge": "2023-12",
-      "last_updated": "2026-05-27",
-      "limit": {
-        "context": 32000,
-        "output": 8000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.1 8B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-01-01",
-      "status": "deprecated",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -77,10 +57,10 @@
       },
       "description": "Z.AI GLM-4.7 是由 cerebras 提供的人工智能模型。",
       "id": "zai-glm-4.7",
-      "last_updated": "2026-01-10",
+      "last_updated": "2026-06-10",
       "limit": {
         "context": 131072,
-        "output": 40000
+        "output": 40960
       },
       "modalities": {
         "input": [
@@ -92,8 +72,18 @@
       },
       "name": "Z.AI GLM-4.7",
       "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-01-10",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none"
+          ]
+        }
+      ],
+      "release_date": "2026-01-07",
+      "status": "beta",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     }

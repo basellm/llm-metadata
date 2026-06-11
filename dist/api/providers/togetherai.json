@@ -7,6 +7,35 @@
   "id": "togetherai",
   "lobeIcon": "TogetherAI.Color",
   "models": {
+    "LiquidAI/LFM2-24B-A2B": {
+      "attachment": false,
+      "cost": {
+        "input": 0.03,
+        "output": 0.12
+      },
+      "description": "LFM2-24B-A2B is an AI model provided by togetherai.",
+      "family": "liquid",
+      "id": "LiquidAI/LFM2-24B-A2B",
+      "last_updated": "2026-02-25",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LFM2-24B-A2B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-02-25",
+      "temperature": true,
+      "tool_call": false
+    },
     "MiniMaxAI/MiniMax-M2.5": {
       "attachment": false,
       "cost": {
@@ -33,7 +62,9 @@
       "name": "MiniMax-M2.5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-02-12",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -63,7 +94,38 @@
       "name": "MiniMax-M2.7",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-03-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen2.5-7B-Instruct-Turbo": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 0.3
+      },
+      "description": "Qwen 2.5 7B Instruct Turbo is an AI model provided by togetherai.",
+      "family": "qwen",
+      "id": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+      "last_updated": "2024-09-19",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 2.5 7B Instruct Turbo",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-09-19",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -93,7 +155,7 @@
       },
       "name": "Qwen3 235B A22B Instruct 2507 FP8",
       "open_weights": true,
-      "reasoning": true,
+      "reasoning": false,
       "release_date": "2025-07-25",
       "temperature": true,
       "tool_call": true
@@ -125,6 +187,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-07-23",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -153,8 +216,9 @@
       },
       "name": "Qwen3 Coder Next FP8",
       "open_weights": true,
-      "reasoning": true,
+      "reasoning": false,
       "release_date": "2026-02-03",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -184,7 +248,48 @@
       "name": "Qwen3.5 397B A17B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-02-16",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.5-9B": {
+      "attachment": true,
+      "cost": {
+        "input": 0.17,
+        "output": 0.25
+      },
+      "description": "Qwen3.5 9B is an AI model provided by togetherai.",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.5-9B",
+      "last_updated": "2026-03-03",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 9B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-03-03",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -213,6 +318,11 @@
       "name": "Qwen3.6 Plus",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-30",
       "temperature": true,
       "tool_call": true
@@ -241,10 +351,44 @@
       },
       "name": "Qwen3.7 Max",
       "open_weights": false,
-      "reasoning": true,
+      "reasoning": false,
       "release_date": "2026-05-21",
       "temperature": true,
       "tool_call": true
+    },
+    "deepcogito/cogito-v2-1-671b": {
+      "attachment": false,
+      "cost": {
+        "input": 1.25,
+        "output": 1.25
+      },
+      "description": "Cogito v2.1 671B is an AI model provided by togetherai.",
+      "family": "cogito",
+      "id": "deepcogito/cogito-v2-1-671b",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Cogito v2.1 671B",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-11-13",
+      "temperature": true,
+      "tool_call": false
     },
     "deepseek-ai/DeepSeek-R1": {
       "attachment": false,
@@ -272,7 +416,9 @@
       "name": "DeepSeek-R1",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-01-20",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": false
     },
@@ -301,8 +447,9 @@
       },
       "name": "DeepSeek-V3",
       "open_weights": true,
-      "reasoning": true,
+      "reasoning": false,
       "release_date": "2024-12-26",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -332,7 +479,13 @@
       "name": "DeepSeek V3.1",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-08-21",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -340,8 +493,8 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.2,
-        "input": 2.1,
-        "output": 4.4
+        "input": 1.74,
+        "output": 3.48
       },
       "description": "DeepSeek V4 Pro is an AI model provided by togetherai.",
       "family": "deepseek",
@@ -365,6 +518,18 @@
       "name": "DeepSeek V4 Pro",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-24",
       "structured_output": true,
       "temperature": true,
@@ -400,11 +565,41 @@
       "temperature": true,
       "tool_call": true
     },
+    "google/gemma-3n-E4B-it": {
+      "attachment": false,
+      "cost": {
+        "input": 0.06,
+        "output": 0.12
+      },
+      "description": "Gemma 3N E4B Instruct is an AI model provided by togetherai.",
+      "family": "gemma",
+      "id": "google/gemma-3n-E4B-it",
+      "last_updated": "2025-05-20",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3N E4B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-05-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
     "google/gemma-4-31B-it": {
       "attachment": true,
       "cost": {
-        "input": 0.2,
-        "output": 0.5
+        "input": 0.39,
+        "output": 0.97
       },
       "description": "Gemma 4 31B Instruct is an AI model provided by togetherai.",
       "family": "gemma",
@@ -427,7 +622,9 @@
       "name": "Gemma 4 31B Instruct",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-04-07",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -461,6 +658,35 @@
       "temperature": true,
       "tool_call": true
     },
+    "meta-llama/Meta-Llama-3-8B-Instruct-Lite": {
+      "attachment": false,
+      "cost": {
+        "input": 0.14,
+        "output": 0.14
+      },
+      "description": "Meta Llama 3 8B Instruct Lite is an AI model provided by togetherai.",
+      "family": "llama",
+      "id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+      "last_updated": "2024-04-18",
+      "limit": {
+        "context": 8192,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Meta Llama 3 8B Instruct Lite",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-04-18",
+      "temperature": true,
+      "tool_call": false
+    },
     "moonshotai/Kimi-K2.5": {
       "attachment": false,
       "cost": {
@@ -489,7 +715,13 @@
       "name": "Kimi K2.5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-01-27",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -522,6 +754,11 @@
       "name": "Kimi K2.6",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-21",
       "structured_output": true,
       "temperature": true,
@@ -553,6 +790,11 @@
       "name": "Nemotron 3 Ultra 550B A55B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-06-04",
       "structured_output": true,
       "temperature": true,
@@ -584,7 +826,125 @@
       "name": "GPT OSS 120B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-20b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0.2
+      },
+      "description": "GPT OSS 20B is an AI model provided by togetherai.",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-20b",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 20B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "pearl-ai/gemma-4-31b-it": {
+      "attachment": false,
+      "cost": {
+        "input": 0.28,
+        "output": 0.86
+      },
+      "description": "Pearl AI Gemma 4 31B Instruct is an AI model provided by togetherai.",
+      "family": "gemma",
+      "id": "pearl-ai/gemma-4-31b-it",
+      "last_updated": "2026-04-07",
+      "limit": {
+        "context": 32000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Pearl AI Gemma 4 31B Instruct",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-07",
+      "temperature": true,
+      "tool_call": false
+    },
+    "zai-org/GLM-5": {
+      "attachment": false,
+      "cost": {
+        "input": 1,
+        "output": 3.2
+      },
+      "description": "GLM-5 is an AI model provided by togetherai.",
+      "family": "glm",
+      "id": "zai-org/GLM-5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-11",
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-11",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -614,6 +974,11 @@
       "name": "GLM-5.1",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-07",
       "structured_output": true,
       "temperature": true,

@@ -1681,7 +1681,7 @@
     "deepseek/deepseek-r1-distill-llama-70b": {
       "attachment": false,
       "cost": {
-        "input": 0.7,
+        "input": 0.8,
         "output": 0.8
       },
       "description": "R1 Distill Llama 70B は openrouter によって提供される AI モデルです。",
@@ -1690,8 +1690,8 @@
       "knowledge": "2024-07-31",
       "last_updated": "2025-01-23",
       "limit": {
-        "context": 131072,
-        "output": 16384
+        "context": 8192,
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -2761,15 +2761,15 @@
       "cost": {
         "cache_read": 0.09,
         "input": 0.12,
-        "output": 0.36
+        "output": 0.35
       },
       "description": "Gemma 4 31B IT は openrouter によって提供される AI モデルです。",
       "family": "gemma",
       "id": "google/gemma-4-31b-it",
       "last_updated": "2026-04-02",
       "limit": {
-        "context": 256000,
-        "output": 8192
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -5441,36 +5441,6 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2025-10-28",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "nvidia/nemotron-nano-9b-v2": {
-      "attachment": false,
-      "cost": {
-        "input": 0.04,
-        "output": 0.16
-      },
-      "description": "Nemotron Nano 9B v2 は openrouter によって提供される AI モデルです。",
-      "family": "nemotron",
-      "id": "nvidia/nemotron-nano-9b-v2",
-      "last_updated": "2025-08-18",
-      "limit": {
-        "context": 131072,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Nemotron Nano 9B v2",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-08-18",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -9385,7 +9355,8 @@
     "qwen/qwen3.6-35b-a3b": {
       "attachment": true,
       "cost": {
-        "input": 0.14,
+        "cache_read": 0.05,
+        "input": 0.15,
         "output": 1
       },
       "description": "Qwen3.6 35B-A3B は openrouter によって提供される AI モデルです。",
@@ -9393,8 +9364,8 @@
       "id": "qwen/qwen3.6-35b-a3b",
       "last_updated": "2026-04-17",
       "limit": {
-        "context": 262140,
-        "output": 262140
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -9548,10 +9519,10 @@
     "qwen/qwen3.7-plus": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.08,
-        "cache_write": 0.5,
-        "input": 0.4,
-        "output": 1.6
+        "cache_read": 0.064,
+        "cache_write": 0.4,
+        "input": 0.32,
+        "output": 1.28
       },
       "description": "Qwen3.7 Plus は openrouter によって提供される AI モデルです。",
       "family": "qwen",

@@ -8,6 +8,34 @@
   "iconURL": "https://models.dev/logos/snowflake-cortex.svg",
   "id": "snowflake-cortex",
   "models": {
+    "claude-fable-5": {
+      "attachment": true,
+      "description": "Claude Fable 5 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "claude-fable",
+      "id": "claude-fable-5",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-06-09",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Fable 5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-06-09",
+      "temperature": false,
+      "tool_call": true
+    },
     "claude-haiku-4-5": {
       "attachment": true,
       "description": "Claude Haiku 4.5 (latest) 是由 snowflake-cortex 提供的人工智能模型。",
@@ -85,6 +113,33 @@
       "temperature": false,
       "tool_call": true
     },
+    "claude-opus-4-8": {
+      "attachment": true,
+      "description": "Claude Opus 4.8 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "claude-opus",
+      "id": "claude-opus-4-8",
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.8",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-05-28",
+      "temperature": false,
+      "tool_call": true
+    },
     "claude-sonnet-4-5": {
       "attachment": true,
       "description": "Claude Sonnet 4.5 (latest) 是由 snowflake-cortex 提供的人工智能模型。",
@@ -138,6 +193,90 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-02-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-r1": {
+      "attachment": false,
+      "description": "DeepSeek-R1 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "deepseek-thinking",
+      "id": "deepseek-r1",
+      "knowledge": "2024-07",
+      "last_updated": "2025-05-29",
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek-R1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-01-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3.1-pro": {
+      "attachment": true,
+      "description": "Gemini 3.1 Pro Preview 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "gemini-pro",
+      "id": "gemini-3.1-pro",
+      "knowledge": "2025-01",
+      "last_updated": "2026-02-19",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.1 Pro Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-02-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistral-large2": {
+      "attachment": true,
+      "description": "Mistral Large (latest) 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "mistral-large",
+      "id": "mistral-large2",
+      "knowledge": "2024-11",
+      "last_updated": "2025-12-02",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Large (latest)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-11-01",
       "temperature": true,
       "tool_call": true
     },
@@ -363,6 +502,63 @@
       "status": "beta",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "openai-gpt-5.5": {
+      "attachment": true,
+      "description": "GPT-5.5 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "gpt",
+      "id": "openai-gpt-5.5",
+      "knowledge": "2025-12-01",
+      "last_updated": "2026-04-23",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.5",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-04-23",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "snowflake-llama3.3-70b": {
+      "attachment": true,
+      "description": "Llama-3.3-70B-Instruct 是由 snowflake-cortex 提供的人工智能模型。",
+      "family": "llama",
+      "id": "snowflake-llama3.3-70b",
+      "knowledge": "2023-12",
+      "last_updated": "2024-12-06",
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama-3.3-70B-Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-12-06",
+      "temperature": true,
       "tool_call": true
     }
   },

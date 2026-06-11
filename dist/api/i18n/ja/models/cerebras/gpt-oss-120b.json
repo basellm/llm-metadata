@@ -1,16 +1,16 @@
 {
   "attachment": false,
   "cost": {
-    "input": 0.25,
-    "output": 0.69
+    "input": 0.35,
+    "output": 0.75
   },
   "description": "GPT OSS 120B は cerebras によって提供される AI モデルです。",
   "family": "gpt-oss",
   "id": "gpt-oss-120b",
-  "last_updated": "2025-08-05",
+  "last_updated": "2026-06-10",
   "limit": {
     "context": 131072,
-    "output": 32768
+    "output": 40960
   },
   "modalities": {
     "input": [
@@ -23,7 +23,18 @@
   "name": "GPT OSS 120B",
   "open_weights": true,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2025-08-05",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }
