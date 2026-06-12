@@ -27,6 +27,25 @@
   "name": "Anthropic Claude Sonnet Latest",
   "open_weights": false,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "max": 127999,
+      "min": 1024,
+      "type": "budget_tokens"
+    }
+  ],
   "release_date": "2026-04-27",
   "structured_output": true,
   "temperature": true,

@@ -1,0 +1,53 @@
+{
+  "api": "https://api.zeldoc.ai/v1",
+  "doc": "https://docs.zeldoc.ai",
+  "env": [
+    "ZELDOC_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/zeldoc.svg",
+  "id": "zeldoc",
+  "models": {
+    "z-code": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Z-Code は zeldoc によって提供される AI モデルです。",
+      "id": "z-code",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-15",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Z-Code",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Zeldoc",
+  "npm": "@ai-sdk/openai-compatible"
+}

@@ -35,6 +35,7 @@
       "name": "MiniMax-M2.5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-01-20",
       "structured_output": true,
       "temperature": true,
@@ -68,7 +69,9 @@
       "name": "MiniMax-M2.5-fast",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-01-20",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -105,6 +108,7 @@
       "name": "Hermes-4-405B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-01-30",
       "structured_output": true,
       "temperature": true,
@@ -142,6 +146,7 @@
       "name": "Hermes-4-70B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-01-30",
       "structured_output": true,
       "temperature": true,
@@ -176,6 +181,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-01-25",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -239,7 +245,7 @@
       },
       "name": "Qwen3 235B A22B Instruct 2507",
       "open_weights": false,
-      "reasoning": true,
+      "reasoning": false,
       "release_date": "2025-07-25",
       "temperature": true,
       "tool_call": true
@@ -272,7 +278,9 @@
       "name": "Qwen3-235B-A22B-Thinking-2507-fast",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-07-25",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -407,6 +415,7 @@
       "name": "Qwen3-Next-80B-A3B-Thinking",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-01-28",
       "structured_output": true,
       "temperature": true,
@@ -440,7 +449,9 @@
       "name": "Qwen3-Next-80B-A3B-Thinking-fast",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-07-25",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -473,6 +484,11 @@
       "name": "Qwen3.5-397B-A17B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-07-15",
       "structured_output": true,
       "temperature": true,
@@ -506,7 +522,13 @@
       "name": "Qwen3.5-397B-A17B-fast",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-07-15",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -543,7 +565,13 @@
       "name": "DeepSeek-V3.2",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-01-20",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -576,7 +604,13 @@
       "name": "DeepSeek-V3.2-fast",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-01-27",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -611,43 +645,23 @@
       "name": "DeepSeek V4 Pro",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-24",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
-    },
-    "google/gemma-2-2b-it": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.002,
-        "cache_write": 0.025,
-        "input": 0.02,
-        "output": 0.06
-      },
-      "description": "Gemma-2-2b-it is an AI model provided by nebius.",
-      "id": "google/gemma-2-2b-it",
-      "knowledge": "2024-06",
-      "last_updated": "2026-02-04",
-      "limit": {
-        "context": 8192,
-        "input": 8000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemma-2-2b-it",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-07-31",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
     },
     "google/gemma-3-27b-it": {
       "attachment": true,
@@ -716,39 +730,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "meta-llama/Meta-Llama-3.1-8B-Instruct": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.002,
-        "cache_write": 0.025,
-        "input": 0.02,
-        "output": 0.06
-      },
-      "description": "Meta-Llama-3.1-8B-Instruct is an AI model provided by nebius.",
-      "id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
-      "knowledge": "2024-12",
-      "last_updated": "2026-02-04",
-      "limit": {
-        "context": 128000,
-        "input": 120000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Meta-Llama-3.1-8B-Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-07-23",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "moonshotai/Kimi-K2.5": {
       "attachment": true,
       "cost": {
@@ -783,7 +764,13 @@
       "name": "Kimi-K2.5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-12-15",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -821,7 +808,13 @@
       "name": "Kimi-K2.5-fast",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-12-15",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -923,6 +916,7 @@
       "name": "Nemotron-3-Nano-Omni",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-01-20",
       "structured_output": true,
       "temperature": true,
@@ -955,6 +949,7 @@
       "name": "Nemotron-3-Super-120B-A12B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-03-11",
       "structured_output": true,
       "temperature": true,
@@ -992,6 +987,16 @@
       "name": "gpt-oss-120b",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-01-10",
       "structured_output": true,
       "temperature": true,
@@ -1025,7 +1030,18 @@
       "name": "gpt-oss-120b-fast",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-06-10",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1061,7 +1077,13 @@
       "name": "GLM-5",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-03-01",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
