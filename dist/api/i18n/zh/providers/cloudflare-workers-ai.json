@@ -398,7 +398,7 @@
         "output": 4
       },
       "description": "Kimi K2.6 是由 cloudflare-workers-ai 提供的人工智能模型。",
-      "family": "kimi-k2.6",
+      "family": "kimi-k2",
       "id": "@cf/moonshotai/kimi-k2.6",
       "interleaved": {
         "field": "reasoning_content"
@@ -435,6 +435,39 @@
         }
       ],
       "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "@cf/moonshotai/kimi-k2.7-code": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.19,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Kimi K2.7 Code 是由 cloudflare-workers-ai 提供的人工智能模型。",
+      "family": "kimi-k2",
+      "id": "@cf/moonshotai/kimi-k2.7-code",
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-06-12",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
