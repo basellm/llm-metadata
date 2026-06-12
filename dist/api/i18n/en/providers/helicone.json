@@ -233,6 +233,16 @@
       "name": "Anthropic: Claude Opus 4.5",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 63999,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-11-24",
       "temperature": true,
       "tool_call": true
@@ -266,6 +276,16 @@
       "name": "Anthropic: Claude Sonnet 4.5",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 63999,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-09-29",
       "temperature": true,
       "tool_call": true
@@ -332,6 +352,16 @@
       "name": "Anthropic: Claude Opus 4",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 31999,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-05-14",
       "temperature": true,
       "tool_call": true
@@ -365,6 +395,16 @@
       "name": "Anthropic: Claude Opus 4.1",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 31999,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-08-05",
       "temperature": true,
       "tool_call": true
@@ -398,6 +438,16 @@
       "name": "Anthropic: Claude Opus 4.1 (20250805)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 31999,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-08-05",
       "temperature": true,
       "tool_call": true
@@ -431,6 +481,16 @@
       "name": "Anthropic: Claude Sonnet 4",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 63999,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-05-14",
       "temperature": true,
       "tool_call": true
@@ -464,6 +524,16 @@
       "name": "Anthropic: Claude Sonnet 4.5 (20250929)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 63999,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-09-29",
       "temperature": true,
       "tool_call": true
@@ -494,6 +564,7 @@
       "name": "DeepSeek R1 Distill Llama 70B",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-01-20",
       "temperature": true,
       "tool_call": true
@@ -617,6 +688,7 @@
       "name": "DeepSeek V3.1 Terminus",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-09-22",
       "temperature": true,
       "tool_call": true
@@ -677,6 +749,7 @@
       "name": "Baidu Ernie 4.5 21B A3B Thinking",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-03-16",
       "temperature": true,
       "tool_call": false
@@ -710,6 +783,16 @@
       "name": "Google Gemini 2.5 Flash",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 24576,
+          "min": 0,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-06-17",
       "temperature": true,
       "tool_call": true
@@ -743,6 +826,16 @@
       "name": "Google Gemini 2.5 Flash Lite",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 24576,
+          "min": 512,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-07-22",
       "temperature": true,
       "tool_call": true
@@ -776,6 +869,13 @@
       "name": "Google Gemini 2.5 Pro",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-06-17",
       "temperature": true,
       "tool_call": true
@@ -810,6 +910,15 @@
       "name": "Google Gemini 3 Pro Preview",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-11-18",
       "temperature": true,
       "tool_call": true
@@ -901,6 +1010,7 @@
       "name": "Zai GLM-4.6",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2024-07-18",
       "temperature": true,
       "tool_call": true
@@ -1444,6 +1554,16 @@
       "name": "OpenAI GPT-OSS 120b",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2024-06-01",
       "temperature": true,
       "tool_call": true
@@ -1474,6 +1594,16 @@
       "name": "OpenAI GPT-OSS 20b",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2024-06-01",
       "temperature": true,
       "tool_call": true
@@ -1632,6 +1762,7 @@
       "name": "xAI Grok 4.1 Fast Reasoning",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-11-17",
       "temperature": true,
       "tool_call": true
@@ -1697,6 +1828,7 @@
       "name": "xAI: Grok 4 Fast Reasoning",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-09-01",
       "temperature": true,
       "tool_call": true
@@ -2494,6 +2626,7 @@
       "name": "Qwen3 235B A22B Thinking",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-07-25",
       "temperature": true,
       "tool_call": false
@@ -2555,6 +2688,7 @@
       "name": "Qwen3 32B",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-04-28",
       "temperature": true,
       "tool_call": true
@@ -2742,6 +2876,17 @@
       "name": "Perplexity Sonar Deep Research",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-01-27",
       "temperature": true,
       "tool_call": false
@@ -2802,6 +2947,7 @@
       "name": "Perplexity Sonar Reasoning",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-01-27",
       "temperature": true,
       "tool_call": false
@@ -2832,6 +2978,17 @@
       "name": "Perplexity Sonar Reasoning Pro",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-01-27",
       "temperature": true,
       "tool_call": false
