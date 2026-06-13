@@ -4491,7 +4491,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-06-01",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -5291,9 +5291,9 @@
     "moonshotai/kimi-k2.7-code": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.19,
-        "input": 0.95,
-        "output": 4
+        "cache_read": 0.16,
+        "input": 0.75,
+        "output": 3.5
       },
       "description": "Kimi K2.7 Code 是由 openrouter 提供的人工智能模型。",
       "family": "kimi-k2",
@@ -5307,8 +5307,7 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "video"
+          "image"
         ],
         "output": [
           "text"
@@ -8391,7 +8390,7 @@
       "attachment": false,
       "description": "Fusion 是由 openrouter 提供的人工智能模型。",
       "id": "openrouter/fusion",
-      "last_updated": "2026-05-12",
+      "last_updated": "2026-06-13",
       "limit": {
         "context": 128000,
         "output": 128000
@@ -8407,7 +8406,7 @@
       "name": "Fusion",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-05-12",
+      "release_date": "2026-06-13",
       "structured_output": false,
       "temperature": false,
       "tool_call": false
@@ -11364,7 +11363,11 @@
       "name": "MiMo-V2.5",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-22",
       "structured_output": false,
       "temperature": true,
@@ -11400,7 +11403,11 @@
       "name": "MiMo-V2.5-Pro",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-22",
       "structured_output": true,
       "temperature": true,
