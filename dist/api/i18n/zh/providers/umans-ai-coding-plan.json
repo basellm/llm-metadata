@@ -39,6 +39,11 @@
       "name": "Umans Coder",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-21",
       "structured_output": true,
       "temperature": false,
@@ -55,6 +60,9 @@
       "description": "Umans Flash 是由 umans-ai-coding-plan 提供的人工智能模型。",
       "family": "qwen",
       "id": "umans-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-04-17",
       "limit": {
         "context": 262144,
@@ -72,6 +80,11 @@
       "name": "Umans Flash",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-17",
       "structured_output": true,
       "temperature": false,
@@ -98,7 +111,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -107,6 +121,11 @@
       "name": "GLM 5.1",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-03-27",
       "structured_output": true,
       "temperature": true,
@@ -135,7 +154,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -144,7 +164,55 @@
       "name": "Kimi K2.6",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "umans-kimi-k2.7": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Kimi K2.7 Code 是由 umans-ai-coding-plan 提供的人工智能模型。",
+      "family": "kimi-k2",
+      "id": "umans-kimi-k2.7",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-12",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -160,6 +228,9 @@
       "description": "Qwen3.6 35B A3B 是由 umans-ai-coding-plan 提供的人工智能模型。",
       "family": "qwen",
       "id": "umans-qwen3.6-35b-a3b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-04-17",
       "limit": {
         "context": 262144,
@@ -177,6 +248,11 @@
       "name": "Qwen3.6 35B A3B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-17",
       "structured_output": true,
       "temperature": false,
