@@ -59,6 +59,7 @@
       "name": "AionLabs: Aion-1.0",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-02-05",
       "temperature": true,
       "tool_call": false
@@ -87,6 +88,7 @@
       "name": "AionLabs: Aion-1.0-Mini",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-02-05",
       "temperature": true,
       "tool_call": false
@@ -115,6 +117,7 @@
       "name": "AionLabs: Aion-2.0",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-02-24",
       "temperature": true,
       "tool_call": false
@@ -199,6 +202,7 @@
       "name": "AllenAI: Olmo 3 32B Think",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-11-22",
       "temperature": true,
       "tool_call": false
@@ -230,6 +234,7 @@
       "name": "Amazon: Nova 2 Lite",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2024-12-01",
       "temperature": true,
       "tool_call": true
@@ -897,6 +902,7 @@
       "name": "Arcee AI: Trinity Large Thinking",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-04-01",
       "temperature": true,
       "tool_call": true
@@ -925,6 +931,7 @@
       "name": "Arcee AI: Trinity Mini",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-12",
       "temperature": true,
       "tool_call": true
@@ -1441,6 +1448,7 @@
       "name": "Deep Cogito: Cogito v2.1 671B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-11-14",
       "temperature": true,
       "tool_call": false
@@ -2617,6 +2625,11 @@
       "name": "Google: Gemma 4 31B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-02",
       "temperature": true,
       "tool_call": true
@@ -2791,6 +2804,19 @@
       "name": "Inception: Mercury 2",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-02-24",
       "temperature": true,
       "tool_call": true
@@ -2878,6 +2904,7 @@
       "name": "inclusionAI: Ring-2.6-1T",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-05-08",
       "temperature": true,
       "tool_call": true
@@ -4160,6 +4187,11 @@
       "name": "Mistral: Mistral Medium 3.5",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-30",
       "structured_output": true,
       "temperature": true,
@@ -4304,6 +4336,7 @@
       "name": "Mistral: Mistral Small 4",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-03-16",
       "temperature": true,
       "tool_call": true
@@ -4536,6 +4569,11 @@
       "name": "MoonshotAI: Kimi K2 Thinking",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-11-06",
       "temperature": true,
       "tool_call": true
@@ -4565,6 +4603,11 @@
       "name": "MoonshotAI: Kimi K2.5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-01-27",
       "temperature": true,
       "tool_call": true
@@ -4595,6 +4638,11 @@
       "name": "MoonshotAI: Kimi K2.6",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-20",
       "structured_output": true,
       "temperature": true,
@@ -4792,6 +4840,11 @@
       "name": "Nous: Hermes 4 405B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-08-25",
       "temperature": true,
       "tool_call": false
@@ -4821,6 +4874,11 @@
       "name": "Nous: Hermes 4 70B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-08-25",
       "temperature": true,
       "tool_call": false
@@ -6825,6 +6883,20 @@
       "name": "OpenAI: o4 Mini",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2025-04-16",
       "temperature": false,
       "tool_call": true
@@ -6856,6 +6928,20 @@
       "name": "OpenAI: o4 Mini Deep Research",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2024-06-26",
       "temperature": true,
       "tool_call": true
@@ -6886,6 +6972,20 @@
       "name": "OpenAI: o4 Mini High",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2025-04-17",
       "tool_call": true
     },
@@ -6918,6 +7018,7 @@
       "name": "Auto Router",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-03-15",
       "temperature": true,
       "tool_call": true
@@ -6975,6 +7076,7 @@
       "name": "Free Models Router",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-02-01",
       "temperature": true,
       "tool_call": true
@@ -7003,6 +7105,7 @@
       "name": "Owl Alpha",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-04-28",
       "status": "alpha",
       "structured_output": true,
@@ -7063,6 +7166,7 @@
       "name": "Perceptron: Perceptron Mk1",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-05-12",
       "temperature": true,
       "tool_call": false
@@ -7120,6 +7224,7 @@
       "name": "Perplexity: Sonar Deep Research",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-01-27",
       "temperature": true,
       "tool_call": false
@@ -7178,6 +7283,7 @@
       "name": "Perplexity: Sonar Pro Search",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-10-31",
       "temperature": true,
       "tool_call": false
@@ -7207,6 +7313,7 @@
       "name": "Perplexity: Sonar Reasoning Pro",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2024-01-01",
       "temperature": true,
       "tool_call": false
@@ -7235,6 +7342,7 @@
       "name": "Poolside: Laguna M.1 (free)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-04-28",
       "temperature": true,
       "tool_call": true
@@ -7263,6 +7371,7 @@
       "name": "Poolside: Laguna XS.2 (free)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-04-28",
       "temperature": true,
       "tool_call": true
@@ -7291,6 +7400,7 @@
       "name": "Prime Intellect: INTELLECT-3",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-11-26",
       "temperature": true,
       "tool_call": true
@@ -8690,6 +8800,7 @@
       "name": "Reka Flash 3",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-03-12",
       "temperature": true,
       "tool_call": false
@@ -8917,6 +9028,21 @@
       "name": "Stealth: Claude Opus 4.6 (20% off)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-02-05",
       "temperature": true,
       "tool_call": true
@@ -8949,6 +9075,21 @@
       "name": "Stealth: Claude Opus 4.7 (20% off)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-16",
       "temperature": false,
       "tool_call": true
@@ -8981,6 +9122,20 @@
       "name": "Stealth: Claude Sonnet 4.6 (20% off)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-02-17",
       "temperature": true,
       "tool_call": true
@@ -9048,6 +9203,7 @@
       "name": "Switchpoint Router",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-07-12",
       "temperature": true,
       "tool_call": false
@@ -9076,6 +9232,7 @@
       "name": "Tencent: Hunyuan A13B Instruct",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-06-30",
       "temperature": true,
       "tool_call": false
@@ -9105,6 +9262,16 @@
       "name": "Tencent: Hy3 Preview",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-22",
       "temperature": true,
       "tool_call": true
@@ -9273,6 +9440,7 @@
       "name": "Upstage: Solar Pro 3",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-01-27",
       "temperature": true,
       "tool_call": true
@@ -10026,6 +10194,20 @@
       "name": "Anthropic: Claude Haiku Latest",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-27",
       "temperature": true,
       "tool_call": true
@@ -10058,6 +10240,21 @@
       "name": "Anthropic: Claude Opus Latest",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-16",
       "temperature": false,
       "tool_call": true
@@ -10090,6 +10287,20 @@
       "name": "Anthropic: Claude Sonnet Latest",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-27",
       "temperature": true,
       "tool_call": true
@@ -10124,6 +10335,17 @@
       "name": "Google: Gemini Flash Latest",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-27",
       "temperature": true,
       "tool_call": true
@@ -10158,6 +10380,16 @@
       "name": "Google: Gemini Pro Latest",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-27",
       "temperature": true,
       "tool_call": true
@@ -10188,6 +10420,11 @@
       "name": "MoonshotAI: Kimi Latest",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-27",
       "temperature": true,
       "tool_call": true
@@ -10219,6 +10456,20 @@
       "name": "OpenAI: GPT Latest",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-04-27",
       "temperature": false,
       "tool_call": true
@@ -10250,6 +10501,20 @@
       "name": "OpenAI: GPT Mini Latest",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-04-27",
       "temperature": false,
       "tool_call": true

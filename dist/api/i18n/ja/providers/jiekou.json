@@ -63,6 +63,7 @@
       "name": "ERNIE 4.5 VL 424B A47B",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-01",
       "structured_output": false,
       "temperature": true,
@@ -219,6 +220,22 @@
       "name": "claude-opus-4-6",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 127999,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02",
       "structured_output": true,
       "temperature": true,
@@ -311,6 +328,7 @@
       "name": "DeepSeek R1 0528",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-01",
       "structured_output": true,
       "temperature": true,
@@ -371,6 +389,13 @@
       "name": "DeepSeek V3.1",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "max": 32767,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-01",
       "structured_output": true,
       "temperature": true,
@@ -1256,6 +1281,13 @@
       "name": "Minimax M2.1",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "max": 131071,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-01",
       "structured_output": true,
       "temperature": true,
@@ -1286,6 +1318,7 @@
       "name": "MiniMax M1",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-01",
       "structured_output": false,
       "temperature": true,
@@ -1378,6 +1411,13 @@
       "name": "Kimi K2.5",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "max": 262143,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-01",
       "structured_output": true,
       "temperature": true,
@@ -1770,6 +1810,7 @@
       "name": "XiaomiMiMo/MiMo-V2-Flash",
       "open_weights": true,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-01",
       "structured_output": true,
       "temperature": true,

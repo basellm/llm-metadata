@@ -3101,6 +3101,16 @@
       "name": "Grok 4.1 Fast Reasoning",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-11-19",
       "structured_output": true,
       "temperature": true,
@@ -3199,6 +3209,16 @@
       "name": "Grok 4.20 (Reasoning)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-03-09",
       "structured_output": true,
       "temperature": true,
@@ -3297,6 +3317,16 @@
       "name": "Grok 4.20 (Reasoning)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-03-09",
       "structured_output": true,
       "temperature": true,
@@ -3346,6 +3376,16 @@
       "name": "Grok 4.3",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-17",
       "structured_output": true,
       "temperature": true,
@@ -3378,7 +3418,76 @@
       "name": "Grok 4 Fast Reasoning",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-07-09",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "grok-build-0-1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2,
+          "output": 4
+        },
+        "input": 1,
+        "output": 2,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 4,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Grok Build 0.1 是由 llmgateway 提供的人工智能模型。",
+      "family": "grok-build",
+      "id": "grok-build-0-1",
+      "last_updated": "2026-04-16",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok Build 0.1",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-16",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3584,6 +3693,53 @@
       "release_date": "2026-04-21",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.7-code": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.19,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Kimi K2.7 Code 是由 llmgateway 提供的人工智能模型。",
+      "family": "kimi-k2",
+      "id": "kimi-k2.7-code",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "llama-3-70b-instruct": {
@@ -4404,7 +4560,7 @@
         ]
       },
       "name": "MiniMax-M3",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "release_date": "2026-06-01",
       "temperature": true,
@@ -4623,6 +4779,41 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-06-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nemotron-3-ultra-550b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 0.5,
+        "output": 2.5
+      },
+      "description": "Nemotron 3 Ultra 550B A55B 是由 llmgateway 提供的人工智能模型。",
+      "family": "nemotron",
+      "id": "nemotron-3-ultra-550b",
+      "last_updated": "2026-06-04",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-04",
       "temperature": true,
       "tool_call": true
     },
@@ -6416,6 +6607,16 @@
       "name": "Sonar Reasoning Pro",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2024-01-01",
       "temperature": true,
       "tool_call": false

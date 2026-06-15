@@ -1,0 +1,59 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.2,
+    "context_over_200k": {
+      "cache_read": 0.4,
+      "input": 2,
+      "output": 4
+    },
+    "input": 1,
+    "output": 2,
+    "tiers": [
+      {
+        "cache_read": 0.4,
+        "input": 2,
+        "output": 4,
+        "tier": {
+          "size": 200000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Grok Build 0.1 is an AI model provided by llmgateway.",
+  "family": "grok-build",
+  "id": "grok-build-0-1",
+  "last_updated": "2026-04-16",
+  "limit": {
+    "context": 256000,
+    "output": 256000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "pdf"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Grok Build 0.1",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "release_date": "2026-04-16",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}
