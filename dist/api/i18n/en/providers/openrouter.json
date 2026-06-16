@@ -451,53 +451,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-fable-5": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 1,
-        "cache_write": 12.5,
-        "input": 10,
-        "output": 50
-      },
-      "description": "Claude Fable 5 is an AI model provided by openrouter.",
-      "family": "claude-fable",
-      "id": "anthropic/claude-fable-5",
-      "knowledge": "2026-01-31",
-      "last_updated": "2026-06-09",
-      "limit": {
-        "context": 1000000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Fable 5",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-06-09",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
     "anthropic/claude-haiku-4.5": {
       "attachment": true,
       "cost": {
@@ -1937,38 +1890,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "deepseek/deepseek-r1-distill-qwen-32b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.29,
-        "output": 0.29
-      },
-      "description": "R1 Distill Qwen 32B is an AI model provided by openrouter.",
-      "family": "deepseek",
-      "id": "deepseek/deepseek-r1-distill-qwen-32b",
-      "knowledge": "2024-07-31",
-      "last_updated": "2025-01-29",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "R1 Distill Qwen 32B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2025-01-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
     "deepseek/deepseek-v3.1-terminus": {
       "attachment": false,
       "cost": {
@@ -2082,8 +2003,8 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.02,
-        "input": 0.09,
-        "output": 0.18
+        "input": 0.098,
+        "output": 0.196
       },
       "description": "DeepSeek V4 Flash is an AI model provided by openrouter.",
       "family": "deepseek-flash",
@@ -2094,7 +2015,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1000000,
+        "context": 1048575,
         "output": 65536
       },
       "modalities": {
@@ -7861,7 +7782,7 @@
         }
       ],
       "release_date": "2025-08-05",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -8392,7 +8313,7 @@
       "id": "openrouter/fusion",
       "last_updated": "2026-06-13",
       "limit": {
-        "context": 128000,
+        "context": 1000000,
         "output": 128000
       },
       "modalities": {
@@ -9964,7 +9885,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 81920
       },
       "modalities": {
         "input": [
@@ -9992,15 +9913,15 @@
     "qwen/qwen3.5-397b-a17b": {
       "attachment": true,
       "cost": {
-        "input": 0.39,
-        "output": 2.34
+        "input": 0.385,
+        "output": 2.45
       },
       "description": "Qwen3.5 397B-A17B is an AI model provided by openrouter.",
       "family": "qwen",
       "id": "qwen/qwen3.5-397b-a17b",
       "last_updated": "2026-02-15",
       "limit": {
-        "context": 262144,
+        "context": 131072,
         "output": 65536
       },
       "modalities": {
@@ -10868,9 +10789,9 @@
     "tencent/hy3-preview": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.021,
-        "input": 0.063,
-        "output": 0.21
+        "cache_read": 0.029,
+        "input": 0.066,
+        "output": 0.26
       },
       "description": "Hy3 preview is an AI model provided by openrouter.",
       "family": "Hy",
@@ -11159,8 +11080,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.2,
-        "input": 2,
-        "output": 6
+        "input": 1.25,
+        "output": 2.5
       },
       "description": "Grok 4.20 Multi-Agent is an AI model provided by openrouter.",
       "family": "grok",
@@ -11369,7 +11290,7 @@
         }
       ],
       "release_date": "2026-04-22",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -11483,7 +11404,7 @@
         }
       ],
       "release_date": "2025-07-28",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
