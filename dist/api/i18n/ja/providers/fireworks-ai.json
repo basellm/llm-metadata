@@ -11,7 +11,7 @@
     "accounts/fireworks/models/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.03,
+        "cache_read": 0.028,
         "input": 0.14,
         "output": 0.28
       },
@@ -22,7 +22,7 @@
         "field": "reasoning_content"
       },
       "knowledge": "2025-05",
-      "last_updated": "2026-04-24",
+      "last_updated": "2026-06-16",
       "limit": {
         "context": 1000000,
         "output": 384000
@@ -140,17 +140,62 @@
       "temperature": true,
       "tool_call": true
     },
+    "accounts/fireworks/models/glm-5p2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "GLM 5.2 は fireworks-ai によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "accounts/fireworks/models/glm-5p2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-16",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-16",
+      "temperature": true,
+      "tool_call": true
+    },
     "accounts/fireworks/models/gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.01,
+        "cache_read": 0.015,
         "input": 0.15,
         "output": 0.6
       },
       "description": "GPT OSS 120B は fireworks-ai によって提供される AI モデルです。",
       "family": "gpt-oss",
       "id": "accounts/fireworks/models/gpt-oss-120b",
-      "last_updated": "2026-06-15",
+      "last_updated": "2026-06-16",
       "limit": {
         "context": 131072,
         "output": 32768
@@ -272,8 +317,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "knowledge": "2025-01",
-      "last_updated": "2026-06-12",
+      "last_updated": "2026-06-16",
       "limit": {
         "context": 262000,
         "output": 262000
@@ -296,7 +340,6 @@
         }
       ],
       "release_date": "2026-06-12",
-      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -554,7 +597,7 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.38,
-        "input": 2,
+        "input": 1.9,
         "output": 8
       },
       "description": "Kimi K2.7 Code Fast は fireworks-ai によって提供される AI モデルです。",
@@ -563,8 +606,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "knowledge": "2025-01",
-      "last_updated": "2026-06-12",
+      "last_updated": "2026-06-16",
       "limit": {
         "context": 262000,
         "output": 262000
@@ -587,7 +629,6 @@
         }
       ],
       "release_date": "2026-06-12",
-      "structured_output": true,
       "temperature": true,
       "tool_call": true
     }

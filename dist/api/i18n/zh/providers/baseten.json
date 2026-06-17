@@ -204,7 +204,8 @@
     "moonshotai/Kimi-K2.7-Code": {
       "attachment": true,
       "cost": {
-        "input": 0.16,
+        "cache_read": 0.16,
+        "input": 0.95,
         "output": 4
       },
       "description": "Kimi K2.7 Code 是由 baseten 提供的人工智能模型。",
@@ -468,6 +469,45 @@
         }
       ],
       "release_date": "2026-03-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3,
+        "input": 1.5,
+        "output": 4.5
+      },
+      "description": "GLM-5.2 是由 baseten 提供的人工智能模型。",
+      "family": "glm",
+      "id": "zai-org/GLM-5.2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-13",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
