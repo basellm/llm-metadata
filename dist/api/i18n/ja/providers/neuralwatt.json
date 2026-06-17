@@ -7,39 +7,6 @@
   "iconURL": "https://models.dev/logos/neuralwatt.svg",
   "id": "neuralwatt",
   "models": {
-    "MiniMaxAI/MiniMax-M2.5": {
-      "attachment": false,
-      "cost": {
-        "input": 0.35,
-        "output": 1.38
-      },
-      "description": "MiniMax M2.5 は neuralwatt によって提供される AI モデルです。",
-      "family": "minimax",
-      "id": "MiniMaxAI/MiniMax-M2.5",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-02-12",
-      "limit": {
-        "context": 196592,
-        "output": 196592
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax M2.5",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-02-12",
-      "temperature": true,
-      "tool_call": true
-    },
     "Qwen/Qwen3.5-397B-A17B-FP8": {
       "attachment": false,
       "cost": {
@@ -173,6 +140,47 @@
       "temperature": true,
       "tool_call": true
     },
+    "glm-5.2": {
+      "attachment": false,
+      "cost": {
+        "input": 1.45,
+        "output": 4.5
+      },
+      "description": "GLM 5.2 は neuralwatt によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "glm-5.2",
+      "last_updated": "2026-06-17",
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-06-17",
+      "temperature": true,
+      "tool_call": true
+    },
     "kimi-k2.5-fast": {
       "attachment": true,
       "cost": {
@@ -230,36 +238,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-04-21",
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistralai/Devstral-Small-2-24B-Instruct-2512": {
-      "attachment": true,
-      "cost": {
-        "input": 0.12,
-        "output": 0.35
-      },
-      "description": "Devstral Small 2 24B Instruct 2512 は neuralwatt によって提供される AI モデルです。",
-      "family": "devstral",
-      "id": "mistralai/Devstral-Small-2-24B-Instruct-2512",
-      "last_updated": "2025-12-09",
-      "limit": {
-        "context": 262128,
-        "output": 262128
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Devstral Small 2 24B Instruct 2512",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-09",
       "temperature": true,
       "tool_call": true
     },
@@ -369,45 +347,6 @@
       "release_date": "2026-06-12",
       "structured_output": true,
       "temperature": false,
-      "tool_call": true
-    },
-    "openai/gpt-oss-20b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.03,
-        "output": 0.16
-      },
-      "description": "GPT OSS 20B は neuralwatt によって提供される AI モデルです。",
-      "family": "gpt-oss",
-      "id": "openai/gpt-oss-20b",
-      "last_updated": "2025-08-05",
-      "limit": {
-        "context": 16368,
-        "output": 16368
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT OSS 20B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-08-05",
-      "temperature": true,
       "tool_call": true
     },
     "qwen3.5-397b-fast": {

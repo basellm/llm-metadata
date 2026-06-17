@@ -835,6 +835,11 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "max": 262144,
+          "min": 1,
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-06-01",
@@ -4920,16 +4925,7 @@
       },
       "name": "Mistral Small (latest)",
       "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
+      "reasoning": false,
       "release_date": "2026-03-16",
       "temperature": true,
       "tool_call": true
@@ -5287,6 +5283,11 @@
       "name": "Nemotron 3 Nano 30B A3B",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2024-12-01",
       "temperature": true,
       "tool_call": false
@@ -5347,6 +5348,11 @@
       "name": "Nemotron 3 Ultra",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-06-04",
       "temperature": true,
       "tool_call": true
@@ -5378,6 +5384,11 @@
       "name": "Nvidia Nemotron Nano 12B V2 VL",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2024-12-01",
       "temperature": true,
       "tool_call": true
@@ -5408,6 +5419,11 @@
       "name": "Nvidia Nemotron Nano 9B V2",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-08-18",
       "temperature": true,
       "tool_call": true
@@ -6132,7 +6148,14 @@
       "name": "GPT-5.1 Instant",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "medium"
+          ]
+        }
+      ],
       "release_date": "2025-11-12",
       "temperature": true,
       "tool_call": true
@@ -6168,7 +6191,17 @@
       "name": "GPT 5.1 Thinking",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-11-12",
       "temperature": true,
       "tool_call": true
@@ -6250,7 +6283,14 @@
       "name": "GPT-5.2 Chat",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "medium"
+          ]
+        }
+      ],
       "release_date": "2025-12-11",
       "temperature": true,
       "tool_call": true
@@ -6374,7 +6414,14 @@
       "name": "GPT-5.3 Chat",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "medium"
+          ]
+        }
+      ],
       "release_date": "2026-03-03",
       "temperature": true,
       "tool_call": true
@@ -6413,6 +6460,7 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
@@ -6645,6 +6693,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
