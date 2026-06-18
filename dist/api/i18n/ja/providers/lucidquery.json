@@ -1,6 +1,6 @@
 {
-  "api": "https://lucidquery.com/api/v1",
-  "doc": "https://lucidquery.com/api/docs",
+  "api": "https://api.lucidquery.com/v1",
+  "doc": "https://lucidquery.com/docs",
   "env": [
     "LUCIDQUERY_API_KEY"
   ],
@@ -38,6 +38,70 @@
       "temperature": false,
       "tool_call": true
     },
+    "lucidquery-agi-01-frontier": {
+      "attachment": true,
+      "cost": {
+        "input": 4.5,
+        "output": 22
+      },
+      "description": "AGI-01 Frontier は lucidquery によって提供される AI モデルです。",
+      "family": "agi",
+      "id": "lucidquery-agi-01-frontier",
+      "knowledge": "2026-06-05",
+      "last_updated": "2026-06-16",
+      "limit": {
+        "context": 300000,
+        "output": 120000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "AGI-01 Frontier",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-16",
+      "temperature": true,
+      "tool_call": true
+    },
+    "lucidquery-agi-01-swift": {
+      "attachment": true,
+      "cost": {
+        "input": 2.5,
+        "output": 15
+      },
+      "description": "AGI-01 Swift は lucidquery によって提供される AI モデルです。",
+      "family": "agi",
+      "id": "lucidquery-agi-01-swift",
+      "knowledge": "2026-06-05",
+      "last_updated": "2026-06-16",
+      "limit": {
+        "context": 300000,
+        "output": 120000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "AGI-01 Swift",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-16",
+      "temperature": true,
+      "tool_call": true
+    },
     "lucidquery-nexus-coder": {
       "attachment": true,
       "cost": {
@@ -70,6 +134,6 @@
       "tool_call": true
     }
   },
-  "name": "LucidQuery AI",
+  "name": "LucidQuery",
   "npm": "@ai-sdk/openai-compatible"
 }

@@ -319,7 +319,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-02-11",
+      "last_updated": "2026-02-12",
       "limit": {
         "context": 202752,
         "output": 202752
@@ -339,7 +339,7 @@
       },
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-02-11",
+      "release_date": "2026-02-12",
       "temperature": true,
       "tool_call": true
     },
@@ -357,7 +357,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-03-27",
+      "last_updated": "2026-04-07",
       "limit": {
         "context": 202752,
         "output": 202752
@@ -387,24 +387,28 @@
           ]
         }
       ],
-      "release_date": "2026-03-27",
+      "release_date": "2026-04-07",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "greg-1": {
+    "glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.02,
-        "input": 0.1,
-        "output": 0.3
+        "cache_read": 0.08,
+        "input": 0.5,
+        "output": 2.2
       },
-      "description": "Greg 1 Normal 是由 crof 提供的人工智能模型。",
-      "id": "greg-1",
-      "last_updated": "2026-01-27",
+      "description": "GLM-5.2 是由 crof 提供的人工智能模型。",
+      "family": "glm",
+      "id": "glm-5.2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-13",
       "limit": {
-        "context": 229376,
-        "output": 229376
+        "context": 1000000,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -414,12 +418,27 @@
           "text"
         ]
       },
-      "name": "Greg 1 Normal",
+      "name": "GLM-5.2",
       "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-01-27",
+      "provider": {
+        "npm": "@ai-sdk/openai-compatible"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "greg-1-mini": {
       "attachment": false,
@@ -450,16 +469,16 @@
       "temperature": true,
       "tool_call": false
     },
-    "greg-1-super": {
+    "greg-2-super": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.2,
-        "input": 1,
+        "cache_read": 0.25,
+        "input": 1.5,
         "output": 5
       },
-      "description": "Greg 1 Super 是由 crof 提供的人工智能模型。",
-      "id": "greg-1-super",
-      "last_updated": "2026-01-27",
+      "description": "Greg 2 Super 是由 crof 提供的人工智能模型。",
+      "id": "greg-2-super",
+      "last_updated": "2026-06-14",
       "limit": {
         "context": 229376,
         "output": 229376
@@ -472,10 +491,39 @@
           "text"
         ]
       },
-      "name": "Greg 1 Super",
+      "name": "Greg 2 Super",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-01-27",
+      "release_date": "2026-06-14",
+      "temperature": true,
+      "tool_call": false
+    },
+    "greg-2-ultra": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 3,
+        "output": 10
+      },
+      "description": "Greg 2 Ultra 是由 crof 提供的人工智能模型。",
+      "id": "greg-2-ultra",
+      "last_updated": "2026-06-14",
+      "limit": {
+        "context": 229376,
+        "output": 229376
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Greg 2 Ultra",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-14",
       "temperature": true,
       "tool_call": false
     },
@@ -655,6 +703,57 @@
       "release_date": "2026-04-21",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.7-code": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.55,
+        "output": 2.25
+      },
+      "description": "Kimi K2.7 Code 是由 crof 提供的人工智能模型。",
+      "family": "kimi-k2",
+      "id": "kimi-k2.7-code",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "provider": {
+        "npm": "@ai-sdk/openai-compatible"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "mimo-v2.5-pro": {

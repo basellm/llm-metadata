@@ -1072,126 +1072,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "THUDM/GLM-4-32B-0414": {
-      "attachment": false,
-      "cost": {
-        "input": 0.27,
-        "output": 0.27
-      },
-      "description": "THUDM/GLM-4-32B-0414 is an AI model provided by siliconflow.",
-      "family": "glm",
-      "id": "THUDM/GLM-4-32B-0414",
-      "last_updated": "2025-11-25",
-      "limit": {
-        "context": 33000,
-        "output": 33000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "THUDM/GLM-4-32B-0414",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-04-18",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "THUDM/GLM-4-9B-0414": {
-      "attachment": false,
-      "cost": {
-        "input": 0.086,
-        "output": 0.086
-      },
-      "description": "THUDM/GLM-4-9B-0414 is an AI model provided by siliconflow.",
-      "family": "glm",
-      "id": "THUDM/GLM-4-9B-0414",
-      "last_updated": "2025-11-25",
-      "limit": {
-        "context": 33000,
-        "output": 33000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "THUDM/GLM-4-9B-0414",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-04-18",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "THUDM/GLM-Z1-32B-0414": {
-      "attachment": false,
-      "cost": {
-        "input": 0.14,
-        "output": 0.57
-      },
-      "description": "THUDM/GLM-Z1-32B-0414 is an AI model provided by siliconflow.",
-      "family": "glm-z",
-      "id": "THUDM/GLM-Z1-32B-0414",
-      "last_updated": "2025-11-25",
-      "limit": {
-        "context": 131000,
-        "output": 131000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "THUDM/GLM-Z1-32B-0414",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-04-18",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "THUDM/GLM-Z1-9B-0414": {
-      "attachment": false,
-      "cost": {
-        "input": 0.086,
-        "output": 0.086
-      },
-      "description": "THUDM/GLM-Z1-9B-0414 is an AI model provided by siliconflow.",
-      "family": "glm-z",
-      "id": "THUDM/GLM-Z1-9B-0414",
-      "last_updated": "2025-11-25",
-      "limit": {
-        "context": 131000,
-        "output": 131000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "THUDM/GLM-Z1-9B-0414",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-04-18",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "baidu/ERNIE-4.5-300B-A47B": {
       "attachment": false,
       "cost": {
@@ -1934,25 +1814,36 @@
       },
       "name": "tencent/Hunyuan-A13B-Instruct",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-06-30",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "tencent/Hunyuan-MT-7B": {
+    "tencent/Hy3-preview": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.029,
+        "input": 0.066,
+        "output": 0.26
       },
-      "description": "tencent/Hunyuan-MT-7B is an AI model provided by siliconflow.",
-      "family": "hunyuan",
-      "id": "tencent/Hunyuan-MT-7B",
-      "last_updated": "2025-11-25",
+      "description": "Hy3 preview is an AI model provided by siliconflow.",
+      "family": "Hy",
+      "id": "tencent/Hy3-preview",
+      "last_updated": "2026-04-20",
       "limit": {
-        "context": 33000,
-        "output": 33000
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -1962,11 +1853,17 @@
           "text"
         ]
       },
-      "name": "tencent/Hunyuan-MT-7B",
+      "name": "Hy3 preview",
       "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-09-18",
-      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-20",
       "temperature": true,
       "tool_call": true
     },

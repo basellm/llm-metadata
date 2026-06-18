@@ -10,7 +10,7 @@
     "umans-coder": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.2,
+        "cache_read": 0.19,
         "input": 0.95,
         "output": 4
       },
@@ -21,7 +21,7 @@
         "field": "reasoning_content"
       },
       "knowledge": "2025-01",
-      "last_updated": "2026-04-21",
+      "last_updated": "2026-06-12",
       "limit": {
         "context": 262144,
         "output": 32768
@@ -40,10 +40,15 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
-      "release_date": "2026-04-21",
+      "release_date": "2026-06-12",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -81,6 +86,14 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-04-17",
@@ -101,7 +114,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-03-27",
+      "last_updated": "2026-04-07",
       "limit": {
         "context": 204800,
         "output": 131072
@@ -121,53 +134,67 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
-      "release_date": "2026-03-27",
+      "release_date": "2026-04-07",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "umans-kimi-k2.6": {
-      "attachment": true,
+    "umans-glm-5.2": {
+      "attachment": false,
       "cost": {
-        "cache_read": 0.2,
-        "input": 0.95,
-        "output": 4
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
       },
-      "description": "Kimi K2.6 is an AI model provided by umans-ai.",
-      "family": "kimi-k2",
-      "id": "umans-kimi-k2.6",
+      "description": "GLM 5.2 is an AI model provided by umans-ai.",
+      "family": "glm",
+      "id": "umans-glm-5.2",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "knowledge": "2025-01",
-      "last_updated": "2026-04-21",
+      "last_updated": "2026-06-13",
       "limit": {
-        "context": 262144,
-        "output": 32768
+        "context": 405504,
+        "output": 131072
       },
       "modalities": {
         "input": [
           "text",
-          "image",
-          "video"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Kimi K2.6",
-      "open_weights": true,
+      "name": "GLM 5.2",
+      "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
-      "release_date": "2026-04-21",
+      "release_date": "2026-06-13",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "umans-kimi-k2.7": {
@@ -204,7 +231,12 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-06-12",

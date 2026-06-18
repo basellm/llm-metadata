@@ -379,7 +379,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-10-22",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -1503,7 +1503,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-07-22",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -1661,6 +1661,36 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": false
+    },
+    "cohere/north-mini-code:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "North Mini Code (free) 是由 openrouter 提供的人工智能模型。",
+      "family": "north",
+      "id": "cohere/north-mini-code:free",
+      "last_updated": "2026-06-17",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "North Mini Code (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-06-17",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
     },
     "deepcogito/cogito-v2.1-671b": {
       "attachment": false,
@@ -2186,7 +2216,7 @@
       "last_updated": "2025-08-26",
       "limit": {
         "context": 32768,
-        "output": 32768
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -2455,7 +2485,7 @@
       "last_updated": "2025-12-17",
       "limit": {
         "context": 1048576,
-        "output": 65536
+        "output": 65535
       },
       "modalities": {
         "input": [
@@ -2484,6 +2514,41 @@
         }
       ],
       "release_date": "2025-12-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-3-pro-image": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 0.375,
+        "input": 2,
+        "output": 12,
+        "reasoning": 12
+      },
+      "description": "Nano Banana Pro (Gemini 3 Pro Image) 是由 openrouter 提供的人工智能模型。",
+      "family": "gemini",
+      "id": "google/gemini-3-pro-image",
+      "last_updated": "2026-06-18",
+      "limit": {
+        "context": 65536,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "image",
+          "text"
+        ]
+      },
+      "name": "Nano Banana Pro (Gemini 3 Pro Image)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-06-18",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -2521,6 +2586,38 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-11-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemini-3.1-flash-image": {
+      "attachment": true,
+      "cost": {
+        "input": 0.5,
+        "output": 3
+      },
+      "description": "Nano Banana 2 (Gemini 3.1 Flash Image) 是由 openrouter 提供的人工智能模型。",
+      "family": "gemini",
+      "id": "google/gemini-3.1-flash-image",
+      "last_updated": "2026-06-18",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "image",
+          "text"
+        ]
+      },
+      "name": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-06-18",
       "structured_output": true,
       "temperature": true,
       "tool_call": false
@@ -3002,7 +3099,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-05-20",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -3054,7 +3151,7 @@
       "id": "google/gemma-4-26b-a4b-it:free",
       "last_updated": "2026-04-02",
       "limit": {
-        "context": 262144,
+        "context": 131072,
         "output": 32768
       },
       "modalities": {
@@ -3130,7 +3227,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 32768
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -3584,7 +3681,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-01-20",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -3616,9 +3713,9 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-01-20",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "mancer/weaver": {
       "attachment": false,
@@ -3647,7 +3744,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2023-08-02",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -3709,7 +3806,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-04-18",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -5298,7 +5395,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-07-07",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -7758,7 +7855,7 @@
       "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -7823,7 +7920,7 @@
         }
       ],
       "release_date": "2025-10-29",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -8607,7 +8704,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-04-28",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -8640,7 +8737,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-04-28",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -8734,9 +8831,9 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-10-16",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "qwen/qwen-2.5-coder-32b-instruct": {
       "attachment": false,
@@ -8798,7 +8895,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-01-25",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -9438,7 +9535,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-09-23",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -9635,7 +9732,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-09-23",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -9731,7 +9828,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-10-23",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -10582,7 +10679,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-01-08",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -10854,7 +10951,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-09-27",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -10915,7 +11012,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-03-10",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -11208,46 +11305,6 @@
       "reasoning_options": [],
       "release_date": "2026-04-16",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "xiaomi/mimo-v2-flash": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.01,
-        "input": 0.1,
-        "output": 0.3
-      },
-      "description": "MiMo-V2-Flash 是由 openrouter 提供的人工智能模型。",
-      "family": "mimo",
-      "id": "xiaomi/mimo-v2-flash",
-      "interleaved": {
-        "field": "reasoning_details"
-      },
-      "knowledge": "2024-12-01",
-      "last_updated": "2026-02-04",
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiMo-V2-Flash",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-12-16",
-      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -11599,7 +11656,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-02-11",
+      "last_updated": "2026-02-12",
       "limit": {
         "context": 202752,
         "output": 16384
@@ -11616,7 +11673,7 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-02-11",
+      "release_date": "2026-02-12",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -11669,7 +11726,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-03-27",
+      "last_updated": "2026-04-07",
       "limit": {
         "context": 202752,
         "output": 131072
@@ -11686,7 +11743,7 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-03-27",
+      "release_date": "2026-04-07",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

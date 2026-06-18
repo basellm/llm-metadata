@@ -429,6 +429,13 @@
       "name": "Gemini 2.5 Pro",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-06-17",
       "structured_output": true,
       "temperature": true,
@@ -467,6 +474,21 @@
       "name": "Gemini 3 Flash Preview",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "max": 32000,
+          "min": 256,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-12-17",
       "structured_output": true,
       "temperature": true,
@@ -520,6 +542,21 @@
       "name": "Gemini 3.1 Pro Preview",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "max": 32000,
+          "min": 256,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-19",
       "structured_output": true,
       "temperature": true,
@@ -558,6 +595,22 @@
       "name": "Gemini 3.5 Flash",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "max": 24000,
+          "min": 256,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-05-19",
       "structured_output": true,
       "temperature": true,
@@ -902,40 +955,6 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-04-23",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "raptor-mini": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.025,
-        "input": 0.25,
-        "output": 2
-      },
-      "description": "Raptor mini is an AI model provided by github-copilot.",
-      "family": "gpt-mini",
-      "id": "raptor-mini",
-      "knowledge": "2024-05-30",
-      "last_updated": "2025-08-07",
-      "limit": {
-        "context": 400000,
-        "input": 272000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Raptor mini",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-08-07",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
