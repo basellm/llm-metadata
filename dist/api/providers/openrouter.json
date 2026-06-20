@@ -3748,37 +3748,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "meta-llama/llama-3-70b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.51,
-        "output": 0.74
-      },
-      "description": "Llama 3 70B Instruct is an AI model provided by openrouter.",
-      "family": "llama",
-      "id": "meta-llama/llama-3-70b-instruct",
-      "knowledge": "2023-12-31",
-      "last_updated": "2024-04-18",
-      "limit": {
-        "context": 8192,
-        "output": 8000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3 70B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-04-18",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
     "meta-llama/llama-3-8b-instruct": {
       "attachment": false,
       "cost": {
@@ -5272,9 +5241,9 @@
     "moonshotai/kimi-k2.6": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.34,
-        "input": 0.68,
-        "output": 3.41
+        "cache_read": 0.2,
+        "input": 0.67,
+        "output": 3.5
       },
       "description": "Kimi K2.6 is an AI model provided by openrouter.",
       "family": "kimi-k2",
@@ -5285,8 +5254,8 @@
       "knowledge": "2025-01",
       "last_updated": "2026-04-21",
       "limit": {
-        "context": 262142,
-        "output": 262142
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -5309,9 +5278,9 @@
     "moonshotai/kimi-k2.7-code": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.15,
-        "input": 0.74,
-        "output": 3.5
+        "cache_read": 0.144,
+        "input": 0.68,
+        "output": 3.41
       },
       "description": "Kimi K2.7 Code is an AI model provided by openrouter.",
       "family": "kimi-k2",
@@ -5320,7 +5289,7 @@
       "last_updated": "2026-06-12",
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -5406,6 +5375,7 @@
         "output": 0
       },
       "description": "Nex-N2-Pro (free) is an AI model provided by openrouter.",
+      "family": "agi",
       "id": "nex-agi/nex-n2-pro:free",
       "last_updated": "2026-06-08",
       "limit": {
@@ -7886,7 +7856,7 @@
     "openai/gpt-oss-safeguard-20b": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.037,
+        "cache_read": 0.0375,
         "input": 0.075,
         "output": 0.3
       },
@@ -8675,6 +8645,36 @@
       "temperature": true,
       "tool_call": false
     },
+    "poolside/laguna-m.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.1,
+        "input": 0.2,
+        "output": 0.4
+      },
+      "description": "Laguna M.1 is an AI model provided by openrouter.",
+      "id": "poolside/laguna-m.1",
+      "last_updated": "2026-04-28",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Laguna M.1",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-28",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "poolside/laguna-m.1:free": {
       "attachment": false,
       "cost": {
@@ -8700,9 +8700,39 @@
         ]
       },
       "name": "Laguna M.1 (free)",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
+      "release_date": "2026-04-28",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "poolside/laguna-xs.2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.1,
+        "output": 0.2
+      },
+      "description": "Laguna XS.2 is an AI model provided by openrouter.",
+      "id": "poolside/laguna-xs.2",
+      "last_updated": "2026-04-28",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Laguna XS.2",
+      "open_weights": true,
+      "reasoning": true,
       "release_date": "2026-04-28",
       "structured_output": true,
       "temperature": true,
@@ -8737,7 +8767,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-04-28",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -9972,7 +10002,6 @@
     "qwen/qwen3.5-35b-a3b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.05,
         "input": 0.14,
         "output": 1
       },
@@ -9982,7 +10011,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 81920
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -10249,8 +10278,7 @@
     "qwen/qwen3.6-35b-a3b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.15,
+        "input": 0.14,
         "output": 1
       },
       "description": "Qwen3.6 35B-A3B is an AI model provided by openrouter.",
@@ -11751,9 +11779,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.26,
-        "input": 1.4,
-        "output": 4.4
+        "cache_read": 0.2,
+        "input": 1.2,
+        "output": 4.1
       },
       "description": "GLM-5.2 is an AI model provided by openrouter.",
       "family": "glm",
@@ -11763,8 +11791,8 @@
       },
       "last_updated": "2026-06-13",
       "limit": {
-        "context": 262144,
-        "output": 262144
+        "context": 1048576,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -11775,7 +11803,7 @@
         ]
       },
       "name": "GLM-5.2",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-06-13",
@@ -12074,17 +12102,17 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.34,
-        "input": 0.68,
-        "output": 3.41
+        "cache_read": 0.2,
+        "input": 0.67,
+        "output": 3.5
       },
       "description": "MoonshotAI Kimi Latest is an AI model provided by openrouter.",
       "family": "kimi",
       "id": "~moonshotai/kimi-latest",
       "last_updated": "2026-04-27",
       "limit": {
-        "context": 262142,
-        "output": 262142
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
