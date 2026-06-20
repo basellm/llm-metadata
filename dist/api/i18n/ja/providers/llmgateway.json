@@ -1416,6 +1416,68 @@
       "temperature": true,
       "tool_call": false
     },
+    "gemma-4-26b-a4b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.07,
+        "output": 0.34
+      },
+      "description": "Gemma 4 26B A4B IT は llmgateway によって提供される AI モデルです。",
+      "family": "gemma",
+      "id": "gemma-4-26b-a4b-it",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 26B A4B IT",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemma-4-31b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.13,
+        "output": 0.38
+      },
+      "description": "Gemma 4 31B IT は llmgateway によって提供される AI モデルです。",
+      "family": "gemma",
+      "id": "gemma-4-31b-it",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 31B IT",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "glm-4-32b-0414-128k": {
       "attachment": false,
       "cost": {
@@ -1929,6 +1991,41 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-04-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "cache_write": 0,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "GLM-5.2 は llmgateway によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "glm-5.2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-06-13",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3725,6 +3822,53 @@
         ]
       },
       "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k2.7-code-highspeed": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.38,
+        "input": 1.9,
+        "output": 8
+      },
+      "description": "Kimi K2.7 Code Highspeed は llmgateway によって提供される AI モデルです。",
+      "family": "kimi-k2",
+      "id": "kimi-k2.7-code-highspeed",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code Highspeed",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -6144,6 +6288,36 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-09-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.5-9b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.1,
+        "output": 0.15
+      },
+      "description": "Qwen3.5 9B は llmgateway によって提供される AI モデルです。",
+      "family": "qwen",
+      "id": "qwen3.5-9b",
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 9B",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-02-23",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
