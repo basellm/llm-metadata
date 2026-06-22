@@ -417,40 +417,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-3.5-haiku": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.08,
-        "cache_write": 1,
-        "input": 0.8,
-        "output": 4
-      },
-      "description": "Claude 3.5 Haiku is an AI model provided by openrouter.",
-      "family": "claude",
-      "id": "anthropic/claude-3.5-haiku",
-      "knowledge": "2024-07-31",
-      "last_updated": "2024-11-04",
-      "limit": {
-        "context": 200000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude 3.5 Haiku",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-11-04",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "anthropic/claude-haiku-4.5": {
       "attachment": true,
       "cost": {
@@ -5254,8 +5220,8 @@
       "knowledge": "2025-01",
       "last_updated": "2026-04-21",
       "limit": {
-        "context": 262142,
-        "output": 262142
+        "context": 262144,
+        "output": 65535
       },
       "modalities": {
         "input": [
@@ -5368,6 +5334,38 @@
       "temperature": true,
       "tool_call": false
     },
+    "nex-agi/nex-n2-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 0.5,
+        "output": 2.5
+      },
+      "description": "Nex-N2-Pro is an AI model provided by openrouter.",
+      "family": "agi",
+      "id": "nex-agi/nex-n2-pro",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nex-N2-Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2026-06-08",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
     "nex-agi/nex-n2-pro:free": {
       "attachment": true,
       "cost": {
@@ -5380,7 +5378,7 @@
       "last_updated": "2026-06-08",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 256000
       },
       "modalities": {
         "input": [
@@ -5396,7 +5394,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-06-08",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -11779,9 +11777,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.2,
-        "input": 1.2,
-        "output": 4.1
+        "cache_read": 0.18,
+        "input": 1,
+        "output": 4
       },
       "description": "GLM-5.2 is an AI model provided by openrouter.",
       "family": "glm",
@@ -11792,7 +11790,7 @@
       "last_updated": "2026-06-13",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -12111,8 +12109,8 @@
       "id": "~moonshotai/kimi-latest",
       "last_updated": "2026-04-27",
       "limit": {
-        "context": 262142,
-        "output": 262142
+        "context": 262144,
+        "output": 65535
       },
       "modalities": {
         "input": [
