@@ -6,6 +6,87 @@
   "iconURL": "https://models.dev/logos/merge-gateway.svg",
   "id": "merge-gateway",
   "models": {
+    "alibaba/qwen3.6-plus": {
+      "attachment": false,
+      "cost": {
+        "input": 0.5,
+        "output": 3
+      },
+      "description": "Qwen3.6 Plus 是由 merge-gateway 提供的人工智能模型。",
+      "family": "qwen",
+      "id": "alibaba/qwen3.6-plus",
+      "knowledge": "2025-04",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 Plus",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 250000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "alibaba/qwen3.7-max": {
+      "attachment": false,
+      "cost": {
+        "input": 1.65,
+        "output": 4.95
+      },
+      "description": "Qwen3.7 Max 是由 merge-gateway 提供的人工智能模型。",
+      "family": "qwen",
+      "id": "alibaba/qwen3.7-max",
+      "last_updated": "2026-05-21",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 250000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-05-21",
+      "temperature": true,
+      "tool_call": true
+    },
     "anthropic/claude-haiku-4-5-20251001": {
       "attachment": true,
       "cost": {
@@ -247,6 +328,47 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-04-16",
+      "temperature": false,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-4-8": {
+      "attachment": true,
+      "cost": {
+        "input": 5,
+        "output": 25
+      },
+      "description": "Claude Opus 4.8 是由 merge-gateway 提供的人工智能模型。",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4-8",
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.8",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 128000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-05-28",
       "temperature": false,
       "tool_call": true
     },
@@ -1283,6 +1405,47 @@
       "temperature": true,
       "tool_call": true
     },
+    "minimax/minimax-m3": {
+      "attachment": true,
+      "cost": {
+        "input": 0.6,
+        "output": 2.4
+      },
+      "description": "MiniMax-M3 是由 merge-gateway 提供的人工智能模型。",
+      "family": "minimax",
+      "id": "minimax/minimax-m3",
+      "last_updated": "2026-06-01",
+      "limit": {
+        "context": 512000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 128000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-06-01",
+      "temperature": true,
+      "tool_call": true
+    },
     "mistral/codestral-latest": {
       "attachment": false,
       "cost": {
@@ -1683,6 +1846,233 @@
       "reasoning": false,
       "release_date": "2024-11-01",
       "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2-thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 2.5
+      },
+      "description": "Kimi K2 Thinking 是由 merge-gateway 提供的人工智能模型。",
+      "family": "kimi-thinking",
+      "id": "moonshotai/kimi-k2-thinking",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-08",
+      "last_updated": "2025-11-06",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2 Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 32768,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-11-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0.6,
+        "output": 3
+      },
+      "description": "Kimi K2.5 是由 merge-gateway 提供的人工智能模型。",
+      "family": "kimi-k2",
+      "id": "moonshotai/kimi-k2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-01",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 262144,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-01",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2.6": {
+      "attachment": true,
+      "cost": {
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Kimi K2.6 是由 merge-gateway 提供的人工智能模型。",
+      "family": "kimi-k2",
+      "id": "moonshotai/kimi-k2.6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 262144,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2.7-code": {
+      "attachment": true,
+      "cost": {
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Kimi K2.7 Code 是由 merge-gateway 提供的人工智能模型。",
+      "family": "kimi-k2",
+      "id": "moonshotai/kimi-k2.7-code",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 32768,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2.7-code-highspeed": {
+      "attachment": true,
+      "cost": {
+        "input": 1.9,
+        "output": 8
+      },
+      "description": "Kimi K2.7 Code Highspeed 是由 merge-gateway 提供的人工智能模型。",
+      "family": "kimi-k2",
+      "id": "moonshotai/kimi-k2.7-code-highspeed",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code Highspeed",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 32768,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-4.1": {
@@ -2970,6 +3360,49 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-04-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai/glm-5.2": {
+      "attachment": false,
+      "cost": {
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "GLM-5.2 是由 merge-gateway 提供的人工智能模型。",
+      "family": "glm",
+      "id": "zai/glm-5.2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "max": 50000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-06-13",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
