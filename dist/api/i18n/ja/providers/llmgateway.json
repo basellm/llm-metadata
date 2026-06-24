@@ -38,76 +38,11 @@
       "temperature": true,
       "tool_call": true
     },
-    "claude-3-5-haiku": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.08,
-        "input": 0.8,
-        "output": 4
-      },
-      "description": "Claude 3.5 Haiku は llmgateway によって提供される AI モデルです。",
-      "family": "claude",
-      "id": "claude-3-5-haiku",
-      "last_updated": "2024-10-22",
-      "limit": {
-        "context": 200000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude 3.5 Haiku",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-10-22",
-      "status": "deprecated",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "claude-3-5-sonnet-20241022": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Claude Sonnet 3.5 v2 は llmgateway によって提供される AI モデルです。",
-      "family": "claude-sonnet",
-      "id": "claude-3-5-sonnet-20241022",
-      "knowledge": "2024-04-30",
-      "last_updated": "2024-10-22",
-      "limit": {
-        "context": 200000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 3.5 v2",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-10-22",
-      "temperature": true,
-      "tool_call": true
-    },
     "claude-3-7-sonnet": {
       "attachment": false,
       "cost": {
         "cache_read": 0.3,
+        "cache_write": 3.75,
         "input": 3,
         "output": 15
       },
@@ -173,6 +108,7 @@
       "attachment": true,
       "cost": {
         "cache_read": 1.5,
+        "cache_write": 18.75,
         "input": 15,
         "output": 75
       },
@@ -300,40 +236,6 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-08-05",
-      "temperature": true,
-      "tool_call": true
-    },
-    "claude-opus-4-20250514": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 1.5,
-        "cache_write": 18.75,
-        "input": 15,
-        "output": 75
-      },
-      "description": "Claude Opus 4 は llmgateway によって提供される AI モデルです。",
-      "family": "claude-opus",
-      "id": "claude-opus-4-20250514",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-22",
-      "limit": {
-        "context": 200000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Opus 4",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-05-22",
       "temperature": true,
       "tool_call": true
     },
@@ -470,40 +372,6 @@
       "reasoning": true,
       "release_date": "2026-05-28",
       "temperature": false,
-      "tool_call": true
-    },
-    "claude-sonnet-4-20250514": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Claude Sonnet 4 は llmgateway によって提供される AI モデルです。",
-      "family": "claude-sonnet",
-      "id": "claude-sonnet-4-20250514",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-22",
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 4",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2025-05-22",
-      "temperature": true,
       "tool_call": true
     },
     "claude-sonnet-4-5": {
@@ -669,41 +537,10 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepseek-r1-0528": {
-      "attachment": false,
-      "cost": {
-        "input": 0.55,
-        "output": 2.19
-      },
-      "description": "DeepSeek R1 (0528) は llmgateway によって提供される AI モデルです。",
-      "family": "deepseek",
-      "id": "deepseek-r1-0528",
-      "last_updated": "2025-05-28",
-      "limit": {
-        "context": 64000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek R1 (0528)",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-05-28",
-      "status": "beta",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
-    },
     "deepseek-v3.1": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.07,
+        "cache_read": 0.112,
         "input": 0.56,
         "output": 1.68
       },
@@ -735,7 +572,7 @@
     "deepseek-v3.2": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.056,
+        "cache_read": 0.028,
         "input": 0.28,
         "output": 0.42
       },
@@ -780,7 +617,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1000000,
+        "context": 1050000,
         "output": 384000
       },
       "modalities": {
@@ -815,7 +652,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1000000,
+        "context": 1050000,
         "output": 384000
       },
       "modalities": {
@@ -877,7 +714,7 @@
       "knowledge": "2025-05",
       "last_updated": "2025-07-10",
       "limit": {
-        "context": 128000,
+        "context": 131072,
         "output": 128000
       },
       "modalities": {
@@ -896,74 +733,34 @@
       "temperature": true,
       "tool_call": true
     },
-    "gemini-2.0-flash": {
+    "fugu-ultra": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.025,
-        "input": 0.1,
-        "output": 0.4
+        "cache_read": 0.5,
+        "input": 5,
+        "output": 30
       },
-      "description": "Gemini 2.0 Flash は llmgateway によって提供される AI モデルです。",
-      "family": "gemini-flash",
-      "id": "gemini-2.0-flash",
-      "knowledge": "2024-06",
-      "last_updated": "2024-12-11",
+      "description": "Fugu Ultra は llmgateway によって提供される AI モデルです。",
+      "id": "fugu-ultra",
+      "last_updated": "2026-06-22",
       "limit": {
-        "context": 1048576,
-        "output": 8192
+        "context": 1000000,
+        "output": 1000000
       },
       "modalities": {
         "input": [
           "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Gemini 2.0 Flash",
+      "name": "Fugu Ultra",
       "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-12-11",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "gemini-2.0-flash-lite": {
-      "attachment": true,
-      "cost": {
-        "input": 0.075,
-        "output": 0.3
-      },
-      "description": "Gemini 2.0 Flash-Lite は llmgateway によって提供される AI モデルです。",
-      "family": "gemini-flash-lite",
-      "id": "gemini-2.0-flash-lite",
-      "knowledge": "2024-06",
-      "last_updated": "2024-12-11",
-      "limit": {
-        "context": 1048576,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.0 Flash-Lite",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-12-11",
-      "structured_output": true,
+      "reasoning": true,
+      "release_date": "2026-06-22",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -972,7 +769,6 @@
       "cost": {
         "cache_read": 0.03,
         "input": 0.3,
-        "input_audio": 1,
         "output": 2.5
       },
       "description": "Gemini 2.5 Flash は llmgateway によって提供される AI モデルです。",
@@ -1009,7 +805,6 @@
       "cost": {
         "cache_read": 0.01,
         "input": 0.1,
-        "input_audio": 0.3,
         "output": 0.4
       },
       "description": "Gemini 2.5 Flash-Lite は llmgateway によって提供される AI モデルです。",
@@ -1037,6 +832,38 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2025-06-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-2.5-flash-lite-preview-09-2025": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "Gemini 2.5 Flash Lite Preview (09-2025) は llmgateway によって提供される AI モデルです。",
+      "family": "gemini",
+      "id": "gemini-2.5-flash-lite-preview-09-2025",
+      "last_updated": "2025-09-25",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Flash Lite Preview (09-2025)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-09-25",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1098,7 +925,6 @@
       "cost": {
         "cache_read": 0.05,
         "input": 0.5,
-        "input_audio": 1,
         "output": 3
       },
       "description": "Gemini 3 Flash Preview は llmgateway によって提供される AI モデルです。",
@@ -1134,8 +960,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.025,
+        "cache_write": 0.08333,
         "input": 0.25,
-        "input_audio": 0.5,
         "output": 1.5
       },
       "description": "Gemini 3.1 Flash Lite は llmgateway によって提供される AI モデルです。",
@@ -1163,43 +989,6 @@
       "open_weights": false,
       "reasoning": true,
       "release_date": "2026-05-07",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "gemini-3.1-flash-lite-preview": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.025,
-        "input": 0.25,
-        "input_audio": 0.5,
-        "output": 1.5
-      },
-      "description": "Gemini 3.1 Flash Lite Preview は llmgateway によって提供される AI モデルです。",
-      "family": "gemini-flash-lite",
-      "id": "gemini-3.1-flash-lite-preview",
-      "knowledge": "2025-01",
-      "last_updated": "2026-03-03",
-      "limit": {
-        "context": 1048576,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video",
-          "audio",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 3.1 Flash Lite Preview",
-      "open_weights": false,
-      "reasoning": true,
-      "release_date": "2026-03-03",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1260,8 +1049,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.15,
+        "cache_write": 0.08333,
         "input": 1.5,
-        "input_audio": 1.5,
         "output": 9
       },
       "description": "Gemini 3.5 Flash は llmgateway によって提供される AI モデルです。",
@@ -1324,97 +1113,6 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
-    },
-    "gemma-2-27b-it-together": {
-      "attachment": false,
-      "cost": {
-        "input": 0.08,
-        "output": 0.08
-      },
-      "description": "Gemma 2 27B IT は llmgateway によって提供される AI モデルです。",
-      "family": "gemma",
-      "id": "gemma-2-27b-it-together",
-      "last_updated": "2024-06-27",
-      "limit": {
-        "context": 8192,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemma 2 27B IT",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-06-27",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
-    },
-    "gemma-3-1b-it": {
-      "attachment": false,
-      "cost": {
-        "input": 0.08,
-        "output": 0.3
-      },
-      "description": "Gemma 3 1B IT は llmgateway によって提供される AI モデルです。",
-      "family": "gemma",
-      "id": "gemma-3-1b-it",
-      "last_updated": "2025-03-12",
-      "limit": {
-        "context": 1000000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemma 3 1B IT",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-03-12",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
-    },
-    "gemma-3-27b": {
-      "attachment": true,
-      "cost": {
-        "input": 0.27,
-        "output": 0.27
-      },
-      "description": "Gemma 3 27B は llmgateway によって提供される AI モデルです。",
-      "family": "gemma",
-      "id": "gemma-3-27b",
-      "last_updated": "2025-03-12",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemma 3 27B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-03-12",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
     },
     "gemma-4-26b-a4b-it": {
       "attachment": true,
@@ -1522,7 +1220,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-07-28",
       "limit": {
-        "context": 131072,
+        "context": 131000,
         "output": 98304
       },
       "modalities": {
@@ -1554,7 +1252,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-07-28",
       "limit": {
-        "context": 131072,
+        "context": 131000,
         "output": 98304
       },
       "modalities": {
@@ -1617,7 +1315,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-07-28",
       "limit": {
-        "context": 131072,
+        "context": 128000,
         "output": 98304
       },
       "modalities": {
@@ -1670,6 +1368,7 @@
     "glm-4.5v": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.11,
         "input": 0.6,
         "output": 1.8
       },
@@ -1679,7 +1378,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-08-11",
       "limit": {
-        "context": 64000,
+        "context": 128000,
         "output": 16384
       },
       "modalities": {
@@ -1734,6 +1433,7 @@
     "glm-4.6v": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.05,
         "input": 0.3,
         "output": 0.9
       },
@@ -1743,7 +1443,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-12-08",
       "limit": {
-        "context": 128000,
+        "context": 131072,
         "output": 32768
       },
       "modalities": {
@@ -1865,10 +1565,10 @@
     "glm-4.7-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
+        "cache_read": 0.01,
         "cache_write": 0,
-        "input": 0,
-        "output": 0
+        "input": 0.06,
+        "output": 0.4
       },
       "description": "GLM-4.7-Flash は llmgateway によって提供される AI モデルです。",
       "family": "glm-flash",
@@ -1891,6 +1591,36 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2026-01-19",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-4.7-flash-free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "GLM-4.7 Flash (Free) は llmgateway によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "glm-4.7-flash-free",
+      "last_updated": "2025-12-22",
+      "limit": {
+        "context": 200000,
+        "output": 200000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.7 Flash (Free)",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2025-12-22",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -1942,7 +1672,7 @@
       },
       "last_updated": "2026-02-12",
       "limit": {
-        "context": 204800,
+        "context": 203000,
         "output": 131072
       },
       "modalities": {
@@ -1963,10 +1693,10 @@
     "glm-5.1": {
       "attachment": false,
       "cost": {
-        "cache_read": 1.3,
+        "cache_read": 0.26,
         "cache_write": 0,
-        "input": 6,
-        "output": 24
+        "input": 1.4,
+        "output": 4.4
       },
       "description": "GLM-5.1 は llmgateway によって提供される AI モデルです。",
       "family": "glm",
@@ -1976,7 +1706,7 @@
       },
       "last_updated": "2026-04-07",
       "limit": {
-        "context": 200000,
+        "context": 204800,
         "output": 131072
       },
       "modalities": {
@@ -2138,7 +1868,7 @@
       "knowledge": "2024-04",
       "last_updated": "2025-04-14",
       "limit": {
-        "context": 1047576,
+        "context": 1000000,
         "output": 32768
       },
       "modalities": {
@@ -2172,7 +1902,7 @@
       "knowledge": "2024-04",
       "last_updated": "2025-04-14",
       "limit": {
-        "context": 1047576,
+        "context": 1000000,
         "output": 32768
       },
       "modalities": {
@@ -2206,7 +1936,7 @@
       "knowledge": "2024-04",
       "last_updated": "2025-04-14",
       "limit": {
-        "context": 1047576,
+        "context": 1000000,
         "output": 32768
       },
       "modalities": {
@@ -2990,22 +2720,6 @@
         ]
       },
       "description": "GPT-5.5 は llmgateway によって提供される AI モデルです。",
-      "experimental": {
-        "modes": {
-          "fast": {
-            "cost": {
-              "cache_read": 1.25,
-              "input": 12.5,
-              "output": 75
-            },
-            "provider": {
-              "body": {
-                "service_tier": "priority"
-              }
-            }
-          }
-        }
-      },
       "family": "gpt",
       "id": "gpt-5.5",
       "knowledge": "2025-12-01",
@@ -3084,8 +2798,8 @@
     "gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "input": 0.05,
-        "output": 0.25
+        "input": 0.15,
+        "output": 0.75
       },
       "description": "GPT OSS 120B は llmgateway によって提供される AI モデルです。",
       "family": "gpt-oss",
@@ -3114,8 +2828,8 @@
     "gpt-oss-20b": {
       "attachment": false,
       "cost": {
-        "input": 0.04,
-        "output": 0.15
+        "input": 0.1,
+        "output": 0.5
       },
       "description": "GPT OSS 20B は llmgateway によって提供される AI モデルです。",
       "family": "gpt-oss",
@@ -3141,15 +2855,16 @@
       "temperature": true,
       "tool_call": true
     },
-    "grok-4-0709": {
-      "attachment": false,
+    "grok-4": {
+      "attachment": true,
       "cost": {
+        "cache_read": 0.75,
         "input": 3,
         "output": 15
       },
-      "description": "Grok 4 (0709) は llmgateway によって提供される AI モデルです。",
+      "description": "Grok 4 は llmgateway によって提供される AI モデルです。",
       "family": "grok",
-      "id": "grok-4-0709",
+      "id": "grok-4",
       "last_updated": "2025-07-09",
       "limit": {
         "context": 256000,
@@ -3157,17 +2872,50 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Grok 4 (0709)",
+      "name": "Grok 4",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-07-09",
-      "structured_output": true,
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "grok-4-1-fast-non-reasoning": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.2,
+        "output": 0.5
+      },
+      "description": "Grok 4.1 Fast Non-Reasoning は llmgateway によって提供される AI モデルです。",
+      "family": "grok",
+      "id": "grok-4-1-fast-non-reasoning",
+      "last_updated": "2025-11-19",
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.1 Fast Non-Reasoning",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-11-19",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -3222,8 +2970,8 @@
           "input": 2.5,
           "output": 5
         },
-        "input": 1.25,
-        "output": 2.5,
+        "input": 2,
+        "output": 6,
         "tiers": [
           {
             "cache_read": 0.4,
@@ -3241,7 +2989,7 @@
       "id": "grok-4-20-beta-0309-non-reasoning",
       "last_updated": "2026-03-09",
       "limit": {
-        "context": 1000000,
+        "context": 2000000,
         "output": 30000
       },
       "modalities": {
@@ -3271,8 +3019,8 @@
           "input": 2.5,
           "output": 5
         },
-        "input": 1.25,
-        "output": 2.5,
+        "input": 2,
+        "output": 6,
         "tiers": [
           {
             "cache_read": 0.4,
@@ -3290,7 +3038,7 @@
       "id": "grok-4-20-beta-0309-reasoning",
       "last_updated": "2026-03-09",
       "limit": {
-        "context": 1000000,
+        "context": 2000000,
         "output": 30000
       },
       "modalities": {
@@ -3330,8 +3078,8 @@
           "input": 2.5,
           "output": 5
         },
-        "input": 1.25,
-        "output": 2.5,
+        "input": 2,
+        "output": 6,
         "tiers": [
           {
             "cache_read": 0.4,
@@ -3349,7 +3097,7 @@
       "id": "grok-4-20-non-reasoning",
       "last_updated": "2026-03-09",
       "limit": {
-        "context": 1000000,
+        "context": 2000000,
         "output": 30000
       },
       "modalities": {
@@ -3379,8 +3127,8 @@
           "input": 2.5,
           "output": 5
         },
-        "input": 1.25,
-        "output": 2.5,
+        "input": 2,
+        "output": 6,
         "tiers": [
           {
             "cache_read": 0.4,
@@ -3398,7 +3146,7 @@
       "id": "grok-4-20-reasoning",
       "last_updated": "2026-03-09",
       "limit": {
-        "context": 1000000,
+        "context": 2000000,
         "output": 30000
       },
       "modalities": {
@@ -3432,7 +3180,7 @@
     "grok-4-3": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.2,
+        "cache_read": 0.3125,
         "context_over_200k": {
           "cache_read": 0.4,
           "input": 2.5,
@@ -3484,48 +3232,6 @@
         }
       ],
       "release_date": "2026-04-17",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "grok-4-fast-reasoning": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.05,
-        "input": 0.2,
-        "output": 0.5
-      },
-      "description": "Grok 4 Fast Reasoning は llmgateway によって提供される AI モデルです。",
-      "family": "grok",
-      "id": "grok-4-fast-reasoning",
-      "last_updated": "2025-07-09",
-      "limit": {
-        "context": 2000000,
-        "output": 30000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Grok 4 Fast Reasoning",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-07-09",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3589,49 +3295,19 @@
       "temperature": true,
       "tool_call": true
     },
-    "hermes-2-pro-llama-3-8b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.14,
-        "output": 0.14
-      },
-      "description": "Hermes 2 Pro Llama 3 8B は llmgateway によって提供される AI モデルです。",
-      "family": "hermes",
-      "id": "hermes-2-pro-llama-3-8b",
-      "last_updated": "2024-05-27",
-      "limit": {
-        "context": 8192,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Hermes 2 Pro Llama 3 8B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-05-27",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
-    },
     "kimi-k2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.12,
-        "input": 0.6,
-        "output": 2.5
+        "cache_read": 0.5,
+        "input": 1,
+        "output": 3
       },
       "description": "Kimi K2 は llmgateway によって提供される AI モデルです。",
       "family": "kimi-k2",
       "id": "kimi-k2",
       "last_updated": "2025-07-11",
       "limit": {
-        "context": 131072,
+        "context": 256000,
         "output": 16384
       },
       "modalities": {
@@ -3977,37 +3653,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "llama-3.1-8b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.22,
-        "output": 0.22
-      },
-      "description": "Llama 3.1 8B Instruct は llmgateway によって提供される AI モデルです。",
-      "family": "llama",
-      "id": "llama-3.1-8b-instruct",
-      "last_updated": "2024-07-23",
-      "limit": {
-        "context": 128000,
-        "output": 2048
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.1 8B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-07-23",
-      "status": "beta",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "llama-3.1-nemotron-ultra-253b": {
       "attachment": false,
       "cost": {
@@ -4015,7 +3660,7 @@
         "output": 1.8
       },
       "description": "Llama 3.1 Nemotron Ultra 253B は llmgateway によって提供される AI モデルです。",
-      "family": "llama",
+      "family": "nemotron",
       "id": "llama-3.1-nemotron-ultra-253b",
       "last_updated": "2025-04-07",
       "limit": {
@@ -4101,8 +3746,8 @@
     "llama-3.3-70b-instruct": {
       "attachment": true,
       "cost": {
-        "input": 0,
-        "output": 0
+        "input": 0.13,
+        "output": 0.4
       },
       "description": "Llama-3.3-70B-Instruct は llmgateway によって提供される AI モデルです。",
       "family": "llama",
@@ -4110,7 +3755,7 @@
       "knowledge": "2023-12",
       "last_updated": "2024-12-06",
       "limit": {
-        "context": 128000,
+        "context": 131072,
         "output": 4096
       },
       "modalities": {
@@ -4139,7 +3784,7 @@
       "id": "llama-4-maverick-17b-instruct",
       "last_updated": "2025-04-05",
       "limit": {
-        "context": 8192,
+        "context": 1048576,
         "output": 2048
       },
       "modalities": {
@@ -4159,37 +3804,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "llama-4-scout": {
-      "attachment": false,
-      "cost": {
-        "input": 0.18,
-        "output": 0.59
-      },
-      "description": "Llama 4 Scout は llmgateway によって提供される AI モデルです。",
-      "family": "llama",
-      "id": "llama-4-scout",
-      "last_updated": "2025-04-05",
-      "limit": {
-        "context": 32768,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 4 Scout",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-04-05",
-      "status": "beta",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "llama-4-scout-17b-instruct": {
       "attachment": true,
       "cost": {
@@ -4201,7 +3815,7 @@
       "id": "llama-4-scout-17b-instruct",
       "last_updated": "2025-04-05",
       "limit": {
-        "context": 8192,
+        "context": 131072,
         "output": 2048
       },
       "modalities": {
@@ -4221,45 +3835,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "mimo-v2-flash": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.01,
-        "input": 0.1,
-        "output": 0.3
-      },
-      "description": "MiMo-V2-Flash は llmgateway によって提供される AI モデルです。",
-      "family": "mimo",
-      "id": "mimo-v2-flash",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2024-12-01",
-      "last_updated": "2026-02-04",
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiMo-V2-Flash",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-12-16",
-      "temperature": true,
-      "tool_call": true
-    },
     "mimo-v2-omni": {
       "attachment": true,
       "cost": {
@@ -4276,7 +3851,7 @@
       "knowledge": "2024-12",
       "last_updated": "2026-03-18",
       "limit": {
-        "context": 262144,
+        "context": 256000,
         "output": 131072
       },
       "modalities": {
@@ -4330,7 +3905,7 @@
       "knowledge": "2024-12",
       "last_updated": "2026-03-18",
       "limit": {
-        "context": 1048576,
+        "context": 1000000,
         "output": 131072
       },
       "modalities": {
@@ -4356,14 +3931,14 @@
     "mimo-v2.5": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.08,
+        "cache_read": 0.0028,
         "context_over_200k": {
           "cache_read": 0.16,
           "input": 0.8,
           "output": 4
         },
-        "input": 0.4,
-        "output": 2,
+        "input": 0.14,
+        "output": 0.28,
         "tiers": [
           {
             "cache_read": 0.16,
@@ -4385,7 +3960,7 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1048576,
+        "context": 1000000,
         "output": 131072
       },
       "modalities": {
@@ -4414,14 +3989,14 @@
     "mimo-v2.5-pro": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.2,
+        "cache_read": 0.0036,
         "context_over_200k": {
           "cache_read": 0.4,
           "input": 2,
           "output": 6
         },
-        "input": 1,
-        "output": 3,
+        "input": 0.435,
+        "output": 0.87,
         "tiers": [
           {
             "cache_read": 0.4,
@@ -4443,7 +4018,7 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1048576,
+        "context": 1000000,
         "output": 131072
       },
       "modalities": {
@@ -4469,8 +4044,9 @@
     "minimax-m2": {
       "attachment": false,
       "cost": {
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.03,
+        "input": 0.2,
+        "output": 1
       },
       "description": "MiniMax-M2 は llmgateway によって提供される AI モデルです。",
       "family": "minimax",
@@ -4498,8 +4074,8 @@
     "minimax-m2.1": {
       "attachment": false,
       "cost": {
-        "input": 0.3,
-        "output": 1.2
+        "input": 0.27,
+        "output": 1.1
       },
       "description": "MiniMax-M2.1 は llmgateway によって提供される AI モデルです。",
       "family": "minimax",
@@ -4567,7 +4143,7 @@
       "id": "minimax-m2.5",
       "last_updated": "2026-02-12",
       "limit": {
-        "context": 204800,
+        "context": 228700,
         "output": 131072
       },
       "modalities": {
@@ -4588,7 +4164,7 @@
     "minimax-m2.5-highspeed": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.06,
+        "cache_read": 0.03,
         "cache_write": 0.375,
         "input": 0.6,
         "output": 2.4
@@ -4867,8 +4443,8 @@
     "mistral-large-latest": {
       "attachment": true,
       "cost": {
-        "input": 0.5,
-        "output": 1.5
+        "input": 4,
+        "output": 12
       },
       "description": "Mistral Large (latest) は llmgateway によって提供される AI モデルです。",
       "family": "mistral-large",
@@ -4876,7 +4452,7 @@
       "knowledge": "2024-11",
       "last_updated": "2025-12-02",
       "limit": {
-        "context": 262144,
+        "context": 128000,
         "output": 262144
       },
       "modalities": {
@@ -4938,7 +4514,7 @@
       "id": "nemotron-3-ultra-550b",
       "last_updated": "2026-06-04",
       "limit": {
-        "context": 1000000,
+        "context": 262144,
         "output": 128000
       },
       "modalities": {
@@ -5097,8 +4673,8 @@
     "pixtral-large-latest": {
       "attachment": true,
       "cost": {
-        "input": 2,
-        "output": 6
+        "input": 4,
+        "output": 12
       },
       "description": "Pixtral Large (latest) は llmgateway によって提供される AI モデルです。",
       "family": "pixtral",
@@ -5158,6 +4734,8 @@
     "qwen-flash": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0.0625,
         "input": 0.05,
         "output": 0.4
       },
@@ -5218,8 +4796,8 @@
     "qwen-max-latest": {
       "attachment": true,
       "cost": {
-        "input": 0.345,
-        "output": 1.377
+        "input": 1.6,
+        "output": 6.4
       },
       "description": "Qwen Max Latest は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
@@ -5249,10 +4827,8 @@
     "qwen-omni-turbo": {
       "attachment": false,
       "cost": {
-        "input": 0.07,
-        "input_audio": 4.44,
-        "output": 0.27,
-        "output_audio": 8.89
+        "input": 0.2,
+        "output": 0.8
       },
       "description": "Qwen-Omni Turbo は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
@@ -5285,6 +4861,8 @@
     "qwen-plus": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.08,
+        "cache_write": 0.5,
         "input": 0.4,
         "output": 1.2,
         "reasoning": 4
@@ -5295,7 +4873,7 @@
       "knowledge": "2024-04",
       "last_updated": "2025-09-11",
       "limit": {
-        "context": 1000000,
+        "context": 131072,
         "output": 32768
       },
       "modalities": {
@@ -5316,15 +4894,17 @@
     "qwen-plus-latest": {
       "attachment": true,
       "cost": {
-        "input": 0.115,
-        "output": 0.287
+        "cache_read": 0.08,
+        "cache_write": 0.5,
+        "input": 0.4,
+        "output": 1.2
       },
       "description": "Qwen Plus Latest は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
       "id": "qwen-plus-latest",
       "last_updated": "2025-01-25",
       "limit": {
-        "context": 131072,
+        "context": 1000000,
         "output": 8192
       },
       "modalities": {
@@ -5410,7 +4990,7 @@
       "attachment": false,
       "cost": {
         "input": 0.21,
-        "output": 0.63
+        "output": 0.64
       },
       "description": "Qwen-VL Plus は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
@@ -5471,8 +5051,8 @@
     "qwen2-5-vl-72b-instruct": {
       "attachment": false,
       "cost": {
-        "input": 2.8,
-        "output": 8.4
+        "input": 0.13,
+        "output": 0.4
       },
       "description": "Qwen2.5-VL 72B Instruct は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
@@ -5480,7 +5060,7 @@
       "knowledge": "2024-04",
       "last_updated": "2024-09",
       "limit": {
-        "context": 131072,
+        "context": 32768,
         "output": 8192
       },
       "modalities": {
@@ -5499,36 +5079,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen25-coder-7b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.05,
-        "output": 0.05
-      },
-      "description": "Qwen2.5 Coder 7B は llmgateway によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "qwen25-coder-7b",
-      "last_updated": "2024-09-19",
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen2.5 Coder 7B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-09-19",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
     "qwen3-235b-a22b-fp8": {
       "attachment": false,
       "cost": {
@@ -5540,7 +5090,7 @@
       "id": "qwen3-235b-a22b-fp8",
       "last_updated": "2025-04-28",
       "limit": {
-        "context": 131072,
+        "context": 40960,
         "output": 8192
       },
       "modalities": {
@@ -5562,15 +5112,15 @@
     "qwen3-235b-a22b-instruct-2507": {
       "attachment": false,
       "cost": {
-        "input": 0.09,
-        "output": 0.58
+        "input": 0.2,
+        "output": 0.6
       },
       "description": "Qwen3 235B A22B Instruct (2507) は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
       "id": "qwen3-235b-a22b-instruct-2507",
       "last_updated": "2025-07-08",
       "limit": {
-        "context": 131072,
+        "context": 262000,
         "output": 8192
       },
       "modalities": {
@@ -5600,7 +5150,7 @@
       "id": "qwen3-235b-a22b-thinking-2507",
       "last_updated": "2025-07-08",
       "limit": {
-        "context": 131072,
+        "context": 262000,
         "output": 8192
       },
       "modalities": {
@@ -5619,36 +5169,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen3-30b-a3b-fp8": {
-      "attachment": false,
-      "cost": {
-        "input": 0.1,
-        "output": 0.1
-      },
-      "description": "Qwen3 30B A3B FP8 は llmgateway によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "qwen3-30b-a3b-fp8",
-      "last_updated": "2025-04-28",
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 30B A3B FP8",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-04-28",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "qwen3-30b-a3b-instruct-2507": {
       "attachment": false,
       "cost": {
@@ -5660,7 +5180,7 @@
       "id": "qwen3-30b-a3b-instruct-2507",
       "last_updated": "2025-07-08",
       "limit": {
-        "context": 131072,
+        "context": 262000,
         "output": 8192
       },
       "modalities": {
@@ -5679,41 +5199,11 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen3-30b-a3b-thinking-2507": {
-      "attachment": false,
-      "cost": {
-        "input": 0.1,
-        "output": 0.1
-      },
-      "description": "Qwen3 30B A3B Thinking (2507) は llmgateway によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "qwen3-30b-a3b-thinking-2507",
-      "last_updated": "2025-07-08",
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 30B A3B Thinking (2507)",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-07-08",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "qwen3-32b": {
       "attachment": false,
       "cost": {
-        "input": 0.7,
-        "output": 2.8,
+        "input": 0.1,
+        "output": 0.3,
         "reasoning": 8.4
       },
       "description": "Qwen3 32B は llmgateway によって提供される AI モデルです。",
@@ -5722,7 +5212,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-04",
       "limit": {
-        "context": 131072,
+        "context": 32768,
         "output": 16384
       },
       "modalities": {
@@ -5740,36 +5230,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen3-32b-fp8": {
-      "attachment": false,
-      "cost": {
-        "input": 0.1,
-        "output": 0.1
-      },
-      "description": "Qwen3 32B FP8 は llmgateway によって提供される AI モデルです。",
-      "family": "qwen",
-      "id": "qwen3-32b-fp8",
-      "last_updated": "2025-04-28",
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 32B FP8",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2025-04-28",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "qwen3-4b-fp8": {
       "attachment": false,
       "cost": {
@@ -5781,7 +5241,7 @@
       "id": "qwen3-4b-fp8",
       "last_updated": "2025-04-28",
       "limit": {
-        "context": 131072,
+        "context": 128000,
         "output": 8192
       },
       "modalities": {
@@ -5803,8 +5263,8 @@
     "qwen3-coder-30b-a3b-instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.45,
-        "output": 2.25
+        "input": 0.1,
+        "output": 0.3
       },
       "description": "Qwen3-Coder 30B-A3B Instruct は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
@@ -5812,7 +5272,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-04",
       "limit": {
-        "context": 262144,
+        "context": 262000,
         "output": 65536
       },
       "modalities": {
@@ -5833,8 +5293,8 @@
     "qwen3-coder-480b-a35b-instruct": {
       "attachment": false,
       "cost": {
-        "input": 1.5,
-        "output": 7.5
+        "input": 0.4,
+        "output": 1.8
       },
       "description": "Qwen3-Coder 480B-A35B Instruct は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
@@ -5863,6 +5323,8 @@
     "qwen3-coder-flash": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.06,
+        "cache_write": 0.375,
         "input": 0.3,
         "output": 1.5
       },
@@ -5893,6 +5355,7 @@
     "qwen3-coder-next": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.06,
         "input": 0.108,
         "output": 0.675
       },
@@ -5923,8 +5386,10 @@
     "qwen3-coder-plus": {
       "attachment": false,
       "cost": {
-        "input": 1,
-        "output": 5
+        "cache_read": 1.2,
+        "cache_write": 7.5,
+        "input": 6,
+        "output": 60
       },
       "description": "Qwen3 Coder Plus は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
@@ -5932,7 +5397,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-07-23",
       "limit": {
-        "context": 1048576,
+        "context": 1000000,
         "output": 65536
       },
       "modalities": {
@@ -5953,8 +5418,10 @@
     "qwen3-max": {
       "attachment": false,
       "cost": {
-        "input": 1.2,
-        "output": 6
+        "cache_read": 0.6,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
       },
       "description": "Qwen3 Max は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
@@ -5983,16 +5450,17 @@
     "qwen3-max-2026-01-23": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.072,
-        "input": 0.359,
-        "output": 1.434
+        "cache_read": 0.24,
+        "cache_write": 1.5,
+        "input": 1.2,
+        "output": 6
       },
       "description": "Qwen3 Max (2026-01-23) は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
       "id": "qwen3-max-2026-01-23",
       "last_updated": "2026-01-23",
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 32800
       },
       "modalities": {
@@ -6075,8 +5543,8 @@
     "qwen3-vl-235b-a22b-instruct": {
       "attachment": true,
       "cost": {
-        "input": 0.3,
-        "output": 1.5
+        "input": 0.5,
+        "output": 2
       },
       "description": "Qwen3 VL 235B A22B Instruct は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
@@ -6230,16 +5698,16 @@
     "qwen3-vl-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0044,
-        "input": 0.022,
-        "output": 0.215
+        "cache_read": 0.01,
+        "input": 0.05,
+        "output": 0.4
       },
       "description": "Qwen3 VL Flash は llmgateway によって提供される AI モデルです。",
       "family": "qwen",
       "id": "qwen3-vl-flash",
       "last_updated": "2025-10-09",
       "limit": {
-        "context": 1000000,
+        "context": 262144,
         "output": 32000
       },
       "modalities": {
@@ -6262,6 +5730,8 @@
     "qwen3-vl-plus": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.04,
+        "cache_write": 0.25,
         "input": 0.2,
         "output": 1.6,
         "reasoning": 4.8
@@ -6418,7 +5888,7 @@
       "knowledge": "2025-04",
       "last_updated": "2026-04-02",
       "limit": {
-        "context": 1000000,
+        "context": 262144,
         "output": 65536
       },
       "modalities": {
@@ -6705,7 +6175,7 @@
       "knowledge": "2025-09-01",
       "last_updated": "2025-09-01",
       "limit": {
-        "context": 128000,
+        "context": 130000,
         "output": 4096
       },
       "modalities": {

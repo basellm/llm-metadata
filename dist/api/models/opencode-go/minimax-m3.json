@@ -2,8 +2,24 @@
   "attachment": false,
   "cost": {
     "cache_read": 0.02,
+    "context_over_200k": {
+      "cache_read": 0.04,
+      "input": 0.2,
+      "output": 0.8
+    },
     "input": 0.1,
-    "output": 0.4
+    "output": 0.4,
+    "tiers": [
+      {
+        "cache_read": 0.04,
+        "input": 0.2,
+        "output": 0.8,
+        "tier": {
+          "size": 512000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "MiniMax M3 (3x usage) is an AI model provided by opencode-go.",
   "family": "minimax-m3",
