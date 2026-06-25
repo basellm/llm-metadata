@@ -200,16 +200,32 @@
     "MiniMax-M3": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.12,
-        "input": 0.6,
-        "output": 2.4
+        "cache_read": 0.06,
+        "context_over_200k": {
+          "cache_read": 0.12,
+          "input": 0.6,
+          "output": 2.4
+        },
+        "input": 0.3,
+        "output": 1.2,
+        "tiers": [
+          {
+            "cache_read": 0.12,
+            "input": 0.6,
+            "output": 2.4,
+            "tier": {
+              "size": 512000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "MiniMax-M3 は minimax によって提供される AI モデルです。",
       "family": "minimax",
       "id": "MiniMax-M3",
-      "last_updated": "2026-06-01",
+      "last_updated": "2026-06-25",
       "limit": {
-        "context": 512000,
+        "context": 1000000,
         "output": 128000
       },
       "modalities": {

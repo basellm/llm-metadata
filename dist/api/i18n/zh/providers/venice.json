@@ -2201,7 +2201,7 @@
       "tool_call": true
     },
     "qwen-3-7-max": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.27,
         "cache_write": 3.35,
@@ -2218,7 +2218,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -2811,9 +2813,9 @@
     "zai-org-glm-4.6": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.3,
-        "input": 0.85,
-        "output": 2.75
+        "cache_read": 0.08,
+        "input": 0.43,
+        "output": 1.75
       },
       "description": "GLM 4.6 是由 venice 提供的人工智能模型。",
       "family": "glm",

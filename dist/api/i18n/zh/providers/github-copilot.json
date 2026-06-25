@@ -38,6 +38,18 @@
       "name": "Claude Fable 5",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-06-09",
       "temperature": false,
       "tool_call": true
@@ -73,6 +85,13 @@
       "name": "Claude Haiku 4.5 (latest)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "max": 32000,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-10-15",
       "temperature": true,
       "tool_call": true
@@ -108,6 +127,13 @@
       "name": "Claude Opus 4.5 (latest)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "max": 32000,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-11-24",
       "temperature": true,
       "tool_call": true
@@ -163,6 +189,17 @@
       "name": "Claude Opus 4.6",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-02-05",
       "temperature": true,
       "tool_call": true
@@ -218,6 +255,18 @@
       "name": "Claude Opus 4.7",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-16",
       "temperature": false,
       "tool_call": true
@@ -272,6 +321,18 @@
       "name": "Claude Opus 4.8",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-28",
       "temperature": false,
       "tool_call": true
@@ -307,6 +368,7 @@
       "name": "Claude Sonnet 4 (latest)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-05-22",
       "temperature": true,
       "tool_call": true
@@ -342,6 +404,13 @@
       "name": "Claude Sonnet 4.5 (latest)",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "max": 32000,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-09-29",
       "temperature": true,
       "tool_call": true
@@ -377,6 +446,22 @@
       "name": "Claude Sonnet 4.6",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 32000,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-17",
       "temperature": true,
       "tool_call": true
@@ -680,6 +765,16 @@
       "name": "GPT-5 Mini",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-07",
       "structured_output": true,
       "temperature": false,
@@ -714,6 +809,7 @@
       "name": "GPT-5.2",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-12-11",
       "structured_output": true,
       "temperature": false,
@@ -749,6 +845,7 @@
       "name": "GPT-5.2 Codex",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2025-12-11",
       "structured_output": true,
       "temperature": false,
@@ -784,6 +881,17 @@
       "name": "GPT-5.3 Codex",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-02-05",
       "structured_output": true,
       "temperature": false,
@@ -835,6 +943,18 @@
       "name": "GPT-5.4",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-03-05",
       "structured_output": true,
       "temperature": false,
@@ -869,6 +989,18 @@
       "name": "GPT-5.4 mini",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-03-17",
       "structured_output": true,
       "temperature": false,
@@ -903,6 +1035,7 @@
       "name": "GPT-5.4 nano",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-03-17",
       "structured_output": true,
       "temperature": false,
@@ -954,6 +1087,18 @@
       "name": "GPT-5.5",
       "open_weights": false,
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-04-23",
       "structured_output": true,
       "temperature": false,

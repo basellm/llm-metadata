@@ -1692,8 +1692,8 @@
     "deepseek/deepseek-chat": {
       "attachment": false,
       "cost": {
-        "input": 0.2002,
-        "output": 0.8001
+        "input": 0,
+        "output": 0
       },
       "description": "DeepSeek Chat は openrouter によって提供される AI モデルです。",
       "family": "deepseek",
@@ -1824,9 +1824,8 @@
     "deepseek/deepseek-r1-0528": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.35,
-        "input": 0.5,
-        "output": 2.15
+        "input": 0,
+        "output": 0
       },
       "description": "R1 0528 は openrouter によって提供される AI モデルです。",
       "family": "deepseek",
@@ -1834,8 +1833,8 @@
       "knowledge": "2025-03-31",
       "last_updated": "2025-05-28",
       "limit": {
-        "context": 163840,
-        "output": 32768
+        "context": 128000,
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -1889,9 +1888,8 @@
     "deepseek/deepseek-v3.1-terminus": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.13,
-        "input": 0.27,
-        "output": 0.95
+        "input": 0,
+        "output": 0
       },
       "description": "DeepSeek V3.1 Terminus は openrouter によって提供される AI モデルです。",
       "family": "deepseek",
@@ -1899,8 +1897,8 @@
       "knowledge": "2025-03-31",
       "last_updated": "2025-09-22",
       "limit": {
-        "context": 163840,
-        "output": 32768
+        "context": 128000,
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -1926,8 +1924,9 @@
     "deepseek/deepseek-v3.2": {
       "attachment": false,
       "cost": {
-        "input": 0.2288,
-        "output": 0.3432
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "DeepSeek V3.2 は openrouter によって提供される AI モデルです。",
       "family": "deepseek",
@@ -1998,9 +1997,9 @@
     "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.02,
-        "input": 0.09,
-        "output": 0.18
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "DeepSeek V4 Flash は openrouter によって提供される AI モデルです。",
       "family": "deepseek-flash",
@@ -2011,8 +2010,8 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1000000,
-        "output": 65536
+        "context": 1024000,
+        "output": 384000
       },
       "modalities": {
         "input": [
@@ -2045,9 +2044,9 @@
     "deepseek/deepseek-v4-pro": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.003625,
-        "input": 0.435,
-        "output": 0.87
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "DeepSeek V4 Pro は openrouter によって提供される AI モデルです。",
       "family": "deepseek-thinking",
@@ -2058,7 +2057,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1048576,
+        "context": 1024000,
         "output": 384000
       },
       "modalities": {
@@ -2152,7 +2151,7 @@
       "last_updated": "2025-08-26",
       "limit": {
         "context": 32768,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -2537,8 +2536,8 @@
       "id": "google/gemini-3.1-flash-image",
       "last_updated": "2026-06-18",
       "limit": {
-        "context": 65536,
-        "output": 65536
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -3532,9 +3531,9 @@
     "kwaipilot/kat-coder-pro-v2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.06,
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "KAT-Coder-Pro V2 は openrouter によって提供される AI モデルです。",
       "family": "kat-coder",
@@ -4320,9 +4319,9 @@
     "minimax/minimax-m2.5": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.15,
-        "output": 0.9
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "MiniMax-M2.5 は openrouter によって提供される AI モデルです。",
       "family": "minimax",
@@ -4332,8 +4331,8 @@
       },
       "last_updated": "2026-02-12",
       "limit": {
-        "context": 196608,
-        "output": 196608
+        "context": 200000,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -5105,6 +5104,7 @@
     "moonshotai/kimi-k2-thinking": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.6,
         "input": 0.6,
         "output": 2.5
       },
@@ -5140,8 +5140,9 @@
     "moonshotai/kimi-k2.5": {
       "attachment": true,
       "cost": {
-        "input": 0.375,
-        "output": 2.025
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "Kimi K2.5 は openrouter によって提供される AI モデルです。",
       "family": "kimi-k2",
@@ -5153,7 +5154,7 @@
       "last_updated": "2026-01",
       "limit": {
         "context": 256000,
-        "output": 262144
+        "output": 256000
       },
       "modalities": {
         "input": [
@@ -5176,9 +5177,9 @@
     "moonshotai/kimi-k2.6": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.144,
-        "input": 0.66,
-        "output": 3.41
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "Kimi K2.6 は openrouter によって提供される AI モデルです。",
       "family": "kimi-k2",
@@ -5189,8 +5190,8 @@
       "knowledge": "2025-01",
       "last_updated": "2026-04-21",
       "limit": {
-        "context": 262144,
-        "output": 262144
+        "context": 256000,
+        "output": 256000
       },
       "modalities": {
         "input": [
@@ -9115,8 +9116,8 @@
     "qwen/qwen3-30b-a3b-instruct-2507": {
       "attachment": false,
       "cost": {
-        "input": 0.04815,
-        "output": 0.19305
+        "input": 0,
+        "output": 0
       },
       "description": "Qwen3 30B A3B Instruct 2507 は openrouter によって提供される AI モデルです。",
       "family": "qwen",
@@ -9347,17 +9348,17 @@
     "qwen/qwen3-coder-next": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.07,
-        "input": 0.11,
-        "output": 0.8
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "Qwen3 Coder Next は openrouter によって提供される AI モデルです。",
       "family": "qwen",
       "id": "qwen/qwen3-coder-next",
       "last_updated": "2026-02-04",
       "limit": {
-        "context": 262144,
-        "output": 262144
+        "context": 256000,
+        "output": 64000
       },
       "modalities": {
         "input": [
@@ -9905,6 +9906,7 @@
     "qwen/qwen3.5-35b-a3b": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.05,
         "input": 0.14,
         "output": 1
       },
@@ -9914,7 +9916,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 81920
       },
       "modalities": {
         "input": [
@@ -9942,16 +9944,17 @@
     "qwen/qwen3.5-397b-a17b": {
       "attachment": true,
       "cost": {
-        "input": 0.385,
-        "output": 2.45
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "Qwen3.5 397B-A17B は openrouter によって提供される AI モデルです。",
       "family": "qwen",
       "id": "qwen/qwen3.5-397b-a17b",
       "last_updated": "2026-02-15",
       "limit": {
-        "context": 131072,
-        "output": 65536
+        "context": 256000,
+        "output": 64000
       },
       "modalities": {
         "input": [
@@ -10550,6 +10553,37 @@
       "release_date": "2025-12-08",
       "structured_output": false,
       "temperature": true,
+      "tool_call": true
+    },
+    "sakana/fugu-ultra": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 5,
+        "output": 30
+      },
+      "description": "Fugu Ultra は openrouter によって提供される AI モデルです。",
+      "id": "sakana/fugu-ultra",
+      "last_updated": "2026-06-24",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Fugu Ultra",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-06-24",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "sao10k/l3-lunaris-8b": {
@@ -11242,8 +11276,7 @@
     "xiaomi/mimo-v2.5": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0028,
-        "input": 0.14,
+        "input": 0.105,
         "output": 0.28
       },
       "description": "MiMo-V2.5 は openrouter によって提供される AI モデルです。",
@@ -11255,7 +11288,7 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1048576,
+        "context": 32000,
         "output": 131072
       },
       "modalities": {
@@ -11505,9 +11538,8 @@
     "z-ai/glm-4.7": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.08,
-        "input": 0.4,
-        "output": 1.75
+        "input": 0,
+        "output": 0
       },
       "description": "GLM-4.7 は openrouter によって提供される AI モデルです。",
       "family": "glm",
@@ -11518,8 +11550,8 @@
       "knowledge": "2025-04",
       "last_updated": "2025-12-22",
       "limit": {
-        "context": 202752,
-        "output": 131072
+        "context": 200000,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -11577,9 +11609,9 @@
     "z-ai/glm-5": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.12,
-        "input": 0.6,
-        "output": 1.92
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "GLM-5 は openrouter によって提供される AI モデルです。",
       "family": "glm",
@@ -11589,8 +11621,8 @@
       },
       "last_updated": "2026-02-12",
       "limit": {
-        "context": 202752,
-        "output": 16384
+        "context": 198000,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -11647,9 +11679,9 @@
     "z-ai/glm-5.1": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.49,
-        "input": 0.98,
-        "output": 3.08
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "GLM-5.1 は openrouter によって提供される AI モデルです。",
       "family": "glm",
@@ -11659,8 +11691,8 @@
       },
       "last_updated": "2026-04-07",
       "limit": {
-        "context": 202752,
-        "output": 65535
+        "context": 200000,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -11682,9 +11714,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.18,
-        "input": 0.95,
-        "output": 3
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "GLM-5.2 は openrouter によって提供される AI モデルです。",
       "family": "glm",
@@ -11694,8 +11726,8 @@
       },
       "last_updated": "2026-06-13",
       "limit": {
-        "context": 1048576,
-        "output": 32768
+        "context": 1024000,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -12038,17 +12070,17 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.144,
-        "input": 0.66,
-        "output": 3.41
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "MoonshotAI Kimi Latest は openrouter によって提供される AI モデルです。",
       "family": "kimi",
       "id": "~moonshotai/kimi-latest",
       "last_updated": "2026-04-27",
       "limit": {
-        "context": 262144,
-        "output": 262144
+        "context": 256000,
+        "output": 256000
       },
       "modalities": {
         "input": [
