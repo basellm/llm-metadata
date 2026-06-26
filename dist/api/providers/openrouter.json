@@ -1692,8 +1692,8 @@
     "deepseek/deepseek-chat": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "input": 0.2002,
+        "output": 0.8001
       },
       "description": "DeepSeek Chat is an AI model provided by openrouter.",
       "family": "deepseek",
@@ -1824,8 +1824,9 @@
     "deepseek/deepseek-r1-0528": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.35,
+        "input": 0.5,
+        "output": 2.15
       },
       "description": "R1 0528 is an AI model provided by openrouter.",
       "family": "deepseek",
@@ -1833,8 +1834,8 @@
       "knowledge": "2025-03-31",
       "last_updated": "2025-05-28",
       "limit": {
-        "context": 128000,
-        "output": 32000
+        "context": 163840,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -1888,8 +1889,9 @@
     "deepseek/deepseek-v3.1-terminus": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.13,
+        "input": 0.27,
+        "output": 0.95
       },
       "description": "DeepSeek V3.1 Terminus is an AI model provided by openrouter.",
       "family": "deepseek",
@@ -1897,8 +1899,8 @@
       "knowledge": "2025-03-31",
       "last_updated": "2025-09-22",
       "limit": {
-        "context": 128000,
-        "output": 32000
+        "context": 163840,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -1924,9 +1926,8 @@
     "deepseek/deepseek-v3.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "input": 0.2288,
+        "output": 0.3432
       },
       "description": "DeepSeek V3.2 is an AI model provided by openrouter.",
       "family": "deepseek",
@@ -1997,9 +1998,9 @@
     "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.02,
+        "input": 0.09,
+        "output": 0.18
       },
       "description": "DeepSeek V4 Flash is an AI model provided by openrouter.",
       "family": "deepseek-flash",
@@ -2010,8 +2011,8 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1024000,
-        "output": 384000
+        "context": 1000000,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -2044,9 +2045,9 @@
     "deepseek/deepseek-v4-pro": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.003625,
+        "input": 0.435,
+        "output": 0.87
       },
       "description": "DeepSeek V4 Pro is an AI model provided by openrouter.",
       "family": "deepseek-thinking",
@@ -2057,7 +2058,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1024000,
+        "context": 1048576,
         "output": 384000
       },
       "modalities": {
@@ -3108,7 +3109,7 @@
         }
       ],
       "release_date": "2026-04-02",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -3531,9 +3532,9 @@
     "kwaipilot/kat-coder-pro-v2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 1.2
       },
       "description": "KAT-Coder-Pro V2 is an AI model provided by openrouter.",
       "family": "kat-coder",
@@ -4319,9 +4320,8 @@
     "minimax/minimax-m2.5": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "input": 0.12,
+        "output": 0.48
       },
       "description": "MiniMax-M2.5 is an AI model provided by openrouter.",
       "family": "minimax",
@@ -4331,8 +4331,8 @@
       },
       "last_updated": "2026-02-12",
       "limit": {
-        "context": 200000,
-        "output": 128000
+        "context": 196608,
+        "output": 196608
       },
       "modalities": {
         "input": [
@@ -4354,8 +4354,8 @@
     "minimax/minimax-m2.7": {
       "attachment": false,
       "cost": {
-        "input": 0.24,
-        "output": 0.96
+        "input": 0.18,
+        "output": 0.72
       },
       "description": "MiniMax-M2.7 is an AI model provided by openrouter.",
       "family": "minimax",
@@ -5140,9 +5140,8 @@
     "moonshotai/kimi-k2.5": {
       "attachment": true,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "input": 0.375,
+        "output": 2.025
       },
       "description": "Kimi K2.5 is an AI model provided by openrouter.",
       "family": "kimi-k2",
@@ -5177,9 +5176,9 @@
     "moonshotai/kimi-k2.6": {
       "attachment": true,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.144,
+        "input": 0.66,
+        "output": 3.41
       },
       "description": "Kimi K2.6 is an AI model provided by openrouter.",
       "family": "kimi-k2",
@@ -5190,8 +5189,8 @@
       "knowledge": "2025-01",
       "last_updated": "2026-04-21",
       "limit": {
-        "context": 256000,
-        "output": 256000
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -5631,8 +5630,8 @@
     "nvidia/nemotron-3-super-120b-a12b": {
       "attachment": false,
       "cost": {
-        "input": 0.09,
-        "output": 0.45
+        "input": 0.085,
+        "output": 0.4
       },
       "description": "Nemotron 3 Super 120B A12B is an AI model provided by openrouter.",
       "family": "nemotron",
@@ -5640,7 +5639,7 @@
       "last_updated": "2026-03-11",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -7628,8 +7627,8 @@
     "openai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "input": 0.039,
-        "output": 0.18
+        "input": 0.03,
+        "output": 0.15
       },
       "description": "gpt-oss-120b is an AI model provided by openrouter.",
       "family": "gpt-oss",
@@ -7638,7 +7637,7 @@
       "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
-        "output": 32768
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -9116,8 +9115,8 @@
     "qwen/qwen3-30b-a3b-instruct-2507": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "input": 0.04815,
+        "output": 0.19305
       },
       "description": "Qwen3 30B A3B Instruct 2507 is an AI model provided by openrouter.",
       "family": "qwen",
@@ -9348,17 +9347,17 @@
     "qwen/qwen3-coder-next": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.07,
+        "input": 0.11,
+        "output": 0.8
       },
       "description": "Qwen3 Coder Next is an AI model provided by openrouter.",
       "family": "qwen",
       "id": "qwen/qwen3-coder-next",
       "last_updated": "2026-02-04",
       "limit": {
-        "context": 256000,
-        "output": 64000
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -9944,16 +9943,15 @@
     "qwen/qwen3.5-397b-a17b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "input": 0.385,
+        "output": 2.45
       },
       "description": "Qwen3.5 397B-A17B is an AI model provided by openrouter.",
       "family": "qwen",
       "id": "qwen/qwen3.5-397b-a17b",
       "last_updated": "2026-02-15",
       "limit": {
-        "context": 256000,
+        "context": 131072,
         "output": 64000
       },
       "modalities": {
@@ -11215,7 +11213,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -11538,8 +11537,9 @@
     "z-ai/glm-4.7": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.08,
+        "input": 0.4,
+        "output": 1.75
       },
       "description": "GLM-4.7 is an AI model provided by openrouter.",
       "family": "glm",
@@ -11550,8 +11550,8 @@
       "knowledge": "2025-04",
       "last_updated": "2025-12-22",
       "limit": {
-        "context": 200000,
-        "output": 128000
+        "context": 202752,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -11609,9 +11609,9 @@
     "z-ai/glm-5": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.12,
+        "input": 0.6,
+        "output": 1.92
       },
       "description": "GLM-5 is an AI model provided by openrouter.",
       "family": "glm",
@@ -11621,7 +11621,7 @@
       },
       "last_updated": "2026-02-12",
       "limit": {
-        "context": 198000,
+        "context": 202752,
         "output": 128000
       },
       "modalities": {
@@ -11679,9 +11679,9 @@
     "z-ai/glm-5.1": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.182,
+        "input": 0.98,
+        "output": 3.08
       },
       "description": "GLM-5.1 is an AI model provided by openrouter.",
       "family": "glm",
@@ -11691,7 +11691,7 @@
       },
       "last_updated": "2026-04-07",
       "limit": {
-        "context": 200000,
+        "context": 202752,
         "output": 128000
       },
       "modalities": {
@@ -11714,9 +11714,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.18,
+        "input": 0.95,
+        "output": 3
       },
       "description": "GLM-5.2 is an AI model provided by openrouter.",
       "family": "glm",
@@ -11726,8 +11726,8 @@
       },
       "last_updated": "2026-06-13",
       "limit": {
-        "context": 1024000,
-        "output": 128000
+        "context": 1048576,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -12070,17 +12070,17 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.144,
+        "input": 0.66,
+        "output": 3.41
       },
       "description": "MoonshotAI Kimi Latest is an AI model provided by openrouter.",
       "family": "kimi",
       "id": "~moonshotai/kimi-latest",
       "last_updated": "2026-04-27",
       "limit": {
-        "context": 256000,
-        "output": 256000
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [

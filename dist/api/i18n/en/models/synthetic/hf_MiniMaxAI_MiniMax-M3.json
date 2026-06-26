@@ -8,6 +8,9 @@
   "description": "MiniMax-M3 is an AI model provided by synthetic.",
   "family": "minimax",
   "id": "hf:MiniMaxAI/MiniMax-M3",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "last_updated": "2026-06-12",
   "limit": {
     "context": 524288,
@@ -25,9 +28,12 @@
   "name": "MiniMax-M3",
   "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    }
+  ],
   "release_date": "2026-06-12",
-  "status": "beta",
   "structured_output": true,
   "temperature": true,
   "tool_call": true
