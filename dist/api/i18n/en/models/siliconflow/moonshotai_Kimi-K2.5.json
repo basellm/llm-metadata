@@ -5,7 +5,7 @@
     "output": 2.25
   },
   "description": "moonshotai/Kimi-K2.5 is an AI model provided by siliconflow.",
-  "family": "kimi-k2",
+  "family": "kimi",
   "id": "moonshotai/Kimi-K2.5",
   "interleaved": {
     "field": "reasoning_content"
@@ -27,6 +27,13 @@
   "name": "moonshotai/Kimi-K2.5",
   "open_weights": true,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "max": 32768,
+      "min": 128,
+      "type": "budget_tokens"
+    }
+  ],
   "release_date": "2026-01-27",
   "structured_output": true,
   "temperature": true,

@@ -24,6 +24,25 @@
   "name": "Gemini 2.5 Flash Preview",
   "open_weights": false,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "max": 24576,
+      "min": 0,
+      "type": "budget_tokens"
+    }
+  ],
   "release_date": "2025-04-17",
   "structured_output": false,
   "tool_call": false

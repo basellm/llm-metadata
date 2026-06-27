@@ -22,7 +22,17 @@
   },
   "name": "Qwen/Qwen3-14B",
   "open_weights": false,
-  "reasoning": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "max": 32768,
+      "min": 128,
+      "type": "budget_tokens"
+    }
+  ],
   "release_date": "2025-04-30",
   "structured_output": true,
   "temperature": true,

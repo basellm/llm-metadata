@@ -25,6 +25,22 @@
   "name": "Claude 4.5 Opus",
   "open_weights": false,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "max": 63999,
+      "min": 1024,
+      "type": "budget_tokens"
+    }
+  ],
   "release_date": "2025-11-01",
   "structured_output": true,
   "tool_call": true
