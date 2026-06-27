@@ -1,0 +1,290 @@
+{
+  "api": "https://inference.tinfoil.sh/v1",
+  "doc": "https://docs.tinfoil.sh",
+  "env": [
+    "TINFOIL_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/tinfoil.svg",
+  "id": "tinfoil",
+  "models": {
+    "gemma4-31b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.4,
+        "output": 1
+      },
+      "description": "Gemma 4 31B IT is an AI model provided by tinfoil.",
+      "family": "gemma",
+      "id": "gemma4-31b",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 256000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 31B IT",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5-2": {
+      "attachment": false,
+      "cost": {
+        "input": 1.5,
+        "output": 5.25
+      },
+      "description": "GLM-5.2 is an AI model provided by tinfoil.",
+      "family": "glm",
+      "id": "glm-5-2",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 384000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-oss-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "gpt-oss-120b is an AI model provided by tinfoil.",
+      "family": "gpt-oss",
+      "id": "gpt-oss-120b",
+      "knowledge": "2024-06",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-oss-120b",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-oss-safeguard-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "gpt-oss-safeguard-120b is an AI model provided by tinfoil.",
+      "family": "gpt-oss",
+      "id": "gpt-oss-safeguard-120b",
+      "knowledge": "2024-06",
+      "last_updated": "2025-10-29",
+      "limit": {
+        "context": 131000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-oss-safeguard-120b",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-10-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2-6": {
+      "attachment": true,
+      "cost": {
+        "input": 1.5,
+        "output": 5.25
+      },
+      "description": "Kimi K2.6 is an AI model provided by tinfoil.",
+      "family": "kimi-k2",
+      "id": "kimi-k2-6",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 256000,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "llama3-3-70b": {
+      "attachment": true,
+      "cost": {
+        "input": 1.75,
+        "output": 2.75
+      },
+      "description": "Llama-3.3-70B-Instruct is an AI model provided by tinfoil.",
+      "family": "llama",
+      "id": "llama3-3-70b",
+      "knowledge": "2023-12",
+      "last_updated": "2024-12-06",
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama-3.3-70B-Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-12-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nomic-embed-text": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0
+      },
+      "description": "Nomic Embed Text v1.5 is an AI model provided by tinfoil.",
+      "id": "nomic-embed-text",
+      "last_updated": "2024-02",
+      "limit": {
+        "context": 8192,
+        "output": 768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nomic Embed Text v1.5",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-02",
+      "structured_output": false,
+      "temperature": false,
+      "tool_call": false
+    }
+  },
+  "name": "Tinfoil",
+  "npm": "@ai-sdk/openai-compatible"
+}

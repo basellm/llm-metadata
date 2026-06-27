@@ -26,6 +26,24 @@
   "name": "Anthropic: Claude Sonnet 4",
   "open_weights": false,
   "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "min": 1024,
+      "type": "budget_tokens"
+    }
+  ],
   "release_date": "2025-05-22",
   "temperature": true,
   "tool_call": true
