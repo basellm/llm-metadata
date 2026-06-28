@@ -169,7 +169,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "max": 63999,
           "min": 1024,
           "type": "budget_tokens"
         }
@@ -213,7 +212,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "max": 31999,
           "min": 1024,
           "type": "budget_tokens"
         }
@@ -265,7 +263,6 @@
           ]
         },
         {
-          "max": 63999,
           "min": 1024,
           "type": "budget_tokens"
         }
@@ -318,7 +315,6 @@
           ]
         },
         {
-          "max": 127999,
           "min": 1024,
           "type": "budget_tokens"
         }
@@ -477,7 +473,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "max": 63999,
           "min": 1024,
           "type": "budget_tokens"
         }
@@ -540,7 +535,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "max": 63999,
           "min": 1024,
           "type": "budget_tokens"
         }
@@ -594,7 +588,6 @@
           ]
         },
         {
-          "max": 63999,
           "min": 1024,
           "type": "budget_tokens"
         }
@@ -1239,7 +1232,15 @@
       "name": "GLM-5.2",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-06-13",
       "structured_output": true,
       "temperature": true,
@@ -1713,6 +1714,7 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
