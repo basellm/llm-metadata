@@ -1,0 +1,51 @@
+{
+  "api": "https://api.subconscious.dev/v1",
+  "doc": "https://docs.subconscious.dev",
+  "env": [
+    "SUBCONSCIOUS_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/subconscious.svg",
+  "id": "subconscious",
+  "models": {
+    "subconscious/tim-qwen3.6-27b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "TIM-Qwen3.6 27B is an AI model provided by subconscious.",
+      "id": "subconscious/tim-qwen3.6-27b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-05-11",
+      "limit": {
+        "context": 8192,
+        "input": 8192,
+        "output": 5000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "TIM-Qwen3.6 27B",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-05-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Subconscious",
+  "npm": "@ai-sdk/openai-compatible"
+}
