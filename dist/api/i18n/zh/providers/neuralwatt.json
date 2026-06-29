@@ -10,6 +10,7 @@
     "Qwen/Qwen3.5-397B-A17B-FP8": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.1725,
         "input": 0.69,
         "output": 4.14
       },
@@ -47,6 +48,7 @@
     "Qwen/Qwen3.6-35B-A3B": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.0725,
         "input": 0.29,
         "output": 1.15
       },
@@ -82,67 +84,10 @@
       "temperature": true,
       "tool_call": true
     },
-    "glm-5-fast": {
-      "attachment": false,
-      "cost": {
-        "input": 1.1,
-        "output": 3.6
-      },
-      "description": "GLM 5 Fast 是由 neuralwatt 提供的人工智能模型。",
-      "family": "glm",
-      "id": "glm-5-fast",
-      "last_updated": "2026-04-07",
-      "limit": {
-        "context": 202736,
-        "output": 202736
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5 Fast",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-04-07",
-      "temperature": true,
-      "tool_call": true
-    },
-    "glm-5.1-fast": {
-      "attachment": false,
-      "cost": {
-        "input": 1.1,
-        "output": 3.6
-      },
-      "description": "GLM 5.1 Fast 是由 neuralwatt 提供的人工智能模型。",
-      "family": "glm",
-      "id": "glm-5.1-fast",
-      "last_updated": "2026-04-07",
-      "limit": {
-        "context": 202736,
-        "output": 202736
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5.1 Fast",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-04-07",
-      "temperature": true,
-      "tool_call": true
-    },
     "glm-5.2": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.3625,
         "input": 1.45,
         "output": 4.5
       },
@@ -167,33 +112,42 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
+            "none",
             "minimal",
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-06-17",
       "temperature": true,
       "tool_call": true
     },
-    "glm-5.2-short": {
+    "glm-5.2-fast": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.3625,
         "input": 1.45,
         "output": 4.5
       },
-      "description": "GLM 5.2 short 是由 neuralwatt 提供的人工智能模型。",
+      "description": "GLM 5.2 Fast 是由 neuralwatt 提供的人工智能模型。",
       "family": "glm",
-      "id": "glm-5.2-short",
+      "id": "glm-5.2-fast",
       "last_updated": "2026-06-17",
       "limit": {
-        "context": 200000,
-        "output": 200000
+        "context": 1048560,
+        "output": 1048560
       },
       "modalities": {
         "input": [
@@ -203,19 +157,217 @@
           "text"
         ]
       },
-      "name": "GLM 5.2 short",
+      "name": "GLM 5.2 Fast",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-06-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-flex": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.18125,
+        "input": 0.725,
+        "output": 2.25
+      },
+      "description": "GLM 5.2 Flex 是由 neuralwatt 提供的人工智能模型。",
+      "family": "glm",
+      "id": "glm-5.2-flex",
+      "last_updated": "2026-06-17",
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.2 Flex",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
+            "none",
             "minimal",
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-06-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-short": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3625,
+        "input": 1.45,
+        "output": 4.5
+      },
+      "description": "GLM 5.2 Short 是由 neuralwatt 提供的人工智能模型。",
+      "family": "glm",
+      "id": "glm-5.2-short",
+      "last_updated": "2026-06-17",
+      "limit": {
+        "context": 199984,
+        "output": 199984
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.2 Short",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-06-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-short-fast": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3625,
+        "input": 1.45,
+        "output": 4.5
+      },
+      "description": "GLM 5.2 Short Fast 是由 neuralwatt 提供的人工智能模型。",
+      "family": "glm",
+      "id": "glm-5.2-short-fast",
+      "last_updated": "2026-06-17",
+      "limit": {
+        "context": 199984,
+        "output": 199984
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.2 Short Fast",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-06-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-short-fast-flex": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.18125,
+        "input": 0.725,
+        "output": 2.25
+      },
+      "description": "GLM 5.2 Short Fast Flex 是由 neuralwatt 提供的人工智能模型。",
+      "family": "glm",
+      "id": "glm-5.2-short-fast-flex",
+      "last_updated": "2026-06-17",
+      "limit": {
+        "context": 199984,
+        "output": 199984
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.2 Short Fast Flex",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-06-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-short-flex": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.18125,
+        "input": 0.725,
+        "output": 2.25
+      },
+      "description": "GLM 5.2 Short Flex 是由 neuralwatt 提供的人工智能模型。",
+      "family": "glm",
+      "id": "glm-5.2-short-flex",
+      "last_updated": "2026-06-17",
+      "limit": {
+        "context": 199984,
+        "output": 199984
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.2 Short Flex",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-06-17",
@@ -225,6 +377,7 @@
     "kimi-k2.5-fast": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.13,
         "input": 0.52,
         "output": 2.59
       },
@@ -255,6 +408,7 @@
     "kimi-k2.6-fast": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.1725,
         "input": 0.69,
         "output": 3.22
       },
@@ -282,9 +436,83 @@
       "temperature": true,
       "tool_call": true
     },
+    "kimi-k2.6-flex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.08625,
+        "input": 0.345,
+        "output": 1.61
+      },
+      "description": "Kimi K2.6 Flex 是由 neuralwatt 提供的人工智能模型。",
+      "family": "kimi-k2",
+      "id": "kimi-k2.6-flex",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262128,
+        "output": 262128
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6 Flex",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-21",
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.7-code-flex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.11875,
+        "input": 0.475,
+        "output": 2
+      },
+      "description": "Kimi K2.7 Code Flex 是由 neuralwatt 提供的人工智能模型。",
+      "family": "kimi-k2",
+      "id": "kimi-k2.7-code-flex",
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code Flex",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "moonshotai/Kimi-K2.5": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.13,
         "input": 0.52,
         "output": 2.59
       },
@@ -323,6 +551,7 @@
     "moonshotai/Kimi-K2.6": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.1725,
         "input": 0.69,
         "output": 3.22
       },
@@ -361,6 +590,7 @@
     "moonshotai/Kimi-K2.7-Code": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.2375,
         "input": 0.95,
         "output": 4
       },
@@ -394,6 +624,7 @@
     "qwen3.5-397b-fast": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.1725,
         "input": 0.69,
         "output": 4.14
       },
@@ -423,6 +654,7 @@
     "qwen3.6-35b-fast": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.0725,
         "input": 0.29,
         "output": 1.15
       },
@@ -447,43 +679,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-04-01",
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai-org/GLM-5.1-FP8": {
-      "attachment": false,
-      "cost": {
-        "input": 1.1,
-        "output": 3.6
-      },
-      "description": "GLM 5.1 FP8 是由 neuralwatt 提供的人工智能模型。",
-      "family": "glm",
-      "id": "zai-org/GLM-5.1-FP8",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-04-07",
-      "limit": {
-        "context": 202736,
-        "output": 202736
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5.1 FP8",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-04-07",
       "temperature": true,
       "tool_call": true
     }
