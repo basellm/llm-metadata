@@ -7,6 +7,38 @@
   "iconURL": "https://models.dev/logos/gmicloud.svg",
   "id": "gmicloud",
   "models": {
+    "Qwen/Qwen3.7-Max": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 3.125,
+        "input": 2.5,
+        "output": 7.5
+      },
+      "description": "Qwen3.7 Max は gmicloud によって提供される AI モデルです。",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.7-Max",
+      "last_updated": "2026-05-21",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-05-21",
+      "temperature": true,
+      "tool_call": true
+    },
     "anthropic/claude-opus-4.6": {
       "attachment": true,
       "cost": {
@@ -254,6 +286,42 @@
       "temperature": true,
       "tool_call": true
     },
+    "moonshotai/kimi-k2.7-code-highspeed": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.38,
+        "input": 1.9,
+        "output": 8
+      },
+      "description": "Kimi K2.7 Code Highspeed は gmicloud によって提供される AI モデルです。",
+      "family": "kimi-k2",
+      "id": "moonshotai/kimi-k2.7-code-highspeed",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code Highspeed",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "zai-org/GLM-5-FP8": {
       "attachment": false,
       "cost": {
@@ -319,6 +387,49 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-04-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.2-FP8": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.182,
+        "input": 0.979,
+        "output": 3.08
+      },
+      "description": "GLM-5.2 は gmicloud によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "zai-org/GLM-5.2-FP8",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

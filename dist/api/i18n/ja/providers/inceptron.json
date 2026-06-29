@@ -10,9 +10,9 @@
     "MiniMaxAI/MiniMax-M2.5": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.03,
+        "cache_read": 0.05,
         "cache_write": 0,
-        "input": 0.24,
+        "input": 0.15,
         "output": 0.9
       },
       "description": "MiniMax M2.5 は inceptron によって提供される AI モデルです。",
@@ -34,7 +34,16 @@
       "name": "MiniMax M2.5",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-02-12",
       "structured_output": true,
       "temperature": true,
@@ -45,7 +54,7 @@
       "cost": {
         "cache_read": 0.2,
         "cache_write": 0,
-        "input": 0.78,
+        "input": 0.66,
         "output": 3.5
       },
       "description": "Kimi K2.6 は inceptron によって提供される AI モデルです。",
@@ -78,37 +87,81 @@
       "temperature": true,
       "tool_call": true
     },
-    "nvidia/llama-3.3-70b-instruct-fp8": {
+    "moonshotai/Kimi-K2.6-Fast": {
       "attachment": true,
       "cost": {
-        "cache_read": 0,
+        "cache_read": 0.4,
         "cache_write": 0,
-        "input": 0.12,
-        "output": 0.38
+        "input": 1.32,
+        "output": 7
       },
-      "description": "Llama 3.3 70B Instruct は inceptron によって提供される AI モデルです。",
-      "family": "llama",
-      "id": "nvidia/llama-3.3-70b-instruct-fp8",
-      "knowledge": "2023-12",
-      "last_updated": "2024-12-06",
+      "description": "Kimi K2.6 Fast は inceptron によって提供される AI モデルです。",
+      "family": "kimi-k2",
+      "id": "moonshotai/Kimi-K2.6-Fast",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
       "limit": {
-        "context": 131072,
-        "output": 131072
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Llama 3.3 70B Instruct",
+      "name": "Kimi K2.6 Fast",
       "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-12-06",
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-21",
+      "status": "alpha",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.7-Code": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 0,
+        "input": 0.75,
+        "output": 3.5
+      },
+      "description": "Kimi K2.7 Code は inceptron によって提供される AI モデルです。",
+      "family": "kimi-k2",
+      "id": "moonshotai/Kimi-K2.7-Code",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "zai-org/GLM-5.1-FP8": {
@@ -141,8 +194,60 @@
       "name": "GLM 5.1",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "cache_write": 0,
+        "input": 1.2,
+        "output": 4.2
+      },
+      "description": "GLM 5.2 は inceptron によって提供される AI モデルです。",
+      "family": "glm",
+      "id": "zai-org/GLM-5.2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
