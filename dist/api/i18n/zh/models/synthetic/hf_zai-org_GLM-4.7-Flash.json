@@ -1,17 +1,18 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.06,
-    "input": 0.06,
-    "output": 0.4
+    "cache_read": 0.1,
+    "input": 0.1,
+    "output": 0.5
   },
   "description": "GLM-4.7-Flash 是由 synthetic 提供的人工智能模型。",
-  "family": "glm",
+  "family": "glm-flash",
   "id": "hf:zai-org/GLM-4.7-Flash",
   "interleaved": {
     "field": "reasoning_content"
   },
-  "last_updated": "2026-01-18",
+  "knowledge": "2025-04",
+  "last_updated": "2026-01-19",
   "limit": {
     "context": 196608,
     "output": 65536
@@ -29,16 +30,10 @@
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "effort",
-      "values": [
-        "low",
-        "medium",
-        "high"
-      ]
+      "type": "toggle"
     }
   ],
-  "release_date": "2026-01-18",
-  "structured_output": true,
+  "release_date": "2026-01-19",
   "temperature": true,
   "tool_call": true
 }
