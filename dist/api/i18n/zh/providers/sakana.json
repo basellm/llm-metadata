@@ -1,0 +1,172 @@
+{
+  "api": "https://api.sakana.ai/v1",
+  "doc": "https://console.sakana.ai/models",
+  "env": [
+    "SAKANA_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/sakana.svg",
+  "id": "sakana",
+  "models": {
+    "fugu": {
+      "attachment": true,
+      "description": "Fugu 是由 sakana 提供的人工智能模型。",
+      "family": "fugu",
+      "id": "fugu",
+      "last_updated": "2026-06-15",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Fugu",
+      "open_weights": false,
+      "provider": {
+        "shape": "responses"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-06-15",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "fugu-ultra": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 1,
+          "input": 10,
+          "output": 45
+        },
+        "input": 5,
+        "output": 30,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "input": 10,
+            "output": 45,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Fugu Ultra 是由 sakana 提供的人工智能模型。",
+      "family": "fugu",
+      "id": "fugu-ultra",
+      "last_updated": "2026-06-15",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Fugu Ultra",
+      "open_weights": false,
+      "provider": {
+        "shape": "responses"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-06-15",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "fugu-ultra-20260615": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 1,
+          "input": 10,
+          "output": 45
+        },
+        "input": 5,
+        "output": 30,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "input": 10,
+            "output": 45,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Fugu Ultra 是由 sakana 提供的人工智能模型。",
+      "family": "fugu",
+      "id": "fugu-ultra-20260615",
+      "last_updated": "2026-06-15",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Fugu Ultra",
+      "open_weights": false,
+      "provider": {
+        "shape": "responses"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-06-15",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    }
+  },
+  "name": "Sakana AI",
+  "npm": "@ai-sdk/openai-compatible"
+}

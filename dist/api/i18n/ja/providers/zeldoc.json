@@ -8,7 +8,7 @@
   "id": "zeldoc",
   "models": {
     "z-code": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "input": 0,
         "output": 0
@@ -21,14 +21,12 @@
       "knowledge": "2025-01",
       "last_updated": "2026-04-15",
       "limit": {
-        "context": 262144,
-        "output": 262144
+        "context": 1000000,
+        "output": 131072
       },
       "modalities": {
         "input": [
-          "text",
-          "image",
-          "video"
+          "text"
         ],
         "output": [
           "text"
@@ -39,7 +37,11 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
         }
       ],
       "release_date": "2026-04-15",
