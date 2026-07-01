@@ -14,7 +14,7 @@
         "input": 2,
         "output": 8
       },
-      "description": "Jamba Large 1.7 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
       "family": "jamba",
       "id": "ai21/jamba-large-1.7",
       "knowledge": "2024-08-31",
@@ -45,7 +45,7 @@
         "input": 4,
         "output": 8
       },
-      "description": "Aion-1.0 是由 openrouter 提供的人工智能模型。",
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "id": "aion-labs/aion-1.0",
       "last_updated": "2025-02-04",
       "limit": {
@@ -75,7 +75,7 @@
         "input": 0.7,
         "output": 1.4
       },
-      "description": "Aion-1.0-Mini 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "id": "aion-labs/aion-1.0-mini",
       "last_updated": "2025-02-04",
       "limit": {
@@ -106,7 +106,7 @@
         "input": 0.8,
         "output": 1.6
       },
-      "description": "Aion-2.0 是由 openrouter 提供的人工智能模型。",
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "id": "aion-labs/aion-2.0",
       "last_updated": "2026-02-23",
       "limit": {
@@ -136,7 +136,7 @@
         "input": 0.8,
         "output": 1.6
       },
-      "description": "Aion-RP 1.0 (8B) 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "aion-labs/aion-rp-llama-3.1-8b",
       "knowledge": "2023-12-31",
@@ -167,7 +167,7 @@
         "input": 0.15,
         "output": 0.5
       },
-      "description": "Olmo 3 32B Think 是由 openrouter 提供的人工智能模型。",
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "family": "allenai",
       "id": "allenai/olmo-3-32b-think",
       "last_updated": "2025-11-21",
@@ -198,7 +198,7 @@
         "input": 0.3,
         "output": 2.5
       },
-      "description": "Nova 2 Lite 是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
       "family": "nova",
       "id": "amazon/nova-2-lite-v1",
       "last_updated": "2025-12-02",
@@ -232,7 +232,7 @@
         "input": 0.06,
         "output": 0.24
       },
-      "description": "Nova Lite 1.0 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "nova-lite",
       "id": "amazon/nova-lite-v1",
       "knowledge": "2024-10-31",
@@ -264,7 +264,7 @@
         "input": 0.035,
         "output": 0.14
       },
-      "description": "Nova Micro 1.0 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "nova-micro",
       "id": "amazon/nova-micro-v1",
       "knowledge": "2024-10-31",
@@ -296,7 +296,7 @@
         "input": 2.5,
         "output": 12.5
       },
-      "description": "Nova Premier 1.0 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
       "family": "nova",
       "id": "amazon/nova-premier-v1",
       "last_updated": "2025-10-31",
@@ -327,7 +327,7 @@
         "input": 0.8,
         "output": 3.2
       },
-      "description": "Nova Pro 1.0 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
       "family": "nova-pro",
       "id": "amazon/nova-pro-v1",
       "knowledge": "2024-10-31",
@@ -359,7 +359,7 @@
         "input": 3,
         "output": 5
       },
-      "description": "Magnum v4 72B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "id": "anthracite-org/magnum-v4-72b",
       "knowledge": "2024-06-30",
       "last_updated": "2024-10-22",
@@ -391,7 +391,7 @@
         "input": 0.25,
         "output": 1.25
       },
-      "description": "Claude 3 Haiku 是由 openrouter 提供的人工智能模型。",
+      "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
       "family": "claude",
       "id": "anthropic/claude-3-haiku",
       "knowledge": "2023-08-31",
@@ -417,6 +417,53 @@
       "temperature": true,
       "tool_call": true
     },
+    "anthropic/claude-fable-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "input": 10,
+        "output": 50
+      },
+      "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+      "family": "claude-fable",
+      "id": "anthropic/claude-fable-5",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-06-09",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Fable 5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "anthropic/claude-haiku-4.5": {
       "attachment": true,
       "cost": {
@@ -425,7 +472,7 @@
         "input": 1,
         "output": 5
       },
-      "description": "Claude Haiku 4.5 (latest) 是由 openrouter 提供的人工智能模型。",
+      "description": "Fast Claude lane for lightweight agents, office tasks, and responsive chat",
       "family": "claude-haiku",
       "id": "anthropic/claude-haiku-4.5",
       "knowledge": "2025-02-28",
@@ -470,7 +517,7 @@
         "input": 15,
         "output": 75
       },
-      "description": "Claude Opus 4 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4",
       "knowledge": "2025-01-31",
@@ -515,7 +562,7 @@
         "input": 15,
         "output": 75
       },
-      "description": "Claude Opus 4.1 (latest) 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4.1",
       "knowledge": "2025-03-31",
@@ -560,7 +607,7 @@
         "input": 5,
         "output": 25
       },
-      "description": "Claude Opus 4.5 (latest) 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4.5",
       "knowledge": "2025-03-31",
@@ -631,7 +678,7 @@
           }
         ]
       },
-      "description": "Claude Opus 4.6 是由 openrouter 提供的人工智能模型。",
+      "description": "High-end Claude for difficult coding, planning, and slower expert reasoning",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4.6",
       "knowledge": "2025-05-31",
@@ -703,7 +750,7 @@
           }
         ]
       },
-      "description": "Claude Opus 4.7 是由 openrouter 提供的人工智能模型。",
+      "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4.7",
       "knowledge": "2026-01-31",
@@ -753,7 +800,7 @@
         "input": 30,
         "output": 150
       },
-      "description": "Claude Opus 4.7 (Fast) 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4.7-fast",
       "last_updated": "2026-05-12",
@@ -802,7 +849,7 @@
         "input": 5,
         "output": 25
       },
-      "description": "Claude Opus 4.8 是由 openrouter 提供的人工智能模型。",
+      "description": "Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4.8",
       "last_updated": "2026-05-28",
@@ -851,7 +898,7 @@
         "input": 10,
         "output": 50
       },
-      "description": "Claude Opus 4.8 (Fast) 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4.8-fast",
       "last_updated": "2026-05-27",
@@ -918,7 +965,7 @@
           }
         ]
       },
-      "description": "Claude Sonnet 4 是由 openrouter 提供的人工智能模型。",
+      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "anthropic/claude-sonnet-4",
       "knowledge": "2025-01-31",
@@ -981,7 +1028,7 @@
           }
         ]
       },
-      "description": "Claude Sonnet 4.5 (latest) 是由 openrouter 提供的人工智能模型。",
+      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "anthropic/claude-sonnet-4.5",
       "knowledge": "2025-07-31",
@@ -1044,7 +1091,7 @@
           }
         ]
       },
-      "description": "Claude Sonnet 4.6 是由 openrouter 提供的人工智能模型。",
+      "description": "Claude workhorse for coding agents, careful analysis, and production cost control",
       "family": "claude-sonnet",
       "id": "anthropic/claude-sonnet-4.6",
       "knowledge": "2025-08-31",
@@ -1098,7 +1145,7 @@
         "input": 2,
         "output": 10
       },
-      "description": "Claude Sonnet 5 是由 openrouter 提供的人工智能模型。",
+      "description": "Everyday Claude agent model for coding, planning, browsing, and general work",
       "family": "claude-sonnet",
       "id": "anthropic/claude-sonnet-5",
       "knowledge": "2026-01-31",
@@ -1143,7 +1190,7 @@
         "input": 0.5,
         "output": 0.8
       },
-      "description": "Coder Large 是由 openrouter 提供的人工智能模型。",
+      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
       "id": "arcee-ai/coder-large",
       "knowledge": "2025-03-31",
       "last_updated": "2025-05-05",
@@ -1174,7 +1221,7 @@
         "input": 0.25,
         "output": 0.8
       },
-      "description": "Trinity Large Thinking 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
       "family": "trinity",
       "id": "arcee-ai/trinity-large-thinking",
       "last_updated": "2026-04-01",
@@ -1205,7 +1252,7 @@
         "input": 0.045,
         "output": 0.15
       },
-      "description": "Trinity Mini 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "trinity-mini",
       "id": "arcee-ai/trinity-mini",
       "last_updated": "2025-12-01",
@@ -1236,7 +1283,7 @@
         "input": 0.75,
         "output": 1.2
       },
-      "description": "Virtuoso Large 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
       "id": "arcee-ai/virtuoso-large",
       "knowledge": "2025-03-31",
       "last_updated": "2025-05-05",
@@ -1266,7 +1313,7 @@
         "input": 0.42,
         "output": 1.25
       },
-      "description": "ERNIE 4.5 VL 424B A47B  是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
       "family": "ernie",
       "id": "baidu/ernie-4.5-vl-424b-a47b",
       "knowledge": "2025-03-31",
@@ -1299,7 +1346,7 @@
         "input": 0.25,
         "output": 2
       },
-      "description": "Seed 1.6 是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
       "family": "seed",
       "id": "bytedance-seed/seed-1.6",
       "last_updated": "2025-12-23",
@@ -1332,7 +1379,7 @@
         "input": 0.075,
         "output": 0.3
       },
-      "description": "Seed 1.6 Flash 是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
       "family": "seed",
       "id": "bytedance-seed/seed-1.6-flash",
       "last_updated": "2025-12-23",
@@ -1365,7 +1412,7 @@
         "input": 0.25,
         "output": 2
       },
-      "description": "Seed-2.0-Lite 是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
       "family": "seed",
       "id": "bytedance-seed/seed-2.0-lite",
       "last_updated": "2026-03-10",
@@ -1408,7 +1455,7 @@
         "input": 0.1,
         "output": 0.4
       },
-      "description": "Seed-2.0-Mini 是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
       "family": "seed",
       "id": "bytedance-seed/seed-2.0-mini",
       "last_updated": "2026-02-26",
@@ -1452,7 +1499,7 @@
         "input": 0.1,
         "output": 0.2
       },
-      "description": "UI-TARS 7B  是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal model for analyzing text, images, documents, and rich media",
       "id": "bytedance/ui-tars-1.5-7b",
       "knowledge": "2025-01-31",
       "last_updated": "2025-07-22",
@@ -1483,7 +1530,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Uncensored (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
       "family": "mistral",
       "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
       "knowledge": "2024-04-30",
@@ -1514,7 +1561,7 @@
         "input": 2.5,
         "output": 10
       },
-      "description": "Command A 是由 openrouter 提供的人工智能模型。",
+      "description": "Cohere command model for multilingual enterprise agents, tools, and chat",
       "family": "command-a",
       "id": "cohere/command-a",
       "knowledge": "2024-08-31",
@@ -1545,7 +1592,7 @@
         "input": 0.15,
         "output": 0.6
       },
-      "description": "Command R 是由 openrouter 提供的人工智能模型。",
+      "description": "Cohere retrieval model for long-context chat and enterprise RAG workflows",
       "family": "command-r",
       "id": "cohere/command-r-08-2024",
       "knowledge": "2024-06-01",
@@ -1576,7 +1623,7 @@
         "input": 2.5,
         "output": 10
       },
-      "description": "Command R+ 是由 openrouter 提供的人工智能模型。",
+      "description": "Cohere's RAG workhorse for long-context enterprise search and tool use",
       "family": "command-r",
       "id": "cohere/command-r-plus-08-2024",
       "knowledge": "2024-06-01",
@@ -1607,7 +1654,7 @@
         "input": 0.0375,
         "output": 0.15
       },
-      "description": "Command R7B 是由 openrouter 提供的人工智能模型。",
+      "description": "Cohere retrieval model for long-context chat and enterprise RAG workflows",
       "family": "command-r",
       "id": "cohere/command-r7b-12-2024",
       "knowledge": "2024-06-01",
@@ -1638,7 +1685,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "North Mini Code (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Cohere coding model for practical software engineering and agentic edits",
       "family": "north",
       "id": "cohere/north-mini-code:free",
       "last_updated": "2026-06-17",
@@ -1669,7 +1716,7 @@
         "input": 1.25,
         "output": 1.25
       },
-      "description": "Cogito v2.1 671B 是由 openrouter 提供的人工智能模型。",
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "family": "cogito",
       "id": "deepcogito/cogito-v2.1-671b",
       "last_updated": "2025-11-13",
@@ -1700,7 +1747,7 @@
         "input": 0.2002,
         "output": 0.8001
       },
-      "description": "DeepSeek Chat 是由 openrouter 提供的人工智能模型。",
+      "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
       "id": "deepseek/deepseek-chat",
       "knowledge": "2025-09",
@@ -1729,10 +1776,10 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.135,
-        "input": 0.2,
-        "output": 0.77
+        "input": 0.24,
+        "output": 0.9
       },
-      "description": "DeepSeek V3 0324 是由 openrouter 提供的人工智能模型。",
+      "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
       "id": "deepseek/deepseek-chat-v3-0324",
       "knowledge": "2024-07-31",
@@ -1764,7 +1811,7 @@
         "input": 0.21,
         "output": 0.79
       },
-      "description": "DeepSeek V3.1 是由 openrouter 提供的人工智能模型。",
+      "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
       "id": "deepseek/deepseek-chat-v3.1",
       "knowledge": "2025-03-31",
@@ -1800,7 +1847,7 @@
         "input": 0.7,
         "output": 2.5
       },
-      "description": "DeepSeek-R1 是由 openrouter 提供的人工智能模型。",
+      "description": "Classic open reasoning model for transparent math, coding, and deliberate problem solving",
       "family": "deepseek-thinking",
       "id": "deepseek/deepseek-r1",
       "knowledge": "2024-07",
@@ -1833,7 +1880,7 @@
         "input": 0.5,
         "output": 2.15
       },
-      "description": "R1 0528 是由 openrouter 提供的人工智能模型。",
+      "description": "DeepSeek reasoning model for multi-step analysis, math, coding, and tools",
       "family": "deepseek",
       "id": "deepseek/deepseek-r1-0528",
       "knowledge": "2025-03-31",
@@ -1865,7 +1912,7 @@
         "input": 0.8,
         "output": 0.8
       },
-      "description": "R1 Distill Llama 70B 是由 openrouter 提供的人工智能模型。",
+      "description": "DeepSeek reasoning model for multi-step analysis, math, coding, and tools",
       "family": "deepseek-thinking",
       "id": "deepseek/deepseek-r1-distill-llama-70b",
       "knowledge": "2024-07-31",
@@ -1898,7 +1945,7 @@
         "input": 0.27,
         "output": 0.95
       },
-      "description": "DeepSeek V3.1 Terminus 是由 openrouter 提供的人工智能模型。",
+      "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
       "id": "deepseek/deepseek-v3.1-terminus",
       "knowledge": "2025-03-31",
@@ -1935,7 +1982,7 @@
         "input": 0.2288,
         "output": 0.3432
       },
-      "description": "DeepSeek V3.2 是由 openrouter 提供的人工智能模型。",
+      "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
       "id": "deepseek/deepseek-v3.2",
       "knowledge": "2024-07",
@@ -1971,7 +2018,7 @@
         "input": 0.27,
         "output": 0.41
       },
-      "description": "DeepSeek V3.2 Exp 是由 openrouter 提供的人工智能模型。",
+      "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
       "id": "deepseek/deepseek-v3.2-exp",
       "knowledge": "2025-07-31",
@@ -2004,11 +2051,11 @@
     "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.02,
-        "input": 0.098,
-        "output": 0.196
+        "cache_read": 0.018,
+        "input": 0.09,
+        "output": 0.18
       },
-      "description": "DeepSeek V4 Flash 是由 openrouter 提供的人工智能模型。",
+      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
       "id": "deepseek/deepseek-v4-flash",
       "interleaved": {
@@ -2017,8 +2064,8 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1048575,
-        "output": 65536
+        "context": 1048576,
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -2055,7 +2102,7 @@
         "input": 0.435,
         "output": 0.87
       },
-      "description": "DeepSeek V4 Pro 是由 openrouter 提供的人工智能模型。",
+      "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
       "id": "deepseek/deepseek-v4-pro",
       "interleaved": {
@@ -2104,7 +2151,7 @@
         "output": 2.5,
         "reasoning": 2.5
       },
-      "description": "Gemini 2.5 Flash 是由 openrouter 提供的人工智能模型。",
+      "description": "Fast Gemini workhorse for multimodal apps where latency and price matter",
       "family": "gemini-flash",
       "id": "google/gemini-2.5-flash",
       "knowledge": "2025-01",
@@ -2151,7 +2198,7 @@
         "input": 0.3,
         "output": 2.5
       },
-      "description": "Nano Banana 是由 openrouter 提供的人工智能模型。",
+      "description": "Nano Banana image model for fast generation, edits, and character-consistent assets",
       "family": "gemini-flash",
       "id": "google/gemini-2.5-flash-image",
       "knowledge": "2025-06",
@@ -2187,7 +2234,7 @@
         "output": 0.4,
         "reasoning": 0.4
       },
-      "description": "Gemini 2.5 Flash-Lite 是由 openrouter 提供的人工智能模型。",
+      "description": "Lean Gemini 2.5 lane for cheap multimodal traffic and quick agents",
       "family": "gemini-flash-lite",
       "id": "google/gemini-2.5-flash-lite",
       "knowledge": "2025-01",
@@ -2235,7 +2282,7 @@
         "output": 0.4,
         "reasoning": 0.4
       },
-      "description": "Gemini 2.5 Flash Lite Preview 09-2025 是由 openrouter 提供的人工智能模型。",
+      "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
       "family": "gemini-flash-lite",
       "id": "google/gemini-2.5-flash-lite-preview-09-2025",
       "knowledge": "2025-01-31",
@@ -2283,7 +2330,7 @@
         "output": 10,
         "reasoning": 10
       },
-      "description": "Gemini 2.5 Pro 是由 openrouter 提供的人工智能模型。",
+      "description": "Google's proven reasoning model for coding, math, and multimodal analysis",
       "family": "gemini-pro",
       "id": "google/gemini-2.5-pro",
       "knowledge": "2025-01",
@@ -2328,7 +2375,7 @@
         "output": 10,
         "reasoning": 10
       },
-      "description": "Gemini 2.5 Pro Preview 06-05 是由 openrouter 提供的人工智能模型。",
+      "description": "Advanced Gemini model for complex reasoning, coding, and multimodal analysis",
       "family": "gemini",
       "id": "google/gemini-2.5-pro-preview",
       "knowledge": "2025-01-31",
@@ -2372,7 +2419,7 @@
         "output": 10,
         "reasoning": 10
       },
-      "description": "Gemini 2.5 Pro Preview 05-06 是由 openrouter 提供的人工智能模型。",
+      "description": "Advanced Gemini model for complex reasoning, coding, and multimodal analysis",
       "family": "gemini-pro",
       "id": "google/gemini-2.5-pro-preview-05-06",
       "knowledge": "2025-01-31",
@@ -2417,7 +2464,7 @@
         "output": 3,
         "reasoning": 3
       },
-      "description": "Gemini 3 Flash Preview 是由 openrouter 提供的人工智能模型。",
+      "description": "New Gemini flash lane bringing frontier-style multimodal reasoning to cheaper runs",
       "family": "gemini-flash",
       "id": "google/gemini-3-flash-preview",
       "interleaved": {
@@ -2469,7 +2516,7 @@
         "output": 12,
         "reasoning": 12
       },
-      "description": "Nano Banana Pro (Gemini 3 Pro Image) 是由 openrouter 提供的人工智能模型。",
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "gemini",
       "id": "google/gemini-3-pro-image",
       "last_updated": "2026-06-18",
@@ -2505,7 +2552,7 @@
         "output": 12,
         "reasoning": 12
       },
-      "description": "Nano Banana Pro 是由 openrouter 提供的人工智能模型。",
+      "description": "Nano Banana Pro for higher-fidelity image generation and design-heavy edits",
       "family": "gemini-pro",
       "id": "google/gemini-3-pro-image-preview",
       "knowledge": "2025-01",
@@ -2539,7 +2586,7 @@
         "input": 0.5,
         "output": 3
       },
-      "description": "Nano Banana 2 (Gemini 3.1 Flash Image) 是由 openrouter 提供的人工智能模型。",
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "gemini",
       "id": "google/gemini-3.1-flash-image",
       "last_updated": "2026-06-18",
@@ -2580,7 +2627,7 @@
         "input": 0.5,
         "output": 3
       },
-      "description": "Nano Banana 2 是由 openrouter 提供的人工智能模型。",
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "gemini-flash",
       "id": "google/gemini-3.1-flash-image-preview",
       "knowledge": "2025-01",
@@ -2625,7 +2672,7 @@
         "output": 1.5,
         "reasoning": 1.5
       },
-      "description": "Gemini 3.1 Flash Lite 是由 openrouter 提供的人工智能模型。",
+      "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
       "family": "gemini-flash-lite",
       "id": "google/gemini-3.1-flash-lite",
       "knowledge": "2025-01",
@@ -2671,7 +2718,7 @@
         "input": 0.25,
         "output": 1.5
       },
-      "description": "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) 是由 openrouter 提供的人工智能模型。",
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "gemini",
       "id": "google/gemini-3.1-flash-lite-image",
       "knowledge": "2025-01-01",
@@ -2716,7 +2763,7 @@
         "output": 1.5,
         "reasoning": 1.5
       },
-      "description": "Gemini 3.1 Flash Lite Preview 是由 openrouter 提供的人工智能模型。",
+      "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
       "family": "gemini-flash-lite",
       "id": "google/gemini-3.1-flash-lite-preview",
       "knowledge": "2025-01",
@@ -2781,7 +2828,7 @@
           }
         ]
       },
-      "description": "Gemini 3.1 Pro Preview 是由 openrouter 提供的人工智能模型。",
+      "description": "Reasoning-first Gemini preview for agentic coding and complex problem solving",
       "family": "gemini-pro",
       "id": "google/gemini-3.1-pro-preview",
       "interleaved": {
@@ -2848,7 +2895,7 @@
           }
         ]
       },
-      "description": "Gemini 3.1 Pro Preview Custom Tools 是由 openrouter 提供的人工智能模型。",
+      "description": "Advanced Gemini model for complex reasoning, coding, and multimodal analysis",
       "family": "gemini-pro",
       "id": "google/gemini-3.1-pro-preview-customtools",
       "interleaved": {
@@ -2899,7 +2946,7 @@
         "output": 9,
         "reasoning": 9
       },
-      "description": "Gemini 3.5 Flash 是由 openrouter 提供的人工智能模型。",
+      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash",
       "id": "google/gemini-3.5-flash",
       "knowledge": "2025-01",
@@ -2945,7 +2992,7 @@
         "input": 0.65,
         "output": 0.65
       },
-      "description": "Gemma 2 27B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
       "id": "google/gemma-2-27b-it",
       "knowledge": "2024-06-30",
@@ -2976,7 +3023,7 @@
         "input": 0.05,
         "output": 0.15
       },
-      "description": "Gemma 3 12B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
       "id": "google/gemma-3-12b-it",
       "knowledge": "2024-08-31",
@@ -3008,7 +3055,7 @@
         "input": 0.08,
         "output": 0.16
       },
-      "description": "Gemma 3 27B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
       "id": "google/gemma-3-27b-it",
       "knowledge": "2024-08-31",
@@ -3040,7 +3087,7 @@
         "input": 0.05,
         "output": 0.1
       },
-      "description": "Gemma 3 4B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
       "id": "google/gemma-3-4b-it",
       "knowledge": "2024-08-31",
@@ -3072,7 +3119,7 @@
         "input": 0.06,
         "output": 0.12
       },
-      "description": "Gemma 3n 4B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
       "id": "google/gemma-3n-e4b-it",
       "knowledge": "2024-08-31",
@@ -3103,7 +3150,7 @@
         "input": 0.06,
         "output": 0.33
       },
-      "description": "Gemma 4 26B A4B IT 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
       "id": "google/gemma-4-26b-a4b-it",
       "last_updated": "2026-04-02",
@@ -3140,7 +3187,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Gemma 4 26B A4B  (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
       "id": "google/gemma-4-26b-a4b-it:free",
       "last_updated": "2026-04-02",
@@ -3178,7 +3225,7 @@
         "input": 0.12,
         "output": 0.35
       },
-      "description": "Gemma 4 31B IT 是由 openrouter 提供的人工智能模型。",
+      "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
       "family": "gemma",
       "id": "google/gemma-4-31b-it",
       "last_updated": "2026-04-02",
@@ -3215,7 +3262,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Gemma 4 31B (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
       "family": "gemma",
       "id": "google/gemma-4-31b-it:free",
       "last_updated": "2026-04-02",
@@ -3252,7 +3299,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Lyria 3 Clip Preview 是由 openrouter 提供的人工智能模型。",
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
       "family": "lyria",
       "id": "google/lyria-3-clip-preview",
       "last_updated": "2026-03-30",
@@ -3284,7 +3331,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Lyria 3 Pro Preview 是由 openrouter 提供的人工智能模型。",
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
       "family": "lyria",
       "id": "google/lyria-3-pro-preview",
       "last_updated": "2026-03-30",
@@ -3316,7 +3363,7 @@
         "input": 0.06,
         "output": 0.06
       },
-      "description": "MythoMax 13B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "id": "gryphe/mythomax-l2-13b",
       "knowledge": "2023-06-30",
       "last_updated": "2023-07-02",
@@ -3346,7 +3393,7 @@
         "input": 0.017,
         "output": 0.112
       },
-      "description": "Granite 4.0 Micro 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "granite",
       "id": "ibm-granite/granite-4.0-h-micro",
       "last_updated": "2025-10-20",
@@ -3377,7 +3424,7 @@
         "input": 0.05,
         "output": 0.1
       },
-      "description": "Granite 4.1 8B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "family": "granite",
       "id": "ibm-granite/granite-4.1-8b",
       "last_updated": "2026-04-30",
@@ -3408,7 +3455,7 @@
         "input": 0.25,
         "output": 0.75
       },
-      "description": "Mercury 2 是由 openrouter 提供的人工智能模型。",
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "family": "mercury",
       "id": "inception/mercury-2",
       "last_updated": "2026-03-04",
@@ -3450,7 +3497,7 @@
         "input": 0.075,
         "output": 0.625
       },
-      "description": "Ling-2.6-1T 是由 openrouter 提供的人工智能模型。",
+      "description": "Tool-capable chat model for instruction following and agentic application workflows",
       "family": "ling",
       "id": "inclusionai/ling-2.6-1t",
       "last_updated": "2026-04-23",
@@ -3481,7 +3528,7 @@
         "input": 0.01,
         "output": 0.03
       },
-      "description": "Ling-2.6-flash 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "ling",
       "id": "inclusionai/ling-2.6-flash",
       "last_updated": "2026-04-21",
@@ -3512,7 +3559,7 @@
         "input": 0.075,
         "output": 0.625
       },
-      "description": "Ring-2.6-1T 是由 openrouter 提供的人工智能模型。",
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "family": "ring",
       "id": "inclusionai/ring-2.6-1t",
       "last_updated": "2026-05-08",
@@ -3551,7 +3598,7 @@
         "input": 2.5,
         "output": 10
       },
-      "description": "Inflection 3 Pi 是由 openrouter 提供的人工智能模型。",
+      "description": "General-purpose chat model for instruction following, writing, and analysis",
       "id": "inflection/inflection-3-pi",
       "knowledge": "2024-10-31",
       "last_updated": "2024-10-11",
@@ -3581,7 +3628,7 @@
         "input": 2.5,
         "output": 10
       },
-      "description": "Inflection 3 Productivity 是由 openrouter 提供的人工智能模型。",
+      "description": "General-purpose chat model for instruction following, writing, and analysis",
       "id": "inflection/inflection-3-productivity",
       "knowledge": "2024-10-31",
       "last_updated": "2024-10-11",
@@ -3612,7 +3659,7 @@
         "input": 0.3,
         "output": 1.2
       },
-      "description": "KAT-Coder-Pro V2 是由 openrouter 提供的人工智能模型。",
+      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
       "family": "kat-coder",
       "id": "kwaipilot/kat-coder-pro-v2",
       "last_updated": "2026-03-27",
@@ -3642,7 +3689,7 @@
         "input": 0.03,
         "output": 0.12
       },
-      "description": "LFM2-24B-A2B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "family": "liquid",
       "id": "liquid/lfm-2-24b-a2b",
       "last_updated": "2026-02-25",
@@ -3672,7 +3719,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "LFM2.5-1.2B-Instruct (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
       "family": "liquid",
       "id": "liquid/lfm-2.5-1.2b-instruct:free",
       "knowledge": "2025-06",
@@ -3703,7 +3750,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "LFM2.5-1.2B-Thinking (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
       "family": "liquid",
       "id": "liquid/lfm-2.5-1.2b-thinking:free",
       "knowledge": "2025-06",
@@ -3735,7 +3782,7 @@
         "input": 0.75,
         "output": 1
       },
-      "description": "Weaver (alpha) 是由 openrouter 提供的人工智能模型。",
+      "description": "General-purpose chat model for instruction following, writing, and analysis",
       "family": "alpha",
       "id": "mancer/weaver",
       "knowledge": "2023-06-30",
@@ -3766,7 +3813,7 @@
         "input": 0.14,
         "output": 0.14
       },
-      "description": "Llama 3 8B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "meta-llama/llama-3-8b-instruct",
       "knowledge": "2023-12-31",
@@ -3797,7 +3844,7 @@
         "input": 0.4,
         "output": 0.4
       },
-      "description": "Llama 3.1 70B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "meta-llama/llama-3.1-70b-instruct",
       "knowledge": "2023-12-31",
@@ -3828,7 +3875,7 @@
         "input": 0.02,
         "output": 0.03
       },
-      "description": "Llama 3.1 8B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "meta-llama/llama-3.1-8b-instruct",
       "knowledge": "2023-12-31",
@@ -3859,7 +3906,7 @@
         "input": 0.345,
         "output": 0.345
       },
-      "description": "Llama 3.2 11B Vision Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama multimodal model for image understanding and text reasoning",
       "family": "llama",
       "id": "meta-llama/llama-3.2-11b-vision-instruct",
       "knowledge": "2023-12-31",
@@ -3891,7 +3938,7 @@
         "input": 0.027,
         "output": 0.201
       },
-      "description": "Llama 3.2 1B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "meta-llama/llama-3.2-1b-instruct",
       "knowledge": "2023-12-31",
@@ -3922,7 +3969,7 @@
         "input": 0.0509,
         "output": 0.335
       },
-      "description": "Llama 3.2 3B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "meta-llama/llama-3.2-3b-instruct",
       "knowledge": "2023-12-31",
@@ -3953,7 +4000,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Llama 3.2 3B Instruct (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "meta-llama/llama-3.2-3b-instruct:free",
       "knowledge": "2023-12-31",
@@ -3984,7 +4031,7 @@
         "input": 0.1,
         "output": 0.32
       },
-      "description": "Llama-3.3-70B-Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
       "id": "meta-llama/llama-3.3-70b-instruct",
       "knowledge": "2023-12",
@@ -4015,7 +4062,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Llama 3.3 70B Instruct (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
       "id": "meta-llama/llama-3.3-70b-instruct:free",
       "knowledge": "2023-12",
@@ -4046,7 +4093,7 @@
         "input": 0.15,
         "output": 0.6
       },
-      "description": "Llama 4 Maverick 是由 openrouter 提供的人工智能模型。",
+      "description": "Open multimodal Llama model for strong reasoning and fast responses",
       "family": "llama",
       "id": "meta-llama/llama-4-maverick",
       "knowledge": "2024-08-31",
@@ -4078,7 +4125,7 @@
         "input": 0.1,
         "output": 0.3
       },
-      "description": "Llama 4 Scout 是由 openrouter 提供的人工智能模型。",
+      "description": "Open multimodal Llama model for long-context analysis and efficient agents",
       "family": "llama",
       "id": "meta-llama/llama-4-scout",
       "knowledge": "2024-08-31",
@@ -4110,7 +4157,7 @@
         "input": 0.18,
         "output": 0.18
       },
-      "description": "Llama Guard 4 12B 是由 openrouter 提供的人工智能模型。",
+      "description": "Safety model for policy screening, moderation, and risk-aware routing workflows",
       "family": "llama",
       "id": "meta-llama/llama-guard-4-12b",
       "knowledge": "2024-08-31",
@@ -4142,7 +4189,7 @@
         "input": 0.07,
         "output": 0.14
       },
-      "description": "Phi 4 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "family": "phi",
       "id": "microsoft/phi-4",
       "knowledge": "2024-06-30",
@@ -4173,7 +4220,7 @@
         "input": 0.62,
         "output": 0.62
       },
-      "description": "WizardLM-2 8x22B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "id": "microsoft/wizardlm-2-8x22b",
       "knowledge": "2024-04-30",
       "last_updated": "2024-04-16",
@@ -4203,7 +4250,7 @@
         "input": 0.2,
         "output": 1.1
       },
-      "description": "MiniMax-01 是由 openrouter 提供的人工智能模型。",
+      "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
       "family": "minimax",
       "id": "minimax/minimax-01",
       "knowledge": "2024-03-31",
@@ -4235,7 +4282,7 @@
         "input": 0.4,
         "output": 2.2
       },
-      "description": "MiniMax M1 是由 openrouter 提供的人工智能模型。",
+      "description": "MiniMax model for chat, coding, office work, and agentic tasks",
       "family": "minimax",
       "id": "minimax/minimax-m1",
       "knowledge": "2024-06-30",
@@ -4264,11 +4311,10 @@
     "minimax/minimax-m2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.03,
         "input": 0.255,
-        "output": 1
+        "output": 1.02
       },
-      "description": "MiniMax-M2 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient open MiniMax model built for coding agents and tool-heavy workflows",
       "family": "minimax",
       "id": "minimax/minimax-m2",
       "interleaved": {
@@ -4276,8 +4322,8 @@
       },
       "last_updated": "2025-10-27",
       "limit": {
-        "context": 196608,
-        "output": 196608
+        "context": 204800,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -4303,7 +4349,7 @@
         "input": 0.3,
         "output": 1.2
       },
-      "description": "MiniMax M2-her 是由 openrouter 提供的人工智能模型。",
+      "description": "MiniMax model for chat, coding, office work, and agentic tasks",
       "family": "minimax",
       "id": "minimax/minimax-m2-her",
       "last_updated": "2026-01-23",
@@ -4331,10 +4377,10 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.03,
-        "input": 0.29,
-        "output": 0.95
+        "input": 0.3,
+        "output": 1.2
       },
-      "description": "MiniMax-M2.1 是由 openrouter 提供的人工智能模型。",
+      "description": "Earlier MiniMax agent model for practical coding and productivity tasks",
       "family": "minimax",
       "id": "minimax/minimax-m2.1",
       "interleaved": {
@@ -4342,8 +4388,8 @@
       },
       "last_updated": "2025-12-23",
       "limit": {
-        "context": 196608,
-        "output": 196608
+        "context": 204800,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -4358,7 +4404,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-12-23",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -4368,7 +4414,7 @@
         "input": 0.12,
         "output": 0.48
       },
-      "description": "MiniMax-M2.5 是由 openrouter 提供的人工智能模型。",
+      "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
       "family": "minimax",
       "id": "minimax/minimax-m2.5",
       "interleaved": {
@@ -4402,7 +4448,7 @@
         "input": 0.18,
         "output": 0.72
       },
-      "description": "MiniMax-M2.7 是由 openrouter 提供的人工智能模型。",
+      "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
       "family": "minimax",
       "id": "minimax/minimax-m2.7",
       "last_updated": "2026-03-18",
@@ -4434,7 +4480,7 @@
         "input": 0.3,
         "output": 1.2
       },
-      "description": "MiniMax-M3 是由 openrouter 提供的人工智能模型。",
+      "description": "MiniMax multimodal model for long-context coding, perception, and agent planning",
       "family": "minimax",
       "id": "minimax/minimax-m3",
       "last_updated": "2026-06-01",
@@ -4468,7 +4514,7 @@
         "input": 0.3,
         "output": 0.9
       },
-      "description": "Codestral 2508 是由 openrouter 提供的人工智能模型。",
+      "description": "Mistral coding model for code completion, generation, and developer workflows",
       "family": "codestral",
       "id": "mistralai/codestral-2508",
       "knowledge": "2025-03-31",
@@ -4501,7 +4547,7 @@
         "input": 0.4,
         "output": 2
       },
-      "description": "Devstral 2 是由 openrouter 提供的人工智能模型。",
+      "description": "Mistral's coding-agent model for repository work, terminal tasks, and software fixes",
       "family": "devstral",
       "id": "mistralai/devstral-2512",
       "knowledge": "2025-12",
@@ -4535,7 +4581,7 @@
         "input": 0.2,
         "output": 0.2
       },
-      "description": "Ministral 3 14B 2512 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact Mistral model for edge, latency-sensitive, and cost-efficient workloads",
       "family": "ministral",
       "id": "mistralai/ministral-14b-2512",
       "last_updated": "2025-12-02",
@@ -4567,7 +4613,7 @@
         "input": 0.1,
         "output": 0.1
       },
-      "description": "Ministral 3 3B 2512 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact Mistral model for edge, latency-sensitive, and cost-efficient workloads",
       "family": "ministral",
       "id": "mistralai/ministral-3b-2512",
       "last_updated": "2025-12-02",
@@ -4599,7 +4645,7 @@
         "input": 0.15,
         "output": 0.15
       },
-      "description": "Ministral 3 8B 2512 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact Mistral model for edge, latency-sensitive, and cost-efficient workloads",
       "family": "ministral",
       "id": "mistralai/ministral-8b-2512",
       "last_updated": "2025-12-02",
@@ -4631,7 +4677,7 @@
         "input": 2,
         "output": 6
       },
-      "description": "Mistral Large 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship Mistral model for advanced reasoning, coding, and multilingual work",
       "family": "mistral-large",
       "id": "mistralai/mistral-large",
       "knowledge": "2024-11-30",
@@ -4664,7 +4710,7 @@
         "input": 2,
         "output": 6
       },
-      "description": "Mistral Large 2407 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship Mistral model for advanced reasoning, coding, and multilingual work",
       "family": "mistral-large",
       "id": "mistralai/mistral-large-2407",
       "knowledge": "2024-03-31",
@@ -4697,7 +4743,7 @@
         "input": 0.5,
         "output": 1.5
       },
-      "description": "Mistral Large 3 是由 openrouter 提供的人工智能模型。",
+      "description": "Mistral's largest general model for enterprise agents, coding, and multilingual reasoning",
       "family": "mistral-large",
       "id": "mistralai/mistral-large-2512",
       "knowledge": "2024-11",
@@ -4731,7 +4777,7 @@
         "input": 0.4,
         "output": 2
       },
-      "description": "Mistral Medium 3 是由 openrouter 提供的人工智能模型。",
+      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
       "family": "mistral-medium",
       "id": "mistralai/mistral-medium-3",
       "knowledge": "2025-03-31",
@@ -4764,7 +4810,7 @@
         "input": 1.5,
         "output": 7.5
       },
-      "description": "Mistral Medium 3.5 是由 openrouter 提供的人工智能模型。",
+      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
       "family": "mistral-medium",
       "id": "mistralai/mistral-medium-3-5",
       "last_updated": "2026-04-30",
@@ -4806,7 +4852,7 @@
         "input": 0.4,
         "output": 2
       },
-      "description": "Mistral Medium 3.1 是由 openrouter 提供的人工智能模型。",
+      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
       "family": "mistral-medium",
       "id": "mistralai/mistral-medium-3.1",
       "knowledge": "2025-06-30",
@@ -4839,7 +4885,7 @@
         "input": 0.02,
         "output": 0.03
       },
-      "description": "Mistral Nemo 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient Mistral-NVIDIA open model for multilingual chat and local deployment",
       "family": "mistral-nemo",
       "id": "mistralai/mistral-nemo",
       "knowledge": "2024-07",
@@ -4871,7 +4917,7 @@
         "input": 0.2,
         "output": 0.6
       },
-      "description": "Saba 是由 openrouter 提供的人工智能模型。",
+      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
       "family": "mistral",
       "id": "mistralai/mistral-saba",
       "knowledge": "2024-09-30",
@@ -4903,7 +4949,7 @@
         "input": 0.05,
         "output": 0.08
       },
-      "description": "Mistral Small 3 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
       "family": "mistral-small",
       "id": "mistralai/mistral-small-24b-instruct-2501",
       "knowledge": "2023-10-31",
@@ -4935,7 +4981,7 @@
         "input": 0.15,
         "output": 0.6
       },
-      "description": "Mistral Small 4 是由 openrouter 提供的人工智能模型。",
+      "description": "Fast Mistral production model for chat, extraction, and cost-sensitive agents",
       "family": "mistral-small",
       "id": "mistralai/mistral-small-2603",
       "knowledge": "2025-06",
@@ -4976,7 +5022,7 @@
         "input": 0.351,
         "output": 0.555
       },
-      "description": "Mistral Small 3.1 24B 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
       "family": "mistral-small",
       "id": "mistralai/mistral-small-3.1-24b-instruct",
       "knowledge": "2023-10-31",
@@ -5008,7 +5054,7 @@
         "input": 0.075,
         "output": 0.2
       },
-      "description": "Mistral Small 3.2 24B 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
       "family": "mistral-small",
       "id": "mistralai/mistral-small-3.2-24b-instruct",
       "knowledge": "2023-10-31",
@@ -5041,7 +5087,7 @@
         "input": 2,
         "output": 6
       },
-      "description": "Mixtral 8x22B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
       "family": "mistral",
       "id": "mistralai/mixtral-8x22b-instruct",
       "knowledge": "2024-01-31",
@@ -5074,7 +5120,7 @@
         "input": 0.1,
         "output": 0.3
       },
-      "description": "Voxtral Small 24B 2507 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
       "family": "mistral",
       "id": "mistralai/voxtral-small-24b-2507",
       "last_updated": "2025-10-30",
@@ -5106,7 +5152,7 @@
         "input": 0.57,
         "output": 2.3
       },
-      "description": "Kimi K2 0711 是由 openrouter 提供的人工智能模型。",
+      "description": "Kimi model for long-context chat, coding, and agentic reasoning",
       "family": "kimi-k2",
       "id": "moonshotai/kimi-k2",
       "knowledge": "2024-12-31",
@@ -5137,7 +5183,7 @@
         "input": 0.6,
         "output": 2.5
       },
-      "description": "Kimi K2 0905 是由 openrouter 提供的人工智能模型。",
+      "description": "Kimi model for long-context chat, coding, and agentic reasoning",
       "family": "kimi-k2",
       "id": "moonshotai/kimi-k2-0905",
       "knowledge": "2024-12-31",
@@ -5165,11 +5211,11 @@
     "moonshotai/kimi-k2-thinking": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.6,
+        "cache_read": 0.15,
         "input": 0.6,
         "output": 2.5
       },
-      "description": "Kimi K2 Thinking 是由 openrouter 提供的人工智能模型。",
+      "description": "Thinking Kimi model for slower research passes, planning, and hard technical questions",
       "family": "kimi-thinking",
       "id": "moonshotai/kimi-k2-thinking",
       "interleaved": {
@@ -5179,7 +5225,7 @@
       "last_updated": "2025-11-06",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 100352
       },
       "modalities": {
         "input": [
@@ -5204,7 +5250,7 @@
         "input": 0.375,
         "output": 2.025
       },
-      "description": "Kimi K2.5 是由 openrouter 提供的人工智能模型。",
+      "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
       "family": "kimi-k2",
       "id": "moonshotai/kimi-k2.5",
       "interleaved": {
@@ -5241,7 +5287,7 @@
         "input": 0.55,
         "output": 3.2
       },
-      "description": "Kimi K2.6 是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
       "family": "kimi-k2",
       "id": "moonshotai/kimi-k2.6",
       "interleaved": {
@@ -5278,7 +5324,7 @@
         "input": 0.74,
         "output": 3.5
       },
-      "description": "Kimi K2.7 Code 是由 openrouter 提供的人工智能模型。",
+      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
       "id": "moonshotai/kimi-k2.7-code",
       "knowledge": "2025-01",
@@ -5311,7 +5357,7 @@
         "input": 0.8,
         "output": 1.2
       },
-      "description": "Morph V3 Fast 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "morph",
       "id": "morph/morph-v3-fast",
       "last_updated": "2025-07-07",
@@ -5341,7 +5387,7 @@
         "input": 0.9,
         "output": 1.9
       },
-      "description": "Morph V3 Large 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
       "family": "morph",
       "id": "morph/morph-v3-large",
       "last_updated": "2025-07-07",
@@ -5372,7 +5418,7 @@
         "input": 0.25,
         "output": 1
       },
-      "description": "Nex-N2-Pro 是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
       "family": "agi",
       "id": "nex-agi/nex-n2-pro",
       "last_updated": "2026-06-08",
@@ -5404,7 +5450,7 @@
         "input": 1,
         "output": 1
       },
-      "description": "Hermes 3 405B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "nousresearch",
       "id": "nousresearch/hermes-3-llama-3.1-405b",
       "knowledge": "2023-12-31",
@@ -5435,7 +5481,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Hermes 3 405B Instruct (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "hermes",
       "id": "nousresearch/hermes-3-llama-3.1-405b:free",
       "knowledge": "2023-12-31",
@@ -5466,7 +5512,7 @@
         "input": 0.7,
         "output": 0.7
       },
-      "description": "Hermes 3 70B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "nousresearch",
       "id": "nousresearch/hermes-3-llama-3.1-70b",
       "knowledge": "2023-12-31",
@@ -5497,7 +5543,7 @@
         "input": 1,
         "output": 3
       },
-      "description": "Hermes 4 405B 是由 openrouter 提供的人工智能模型。",
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "family": "hermes",
       "id": "nousresearch/hermes-4-405b",
       "knowledge": "2024-08-31",
@@ -5533,7 +5579,7 @@
         "input": 0.13,
         "output": 0.4
       },
-      "description": "Hermes 4 70B 是由 openrouter 提供的人工智能模型。",
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "family": "hermes",
       "id": "nousresearch/hermes-4-70b",
       "knowledge": "2024-08-31",
@@ -5569,7 +5615,7 @@
         "input": 0.4,
         "output": 0.4
       },
-      "description": "Llama 3.3 Nemotron Super 49B v1.5 是由 openrouter 提供的人工智能模型。",
+      "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
       "family": "nemotron",
       "id": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
       "last_updated": "2025-07-25",
@@ -5600,7 +5646,7 @@
         "input": 0.05,
         "output": 0.2
       },
-      "description": "Nemotron 3 Nano 30B A3B 是由 openrouter 提供的人工智能模型。",
+      "description": "Small Nemotron 3 MoE for efficient coding, math, and long-context agents",
       "family": "nemotron",
       "id": "nvidia/nemotron-3-nano-30b-a3b",
       "last_updated": "2025-12-15",
@@ -5631,7 +5677,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Nemotron 3 Nano 30B A3B (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Small Nemotron 3 MoE for efficient coding, math, and long-context agents",
       "family": "nemotron",
       "id": "nvidia/nemotron-3-nano-30b-a3b:free",
       "last_updated": "2025-12-15",
@@ -5662,7 +5708,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Nemotron 3 Nano Omni (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Nemotron omni model combining reasoning with text, vision, and audio",
       "family": "nemotron",
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
       "last_updated": "2026-04-28",
@@ -5700,7 +5746,7 @@
         "input": 0.085,
         "output": 0.4
       },
-      "description": "Nemotron 3 Super 120B A12B 是由 openrouter 提供的人工智能模型。",
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
       "family": "nemotron",
       "id": "nvidia/nemotron-3-super-120b-a12b",
       "last_updated": "2026-03-11",
@@ -5742,7 +5788,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Nemotron 3 Super (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
       "family": "nemotron",
       "id": "nvidia/nemotron-3-super-120b-a12b:free",
       "last_updated": "2026-03-11",
@@ -5785,7 +5831,7 @@
         "input": 0.5,
         "output": 2.2
       },
-      "description": "Nemotron 3 Ultra 550B A55B 是由 openrouter 提供的人工智能模型。",
+      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
       "family": "nemotron",
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
       "last_updated": "2026-06-04",
@@ -5827,7 +5873,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Nemotron 3 Ultra (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
       "family": "nemotron",
       "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
       "last_updated": "2026-06-04",
@@ -5869,7 +5915,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Nemotron 3.5 Content Safety (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Safety model for policy screening, moderation, and risk-aware routing workflows",
       "family": "nemotron",
       "id": "nvidia/nemotron-3.5-content-safety:free",
       "last_updated": "2026-06-04",
@@ -5901,7 +5947,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Nemotron Nano 12B 2 VL (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Nemotron multimodal model for visual reasoning and agentic AI workflows",
       "family": "nemotron",
       "id": "nvidia/nemotron-nano-12b-v2-vl:free",
       "last_updated": "2025-10-28",
@@ -5934,7 +5980,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Nemotron Nano 9B V2 (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact Nemotron model for efficient reasoning and deployable AI agents",
       "family": "nemotron",
       "id": "nvidia/nemotron-nano-9b-v2:free",
       "last_updated": "2025-08-18",
@@ -5965,7 +6011,7 @@
         "input": 0.5,
         "output": 1.5
       },
-      "description": "GPT-3.5-turbo 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "family": "gpt",
       "id": "openai/gpt-3.5-turbo",
       "knowledge": "2021-09-01",
@@ -5996,7 +6042,7 @@
         "input": 1,
         "output": 2
       },
-      "description": "GPT-3.5 Turbo (older v0613) 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "family": "gpt",
       "id": "openai/gpt-3.5-turbo-0613",
       "knowledge": "2021-09-30",
@@ -6027,7 +6073,7 @@
         "input": 3,
         "output": 4
       },
-      "description": "GPT-3.5 Turbo 16k 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "family": "gpt",
       "id": "openai/gpt-3.5-turbo-16k",
       "knowledge": "2021-09-30",
@@ -6058,7 +6104,7 @@
         "input": 1.5,
         "output": 2
       },
-      "description": "GPT-3.5 Turbo Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "family": "gpt",
       "id": "openai/gpt-3.5-turbo-instruct",
       "knowledge": "2021-09-30",
@@ -6089,7 +6135,7 @@
         "input": 30,
         "output": 60
       },
-      "description": "GPT-4 是由 openrouter 提供的人工智能模型。",
+      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
       "family": "gpt",
       "id": "openai/gpt-4",
       "knowledge": "2023-11",
@@ -6120,7 +6166,7 @@
         "input": 10,
         "output": 30
       },
-      "description": "GPT-4 Turbo 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "family": "gpt",
       "id": "openai/gpt-4-turbo",
       "knowledge": "2023-12",
@@ -6152,7 +6198,7 @@
         "input": 10,
         "output": 30
       },
-      "description": "GPT-4 Turbo Preview 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "family": "gpt",
       "id": "openai/gpt-4-turbo-preview",
       "knowledge": "2023-12-31",
@@ -6184,7 +6230,7 @@
         "input": 2,
         "output": 8
       },
-      "description": "GPT-4.1 是由 openrouter 提供的人工智能模型。",
+      "description": "Long-lived GPT workhorse for coding, instruction following, and production apps",
       "family": "gpt",
       "id": "openai/gpt-4.1",
       "knowledge": "2024-04",
@@ -6218,7 +6264,7 @@
         "input": 0.4,
         "output": 1.6
       },
-      "description": "GPT-4.1 mini 是由 openrouter 提供的人工智能模型。",
+      "description": "Affordable GPT-4.1 lane for fast coding help and structured extraction",
       "family": "gpt-mini",
       "id": "openai/gpt-4.1-mini",
       "knowledge": "2024-04",
@@ -6252,7 +6298,7 @@
         "input": 0.1,
         "output": 0.4
       },
-      "description": "GPT-4.1 nano 是由 openrouter 提供的人工智能模型。",
+      "description": "Tiny GPT-4.1 option for classification, routing, and very high-volume tasks",
       "family": "gpt-nano",
       "id": "openai/gpt-4.1-nano",
       "knowledge": "2024-04",
@@ -6285,7 +6331,7 @@
         "input": 2.5,
         "output": 10
       },
-      "description": "GPT-4o 是由 openrouter 提供的人工智能模型。",
+      "description": "Omni-era GPT for multimodal chat, practical coding, and general assistants",
       "family": "gpt",
       "id": "openai/gpt-4o",
       "knowledge": "2023-09",
@@ -6318,7 +6364,7 @@
         "input": 5,
         "output": 15
       },
-      "description": "GPT-4o (2024-05-13) 是由 openrouter 提供的人工智能模型。",
+      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
       "family": "gpt",
       "id": "openai/gpt-4o-2024-05-13",
       "knowledge": "2023-09",
@@ -6352,7 +6398,7 @@
         "input": 2.5,
         "output": 10
       },
-      "description": "GPT-4o (2024-08-06) 是由 openrouter 提供的人工智能模型。",
+      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
       "family": "gpt",
       "id": "openai/gpt-4o-2024-08-06",
       "knowledge": "2023-09",
@@ -6386,7 +6432,7 @@
         "input": 2.5,
         "output": 10
       },
-      "description": "GPT-4o (2024-11-20) 是由 openrouter 提供的人工智能模型。",
+      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
       "family": "gpt",
       "id": "openai/gpt-4o-2024-11-20",
       "knowledge": "2023-09",
@@ -6420,7 +6466,7 @@
         "input": 0.15,
         "output": 0.6
       },
-      "description": "GPT-4o mini 是由 openrouter 提供的人工智能模型。",
+      "description": "Small omni GPT for cheap multimodal assistance and production-scale traffic",
       "family": "gpt-mini",
       "id": "openai/gpt-4o-mini",
       "knowledge": "2023-09",
@@ -6454,7 +6500,7 @@
         "input": 0.15,
         "output": 0.6
       },
-      "description": "GPT-4o-mini (2024-07-18) 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "family": "o-mini",
       "id": "openai/gpt-4o-mini-2024-07-18",
       "knowledge": "2023-10-31",
@@ -6487,7 +6533,7 @@
         "input": 0.15,
         "output": 0.6
       },
-      "description": "GPT-4o-mini Search Preview 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "family": "o-mini",
       "id": "openai/gpt-4o-mini-search-preview",
       "knowledge": "2023-10-31",
@@ -6518,7 +6564,7 @@
         "input": 2.5,
         "output": 10
       },
-      "description": "GPT-4o Search Preview 是由 openrouter 提供的人工智能模型。",
+      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
       "family": "gpt",
       "id": "openai/gpt-4o-search-preview",
       "knowledge": "2023-10-31",
@@ -6550,7 +6596,7 @@
         "input": 1.25,
         "output": 10
       },
-      "description": "GPT-5 是由 openrouter 提供的人工智能模型。",
+      "description": "Original GPT-5 workhorse for reasoning, coding, writing, and tool workflows",
       "family": "gpt",
       "id": "openai/gpt-5",
       "knowledge": "2024-09-30",
@@ -6596,7 +6642,7 @@
         "input": 1.25,
         "output": 10
       },
-      "description": "GPT-5 Chat 是由 openrouter 提供的人工智能模型。",
+      "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
       "family": "gpt-codex",
       "id": "openai/gpt-5-chat",
       "knowledge": "2024-09-30",
@@ -6630,7 +6676,7 @@
         "input": 1.25,
         "output": 10
       },
-      "description": "GPT-5-Codex 是由 openrouter 提供的人工智能模型。",
+      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
       "family": "gpt-codex",
       "id": "openai/gpt-5-codex",
       "knowledge": "2024-09-30",
@@ -6674,7 +6720,7 @@
         "input": 10,
         "output": 10
       },
-      "description": "GPT-5 Image 是由 openrouter 提供的人工智能模型。",
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "gpt",
       "id": "openai/gpt-5-image",
       "knowledge": "2024-10-01",
@@ -6710,7 +6756,7 @@
         "input": 2.5,
         "output": 2
       },
-      "description": "GPT-5 Image Mini 是由 openrouter 提供的人工智能模型。",
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "gpt",
       "id": "openai/gpt-5-image-mini",
       "last_updated": "2025-10-16",
@@ -6745,7 +6791,7 @@
         "input": 0.25,
         "output": 2
       },
-      "description": "GPT-5 Mini 是由 openrouter 提供的人工智能模型。",
+      "description": "Small GPT-5 for responsive agents, coding help, and everyday automation",
       "family": "gpt-mini",
       "id": "openai/gpt-5-mini",
       "knowledge": "2024-05-30",
@@ -6791,7 +6837,7 @@
         "input": 0.05,
         "output": 0.4
       },
-      "description": "GPT-5 Nano 是由 openrouter 提供的人工智能模型。",
+      "description": "Tiny GPT-5 lane for routing, extraction, classification, and bulk jobs",
       "family": "gpt-nano",
       "id": "openai/gpt-5-nano",
       "knowledge": "2024-05-30",
@@ -6836,7 +6882,7 @@
         "input": 15,
         "output": 120
       },
-      "description": "GPT-5 Pro 是由 openrouter 提供的人工智能模型。",
+      "description": "Higher-accuracy GPT-5 tier for tough analysis, coding reviews, and planning",
       "family": "gpt-pro",
       "id": "openai/gpt-5-pro",
       "knowledge": "2024-09-30",
@@ -6879,7 +6925,7 @@
         "input": 1.25,
         "output": 10
       },
-      "description": "GPT-5.1 是由 openrouter 提供的人工智能模型。",
+      "description": "Sharper GPT-5 generation for coding, product work, and tool-assisted tasks",
       "family": "gpt",
       "id": "openai/gpt-5.1",
       "knowledge": "2024-09-30",
@@ -6925,7 +6971,7 @@
         "input": 1.25,
         "output": 10
       },
-      "description": "GPT-5.1 Chat 是由 openrouter 提供的人工智能模型。",
+      "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
       "family": "gpt-codex",
       "id": "openai/gpt-5.1-chat",
       "knowledge": "2024-09-30",
@@ -6959,7 +7005,7 @@
         "input": 1.25,
         "output": 10
       },
-      "description": "GPT-5.1 Codex 是由 openrouter 提供的人工智能模型。",
+      "description": "Codex GPT for repository edits, code review, and practical software agents",
       "family": "gpt-codex",
       "id": "openai/gpt-5.1-codex",
       "knowledge": "2024-09-30",
@@ -7003,7 +7049,7 @@
         "input": 1.25,
         "output": 10
       },
-      "description": "GPT-5.1 Codex Max 是由 openrouter 提供的人工智能模型。",
+      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
       "family": "gpt-codex",
       "id": "openai/gpt-5.1-codex-max",
       "knowledge": "2024-09-30",
@@ -7048,7 +7094,7 @@
         "input": 0.25,
         "output": 2
       },
-      "description": "GPT-5.1 Codex mini 是由 openrouter 提供的人工智能模型。",
+      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
       "family": "gpt-codex",
       "id": "openai/gpt-5.1-codex-mini",
       "knowledge": "2024-09-30",
@@ -7092,7 +7138,7 @@
         "input": 1.75,
         "output": 14
       },
-      "description": "GPT-5.2 是由 openrouter 提供的人工智能模型。",
+      "description": "Reliable GPT generation for broad coding, writing, and tool-assisted product work",
       "family": "gpt",
       "id": "openai/gpt-5.2",
       "knowledge": "2025-08-31",
@@ -7139,7 +7185,7 @@
         "input": 1.75,
         "output": 14
       },
-      "description": "GPT-5.2 Chat 是由 openrouter 提供的人工智能模型。",
+      "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
       "family": "gpt-codex",
       "id": "openai/gpt-5.2-chat",
       "knowledge": "2025-08-31",
@@ -7173,7 +7219,7 @@
         "input": 1.75,
         "output": 14
       },
-      "description": "GPT-5.2 Codex 是由 openrouter 提供的人工智能模型。",
+      "description": "Code-specialist GPT for repository edits, reviews, and long-running software agents",
       "family": "gpt-codex",
       "id": "openai/gpt-5.2-codex",
       "knowledge": "2025-08-31",
@@ -7217,7 +7263,7 @@
         "input": 21,
         "output": 168
       },
-      "description": "GPT-5.2 Pro 是由 openrouter 提供的人工智能模型。",
+      "description": "Higher-accuracy GPT-5.2 variant for tougher reasoning and review workflows",
       "family": "gpt-pro",
       "id": "openai/gpt-5.2-pro",
       "knowledge": "2025-08-31",
@@ -7262,7 +7308,7 @@
         "input": 1.75,
         "output": 14
       },
-      "description": "GPT-5.3 Chat 是由 openrouter 提供的人工智能模型。",
+      "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
       "family": "gpt",
       "id": "openai/gpt-5.3-chat",
       "last_updated": "2026-03-03",
@@ -7295,7 +7341,7 @@
         "input": 1.75,
         "output": 14
       },
-      "description": "GPT-5.3 Codex 是由 openrouter 提供的人工智能模型。",
+      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
       "family": "gpt-codex",
       "id": "openai/gpt-5.3-codex",
       "knowledge": "2025-08-31",
@@ -7341,7 +7387,7 @@
         "input": 2.5,
         "output": 15
       },
-      "description": "GPT-5.4 是由 openrouter 提供的人工智能模型。",
+      "description": "Agent-ready GPT for coding and computer-use workflows at a lower cost",
       "family": "gpt",
       "id": "openai/gpt-5.4",
       "knowledge": "2025-08-31",
@@ -7388,7 +7434,7 @@
         "input": 8,
         "output": 15
       },
-      "description": "GPT-5.4 Image 2 是由 openrouter 提供的人工智能模型。",
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "gpt",
       "id": "openai/gpt-5.4-image-2",
       "last_updated": "2026-04-21",
@@ -7434,7 +7480,7 @@
         "input": 0.75,
         "output": 4.5
       },
-      "description": "GPT-5.4 mini 是由 openrouter 提供的人工智能模型。",
+      "description": "Strong small GPT for coding subagents, quick tool use, and high-volume work",
       "family": "gpt-mini",
       "id": "openai/gpt-5.4-mini",
       "knowledge": "2025-08-31",
@@ -7481,7 +7527,7 @@
         "input": 0.2,
         "output": 1.25
       },
-      "description": "GPT-5.4 nano 是由 openrouter 提供的人工智能模型。",
+      "description": "Cheapest GPT-5.4 lane for simple routing, extraction, and bulk automation",
       "family": "gpt-nano",
       "id": "openai/gpt-5.4-nano",
       "knowledge": "2025-08-31",
@@ -7527,7 +7573,7 @@
         "input": 30,
         "output": 180
       },
-      "description": "GPT-5.4 Pro 是由 openrouter 提供的人工智能模型。",
+      "description": "More exact GPT-5.4 tier for demanding professional reasoning and agent tasks",
       "family": "gpt-pro",
       "id": "openai/gpt-5.4-pro",
       "knowledge": "2025-08-31",
@@ -7572,7 +7618,7 @@
         "input": 5,
         "output": 30
       },
-      "description": "GPT-5.5 是由 openrouter 提供的人工智能模型。",
+      "description": "Default frontier GPT for coding, computer use, research, and knowledge work",
       "family": "gpt",
       "id": "openai/gpt-5.5",
       "knowledge": "2025-12-01",
@@ -7618,7 +7664,7 @@
         "input": 30,
         "output": 180
       },
-      "description": "GPT-5.5 Pro 是由 openrouter 提供的人工智能模型。",
+      "description": "Highest-accuracy GPT-5.5 tier for slower, precision-heavy reasoning and coding",
       "family": "gpt-pro",
       "id": "openai/gpt-5.5-pro",
       "knowledge": "2025-12-01",
@@ -7662,7 +7708,7 @@
         "input": 2.5,
         "output": 10
       },
-      "description": "GPT Audio 是由 openrouter 提供的人工智能模型。",
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
       "family": "gpt",
       "id": "openai/gpt-audio",
       "last_updated": "2026-01-19",
@@ -7694,7 +7740,7 @@
         "input": 0.6,
         "output": 2.4
       },
-      "description": "GPT Audio Mini 是由 openrouter 提供的人工智能模型。",
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
       "family": "o-mini",
       "id": "openai/gpt-audio-mini",
       "last_updated": "2026-01-19",
@@ -7727,7 +7773,7 @@
         "input": 5,
         "output": 30
       },
-      "description": "GPT Chat Latest 是由 openrouter 提供的人工智能模型。",
+      "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
       "family": "gpt",
       "id": "openai/gpt-chat-latest",
       "last_updated": "2026-05-05",
@@ -7759,7 +7805,7 @@
         "input": 0.03,
         "output": 0.15
       },
-      "description": "GPT OSS 120B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-120b",
       "last_updated": "2025-08-05",
@@ -7799,7 +7845,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "gpt-oss-120b (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-120b:free",
       "last_updated": "2025-08-05",
@@ -7839,7 +7885,7 @@
         "input": 0.029,
         "output": 0.14
       },
-      "description": "gpt-oss-20b 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-20b",
       "knowledge": "2024-06-30",
@@ -7880,7 +7926,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "gpt-oss-20b (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-20b:free",
       "knowledge": "2024-06-30",
@@ -7922,7 +7968,7 @@
         "input": 0.075,
         "output": 0.3
       },
-      "description": "gpt-oss-safeguard-20b 是由 openrouter 提供的人工智能模型。",
+      "description": "Safety model for policy screening, moderation, and risk-aware routing workflows",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-safeguard-20b",
       "last_updated": "2025-10-29",
@@ -7963,7 +8009,7 @@
         "input": 15,
         "output": 60
       },
-      "description": "o1 是由 openrouter 提供的人工智能模型。",
+      "description": "O-series reasoning model for hard analysis, math, coding, and planning",
       "family": "o",
       "id": "openai/o1",
       "knowledge": "2023-09",
@@ -8006,7 +8052,7 @@
         "input": 150,
         "output": 600
       },
-      "description": "o1-pro 是由 openrouter 提供的人工智能模型。",
+      "description": "O-series reasoning model for hard analysis, math, coding, and planning",
       "family": "o-pro",
       "id": "openai/o1-pro",
       "knowledge": "2023-09",
@@ -8041,7 +8087,7 @@
         "input": 2,
         "output": 8
       },
-      "description": "o3 是由 openrouter 提供的人工智能模型。",
+      "description": "Deliberate o-series reasoner for hard math, coding, and multi-step analysis",
       "family": "o",
       "id": "openai/o3",
       "knowledge": "2024-05",
@@ -8085,7 +8131,7 @@
         "input": 10,
         "output": 40
       },
-      "description": "o3-deep-research 是由 openrouter 提供的人工智能模型。",
+      "description": "Research model for long-horizon investigation, synthesis, and analytical reports",
       "family": "o",
       "id": "openai/o3-deep-research",
       "knowledge": "2024-05",
@@ -8120,7 +8166,7 @@
         "input": 1.1,
         "output": 4.4
       },
-      "description": "o3-mini 是由 openrouter 提供的人工智能模型。",
+      "description": "Smaller o-series reasoner for economical coding, math, and planning tasks",
       "family": "o-mini",
       "id": "openai/o3-mini",
       "knowledge": "2024-05",
@@ -8163,7 +8209,7 @@
         "input": 1.1,
         "output": 4.4
       },
-      "description": "o3 Mini High 是由 openrouter 提供的人工智能模型。",
+      "description": "O-series reasoning model for hard analysis, math, coding, and planning",
       "family": "o",
       "id": "openai/o3-mini-high",
       "knowledge": "2023-10-31",
@@ -8203,7 +8249,7 @@
         "input": 20,
         "output": 80
       },
-      "description": "o3-pro 是由 openrouter 提供的人工智能模型。",
+      "description": "High-effort o3 tier for difficult technical reasoning and careful answers",
       "family": "o-pro",
       "id": "openai/o3-pro",
       "knowledge": "2024-05",
@@ -8247,7 +8293,7 @@
         "input": 1.1,
         "output": 4.4
       },
-      "description": "o4-mini 是由 openrouter 提供的人工智能模型。",
+      "description": "Fast o-series model for compact reasoning, coding, and tool use",
       "family": "o-mini",
       "id": "openai/o4-mini",
       "knowledge": "2024-05",
@@ -8291,7 +8337,7 @@
         "input": 2,
         "output": 8
       },
-      "description": "o4-mini-deep-research 是由 openrouter 提供的人工智能模型。",
+      "description": "Research model for long-horizon investigation, synthesis, and analytical reports",
       "family": "o-mini",
       "id": "openai/o4-mini-deep-research",
       "knowledge": "2024-05",
@@ -8326,7 +8372,7 @@
         "input": 1.1,
         "output": 4.4
       },
-      "description": "o4 Mini High 是由 openrouter 提供的人工智能模型。",
+      "description": "O-series reasoning model for hard analysis, math, coding, and planning",
       "family": "o",
       "id": "openai/o4-mini-high",
       "knowledge": "2024-06-30",
@@ -8363,7 +8409,7 @@
     },
     "openrouter/auto": {
       "attachment": true,
-      "description": "Auto Router 是由 openrouter 提供的人工智能模型。",
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "auto",
       "id": "openrouter/auto",
       "last_updated": "2023-11-08",
@@ -8395,7 +8441,7 @@
     },
     "openrouter/bodybuilder": {
       "attachment": false,
-      "description": "Body Builder (beta) 是由 openrouter 提供的人工智能模型。",
+      "description": "Preview model for early access evaluation, prototyping, and compatibility testing",
       "id": "openrouter/bodybuilder",
       "last_updated": "2025-12-05",
       "limit": {
@@ -8424,7 +8470,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Free Models Router 是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
       "id": "openrouter/free",
       "last_updated": "2026-02-01",
       "limit": {
@@ -8452,7 +8498,7 @@
     },
     "openrouter/fusion": {
       "attachment": false,
-      "description": "Fusion 是由 openrouter 提供的人工智能模型。",
+      "description": "General-purpose chat model for instruction following, writing, and analysis",
       "id": "openrouter/fusion",
       "last_updated": "2026-06-13",
       "limit": {
@@ -8477,7 +8523,7 @@
     },
     "openrouter/pareto-code": {
       "attachment": false,
-      "description": "Pareto Code Router 是由 openrouter 提供的人工智能模型。",
+      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
       "id": "openrouter/pareto-code",
       "last_updated": "2026-04-21",
       "limit": {
@@ -8506,7 +8552,7 @@
         "input": 0.15,
         "output": 1.5
       },
-      "description": "Perceptron Mk1 是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
       "id": "perceptron/perceptron-mk1",
       "last_updated": "2026-05-12",
       "limit": {
@@ -8538,7 +8584,7 @@
         "input": 1,
         "output": 1
       },
-      "description": "Sonar 是由 openrouter 提供的人工智能模型。",
+      "description": "Sonar search model for current answers, retrieval, and citation-backed chat",
       "family": "sonar",
       "id": "perplexity/sonar",
       "last_updated": "2025-01-27",
@@ -8570,7 +8616,7 @@
         "output": 8,
         "reasoning": 3
       },
-      "description": "Sonar Deep Research 是由 openrouter 提供的人工智能模型。",
+      "description": "Sonar search model for current answers, retrieval, and citation-backed chat",
       "family": "sonar-deep-research",
       "id": "perplexity/sonar-deep-research",
       "last_updated": "2025-03-07",
@@ -8601,7 +8647,7 @@
         "input": 3,
         "output": 15
       },
-      "description": "Sonar Pro 是由 openrouter 提供的人工智能模型。",
+      "description": "Advanced Sonar search model for deeper research and cited synthesis",
       "family": "sonar-pro",
       "id": "perplexity/sonar-pro",
       "last_updated": "2025-03-07",
@@ -8632,7 +8678,7 @@
         "input": 3,
         "output": 15
       },
-      "description": "Sonar Pro Search 是由 openrouter 提供的人工智能模型。",
+      "description": "Advanced Sonar search model for deeper research and cited synthesis",
       "family": "sonar-pro",
       "id": "perplexity/sonar-pro-search",
       "last_updated": "2025-10-30",
@@ -8664,7 +8710,7 @@
         "input": 2,
         "output": 8
       },
-      "description": "Sonar Reasoning Pro 是由 openrouter 提供的人工智能模型。",
+      "description": "Web-grounded reasoning model for multi-step research and cited answers",
       "family": "sonar-reasoning",
       "id": "perplexity/sonar-reasoning-pro",
       "last_updated": "2025-03-07",
@@ -8697,7 +8743,7 @@
         "input": 0.2,
         "output": 0.4
       },
-      "description": "Laguna M.1 是由 openrouter 提供的人工智能模型。",
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "id": "poolside/laguna-m.1",
       "last_updated": "2026-04-28",
       "limit": {
@@ -8727,7 +8773,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Laguna M.1 (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
       "id": "poolside/laguna-m.1:free",
       "interleaved": {
         "field": "reasoning_content"
@@ -8761,7 +8807,7 @@
         "input": 0.1,
         "output": 0.2
       },
-      "description": "Laguna XS.2 是由 openrouter 提供的人工智能模型。",
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "id": "poolside/laguna-xs.2",
       "last_updated": "2026-04-28",
       "limit": {
@@ -8791,7 +8837,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Laguna XS.2 (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
       "id": "poolside/laguna-xs.2:free",
       "interleaved": {
         "field": "reasoning_content"
@@ -8824,7 +8870,7 @@
         "input": 0.36,
         "output": 0.4
       },
-      "description": "Qwen2.5 72B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen-2.5-72b-instruct",
       "knowledge": "2024-06-30",
@@ -8855,7 +8901,7 @@
         "input": 0.04,
         "output": 0.1
       },
-      "description": "Qwen2.5 7B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen-2.5-7b-instruct",
       "knowledge": "2024-06-30",
@@ -8886,7 +8932,7 @@
         "input": 0.66,
         "output": 1
       },
-      "description": "Qwen2.5 Coder 32B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
       "id": "qwen/qwen-2.5-coder-32b-instruct",
       "knowledge": "2024-06-30",
@@ -8919,7 +8965,7 @@
         "input": 0.26,
         "output": 0.78
       },
-      "description": "Qwen Plus 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen-plus",
       "knowledge": "2024-04",
@@ -8950,7 +8996,7 @@
         "input": 0.26,
         "output": 0.78
       },
-      "description": "Qwen Plus 0728 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen-plus-2025-07-28",
       "knowledge": "2025-03-31",
@@ -8982,7 +9028,7 @@
         "input": 0.26,
         "output": 0.78
       },
-      "description": "Qwen Plus 0728 (thinking) 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
       "family": "qwen",
       "id": "qwen/qwen-plus-2025-07-28:thinking",
       "knowledge": "2025-03-31",
@@ -9021,7 +9067,7 @@
         "input": 0.8,
         "output": 1
       },
-      "description": "Qwen2.5 VL 72B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen2.5-vl-72b-instruct",
       "knowledge": "2024-06-30",
@@ -9053,7 +9099,7 @@
         "input": 0.1,
         "output": 0.24
       },
-      "description": "Qwen3 14B 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen3-14b",
       "knowledge": "2025-03-31",
@@ -9089,7 +9135,7 @@
         "input": 0.455,
         "output": 1.82
       },
-      "description": "Qwen3 235B-A22B 是由 openrouter 提供的人工智能模型。",
+      "description": "Large open Qwen MoE for multilingual reasoning, coding, and tool use",
       "family": "qwen",
       "id": "qwen/qwen3-235b-a22b",
       "knowledge": "2025-04",
@@ -9130,7 +9176,7 @@
         "input": 0.09,
         "output": 0.1
       },
-      "description": "Qwen3 235B A22B Instruct 2507 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen3-235b-a22b-2507",
       "knowledge": "2025-06-30",
@@ -9161,7 +9207,7 @@
         "input": 0.1495,
         "output": 1.495
       },
-      "description": "Qwen3 235B A22B Thinking 2507 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
       "family": "qwen",
       "id": "qwen/qwen3-235b-a22b-thinking-2507",
       "knowledge": "2025-06-30",
@@ -9183,7 +9229,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-07-25",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -9193,7 +9239,7 @@
         "input": 0.12,
         "output": 0.5
       },
-      "description": "Qwen3 30B A3B 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen3-30b-a3b",
       "knowledge": "2025-03-31",
@@ -9229,7 +9275,7 @@
         "input": 0.04815,
         "output": 0.19305
       },
-      "description": "Qwen3 30B A3B Instruct 2507 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen3-30b-a3b-instruct-2507",
       "knowledge": "2025-06-30",
@@ -9257,18 +9303,17 @@
     "qwen/qwen3-30b-a3b-thinking-2507": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.08,
-        "input": 0.08,
-        "output": 0.4
+        "input": 0.13,
+        "output": 1.56
       },
-      "description": "Qwen3 30B A3B Thinking 2507 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
       "family": "qwen",
       "id": "qwen/qwen3-30b-a3b-thinking-2507",
       "knowledge": "2025-06-30",
       "last_updated": "2025-08-28",
       "limit": {
-        "context": 131072,
-        "output": 131072
+        "context": 81920,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -9283,7 +9328,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-08-28",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -9293,7 +9338,7 @@
         "input": 0.08,
         "output": 0.28
       },
-      "description": "Qwen3 32B 是由 openrouter 提供的人工智能模型。",
+      "description": "Dense open Qwen model for self-hosted chat, reasoning, and coding",
       "family": "qwen",
       "id": "qwen/qwen3-32b",
       "knowledge": "2025-04",
@@ -9326,17 +9371,16 @@
     "qwen/qwen3-8b": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.05,
-        "output": 0.4
+        "input": 0.117,
+        "output": 0.455
       },
-      "description": "Qwen3 8B 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen3-8b",
       "knowledge": "2025-03-31",
       "last_updated": "2025-04-28",
       "limit": {
-        "context": 40960,
+        "context": 131072,
         "output": 8192
       },
       "modalities": {
@@ -9356,7 +9400,7 @@
         }
       ],
       "release_date": "2025-04-28",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -9366,7 +9410,7 @@
         "input": 0.22,
         "output": 1.8
       },
-      "description": "Qwen3 Coder 480B A35B 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
       "id": "qwen/qwen3-coder",
       "knowledge": "2025-06-30",
@@ -9397,7 +9441,7 @@
         "input": 0.07,
         "output": 0.27
       },
-      "description": "Qwen3-Coder 30B-A3B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Smaller Qwen coder for efficient local agents and repo-level fixes",
       "family": "qwen",
       "id": "qwen/qwen3-coder-30b-a3b-instruct",
       "knowledge": "2025-04",
@@ -9430,7 +9474,7 @@
         "input": 0.195,
         "output": 0.975
       },
-      "description": "Qwen3 Coder Flash 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
       "id": "qwen/qwen3-coder-flash",
       "knowledge": "2025-04",
@@ -9462,7 +9506,7 @@
         "input": 0.11,
         "output": 0.8
       },
-      "description": "Qwen3 Coder Next 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
       "id": "qwen/qwen3-coder-next",
       "last_updated": "2026-02-04",
@@ -9494,7 +9538,7 @@
         "input": 0.65,
         "output": 3.25
       },
-      "description": "Qwen3 Coder Plus 是由 openrouter 提供的人工智能模型。",
+      "description": "Hosted Qwen coder for software agents, repo edits, and long-context code",
       "family": "qwen",
       "id": "qwen/qwen3-coder-plus",
       "knowledge": "2025-04",
@@ -9525,7 +9569,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Qwen3 Coder 480B A35B (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
       "id": "qwen/qwen3-coder:free",
       "knowledge": "2025-06-30",
@@ -9558,7 +9602,7 @@
         "input": 0.78,
         "output": 3.9
       },
-      "description": "Qwen3 Max 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship Qwen3 model for coding agents, complex reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen3-max",
       "knowledge": "2025-04",
@@ -9589,7 +9633,7 @@
         "input": 0.78,
         "output": 3.9
       },
-      "description": "Qwen3 Max Thinking 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
       "family": "qwen",
       "id": "qwen/qwen3-max-thinking",
       "last_updated": "2026-02-09",
@@ -9626,7 +9670,7 @@
         "input": 0.09,
         "output": 1.1
       },
-      "description": "Qwen3-Next 80B-A3B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen3-next-80b-a3b-instruct",
       "knowledge": "2025-04",
@@ -9657,7 +9701,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Qwen3 Next 80B A3B Instruct (free) 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen3-next-80b-a3b-instruct:free",
       "knowledge": "2025-04",
@@ -9688,7 +9732,7 @@
         "input": 0.0975,
         "output": 0.78
       },
-      "description": "Qwen3-Next 80B-A3B (Thinking) 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient Qwen thinking model for local reasoning, math, and coding agents",
       "family": "qwen",
       "id": "qwen/qwen3-next-80b-a3b-thinking",
       "knowledge": "2025-04",
@@ -9721,7 +9765,7 @@
         "input": 0.2,
         "output": 0.88
       },
-      "description": "Qwen3 VL 235B A22B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3-vl-235b-a22b-instruct",
       "knowledge": "2025-03-31",
@@ -9753,7 +9797,7 @@
         "input": 0.26,
         "output": 2.6
       },
-      "description": "Qwen3 VL 235B A22B Thinking 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3-vl-235b-a22b-thinking",
       "knowledge": "2025-03-31",
@@ -9786,7 +9830,7 @@
         "input": 0.13,
         "output": 0.52
       },
-      "description": "Qwen3 VL 30B A3B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3-vl-30b-a3b-instruct",
       "knowledge": "2025-03-31",
@@ -9818,7 +9862,7 @@
         "input": 0.13,
         "output": 1.56
       },
-      "description": "Qwen3 VL 30B A3B Thinking 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3-vl-30b-a3b-thinking",
       "knowledge": "2025-03-31",
@@ -9851,7 +9895,7 @@
         "input": 0.104,
         "output": 0.416
       },
-      "description": "Qwen3 VL 32B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3-vl-32b-instruct",
       "last_updated": "2025-10-23",
@@ -9882,7 +9926,7 @@
         "input": 0.08,
         "output": 0.5
       },
-      "description": "Qwen3 VL 8B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3-vl-8b-instruct",
       "last_updated": "2025-10-14",
@@ -9913,7 +9957,7 @@
         "input": 0.117,
         "output": 1.365
       },
-      "description": "Qwen3 VL 8B Thinking 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3-vl-8b-thinking",
       "last_updated": "2025-10-14",
@@ -9945,7 +9989,7 @@
         "input": 0.26,
         "output": 2.08
       },
-      "description": "Qwen3.5 122B-A10B 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3.5-122b-a10b",
       "last_updated": "2026-02-23",
@@ -9982,7 +10026,7 @@
         "input": 0.195,
         "output": 1.56
       },
-      "description": "Qwen3.5 27B 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3.5-27b",
       "last_updated": "2026-02-23",
@@ -10020,7 +10064,7 @@
         "input": 0.14,
         "output": 1
       },
-      "description": "Qwen3.5 35B-A3B 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3.5-35b-a3b",
       "last_updated": "2026-02-23",
@@ -10057,7 +10101,7 @@
         "input": 0.385,
         "output": 2.45
       },
-      "description": "Qwen3.5 397B-A17B 是由 openrouter 提供的人工智能模型。",
+      "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
       "family": "qwen",
       "id": "qwen/qwen3.5-397b-a17b",
       "last_updated": "2026-02-15",
@@ -10094,7 +10138,7 @@
         "input": 0.1,
         "output": 0.15
       },
-      "description": "Qwen3.5 9B 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "qwen/qwen3.5-9b",
       "last_updated": "2026-02-23",
@@ -10131,7 +10175,7 @@
         "input": 0.065,
         "output": 0.26
       },
-      "description": "Qwen3.5-Flash 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3.5-flash-02-23",
       "last_updated": "2026-02-25",
@@ -10173,7 +10217,7 @@
         "input": 0.26,
         "output": 1.56
       },
-      "description": "Qwen3.5 Plus 2026-02-15 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3.5-plus-02-15",
       "knowledge": "2025-04",
@@ -10217,7 +10261,7 @@
         "input": 0.3,
         "output": 1.8
       },
-      "description": "Qwen3.5 Plus 2026-04-20 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen3.5",
       "id": "qwen/qwen3.5-plus-20260420",
       "last_updated": "2026-04-27",
@@ -10259,7 +10303,7 @@
         "input": 0.285,
         "output": 2.4
       },
-      "description": "Qwen3.6 27B 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3.6-27b",
       "last_updated": "2026-04-22",
@@ -10296,7 +10340,7 @@
         "input": 0.14,
         "output": 1
       },
-      "description": "Qwen3.6 35B-A3B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
       "family": "qwen",
       "id": "qwen/qwen3.6-35b-a3b",
       "last_updated": "2026-04-17",
@@ -10334,7 +10378,7 @@
         "input": 0.1875,
         "output": 1.125
       },
-      "description": "Qwen3.6 Flash 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen3.6",
       "id": "qwen/qwen3.6-flash",
       "last_updated": "2026-04-27",
@@ -10377,7 +10421,7 @@
         "input": 1.04,
         "output": 6.24
       },
-      "description": "Qwen3.6 Max Preview 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship Qwen model for complex reasoning, coding, and agentic workflows",
       "family": "qwen",
       "id": "qwen/qwen3.6-max-preview",
       "knowledge": "2025-04",
@@ -10419,7 +10463,7 @@
         "input": 0.325,
         "output": 1.95
       },
-      "description": "Qwen3.6 Plus 是由 openrouter 提供的人工智能模型。",
+      "description": "Earlier Qwen multimodal workhorse for million-token agent and document tasks",
       "family": "qwen",
       "id": "qwen/qwen3.6-plus",
       "knowledge": "2025-04",
@@ -10464,7 +10508,7 @@
         "input": 1.25,
         "output": 3.75
       },
-      "description": "Qwen3.7 Max 是由 openrouter 提供的人工智能模型。",
+      "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
       "family": "qwen",
       "id": "qwen/qwen3.7-max",
       "last_updated": "2026-05-21",
@@ -10506,7 +10550,7 @@
         "input": 0.32,
         "output": 1.28
       },
-      "description": "Qwen3.7 Plus 是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
       "family": "qwen",
       "id": "qwen/qwen3.7-plus",
       "knowledge": "2025-04",
@@ -10548,7 +10592,7 @@
         "input": 0.1,
         "output": 0.1
       },
-      "description": "Reka Edge 是由 openrouter 提供的人工智能模型。",
+      "description": "Multimodal model for analyzing text, images, documents, and rich media",
       "family": "reka",
       "id": "rekaai/reka-edge",
       "last_updated": "2026-03-20",
@@ -10580,7 +10624,7 @@
         "input": 0.1,
         "output": 0.2
       },
-      "description": "Reka Flash 3 是由 openrouter 提供的人工智能模型。",
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "reka",
       "id": "rekaai/reka-flash-3",
       "knowledge": "2025-01-31",
@@ -10612,7 +10656,7 @@
         "input": 0.85,
         "output": 1.25
       },
-      "description": "Relace Apply 3 是由 openrouter 提供的人工智能模型。",
+      "description": "General-purpose chat model for instruction following, writing, and analysis",
       "id": "relace/relace-apply-3",
       "last_updated": "2025-09-26",
       "limit": {
@@ -10641,7 +10685,7 @@
         "input": 1,
         "output": 3
       },
-      "description": "Relace Search 是由 openrouter 提供的人工智能模型。",
+      "description": "Tool-capable chat model for instruction following and agentic application workflows",
       "id": "relace/relace-search",
       "last_updated": "2025-12-08",
       "limit": {
@@ -10671,7 +10715,7 @@
         "input": 5,
         "output": 30
       },
-      "description": "Fugu Ultra 是由 openrouter 提供的人工智能模型。",
+      "description": "Quality-first multi-agent model for hard research, analysis, and competitions",
       "family": "fugu",
       "id": "sakana/fugu-ultra",
       "last_updated": "2026-06-24",
@@ -10712,7 +10756,7 @@
         "input": 0.04,
         "output": 0.05
       },
-      "description": "Llama 3 8B Lunaris 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "sao10k/l3-lunaris-8b",
       "knowledge": "2023-12-31",
@@ -10743,7 +10787,7 @@
         "input": 3,
         "output": 3
       },
-      "description": "Llama 3.1 70B Hanami x1 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "sao10k/l3.1-70b-hanami-x1",
       "knowledge": "2023-12-31",
@@ -10774,7 +10818,7 @@
         "input": 0.85,
         "output": 0.85
       },
-      "description": "Llama 3.1 Euryale 70B v2.2 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "sao10k/l3.1-euryale-70b",
       "knowledge": "2023-12-31",
@@ -10805,7 +10849,7 @@
         "input": 0.65,
         "output": 0.75
       },
-      "description": "Llama 3.3 Euryale 70B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "sao10k/l3.3-euryale-70b",
       "knowledge": "2023-12-31",
@@ -10836,7 +10880,7 @@
         "input": 0.1,
         "output": 0.3
       },
-      "description": "Step 3.5 Flash 是由 openrouter 提供的人工智能模型。",
+      "description": "StepFun flash lane for quick multimodal reasoning and coding assistance",
       "id": "stepfun/step-3.5-flash",
       "knowledge": "2025-01",
       "last_updated": "2026-02-13",
@@ -10868,7 +10912,7 @@
         "input": 0.2,
         "output": 1.15
       },
-      "description": "Step 3.7 Flash 是由 openrouter 提供的人工智能模型。",
+      "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
       "id": "stepfun/step-3.7-flash",
       "knowledge": "2026-01-01",
       "last_updated": "2026-05-29",
@@ -10911,7 +10955,7 @@
         "input": 0.85,
         "output": 3.4
       },
-      "description": "Switchpoint Router 是由 openrouter 提供的人工智能模型。",
+      "description": "Automatic model router for matching prompts to suitable backends and budgets",
       "id": "switchpoint/router",
       "last_updated": "2025-07-11",
       "limit": {
@@ -10941,7 +10985,7 @@
         "input": 0.14,
         "output": 0.57
       },
-      "description": "Hunyuan A13B Instruct 是由 openrouter 提供的人工智能模型。",
+      "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "hunyuan",
       "id": "tencent/hunyuan-a13b-instruct",
       "knowledge": "2025-03-31",
@@ -10974,7 +11018,7 @@
         "input": 0.063,
         "output": 0.21
       },
-      "description": "Hy3 preview 是由 openrouter 提供的人工智能模型。",
+      "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
       "id": "tencent/hy3-preview",
       "last_updated": "2026-04-20",
@@ -11015,7 +11059,7 @@
         "input": 0.3,
         "output": 0.5
       },
-      "description": "Cydonia 24B V4.1 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "id": "thedrummer/cydonia-24b-v4.1",
       "knowledge": "2024-04-30",
       "last_updated": "2025-09-27",
@@ -11045,7 +11089,7 @@
         "input": 0.25,
         "output": 0.5
       },
-      "description": "Rocinante 12B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "id": "thedrummer/rocinante-12b",
       "knowledge": "2024-04-30",
       "last_updated": "2024-09-30",
@@ -11076,7 +11120,7 @@
         "input": 0.55,
         "output": 0.8
       },
-      "description": "Skyfall 36B V2 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "id": "thedrummer/skyfall-36b-v2",
       "knowledge": "2024-06-30",
       "last_updated": "2025-03-10",
@@ -11106,7 +11150,7 @@
         "input": 0.4,
         "output": 0.4
       },
-      "description": "UnslopNemo 12B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "id": "thedrummer/unslopnemo-12b",
       "knowledge": "2024-04-30",
       "last_updated": "2024-11-08",
@@ -11136,7 +11180,7 @@
         "input": 0.45,
         "output": 0.65
       },
-      "description": "ReMM SLERP 13B 是由 openrouter 提供的人工智能模型。",
+      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "id": "undi95/remm-slerp-l2-13b",
       "knowledge": "2023-06-30",
       "last_updated": "2023-07-22",
@@ -11167,7 +11211,7 @@
         "input": 0.15,
         "output": 0.6
       },
-      "description": "Solar Pro 3 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
       "family": "solar-pro",
       "id": "upstage/solar-pro-3",
       "last_updated": "2026-01-27",
@@ -11198,7 +11242,7 @@
         "input": 0.6,
         "output": 6
       },
-      "description": "Palmyra X5 是由 openrouter 提供的人工智能模型。",
+      "description": "General-purpose chat model for instruction following, writing, and analysis",
       "family": "palmyra",
       "id": "writer/palmyra-x5",
       "last_updated": "2026-01-21",
@@ -11229,7 +11273,7 @@
         "input": 1.25,
         "output": 2.5
       },
-      "description": "Grok 4.20 是由 openrouter 提供的人工智能模型。",
+      "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
       "family": "grok",
       "id": "x-ai/grok-4.20",
       "knowledge": "2025-09-01",
@@ -11264,7 +11308,7 @@
         "input": 1.25,
         "output": 2.5
       },
-      "description": "Grok 4.20 Multi-Agent 是由 openrouter 提供的人工智能模型。",
+      "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
       "family": "grok",
       "id": "x-ai/grok-4.20-multi-agent",
       "knowledge": "2025-09-01",
@@ -11323,7 +11367,7 @@
           }
         ]
       },
-      "description": "Grok 4.3 是由 openrouter 提供的人工智能模型。",
+      "description": "xAI's default Grok for chat, coding, agentic tools, and lower hallucination risk",
       "family": "grok",
       "id": "x-ai/grok-4.3",
       "last_updated": "2026-04-17",
@@ -11367,7 +11411,7 @@
         "input": 1,
         "output": 2
       },
-      "description": "Grok Build 0.1 是由 openrouter 提供的人工智能模型。",
+      "description": "Fast Grok coding model tuned for agentic engineering and iterative edits",
       "family": "grok-build",
       "id": "x-ai/grok-build-0.1",
       "last_updated": "2026-04-16",
@@ -11399,7 +11443,7 @@
         "input": 0.105,
         "output": 0.28
       },
-      "description": "MiMo-V2.5 是由 openrouter 提供的人工智能模型。",
+      "description": "Open MiMo model for multimodal coding agents and long-context automation",
       "family": "mimo",
       "id": "xiaomi/mimo-v2.5",
       "interleaved": {
@@ -11442,7 +11486,7 @@
         "input": 0.435,
         "output": 0.87
       },
-      "description": "MiMo-V2.5-Pro 是由 openrouter 提供的人工智能模型。",
+      "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
       "family": "mimo",
       "id": "xiaomi/mimo-v2.5-pro",
       "interleaved": {
@@ -11482,7 +11526,7 @@
         "input": 0.6,
         "output": 2.2
       },
-      "description": "GLM-4.5 是由 openrouter 提供的人工智能模型。",
+      "description": "Hybrid-reasoning GLM release that made the 4.5 line broadly useful",
       "family": "glm",
       "id": "z-ai/glm-4.5",
       "knowledge": "2025-04",
@@ -11519,7 +11563,7 @@
         "input": 0.13,
         "output": 0.85
       },
-      "description": "GLM-4.5-Air 是由 openrouter 提供的人工智能模型。",
+      "description": "Lighter GLM-4.5 variant for fast coding assistance and cheaper agents",
       "family": "glm-air",
       "id": "z-ai/glm-4.5-air",
       "knowledge": "2025-04",
@@ -11556,7 +11600,7 @@
         "input": 0.6,
         "output": 1.8
       },
-      "description": "GLM-4.5V 是由 openrouter 提供的人工智能模型。",
+      "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm",
       "id": "z-ai/glm-4.5v",
       "knowledge": "2025-04",
@@ -11594,7 +11638,7 @@
         "input": 0.43,
         "output": 1.74
       },
-      "description": "GLM-4.6 是由 openrouter 提供的人工智能模型。",
+      "description": "Late GLM-4 workhorse for coding agents, reasoning, and structured tasks",
       "family": "glm",
       "id": "z-ai/glm-4.6",
       "knowledge": "2025-04",
@@ -11627,7 +11671,7 @@
         "input": 0.3,
         "output": 0.9
       },
-      "description": "GLM-4.6V 是由 openrouter 提供的人工智能模型。",
+      "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm",
       "id": "z-ai/glm-4.6v",
       "knowledge": "2025-04",
@@ -11662,7 +11706,7 @@
         "input": 0.4,
         "output": 1.75
       },
-      "description": "GLM-4.7 是由 openrouter 提供的人工智能模型。",
+      "description": "Mature GLM model for dependable coding, reasoning, and structured agent tasks",
       "family": "glm",
       "id": "z-ai/glm-4.7",
       "interleaved": {
@@ -11698,7 +11742,7 @@
         "input": 0.06,
         "output": 0.4
       },
-      "description": "GLM-4.7-Flash 是由 openrouter 提供的人工智能模型。",
+      "description": "Budget GLM lane for fast coding help, routing, and everyday automation",
       "family": "glm-flash",
       "id": "z-ai/glm-4.7-flash",
       "interleaved": {
@@ -11734,7 +11778,7 @@
         "input": 0.6,
         "output": 1.92
       },
-      "description": "GLM-5 是由 openrouter 提供的人工智能模型。",
+      "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
       "family": "glm",
       "id": "z-ai/glm-5",
       "interleaved": {
@@ -11769,7 +11813,7 @@
         "input": 1.2,
         "output": 4
       },
-      "description": "GLM-5-Turbo 是由 openrouter 提供的人工智能模型。",
+      "description": "Faster GLM-5 lane for coding agents that need lower latency",
       "family": "glm",
       "id": "z-ai/glm-5-turbo",
       "interleaved": {
@@ -11803,7 +11847,7 @@
         "input": 0.975,
         "output": 4.3
       },
-      "description": "GLM-5.1 是由 openrouter 提供的人工智能模型。",
+      "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
       "family": "glm",
       "id": "z-ai/glm-5.1",
       "interleaved": {
@@ -11838,7 +11882,7 @@
         "input": 0.93,
         "output": 3
       },
-      "description": "GLM-5.2 是由 openrouter 提供的人工智能模型。",
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
       "id": "z-ai/glm-5.2",
       "interleaved": {
@@ -11881,7 +11925,7 @@
         "input": 1.2,
         "output": 4
       },
-      "description": "GLM-5V-Turbo 是由 openrouter 提供的人工智能模型。",
+      "description": "Fast GLM vision model for screenshots, documents, and multimodal agent tasks",
       "family": "glm",
       "id": "z-ai/glm-5v-turbo",
       "last_updated": "2026-04-01",
@@ -11916,7 +11960,7 @@
         "input": 10,
         "output": 50
       },
-      "description": "Claude Fable Latest 是由 openrouter 提供的人工智能模型。",
+      "description": "Claude model for creative writing, analysis, and controlled agent workflows",
       "family": "claude-fable",
       "id": "~anthropic/claude-fable-latest",
       "last_updated": "2026-06-09",
@@ -11962,7 +12006,7 @@
         "input": 1,
         "output": 5
       },
-      "description": "Anthropic Claude Haiku Latest 是由 openrouter 提供的人工智能模型。",
+      "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
       "family": "claude-haiku",
       "id": "~anthropic/claude-haiku-latest",
       "last_updated": "2026-04-27",
@@ -12006,7 +12050,7 @@
         "input": 5,
         "output": 25
       },
-      "description": "Claude Opus Latest 是由 openrouter 提供的人工智能模型。",
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
       "id": "~anthropic/claude-opus-latest",
       "last_updated": "2026-04-21",
@@ -12055,7 +12099,7 @@
         "input": 2,
         "output": 10
       },
-      "description": "Anthropic Claude Sonnet Latest 是由 openrouter 提供的人工智能模型。",
+      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "~anthropic/claude-sonnet-latest",
       "last_updated": "2026-04-27",
@@ -12109,7 +12153,7 @@
         "output": 9,
         "reasoning": 9
       },
-      "description": "Google Gemini Flash Latest 是由 openrouter 提供的人工智能模型。",
+      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash",
       "id": "~google/gemini-flash-latest",
       "knowledge": "2025-01-01",
@@ -12158,7 +12202,7 @@
         "output": 12,
         "reasoning": 12
       },
-      "description": "Google Gemini Pro Latest 是由 openrouter 提供的人工智能模型。",
+      "description": "Advanced Gemini model for complex reasoning, coding, and multimodal analysis",
       "family": "gemini-pro",
       "id": "~google/gemini-pro-latest",
       "last_updated": "2026-04-27",
@@ -12203,7 +12247,7 @@
         "input": 0.55,
         "output": 3.2
       },
-      "description": "MoonshotAI Kimi Latest 是由 openrouter 提供的人工智能模型。",
+      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
       "id": "~moonshotai/kimi-latest",
       "last_updated": "2026-04-27",
@@ -12236,7 +12280,7 @@
         "input": 5,
         "output": 30
       },
-      "description": "OpenAI GPT Latest 是由 openrouter 提供的人工智能模型。",
+      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
       "family": "gpt",
       "id": "~openai/gpt-latest",
       "knowledge": "2025-12-01",
@@ -12282,7 +12326,7 @@
         "input": 0.75,
         "output": 4.5
       },
-      "description": "OpenAI GPT Mini Latest 是由 openrouter 提供的人工智能模型。",
+      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "family": "gpt-mini",
       "id": "~openai/gpt-mini-latest",
       "knowledge": "2025-08-31",
