@@ -1090,6 +1090,53 @@
       "temperature": true,
       "tool_call": true
     },
+    "anthropic/claude-sonnet-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 10
+      },
+      "description": "Claude Sonnet 5 は openrouter によって提供される AI モデルです。",
+      "family": "claude-sonnet",
+      "id": "anthropic/claude-sonnet-5",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-06-30",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-30",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "arcee-ai/coder-large": {
       "attachment": false,
       "cost": {
@@ -1339,7 +1386,17 @@
       "name": "Seed-2.0-Lite",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-03-10",
       "structured_output": true,
       "temperature": true,
@@ -1948,8 +2005,8 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.02,
-        "input": 0.09,
-        "output": 0.18
+        "input": 0.098,
+        "output": 0.196
       },
       "description": "DeepSeek V4 Flash は openrouter によって提供される AI モデルです。",
       "family": "deepseek-flash",
@@ -1960,7 +2017,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1000000,
+        "context": 1048575,
         "output": 65536
       },
       "modalities": {
@@ -2607,6 +2664,48 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
+    },
+    "google/gemini-3.1-flash-lite-image": {
+      "attachment": true,
+      "cost": {
+        "input": 0.25,
+        "output": 1.5
+      },
+      "description": "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) は openrouter によって提供される AI モデルです。",
+      "family": "gemini",
+      "id": "google/gemini-3.1-flash-lite-image",
+      "knowledge": "2025-01-01",
+      "last_updated": "2026-06-30",
+      "limit": {
+        "context": 65536,
+        "output": 66000
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "image",
+          "text"
+        ]
+      },
+      "name": "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-30",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
     },
     "google/gemini-3.1-flash-lite-preview": {
       "attachment": true,
@@ -3328,7 +3427,17 @@
       "name": "Mercury 2",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-03-04",
       "structured_output": true,
       "temperature": true,
@@ -3422,7 +3531,15 @@
       "name": "Ring-2.6-1T",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-05-08",
       "structured_output": false,
       "temperature": true,
@@ -4050,37 +4167,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "microsoft/phi-4-mini-instruct": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.08,
-        "input": 0.08,
-        "output": 0.35
-      },
-      "description": "Phi 4 Mini Instruct は openrouter によって提供される AI モデルです。",
-      "family": "phi",
-      "id": "microsoft/phi-4-mini-instruct",
-      "last_updated": "2025-10-17",
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Phi 4 Mini Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-10-17",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
     "microsoft/wizardlm-2-8x22b": {
       "attachment": false,
       "cost": {
@@ -4699,7 +4785,15 @@
       "name": "Mistral Medium 3.5",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-30",
       "structured_output": true,
       "temperature": true,
@@ -4862,7 +4956,15 @@
       "name": "Mistral Small 4",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-03-16",
       "structured_output": true,
       "temperature": true,
@@ -5582,7 +5684,11 @@
       "name": "Nemotron 3 Nano Omni (free)",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-04-28",
       "structured_output": false,
       "temperature": true,
@@ -5613,7 +5719,18 @@
       "name": "Nemotron 3 Super 120B A12B",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-03-11",
       "structured_output": true,
       "temperature": true,
@@ -5644,7 +5761,18 @@
       "name": "Nemotron 3 Super (free)",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-03-11",
       "structured_output": true,
       "temperature": true,
@@ -5676,7 +5804,18 @@
       "name": "Nemotron 3 Ultra 550B A55B",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-06-04",
       "structured_output": true,
       "temperature": true,
@@ -5707,7 +5846,18 @@
       "name": "Nemotron 3 Ultra (free)",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-06-04",
       "structured_output": false,
       "temperature": true,
@@ -6709,7 +6859,14 @@
       "name": "GPT-5 Pro",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-10-06",
       "structured_output": true,
       "temperature": false,
@@ -7253,7 +7410,18 @@
       "name": "GPT-5.4 Image 2",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-04-21",
       "structured_output": true,
       "temperature": false,
@@ -8016,7 +8184,14 @@
       "name": "o3 Mini High",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-02-12",
       "structured_output": true,
       "temperature": false,
@@ -8173,7 +8348,14 @@
       "name": "o4 Mini High",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-04-16",
       "structured_output": true,
       "temperature": false,
@@ -8976,9 +9158,8 @@
     "qwen/qwen3-235b-a22b-thinking-2507": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.1,
-        "input": 0.1,
-        "output": 0.1
+        "input": 0.1495,
+        "output": 1.495
       },
       "description": "Qwen3 235B A22B Thinking 2507 は openrouter によって提供される AI モデルです。",
       "family": "qwen",
@@ -8986,7 +9167,7 @@
       "knowledge": "2025-06-30",
       "last_updated": "2025-07-25",
       "limit": {
-        "context": 262144,
+        "context": 131072,
         "output": 262144
       },
       "modalities": {
@@ -10491,6 +10672,7 @@
         "output": 30
       },
       "description": "Fugu Ultra は openrouter によって提供される AI モデルです。",
+      "family": "fugu",
       "id": "sakana/fugu-ultra",
       "last_updated": "2026-06-24",
       "limit": {
@@ -11653,7 +11835,7 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.18,
-        "input": 0.94,
+        "input": 0.93,
         "output": 3
       },
       "description": "GLM-5.2 は openrouter によって提供される AI モデルです。",
@@ -11678,7 +11860,15 @@
       "name": "GLM-5.2",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-06-13",
       "structured_output": true,
       "temperature": true,
@@ -11860,10 +12050,10 @@
     "~anthropic/claude-sonnet-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 10
       },
       "description": "Anthropic Claude Sonnet Latest は openrouter によって提供される AI モデルです。",
       "family": "claude-sonnet",
@@ -11907,7 +12097,7 @@
       ],
       "release_date": "2026-04-27",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "~google/gemini-flash-latest": {

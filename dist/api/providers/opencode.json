@@ -596,6 +596,55 @@
       "temperature": true,
       "tool_call": true
     },
+    "claude-sonnet-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 10
+      },
+      "description": "Claude Sonnet 5 is an AI model provided by opencode.",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-5",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-06-30",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 5",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/anthropic"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-30",
+      "temperature": false,
+      "tool_call": true
+    },
     "deepseek-v4-flash": {
       "attachment": false,
       "cost": {
@@ -2393,6 +2442,44 @@
       "temperature": true,
       "tool_call": true
     },
+    "kimi-k2.7-code": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.19,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Kimi K2.7 Code is an AI model provided by opencode.",
+      "family": "kimi-k2",
+      "id": "kimi-k2.7-code",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "ling-2.6-flash-free": {
       "attachment": false,
       "cost": {
@@ -2580,7 +2667,7 @@
         "input": 0.3,
         "output": 1.2
       },
-      "description": "MiniMax M2.1 is an AI model provided by opencode.",
+      "description": "MiniMax-M2.1 is an AI model provided by opencode.",
       "family": "minimax",
       "id": "minimax-m2.1",
       "interleaved": {
@@ -2600,7 +2687,7 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.1",
+      "name": "MiniMax-M2.1",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
@@ -2616,7 +2703,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "MiniMax M2.1 Free is an AI model provided by opencode.",
+      "description": "MiniMax-M2.1 Free is an AI model provided by opencode.",
       "family": "minimax-free",
       "id": "minimax-m2.1-free",
       "knowledge": "2025-01",
@@ -2633,7 +2720,7 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.1 Free",
+      "name": "MiniMax-M2.1 Free",
       "open_weights": true,
       "provider": {
         "npm": "@ai-sdk/anthropic"
@@ -2652,7 +2739,7 @@
         "input": 0.3,
         "output": 1.2
       },
-      "description": "MiniMax M2.5 is an AI model provided by opencode.",
+      "description": "MiniMax-M2.5 is an AI model provided by opencode.",
       "family": "minimax",
       "id": "minimax-m2.5",
       "interleaved": {
@@ -2672,7 +2759,7 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.5",
+      "name": "MiniMax-M2.5",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
@@ -2687,7 +2774,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "MiniMax M2.5 Free is an AI model provided by opencode.",
+      "description": "MiniMax-M2.5 Free is an AI model provided by opencode.",
       "family": "minimax-free",
       "id": "minimax-m2.5-free",
       "knowledge": "2025-01",
@@ -2704,7 +2791,7 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.5 Free",
+      "name": "MiniMax-M2.5 Free",
       "open_weights": true,
       "provider": {
         "npm": "@ai-sdk/anthropic"
@@ -2723,7 +2810,7 @@
         "input": 0.3,
         "output": 1.2
       },
-      "description": "MiniMax M2.7 is an AI model provided by opencode.",
+      "description": "MiniMax-M2.7 is an AI model provided by opencode.",
       "family": "minimax",
       "id": "minimax-m2.7",
       "interleaved": {
@@ -2743,11 +2830,47 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.7",
+      "name": "MiniMax-M2.7",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-03-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax-M3 is an AI model provided by opencode.",
+      "family": "minimax",
+      "id": "minimax-m3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-01",
+      "limit": {
+        "context": 512000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-01",
       "temperature": true,
       "tool_call": true
     },
@@ -2758,7 +2881,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "MiniMax M3 Free is an AI model provided by opencode.",
+      "description": "MiniMax-M3 Free is an AI model provided by opencode.",
       "family": "minimax-m3-free",
       "id": "minimax-m3-free",
       "knowledge": "2025-01",
@@ -2777,7 +2900,7 @@
           "text"
         ]
       },
-      "name": "MiniMax M3 Free",
+      "name": "MiniMax-M3 Free",
       "open_weights": true,
       "provider": {
         "npm": "@ai-sdk/anthropic"
