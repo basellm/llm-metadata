@@ -1149,6 +1149,84 @@
       "structured_output": true,
       "temperature": false,
       "tool_call": true
+    },
+    "kimi-k2.7-code": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.19,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
+      "family": "kimi-k2",
+      "id": "kimi-k2.7-code",
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 256000,
+        "input": 224000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "mai-code-1-flash-picker": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.75,
+        "output": 4.5
+      },
+      "description": "Microsoft coding model built for fast, efficient assistance in everyday developer workflows",
+      "family": "mai",
+      "id": "mai-code-1-flash-picker",
+      "knowledge": "2025-12",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 256000,
+        "input": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MAI-Code-1-Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     }
   },
   "name": "GitHub Copilot",

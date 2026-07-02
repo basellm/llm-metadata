@@ -1,0 +1,279 @@
+{
+  "api": "https://api.trustedrouter.com/v1",
+  "doc": "https://trustedrouter.com/docs",
+  "env": [
+    "TRUSTEDROUTER_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/trustedrouter.svg",
+  "id": "trustedrouter",
+  "models": {
+    "auto": {
+      "attachment": true,
+      "description": "TrustedRouter automatic routing alias that chooses a healthy supported model endpoint for the request.",
+      "id": "auto",
+      "last_updated": "2026-06-27",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Auto",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-05-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cheap": {
+      "attachment": true,
+      "description": "TrustedRouter low-cost routing alias that prefers inexpensive healthy model endpoints.",
+      "id": "cheap",
+      "last_updated": "2026-06-27",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Cheap",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-05-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "e2e": {
+      "attachment": true,
+      "description": "TrustedRouter privacy routing alias for end-to-end encrypted provider routes where available.",
+      "id": "e2e",
+      "last_updated": "2026-06-27",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "End-to-End Encrypted",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "fast": {
+      "attachment": true,
+      "description": "TrustedRouter speed routing alias that prefers low-latency healthy model endpoints.",
+      "id": "fast",
+      "last_updated": "2026-06-27",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Fast",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "synth": {
+      "attachment": true,
+      "description": "TrustedRouter synthesis orchestration alias that combines multiple model responses into one answer.",
+      "id": "synth",
+      "last_updated": "2026-06-27",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Synth",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "synth-code": {
+      "attachment": true,
+      "description": "TrustedRouter code synthesis orchestration alias that combines multiple model responses into one answer.",
+      "id": "synth-code",
+      "last_updated": "2026-06-27",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Synth Code",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zdr": {
+      "attachment": true,
+      "description": "TrustedRouter privacy routing alias that prefers zero data retention model endpoints.",
+      "id": "zdr",
+      "last_updated": "2026-06-27",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Zero Data Retention",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "TrustedRouter",
+  "npm": "@ai-sdk/openai-compatible"
+}

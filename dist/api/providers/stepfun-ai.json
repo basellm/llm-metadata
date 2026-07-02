@@ -7,6 +7,70 @@
   "iconURL": "https://models.dev/logos/stepfun-ai.svg",
   "id": "stepfun-ai",
   "models": {
+    "step-1-32k": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.41,
+        "input": 2.05,
+        "output": 9.59
+      },
+      "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
+      "id": "step-1-32k",
+      "knowledge": "2024-06",
+      "last_updated": "2026-02-13",
+      "limit": {
+        "context": 32768,
+        "input": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 1 (32K)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-01-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "step-2-16k": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 1.04,
+        "input": 5.21,
+        "output": 16.44
+      },
+      "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
+      "id": "step-2-16k",
+      "knowledge": "2024-06",
+      "last_updated": "2026-02-13",
+      "limit": {
+        "context": 16384,
+        "input": 16384,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 2 (16K)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-01-01",
+      "temperature": true,
+      "tool_call": true
+    },
     "step-3.5-flash": {
       "attachment": false,
       "cost": {
@@ -14,8 +78,11 @@
         "input": 0.1,
         "output": 0.3
       },
-      "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
+      "description": "StepFun flash lane for quick multimodal reasoning and coding assistance",
       "id": "step-3.5-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-01",
       "last_updated": "2026-06-15",
       "limit": {
@@ -48,6 +115,9 @@
       },
       "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
       "id": "step-3.5-flash-2603",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-01",
       "last_updated": "2026-04-02",
       "limit": {
@@ -78,6 +148,126 @@
       "release_date": "2026-04-02",
       "temperature": true,
       "tool_call": true
+    },
+    "step-3.7-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.04,
+        "input": 0.2,
+        "output": 1.15
+      },
+      "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
+      "id": "step-3.7-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2026-01-01",
+      "last_updated": "2026-06-29",
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 3.7 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-05-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "step-tts-2": {
+      "attachment": false,
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "family": "step",
+      "id": "step-tts-2",
+      "last_updated": "2026-07-02",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "Step TTS 2",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-01",
+      "temperature": false,
+      "tool_call": false
+    },
+    "stepaudio-2.5-asr": {
+      "attachment": false,
+      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "family": "step",
+      "id": "stepaudio-2.5-asr",
+      "last_updated": "2026-07-02",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "StepAudio 2.5 ASR",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-24",
+      "temperature": false,
+      "tool_call": false
+    },
+    "stepaudio-2.5-tts": {
+      "attachment": false,
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "family": "step",
+      "id": "stepaudio-2.5-tts",
+      "last_updated": "2026-07-02",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "StepAudio 2.5 TTS",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-16",
+      "temperature": false,
+      "tool_call": false
     }
   },
   "name": "StepFun AI",

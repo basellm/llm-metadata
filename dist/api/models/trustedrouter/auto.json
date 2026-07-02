@@ -1,0 +1,38 @@
+{
+  "attachment": true,
+  "description": "TrustedRouter automatic routing alias that chooses a healthy supported model endpoint for the request.",
+  "id": "auto",
+  "last_updated": "2026-06-27",
+  "limit": {
+    "context": 1000000,
+    "output": 131072
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "pdf"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Auto",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "release_date": "2026-05-01",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}
