@@ -53,46 +53,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "hf:Qwen/Qwen3.5-397B-A17B": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.6,
-        "input": 0.6,
-        "output": 3.6
-      },
-      "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
-      "family": "qwen",
-      "id": "hf:Qwen/Qwen3.5-397B-A17B",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-02-15",
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.5 397B-A17B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-02-15",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "hf:Qwen/Qwen3.6-27B": {
       "attachment": true,
       "cost": {
@@ -139,21 +99,21 @@
       "temperature": true,
       "tool_call": true
     },
-    "hf:moonshotai/Kimi-K2.6": {
+    "hf:moonshotai/Kimi-K2.7-Code": {
       "attachment": true,
       "cost": {
         "cache_read": 0.95,
         "input": 0.95,
         "output": 4
       },
-      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
+      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
-      "id": "hf:moonshotai/Kimi-K2.6",
+      "id": "hf:moonshotai/Kimi-K2.7-Code",
       "interleaved": {
         "field": "reasoning_content"
       },
       "knowledge": "2025-01",
-      "last_updated": "2026-04-21",
+      "last_updated": "2026-06-12",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -167,7 +127,7 @@
           "text"
         ]
       },
-      "name": "Kimi K2.6",
+      "name": "Kimi K2.7 Code",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -180,9 +140,9 @@
           ]
         }
       ],
-      "release_date": "2026-04-21",
+      "release_date": "2026-06-12",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "hf:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4": {
@@ -268,45 +228,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "hf:zai-org/GLM-4.7": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.45,
-        "input": 0.45,
-        "output": 2.19
-      },
-      "description": "Mature GLM model for dependable coding, reasoning, and structured agent tasks",
-      "family": "glm",
-      "id": "hf:zai-org/GLM-4.7",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2025-04",
-      "last_updated": "2025-12-22",
-      "limit": {
-        "context": 202752,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM-4.7",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-12-22",
-      "temperature": true,
-      "tool_call": true
-    },
     "hf:zai-org/GLM-4.7-Flash": {
       "attachment": false,
       "cost": {
@@ -343,45 +264,6 @@
         }
       ],
       "release_date": "2026-01-19",
-      "temperature": true,
-      "tool_call": true
-    },
-    "hf:zai-org/GLM-5.1": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 1,
-        "input": 1,
-        "output": 3
-      },
-      "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
-      "family": "glm",
-      "id": "hf:zai-org/GLM-5.1",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-04-07",
-      "limit": {
-        "context": 196608,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM-5.1",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-04-07",
-      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
