@@ -2,24 +2,8 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.08,
-    "context_over_200k": {
-      "cache_read": 0.16,
-      "input": 0.8,
-      "output": 4
-    },
     "input": 0.4,
-    "output": 2,
-    "tiers": [
-      {
-        "cache_read": 0.16,
-        "input": 0.8,
-        "output": 4,
-        "tier": {
-          "size": 256000,
-          "type": "context"
-        }
-      }
-    ]
+    "output": 2
   },
   "description": "Open MiMo model for multimodal coding agents and long-context automation",
   "family": "mimo",
@@ -53,6 +37,7 @@
     }
   ],
   "release_date": "2026-04-22",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

@@ -1,0 +1,51 @@
+{
+  "attachment": false,
+  "cost": {
+    "cache_read": 0.5,
+    "input": 2.5,
+    "output": 7.5,
+    "tiers": [
+      {
+        "cache_read": 1,
+        "input": 5,
+        "output": 15,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      },
+      {
+        "cache_read": 1.25,
+        "input": 6.25,
+        "output": 18.5,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
+  "family": "qwen",
+  "id": "Qwen/Qwen3.7-Max",
+  "last_updated": "2026-05-21",
+  "limit": {
+    "context": 256000,
+    "output": 65536
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.7 Max",
+  "open_weights": false,
+  "reasoning": false,
+  "release_date": "2026-05-21",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}
