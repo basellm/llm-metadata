@@ -1289,8 +1289,7 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
@@ -1300,7 +1299,6 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-03-13",
-      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -1460,12 +1458,7 @@
       "name": "Claude Opus 4",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [
-        {
-          "min": 1024,
-          "type": "budget_tokens"
-        }
-      ],
+      "reasoning_options": [],
       "release_date": "2025-05-22",
       "temperature": true,
       "tool_call": true
@@ -1507,6 +1500,8 @@
         }
       ],
       "release_date": "2025-08-05",
+      "status": "deprecated",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -1715,7 +1710,7 @@
       "knowledge": "2025-03-31",
       "last_updated": "2025-05-22",
       "limit": {
-        "context": 200000,
+        "context": 1000000,
         "output": 64000
       },
       "modalities": {
@@ -1731,12 +1726,7 @@
       "name": "Claude Sonnet 4",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [
-        {
-          "min": 1024,
-          "type": "budget_tokens"
-        }
-      ],
+      "reasoning_options": [],
       "release_date": "2025-05-22",
       "temperature": true,
       "tool_call": true
@@ -1755,7 +1745,7 @@
       "knowledge": "2025-07-31",
       "last_updated": "2025-09-29",
       "limit": {
-        "context": 200000,
+        "context": 1000000,
         "output": 64000
       },
       "modalities": {
@@ -1778,6 +1768,7 @@
         }
       ],
       "release_date": "2025-09-29",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
