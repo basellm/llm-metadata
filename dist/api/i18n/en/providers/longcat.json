@@ -1,0 +1,51 @@
+{
+  "api": "https://api.longcat.chat/openai",
+  "doc": "https://longcat.chat/platform/docs/",
+  "env": [
+    "LONGCAT_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/longcat.svg",
+  "id": "longcat",
+  "models": {
+    "LongCat-2.0": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.75,
+        "output": 2.95
+      },
+      "description": "Meituan LongCat-2.0, a reasoning model with tool calling and a 1M-token context window",
+      "family": "longcat",
+      "id": "LongCat-2.0",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-30",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LongCat-2.0",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-30",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "LongCat",
+  "npm": "@ai-sdk/openai-compatible"
+}
