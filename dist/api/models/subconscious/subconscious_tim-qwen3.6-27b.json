@@ -1,14 +1,12 @@
 {
   "attachment": false,
   "cost": {
-    "input": 0,
-    "output": 0
+    "cache_read": 0.15,
+    "input": 0.3,
+    "output": 3
   },
   "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
   "id": "subconscious/tim-qwen3.6-27b",
-  "interleaved": {
-    "field": "reasoning_content"
-  },
   "last_updated": "2026-05-11",
   "limit": {
     "context": 8192,
@@ -29,6 +27,9 @@
   "reasoning_options": [
     {
       "type": "toggle"
+    },
+    {
+      "type": "budget_tokens"
     }
   ],
   "release_date": "2026-05-11",

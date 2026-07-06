@@ -7,17 +7,54 @@
   "iconURL": "https://models.dev/logos/subconscious.svg",
   "id": "subconscious",
   "models": {
+    "subconscious/glm-5.2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "family": "glm",
+      "id": "subconscious/glm-5.2",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "subconscious/tim-qwen3.6-27b": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.15,
+        "input": 0.3,
+        "output": 3
       },
       "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "id": "subconscious/tim-qwen3.6-27b",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
       "last_updated": "2026-05-11",
       "limit": {
         "context": 8192,
@@ -38,6 +75,9 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-05-11",
@@ -47,5 +87,5 @@
     }
   },
   "name": "Subconscious",
-  "npm": "@ai-sdk/openai-compatible"
+  "npm": "@ai-sdk/anthropic"
 }

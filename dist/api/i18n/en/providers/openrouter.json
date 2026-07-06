@@ -5247,6 +5247,7 @@
     "moonshotai/kimi-k2.5": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.203,
         "input": 0.375,
         "output": 2.025
       },
@@ -10157,6 +10158,7 @@
     "qwen/qwen3.5-397b-a17b": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.111,
         "input": 0.385,
         "output": 2.45
       },
@@ -11071,6 +11073,47 @@
       "temperature": true,
       "tool_call": false
     },
+    "tencent/hy3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.035,
+        "input": 0.14,
+        "output": 0.58
+      },
+      "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
+      "family": "hy3",
+      "id": "tencent/hy3",
+      "last_updated": "2026-07-06",
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hy3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "tencent/hy3-preview": {
       "attachment": false,
       "cost": {
@@ -11109,6 +11152,46 @@
       ],
       "release_date": "2026-04-20",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "tencent/hy3:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
+      "family": "hy3",
+      "id": "tencent/hy3:free",
+      "last_updated": "2026-07-06",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hy3 (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-06",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -11500,6 +11583,7 @@
     "xiaomi/mimo-v2.5": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.028,
         "input": 0.105,
         "output": 0.28
       },
@@ -11939,9 +12023,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.1274,
-        "input": 0.686,
-        "output": 2.156
+        "cache_read": 0.16874,
+        "input": 0.9086,
+        "output": 2.8556
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
