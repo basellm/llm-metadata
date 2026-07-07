@@ -3966,8 +3966,8 @@
     "meta-llama/llama-3.2-3b-instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.0509,
-        "output": 0.335
+        "input": 0.05,
+        "output": 0.33
       },
       "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
@@ -3975,8 +3975,8 @@
       "knowledge": "2023-12-31",
       "last_updated": "2024-09-25",
       "limit": {
-        "context": 80000,
-        "output": 80000
+        "context": 131072,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -3990,7 +3990,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-09-25",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -5411,6 +5411,39 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": false
+    },
+    "nex-agi/nex-n2-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0025,
+        "input": 0.025,
+        "output": 0.1
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "family": "agi",
+      "id": "nex-agi/nex-n2-mini",
+      "last_updated": "2026-06-24",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nex-N2-Mini",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "nex-agi/nex-n2-pro": {
       "attachment": true,
