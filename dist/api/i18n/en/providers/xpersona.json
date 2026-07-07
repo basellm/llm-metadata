@@ -7,6 +7,54 @@
   "iconURL": "https://models.dev/logos/xpersona.svg",
   "id": "xpersona",
   "models": {
+    "claude-fable-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "input": 3,
+        "output": 18,
+        "reasoning": 18
+      },
+      "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+      "family": "claude-fable",
+      "id": "claude-fable-5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-06-09",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Fable 5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-09",
+      "temperature": false,
+      "tool_call": true
+    },
     "xpersona-frieren-coder": {
       "attachment": false,
       "cost": {

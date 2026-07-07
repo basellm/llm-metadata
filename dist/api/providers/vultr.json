@@ -37,11 +37,142 @@
       "temperature": true,
       "tool_call": true
     },
+    "Qwen/Qwen3.5-397B-A17B": {
+      "attachment": true,
+      "cost": {
+        "input": 0.3,
+        "output": 2
+      },
+      "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.5-397B-A17B",
+      "last_updated": "2026-02-15",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 397B-A17B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-02-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.6-27B": {
+      "attachment": true,
+      "cost": {
+        "input": 0.3,
+        "output": 2
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.6-27B",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "XiaomiMiMo/MiMo-V2.5-Pro": {
+      "attachment": false,
+      "cost": {
+        "input": 0.55,
+        "output": 1.65
+      },
+      "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+      "family": "mimo",
+      "id": "XiaomiMiMo/MiMo-V2.5-Pro",
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.5-Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-ai/DeepSeek-V4-Flash": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1
+      },
+      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+      "family": "deepseek-flash",
+      "id": "deepseek-ai/DeepSeek-V4-Flash",
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "moonshotai/Kimi-K2.6": {
       "attachment": true,
       "cost": {
-        "input": 0.15,
-        "output": 0.6
+        "input": 0.3,
+        "output": 1.2
       },
       "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
       "family": "kimi-k2",
@@ -102,36 +233,6 @@
       "release_date": "2025-12-01",
       "temperature": true,
       "tool_call": true
-    },
-    "nvidia/Llama-3.1-Nemotron-Safety-Guard-8B-v3": {
-      "attachment": false,
-      "cost": {
-        "input": 0.01,
-        "output": 0.01
-      },
-      "description": "Safety model for policy screening, moderation, and risk-aware routing workflows",
-      "family": "llama",
-      "id": "nvidia/Llama-3.1-Nemotron-Safety-Guard-8B-v3",
-      "knowledge": "2023-12",
-      "last_updated": "2025-10-28",
-      "limit": {
-        "context": 8192,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.1 Nemotron Safety Guard",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-10-28",
-      "temperature": true,
-      "tool_call": false
     },
     "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16": {
       "attachment": false,
@@ -195,21 +296,21 @@
       "temperature": true,
       "tool_call": true
     },
-    "zai-org/GLM-5.1-FP8": {
+    "zai-org/GLM-5.2-FP8": {
       "attachment": false,
       "cost": {
         "input": 0.85,
         "output": 3.1
       },
-      "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
-      "id": "zai-org/GLM-5.1-FP8",
+      "id": "zai-org/GLM-5.2-FP8",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-06-13",
       "limit": {
-        "context": 200000,
+        "context": 393216,
         "output": 131072
       },
       "modalities": {
@@ -220,11 +321,11 @@
           "text"
         ]
       },
-      "name": "GLM-5.1",
+      "name": "GLM-5.2",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-04-07",
+      "release_date": "2026-06-13",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
