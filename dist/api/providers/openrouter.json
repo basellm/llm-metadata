@@ -2067,7 +2067,7 @@
       "last_updated": "2026-04-24",
       "limit": {
         "context": 1048576,
-        "output": 16384
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -5286,8 +5286,8 @@
     "moonshotai/kimi-k2.6": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.14,
-        "input": 0.66,
+        "cache_read": 0.3,
+        "input": 0.65,
         "output": 3.41
       },
       "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
@@ -11600,7 +11600,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -12423,8 +12424,8 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.14,
-        "input": 0.66,
+        "cache_read": 0.3,
+        "input": 0.65,
         "output": 3.41
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
@@ -12543,6 +12544,50 @@
       "release_date": "2026-04-27",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "~x-ai/grok-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 1.25,
+        "output": 2.5
+      },
+      "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
+      "family": "grok",
+      "id": "~x-ai/grok-latest",
+      "last_updated": "2026-07-08",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-08",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     }
   },
