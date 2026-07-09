@@ -1,0 +1,60 @@
+{
+  "attachment": false,
+  "cost": {
+    "cache_read": 0.032,
+    "cache_write": 0.4,
+    "context_over_200k": {
+      "cache_read": 0.124,
+      "cache_write": 1.57,
+      "input": 1.25,
+      "output": 7.5
+    },
+    "input": 0.32,
+    "output": 1.88,
+    "tiers": [
+      {
+        "cache_read": 0.124,
+        "cache_write": 1.57,
+        "input": 1.25,
+        "output": 7.5,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Earlier Qwen multimodal workhorse for million-token agent and document tasks",
+  "family": "qwen",
+  "id": "qwen/qwen3.6-plus",
+  "knowledge": "2025-04",
+  "last_updated": "2026-04-02",
+  "limit": {
+    "context": 1000000,
+    "output": 65536
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.6 Plus",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-04-02",
+  "temperature": true,
+  "tool_call": true
+}

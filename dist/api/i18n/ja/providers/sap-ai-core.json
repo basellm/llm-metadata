@@ -718,6 +718,102 @@
       "temperature": true,
       "tool_call": true
     },
+    "gemini-3.1-flash-lite": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.25,
+        "input_audio": 0.5,
+        "output": 1.5
+      },
+      "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
+      "family": "gemini-flash-lite",
+      "id": "gemini-3.1-flash-lite",
+      "knowledge": "2025-01",
+      "last_updated": "2026-05-07",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemini-3.1-flash-lite",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-05-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3.5-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 1.5,
+        "input_audio": 1.5,
+        "output": 9
+      },
+      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+      "family": "gemini-flash",
+      "id": "gemini-3.5-flash",
+      "knowledge": "2025-01",
+      "last_updated": "2026-05-19",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemini-3.5-flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-05-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "gpt-4.1": {
       "attachment": true,
       "cost": {

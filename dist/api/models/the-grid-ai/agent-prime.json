@@ -1,11 +1,15 @@
 {
   "attachment": false,
-  "description": "Preview model for early access evaluation, prototyping, and compatibility testing",
+  "description": "Reliable models for dependable agentic applications, multi-step tool use, and reasoning workflows. Any model that meets the contract spec can serve your request.",
   "id": "agent-prime",
-  "last_updated": "2026-05-19",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-07-06",
   "limit": {
-    "context": 128000,
-    "output": 64000
+    "context": 196608,
+    "input": 120000,
+    "output": 30000
   },
   "modalities": {
     "input": [
@@ -18,7 +22,16 @@
   "name": "Agent Prime",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-05-04",
   "status": "beta",
   "structured_output": true,

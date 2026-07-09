@@ -1,10 +1,14 @@
 {
   "attachment": false,
-  "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+  "description": "Price-optimized models with low-latency, high-throughput and shorter maximum outputs. Any model that meets the contract spec can serve your request.",
   "id": "text-standard",
-  "last_updated": "2026-05-19",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-07-06",
   "limit": {
     "context": 128000,
+    "input": 120000,
     "output": 16000
   },
   "modalities": {
@@ -18,7 +22,16 @@
   "name": "Text Standard",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-02-26",
   "structured_output": true,
   "temperature": true,

@@ -1,13 +1,14 @@
 {
   "attachment": false,
-  "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+  "description": "Frontier models for autonomous research, deep multi-step tool chains, and complex long-horizon tasks. Any model that meets the contract spec can serve your request.",
   "id": "agent-max",
   "interleaved": {
     "field": "reasoning_content"
   },
-  "last_updated": "2026-05-19",
+  "last_updated": "2026-07-06",
   "limit": {
     "context": 1000000,
+    "input": 922000,
     "output": 128000
   },
   "modalities": {
@@ -22,7 +23,21 @@
   "name": "Agent Max",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2026-05-04",
   "status": "beta",
   "structured_output": true,

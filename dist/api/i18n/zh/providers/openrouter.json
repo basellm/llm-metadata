@@ -2276,54 +2276,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "google/gemini-2.5-flash-lite-preview-09-2025": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.01,
-        "cache_write": 0.083333,
-        "input": 0.1,
-        "output": 0.4,
-        "reasoning": 0.4
-      },
-      "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
-      "family": "gemini-flash-lite",
-      "id": "google/gemini-2.5-flash-lite-preview-09-2025",
-      "knowledge": "2025-01-31",
-      "last_updated": "2025-09-25",
-      "limit": {
-        "context": 1048576,
-        "output": 65535
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf",
-          "audio",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.5 Flash Lite Preview 09-2025",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "max": 24576,
-          "min": 512,
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-09-25",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "google/gemini-2.5-pro": {
       "attachment": true,
       "cost": {
@@ -3686,36 +3638,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "liquid/lfm-2-24b-a2b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.03,
-        "output": 0.12
-      },
-      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
-      "family": "liquid",
-      "id": "liquid/lfm-2-24b-a2b",
-      "last_updated": "2026-02-25",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "LFM2-24B-A2B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-02-25",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
-    },
     "liquid/lfm-2.5-1.2b-instruct:free": {
       "attachment": false,
       "cost": {
@@ -4414,8 +4336,9 @@
     "minimax/minimax-m2.5": {
       "attachment": false,
       "cost": {
-        "input": 0.12,
-        "output": 0.48
+        "cache_read": 0.05,
+        "input": 0.15,
+        "output": 0.9
       },
       "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
       "family": "minimax",
@@ -4448,8 +4371,8 @@
     "minimax/minimax-m2.7": {
       "attachment": false,
       "cost": {
-        "input": 0.18,
-        "output": 0.72
+        "input": 0.24,
+        "output": 0.96
       },
       "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
       "family": "minimax",
@@ -5324,9 +5247,9 @@
     "moonshotai/kimi-k2.7-code": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.15,
-        "input": 0.74,
-        "output": 3.5
+        "cache_read": 0.159,
+        "input": 0.72,
+        "output": 3.49
       },
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
@@ -5335,7 +5258,7 @@
       "last_updated": "2026-06-12",
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -7739,6 +7662,300 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-5.6-luna": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 1.25,
+        "input": 1,
+        "output": 6
+      },
+      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
+      "family": "gpt-nano",
+      "id": "openai/gpt-5.6-luna",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Luna",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.6-luna-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 1.25,
+        "input": 1,
+        "output": 6
+      },
+      "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+      "family": "gpt-nano",
+      "id": "openai/gpt-5.6-luna-pro",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Luna Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.6-sol": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 30
+      },
+      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
+      "family": "gpt",
+      "id": "openai/gpt-5.6-sol",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Sol",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.6-sol-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 30
+      },
+      "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+      "family": "gpt",
+      "id": "openai/gpt-5.6-sol-pro",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Sol Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.6-terra": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 3.125,
+        "input": 2.5,
+        "output": 15
+      },
+      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
+      "family": "gpt-mini",
+      "id": "openai/gpt-5.6-terra",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Terra",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.6-terra-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 3.125,
+        "input": 2.5,
+        "output": 15
+      },
+      "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+      "family": "gpt-mini",
+      "id": "openai/gpt-5.6-terra-pro",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Terra Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/gpt-audio": {
       "attachment": true,
       "cost": {
@@ -7839,8 +8056,8 @@
     "openai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "input": 0.03,
-        "output": 0.15
+        "input": 0.036,
+        "output": 0.18
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -8892,70 +9109,6 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-07-02",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "poolside/laguna-xs.2": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.05,
-        "input": 0.1,
-        "output": 0.2
-      },
-      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
-      "id": "poolside/laguna-xs.2",
-      "last_updated": "2026-04-28",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Laguna XS.2",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-04-28",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "poolside/laguna-xs.2:free": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
-      "id": "poolside/laguna-xs.2:free",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-04-28",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Laguna XS.2 (free)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-04-28",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -11662,7 +11815,7 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 32000,
+        "context": 1048576,
         "output": 131072
       },
       "modalities": {
@@ -12089,9 +12242,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.18,
-        "input": 0.9,
-        "output": 3.08
+        "cache_read": 0.1,
+        "input": 0.54,
+        "output": 1.76
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -12101,8 +12254,8 @@
       },
       "last_updated": "2026-06-13",
       "limit": {
-        "context": 1048576,
-        "output": 1048576
+        "context": 101376,
+        "output": 101376
       },
       "modalities": {
         "input": [
@@ -12488,13 +12641,14 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.5,
+        "cache_write": 6.25,
         "input": 5,
         "output": 30
       },
       "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
       "family": "gpt",
       "id": "~openai/gpt-latest",
-      "knowledge": "2025-12-01",
+      "knowledge": "2026-02-16",
       "last_updated": "2026-04-27",
       "limit": {
         "context": 1050000,

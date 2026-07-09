@@ -1,0 +1,93 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.5,
+    "cache_write": 6.25,
+    "context_over_200k": {
+      "cache_read": 1,
+      "cache_write": 12.5,
+      "input": 10,
+      "output": 45
+    },
+    "input": 5,
+    "output": 30,
+    "tiers": [
+      {
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "input": 10,
+        "output": 45,
+        "tier": {
+          "size": 272000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 60
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      },
+      "pro": {
+        "provider": {
+          "body": {
+            "reasoning": {
+              "mode": "pro"
+            }
+          }
+        }
+      }
+    }
+  },
+  "family": "gpt",
+  "id": "gpt-5.6-sol",
+  "knowledge": "2026-02-16",
+  "last_updated": "2026-07-09",
+  "limit": {
+    "context": 1050000,
+    "input": 922000,
+    "output": 128000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "pdf"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "GPT-5.6 Sol",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
+  "release_date": "2026-07-09",
+  "structured_output": true,
+  "temperature": false,
+  "tool_call": true
+}

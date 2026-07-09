@@ -1,0 +1,63 @@
+{
+  "attachment": false,
+  "cost": {
+    "cache_read": 0.063,
+    "cache_write": 0.19,
+    "input": 0.19,
+    "output": 0.63,
+    "tiers": [
+      {
+        "cache_read": 0.094,
+        "cache_write": 0.25,
+        "input": 0.25,
+        "output": 1,
+        "tier": {
+          "size": 16000,
+          "type": "context"
+        }
+      },
+      {
+        "cache_read": 0.125,
+        "cache_write": 0.32,
+        "input": 0.32,
+        "output": 1.25,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
+  "family": "Hy",
+  "id": "tencent/hy3-preview",
+  "last_updated": "2026-04-20",
+  "limit": {
+    "context": 256000,
+    "output": 128000
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Hy3 preview",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "release_date": "2026-04-20",
+  "temperature": true,
+  "tool_call": true
+}

@@ -1,0 +1,48 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.3,
+    "cache_write": 3.75,
+    "input": 3,
+    "output": 15
+  },
+  "description": "Claude workhorse for coding agents, careful analysis, and production cost control",
+  "family": "claude-sonnet",
+  "id": "anthropic/claude-sonnet-4-6",
+  "knowledge": "2025-08-31",
+  "last_updated": "2026-03-13",
+  "limit": {
+    "context": 1000000,
+    "output": 64000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Claude Sonnet 4.6",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "min": 1024,
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-02-17",
+  "temperature": true,
+  "tool_call": true
+}

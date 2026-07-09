@@ -9,14 +9,15 @@
   "models": {
     "agent-max": {
       "attachment": false,
-      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "description": "Frontier models for autonomous research, deep multi-step tool chains, and complex long-horizon tasks. Any model that meets the contract spec can serve your request.",
       "id": "agent-max",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-05-19",
+      "last_updated": "2026-07-06",
       "limit": {
         "context": 1000000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
@@ -31,7 +32,21 @@
       "name": "Agent Max",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-04",
       "status": "beta",
       "structured_output": true,
@@ -40,12 +55,16 @@
     },
     "agent-prime": {
       "attachment": false,
-      "description": "Preview model for early access evaluation, prototyping, and compatibility testing",
+      "description": "Reliable models for dependable agentic applications, multi-step tool use, and reasoning workflows. Any model that meets the contract spec can serve your request.",
       "id": "agent-prime",
-      "last_updated": "2026-05-19",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-06",
       "limit": {
-        "context": 128000,
-        "output": 64000
+        "context": 196608,
+        "input": 120000,
+        "output": 30000
       },
       "modalities": {
         "input": [
@@ -58,7 +77,16 @@
       "name": "Agent Prime",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-05-04",
       "status": "beta",
       "structured_output": true,
@@ -67,11 +95,15 @@
     },
     "agent-standard": {
       "attachment": false,
-      "description": "Preview model for early access evaluation, prototyping, and compatibility testing",
+      "description": "Price-optimized models for fast tool calls, simple agent loops, high-throughput automation, and orchestration. Any model that meets the contract spec can serve your request.",
       "id": "agent-standard",
-      "last_updated": "2026-05-19",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-06",
       "limit": {
         "context": 128000,
+        "input": 120000,
         "output": 16000
       },
       "modalities": {
@@ -85,7 +117,16 @@
       "name": "Agent Standard",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-05-04",
       "status": "beta",
       "structured_output": true,
@@ -94,14 +135,15 @@
     },
     "code-max": {
       "attachment": false,
-      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
+      "description": "Frontier models for complex research, architectural decisions, debugging, and multi-file development. Any model that meets the contract spec can serve your request.",
       "id": "code-max",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-05-19",
+      "last_updated": "2026-07-06",
       "limit": {
         "context": 1000000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
@@ -116,7 +158,21 @@
       "name": "Code Max",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-04",
       "status": "beta",
       "structured_output": true,
@@ -125,12 +181,16 @@
     },
     "code-prime": {
       "attachment": false,
-      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
+      "description": "Reliable models for everyday software tasks, code completion, review, and standard debugging. Any model that meets the contract spec can serve your request.",
       "id": "code-prime",
-      "last_updated": "2026-05-19",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-06",
       "limit": {
-        "context": 128000,
-        "output": 64000
+        "context": 196608,
+        "input": 120000,
+        "output": 30000
       },
       "modalities": {
         "input": [
@@ -143,7 +203,16 @@
       "name": "Code Prime",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-05-04",
       "status": "beta",
       "structured_output": true,
@@ -152,11 +221,15 @@
     },
     "code-standard": {
       "attachment": false,
-      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
+      "description": "Price-optimized models for rapid autocomplete, linting, high-frequency suggestions, and batch edits. Any model that meets the contract spec can serve your request.",
       "id": "code-standard",
-      "last_updated": "2026-05-19",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-06",
       "limit": {
         "context": 128000,
+        "input": 120000,
         "output": 16000
       },
       "modalities": {
@@ -170,7 +243,16 @@
       "name": "Code Standard",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-05-04",
       "status": "beta",
       "structured_output": true,
@@ -179,14 +261,15 @@
     },
     "text-max": {
       "attachment": false,
-      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "description": "Frontier models for deep reasoning, long context, and complex workflows. Any model that meets the contract spec can serve your request.",
       "id": "text-max",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-05-19",
+      "last_updated": "2026-07-06",
       "limit": {
         "context": 1000000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
@@ -201,7 +284,21 @@
       "name": "Text Max",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-03-24",
       "structured_output": true,
       "temperature": true,
@@ -209,11 +306,15 @@
     },
     "text-prime": {
       "attachment": false,
-      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+      "description": "Reliable models for everyday text generation, editing, and analysis across diverse workflows. Any model that meets the contract spec can serve your request.",
       "id": "text-prime",
-      "last_updated": "2026-05-19",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-06",
       "limit": {
-        "context": 128000,
+        "context": 196608,
+        "input": 120000,
         "output": 30000
       },
       "modalities": {
@@ -227,7 +328,16 @@
       "name": "Text Prime",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-02-26",
       "structured_output": true,
       "temperature": true,
@@ -235,11 +345,15 @@
     },
     "text-standard": {
       "attachment": false,
-      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+      "description": "Price-optimized models with low-latency, high-throughput and shorter maximum outputs. Any model that meets the contract spec can serve your request.",
       "id": "text-standard",
-      "last_updated": "2026-05-19",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-06",
       "limit": {
         "context": 128000,
+        "input": 120000,
         "output": 16000
       },
       "modalities": {
@@ -253,7 +367,16 @@
       "name": "Text Standard",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-02-26",
       "structured_output": true,
       "temperature": true,
