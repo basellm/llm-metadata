@@ -107,7 +107,7 @@
       "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
       "id": "claude-opus-4-5",
-      "knowledge": "2025-03-31",
+      "knowledge": "2025-05",
       "last_updated": "2025-11-24",
       "limit": {
         "context": 200000,
@@ -149,26 +149,6 @@
         "output": 25
       },
       "description": "High-end Claude for difficult coding, planning, and slower expert reasoning",
-      "experimental": {
-        "modes": {
-          "fast": {
-            "cost": {
-              "cache_read": 3,
-              "cache_write": 37.5,
-              "input": 30,
-              "output": 150
-            },
-            "provider": {
-              "body": {
-                "speed": "fast"
-              },
-              "headers": {
-                "anthropic-beta": "fast-mode-2026-02-01"
-              }
-            }
-          }
-        }
-      },
       "family": "claude-opus",
       "id": "claude-opus-4-6",
       "knowledge": "2025-05-31",
@@ -213,26 +193,6 @@
         "output": 25
       },
       "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
-      "experimental": {
-        "modes": {
-          "fast": {
-            "cost": {
-              "cache_read": 3,
-              "cache_write": 37.5,
-              "input": 30,
-              "output": 150
-            },
-            "provider": {
-              "body": {
-                "speed": "fast"
-              },
-              "headers": {
-                "anthropic-beta": "fast-mode-2026-02-01"
-              }
-            }
-          }
-        }
-      },
       "family": "claude-opus",
       "id": "claude-opus-4-7",
       "knowledge": "2026-01-31",
@@ -259,12 +219,66 @@
           "type": "toggle"
         },
         {
-          "max": 127999,
-          "min": 1024,
-          "type": "budget_tokens"
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
         }
       ],
       "release_date": "2026-04-16",
+      "temperature": false,
+      "tool_call": true
+    },
+    "claude-opus-4-8": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "id": "claude-opus-4-8",
+      "knowledge": "2026-01",
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.8",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-05-28",
       "temperature": false,
       "tool_call": true
     },
@@ -615,6 +629,54 @@
       "temperature": true,
       "tool_call": true
     },
+    "gemini-3-5-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 1.5,
+        "input_audio": 1.5,
+        "output": 9
+      },
+      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+      "family": "gemini-flash",
+      "id": "gemini-3-5-flash",
+      "knowledge": "2025-01",
+      "last_updated": "2026-05-19",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.5 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-05-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "gemini-3-flash": {
       "attachment": true,
       "cost": {
@@ -724,6 +786,38 @@
       "temperature": true,
       "tool_call": true
     },
+    "gemma-3-12b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Google's open-weight Gemma 3 vision-language model for text and image understanding",
+      "family": "gemma",
+      "id": "gemma-3-12b",
+      "knowledge": "2024-08-31",
+      "last_updated": "2025-03-13",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 12B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "gpt-5": {
       "attachment": true,
       "cost": {
@@ -747,11 +841,17 @@
           "image"
         ],
         "output": [
-          "text"
+          "text",
+          "image"
         ]
       },
       "name": "GPT-5",
       "open_weights": false,
+      "provider": {
+        "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+        "npm": "@ai-sdk/openai",
+        "shape": "responses"
+      },
       "reasoning": true,
       "reasoning_options": [
         {
@@ -792,17 +892,124 @@
           "image"
         ],
         "output": [
-          "text"
+          "text",
+          "image"
         ]
       },
       "name": "GPT-5.1",
       "open_weights": false,
+      "provider": {
+        "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+        "npm": "@ai-sdk/openai",
+        "shape": "responses"
+      },
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
             "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-1-codex-max": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
+      "family": "gpt-codex",
+      "id": "gpt-5-1-codex-max",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "GPT-5.1 Codex Max",
+      "open_weights": false,
+      "provider": {
+        "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+        "npm": "@ai-sdk/openai",
+        "shape": "responses"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-1-codex-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.25,
+        "output": 2
+      },
+      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
+      "family": "gpt-codex",
+      "id": "gpt-5-1-codex-mini",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "GPT-5.1 Codex mini",
+      "open_weights": false,
+      "provider": {
+        "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+        "npm": "@ai-sdk/openai",
+        "shape": "responses"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
             "low",
             "medium",
             "high"
@@ -837,11 +1044,17 @@
           "image"
         ],
         "output": [
-          "text"
+          "text",
+          "image"
         ]
       },
       "name": "GPT-5.2",
       "open_weights": false,
+      "provider": {
+        "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+        "npm": "@ai-sdk/openai",
+        "shape": "responses"
+      },
       "reasoning": true,
       "reasoning_options": [
         {
@@ -856,6 +1069,111 @@
         }
       ],
       "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-2-codex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "Code-specialist GPT for repository edits, reviews, and long-running software agents",
+      "family": "gpt-codex",
+      "id": "gpt-5-2-codex",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "GPT-5.2 Codex",
+      "open_weights": false,
+      "provider": {
+        "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+        "npm": "@ai-sdk/openai",
+        "shape": "responses"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-3-codex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.175,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
+      "family": "gpt-codex",
+      "id": "gpt-5-3-codex",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "GPT-5.3 Codex",
+      "open_weights": false,
+      "provider": {
+        "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+        "npm": "@ai-sdk/openai",
+        "shape": "responses"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-02-05",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -884,22 +1202,6 @@
         ]
       },
       "description": "Agent-ready GPT for coding and computer-use workflows at a lower cost",
-      "experimental": {
-        "modes": {
-          "fast": {
-            "cost": {
-              "cache_read": 0.5,
-              "input": 5,
-              "output": 30
-            },
-            "provider": {
-              "body": {
-                "service_tier": "priority"
-              }
-            }
-          }
-        }
-      },
       "family": "gpt",
       "id": "gpt-5-4",
       "knowledge": "2025-08-31",
@@ -916,11 +1218,17 @@
           "pdf"
         ],
         "output": [
-          "text"
+          "text",
+          "image"
         ]
       },
       "name": "GPT-5.4",
       "open_weights": false,
+      "provider": {
+        "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+        "npm": "@ai-sdk/openai",
+        "shape": "responses"
+      },
       "reasoning": true,
       "reasoning_options": [
         {
@@ -947,22 +1255,6 @@
         "output": 4.5
       },
       "description": "Strong small GPT for coding subagents, quick tool use, and high-volume work",
-      "experimental": {
-        "modes": {
-          "fast": {
-            "cost": {
-              "cache_read": 0.15,
-              "input": 1.5,
-              "output": 9
-            },
-            "provider": {
-              "body": {
-                "service_tier": "priority"
-              }
-            }
-          }
-        }
-      },
       "family": "gpt-mini",
       "id": "gpt-5-4-mini",
       "knowledge": "2025-08-31",
@@ -978,11 +1270,17 @@
           "image"
         ],
         "output": [
-          "text"
+          "text",
+          "image"
         ]
       },
       "name": "GPT-5.4 mini",
       "open_weights": false,
+      "provider": {
+        "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+        "npm": "@ai-sdk/openai",
+        "shape": "responses"
+      },
       "reasoning": true,
       "reasoning_options": [
         {
@@ -1024,11 +1322,17 @@
           "image"
         ],
         "output": [
-          "text"
+          "text",
+          "image"
         ]
       },
       "name": "GPT-5.4 nano",
       "open_weights": false,
+      "provider": {
+        "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+        "npm": "@ai-sdk/openai",
+        "shape": "responses"
+      },
       "reasoning": true,
       "reasoning_options": [
         {
@@ -1043,85 +1347,6 @@
         }
       ],
       "release_date": "2026-03-17",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "gpt-5-5": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.5,
-        "context_over_200k": {
-          "cache_read": 1,
-          "input": 10,
-          "output": 45
-        },
-        "input": 5,
-        "output": 30,
-        "tiers": [
-          {
-            "cache_read": 1,
-            "input": 10,
-            "output": 45,
-            "tier": {
-              "size": 272000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "Default frontier GPT for coding, computer use, research, and knowledge work",
-      "experimental": {
-        "modes": {
-          "fast": {
-            "cost": {
-              "cache_read": 1.25,
-              "input": 12.5,
-              "output": 75
-            },
-            "provider": {
-              "body": {
-                "service_tier": "priority"
-              }
-            }
-          }
-        }
-      },
-      "family": "gpt",
-      "id": "gpt-5-5",
-      "knowledge": "2025-12-01",
-      "last_updated": "2026-04-23",
-      "limit": {
-        "context": 1050000,
-        "input": 922000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.5",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "release_date": "2026-04-23",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -1149,11 +1374,17 @@
           "image"
         ],
         "output": [
-          "text"
+          "text",
+          "image"
         ]
       },
       "name": "GPT-5 Mini",
       "open_weights": false,
+      "provider": {
+        "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+        "npm": "@ai-sdk/openai",
+        "shape": "responses"
+      },
       "reasoning": true,
       "reasoning_options": [
         {
@@ -1194,11 +1425,17 @@
           "image"
         ],
         "output": [
-          "text"
+          "text",
+          "image"
         ]
       },
       "name": "GPT-5 Nano",
       "open_weights": false,
+      "provider": {
+        "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+        "npm": "@ai-sdk/openai",
+        "shape": "responses"
+      },
       "reasoning": true,
       "reasoning_options": [
         {
@@ -1292,6 +1529,169 @@
         }
       ],
       "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "llama-4-maverick": {
+      "attachment": true,
+      "cost": {
+        "input": 0.5,
+        "output": 1.5
+      },
+      "description": "Open multimodal Llama for strong reasoning with efficient everyday serving",
+      "family": "llama",
+      "id": "llama-4-maverick",
+      "knowledge": "2024-08",
+      "last_updated": "2025-04-05",
+      "limit": {
+        "context": 1000000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 4 Maverick 17B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "meta-llama-3-1-8b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.45
+      },
+      "description": "Meta's compact open-weight Llama 3.1 model for fast, low-cost text generation",
+      "family": "llama",
+      "id": "meta-llama-3-1-8b-instruct",
+      "knowledge": "2023-12-31",
+      "last_updated": "2024-07-23",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 8B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-07-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "meta-llama-3-3-70b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.5,
+        "output": 1.5
+      },
+      "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
+      "family": "llama",
+      "id": "meta-llama-3-3-70b-instruct",
+      "knowledge": "2023-12",
+      "last_updated": "2024-12-06",
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama-3.3-70B-Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-12-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-next-80b-a3b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 1.2
+      },
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "family": "qwen",
+      "id": "qwen3-next-80b-a3b-instruct",
+      "knowledge": "2025-04",
+      "last_updated": "2025-09",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3-Next 80B-A3B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-09",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen35-122b-a10b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.22,
+        "output": 2.2
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen35-122b-a10b",
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 262144,
+        "output": 8000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 122B-A10B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-02-23",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

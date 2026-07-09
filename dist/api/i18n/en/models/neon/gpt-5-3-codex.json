@@ -1,0 +1,53 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.175,
+    "input": 1.75,
+    "output": 14
+  },
+  "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
+  "family": "gpt-codex",
+  "id": "gpt-5-3-codex",
+  "knowledge": "2025-08-31",
+  "last_updated": "2026-02-05",
+  "limit": {
+    "context": 400000,
+    "input": 272000,
+    "output": 128000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "pdf"
+    ],
+    "output": [
+      "text",
+      "image"
+    ]
+  },
+  "name": "GPT-5.3 Codex",
+  "open_weights": false,
+  "provider": {
+    "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+    "npm": "@ai-sdk/openai",
+    "shape": "responses"
+  },
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    }
+  ],
+  "release_date": "2026-02-05",
+  "structured_output": true,
+  "temperature": false,
+  "tool_call": true
+}

@@ -1,13 +1,14 @@
 {
   "attachment": false,
   "cost": {
-    "input": 0.05,
-    "output": 0.2
+    "cache_read": 0.03,
+    "input": 0.03,
+    "output": 0.13
   },
-  "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
+  "description": "Lower latency Mixture-of-Experts model trained on OpenAI's Harmony response format with reasoning capabilities.",
   "family": "gpt-oss",
   "id": "openai/gpt-oss-20b",
-  "last_updated": "2026-03-12",
+  "last_updated": "2025-08-05",
   "limit": {
     "context": 131072,
     "output": 131072
@@ -21,7 +22,7 @@
     ]
   },
   "name": "gpt-oss-20b",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
   "reasoning_options": [],
   "release_date": "2025-08-05",

@@ -7,26 +7,6 @@
     "output": 25
   },
   "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
-  "experimental": {
-    "modes": {
-      "fast": {
-        "cost": {
-          "cache_read": 3,
-          "cache_write": 37.5,
-          "input": 30,
-          "output": 150
-        },
-        "provider": {
-          "body": {
-            "speed": "fast"
-          },
-          "headers": {
-            "anthropic-beta": "fast-mode-2026-02-01"
-          }
-        }
-      }
-    }
-  },
   "family": "claude-opus",
   "id": "claude-opus-4-7",
   "knowledge": "2026-01-31",
@@ -53,9 +33,14 @@
       "type": "toggle"
     },
     {
-      "max": 127999,
-      "min": 1024,
-      "type": "budget_tokens"
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
     }
   ],
   "release_date": "2026-04-16",

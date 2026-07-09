@@ -8,16 +8,47 @@
   "id": "wandb",
   "lobeIcon": "WeightsBiases",
   "models": {
+    "JetBrains/Mellum2-12B-A2.5B-Instruct": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.05,
+        "output": 0.1
+      },
+      "description": "Mellum2-12B-A2.5B-Instruct is a fast MoE model with 131K context built for coding, tool use, and low-latency AI workflows.",
+      "id": "JetBrains/Mellum2-12B-A2.5B-Instruct",
+      "last_updated": "2026-06-01",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mellum2 12B A2.5B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-06-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "MiniMaxAI/MiniMax-M2.5": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.3,
         "input": 0.3,
         "output": 1.2
       },
-      "description": "MiniMax model for chat, coding, office work, and agentic tasks",
-      "family": "minimax",
+      "description": "MoE model with a highly sparse architecture designed for high-throughput and low latency with strong coding capabilities.",
+      "family": "minimax-m2.5",
       "id": "MiniMaxAI/MiniMax-M2.5",
-      "last_updated": "2026-03-12",
+      "last_updated": "2026-02-12",
       "limit": {
         "context": 196608,
         "output": 196608
@@ -42,13 +73,14 @@
     "OpenPipe/Qwen3-14B-Instruct": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.05,
         "input": 0.05,
         "output": 0.22
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "An efficient multilingual, dense, instruction-tuned model, optimized by OpenPipe for building agents with finetuning.",
       "family": "qwen",
       "id": "OpenPipe/Qwen3-14B-Instruct",
-      "last_updated": "2026-03-12",
+      "last_updated": "2025-04-29",
       "limit": {
         "context": 32768,
         "output": 32768
@@ -61,7 +93,7 @@
           "text"
         ]
       },
-      "name": "OpenPipe Qwen3 14B Instruct",
+      "name": "Qwen3 14B Instruct",
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-04-29",
@@ -72,14 +104,15 @@
     "Qwen/Qwen3-235B-A22B-Instruct-2507": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.1,
         "input": 0.1,
         "output": 0.1
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "Efficient multilingual, Mixture-of-Experts, instruction-tuned model, optimized for logical reasoning.",
       "family": "qwen",
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
       "knowledge": "2025-04",
-      "last_updated": "2026-03-12",
+      "last_updated": "2025-07-22",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -92,10 +125,11 @@
           "text"
         ]
       },
-      "name": "Qwen3 235B A22B Instruct 2507",
+      "name": "Qwen3 235B A22B-2507",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-04-28",
+      "release_date": "2025-07-22",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -103,14 +137,15 @@
     "Qwen/Qwen3-235B-A22B-Thinking-2507": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.1,
         "input": 0.1,
         "output": 0.1
       },
-      "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
+      "description": "High-performance Mixture-of-Experts model optimized for structured reasoning, math, and long-form generation.",
       "family": "qwen",
       "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
       "knowledge": "2025-04",
-      "last_updated": "2026-03-12",
+      "last_updated": "2025-07-25",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -123,11 +158,12 @@
           "text"
         ]
       },
-      "name": "Qwen3-235B-A22B-Thinking-2507",
+      "name": "Qwen3 235B A22B Thinking-2507",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-07-25",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -135,13 +171,14 @@
     "Qwen/Qwen3-30B-A3B-Instruct-2507": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.1,
         "input": 0.1,
         "output": 0.3
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "Qwen3-30B-A3B-Instruct-2507 is a 30.5B MoE instruction-tuned model with enhanced reasoning, coding, and long-context understanding.",
       "family": "qwen",
       "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
-      "last_updated": "2026-03-12",
+      "last_updated": "2025-07-29",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -165,14 +202,15 @@
     "Qwen/Qwen3-Coder-480B-A35B-Instruct": {
       "attachment": false,
       "cost": {
+        "cache_read": 1,
         "input": 1,
         "output": 1.5
       },
-      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
+      "description": "Mixture-of-Experts model optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning.",
       "family": "qwen",
       "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
       "knowledge": "2025-04",
-      "last_updated": "2026-03-12",
+      "last_updated": "2025-07-22",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -185,10 +223,159 @@
           "text"
         ]
       },
-      "name": "Qwen3-Coder-480B-A35B-Instruct",
+      "name": "Qwen3 Coder 480B A35B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-23",
+      "release_date": "2025-07-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.5-27B": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.08,
+        "input": 0.39,
+        "output": 3.12
+      },
+      "description": "Qwen3.5-27B is a dense model from the Qwen3.5 family built for high performance across a large range of benchmarks.",
+      "family": "qwen3.5",
+      "id": "Qwen/Qwen3.5-27B",
+      "last_updated": "2026-02-24",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5-27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-24",
+      "status": "deprecated",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.5-35B-A3B": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 0.25,
+        "output": 1.25
+      },
+      "description": "Qwen3.5-35B-A3B is an open-weights multimodal MoE model built for efficient, high-throughput inference across chat, reasoning, and agentic tasks.",
+      "family": "qwen3.5",
+      "id": "Qwen/Qwen3.5-35B-A3B",
+      "last_updated": "2026-02-24",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5-35B-A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.6-27B": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.12,
+        "input": 0.6,
+        "output": 3.6
+      },
+      "description": "Qwen3.6-27B is a 27B dense multimodal model with 262K context built for flagship-level agentic coding.",
+      "family": "qwen3.6",
+      "id": "Qwen/Qwen3.6-27B",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.6-35B-A3B": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 0.25,
+        "output": 1.25
+      },
+      "description": "Qwen3.6-35B-A3B is an MoE multimodal model with 262K context optimized for agentic coding workflows.",
+      "family": "qwen3.6",
+      "id": "Qwen/Qwen3.6-35B-A3B",
+      "last_updated": "2026-04-15",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-15",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -196,13 +383,14 @@
     "deepseek-ai/DeepSeek-V3.1": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.55,
         "input": 0.55,
         "output": 1.65
       },
-      "description": "DeepSeek chat model for instruction following, coding, and analysis",
+      "description": "A large hybrid model that supports both thinking and non-thinking modes via prompt templates.",
       "family": "deepseek",
       "id": "deepseek-ai/DeepSeek-V3.1",
-      "last_updated": "2026-03-12",
+      "last_updated": "2025-08-21",
       "limit": {
         "context": 161000,
         "output": 161000
@@ -223,16 +411,159 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek-ai/DeepSeek-V4-Flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.07,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "description": "DeepSeek V4-Flash is an MoE model with 1M context length great for coding, reasoning, and agentic workloads.",
+      "family": "deepseek",
+      "id": "deepseek-ai/DeepSeek-V4-Flash",
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-ai/DeepSeek-V4-Pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.14,
+        "input": 1.74,
+        "output": 3.48
+      },
+      "description": "DeepSeek V4-Pro is a 1.6T-parameter MoE model with 49B active parameters excelling at advanced reasoning, coding, and complex agentic workloads.",
+      "family": "deepseek",
+      "id": "deepseek-ai/DeepSeek-V4-Pro",
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-4-31B-it": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.09,
+        "input": 0.12,
+        "output": 0.35
+      },
+      "description": "Gemma 4 31B Dense is designed for advanced reasoning, agentic workflows, and longer context and is natively trained on 140+ languages.",
+      "family": "gemma",
+      "id": "google/gemma-4-31B-it",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 31B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "ibm-granite/granite-4.1-8b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.05,
+        "output": 0.1
+      },
+      "description": "Granite 4.1 8B is a long-context instruct model capable of enhanced tool calling, instruction following, and chat capabilities.",
+      "family": "granite",
+      "id": "ibm-granite/granite-4.1-8b",
+      "last_updated": "2026-04-29",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Granite 4.1 8B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "meta-llama/Llama-3.1-70B-Instruct": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.8,
         "input": 0.8,
         "output": 0.8
       },
-      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
+      "description": "Efficient conversational model optimized for responsive multilingual chatbot interactions.",
       "family": "llama",
       "id": "meta-llama/Llama-3.1-70B-Instruct",
-      "last_updated": "2026-03-12",
+      "last_updated": "2024-07-23",
       "limit": {
         "context": 128000,
         "output": 128000
@@ -256,14 +587,15 @@
     "meta-llama/Llama-3.1-8B-Instruct": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.22,
         "input": 0.22,
         "output": 0.22
       },
-      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
+      "description": "Efficient conversational model optimized for responsive multilingual chatbot interactions.",
       "family": "llama",
       "id": "meta-llama/Llama-3.1-8B-Instruct",
       "knowledge": "2023-12",
-      "last_updated": "2026-03-12",
+      "last_updated": "2024-07-23",
       "limit": {
         "context": 128000,
         "output": 128000
@@ -276,7 +608,7 @@
           "text"
         ]
       },
-      "name": "Meta-Llama-3.1-8B-Instruct",
+      "name": "Llama 3.1 8B",
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-07-23",
@@ -287,14 +619,15 @@
     "meta-llama/Llama-3.3-70B-Instruct": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.71,
         "input": 0.71,
         "output": 0.71
       },
-      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
+      "description": "Multilingual model excelling in conversational tasks, detailed instruction-following, and coding.",
       "family": "llama",
       "id": "meta-llama/Llama-3.3-70B-Instruct",
       "knowledge": "2023-12",
-      "last_updated": "2026-03-12",
+      "last_updated": "2024-12-01",
       "limit": {
         "context": 128000,
         "output": 128000
@@ -307,42 +640,10 @@
           "text"
         ]
       },
-      "name": "Llama-3.3-70B-Instruct",
+      "name": "Llama 3.3 70B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-12-06",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "meta-llama/Llama-4-Scout-17B-16E-Instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.17,
-        "output": 0.66
-      },
-      "description": "Open multimodal Llama model for long-context analysis and efficient agents",
-      "family": "llama",
-      "id": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
-      "knowledge": "2024-12",
-      "last_updated": "2026-03-12",
-      "limit": {
-        "context": 64000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 4 Scout 17B 16E Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-01-31",
+      "release_date": "2024-12-01",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -350,14 +651,15 @@
     "microsoft/Phi-4-mini-instruct": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.08,
         "input": 0.08,
         "output": 0.35
       },
-      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "description": "Compact, efficient model ideal for fast responses in resource-constrained environments.",
       "family": "phi",
       "id": "microsoft/Phi-4-mini-instruct",
       "knowledge": "2023-10",
-      "last_updated": "2026-03-12",
+      "last_updated": "2025-02-01",
       "limit": {
         "context": 128000,
         "output": 128000
@@ -370,10 +672,11 @@
           "text"
         ]
       },
-      "name": "Phi-4-mini-instruct",
+      "name": "Phi 4 Mini 3.8B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-12-11",
+      "release_date": "2025-02-01",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -381,16 +684,15 @@
     "moonshotai/Kimi-K2.5": {
       "attachment": true,
       "cost": {
-        "input": 0.5,
-        "output": 2.85
+        "cache_read": 0.1,
+        "input": 0.6,
+        "output": 3
       },
-      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
+      "description": "Kimi K2.5 is a multimodal Mixture-of-Experts language model featuring 32 billion activated parameters and a total of 1 trillion parameters.",
       "family": "kimi-k2",
       "id": "moonshotai/Kimi-K2.5",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-03-12",
+      "knowledge": "2025-01",
+      "last_updated": "2026-02-02",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -408,7 +710,75 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-01-27",
+      "release_date": "2026-02-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.16,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Kimi K2.6 is a multimodal Mixture-of-Experts language model featuring 32 billion activated parameters and a total of 1 trillion parameters.",
+      "family": "kimi-k2",
+      "id": "moonshotai/Kimi-K2.6",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-20",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.7-Code": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.19,
+        "input": 0.94,
+        "output": 4
+      },
+      "description": "Kimi K2.7 Code is a 1T-parameter MoE model with 32B active parameters purpose-built for long-horizon agentic coding and software engineering.",
+      "family": "kimi-k2",
+      "id": "moonshotai/Kimi-K2.7-Code",
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -416,13 +786,14 @@
     "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.2,
         "input": 0.2,
         "output": 0.8
       },
-      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
+      "description": "Nemotron 3 is a LatentMoE model designed to deliver strong agentic, reasoning, and conversational capabilities.",
       "family": "nemotron",
       "id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
-      "last_updated": "2026-03-12",
+      "last_updated": "2026-03-11",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -435,7 +806,7 @@
           "text"
         ]
       },
-      "name": "NVIDIA Nemotron 3 Super 120B",
+      "name": "Nemotron 3 Super",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -448,16 +819,53 @@
       "temperature": true,
       "tool_call": true
     },
+    "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 0.75,
+        "output": 2.75
+      },
+      "description": "Nemotron 3 Ultra is a powerful MoE model designed for long-running agents across coding, deep research, and enterprise automation.",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B",
+      "last_updated": "2026-06-04",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Ultra",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-04",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "input": 0.15,
-        "output": 0.6
+        "cache_read": 0.04,
+        "input": 0.04,
+        "output": 0.14
       },
-      "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
+      "description": "Efficient Mixture-of-Experts model designed for high-reasoning, agentic and general-purpose use cases.",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-120b",
-      "last_updated": "2026-03-12",
+      "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
         "output": 131072
@@ -471,7 +879,7 @@
         ]
       },
       "name": "gpt-oss-120b",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-08-05",
@@ -482,13 +890,14 @@
     "openai/gpt-oss-20b": {
       "attachment": false,
       "cost": {
-        "input": 0.05,
-        "output": 0.2
+        "cache_read": 0.03,
+        "input": 0.03,
+        "output": 0.13
       },
-      "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
+      "description": "Lower latency Mixture-of-Experts model trained on OpenAI's Harmony response format with reasoning capabilities.",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-20b",
-      "last_updated": "2026-03-12",
+      "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
         "output": 131072
@@ -502,40 +911,10 @@
         ]
       },
       "name": "gpt-oss-20b",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-08-05",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai-org/GLM-5-FP8": {
-      "attachment": false,
-      "cost": {
-        "input": 1,
-        "output": 3.2
-      },
-      "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
-      "family": "glm",
-      "id": "zai-org/GLM-5-FP8",
-      "last_updated": "2026-03-12",
-      "limit": {
-        "context": 200000,
-        "output": 200000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-02-11",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -544,20 +923,16 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.26,
-        "cache_write": 0,
         "input": 1.4,
         "output": 4.4
       },
-      "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
+      "description": "Powerful MoE model for long-horizon agentic engineering and advanced reasoning.",
       "family": "glm",
       "id": "zai-org/GLM-5.1",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
       "last_updated": "2026-04-07",
       "limit": {
-        "context": 200000,
-        "output": 131072
+        "context": 202752,
+        "output": 202752
       },
       "modalities": {
         "input": [
@@ -567,7 +942,7 @@
           "text"
         ]
       },
-      "name": "GLM-5.1",
+      "name": "GLM 5.1",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -576,6 +951,42 @@
         }
       ],
       "release_date": "2026-04-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.39,
+        "output": 4.4
+      },
+      "description": "GLM-5.2 is a Mixture-of-Experts language model featuring 40 billion activated parameters and a total of 744 billion parameters.",
+      "family": "glm",
+      "id": "zai-org/GLM-5.2",
+      "last_updated": "2026-06-16",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-16",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
