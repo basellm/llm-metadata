@@ -1,0 +1,62 @@
+{
+  "attachment": true,
+  "cost": {
+    "input": 0.115,
+    "output": 0.917,
+    "tiers": [
+      {
+        "input": 0.287,
+        "output": 2.294,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+  "family": "qwen",
+  "id": "qwen3-5-122b-a10b",
+  "last_updated": "2026-02-23",
+  "limit": {
+    "context": 256000,
+    "output": 64000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.5 122B-A10B",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "max": 80000,
+      "min": 1,
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-02-23",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

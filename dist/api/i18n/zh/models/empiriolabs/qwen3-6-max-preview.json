@@ -1,0 +1,61 @@
+{
+  "attachment": false,
+  "cost": {
+    "input": 1.31,
+    "output": 7.88,
+    "tiers": [
+      {
+        "input": 1.97,
+        "output": 11.82,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Flagship Qwen model for complex reasoning, coding, and agentic workflows",
+  "family": "qwen",
+  "id": "qwen3-6-max-preview",
+  "knowledge": "2025-04",
+  "last_updated": "2026-04-20",
+  "limit": {
+    "context": 256000,
+    "output": 65536
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.6 Max Preview",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "max": 393216,
+      "min": 1,
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-04-20",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": false
+}

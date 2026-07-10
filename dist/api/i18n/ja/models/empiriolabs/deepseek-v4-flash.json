@@ -1,0 +1,51 @@
+{
+  "attachment": false,
+  "cost": {
+    "input": 0.14,
+    "output": 0.28
+  },
+  "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+  "family": "deepseek-flash",
+  "id": "deepseek-v4-flash",
+  "knowledge": "2025-05",
+  "last_updated": "2026-06-12",
+  "limit": {
+    "context": 1000000,
+    "output": 393216
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "DeepSeek V4 Flash",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "max": 393216,
+      "min": 1,
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-04-24",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": false
+}

@@ -1,0 +1,53 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.045,
+    "input": 0.09,
+    "output": 0.13
+  },
+  "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+  "family": "qwen",
+  "id": "qwen3-5-9b",
+  "last_updated": "2026-02-23",
+  "limit": {
+    "context": 262144,
+    "output": 32768
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.5 9B",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "max": 32768,
+      "min": 1024,
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-02-23",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

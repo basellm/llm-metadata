@@ -1,0 +1,52 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.02,
+    "input": 0.04,
+    "output": 0.07
+  },
+  "description": "Qwen3.5 4B is a low-cost multimodal reasoning model with 256K context, image and video input, function tools, and structured output.",
+  "id": "qwen3-5-4b",
+  "last_updated": "2026-03-02",
+  "limit": {
+    "context": 262144,
+    "output": 32768
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.5 4B",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "max": 32768,
+      "min": 1024,
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-03-02",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

@@ -1,0 +1,1675 @@
+{
+  "api": "https://api.empiriolabs.ai/v1",
+  "doc": "https://docs.empiriolabs.ai",
+  "env": [
+    "EMPIRIOLABS_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/empiriolabs.svg",
+  "id": "empiriolabs",
+  "models": {
+    "deepseek-v4-flash": {
+      "attachment": false,
+      "cost": {
+        "input": 0.14,
+        "output": 0.28
+      },
+      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4-flash",
+      "knowledge": "2025-05",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 1000000,
+        "output": 393216
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 393216,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "deepseek-v4-pro": {
+      "attachment": false,
+      "cost": {
+        "input": 1.65,
+        "output": 3.3
+      },
+      "description": "Open MoE flagship with million-token context for coding and long agent runs",
+      "family": "deepseek-thinking",
+      "id": "deepseek-v4-pro",
+      "knowledge": "2025-05",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 1000000,
+        "output": 393216
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 393216,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "fugu-ultra": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.5,
+        "context_over_200k": {
+          "cache_read": 1.5,
+          "input": 15,
+          "output": 67.5
+        },
+        "input": 7.5,
+        "output": 45,
+        "tiers": [
+          {
+            "cache_read": 1.5,
+            "input": 15,
+            "output": 67.5,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Quality-first multi-agent model for hard research, analysis, and competitions",
+      "family": "fugu",
+      "id": "fugu-ultra",
+      "last_updated": "2026-06-15",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Fugu Ultra",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-15",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gemma-4-26b-a4b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.05,
+        "output": 0.29
+      },
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "family": "gemma",
+      "id": "gemma-4-26b-a4b",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 26B-A4B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-4-5-flash": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
+      "family": "glm-flash",
+      "id": "glm-4-5-flash",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-28",
+      "limit": {
+        "context": 200000,
+        "output": 98304
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.5 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-07-28",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-4-7-flash": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Budget GLM lane for fast coding help, routing, and everyday automation",
+      "family": "glm-flash",
+      "id": "glm-4-7-flash",
+      "knowledge": "2025-04",
+      "last_updated": "2026-01-19",
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 4.7 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-01-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5-1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.165,
+        "input": 0.825,
+        "output": 3.301,
+        "tiers": [
+          {
+            "cache_read": 0.165,
+            "input": 1.1,
+            "output": 3.851,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
+      "family": "glm",
+      "id": "glm-5-1",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 202000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 38912,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5-2": {
+      "attachment": false,
+      "cost": {
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "family": "glm",
+      "id": "glm-5-2",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2-6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1788,
+        "input": 0.8939,
+        "output": 3.7131
+      },
+      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
+      "family": "kimi-k2",
+      "id": "kimi-k2-6",
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 256000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 81920,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2-7-code": {
+      "attachment": true,
+      "cost": {
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
+      "family": "kimi-k2",
+      "id": "kimi-k2-7-code",
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 256000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k2-7-code-highspeed": {
+      "attachment": true,
+      "cost": {
+        "input": 1.9,
+        "output": 8
+      },
+      "description": "Lower-latency Kimi Code variant for interactive edits and coding-agent loops",
+      "family": "kimi-k2",
+      "id": "kimi-k2-7-code-highspeed",
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 256000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code Highspeed",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "mimo-v2-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.014,
+        "input": 0.7,
+        "output": 1.4
+      },
+      "description": "Open MiMo model for multimodal coding agents and long-context automation",
+      "family": "mimo",
+      "id": "mimo-v2-5",
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo V2.5",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-04-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "mimo-v2-5-pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.018,
+        "input": 2.175,
+        "output": 4.35
+      },
+      "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+      "family": "mimo",
+      "id": "mimo-v2-5-pro",
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo V2.5 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "minimax-m2-7": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
+      "family": "minimax",
+      "id": "minimax-m2-7",
+      "last_updated": "2026-03-18",
+      "limit": {
+        "context": 200000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2.7",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-03-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m2-7-highspeed": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Low-latency M2.7 variant for interactive coding plans and agent loops",
+      "family": "minimax",
+      "id": "minimax-m2-7-highspeed",
+      "last_updated": "2026-03-18",
+      "limit": {
+        "context": 200000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M2.7 Highspeed",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-03-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "minimax-m3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.045,
+        "context_over_200k": {
+          "cache_read": 0.045,
+          "input": 0.45,
+          "output": 1.8
+        },
+        "input": 0.225,
+        "output": 0.9,
+        "tiers": [
+          {
+            "cache_read": 0.045,
+            "input": 0.45,
+            "output": 1.8,
+            "tier": {
+              "size": 512000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "MiniMax multimodal model for long-context coding, perception, and agent planning",
+      "family": "minimax",
+      "id": "minimax-m3",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 1000000,
+        "output": 524288
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax M3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "muse-spark-1-1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1,
+        "input": 1.25,
+        "output": 4.25
+      },
+      "description": "Muse Spark is a natively multimodal reasoning model with support for tool-use, visual chain of thought, and multi-agent orchestration.",
+      "family": "muse",
+      "id": "muse-spark-1-1",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Muse Spark 1.1",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-04-08",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-5-122b-a10b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.115,
+        "output": 0.917,
+        "tiers": [
+          {
+            "input": 0.287,
+            "output": 2.294,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen3-5-122b-a10b",
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 122B-A10B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 80000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-02-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-5-27b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.086,
+        "output": 0.688,
+        "tiers": [
+          {
+            "input": 0.258,
+            "output": 2.064,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen3-5-27b",
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 80000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-02-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-5-35b-a3b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.057,
+        "output": 0.459,
+        "tiers": [
+          {
+            "input": 0.229,
+            "output": 1.835,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen3-5-35b-a3b",
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 35B-A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 80000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-02-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-5-397b-a17b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.172,
+        "output": 1.032,
+        "tiers": [
+          {
+            "input": 0.43,
+            "output": 2.58,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
+      "family": "qwen",
+      "id": "qwen3-5-397b-a17b",
+      "last_updated": "2026-02-15",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 397B-A17B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 80000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-02-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-5-4b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.04,
+        "output": 0.07
+      },
+      "description": "Qwen3.5 4B is a low-cost multimodal reasoning model with 256K context, image and video input, function tools, and structured output.",
+      "id": "qwen3-5-4b",
+      "last_updated": "2026-03-02",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 4B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 32768,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-03-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-5-9b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.045,
+        "input": 0.09,
+        "output": 0.13
+      },
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "family": "qwen",
+      "id": "qwen3-5-9b",
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 9B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 32768,
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-02-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-5-plus": {
+      "attachment": true,
+      "cost": {
+        "context_over_200k": {
+          "input": 1.08,
+          "output": 6.62
+        },
+        "input": 0.36,
+        "output": 2.21,
+        "tiers": [
+          {
+            "input": 1.08,
+            "output": 6.62,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen3-5-plus",
+      "knowledge": "2025-04",
+      "last_updated": "2026-02-16",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 Plus",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-16",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-6-27b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.412564,
+        "output": 2.475384
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen3-6-27b",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 80000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-6-flash": {
+      "attachment": true,
+      "cost": {
+        "context_over_200k": {
+          "input": 1,
+          "output": 4
+        },
+        "input": 0.25,
+        "output": 1.5,
+        "tiers": [
+          {
+            "input": 1,
+            "output": 4,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen3.6",
+      "id": "qwen3-6-flash",
+      "last_updated": "2026-04-27",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 64000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-6-max-preview": {
+      "attachment": false,
+      "cost": {
+        "input": 1.31,
+        "output": 7.88,
+        "tiers": [
+          {
+            "input": 1.97,
+            "output": 11.82,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Flagship Qwen model for complex reasoning, coding, and agentic workflows",
+      "family": "qwen",
+      "id": "qwen3-6-max-preview",
+      "knowledge": "2025-04",
+      "last_updated": "2026-04-20",
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 Max Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 393216,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "qwen3-6-plus": {
+      "attachment": true,
+      "cost": {
+        "context_over_200k": {
+          "input": 2,
+          "output": 6
+        },
+        "input": 0.5,
+        "output": 3,
+        "tiers": [
+          {
+            "input": 2,
+            "output": 6,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Earlier Qwen multimodal workhorse for million-token agent and document tasks",
+      "family": "qwen",
+      "id": "qwen3-6-plus",
+      "knowledge": "2025-04",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 Plus",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-7-max": {
+      "attachment": false,
+      "cost": {
+        "input": 2.5,
+        "output": 7.5
+      },
+      "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
+      "family": "qwen",
+      "id": "qwen3-7-max",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 64000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-05-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-7-plus": {
+      "attachment": true,
+      "cost": {
+        "context_over_200k": {
+          "input": 1.2,
+          "output": 4.8
+        },
+        "input": 0.4,
+        "output": 1.6,
+        "tiers": [
+          {
+            "input": 1.2,
+            "output": 4.8,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
+      "family": "qwen",
+      "id": "qwen3-7-plus",
+      "knowledge": "2025-04",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7 Plus",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 256000,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-06-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-max": {
+      "attachment": false,
+      "cost": {
+        "input": 1.08,
+        "output": 5.52,
+        "tiers": [
+          {
+            "input": 2.7,
+            "output": 13.8,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Flagship Qwen3 model for coding agents, complex reasoning, and tool use",
+      "family": "qwen",
+      "id": "qwen3-max",
+      "knowledge": "2025-04",
+      "last_updated": "2025-09-23",
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-09-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "step-3-5-flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.1,
+        "output": 0.3
+      },
+      "description": "StepFun flash lane for quick multimodal reasoning and coding assistance",
+      "id": "step-3-5-flash",
+      "knowledge": "2025-01",
+      "last_updated": "2026-02-13",
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 3.5 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-01-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "step-3-5-flash-2603": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.1,
+        "output": 0.3
+      },
+      "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
+      "id": "step-3-5-flash-2603",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 3.5 Flash 2603",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "step-3-7-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.04,
+        "input": 0.2,
+        "output": 1.15
+      },
+      "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
+      "id": "step-3-7-flash",
+      "knowledge": "2026-01-01",
+      "last_updated": "2026-05-29",
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 3.7 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-05-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "EmpirioLabs AI",
+  "npm": "@ai-sdk/openai-compatible"
+}

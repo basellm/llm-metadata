@@ -1,0 +1,62 @@
+{
+  "attachment": false,
+  "cost": {
+    "cache_read": 0.165,
+    "input": 0.825,
+    "output": 3.301,
+    "tiers": [
+      {
+        "cache_read": 0.165,
+        "input": 1.1,
+        "output": 3.851,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
+  "family": "glm",
+  "id": "glm-5-1",
+  "last_updated": "2026-06-12",
+  "limit": {
+    "context": 202000,
+    "output": 128000
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "GLM 5.1",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "max": 38912,
+      "min": 1,
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-04-07",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

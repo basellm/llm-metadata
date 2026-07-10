@@ -1,0 +1,62 @@
+{
+  "attachment": true,
+  "cost": {
+    "input": 0.172,
+    "output": 1.032,
+    "tiers": [
+      {
+        "input": 0.43,
+        "output": 2.58,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
+  "family": "qwen",
+  "id": "qwen3-5-397b-a17b",
+  "last_updated": "2026-02-15",
+  "limit": {
+    "context": 256000,
+    "output": 64000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.5 397B-A17B",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "max": 80000,
+      "min": 1,
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-02-15",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}
