@@ -1,15 +1,15 @@
 {
   "attachment": false,
   "cost": {
-    "input": 0.1,
-    "output": 0.3
+    "input": 0.2,
+    "output": 0.4
   },
-  "description": "General-purpose chat model for instruction following, writing, and analysis",
+  "description": "Agentic coding model from Poolside in the XS size class for local deployment",
+  "family": "laguna",
   "id": "poolside/laguna-xs.2",
-  "last_updated": "2026-04-29",
+  "last_updated": "2026-06-13",
   "limit": {
-    "context": 128000,
-    "input": 128000,
+    "context": 262144,
     "output": 32768
   },
   "modalities": {
@@ -21,9 +21,11 @@
     ]
   },
   "name": "Laguna XS.2",
-  "open_weights": false,
-  "reasoning": false,
-  "release_date": "2026-04-29",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [],
+  "release_date": "2026-04-28",
   "structured_output": false,
-  "tool_call": false
+  "temperature": true,
+  "tool_call": true
 }
