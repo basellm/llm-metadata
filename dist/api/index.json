@@ -7445,6 +7445,17 @@
     },
     {
       "flags": {
+        "attachment": false,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "zai-org/GLM-5.2-FP8",
+      "name": "GLM-5.2",
+      "providerId": "ambient",
+      "updated": "2026-06-13"
+    },
+    {
+      "flags": {
         "attachment": true,
         "reasoning": true,
         "tool_call": true
@@ -15367,7 +15378,7 @@
       "flags": {
         "attachment": false,
         "reasoning": true,
-        "tool_call": false
+        "tool_call": true
       },
       "id": "deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
@@ -15378,7 +15389,7 @@
       "flags": {
         "attachment": false,
         "reasoning": true,
-        "tool_call": false
+        "tool_call": true
       },
       "id": "deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
@@ -15488,7 +15499,7 @@
       "flags": {
         "attachment": true,
         "reasoning": false,
-        "tool_call": false
+        "tool_call": true
       },
       "id": "mimo-v2-5",
       "name": "MiMo V2.5",
@@ -15499,7 +15510,7 @@
       "flags": {
         "attachment": false,
         "reasoning": true,
-        "tool_call": false
+        "tool_call": true
       },
       "id": "mimo-v2-5-pro",
       "name": "MiMo V2.5 Pro",
@@ -15521,7 +15532,7 @@
       "flags": {
         "attachment": false,
         "reasoning": true,
-        "tool_call": false
+        "tool_call": true
       },
       "id": "minimax-m2-7-highspeed",
       "name": "MiniMax M2.7 Highspeed",
@@ -15653,7 +15664,7 @@
       "flags": {
         "attachment": false,
         "reasoning": true,
-        "tool_call": false
+        "tool_call": true
       },
       "id": "qwen3-6-max-preview",
       "name": "Qwen3.6 Max Preview",
@@ -15697,7 +15708,7 @@
       "flags": {
         "attachment": false,
         "reasoning": true,
-        "tool_call": false
+        "tool_call": true
       },
       "id": "qwen3-max",
       "name": "Qwen3 Max",
@@ -21203,6 +21214,72 @@
       "name": "Qwen 3 Embedding 4B",
       "providerId": "inference",
       "updated": "2025-01-01"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "google/gemma-4-31b-it-fp8",
+      "name": "Gemma 4 31B IT FP8",
+      "providerId": "inferx",
+      "updated": "2026-04-02"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": false,
+        "tool_call": true
+      },
+      "id": "qwen/qwen3-coder-next-fp8",
+      "name": "Qwen3 Coder Next FP8",
+      "providerId": "inferx",
+      "updated": "2026-02-03"
+    },
+    {
+      "flags": {
+        "attachment": false,
+        "reasoning": false,
+        "tool_call": true
+      },
+      "id": "qwen/qwen3-coder-next-fp8-1m",
+      "name": "Qwen3 Coder Next FP8 1M",
+      "providerId": "inferx",
+      "updated": "2026-02-03"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "qwen/qwen3.5-122b-a10b-nvfp4",
+      "name": "Qwen3.5 122B A10B NVFP4",
+      "providerId": "inferx",
+      "updated": "2026-02-23"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "qwen/qwen3.6-27b-fp8",
+      "name": "Qwen3.6 27B FP8",
+      "providerId": "inferx",
+      "updated": "2026-04-22"
+    },
+    {
+      "flags": {
+        "attachment": true,
+        "reasoning": true,
+        "tool_call": true
+      },
+      "id": "qwen/qwen3.6-35b-a3b-fp8",
+      "name": "Qwen3.6 35B A3B FP8",
+      "providerId": "inferx",
+      "updated": "2026-04-17"
     },
     {
       "flags": {
@@ -27495,28 +27572,6 @@
       "name": "Llama 4 Scout 17B Instruct",
       "providerId": "llmgateway",
       "updated": "2025-04-05"
-    },
-    {
-      "flags": {
-        "attachment": true,
-        "reasoning": false,
-        "tool_call": true
-      },
-      "id": "mimo-v2-omni",
-      "name": "MiMo-V2-Omni",
-      "providerId": "llmgateway",
-      "updated": "2026-03-18"
-    },
-    {
-      "flags": {
-        "attachment": false,
-        "reasoning": true,
-        "tool_call": true
-      },
-      "id": "mimo-v2-pro",
-      "name": "MiMo-V2-Pro",
-      "providerId": "llmgateway",
-      "updated": "2026-03-18"
     },
     {
       "flags": {
@@ -44479,17 +44534,6 @@
       "name": "Weaver (alpha)",
       "providerId": "openrouter",
       "updated": "2023-08-02"
-    },
-    {
-      "flags": {
-        "attachment": false,
-        "reasoning": false,
-        "tool_call": false
-      },
-      "id": "meta-llama/llama-3-8b-instruct",
-      "name": "Llama 3 8B Instruct",
-      "providerId": "openrouter",
-      "updated": "2024-04-18"
     },
     {
       "flags": {
@@ -63347,7 +63391,7 @@
       "doc": "https://ambient.xyz",
       "iconURL": "https://models.dev/logos/ambient.svg",
       "id": "ambient",
-      "modelCount": 3,
+      "modelCount": 4,
       "name": "Ambient"
     },
     {
@@ -63757,6 +63801,14 @@
       "name": "Inference"
     },
     {
+      "api": "https://model.inferx.net/v1",
+      "doc": "https://model.inferx.net/endpoints",
+      "iconURL": "https://models.dev/logos/inferx.svg",
+      "id": "inferx",
+      "modelCount": 6,
+      "name": "InferX"
+    },
+    {
       "api": "https://api.intelligence.io.solutions/api/v1",
       "doc": "https://io.net/docs/guides/intelligence/io-intelligence",
       "iconURL": "https://models.dev/logos/io-net.svg",
@@ -63826,7 +63878,7 @@
       "doc": "https://llmgateway.io/docs",
       "iconURL": "https://models.dev/logos/llmgateway.svg",
       "id": "llmgateway",
-      "modelCount": 184,
+      "modelCount": 182,
       "name": "LLM Gateway"
     },
     {
@@ -64095,7 +64147,7 @@
       "iconURL": "https://models.dev/logos/openrouter.svg",
       "id": "openrouter",
       "lobeIcon": "OpenRouter.Color",
-      "modelCount": 346,
+      "modelCount": 345,
       "name": "OpenRouter"
     },
     {
