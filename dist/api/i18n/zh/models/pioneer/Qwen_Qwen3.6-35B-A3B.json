@@ -1,0 +1,48 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.028,
+    "cache_write": 0.175,
+    "input": 0.14,
+    "output": 1
+  },
+  "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
+  "family": "qwen",
+  "id": "Qwen/Qwen3.6-35B-A3B",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-04-17",
+  "limit": {
+    "context": 262144,
+    "output": 131072
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video",
+      "audio"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.6 35B-A3B",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "release_date": "2026-04-17",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

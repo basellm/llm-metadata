@@ -4275,6 +4275,37 @@
       "temperature": true,
       "tool_call": false
     },
+    "kwaipilot/kat-coder-air-v2.5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
+      "family": "kat-coder",
+      "id": "kwaipilot/kat-coder-air-v2.5",
+      "last_updated": "2026-07-10",
+      "limit": {
+        "context": 256000,
+        "output": 80000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kat Coder Air V2.5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-10",
+      "temperature": true,
+      "tool_call": true
+    },
     "kwaipilot/kat-coder-pro-v1": {
       "attachment": false,
       "cost": {
@@ -4335,6 +4366,37 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-03-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "kwaipilot/kat-coder-pro-v2.5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 0.74,
+        "output": 2.96
+      },
+      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
+      "family": "kat-coder",
+      "id": "kwaipilot/kat-coder-pro-v2.5",
+      "last_updated": "2026-07-10",
+      "limit": {
+        "context": 256000,
+        "output": 80000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kat Coder Pro V2.5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-10",
       "temperature": true,
       "tool_call": true
     },
@@ -7780,6 +7842,53 @@
       "temperature": true,
       "tool_call": false
     },
+    "openai/gpt-realtime-2.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.4,
+        "input": 4,
+        "output": 24
+      },
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "family": "gpt",
+      "id": "openai/gpt-realtime-2.1",
+      "knowledge": "2024-09-30",
+      "last_updated": "2026-07-06",
+      "limit": {
+        "context": 128000,
+        "input": 96000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "audio"
+        ],
+        "output": [
+          "text",
+          "audio"
+        ]
+      },
+      "name": "gpt-realtime-2.1",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
     "openai/gpt-realtime-mini": {
       "attachment": false,
       "cost": {
@@ -10189,9 +10298,9 @@
     "zai/glm-5.2-fast": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.5,
-        "input": 3,
-        "output": 10.25
+        "cache_read": 0.21,
+        "input": 2.1,
+        "output": 6.6
       },
       "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
       "family": "glm",
@@ -10224,7 +10333,7 @@
           ]
         }
       ],
-      "release_date": "2026-06-16",
+      "release_date": "2026-06-23",
       "temperature": true,
       "tool_call": true
     },

@@ -1,0 +1,3425 @@
+{
+  "api": "https://api.pioneer.ai/v1",
+  "doc": "https://agent.pioneer.ai/llms.txt",
+  "env": [
+    "PIONEER_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/pioneer.svg",
+  "id": "pioneer",
+  "models": {
+    "HuggingFaceTB/SmolLM3-3B-Base": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.15
+      },
+      "description": "Tool-capable chat model for instruction following and agentic application workflows",
+      "id": "HuggingFaceTB/SmolLM3-3B-Base",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-06-30",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "SmolLM3 3B Base",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-06-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "LiquidAI/LFM2-24B-A2B": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.03,
+        "input": 0.03,
+        "output": 0.12
+      },
+      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
+      "family": "liquid",
+      "id": "LiquidAI/LFM2-24B-A2B",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-25",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LFM2 24B A2B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-01-31",
+      "temperature": true,
+      "tool_call": false
+    },
+    "MiniMaxAI/MiniMax-M2.7": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.279,
+        "cache_write": 0.279,
+        "input": 0.279,
+        "output": 1.2
+      },
+      "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
+      "family": "minimax",
+      "id": "MiniMaxAI/MiniMax-M2.7",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-18",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.7",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-03-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "MiniMaxAI/MiniMax-M3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.06,
+        "cache_write": 0.3,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax multimodal model for long-context coding, perception, and agent planning",
+      "family": "minimax",
+      "id": "MiniMaxAI/MiniMax-M3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-01",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3-1.7B-Base": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 0.1,
+        "input": 0.1,
+        "output": 0.1
+      },
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "id": "Qwen/Qwen3-1.7B-Base",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-03-31",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 1.7B Base",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-03-31",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3-32B": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.9,
+        "cache_write": 0.9,
+        "input": 0.9,
+        "output": 0.9
+      },
+      "description": "Dense open Qwen model for self-hosted chat, reasoning, and coding",
+      "family": "qwen",
+      "id": "Qwen/Qwen3-32B",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2025-04",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 32B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2025-04",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3-4B-Base": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.15
+      },
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "id": "Qwen/Qwen3-4B-Base",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-03-31",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 4B Base",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-03-31",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3-4B-Instruct-2507": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 0.2,
+        "input": 0.2,
+        "output": 0.2
+      },
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "id": "Qwen/Qwen3-4B-Instruct-2507",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-07-31",
+      "limit": {
+        "context": 262144,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 4B Instruct",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2025-07-31",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3-8B": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 0.2,
+        "input": 0.2,
+        "output": 0.2
+      },
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "family": "qwen",
+      "id": "Qwen/Qwen3-8B",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-04-28",
+      "limit": {
+        "context": 131072,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 8B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2025-03-31",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.5-9B": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 0.3,
+        "input": 0.3,
+        "output": 0.3
+      },
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.5-9B",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 9B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-02-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.6-27B": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.6,
+        "cache_write": 0.6,
+        "input": 0.6,
+        "output": 0.6
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.6-27B",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-04-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.6-35B-A3B": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.028,
+        "cache_write": 0.175,
+        "input": 0.14,
+        "output": 1
+      },
+      "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.6-35B-A3B",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-17",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B-A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "XiaomiMiMo/MiMo-V2.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0028,
+        "cache_write": 0.14,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "description": "Open MiMo model for multimodal coding agents and long-context automation",
+      "family": "mimo",
+      "id": "XiaomiMiMo/MiMo-V2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 1050000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "XiaomiMiMo/MiMo-V2.5-Pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.0036,
+        "cache_write": 0.435,
+        "input": 0.435,
+        "output": 0.87
+      },
+      "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+      "family": "mimo",
+      "id": "XiaomiMiMo/MiMo-V2.5-Pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 1050000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.5-Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-haiku-4-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 1.25,
+        "input": 1,
+        "output": 5
+      },
+      "description": "Fast Claude lane for lightweight agents, office tasks, and responsive chat",
+      "family": "claude-haiku",
+      "id": "claude-haiku-4-5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-02-28",
+      "last_updated": "2025-10-15",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Haiku 4.5 (latest)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-10-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-4-1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.5,
+        "cache_write": 18.75,
+        "input": 15,
+        "output": 75
+      },
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "id": "claude-opus-4-1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.1 (latest)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-4-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "id": "claude-opus-4-5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2025-11-24",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.5 (latest)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-11-24",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-4-6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "High-end Claude for difficult coding, planning, and slower expert reasoning",
+      "family": "claude-opus",
+      "id": "claude-opus-4-6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05-31",
+      "last_updated": "2026-03-13",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-02-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-4-7": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
+      "family": "claude-opus",
+      "id": "claude-opus-4-7",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-04-16",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.7",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-04-16",
+      "temperature": false,
+      "tool_call": true
+    },
+    "claude-opus-4-8": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "id": "claude-opus-4-8",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2026-01",
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.8",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-05-28",
+      "temperature": false,
+      "tool_call": true
+    },
+    "claude-sonnet-4-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4-5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-07-31",
+      "last_updated": "2025-09-29",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.5 (latest)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-09-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-sonnet-4-6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Claude workhorse for coding agents, careful analysis, and production cost control",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4-6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-13",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-02-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-ai/DeepSeek-V4-Flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.0197,
+        "cache_write": 0.1,
+        "input": 0.1,
+        "output": 0.2
+      },
+      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+      "family": "deepseek-flash",
+      "id": "deepseek-ai/DeepSeek-V4-Flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-ai/DeepSeek-V4-Pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.003625,
+        "cache_write": 0.435,
+        "input": 0.435,
+        "output": 0.87
+      },
+      "description": "Open MoE flagship with million-token context for coding and long agent runs",
+      "family": "deepseek-thinking",
+      "id": "deepseek-ai/DeepSeek-V4-Pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "fastino/gliguard-LLMGuardrails-300M": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.15
+      },
+      "description": "Tool-capable chat model for instruction following and agentic application workflows",
+      "id": "fastino/gliguard-LLMGuardrails-300M",
+      "last_updated": "2026-04-30",
+      "limit": {
+        "context": 8192,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLiGuard LLM Guardrails 300M",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "fastino/gliner2-base-v1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.15
+      },
+      "description": "Tool-capable chat model for instruction following and agentic application workflows",
+      "id": "fastino/gliner2-base-v1",
+      "last_updated": "2025-06-30",
+      "limit": {
+        "context": 8192,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLiNER2 Base",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-06-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "fastino/gliner2-large-v1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.15
+      },
+      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
+      "id": "fastino/gliner2-large-v1",
+      "last_updated": "2025-06-30",
+      "limit": {
+        "context": 8192,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLiNER2 Large",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-06-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "fastino/gliner2-multi-large-v1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.15
+      },
+      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
+      "id": "fastino/gliner2-multi-large-v1",
+      "last_updated": "2025-11-30",
+      "limit": {
+        "context": 8192,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLiNER2 Multi Large",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-11-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "fastino/gliner2-multi-v1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.15
+      },
+      "description": "Tool-capable chat model for instruction following and agentic application workflows",
+      "id": "fastino/gliner2-multi-v1",
+      "last_updated": "2025-11-30",
+      "limit": {
+        "context": 8192,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLiNER2 Multi",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-11-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "fastino/gliner2-privacy-filter-PII-multi": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.15
+      },
+      "description": "Tool-capable chat model for instruction following and agentic application workflows",
+      "id": "fastino/gliner2-privacy-filter-PII-multi",
+      "last_updated": "2026-04-30",
+      "limit": {
+        "context": 8192,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLiNER2 Privacy Filter PII (Multi)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 0.083333,
+        "input": 0.5,
+        "output": 3
+      },
+      "description": "New Gemini flash lane bringing frontier-style multimodal reasoning to cheaper runs",
+      "family": "gemini-flash",
+      "id": "gemini-3-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2025-12-17",
+      "limit": {
+        "context": 1048576,
+        "output": 65535
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3 Flash Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-12-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3.1-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 0.375,
+        "input": 2,
+        "output": 12
+      },
+      "description": "Reasoning-first Gemini preview for agentic coding and complex problem solving",
+      "family": "gemini-pro",
+      "id": "gemini-3.1-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-02-19",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.1 Pro Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-02-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3.5-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.083333,
+        "input": 1.5,
+        "output": 9
+      },
+      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+      "family": "gemini-flash",
+      "id": "gemini-3.5-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-05-19",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.5 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-05-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/diffusiongemma-26B-A4B-it": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 0.5,
+        "input": 0.5,
+        "output": 0.5
+      },
+      "description": "Gemini model for general assistance, reasoning, and multimodal workflows",
+      "id": "google/diffusiongemma-26B-A4B-it",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-05-31",
+      "limit": {
+        "context": 262144,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DiffusionGemma 26B-A4B IT",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-05-31",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-3-4b-pt": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.15
+      },
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "id": "google/gemma-3-4b-pt",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-02-28",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 4B (Pretrained)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-02-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-4-12B-it": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 0.25,
+        "input": 0.25,
+        "output": 0.25
+      },
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "id": "google/gemma-4-12B-it",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-05-31",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 12B IT",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-05-31",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-4-31B-it": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 0.5,
+        "input": 0.5,
+        "output": 0.5
+      },
+      "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
+      "family": "gemma",
+      "id": "google/gemma-4-31B-it",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 31B IT",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-4-E2B-it": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 0.1,
+        "input": 0.1,
+        "output": 0.1
+      },
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "family": "gemma",
+      "id": "google/gemma-4-E2B-it",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 E2B IT",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-4-E4B-it": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 0.2,
+        "input": 0.2,
+        "output": 0.2
+      },
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "family": "gemma",
+      "id": "google/gemma-4-E4B-it",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 E4B IT",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1,
+        "cache_write": 2,
+        "input": 2,
+        "output": 8
+      },
+      "description": "Long-lived GPT workhorse for coding, instruction following, and production apps",
+      "family": "gpt",
+      "id": "gpt-4.1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 0.4,
+        "input": 0.4,
+        "output": 1.6
+      },
+      "description": "Affordable GPT-4.1 lane for fast coding help and structured extraction",
+      "family": "gpt-mini",
+      "id": "gpt-4.1-mini",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1 mini",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1-nano": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 0.1,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "Tiny GPT-4.1 option for classification, routing, and very high-volume tasks",
+      "family": "gpt-nano",
+      "id": "gpt-4.1-nano",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1 nano",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4o": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.25,
+        "cache_write": 2.5,
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "Omni-era GPT for multimodal chat, practical coding, and general assistants",
+      "family": "gpt",
+      "id": "gpt-4o",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2023-09",
+      "last_updated": "2024-08-06",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2024-05-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4o-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Small omni GPT for cheap multimodal assistance and production-scale traffic",
+      "family": "gpt-mini",
+      "id": "gpt-4o-mini",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2023-09",
+      "last_updated": "2024-07-18",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o mini",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2024-07-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.025,
+        "cache_write": 0.25,
+        "input": 0.25,
+        "output": 2
+      },
+      "description": "Small GPT-5 for responsive agents, coding help, and everyday automation",
+      "family": "gpt-mini",
+      "id": "gpt-5-mini",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-nano": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.005,
+        "cache_write": 0.05,
+        "input": 0.05,
+        "output": 0.4
+      },
+      "description": "Tiny GPT-5 lane for routing, extraction, classification, and bulk jobs",
+      "family": "gpt-nano",
+      "id": "gpt-5-nano",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Nano",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "cache_write": 1.25,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "Sharper GPT-5 generation for coding, product work, and tool-assisted tasks",
+      "family": "gpt",
+      "id": "gpt-5.1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.3-codex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.175,
+        "cache_write": 1.75,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
+      "family": "gpt-codex",
+      "id": "gpt-5.3-codex",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.3 Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-02-05",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.4": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 2.5,
+        "input": 2.5,
+        "output": 15
+      },
+      "description": "Agent-ready GPT for coding and computer-use workflows at a lower cost",
+      "family": "gpt",
+      "id": "gpt-5.4",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-05",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.4",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-03-05",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.4-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "cache_write": 0.75,
+        "input": 0.75,
+        "output": 4.5
+      },
+      "description": "Strong small GPT for coding subagents, quick tool use, and high-volume work",
+      "family": "gpt-mini",
+      "id": "gpt-5.4-mini",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-17",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.4 mini",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-03-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.4-nano": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.02,
+        "cache_write": 0.2,
+        "input": 0.2,
+        "output": 1.25
+      },
+      "description": "Cheapest GPT-5.4 lane for simple routing, extraction, and bulk automation",
+      "family": "gpt-nano",
+      "id": "gpt-5.4-nano",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-17",
+      "limit": {
+        "context": 1047576,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.4 nano",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-03-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 5,
+        "input": 5,
+        "output": 30
+      },
+      "description": "Default frontier GPT for coding, computer use, research, and knowledge work",
+      "family": "gpt",
+      "id": "gpt-5.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-12-01",
+      "last_updated": "2026-04-23",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-04-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "meta-llama/Llama-3.1-8B-Instruct": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 0.2,
+        "input": 0.2,
+        "output": 0.2
+      },
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
+      "family": "llama",
+      "id": "meta-llama/Llama-3.1-8B-Instruct",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2023-12-31",
+      "last_updated": "2024-07-23",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 8B Instruct",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2024-06-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "meta-llama/Llama-3.2-1B-Instruct": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 0.1,
+        "input": 0.1,
+        "output": 0.201
+      },
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
+      "family": "llama",
+      "id": "meta-llama/Llama-3.2-1B-Instruct",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2023-12-31",
+      "last_updated": "2024-09-25",
+      "limit": {
+        "context": 131072,
+        "output": 60000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.2 1B Instruct",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2024-08-31",
+      "temperature": true,
+      "tool_call": false
+    },
+    "meta-llama/Llama-3.2-3B-Instruct": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 0.1,
+        "input": 0.1,
+        "output": 0.335
+      },
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
+      "family": "llama",
+      "id": "meta-llama/Llama-3.2-3B-Instruct",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2023-12-31",
+      "last_updated": "2024-09-25",
+      "limit": {
+        "context": 131072,
+        "output": 80000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.2 3B Instruct",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2024-08-31",
+      "temperature": true,
+      "tool_call": false
+    },
+    "meta-llama/Llama-3.3-70B-Instruct": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.9,
+        "cache_write": 0.9,
+        "input": 0.9,
+        "output": 0.9
+      },
+      "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
+      "family": "llama",
+      "id": "meta-llama/Llama-3.3-70B-Instruct",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2023-12",
+      "last_updated": "2024-12-06",
+      "limit": {
+        "context": 131072,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama-3.3-70B-Instruct",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2024-12-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistral-medium-3.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.5,
+        "cache_write": 1.5,
+        "input": 1.5,
+        "output": 7.5
+      },
+      "description": "Balanced Mistral model for enterprise assistants, multilingual work, and tools",
+      "family": "mistral-medium",
+      "id": "mistral-medium-3.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-29",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Medium 3.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/Mistral-7B-Instruct-v0.3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 0.2,
+        "input": 0.2,
+        "output": 0.2
+      },
+      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
+      "id": "mistralai/Mistral-7B-Instruct-v0.3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2023-04-30",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral 7B Instruct v0.3",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2023-04-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/Mistral-Nemo-Instruct-2407": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.02,
+        "cache_write": 0.02,
+        "input": 0.02,
+        "output": 0.03
+      },
+      "description": "Efficient Mistral-NVIDIA open model for multilingual chat and local deployment",
+      "family": "mistral-nemo",
+      "id": "mistralai/Mistral-Nemo-Instruct-2407",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-07",
+      "last_updated": "2024-07-01",
+      "limit": {
+        "context": 131072,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Nemo",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2024-07-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/Mistral-Small-4-119B-2603": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.015,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Fast Mistral production model for chat, extraction, and cost-sensitive agents",
+      "family": "mistral-small",
+      "id": "mistralai/Mistral-Small-4-119B-2603",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-06",
+      "last_updated": "2026-03-16",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Small 4",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-03-16",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.34,
+        "cache_write": 0.95,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
+      "family": "kimi-k2",
+      "id": "moonshotai/Kimi-K2.6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.7-Code": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.19,
+        "cache_write": 0.95,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
+      "family": "kimi-k2",
+      "id": "moonshotai/Kimi-K2.7-Code",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 0.05,
+        "input": 0.05,
+        "output": 0.2
+      },
+      "description": "Small Nemotron 3 MoE for efficient coding, math, and long-context agents",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-12-15",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Nano 30B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-12-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.09,
+        "cache_write": 0.09,
+        "input": 0.09,
+        "output": 0.45
+      },
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 1000000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Super 120B A12B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-03-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.5,
+        "input": 0.5,
+        "output": 2.5
+      },
+      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-04",
+      "limit": {
+        "context": 1000000,
+        "output": 65000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-04",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-120b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.015,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-120b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-20b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.035,
+        "cache_write": 0.07,
+        "input": 0.07,
+        "output": 0.3
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-20b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 20B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "pioneer/auto": {
+      "attachment": true,
+      "description": "Automatic model router for matching prompts to suitable backends and budgets",
+      "family": "auto",
+      "id": "pioneer/auto",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2025-06-29",
+      "limit": {
+        "context": 1048576,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Pioneer Auto",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2024-01-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.6-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0375,
+        "cache_write": 0.234375,
+        "input": 0.1875,
+        "output": 1.125
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen3.6",
+      "id": "qwen3.6-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-27",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.6-max-preview": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.208,
+        "cache_write": 1.3,
+        "input": 1.04,
+        "output": 6.24
+      },
+      "description": "Flagship Qwen model for complex reasoning, coding, and agentic workflows",
+      "family": "qwen",
+      "id": "qwen3.6-max-preview",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2026-04-20",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 Max Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.6-plus": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.065,
+        "cache_write": 0.40625,
+        "input": 0.325,
+        "output": 1.95
+      },
+      "description": "Earlier Qwen multimodal workhorse for million-token agent and document tasks",
+      "family": "qwen",
+      "id": "qwen3.6-plus",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 Plus",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.7-max": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 1.5625,
+        "input": 1.25,
+        "output": 3.75
+      },
+      "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
+      "family": "qwen",
+      "id": "qwen3.7-max",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-05-21",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-05-21",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.7-plus": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.064,
+        "cache_write": 0.4,
+        "input": 0.32,
+        "output": 1.28
+      },
+      "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
+      "family": "qwen",
+      "id": "qwen3.7-plus",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2026-06-02",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7 Plus",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "sakana/fugu-ultra": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 5,
+        "input": 5,
+        "output": 30
+      },
+      "description": "Quality-first multi-agent model for hard research, analysis, and competitions",
+      "family": "fugu",
+      "id": "sakana/fugu-ultra",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-15",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Fugu Ultra",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-15",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.182,
+        "cache_write": 0.98,
+        "input": 0.98,
+        "output": 3.08
+      },
+      "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
+      "family": "glm",
+      "id": "zai-org/GLM-5.1",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-07",
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "cache_write": 1.4,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "family": "glm",
+      "id": "zai-org/GLM-5.2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1048576,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Pioneer",
+  "npm": "@ai-sdk/openai-compatible"
+}
