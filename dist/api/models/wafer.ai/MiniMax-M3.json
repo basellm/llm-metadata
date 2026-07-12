@@ -1,0 +1,66 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.07,
+    "cache_write": 0,
+    "context_over_200k": {
+      "cache_read": 0.13,
+      "cache_write": 0,
+      "input": 0.66,
+      "output": 2.64
+    },
+    "input": 0.33,
+    "output": 1.32,
+    "tiers": [
+      {
+        "cache_read": 0.13,
+        "cache_write": 0,
+        "input": 0.66,
+        "output": 2.64,
+        "tier": {
+          "size": 512000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "MiniMax multimodal model for long-context coding, perception, and agent planning",
+  "family": "minimax",
+  "id": "MiniMax-M3",
+  "last_updated": "2026-06-01",
+  "limit": {
+    "context": 1048576,
+    "output": 128000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "MiniMax-M3",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    }
+  ],
+  "release_date": "2026-06-01",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}
