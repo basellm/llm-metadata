@@ -761,6 +761,38 @@
       "temperature": true,
       "tool_call": true
     },
+    "gemini-2.5-flash-image": {
+      "attachment": true,
+      "cost": {
+        "input": 0.3,
+        "output": 30
+      },
+      "description": "Nano Banana image model for fast generation, edits, and character-consistent assets",
+      "family": "gemini-flash",
+      "id": "gemini-2.5-flash-image",
+      "knowledge": "2024-06",
+      "last_updated": "2025-08-26",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "Nano Banana",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-08-26",
+      "temperature": true,
+      "tool_call": false
+    },
     "gemini-2.5-flash-lite": {
       "attachment": true,
       "cost": {
@@ -972,6 +1004,82 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
+    },
+    "gemini-3-pro-image": {
+      "attachment": true,
+      "cost": {
+        "input": 2,
+        "output": 120
+      },
+      "description": "Nano Banana Pro for higher-fidelity image generation and design-heavy edits",
+      "family": "gemini-pro",
+      "id": "gemini-3-pro-image",
+      "knowledge": "2025-01",
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 65536,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "Nano Banana Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-05-28",
+      "temperature": true,
+      "tool_call": false
+    },
+    "gemini-3.1-flash-image": {
+      "attachment": true,
+      "cost": {
+        "input": 0.5,
+        "output": 60
+      },
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "family": "gemini-flash",
+      "id": "gemini-3.1-flash-image",
+      "knowledge": "2025-01",
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "Nano Banana 2",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-05-28",
+      "temperature": true,
+      "tool_call": false
     },
     "gemini-3.1-flash-lite": {
       "attachment": true,
