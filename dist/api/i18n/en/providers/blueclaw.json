@@ -1,0 +1,69 @@
+{
+  "api": "https://openai.blueclaw.network/v1",
+  "doc": "https://blueclaw.network",
+  "env": [
+    "BLUECLAW_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/blueclaw.svg",
+  "id": "blueclaw",
+  "models": {
+    "Qwen/Qwen3.6-35B-A3B-FP8": {
+      "attachment": false,
+      "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.6-35B-A3B-FP8",
+      "last_updated": "2026-04-17",
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B A3B FP8",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-17",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen3.6-27B": {
+      "attachment": false,
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "Qwen3.6-27B",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 196608,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-22",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Blue Claw",
+  "npm": "@ai-sdk/openai-compatible"
+}
