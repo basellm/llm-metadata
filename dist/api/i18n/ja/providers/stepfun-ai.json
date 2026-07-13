@@ -1,6 +1,6 @@
 {
-  "api": "https://api.stepfun.ai/step_plan/v1",
-  "doc": "https://platform.stepfun.ai/docs/en/step-plan/integrations/open-code",
+  "api": "https://api.stepfun.ai/v1",
+  "doc": "https://platform.stepfun.ai/docs/en/overview/concept",
   "env": [
     "STEPFUN_API_KEY"
   ],
@@ -33,8 +33,7 @@
       },
       "name": "Step 1 (32K)",
       "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
+      "reasoning": false,
       "release_date": "2025-01-01",
       "temperature": true,
       "tool_call": true
@@ -65,8 +64,7 @@
       },
       "name": "Step 2 (16K)",
       "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
+      "reasoning": false,
       "release_date": "2025-01-01",
       "temperature": true,
       "tool_call": true
@@ -101,7 +99,15 @@
       "name": "Step 3.5 Flash",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-01-29",
       "temperature": true,
       "tool_call": true
@@ -152,16 +158,16 @@
     "step-3.7-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.04,
-        "input": 0.2,
-        "output": 1.15
+        "cache_read": 0.037,
+        "input": 0.185,
+        "output": 1.11
       },
       "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
       "id": "step-3.7-flash",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "knowledge": "2026-01-01",
+      "knowledge": "2026-03-01",
       "last_updated": "2026-06-29",
       "limit": {
         "context": 256000,
@@ -171,7 +177,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -270,6 +277,6 @@
       "tool_call": false
     }
   },
-  "name": "StepFun AI",
+  "name": "StepFun (Global)",
   "npm": "@ai-sdk/openai-compatible"
 }
