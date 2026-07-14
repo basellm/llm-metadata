@@ -3178,8 +3178,7 @@
     "google/gemma-4-31b-it": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.09,
-        "input": 0.12,
+        "input": 0.06,
         "output": 0.35
       },
       "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
@@ -3188,7 +3187,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -3225,7 +3224,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -3609,6 +3608,37 @@
       "temperature": true,
       "tool_call": false
     },
+    "kwaipilot/kat-coder-air-v2.5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
+      "family": "kat-coder",
+      "id": "kwaipilot/kat-coder-air-v2.5",
+      "last_updated": "2026-07-10",
+      "limit": {
+        "context": 256000,
+        "output": 80000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "KAT-Coder-Air V2.5",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-07-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "kwaipilot/kat-coder-pro-v2": {
       "attachment": false,
       "cost": {
@@ -3640,20 +3670,20 @@
       "temperature": true,
       "tool_call": true
     },
-    "liquid/lfm-2.5-1.2b-instruct:free": {
+    "kwaipilot/kat-coder-pro-v2.5": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.15,
+        "input": 0.74,
+        "output": 2.96
       },
-      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
-      "family": "liquid",
-      "id": "liquid/lfm-2.5-1.2b-instruct:free",
-      "knowledge": "2025-06",
-      "last_updated": "2026-01-20",
+      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
+      "family": "kat-coder",
+      "id": "kwaipilot/kat-coder-pro-v2.5",
+      "last_updated": "2026-07-10",
       "limit": {
-        "context": 32768,
-        "output": 32768
+        "context": 256000,
+        "output": 80000
       },
       "modalities": {
         "input": [
@@ -3663,42 +3693,10 @@
           "text"
         ]
       },
-      "name": "LFM2.5-1.2B-Instruct (free)",
-      "open_weights": true,
+      "name": "KAT-Coder-Pro V2.5",
+      "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-01-20",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
-    "liquid/lfm-2.5-1.2b-thinking:free": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
-      "family": "liquid",
-      "id": "liquid/lfm-2.5-1.2b-thinking:free",
-      "knowledge": "2025-06",
-      "last_updated": "2026-01-20",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "LFM2.5-1.2B-Thinking (free)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-01-20",
+      "release_date": "2026-07-10",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -6764,7 +6762,7 @@
     "openai/gpt-5-nano": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.01,
+        "cache_read": 0.005,
         "input": 0.05,
         "output": 0.4
       },
@@ -6852,7 +6850,7 @@
     "openai/gpt-5.1": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.13,
+        "cache_read": 0.125,
         "input": 1.25,
         "output": 10
       },
@@ -8027,8 +8025,8 @@
     "openai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "input": 0.036,
-        "output": 0.18
+        "input": 0.03,
+        "output": 0.15
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -8061,46 +8059,6 @@
       ],
       "release_date": "2025-08-05",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-oss-120b:free": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
-      "family": "gpt-oss",
-      "id": "openai/gpt-oss-120b:free",
-      "last_updated": "2025-08-05",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "gpt-oss-120b (free)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-08-05",
-      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -10524,8 +10482,7 @@
     "qwen/qwen3.6-27b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.15,
-        "input": 0.285,
+        "input": 0.289,
         "output": 2.4
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
@@ -10534,7 +10491,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 262144,
-        "output": 262140
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -11002,37 +10959,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-08-13",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
-    "sao10k/l3.1-70b-hanami-x1": {
-      "attachment": false,
-      "cost": {
-        "input": 3,
-        "output": 3
-      },
-      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-      "family": "llama",
-      "id": "sao10k/l3.1-70b-hanami-x1",
-      "knowledge": "2023-12-31",
-      "last_updated": "2025-01-08",
-      "limit": {
-        "context": 16000,
-        "output": 16000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.1 70B Hanami x1",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-01-08",
       "structured_output": true,
       "temperature": true,
       "tool_call": false
@@ -12216,9 +12142,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.18,
-        "input": 0.93,
-        "output": 3
+        "cache_read": 0.1716,
+        "input": 0.924,
+        "output": 2.904
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -12229,7 +12155,7 @@
       "last_updated": "2026-06-13",
       "limit": {
         "context": 1048576,
-        "output": 32768
+        "output": 128000
       },
       "modalities": {
         "input": [

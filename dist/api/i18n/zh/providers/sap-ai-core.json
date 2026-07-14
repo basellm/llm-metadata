@@ -6,6 +6,138 @@
   "iconURL": "https://models.dev/logos/sap-ai-core.svg",
   "id": "sap-ai-core",
   "models": {
+    "amazon--nova-lite": {
+      "attachment": true,
+      "cost": {
+        "input": 0.3,
+        "output": 2.37
+      },
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "family": "nova-lite",
+      "id": "amazon--nova-lite",
+      "last_updated": "2025-12-02",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "amazon--nova-lite",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-12-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "amazon--nova-micro": {
+      "attachment": false,
+      "cost": {
+        "input": 0.03,
+        "output": 0.1
+      },
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "family": "nova-micro",
+      "id": "amazon--nova-micro",
+      "last_updated": "2024-12-03",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "amazon--nova-micro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-12-03",
+      "temperature": true,
+      "tool_call": true
+    },
+    "amazon--nova-pro": {
+      "attachment": true,
+      "cost": {
+        "input": 0.56,
+        "output": 2.13
+      },
+      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
+      "family": "nova-pro",
+      "id": "amazon--nova-pro",
+      "last_updated": "2024-12-03",
+      "limit": {
+        "context": 300000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "amazon--nova-pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-12-03",
+      "temperature": true,
+      "tool_call": true
+    },
+    "amazon--titan-embed-text": {
+      "attachment": false,
+      "cost": {
+        "input": 0.14,
+        "output": 0
+      },
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "id": "amazon--titan-embed-text",
+      "last_updated": "2024-04-30",
+      "limit": {
+        "context": 8192,
+        "output": 1536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "amazon--titan-embed-text",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-04-30",
+      "temperature": false,
+      "tool_call": false
+    },
     "anthropic--claude-3-haiku": {
       "attachment": true,
       "cost": {
@@ -71,6 +203,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-02-29",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -105,6 +238,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-03-04",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -139,6 +273,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-10-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -179,6 +314,7 @@
         }
       ],
       "release_date": "2025-02-24",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -219,6 +355,7 @@
         }
       ],
       "release_date": "2025-05-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -581,6 +718,55 @@
       "temperature": false,
       "tool_call": true
     },
+    "cohere--command-a-reasoning": {
+      "attachment": false,
+      "cost": {
+        "input": 0.63,
+        "output": 5.05
+      },
+      "description": "Cohere reasoning model for multilingual enterprise agents, tools, and complex workflows",
+      "family": "command-a",
+      "id": "cohere--command-a-reasoning",
+      "knowledge": "2024-06-01",
+      "last_updated": "2025-08-21",
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "cohere--command-a-reasoning",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-08-21",
+      "temperature": true,
+      "tool_call": true
+    },
     "gemini-2.5-flash": {
       "attachment": true,
       "cost": {
@@ -817,7 +1003,7 @@
     "gpt-4.1": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.5,
+        "cache_read": 0.32,
         "input": 2,
         "output": 8
       },
@@ -875,6 +1061,38 @@
         ]
       },
       "name": "gpt-4.1-mini",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1-nano": {
+      "attachment": true,
+      "cost": {
+        "input": 0.08,
+        "output": 0.26
+      },
+      "description": "Tiny GPT-4.1 option for classification, routing, and very high-volume tasks",
+      "family": "gpt-nano",
+      "id": "gpt-4.1-nano",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-4.1-nano",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-04-14",
@@ -1017,6 +1235,52 @@
       "temperature": false,
       "tool_call": true
     },
+    "gpt-5.2": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.12,
+        "input": 1.25,
+        "output": 9.44
+      },
+      "description": "Reliable GPT generation for broad coding, writing, and tool-assisted product work",
+      "family": "gpt",
+      "id": "gpt-5.2",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-5.2",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "gpt-5.4": {
       "attachment": true,
       "cost": {
@@ -1109,6 +1373,133 @@
       "release_date": "2026-04-23",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "mistralai--mistral-medium-instruct": {
+      "attachment": true,
+      "cost": {
+        "input": 0.36,
+        "output": 1.22
+      },
+      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
+      "family": "mistral-medium",
+      "id": "mistralai--mistral-medium-instruct",
+      "knowledge": "2025-05",
+      "last_updated": "2025-05-07",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "mistralai--mistral-medium-instruct",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-05-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai--mistral-small": {
+      "attachment": true,
+      "cost": {
+        "input": 0.07,
+        "output": 0.28
+      },
+      "description": "Fast Mistral production model for chat, extraction, and cost-sensitive agents",
+      "family": "mistral-small",
+      "id": "mistralai--mistral-small",
+      "knowledge": "2025-06",
+      "last_updated": "2026-03-16",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "mistralai--mistral-small",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-03-16",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia--llama-3.2-nv-embedqa-1b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.07,
+        "output": 0
+      },
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "id": "nvidia--llama-3.2-nv-embedqa-1b",
+      "last_updated": "2024-09-25",
+      "limit": {
+        "context": 8192,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "nvidia--llama-3.2-nv-embedqa-1b",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-09-25",
+      "temperature": false,
+      "tool_call": false
+    },
+    "sap-abap-1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.48,
+        "output": 1.7
+      },
+      "description": "SAP-hosted model for ABAP code generation and enterprise development tasks",
+      "id": "sap-abap-1",
+      "last_updated": "2025-11-26",
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "sap-abap-1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-11-26",
+      "temperature": true,
       "tool_call": true
     },
     "sonar": {
@@ -1212,6 +1603,62 @@
       "reasoning": false,
       "release_date": "2024-01-01",
       "temperature": true,
+      "tool_call": false
+    },
+    "text-embedding-3-large": {
+      "attachment": false,
+      "cost": {
+        "input": 0.09,
+        "output": 0
+      },
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "id": "text-embedding-3-large",
+      "last_updated": "2024-01-25",
+      "limit": {
+        "context": 8191,
+        "output": 3072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "text-embedding-3-large",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-01-25",
+      "temperature": false,
+      "tool_call": false
+    },
+    "text-embedding-3-small": {
+      "attachment": false,
+      "cost": {
+        "input": 0.02,
+        "output": 0
+      },
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "id": "text-embedding-3-small",
+      "last_updated": "2024-01-25",
+      "limit": {
+        "context": 8191,
+        "output": 1536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "text-embedding-3-small",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-01-25",
+      "temperature": false,
       "tool_call": false
     }
   },
