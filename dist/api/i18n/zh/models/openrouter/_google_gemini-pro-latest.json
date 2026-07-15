@@ -3,25 +3,42 @@
   "cost": {
     "cache_read": 0.2,
     "cache_write": 0.375,
+    "context_over_200k": {
+      "cache_read": 0.4,
+      "input": 4,
+      "output": 18
+    },
     "input": 2,
     "output": 12,
-    "reasoning": 12
+    "reasoning": 12,
+    "tiers": [
+      {
+        "cache_read": 0.4,
+        "input": 4,
+        "output": 18,
+        "tier": {
+          "size": 200000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Advanced Gemini model for complex reasoning, coding, and multimodal analysis",
   "family": "gemini-pro",
   "id": "~google/gemini-pro-latest",
-  "last_updated": "2026-04-27",
+  "knowledge": "2025-01",
+  "last_updated": "2026-02-19",
   "limit": {
     "context": 1048576,
     "output": 65536
   },
   "modalities": {
     "input": [
-      "audio",
-      "pdf",
-      "image",
       "text",
-      "video"
+      "image",
+      "video",
+      "audio",
+      "pdf"
     ],
     "output": [
       "text"
@@ -40,7 +57,7 @@
       ]
     }
   ],
-  "release_date": "2026-04-27",
+  "release_date": "2026-02-19",
   "structured_output": true,
   "temperature": true,
   "tool_call": true

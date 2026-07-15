@@ -9,7 +9,8 @@
   "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
   "family": "claude-sonnet",
   "id": "~anthropic/claude-sonnet-latest",
-  "last_updated": "2026-04-27",
+  "knowledge": "2026-01-31",
+  "last_updated": "2026-06-30",
   "limit": {
     "context": 1000000,
     "output": 128000
@@ -29,24 +30,17 @@
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
-    },
-    {
       "type": "effort",
       "values": [
         "low",
         "medium",
         "high",
+        "xhigh",
         "max"
       ]
-    },
-    {
-      "max": 127999,
-      "min": 1024,
-      "type": "budget_tokens"
     }
   ],
-  "release_date": "2026-04-27",
+  "release_date": "2026-06-30",
   "structured_output": true,
   "temperature": false,
   "tool_call": true

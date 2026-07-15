@@ -8,38 +8,6 @@
   "iconURL": "https://models.dev/logos/privatemode-ai.svg",
   "id": "privatemode-ai",
   "models": {
-    "gemma-3-27b": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
-      "family": "gemma",
-      "id": "gemma-3-27b",
-      "knowledge": "2024-08",
-      "last_updated": "2025-03-12",
-      "limit": {
-        "context": 128000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemma 3 27B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-03-12",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "gpt-oss-120b": {
       "attachment": false,
       "cost": {
@@ -81,33 +49,39 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen3-coder-30b-a3b": {
-      "attachment": false,
+    "kimi-k2.6": {
+      "attachment": true,
       "cost": {
         "input": 0,
         "output": 0
       },
-      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
-      "family": "qwen",
-      "id": "qwen3-coder-30b-a3b",
-      "knowledge": "2025-04",
-      "last_updated": "2025-04",
+      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
+      "family": "kimi-k2",
+      "id": "kimi-k2.6",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
       "limit": {
-        "context": 128000,
-        "output": 32768
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Qwen3-Coder 30B-A3B",
+      "name": "Kimi K2.6",
       "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-04",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-21",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -139,6 +113,36 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-06-06",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
+    "voxtral-mini-3b": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Speech-to-text model for audio transcription, translation, and audio understanding",
+      "family": "voxtral",
+      "id": "voxtral-mini-3b",
+      "last_updated": "2025-07",
+      "limit": {
+        "context": 32000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Voxtral Mini 3B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07",
       "structured_output": false,
       "temperature": true,
       "tool_call": false

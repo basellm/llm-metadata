@@ -11329,9 +11329,13 @@
             "high",
             "max"
           ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-04-27",
+      "release_date": "2025-10-15",
       "temperature": true,
       "tool_call": true
     },
@@ -11392,6 +11396,7 @@
       },
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "id": "~anthropic/claude-sonnet-latest",
+      "knowledge": "2025-08-31",
       "last_updated": "2026-05-01",
       "limit": {
         "context": 1000000,
@@ -11422,23 +11427,27 @@
             "high",
             "max"
           ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-04-27",
+      "release_date": "2026-02-17",
       "temperature": true,
       "tool_call": true
     },
     "~google/gemini-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.05,
+        "cache_read": 0.15,
         "cache_write": 0.08333333333333334,
-        "input": 0.5,
-        "output": 3
+        "input": 1.5,
+        "output": 9
       },
       "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "id": "~google/gemini-flash-latest",
-      "last_updated": "2026-05-01",
+      "last_updated": "2026-05-19",
       "limit": {
         "context": 1048576,
         "output": 65536
@@ -11469,7 +11478,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-27",
+      "release_date": "2026-05-19",
       "temperature": true,
       "tool_call": true
     },
@@ -11581,11 +11590,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
@@ -11593,7 +11600,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-27",
+      "release_date": "2026-04-24",
       "temperature": false,
       "tool_call": true
     },
@@ -11626,11 +11633,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
@@ -11638,7 +11643,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-27",
+      "release_date": "2026-03-17",
       "temperature": false,
       "tool_call": true
     }

@@ -1187,36 +1187,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "arcee-ai/coder-large": {
-      "attachment": false,
-      "cost": {
-        "input": 0.5,
-        "output": 0.8
-      },
-      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
-      "id": "arcee-ai/coder-large",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-05",
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Coder Large",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-05-05",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
-    },
     "arcee-ai/trinity-large-thinking": {
       "attachment": false,
       "cost": {
@@ -1779,8 +1749,8 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.135,
-        "input": 0.24,
-        "output": 0.9
+        "input": 0.27,
+        "output": 1.12
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -1789,7 +1759,7 @@
       "last_updated": "2025-03-24",
       "limit": {
         "context": 163840,
-        "output": 16384
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -1944,9 +1914,9 @@
     "deepseek/deepseek-v3.1-terminus": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.13,
+        "cache_read": 0.135,
         "input": 0.27,
-        "output": 0.95
+        "output": 1
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -1954,7 +1924,7 @@
       "knowledge": "2025-03-31",
       "last_updated": "2025-09-22",
       "limit": {
-        "context": 163840,
+        "context": 131072,
         "output": 32768
       },
       "modalities": {
@@ -1981,9 +1951,9 @@
     "deepseek/deepseek-v3.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.02145,
-        "input": 0.2145,
-        "output": 0.32175
+        "cache_read": 0.1345,
+        "input": 0.269,
+        "output": 0.4
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -1991,8 +1961,8 @@
       "knowledge": "2024-07",
       "last_updated": "2025-12-01",
       "limit": {
-        "context": 131072,
-        "output": 64000
+        "context": 163840,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -2054,9 +2024,9 @@
     "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.018,
-        "input": 0.09,
-        "output": 0.18
+        "cache_read": 0.02,
+        "input": 0.098,
+        "output": 0.196
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -2208,7 +2178,7 @@
       "last_updated": "2025-08-26",
       "limit": {
         "context": 32768,
-        "output": 32768
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -3009,8 +2979,9 @@
     "google/gemma-3-27b-it": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.04,
         "input": 0.08,
-        "output": 0.16
+        "output": 0.45
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -3019,7 +2990,7 @@
       "last_updated": "2025-03-12",
       "limit": {
         "context": 131072,
-        "output": 16384
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -3104,8 +3075,8 @@
     "google/gemma-4-26b-a4b-it": {
       "attachment": true,
       "cost": {
-        "input": 0.06,
-        "output": 0.33
+        "input": 0.1,
+        "output": 0.3
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -3113,7 +3084,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 256000
       },
       "modalities": {
         "input": [
@@ -3178,8 +3149,9 @@
     "google/gemma-4-31b-it": {
       "attachment": true,
       "cost": {
-        "input": 0.06,
-        "output": 0.35
+        "cache_read": 0.12,
+        "input": 0.22,
+        "output": 0.55
       },
       "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
       "family": "gemma",
@@ -3187,7 +3159,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 8192
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -3766,8 +3738,9 @@
     "meta-llama/llama-3.1-8b-instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.02,
-        "output": 0.03
+        "cache_read": 0.025,
+        "input": 0.05,
+        "output": 0.08
       },
       "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
@@ -3776,7 +3749,7 @@
       "last_updated": "2024-07-23",
       "limit": {
         "context": 131072,
-        "output": 16384
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -3922,8 +3895,8 @@
     "meta-llama/llama-3.3-70b-instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.1,
-        "output": 0.32
+        "input": 0.13,
+        "output": 0.4
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
@@ -3932,7 +3905,7 @@
       "last_updated": "2024-12-06",
       "limit": {
         "context": 131072,
-        "output": 16384
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4173,7 +4146,7 @@
     "minimax/minimax-m1": {
       "attachment": false,
       "cost": {
-        "input": 0.4,
+        "input": 0.55,
         "output": 2.2
       },
       "description": "MiniMax model for chat, coding, office work, and agentic tasks",
@@ -4340,8 +4313,9 @@
     "minimax/minimax-m2.7": {
       "attachment": false,
       "cost": {
-        "input": 0.24,
-        "output": 0.96
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 1.2
       },
       "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
       "family": "minimax",
@@ -4349,7 +4323,7 @@
       "last_updated": "2026-03-18",
       "limit": {
         "context": 204800,
-        "output": 196608
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -4381,7 +4355,7 @@
       "last_updated": "2026-06-01",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 512000
       },
       "modalities": {
         "input": [
@@ -4778,7 +4752,7 @@
       "attachment": false,
       "cost": {
         "input": 0.02,
-        "output": 0.03
+        "output": 0.04
       },
       "description": "Efficient Mistral-NVIDIA open model for multilingual chat and local deployment",
       "family": "mistral-nemo",
@@ -4787,7 +4761,7 @@
       "last_updated": "2024-07-01",
       "limit": {
         "context": 131072,
-        "output": 131072
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -4946,8 +4920,9 @@
     "mistralai/mistral-small-3.2-24b-instruct": {
       "attachment": true,
       "cost": {
-        "input": 0.075,
-        "output": 0.2
+        "cache_read": 0.01,
+        "input": 0.1,
+        "output": 0.3
       },
       "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
       "family": "mistral-small",
@@ -4955,7 +4930,7 @@
       "knowledge": "2023-10-31",
       "last_updated": "2025-06-20",
       "limit": {
-        "context": 128000,
+        "context": 131072,
         "output": 16384
       },
       "modalities": {
@@ -5106,7 +5081,6 @@
     "moonshotai/kimi-k2-thinking": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.15,
         "input": 0.6,
         "output": 2.5
       },
@@ -5120,7 +5094,7 @@
       "last_updated": "2025-11-06",
       "limit": {
         "context": 262144,
-        "output": 100352
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -5142,9 +5116,9 @@
     "moonshotai/kimi-k2.5": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.203,
-        "input": 0.375,
-        "output": 2.025
+        "cache_read": 0.095,
+        "input": 0.57,
+        "output": 2.85
       },
       "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
       "family": "kimi-k2",
@@ -5156,7 +5130,7 @@
       "last_updated": "2026-01",
       "limit": {
         "context": 262144,
-        "output": 256000
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -5179,7 +5153,7 @@
     "moonshotai/kimi-k2.6": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.15,
+        "cache_read": 0.144,
         "input": 0.66,
         "output": 3.41
       },
@@ -5672,8 +5646,9 @@
     "nvidia/nemotron-3-super-120b-a12b": {
       "attachment": false,
       "cost": {
-        "input": 0.08,
-        "output": 0.45
+        "cache_read": 0.06,
+        "input": 0.21,
+        "output": 0.455
       },
       "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
       "family": "nemotron",
@@ -5756,9 +5731,9 @@
     "nvidia/nemotron-3-ultra-550b-a55b": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.1,
-        "input": 0.5,
-        "output": 2.2
+        "cache_read": 0.2,
+        "input": 0.6,
+        "output": 3.6
       },
       "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
       "family": "nemotron",
@@ -6257,6 +6232,7 @@
     "openai/gpt-4o": {
       "attachment": true,
       "cost": {
+        "cache_read": 1.25,
         "input": 2.5,
         "output": 10
       },
@@ -6896,7 +6872,7 @@
     "openai/gpt-5.1-chat": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.13,
+        "cache_read": 0.125,
         "input": 1.25,
         "output": 10
       },
@@ -6907,7 +6883,7 @@
       "last_updated": "2025-11-13",
       "limit": {
         "context": 128000,
-        "output": 32000
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -6930,7 +6906,7 @@
     "openai/gpt-5.1-codex": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.13,
+        "cache_read": 0.125,
         "input": 1.25,
         "output": 10
       },
@@ -8025,8 +8001,8 @@
     "openai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "input": 0.03,
-        "output": 0.15
+        "input": 0.037,
+        "output": 0.17
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -8065,8 +8041,9 @@
     "openai/gpt-oss-20b": {
       "attachment": false,
       "cost": {
-        "input": 0.029,
-        "output": 0.14
+        "cache_read": 0.03,
+        "input": 0.03,
+        "output": 0.13
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
@@ -9245,8 +9222,9 @@
     "qwen/qwen2.5-vl-72b-instruct": {
       "attachment": true,
       "cost": {
-        "input": 0.25,
-        "output": 0.75
+        "cache_read": 0.4,
+        "input": 0.8,
+        "output": 1
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -9453,8 +9431,8 @@
     "qwen/qwen3-30b-a3b-instruct-2507": {
       "attachment": false,
       "cost": {
-        "input": 0.04815,
-        "output": 0.19305
+        "input": 0.1,
+        "output": 0.3
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -9462,7 +9440,7 @@
       "knowledge": "2025-06-30",
       "last_updated": "2025-07-29",
       "limit": {
-        "context": 131072,
+        "context": 262144,
         "output": 32000
       },
       "modalities": {
@@ -9588,8 +9566,9 @@
     "qwen/qwen3-coder": {
       "attachment": false,
       "cost": {
-        "input": 0.22,
-        "output": 1.8
+        "cache_read": 0.1,
+        "input": 0.3,
+        "output": 1
       },
       "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
@@ -9684,7 +9663,7 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.07,
-        "input": 0.11,
+        "input": 0.12,
         "output": 0.8
       },
       "description": "Qwen coding model for software agents, repository edits, and code reasoning",
@@ -9848,7 +9827,8 @@
     "qwen/qwen3-next-80b-a3b-instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.09,
+        "cache_read": 0.07,
+        "input": 0.1,
         "output": 1.1
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
@@ -9858,7 +9838,7 @@
       "last_updated": "2025-09",
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -9942,9 +9922,9 @@
     "qwen/qwen3-vl-235b-a22b-instruct": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.11,
-        "input": 0.2,
-        "output": 0.88
+        "cache_read": 0.1,
+        "input": 0.21,
+        "output": 1.9
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -9952,8 +9932,8 @@
       "knowledge": "2025-03-31",
       "last_updated": "2025-09-23",
       "limit": {
-        "context": 262144,
-        "output": 16384
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -10176,7 +10156,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -10241,7 +10221,6 @@
     "qwen/qwen3.5-35b-a3b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.05,
         "input": 0.14,
         "output": 1
       },
@@ -10251,7 +10230,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 81920
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -10279,17 +10258,17 @@
     "qwen/qwen3.5-397b-a17b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.111,
-        "input": 0.385,
-        "output": 2.45
+        "cache_read": 0.225,
+        "input": 0.45,
+        "output": 3
       },
       "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
       "family": "qwen",
       "id": "qwen/qwen3.5-397b-a17b",
       "last_updated": "2026-02-15",
       "limit": {
-        "context": 256000,
-        "output": 64000
+        "context": 262144,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -10482,8 +10461,8 @@
     "qwen/qwen3.6-27b": {
       "attachment": true,
       "cost": {
-        "input": 0.289,
-        "output": 2.4
+        "input": 0.45,
+        "output": 2.7
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -10491,7 +10470,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 262144,
-        "output": 131072
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -11135,9 +11114,9 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.035,
-        "input": 0.14,
-        "output": 0.58
+        "cache_read": 0.05,
+        "input": 0.2,
+        "output": 0.8
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "hy3",
@@ -11702,8 +11681,8 @@
     "xiaomi/mimo-v2.5": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.028,
-        "input": 0.105,
+        "cache_read": 0.0028,
+        "input": 0.14,
         "output": 0.28
       },
       "description": "Open MiMo model for multimodal coding agents and long-context automation",
@@ -11897,9 +11876,9 @@
     "z-ai/glm-4.6": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.08,
-        "input": 0.43,
-        "output": 1.75
+        "cache_read": 0.1,
+        "input": 0.5,
+        "output": 2
       },
       "description": "Late GLM-4 workhorse for coding agents, reasoning, and structured tasks",
       "family": "glm",
@@ -11907,8 +11886,8 @@
       "knowledge": "2025-04",
       "last_updated": "2025-09-30",
       "limit": {
-        "context": 200000,
-        "output": 16384
+        "context": 202752,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -12001,8 +11980,7 @@
     "z-ai/glm-4.7-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.01,
-        "input": 0.06,
+        "input": 0.0605,
         "output": 0.4
       },
       "description": "Budget GLM lane for fast coding help, routing, and everyday automation",
@@ -12014,8 +11992,8 @@
       "knowledge": "2025-04",
       "last_updated": "2026-01-19",
       "limit": {
-        "context": 202752,
-        "output": 16384
+        "context": 200000,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -12037,9 +12015,9 @@
     "z-ai/glm-5": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.12,
-        "input": 0.6,
-        "output": 1.92
+        "cache_read": 0.19,
+        "input": 0.95,
+        "output": 3.15
       },
       "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
       "family": "glm",
@@ -12050,7 +12028,7 @@
       "last_updated": "2026-02-12",
       "limit": {
         "context": 202752,
-        "output": 128000
+        "output": 202752
       },
       "modalities": {
         "input": [
@@ -12084,7 +12062,7 @@
       },
       "last_updated": "2026-03-16",
       "limit": {
-        "context": 262144,
+        "context": 202752,
         "output": 131072
       },
       "modalities": {
@@ -12142,9 +12120,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.169,
-        "input": 0.91,
-        "output": 2.86
+        "cache_read": 0.16068,
+        "input": 0.8652,
+        "output": 2.7192
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -12155,7 +12133,7 @@
       "last_updated": "2026-06-13",
       "limit": {
         "context": 1048576,
-        "output": 128000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -12366,7 +12344,8 @@
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "~anthropic/claude-sonnet-latest",
-      "last_updated": "2026-04-27",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-06-30",
       "limit": {
         "context": 1000000,
         "output": 128000
@@ -12386,24 +12365,17 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "low",
             "medium",
             "high",
+            "xhigh",
             "max"
           ]
-        },
-        {
-          "max": 127999,
-          "min": 1024,
-          "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-04-27",
+      "release_date": "2026-06-30",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -12420,8 +12392,8 @@
       "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash",
       "id": "~google/gemini-flash-latest",
-      "knowledge": "2025-01-01",
-      "last_updated": "2026-04-27",
+      "knowledge": "2025-01",
+      "last_updated": "2026-05-19",
       "limit": {
         "context": 1048576,
         "output": 65536
@@ -12452,7 +12424,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-27",
+      "release_date": "2026-05-19",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -12462,25 +12434,42 @@
       "cost": {
         "cache_read": 0.2,
         "cache_write": 0.375,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 4,
+          "output": 18
+        },
         "input": 2,
         "output": 12,
-        "reasoning": 12
+        "reasoning": 12,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Advanced Gemini model for complex reasoning, coding, and multimodal analysis",
       "family": "gemini-pro",
       "id": "~google/gemini-pro-latest",
-      "last_updated": "2026-04-27",
+      "knowledge": "2025-01",
+      "last_updated": "2026-02-19",
       "limit": {
         "context": 1048576,
         "output": 65536
       },
       "modalities": {
         "input": [
-          "audio",
-          "pdf",
-          "image",
           "text",
-          "video"
+          "image",
+          "video",
+          "audio",
+          "pdf"
         ],
         "output": [
           "text"
@@ -12499,7 +12488,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-27",
+      "release_date": "2026-02-19",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -12549,16 +12538,16 @@
       "family": "gpt",
       "id": "~openai/gpt-latest",
       "knowledge": "2026-02-16",
-      "last_updated": "2026-04-27",
+      "last_updated": "2026-07-09",
       "limit": {
         "context": 1050000,
         "output": 128000
       },
       "modalities": {
         "input": [
-          "pdf",
+          "text",
           "image",
-          "text"
+          "pdf"
         ],
         "output": [
           "text"
@@ -12575,11 +12564,12 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
-      "release_date": "2026-04-27",
+      "release_date": "2026-07-09",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
