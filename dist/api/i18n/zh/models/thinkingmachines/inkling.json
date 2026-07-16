@@ -1,0 +1,49 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.748,
+    "input": 3.74,
+    "output": 9.36
+  },
+  "description": "Multimodal MoE reasoning model (975B total, 41B active) for text, image, and audio",
+  "family": "ling",
+  "id": "inkling",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-07-15",
+  "limit": {
+    "context": 256000,
+    "output": 256000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "audio",
+      "pdf"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Inkling",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    }
+  ],
+  "release_date": "2026-07-15",
+  "temperature": true,
+  "tool_call": true
+}

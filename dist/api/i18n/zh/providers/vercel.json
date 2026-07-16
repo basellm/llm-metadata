@@ -1665,6 +1665,54 @@
       "temperature": true,
       "tool_call": true
     },
+    "anthropic/claude-opus-4.7-fast": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 3,
+        "cache_write": 37.5,
+        "input": 30,
+        "output": 150
+      },
+      "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.7-fast",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-04-16",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.7 (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-04-16",
+      "temperature": true,
+      "tool_call": true
+    },
     "anthropic/claude-opus-4.8": {
       "attachment": true,
       "cost": {
@@ -1693,6 +1741,54 @@
         ]
       },
       "name": "Claude Opus 4.8",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-05-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-4.8-fast": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "input": 10,
+        "output": 50
+      },
+      "description": "Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-4.8-fast",
+      "knowledge": "2026-01",
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.8 (Fast)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -5646,6 +5742,40 @@
       "temperature": true,
       "tool_call": true
     },
+    "moonshotai/kimi-k3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
+      "family": "kimi-k3",
+      "id": "moonshotai/kimi-k3",
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "morph/morph-v3-fast": {
       "attachment": false,
       "cost": {
@@ -7736,6 +7866,31 @@
       "temperature": true,
       "tool_call": false
     },
+    "openai/gpt-realtime-whisper": {
+      "attachment": false,
+      "description": "Streaming speech-to-text model for low-latency transcript deltas from live audio",
+      "family": "whisper",
+      "id": "openai/gpt-realtime-whisper",
+      "last_updated": "2026-05-07",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gpt-realtime-whisper",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-05-07",
+      "temperature": true,
+      "tool_call": false
+    },
     "openai/o1": {
       "attachment": true,
       "cost": {
@@ -8602,6 +8757,39 @@
         }
       ],
       "release_date": "2026-05-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/inkling": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.17,
+        "input": 1,
+        "output": 4.05
+      },
+      "description": "Multimodal MoE reasoning model (975B total, 41B active) for text, image, and audio",
+      "family": "ling",
+      "id": "thinkingmachines/inkling",
+      "last_updated": "2026-07-15",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-15",
       "temperature": true,
       "tool_call": true
     },
@@ -9542,8 +9730,7 @@
       },
       "modalities": {
         "input": [
-          "text",
-          "pdf"
+          "text"
         ],
         "output": [
           "text"

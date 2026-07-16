@@ -704,9 +704,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "low",
@@ -716,8 +713,6 @@
           ]
         },
         {
-          "max": 127999,
-          "min": 1024,
           "type": "budget_tokens"
         }
       ],
@@ -776,9 +771,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "low",
@@ -805,7 +797,8 @@
       "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4.7-fast",
-      "last_updated": "2026-05-12",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-04-16",
       "limit": {
         "context": 1000000,
         "output": 128000
@@ -825,9 +818,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "low",
@@ -838,7 +828,7 @@
           ]
         }
       ],
-      "release_date": "2026-05-12",
+      "release_date": "2026-04-16",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -875,9 +865,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "low",
@@ -904,7 +891,8 @@
       "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
       "id": "anthropic/claude-opus-4.8-fast",
-      "last_updated": "2026-05-27",
+      "knowledge": "2026-01",
+      "last_updated": "2026-05-28",
       "limit": {
         "context": 1000000,
         "output": 128000
@@ -924,9 +912,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "low",
@@ -937,7 +922,7 @@
           ]
         }
       ],
-      "release_date": "2026-05-27",
+      "release_date": "2026-05-28",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -1118,9 +1103,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "low",
@@ -1128,11 +1110,6 @@
             "high",
             "max"
           ]
-        },
-        {
-          "max": 127999,
-          "min": 1024,
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-02-17",
@@ -2053,9 +2030,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "high",
@@ -2099,9 +2073,6 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
-        {
-          "type": "toggle"
-        },
         {
           "type": "effort",
           "values": [
@@ -2652,7 +2623,7 @@
       "last_updated": "2026-06-30",
       "limit": {
         "context": 65536,
-        "output": 66000
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -4050,6 +4021,53 @@
       "temperature": true,
       "tool_call": false
     },
+    "meta/muse-spark-1.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 1.25,
+        "output": 4.25
+      },
+      "description": "Open Llama multimodal model for image understanding and text reasoning",
+      "family": "muse",
+      "id": "meta/muse-spark-1.1",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Muse Spark 1.1",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-04-08",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "microsoft/phi-4": {
       "attachment": false,
       "cost": {
@@ -5153,9 +5171,9 @@
     "moonshotai/kimi-k2.6": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.144,
-        "input": 0.66,
-        "output": 3.41
+        "cache_read": 0.16,
+        "input": 0.95,
+        "output": 4
       },
       "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
       "family": "kimi-k2",
@@ -5190,9 +5208,9 @@
     "moonshotai/kimi-k2.7-code": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.149,
-        "input": 0.719,
-        "output": 3.49
+        "cache_read": 0.16,
+        "input": 0.75,
+        "output": 3.5
       },
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
@@ -5219,6 +5237,46 @@
       "release_date": "2026-06-12",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
+      "family": "kimi-k3",
+      "id": "moonshotai/kimi-k3",
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "morph/morph-v3-fast": {
@@ -7273,6 +7331,7 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
@@ -9663,7 +9722,7 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.07,
-        "input": 0.12,
+        "input": 0.11,
         "output": 0.8
       },
       "description": "Qwen coding model for software agents, repository edits, and code reasoning",
@@ -10664,10 +10723,10 @@
     "qwen/qwen3.7-max": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.25,
-        "cache_write": 1.5625,
-        "input": 1.25,
-        "output": 3.75
+        "cache_read": 0.295,
+        "cache_write": 1.84375,
+        "input": 1.475,
+        "output": 4.425
       },
       "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
       "family": "qwen",
@@ -11516,7 +11575,9 @@
           "type": "effort",
           "values": [
             "low",
-            "high"
+            "medium",
+            "high",
+            "xhigh"
           ]
         }
       ],
@@ -12120,9 +12181,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.16068,
-        "input": 0.8652,
-        "output": 2.7192
+        "cache_read": 0.17342,
+        "input": 0.9338,
+        "output": 2.9348
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -12315,9 +12376,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "low",
@@ -12345,7 +12403,7 @@
       "family": "claude-sonnet",
       "id": "~anthropic/claude-sonnet-latest",
       "knowledge": "2026-01-31",
-      "last_updated": "2026-06-30",
+      "last_updated": "2026-04-27",
       "limit": {
         "context": 1000000,
         "output": 128000
@@ -12375,7 +12433,7 @@
           ]
         }
       ],
-      "release_date": "2026-06-30",
+      "release_date": "2026-04-27",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -12392,8 +12450,8 @@
       "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash",
       "id": "~google/gemini-flash-latest",
-      "knowledge": "2025-01",
-      "last_updated": "2026-05-19",
+      "knowledge": "2025-01-01",
+      "last_updated": "2026-04-27",
       "limit": {
         "context": 1048576,
         "output": 65536
@@ -12424,7 +12482,7 @@
           ]
         }
       ],
-      "release_date": "2026-05-19",
+      "release_date": "2026-04-27",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -12458,18 +12516,18 @@
       "family": "gemini-pro",
       "id": "~google/gemini-pro-latest",
       "knowledge": "2025-01",
-      "last_updated": "2026-02-19",
+      "last_updated": "2026-04-27",
       "limit": {
         "context": 1048576,
         "output": 65536
       },
       "modalities": {
         "input": [
-          "text",
-          "image",
-          "video",
           "audio",
-          "pdf"
+          "pdf",
+          "image",
+          "text",
+          "video"
         ],
         "output": [
           "text"
@@ -12488,7 +12546,7 @@
           ]
         }
       ],
-      "release_date": "2026-02-19",
+      "release_date": "2026-04-27",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -12496,16 +12554,16 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.15,
-        "input": 0.66,
-        "output": 3.41
+        "cache_read": 0.3,
+        "input": 3,
+        "output": 15
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
       "id": "~moonshotai/kimi-latest",
       "last_updated": "2026-04-27",
       "limit": {
-        "context": 262144,
+        "context": 1048576,
         "output": 262144
       },
       "modalities": {
@@ -12520,10 +12578,17 @@
       "name": "MoonshotAI Kimi Latest",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-27",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "~openai/gpt-latest": {
@@ -12538,16 +12603,16 @@
       "family": "gpt",
       "id": "~openai/gpt-latest",
       "knowledge": "2026-02-16",
-      "last_updated": "2026-07-09",
+      "last_updated": "2026-04-27",
       "limit": {
         "context": 1050000,
         "output": 128000
       },
       "modalities": {
         "input": [
-          "text",
+          "pdf",
           "image",
-          "pdf"
+          "text"
         ],
         "output": [
           "text"
@@ -12569,7 +12634,7 @@
           ]
         }
       ],
-      "release_date": "2026-07-09",
+      "release_date": "2026-04-27",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -12652,7 +12717,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "medium",
             "high"

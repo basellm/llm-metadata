@@ -1,16 +1,16 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.15,
-    "input": 0.66,
-    "output": 3.41
+    "cache_read": 0.3,
+    "input": 3,
+    "output": 15
   },
   "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
   "family": "kimi",
   "id": "~moonshotai/kimi-latest",
   "last_updated": "2026-04-27",
   "limit": {
-    "context": 262144,
+    "context": 1048576,
     "output": 262144
   },
   "modalities": {
@@ -25,9 +25,16 @@
   "name": "MoonshotAI Kimi Latest",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "max"
+      ]
+    }
+  ],
   "release_date": "2026-04-27",
   "structured_output": true,
-  "temperature": true,
+  "temperature": false,
   "tool_call": true
 }
