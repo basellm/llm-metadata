@@ -1157,6 +1157,49 @@
       "release_date": "2025-09-25",
       "tool_call": false
     },
+    "inkling": {
+      "attachment": true,
+      "cost": {
+        "input": 2.3375,
+        "output": 5.85
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "family": "ling",
+      "id": "inkling",
+      "last_updated": "2026-07-17",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "kimi-k2-5": {
       "attachment": true,
       "cost": {
@@ -1282,6 +1325,46 @@
       "release_date": "2026-06-13",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.375,
+        "input": 3.75,
+        "output": 18.75
+      },
+      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
+      "family": "kimi-k3",
+      "id": "kimi-k3",
+      "last_updated": "2026-07-17",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "llama-3.2-3b": {
