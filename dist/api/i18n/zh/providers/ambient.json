@@ -48,6 +48,51 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek/deepseek-v4-flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 0,
+        "input": 0.25,
+        "output": 0.4
+      },
+      "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+      "family": "deepseek-flash",
+      "id": "deepseek/deepseek-v4-flash",
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "moonshotai/kimi-k2.6": {
       "attachment": true,
       "cost": {
@@ -89,10 +134,10 @@
     "moonshotai/kimi-k2.7-code": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.16,
+        "cache_read": 0.2,
         "cache_write": 0,
-        "input": 0.75,
-        "output": 3.5
+        "input": 1,
+        "output": 4.4
       },
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
@@ -151,8 +196,58 @@
       "name": "Step 3.7 Flash",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-05-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "xiaomi/mimo-v2.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.08,
+        "cache_write": 0,
+        "input": 0.4,
+        "output": 2
+      },
+      "description": "MiMo omni model for text, image, video, audio, and agents",
+      "family": "mimo",
+      "id": "xiaomi/mimo-v2.5",
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-22",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
