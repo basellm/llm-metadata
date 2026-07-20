@@ -1192,7 +1192,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-04-01",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -3642,6 +3642,42 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": false
+    },
+    "meituan/longcat-2.0": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.006,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+      "family": "longcat",
+      "id": "meituan/longcat-2.0",
+      "last_updated": "2026-07-20",
+      "limit": {
+        "context": 1048756,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LongCat 2.0",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-20",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
     },
     "meta-llama/llama-3.1-70b-instruct": {
       "attachment": false,
@@ -11979,9 +12015,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.18174,
-        "input": 0.9786,
-        "output": 3.0756
+        "cache_read": 0.17992,
+        "input": 0.9688,
+        "output": 3.0448
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
