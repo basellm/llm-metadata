@@ -1017,6 +1017,107 @@
       "temperature": true,
       "tool_call": true
     },
+    "gemini-3.5-flash-lite": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 2.5
+      },
+      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+      "family": "gemini-flash-lite",
+      "id": "gemini-3.5-flash-lite",
+      "knowledge": "2026-03",
+      "last_updated": "2026-07-21",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.5 Flash Lite",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/google"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3.6-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 1.5,
+        "input_audio": 1.5,
+        "output": 7.5
+      },
+      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+      "family": "gemini-flash",
+      "id": "gemini-3.6-flash",
+      "knowledge": "2026-03",
+      "last_updated": "2026-07-21",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.6 Flash",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/google"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "glm-4.6": {
       "attachment": false,
       "cost": {
@@ -2781,6 +2882,47 @@
       "release_date": "2026-06-12",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "laguna-s-2.1-free": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Agentic coding model from Poolside in the XS size class for local deployment",
+      "family": "laguna",
+      "id": "laguna-s-2.1-free",
+      "last_updated": "2026-07-21",
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Laguna S 2.1 Free",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-21",
+      "structured_output": false,
+      "temperature": true,
       "tool_call": true
     },
     "ling-2.6-flash-free": {

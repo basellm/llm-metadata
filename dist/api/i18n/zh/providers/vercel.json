@@ -3651,6 +3651,96 @@
       "temperature": true,
       "tool_call": true
     },
+    "google/gemini-3.5-flash-lite": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 2.5
+      },
+      "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
+      "family": "gemini",
+      "id": "google/gemini-3.5-flash-lite",
+      "knowledge": "2026-03",
+      "last_updated": "2026-07-21",
+      "limit": {
+        "context": 1000000,
+        "output": 65000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.5 Flash Lite",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-3.6-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 1.5,
+        "output": 7.5
+      },
+      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+      "family": "gemini",
+      "id": "google/gemini-3.6-flash",
+      "knowledge": "2026-03",
+      "last_updated": "2026-07-21",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.6 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "google/gemini-embedding-001": {
       "attachment": false,
       "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",

@@ -1970,9 +1970,9 @@
     "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.0196,
-        "input": 0.098,
-        "output": 0.196
+        "cache_read": 0.01876,
+        "input": 0.0938,
+        "output": 0.1876
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -2853,6 +2853,104 @@
       "temperature": true,
       "tool_call": true
     },
+    "google/gemini-3.5-flash-lite": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.083333,
+        "input": 0.3,
+        "output": 2.5,
+        "reasoning": 2.5
+      },
+      "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
+      "family": "gemini-flash-lite",
+      "id": "google/gemini-3.5-flash-lite",
+      "knowledge": "2026-03",
+      "last_updated": "2026-07-21",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.5 Flash Lite",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-3.6-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.083333,
+        "input": 1.5,
+        "output": 7.5,
+        "reasoning": 7.5
+      },
+      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+      "family": "gemini-flash",
+      "id": "google/gemini-3.6-flash",
+      "knowledge": "2026-03",
+      "last_updated": "2026-07-21",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.6 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "google/gemma-2-27b-it": {
       "attachment": false,
       "cost": {
@@ -3088,9 +3186,8 @@
     "google/gemma-4-31b-it": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.12,
-        "input": 0.22,
-        "output": 0.55
+        "input": 0.12,
+        "output": 0.37
       },
       "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
       "family": "gemma",
@@ -3098,7 +3195,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -5120,9 +5217,9 @@
     "moonshotai/kimi-k2.7-code": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.17,
-        "input": 0.85,
-        "output": 3.8
+        "cache_read": 0.16,
+        "input": 0.82,
+        "output": 3.75
       },
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
@@ -5556,8 +5653,8 @@
     "nvidia/nemotron-3-super-120b-a12b": {
       "attachment": false,
       "cost": {
-        "input": 0.085,
-        "output": 0.4
+        "input": 0.08,
+        "output": 0.45
       },
       "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
       "family": "nemotron",
@@ -8811,7 +8908,7 @@
         "input": 0.2,
         "output": 0.4
       },
-      "description": "Poolside's flagship agentic coding model for long-horizon work",
+      "description": "Poolside's open-weight model for agentic coding and long-horizon work",
       "family": "laguna",
       "id": "poolside/laguna-m.1",
       "last_updated": "2026-06-13",
@@ -9706,9 +9803,8 @@
     "qwen/qwen3-next-80b-a3b-instruct": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.07,
-        "input": 0.1,
-        "output": 1.1
+        "input": 0.0975,
+        "output": 0.78
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -9717,7 +9813,7 @@
       "last_updated": "2025-09",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -10961,9 +11057,9 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.2,
-        "output": 0.8
+        "cache_read": 0.035,
+        "input": 0.14,
+        "output": 0.58
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "hy3",
@@ -10971,7 +11067,7 @@
       "last_updated": "2026-07-06",
       "limit": {
         "context": 262144,
-        "output": 131072
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -11037,46 +11133,6 @@
       ],
       "release_date": "2026-04-20",
       "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "tencent/hy3:free": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
-      "family": "hy3",
-      "id": "tencent/hy3:free",
-      "last_updated": "2026-07-06",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Hy3 (free)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-07-06",
-      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -12015,9 +12071,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.17992,
-        "input": 0.9688,
-        "output": 3.0448
+        "cache_read": 0.15002,
+        "input": 0.8078,
+        "output": 2.5388
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -12278,8 +12334,8 @@
         "cache_read": 0.15,
         "cache_write": 0.083333,
         "input": 1.5,
-        "output": 9,
-        "reasoning": 9
+        "output": 7.5,
+        "reasoning": 7.5
       },
       "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash",

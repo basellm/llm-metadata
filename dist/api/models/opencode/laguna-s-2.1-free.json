@@ -1,16 +1,17 @@
 {
   "attachment": false,
   "cost": {
+    "cache_read": 0,
     "input": 0,
     "output": 0
   },
-  "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
-  "family": "hy3",
-  "id": "tencent/hy3:free",
-  "last_updated": "2026-07-06",
+  "description": "Agentic coding model from Poolside in the XS size class for local deployment",
+  "family": "laguna",
+  "id": "laguna-s-2.1-free",
+  "last_updated": "2026-07-21",
   "limit": {
-    "context": 262144,
-    "output": 262144
+    "context": 256000,
+    "output": 32000
   },
   "modalities": {
     "input": [
@@ -20,21 +21,21 @@
       "text"
     ]
   },
-  "name": "Hy3 (free)",
+  "name": "Laguna S 2.1 Free",
   "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
       "type": "effort",
       "values": [
-        "none",
         "low",
+        "medium",
         "high"
       ]
     }
   ],
-  "release_date": "2026-07-06",
-  "structured_output": true,
+  "release_date": "2026-07-21",
+  "structured_output": false,
   "temperature": true,
   "tool_call": true
 }
