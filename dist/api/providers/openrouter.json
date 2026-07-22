@@ -366,7 +366,7 @@
       "knowledge": "2024-06-30",
       "last_updated": "2024-10-22",
       "limit": {
-        "context": 32768,
+        "context": 16384,
         "output": 2048
       },
       "modalities": {
@@ -1238,7 +1238,7 @@
       "knowledge": "2025-03-31",
       "last_updated": "2025-06-30",
       "limit": {
-        "context": 131072,
+        "context": 123000,
         "output": 16000
       },
       "modalities": {
@@ -1672,7 +1672,7 @@
       "knowledge": "2025-09",
       "last_updated": "2026-02-28",
       "limit": {
-        "context": 131072,
+        "context": 163840,
         "output": 16000
       },
       "modalities": {
@@ -1837,7 +1837,7 @@
       "knowledge": "2024-07-31",
       "last_updated": "2025-01-23",
       "limit": {
-        "context": 128000,
+        "context": 8192,
         "output": 8192
       },
       "modalities": {
@@ -1870,7 +1870,7 @@
       "knowledge": "2025-03-31",
       "last_updated": "2025-09-22",
       "limit": {
-        "context": 131072,
+        "context": 163840,
         "output": 32768
       },
       "modalities": {
@@ -2387,7 +2387,7 @@
       "knowledge": "2025-01",
       "last_updated": "2026-05-28",
       "limit": {
-        "context": 65536,
+        "context": 131072,
         "output": 32768
       },
       "modalities": {
@@ -2501,7 +2501,7 @@
       "last_updated": "2026-02-26",
       "limit": {
         "context": 131072,
-        "output": 32768
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -2771,7 +2771,7 @@
       "knowledge": "2025-01",
       "last_updated": "2026-02-19",
       "limit": {
-        "context": 1048756,
+        "context": 1048576,
         "output": 65536
       },
       "modalities": {
@@ -3026,7 +3026,7 @@
       "knowledge": "2024-08-31",
       "last_updated": "2025-03-12",
       "limit": {
-        "context": 131072,
+        "context": 262144,
         "output": 131072
       },
       "modalities": {
@@ -3332,7 +3332,7 @@
       "knowledge": "2023-06-30",
       "last_updated": "2023-07-02",
       "limit": {
-        "context": 4096,
+        "context": 8192,
         "output": 4096
       },
       "modalities": {
@@ -3659,7 +3659,7 @@
       "id": "kwaipilot/kat-coder-pro-v2",
       "last_updated": "2026-03-27",
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 80000
       },
       "modalities": {
@@ -3851,7 +3851,7 @@
       "knowledge": "2023-12-31",
       "last_updated": "2024-09-25",
       "limit": {
-        "context": 131072,
+        "context": 60000,
         "output": 60000
       },
       "modalities": {
@@ -3976,7 +3976,7 @@
       "knowledge": "2024-08-31",
       "last_updated": "2025-04-05",
       "limit": {
-        "context": 10000000,
+        "context": 1310720,
         "output": 16384
       },
       "modalities": {
@@ -4008,7 +4008,7 @@
       "knowledge": "2024-08-31",
       "last_updated": "2025-04-30",
       "limit": {
-        "context": 163840,
+        "context": 1048576,
         "output": 16384
       },
       "modalities": {
@@ -4117,7 +4117,7 @@
       "knowledge": "2024-04-30",
       "last_updated": "2024-04-16",
       "limit": {
-        "context": 65536,
+        "context": 65535,
         "output": 8000
       },
       "modalities": {
@@ -4956,7 +4956,7 @@
       "knowledge": "2023-10-31",
       "last_updated": "2025-06-20",
       "limit": {
-        "context": 131072,
+        "context": 256000,
         "output": 16384
       },
       "modalities": {
@@ -5703,7 +5703,7 @@
       "id": "nvidia/nemotron-3-super-120b-a12b:free",
       "last_updated": "2026-03-11",
       "limit": {
-        "context": 1000000,
+        "context": 262144,
         "output": 262144
       },
       "modalities": {
@@ -5746,7 +5746,7 @@
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
       "last_updated": "2026-06-04",
       "limit": {
-        "context": 1000000,
+        "context": 512288,
         "output": 16384
       },
       "modalities": {
@@ -8967,6 +8967,69 @@
       "temperature": true,
       "tool_call": true
     },
+    "poolside/laguna-s-2.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.1,
+        "output": 0.2
+      },
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+      "family": "laguna-s",
+      "id": "poolside/laguna-s-2.1",
+      "last_updated": "2026-07-21",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Laguna S 2.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-21",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "poolside/laguna-s-2.1:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
+      "family": "laguna-s",
+      "id": "poolside/laguna-s-2.1:free",
+      "last_updated": "2026-07-21",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Laguna S 2.1 (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-21",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "poolside/laguna-xs-2.1": {
       "attachment": false,
       "cost": {
@@ -9042,7 +9105,7 @@
       "knowledge": "2024-06-30",
       "last_updated": "2024-09-19",
       "limit": {
-        "context": 131072,
+        "context": 32768,
         "output": 16384
       },
       "modalities": {
@@ -9073,7 +9136,7 @@
       "knowledge": "2024-06-30",
       "last_updated": "2024-10-16",
       "limit": {
-        "context": 131072,
+        "context": 32768,
         "output": 32768
       },
       "modalities": {
@@ -9104,7 +9167,7 @@
       "knowledge": "2024-06-30",
       "last_updated": "2024-11-11",
       "limit": {
-        "context": 128000,
+        "context": 32768,
         "output": 32768
       },
       "modalities": {
@@ -9239,7 +9302,7 @@
       "knowledge": "2024-06-30",
       "last_updated": "2025-02-01",
       "limit": {
-        "context": 131072,
+        "context": 128000,
         "output": 128000
       },
       "modalities": {
@@ -9271,7 +9334,7 @@
       "knowledge": "2025-03-31",
       "last_updated": "2025-04-28",
       "limit": {
-        "context": 131702,
+        "context": 131072,
         "output": 16384
       },
       "modalities": {
@@ -9478,7 +9541,7 @@
       "knowledge": "2025-06-30",
       "last_updated": "2025-08-28",
       "limit": {
-        "context": 131072,
+        "context": 81920,
         "output": 32768
       },
       "modalities": {
@@ -9583,7 +9646,7 @@
       "knowledge": "2025-06-30",
       "last_updated": "2025-07-23",
       "limit": {
-        "context": 1048576,
+        "context": 262144,
         "output": 65536
       },
       "modalities": {
@@ -9614,7 +9677,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-04",
       "limit": {
-        "context": 160000,
+        "context": 262144,
         "output": 32768
       },
       "modalities": {
@@ -9876,7 +9939,7 @@
       "knowledge": "2025-03-31",
       "last_updated": "2025-09-23",
       "limit": {
-        "context": 131072,
+        "context": 262144,
         "output": 32768
       },
       "modalities": {
@@ -9973,7 +10036,7 @@
       "knowledge": "2025-03-31",
       "last_updated": "2025-10-06",
       "limit": {
-        "context": 131072,
+        "context": 262144,
         "output": 32768
       },
       "modalities": {
@@ -10005,7 +10068,7 @@
       "id": "qwen/qwen3-vl-32b-instruct",
       "last_updated": "2025-10-23",
       "limit": {
-        "context": 262144,
+        "context": 131072,
         "output": 32768
       },
       "modalities": {
@@ -10036,7 +10099,7 @@
       "id": "qwen/qwen3-vl-8b-instruct",
       "last_updated": "2025-10-14",
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 32768
       },
       "modalities": {
@@ -10067,7 +10130,7 @@
       "id": "qwen/qwen3-vl-8b-thinking",
       "last_updated": "2025-10-14",
       "limit": {
-        "context": 256000,
+        "context": 131072,
         "output": 32768
       },
       "modalities": {
@@ -10990,7 +11053,7 @@
       "knowledge": "2026-03-01",
       "last_updated": "2026-05-29",
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "input": 256000,
         "output": 256000
       },
@@ -11270,7 +11333,7 @@
       "id": "thinkingmachines/inkling",
       "last_updated": "2026-07-15",
       "limit": {
-        "context": 1048576,
+        "context": 524288,
         "output": 1048576
       },
       "modalities": {
@@ -11645,7 +11708,7 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1048576,
+        "context": 1050000,
         "output": 131072
       },
       "modalities": {
@@ -11688,7 +11751,7 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1048576,
+        "context": 1050000,
         "output": 131072
       },
       "modalities": {
@@ -11837,7 +11900,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-09-30",
       "limit": {
-        "context": 202752,
+        "context": 204800,
         "output": 131072
       },
       "modalities": {
@@ -11908,7 +11971,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-12-22",
       "limit": {
-        "context": 202752,
+        "context": 204800,
         "output": 131072
       },
       "modalities": {
@@ -11943,7 +12006,7 @@
       "knowledge": "2025-04",
       "last_updated": "2026-01-19",
       "limit": {
-        "context": 200000,
+        "context": 202752,
         "output": 131072
       },
       "modalities": {
@@ -12048,7 +12111,7 @@
       },
       "last_updated": "2026-04-07",
       "limit": {
-        "context": 202752,
+        "context": 204800,
         "output": 128000
       },
       "modalities": {
@@ -12071,9 +12134,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.15002,
-        "input": 0.8078,
-        "output": 2.5388
+        "cache_read": 0.15314,
+        "input": 0.8246,
+        "output": 2.5916
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",

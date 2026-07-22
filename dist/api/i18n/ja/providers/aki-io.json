@@ -1,0 +1,236 @@
+{
+  "api": "https://aki.io/v1",
+  "doc": "https://aki.io/docs/",
+  "env": [
+    "AKI_IO_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/aki-io.svg",
+  "id": "aki-io",
+  "models": {
+    "gemma4-26b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.1,
+        "output": 0.5
+      },
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "family": "gemma",
+      "id": "gemma4-26b",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 256000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 26B A4B IT",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-oss-120b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.55
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "gpt-oss-120b",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.7-code-1100b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.86,
+        "output": 3
+      },
+      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
+      "family": "kimi-k2",
+      "id": "kimi-k2.7-code-1100b",
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 81920
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "minimax-m2.5-230b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.25,
+        "output": 1.2
+      },
+      "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
+      "family": "minimax",
+      "id": "minimax-m2.5-230b",
+      "last_updated": "2026-02-12",
+      "limit": {
+        "context": 196608,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-02-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistral4-119b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.2,
+        "output": 0.6
+      },
+      "description": "Fast Mistral production model for chat, extraction, and cost-sensitive agents",
+      "family": "mistral-small",
+      "id": "mistral4-119b",
+      "knowledge": "2025-06",
+      "last_updated": "2026-03-16",
+      "limit": {
+        "context": 262144,
+        "output": 81920
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Small 4",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-03-16",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.6-35b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
+      "family": "qwen",
+      "id": "qwen3.6-35b",
+      "last_updated": "2026-04-17",
+      "limit": {
+        "context": 256000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B-A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "AKI.IO",
+  "npm": "@ai-sdk/openai-compatible"
+}
