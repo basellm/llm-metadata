@@ -8361,6 +8361,77 @@
       "temperature": true,
       "tool_call": false
     },
+    "poolside/laguna-s-2.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.1,
+        "output": 0.2
+      },
+      "description": "Agentic coding model from Poolside in the XS size class for local deployment",
+      "family": "laguna-s",
+      "id": "poolside/laguna-s-2.1",
+      "last_updated": "2026-07-20",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Laguna S 2.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-07-20",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "poolside/laguna-s-2.1-free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
+      "family": "laguna-s",
+      "id": "poolside/laguna-s-2.1-free",
+      "last_updated": "2026-07-21",
+      "limit": {
+        "context": 256000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Laguna S 2.1 Free",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-07-21",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "prodia/flux-fast-schnell": {
       "attachment": false,
       "description": "Image model for prompt-driven generation, editing, and visual design workflows",
@@ -8724,6 +8795,46 @@
         }
       ],
       "release_date": "2026-05-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "tencent/hy3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.035,
+        "input": 0.14,
+        "output": 0.58
+      },
+      "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
+      "family": "hy3",
+      "id": "tencent/hy3",
+      "last_updated": "2026-07-06",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hy3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-06",
       "temperature": true,
       "tool_call": true
     },

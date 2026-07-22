@@ -7,6 +7,50 @@
   "iconURL": "https://models.dev/logos/kenari.svg",
   "id": "kenari",
   "models": {
+    "claude-fable-5": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+      "family": "claude-fable",
+      "id": "claude-fable-5",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-06-09",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Fable 5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-09",
+      "temperature": false,
+      "tool_call": true
+    },
     "claude-opus-4-7": {
       "attachment": true,
       "cost": {
@@ -95,20 +139,20 @@
       "temperature": false,
       "tool_call": true
     },
-    "claude-sonnet-4-6": {
+    "claude-sonnet-5": {
       "attachment": true,
       "cost": {
         "input": 0,
         "output": 0
       },
-      "description": "Claude workhorse for coding agents, careful analysis, and production cost control",
+      "description": "Everyday Claude agent model for coding, planning, browsing, and general work",
       "family": "claude-sonnet",
-      "id": "claude-sonnet-4-6",
-      "knowledge": "2025-08-31",
-      "last_updated": "2026-03-13",
+      "id": "claude-sonnet-5",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-06-30",
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -120,7 +164,7 @@
           "text"
         ]
       },
-      "name": "Claude Sonnet 4.6",
+      "name": "Claude Sonnet 5",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -130,12 +174,13 @@
             "low",
             "medium",
             "high",
+            "xhigh",
             "max"
           ]
         }
       ],
-      "release_date": "2026-02-17",
-      "temperature": true,
+      "release_date": "2026-06-30",
+      "temperature": false,
       "tool_call": true
     },
     "deepseek-v4-flash": {
@@ -258,42 +303,120 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepseek-v4-pro:free": {
-      "attachment": false,
+    "gemini-2-5-flash": {
+      "attachment": true,
       "cost": {
         "input": 0,
         "output": 0
       },
-      "description": "Open MoE flagship with million-token context for coding and long agent runs",
-      "family": "deepseek-thinking",
-      "id": "deepseek-v4-pro:free",
-      "knowledge": "2025-05",
-      "last_updated": "2026-04-24",
+      "description": "Fast Gemini workhorse for multimodal apps where latency and price matter",
+      "family": "gemini-flash",
+      "id": "gemini-2-5-flash",
+      "knowledge": "2025-01",
+      "last_updated": "2025-06-17",
       "limit": {
-        "context": 1000000,
-        "output": 384000
+        "context": 1048576,
+        "output": 65536
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "DeepSeek V4 Pro (Free)",
-      "open_weights": true,
+      "name": "Gemini 2.5 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-06-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-2-5-flash-lite": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Lean Gemini 2.5 lane for cheap multimodal traffic and quick agents",
+      "family": "gemini-flash-lite",
+      "id": "gemini-2-5-flash-lite",
+      "knowledge": "2025-01",
+      "last_updated": "2025-06-17",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 2.5 Flash-Lite",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-06-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3-1-flash-lite": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
+      "family": "gemini-flash-lite",
+      "id": "gemini-3-1-flash-lite",
+      "knowledge": "2025-01",
+      "last_updated": "2026-05-07",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.1 Flash Lite",
+      "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
-            "high",
-            "xhigh"
+            "minimal",
+            "low",
+            "medium",
+            "high"
           ]
         }
       ],
-      "release_date": "2026-04-24",
+      "release_date": "2026-05-07",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -327,6 +450,37 @@
       "reasoning_options": [],
       "release_date": "2026-04-02",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-4-7-flash:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Budget GLM lane for fast coding help, routing, and everyday automation",
+      "family": "glm-flash",
+      "id": "glm-4-7-flash:free",
+      "knowledge": "2025-04",
+      "last_updated": "2026-01-19",
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.7-Flash (Free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-01-19",
       "temperature": true,
       "tool_call": true
     },
@@ -491,6 +645,144 @@
       "temperature": false,
       "tool_call": true
     },
+    "gpt-5-6-luna": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
+      "family": "gpt-luna",
+      "id": "gpt-5-6-luna",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Luna",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-6-sol": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
+      "family": "gpt-sol",
+      "id": "gpt-5-6-sol",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Sol",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-6-terra": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
+      "family": "gpt-terra",
+      "id": "gpt-5-6-terra",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Terra",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "gpt-image-2": {
       "attachment": true,
       "cost": {
@@ -599,45 +891,43 @@
       "release_date": "2025-08-05",
       "tool_call": true
     },
-    "grok-4-3": {
+    "grok-4-5": {
       "attachment": true,
       "cost": {
         "input": 0,
         "output": 0
       },
-      "description": "xAI's default Grok for chat, coding, agentic tools, and lower hallucination risk",
+      "description": "xAI's latest Grok for chat, coding, agentic tools, and lower hallucination risk",
       "family": "grok",
-      "id": "grok-4-3",
-      "last_updated": "2026-04-17",
+      "id": "grok-4-5",
+      "last_updated": "2026-07-08",
       "limit": {
-        "context": 1000000,
-        "output": 30000
+        "context": 500000,
+        "output": 500000
       },
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Grok 4.3",
+      "name": "Grok 4.5",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "medium",
             "high"
           ]
         }
       ],
-      "release_date": "2026-04-17",
+      "release_date": "2026-07-08",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -709,6 +999,40 @@
       "temperature": true,
       "tool_call": true
     },
+    "kimi-k2-6:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
+      "family": "kimi-k2",
+      "id": "kimi-k2-6:free",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6 (Free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "kimi-k2-7-code": {
       "attachment": true,
       "cost": {
@@ -739,6 +1063,82 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k2-7-code:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
+      "family": "kimi-k2",
+      "id": "kimi-k2-7-code:free",
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code (Free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k3": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "kimi-k3",
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -808,6 +1208,40 @@
       "temperature": true,
       "tool_call": true
     },
+    "mimo-v2-5:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Open MiMo model for multimodal coding agents and long-context automation",
+      "family": "mimo",
+      "id": "mimo-v2-5:free",
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.5 (Free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-22",
+      "temperature": true,
+      "tool_call": true
+    },
     "minimax-m3": {
       "attachment": true,
       "cost": {
@@ -837,6 +1271,150 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-06-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nemotron-3-nano-30b-a3b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Small Nemotron 3 MoE for efficient coding, math, and long-context agents",
+      "family": "nemotron",
+      "id": "nemotron-3-nano-30b-a3b",
+      "last_updated": "2025-12-15",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Nano 30B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-12-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nemotron-3-super-120b-a12b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
+      "family": "nemotron",
+      "id": "nemotron-3-super-120b-a12b",
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Super 120B A12B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium"
+          ]
+        }
+      ],
+      "release_date": "2026-03-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nemotron-3-super-120b-a12b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
+      "family": "nemotron",
+      "id": "nemotron-3-super-120b-a12b:free",
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Super 120B A12B (Free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium"
+          ]
+        }
+      ],
+      "release_date": "2026-03-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nemotron-3-ultra-550b-a55b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
+      "family": "nemotron",
+      "id": "nemotron-3-ultra-550b-a55b",
+      "last_updated": "2026-06-04",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-04",
       "temperature": true,
       "tool_call": true
     },
