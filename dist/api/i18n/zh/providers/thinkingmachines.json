@@ -1,36 +1,31 @@
 {
-  "api": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
-  "doc": "https://tinker-docs.thinkingmachines.ai/tinker/compatible-apis/openai/",
+  "api": "https://tinker.thinkingmachines.dev/services/tinker-prod/anthropic/api/v1",
+  "doc": "https://tinker-docs.thinkingmachines.ai/tinker/compatible-apis/anthropic/",
   "env": [
     "TINKER_API_KEY"
   ],
   "iconURL": "https://models.dev/logos/thinkingmachines.svg",
   "id": "thinkingmachines",
   "models": {
-    "inkling": {
+    "thinkingmachines/Inkling": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.748,
-        "input": 3.74,
-        "output": 9.36
+        "cache_read": 0.374,
+        "input": 1.87,
+        "output": 4.68
       },
       "description": "Multimodal MoE reasoning model (975B total, 41B active) for text, image, and audio",
       "family": "ling",
-      "id": "inkling",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
+      "id": "thinkingmachines/Inkling",
       "last_updated": "2026-07-15",
       "limit": {
-        "context": 256000,
-        "output": 256000
+        "context": 65536,
+        "output": 65536
       },
       "modalities": {
         "input": [
           "text",
-          "image",
-          "audio",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
@@ -41,14 +36,62 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
-            "none",
-            "minimal",
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/Inkling:peft:262144": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.748,
+        "input": 3.74,
+        "output": 9.36
+      },
+      "description": "Multimodal MoE reasoning model (975B total, 41B active) for text, image, and audio",
+      "family": "ling",
+      "id": "thinkingmachines/Inkling:peft:262144",
+      "last_updated": "2026-07-15",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -58,5 +101,5 @@
     }
   },
   "name": "Thinking Machines",
-  "npm": "@ai-sdk/openai-compatible"
+  "npm": "@ai-sdk/anthropic"
 }

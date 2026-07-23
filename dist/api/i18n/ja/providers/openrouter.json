@@ -2592,7 +2592,7 @@
       "last_updated": "2026-06-30",
       "limit": {
         "context": 65536,
-        "output": 65536
+        "output": 66000
       },
       "modalities": {
         "input": [
@@ -3017,8 +3017,9 @@
     "google/gemma-3-27b-it": {
       "attachment": true,
       "cost": {
-        "input": 0.1,
-        "output": 0.3
+        "cache_read": 0.04,
+        "input": 0.08,
+        "output": 0.45
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -3112,8 +3113,9 @@
     "google/gemma-4-26b-a4b-it": {
       "attachment": true,
       "cost": {
-        "input": 0.07,
-        "output": 0.34
+        "cache_read": 0.05,
+        "input": 0.12,
+        "output": 0.35
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -3121,7 +3123,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -3517,6 +3519,37 @@
       "temperature": true,
       "tool_call": true
     },
+    "inclusionai/ling-3.0-flash:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "family": "ling",
+      "id": "inclusionai/ling-3.0-flash:free",
+      "last_updated": "2026-07-23",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling-3.0-flash (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-23",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "inclusionai/ring-2.6-1t": {
       "attachment": false,
       "cost": {
@@ -3874,8 +3907,8 @@
     "meta-llama/llama-3.2-3b-instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.0509,
-        "output": 0.335
+        "input": 0.05,
+        "output": 0.33
       },
       "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
@@ -3884,7 +3917,7 @@
       "last_updated": "2024-09-25",
       "limit": {
         "context": 131072,
-        "output": 80000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -4204,9 +4237,8 @@
     "minimax/minimax-m2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.03,
-        "input": 0.3,
-        "output": 1.2
+        "input": 0.255,
+        "output": 1.02
       },
       "description": "Efficient open MiniMax model built for coding agents and tool-heavy workflows",
       "family": "minimax",
@@ -5738,9 +5770,9 @@
     "nvidia/nemotron-3-ultra-550b-a55b": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.2,
-        "input": 0.6,
-        "output": 3.6
+        "cache_read": 0.1,
+        "input": 0.5,
+        "output": 2.2
       },
       "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
       "family": "nemotron",
@@ -9326,8 +9358,8 @@
     "qwen/qwen3-14b": {
       "attachment": false,
       "cost": {
-        "input": 0.12,
-        "output": 0.24
+        "input": 0.2275,
+        "output": 0.91
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -9336,7 +9368,7 @@
       "last_updated": "2025-04-28",
       "limit": {
         "context": 131072,
-        "output": 16384
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -9867,9 +9899,8 @@
     "qwen/qwen3-next-80b-a3b-instruct": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.07,
-        "input": 0.1,
-        "output": 1.1
+        "input": 0.15,
+        "output": 1.2
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -9997,8 +10028,8 @@
     "qwen/qwen3-vl-30b-a3b-instruct": {
       "attachment": true,
       "cost": {
-        "input": 0.13,
-        "output": 0.52
+        "input": 0.15,
+        "output": 0.6
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -10007,7 +10038,7 @@
       "last_updated": "2025-10-06",
       "limit": {
         "context": 262144,
-        "output": 32768
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -10193,8 +10224,8 @@
     "qwen/qwen3.5-27b": {
       "attachment": true,
       "cost": {
-        "input": 0.26,
-        "output": 2.6
+        "input": 0.195,
+        "output": 1.56
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -10202,7 +10233,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 81920
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -10469,8 +10500,9 @@
     "qwen/qwen3.6-27b": {
       "attachment": true,
       "cost": {
-        "input": 0.45,
-        "output": 2.7
+        "cache_read": 0.12,
+        "input": 0.6,
+        "output": 3.6
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -10478,7 +10510,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -11335,7 +11367,7 @@
       "id": "thinkingmachines/inkling",
       "last_updated": "2026-07-15",
       "limit": {
-        "context": 524288,
+        "context": 1048576,
         "output": 1048576
       },
       "modalities": {
@@ -11996,7 +12028,8 @@
     "z-ai/glm-4.7-flash": {
       "attachment": false,
       "cost": {
-        "input": 0.0605,
+        "cache_read": 0.01,
+        "input": 0.06,
         "output": 0.4
       },
       "description": "Budget GLM lane for fast coding help, routing, and everyday automation",
@@ -12009,7 +12042,7 @@
       "last_updated": "2026-01-19",
       "limit": {
         "context": 202752,
-        "output": 131072
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -12136,9 +12169,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.1469,
-        "input": 0.791,
-        "output": 2.486
+        "cache_read": 0.15184,
+        "input": 0.8176,
+        "output": 2.5696
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",

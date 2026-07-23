@@ -10,7 +10,7 @@
   "id": "minimax-m3",
   "last_updated": "2026-06-01",
   "limit": {
-    "context": 524288,
+    "context": 1048576,
     "output": 128000
   },
   "modalities": {
@@ -26,7 +26,20 @@
   "name": "MiniMax-M3",
   "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2026-06-01",
   "temperature": true,
   "tool_call": true
