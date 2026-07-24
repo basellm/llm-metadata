@@ -9,6 +9,9 @@
   "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
   "family": "qwen3.6",
   "id": "qwen3.6-flash",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "last_updated": "2026-04-27",
   "limit": {
     "context": 1000000,
@@ -32,7 +35,7 @@
       "type": "toggle"
     },
     {
-      "max": 81920,
+      "max": 131072,
       "type": "budget_tokens"
     }
   ],

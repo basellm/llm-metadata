@@ -109,64 +109,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "fugu-ultra": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 1.5,
-        "context_over_200k": {
-          "cache_read": 1.5,
-          "input": 15,
-          "output": 67.5
-        },
-        "input": 7.5,
-        "output": 45,
-        "tiers": [
-          {
-            "cache_read": 1.5,
-            "input": 15,
-            "output": 67.5,
-            "tier": {
-              "size": 272000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "Quality-first multi-agent model for hard research, analysis, and competitions",
-      "family": "fugu",
-      "id": "fugu-ultra",
-      "last_updated": "2026-06-15",
-      "limit": {
-        "context": 1000000,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Fugu Ultra",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-06-15",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
     "gemma-4-26b-a4b": {
       "attachment": true,
       "cost": {
@@ -300,7 +242,7 @@
         "output": 3.301,
         "tiers": [
           {
-            "cache_read": 0.165,
+            "cache_read": 0.22,
             "input": 1.1,
             "output": 3.851,
             "tier": {
@@ -555,7 +497,6 @@
           "type": "effort",
           "values": [
             "low",
-            "medium",
             "high",
             "max"
           ]
@@ -712,7 +653,7 @@
       "cost": {
         "cache_read": 0.045,
         "context_over_200k": {
-          "cache_read": 0.045,
+          "cache_read": 0.09,
           "input": 0.45,
           "output": 1.8
         },
@@ -720,7 +661,7 @@
         "output": 0.9,
         "tiers": [
           {
-            "cache_read": 0.045,
+            "cache_read": 0.09,
             "input": 0.45,
             "output": 1.8,
             "tier": {

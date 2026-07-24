@@ -927,6 +927,100 @@
       "temperature": false,
       "tool_call": true
     },
+    "anthropic/claude-opus-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-5",
+      "knowledge": "2026-05",
+      "last_updated": "2026-07-24",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-24",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-5-fast": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "input": 10,
+        "output": 50
+      },
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-5-fast",
+      "knowledge": "2026-05",
+      "last_updated": "2026-07-24",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 5 (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-24",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "anthropic/claude-sonnet-4": {
       "attachment": true,
       "cost": {
@@ -2586,9 +2680,9 @@
         "output": 1.5
       },
       "description": "Image model for prompt-driven generation, editing, and visual design workflows",
-      "family": "gemini",
+      "family": "gemini-flash-lite",
       "id": "google/gemini-3.1-flash-lite-image",
-      "knowledge": "2025-01-01",
+      "knowledge": "2025-01",
       "last_updated": "2026-06-30",
       "limit": {
         "context": 65536,
@@ -2596,15 +2690,15 @@
       },
       "modalities": {
         "input": [
-          "image",
-          "text"
+          "text",
+          "image"
         ],
         "output": [
-          "image",
-          "text"
+          "text",
+          "image"
         ]
       },
-      "name": "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
+      "name": "Nano Banana 2 Lite",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -3188,9 +3282,8 @@
     "google/gemma-4-31b-it": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.09,
-        "input": 0.12,
-        "output": 0.35
+        "input": 0.14,
+        "output": 0.4
       },
       "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
       "family": "gemma",
@@ -3269,7 +3362,7 @@
       "description": "Speech generation model for controllable voice, narration, and audio delivery",
       "family": "lyria",
       "id": "google/lyria-3-clip-preview",
-      "last_updated": "2026-03-30",
+      "last_updated": "2026-03-25",
       "limit": {
         "context": 1048576,
         "output": 65536
@@ -3287,7 +3380,7 @@
       "name": "Lyria 3 Clip Preview",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-03-30",
+      "release_date": "2026-03-25",
       "structured_output": false,
       "temperature": true,
       "tool_call": false
@@ -3301,7 +3394,7 @@
       "description": "Speech generation model for controllable voice, narration, and audio delivery",
       "family": "lyria",
       "id": "google/lyria-3-pro-preview",
-      "last_updated": "2026-03-30",
+      "last_updated": "2026-03-25",
       "limit": {
         "context": 1048576,
         "output": 65536
@@ -3319,7 +3412,7 @@
       "name": "Lyria 3 Pro Preview",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-03-30",
+      "release_date": "2026-03-25",
       "structured_output": false,
       "temperature": true,
       "tool_call": false
@@ -5259,7 +5352,7 @@
     "moonshotai/kimi-k2.7-code": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.16,
+        "cache_read": 0.15,
         "input": 0.82,
         "output": 3.75
       },
@@ -8090,9 +8183,8 @@
     "openai/gpt-oss-20b": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.03,
-        "input": 0.03,
-        "output": 0.13
+        "input": 0.029,
+        "output": 0.14
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
@@ -9908,8 +10000,9 @@
     "qwen/qwen3-next-80b-a3b-instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.15,
-        "output": 1.2
+        "cache_read": 0.07,
+        "input": 0.1,
+        "output": 1.1
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -10509,9 +10602,8 @@
     "qwen/qwen3.6-27b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.12,
-        "input": 0.6,
-        "output": 3.6
+        "input": 0.288,
+        "output": 2.4
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -11163,9 +11255,9 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.035,
-        "input": 0.14,
-        "output": 0.58
+        "cache_read": 0.033,
+        "input": 0.132,
+        "output": 0.528
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -11173,7 +11265,7 @@
       "last_updated": "2026-07-06",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -12178,9 +12270,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.14924,
-        "input": 0.8036,
-        "output": 2.5256
+        "cache_read": 0.1469,
+        "input": 0.791,
+        "output": 2.486
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",

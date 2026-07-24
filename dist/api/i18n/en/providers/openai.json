@@ -126,6 +126,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2023-03-01",
+      "status": "deprecated",
       "structured_output": false,
       "temperature": true,
       "tool_call": false
@@ -157,6 +158,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2023-11-06",
+      "status": "deprecated",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -189,6 +191,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2023-11-06",
+      "status": "deprecated",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -290,6 +293,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-04-14",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -356,6 +360,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-05-13",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -501,85 +506,6 @@
         }
       ],
       "release_date": "2025-08-07",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "gpt-5-chat-latest": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.125,
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-      "family": "gpt-codex",
-      "id": "gpt-5-chat-latest",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-08-07",
-      "limit": {
-        "context": 400000,
-        "input": 272000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5 Chat (latest)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2025-08-07",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
-    "gpt-5-codex": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.125,
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
-      "family": "gpt-codex",
-      "id": "gpt-5-codex",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-09-15",
-      "limit": {
-        "context": 400000,
-        "input": 272000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5-Codex",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-09-15",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -760,180 +686,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "gpt-5.1-chat-latest": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.125,
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "Chat-tuned GPT-5.1 for polished assistants, writing, and product conversations",
-      "family": "gpt-codex",
-      "id": "gpt-5.1-chat-latest",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.1 Chat",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "medium"
-          ]
-        }
-      ],
-      "release_date": "2025-11-13",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "gpt-5.1-codex": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.125,
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "Codex GPT for repository edits, code review, and practical software agents",
-      "family": "gpt-codex",
-      "id": "gpt-5.1-codex",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 400000,
-        "input": 272000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.1 Codex",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-11-13",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "gpt-5.1-codex-max": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.125,
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
-      "family": "gpt-codex",
-      "id": "gpt-5.1-codex-max",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 400000,
-        "input": 272000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.1 Codex Max",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "release_date": "2025-11-13",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "gpt-5.1-codex-mini": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.025,
-        "input": 0.25,
-        "output": 2
-      },
-      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
-      "family": "gpt-codex",
-      "id": "gpt-5.1-codex-mini",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 400000,
-        "input": 272000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.1 Codex mini",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-11-13",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
     "gpt-5.2": {
       "attachment": true,
       "cost": {
@@ -1013,52 +765,6 @@
           "type": "effort",
           "values": [
             "medium"
-          ]
-        }
-      ],
-      "release_date": "2025-12-11",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "gpt-5.2-codex": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.175,
-        "input": 1.75,
-        "output": 14
-      },
-      "description": "Code-specialist GPT for repository edits, reviews, and long-running software agents",
-      "family": "gpt-codex",
-      "id": "gpt-5.2-codex",
-      "knowledge": "2025-08-31",
-      "last_updated": "2025-12-11",
-      "limit": {
-        "context": 400000,
-        "input": 272000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.2 Codex",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh"
           ]
         }
       ],
@@ -2020,6 +1726,7 @@
       "open_weights": true,
       "reasoning": true,
       "release_date": "2024-01-15",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -2201,6 +1908,7 @@
         }
       ],
       "release_date": "2024-12-05",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -2243,6 +1951,7 @@
         }
       ],
       "release_date": "2025-03-19",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -2291,46 +2000,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "o3-deep-research": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 2.5,
-        "input": 10,
-        "output": 40
-      },
-      "description": "Research model for long-horizon investigation, synthesis, and analytical reports",
-      "family": "o",
-      "id": "o3-deep-research",
-      "knowledge": "2024-05",
-      "last_updated": "2024-06-26",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o3-deep-research",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "medium"
-          ]
-        }
-      ],
-      "release_date": "2024-06-26",
-      "temperature": false,
-      "tool_call": true
-    },
     "o3-mini": {
       "attachment": false,
       "cost": {
@@ -2369,6 +2038,7 @@
         }
       ],
       "release_date": "2024-12-20",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -2454,47 +2124,8 @@
         }
       ],
       "release_date": "2025-04-16",
+      "status": "deprecated",
       "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "o4-mini-deep-research": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.5,
-        "input": 2,
-        "output": 8
-      },
-      "description": "Research model for long-horizon investigation, synthesis, and analytical reports",
-      "family": "o-mini",
-      "id": "o4-mini-deep-research",
-      "knowledge": "2024-05",
-      "last_updated": "2024-06-26",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o4-mini-deep-research",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "medium"
-          ]
-        }
-      ],
-      "release_date": "2024-06-26",
       "temperature": false,
       "tool_call": true
     },

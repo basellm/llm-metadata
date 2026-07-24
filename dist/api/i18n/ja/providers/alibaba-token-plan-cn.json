@@ -25,7 +25,7 @@
       "limit": {
         "context": 196608,
         "input": 196601,
-        "output": 24576
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -83,6 +83,7 @@
       "attachment": false,
       "cost": {
         "cache_read": 0,
+        "cache_write": 0,
         "input": 0,
         "output": 0
       },
@@ -123,6 +124,7 @@
       "attachment": false,
       "cost": {
         "cache_read": 0,
+        "cache_write": 0,
         "input": 0,
         "output": 0
       },
@@ -195,6 +197,7 @@
         }
       ],
       "release_date": "2026-02-12",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -282,6 +285,92 @@
       "temperature": true,
       "tool_call": true
     },
+    "happyhorse-1.1-i2v": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Video model for image-to-video generation",
+      "id": "happyhorse-1.1-i2v",
+      "last_updated": "2026-07-17",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "HappyHorse 1.1 Image-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-07-17",
+      "temperature": true,
+      "tool_call": false
+    },
+    "happyhorse-1.1-r2v": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Video model for reference-guided video generation",
+      "id": "happyhorse-1.1-r2v",
+      "last_updated": "2026-07-17",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "HappyHorse 1.1 Reference-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-07-17",
+      "temperature": true,
+      "tool_call": false
+    },
+    "happyhorse-1.1-t2v": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Video model for prompt-driven text-to-video generation",
+      "id": "happyhorse-1.1-t2v",
+      "last_updated": "2026-07-17",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "HappyHorse 1.1 Text-to-Video",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-07-17",
+      "temperature": true,
+      "tool_call": false
+    },
     "kimi-k2.5": {
       "attachment": true,
       "cost": {
@@ -300,7 +389,7 @@
       "last_updated": "2026-01",
       "limit": {
         "context": 262144,
-        "output": 32768
+        "output": 98304
       },
       "modalities": {
         "input": [
@@ -321,6 +410,7 @@
         }
       ],
       "release_date": "2026-01",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -342,7 +432,7 @@
       "last_updated": "2026-04-21",
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -363,6 +453,7 @@
         }
       ],
       "release_date": "2026-04-21",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -408,6 +499,7 @@
         }
       ],
       "release_date": "2026-06-12",
+      "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
@@ -480,6 +572,9 @@
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen3.6",
       "id": "qwen3.6-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-04-27",
       "limit": {
         "context": 1000000,
@@ -503,7 +598,7 @@
           "type": "toggle"
         },
         {
-          "max": 81920,
+          "max": 131072,
           "type": "budget_tokens"
         }
       ],
@@ -513,7 +608,7 @@
       "tool_call": true
     },
     "qwen3.6-plus": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0,
         "cache_write": 0,
@@ -523,6 +618,9 @@
       "description": "Earlier Qwen multimodal workhorse for million-token agent and document tasks",
       "family": "qwen",
       "id": "qwen3.6-plus",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2026-04-02",
       "limit": {
@@ -547,11 +645,12 @@
           "type": "toggle"
         },
         {
-          "max": 81920,
+          "max": 131072,
           "type": "budget_tokens"
         }
       ],
       "release_date": "2026-04-02",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -566,10 +665,13 @@
       "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
       "family": "qwen",
       "id": "qwen3.7-max",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-05-21",
       "limit": {
         "context": 1000000,
-        "output": 65536
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -592,11 +694,12 @@
         }
       ],
       "release_date": "2026-05-21",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "qwen3.7-plus": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0,
         "cache_write": 0,
@@ -606,16 +709,20 @@
       "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
       "family": "qwen",
       "id": "qwen3.7-plus",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2026-06-02",
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 65536
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -634,6 +741,7 @@
         }
       ],
       "release_date": "2026-06-02",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -686,6 +794,7 @@
       ],
       "release_date": "2026-07-19",
       "status": "beta",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
