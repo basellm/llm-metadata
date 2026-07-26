@@ -24615,7 +24615,7 @@
         "cost": {
           "cache_read": 0.15,
           "cache_write": 0,
-          "input": 0.78,
+          "input": 0.75,
           "output": 3.5
         },
         "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
@@ -28276,6 +28276,7 @@
           }
         ],
         "release_date": "2025-05-16",
+        "status": "deprecated",
         "temperature": false,
         "tool_call": true
       },
@@ -28307,66 +28308,6 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-03-13",
-        "temperature": true,
-        "tool_call": true
-      },
-      "cohere-command-r-08-2024": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 0.6
-        },
-        "description": "Cohere retrieval model for long-context chat and enterprise RAG workflows",
-        "family": "command-r",
-        "id": "cohere-command-r-08-2024",
-        "knowledge": "2024-06-01",
-        "last_updated": "2024-08-30",
-        "limit": {
-          "context": 128000,
-          "output": 4000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Command R",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-08-30",
-        "temperature": true,
-        "tool_call": true
-      },
-      "cohere-command-r-plus-08-2024": {
-        "attachment": false,
-        "cost": {
-          "input": 2.5,
-          "output": 10
-        },
-        "description": "Cohere's RAG workhorse for long-context enterprise search and tool use",
-        "family": "command-r",
-        "id": "cohere-command-r-plus-08-2024",
-        "knowledge": "2024-06-01",
-        "last_updated": "2024-08-30",
-        "limit": {
-          "context": 128000,
-          "output": 4000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Command R+",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-08-30",
         "temperature": true,
         "tool_call": true
       },
@@ -28486,100 +28427,9 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-01-20",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": false
-      },
-      "deepseek-r1-0528": {
-        "attachment": false,
-        "cost": {
-          "input": 1.35,
-          "output": 5.4
-        },
-        "description": "DeepSeek reasoning model for multi-step analysis, math, coding, and tools",
-        "family": "deepseek-thinking",
-        "id": "deepseek-r1-0528",
-        "knowledge": "2024-07",
-        "last_updated": "2025-05-28",
-        "limit": {
-          "context": 163840,
-          "output": 163840
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek-R1-0528",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-05-28",
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek-v3-0324": {
-        "attachment": false,
-        "cost": {
-          "input": 1.14,
-          "output": 4.56
-        },
-        "description": "DeepSeek chat model for instruction following, coding, and analysis",
-        "family": "deepseek",
-        "id": "deepseek-v3-0324",
-        "knowledge": "2024-07",
-        "last_updated": "2025-03-24",
-        "limit": {
-          "context": 131072,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek-V3-0324",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-03-24",
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek-v3.1": {
-        "attachment": false,
-        "cost": {
-          "input": 0.56,
-          "output": 1.68
-        },
-        "description": "DeepSeek chat model for instruction following, coding, and analysis",
-        "family": "deepseek",
-        "id": "deepseek-v3.1",
-        "knowledge": "2024-07",
-        "last_updated": "2025-08-21",
-        "limit": {
-          "context": 131072,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek-V3.1",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-08-21",
-        "temperature": true,
-        "tool_call": true
       },
       "deepseek-v3.2": {
         "attachment": false,
@@ -28744,66 +28594,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-01-25",
-        "temperature": true,
-        "tool_call": false
-      },
-      "gpt-3.5-turbo-0301": {
-        "attachment": false,
-        "cost": {
-          "input": 1.5,
-          "output": 2
-        },
-        "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-        "family": "gpt",
-        "id": "gpt-3.5-turbo-0301",
-        "knowledge": "2021-08",
-        "last_updated": "2023-03-01",
-        "limit": {
-          "context": 4096,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-3.5 Turbo 0301",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2023-03-01",
-        "temperature": true,
-        "tool_call": false
-      },
-      "gpt-3.5-turbo-0613": {
-        "attachment": false,
-        "cost": {
-          "input": 3,
-          "output": 4
-        },
-        "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-        "family": "gpt",
-        "id": "gpt-3.5-turbo-0613",
-        "knowledge": "2021-08",
-        "last_updated": "2023-06-13",
-        "limit": {
-          "context": 16384,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-3.5 Turbo 0613",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2023-06-13",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": false
       },
@@ -28834,6 +28625,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2023-11-06",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": false
       },
@@ -28864,68 +28656,9 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2023-09-21",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": false
-      },
-      "gpt-4": {
-        "attachment": false,
-        "cost": {
-          "input": 60,
-          "output": 120
-        },
-        "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt",
-        "id": "gpt-4",
-        "knowledge": "2023-11",
-        "last_updated": "2023-03-14",
-        "limit": {
-          "context": 8192,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-4",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2023-03-14",
-        "temperature": true,
-        "tool_call": true
-      },
-      "gpt-4-32k": {
-        "attachment": false,
-        "cost": {
-          "input": 60,
-          "output": 120
-        },
-        "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt",
-        "id": "gpt-4-32k",
-        "knowledge": "2023-11",
-        "last_updated": "2023-03-14",
-        "limit": {
-          "context": 32768,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-4 32K",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2023-03-14",
-        "temperature": true,
-        "tool_call": true
       },
       "gpt-4-turbo": {
         "attachment": true,
@@ -28955,6 +28688,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2023-11-06",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -28986,6 +28720,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2023-11-06",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -29018,6 +28753,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-04-14",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -29050,6 +28786,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-04-14",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -29082,6 +28819,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-04-14",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -29114,6 +28852,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-05-13",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -29146,6 +28885,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-07-18",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -29192,39 +28932,6 @@
         "release_date": "2025-08-07",
         "temperature": false,
         "tool_call": true
-      },
-      "gpt-5-chat": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.13,
-          "input": 1.25,
-          "output": 10
-        },
-        "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-        "family": "gpt-codex",
-        "id": "gpt-5-chat",
-        "knowledge": "2024-10-24",
-        "last_updated": "2025-08-07",
-        "limit": {
-          "context": 128000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5 Chat",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-08-07",
-        "temperature": false,
-        "tool_call": false
       },
       "gpt-5-codex": {
         "attachment": false,
@@ -29445,50 +29152,6 @@
         "temperature": false,
         "tool_call": true
       },
-      "gpt-5.1-chat": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.125,
-          "input": 1.25,
-          "output": 10
-        },
-        "description": "Speech generation model for controllable voice, narration, and audio delivery",
-        "family": "gpt-codex",
-        "id": "gpt-5.1-chat",
-        "knowledge": "2024-09-30",
-        "last_updated": "2025-11-14",
-        "limit": {
-          "context": 128000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio"
-          ],
-          "output": [
-            "text",
-            "image",
-            "audio"
-          ]
-        },
-        "name": "GPT-5.1 Chat",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "medium"
-            ]
-          }
-        ],
-        "release_date": "2025-11-14",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": true
-      },
       "gpt-5.1-codex": {
         "attachment": false,
         "cost": {
@@ -29670,47 +29333,6 @@
         "temperature": false,
         "tool_call": true
       },
-      "gpt-5.2-chat": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.175,
-          "input": 1.75,
-          "output": 14
-        },
-        "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-        "family": "gpt-codex",
-        "id": "gpt-5.2-chat",
-        "knowledge": "2025-08-31",
-        "last_updated": "2025-12-11",
-        "limit": {
-          "context": 128000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5.2 Chat",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "medium"
-            ]
-          }
-        ],
-        "release_date": "2025-12-11",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": true
-      },
       "gpt-5.2-codex": {
         "attachment": false,
         "cost": {
@@ -29752,47 +29374,6 @@
           }
         ],
         "release_date": "2026-01-14",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": true
-      },
-      "gpt-5.3-chat": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.175,
-          "input": 1.75,
-          "output": 14
-        },
-        "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-        "family": "gpt-codex",
-        "id": "gpt-5.3-chat",
-        "knowledge": "2025-08-31",
-        "last_updated": "2026-03-03",
-        "limit": {
-          "context": 128000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5.3 Chat",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "medium"
-            ]
-          }
-        ],
-        "release_date": "2026-03-03",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -30584,72 +30165,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "grok-4-fast-reasoning": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.05,
-          "input": 0.2,
-          "output": 0.5
-        },
-        "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
-        "family": "grok",
-        "id": "grok-4-fast-reasoning",
-        "knowledge": "2025-07",
-        "last_updated": "2025-09-19",
-        "limit": {
-          "context": 2000000,
-          "output": 30000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Grok 4 Fast (Reasoning)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-09-19",
-        "temperature": true,
-        "tool_call": true
-      },
-      "kimi-k2-thinking": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.15,
-          "input": 0.6,
-          "output": 2.5
-        },
-        "description": "Kimi reasoning model for long-horizon research, planning, and tool use",
-        "family": "kimi-thinking",
-        "id": "kimi-k2-thinking",
-        "interleaved": true,
-        "knowledge": "2024-08",
-        "last_updated": "2025-12-02",
-        "limit": {
-          "context": 262144,
-          "output": 262144
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi K2 Thinking",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-11-06",
-        "temperature": true,
-        "tool_call": true
-      },
       "kimi-k2.5": {
         "attachment": false,
         "cost": {
@@ -30733,68 +30248,6 @@
         ],
         "release_date": "2026-04-22",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "llama-3.2-11b-vision-instruct": {
-        "attachment": true,
-        "cost": {
-          "input": 0.37,
-          "output": 0.37
-        },
-        "description": "Open Llama multimodal model for image understanding and text reasoning",
-        "family": "llama",
-        "id": "llama-3.2-11b-vision-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-09-25",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama-3.2-11B-Vision-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-09-25",
-        "temperature": true,
-        "tool_call": true
-      },
-      "llama-3.2-90b-vision-instruct": {
-        "attachment": true,
-        "cost": {
-          "input": 2.04,
-          "output": 2.04
-        },
-        "description": "Open Llama multimodal model for image understanding and text reasoning",
-        "family": "llama",
-        "id": "llama-3.2-90b-vision-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-09-25",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama-3.2-90B-Vision-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-09-25",
         "temperature": true,
         "tool_call": true
       },
@@ -30890,156 +30343,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "meta-llama-3-70b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 2.68,
-          "output": 3.54
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta-llama-3-70b-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-04-18",
-        "limit": {
-          "context": 8192,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Meta-Llama-3-70B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-18",
-        "temperature": true,
-        "tool_call": false
-      },
-      "meta-llama-3-8b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.3,
-          "output": 0.61
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta-llama-3-8b-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-04-18",
-        "limit": {
-          "context": 8192,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Meta-Llama-3-8B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-18",
-        "temperature": true,
-        "tool_call": false
-      },
-      "meta-llama-3.1-405b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 5.33,
-          "output": 16
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta-llama-3.1-405b-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-07-23",
-        "limit": {
-          "context": 128000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Meta-Llama-3.1-405B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-07-23",
-        "temperature": true,
-        "tool_call": true
-      },
-      "meta-llama-3.1-70b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 2.68,
-          "output": 3.54
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta-llama-3.1-70b-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-07-23",
-        "limit": {
-          "context": 128000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Meta-Llama-3.1-70B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-07-23",
-        "temperature": true,
-        "tool_call": true
-      },
-      "meta-llama-3.1-8b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.3,
-          "output": 0.61
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta-llama-3.1-8b-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-07-23",
-        "limit": {
-          "context": 128000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Meta-Llama-3.1-8B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-07-23",
-        "temperature": true,
-        "tool_call": true
-      },
       "ministral-3b": {
         "attachment": false,
         "cost": {
@@ -31067,36 +30370,6 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-10-22",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mistral-large-2411": {
-        "attachment": false,
-        "cost": {
-          "input": 2,
-          "output": 6
-        },
-        "description": "Flagship Mistral model for advanced reasoning, coding, and multilingual work",
-        "family": "mistral-large",
-        "id": "mistral-large-2411",
-        "knowledge": "2024-09",
-        "last_updated": "2024-11-01",
-        "limit": {
-          "context": 128000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Mistral Large 24.11",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-11-01",
         "temperature": true,
         "tool_call": true
       },
@@ -31128,36 +30401,6 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-05-07",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mistral-nemo": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 0.15
-        },
-        "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-        "family": "mistral-nemo",
-        "id": "mistral-nemo",
-        "knowledge": "2024-07",
-        "last_updated": "2024-07-18",
-        "limit": {
-          "context": 128000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Mistral Nemo",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-07-18",
         "temperature": true,
         "tool_call": true
       },
@@ -31260,38 +30503,7 @@
           }
         ],
         "release_date": "2024-12-05",
-        "temperature": false,
-        "tool_call": true
-      },
-      "o1-mini": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.55,
-          "input": 1.1,
-          "output": 4.4
-        },
-        "description": "O-series reasoning model for hard analysis, math, coding, and planning",
-        "family": "o-mini",
-        "id": "o1-mini",
-        "knowledge": "2023-09",
-        "last_updated": "2024-09-12",
-        "limit": {
-          "context": 128000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "o1-mini",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2024-09-12",
+        "status": "deprecated",
         "temperature": false,
         "tool_call": true
       },
@@ -31375,6 +30587,7 @@
           }
         ],
         "release_date": "2024-12-20",
+        "status": "deprecated",
         "temperature": false,
         "tool_call": true
       },
@@ -31417,248 +30630,9 @@
           }
         ],
         "release_date": "2025-04-16",
+        "status": "deprecated",
         "temperature": false,
         "tool_call": true
-      },
-      "phi-3-medium-128k-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.17,
-          "output": 0.68
-        },
-        "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
-        "family": "phi",
-        "id": "phi-3-medium-128k-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-04-23",
-        "limit": {
-          "context": 128000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3-medium-instruct (128k)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-23",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3-medium-4k-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.17,
-          "output": 0.68
-        },
-        "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
-        "family": "phi",
-        "id": "phi-3-medium-4k-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-04-23",
-        "limit": {
-          "context": 4096,
-          "output": 1024
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3-medium-instruct (4k)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-23",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3-mini-128k-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.13,
-          "output": 0.52
-        },
-        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-        "family": "phi",
-        "id": "phi-3-mini-128k-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-04-23",
-        "limit": {
-          "context": 128000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3-mini-instruct (128k)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-23",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3-mini-4k-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.13,
-          "output": 0.52
-        },
-        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-        "family": "phi",
-        "id": "phi-3-mini-4k-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-04-23",
-        "limit": {
-          "context": 4096,
-          "output": 1024
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3-mini-instruct (4k)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-23",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3-small-128k-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 0.6
-        },
-        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-        "family": "phi",
-        "id": "phi-3-small-128k-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-04-23",
-        "limit": {
-          "context": 128000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3-small-instruct (128k)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-23",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3-small-8k-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 0.6
-        },
-        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-        "family": "phi",
-        "id": "phi-3-small-8k-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-04-23",
-        "limit": {
-          "context": 8192,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3-small-instruct (8k)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-23",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3.5-mini-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.13,
-          "output": 0.52
-        },
-        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-        "family": "phi",
-        "id": "phi-3.5-mini-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-08-20",
-        "limit": {
-          "context": 128000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3.5-mini-instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-08-20",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3.5-moe-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.16,
-          "output": 0.64
-        },
-        "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
-        "family": "phi",
-        "id": "phi-3.5-moe-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-08-20",
-        "limit": {
-          "context": 128000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3.5-MoE-instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-08-20",
-        "temperature": true,
-        "tool_call": false
       },
       "phi-4": {
         "attachment": false,
@@ -32387,6 +31361,7 @@
           }
         ],
         "release_date": "2025-05-16",
+        "status": "deprecated",
         "temperature": false,
         "tool_call": true
       },
@@ -32418,66 +31393,6 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-03-13",
-        "temperature": true,
-        "tool_call": true
-      },
-      "cohere-command-r-08-2024": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 0.6
-        },
-        "description": "Cohere retrieval model for long-context chat and enterprise RAG workflows",
-        "family": "command-r",
-        "id": "cohere-command-r-08-2024",
-        "knowledge": "2024-06-01",
-        "last_updated": "2024-08-30",
-        "limit": {
-          "context": 128000,
-          "output": 4000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Command R",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-08-30",
-        "temperature": true,
-        "tool_call": true
-      },
-      "cohere-command-r-plus-08-2024": {
-        "attachment": false,
-        "cost": {
-          "input": 2.5,
-          "output": 10
-        },
-        "description": "Cohere's RAG workhorse for long-context enterprise search and tool use",
-        "family": "command-r",
-        "id": "cohere-command-r-plus-08-2024",
-        "knowledge": "2024-06-01",
-        "last_updated": "2024-08-30",
-        "limit": {
-          "context": 128000,
-          "output": 4000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Command R+",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-08-30",
         "temperature": true,
         "tool_call": true
       },
@@ -32597,100 +31512,9 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-01-20",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": false
-      },
-      "deepseek-r1-0528": {
-        "attachment": false,
-        "cost": {
-          "input": 1.35,
-          "output": 5.4
-        },
-        "description": "DeepSeek reasoning model for multi-step analysis, math, coding, and tools",
-        "family": "deepseek-thinking",
-        "id": "deepseek-r1-0528",
-        "knowledge": "2024-07",
-        "last_updated": "2025-05-28",
-        "limit": {
-          "context": 163840,
-          "output": 163840
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek-R1-0528",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-05-28",
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek-v3-0324": {
-        "attachment": false,
-        "cost": {
-          "input": 1.14,
-          "output": 4.56
-        },
-        "description": "DeepSeek chat model for instruction following, coding, and analysis",
-        "family": "deepseek",
-        "id": "deepseek-v3-0324",
-        "knowledge": "2024-07",
-        "last_updated": "2025-03-24",
-        "limit": {
-          "context": 131072,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek-V3-0324",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-03-24",
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek-v3.1": {
-        "attachment": false,
-        "cost": {
-          "input": 0.56,
-          "output": 1.68
-        },
-        "description": "DeepSeek chat model for instruction following, coding, and analysis",
-        "family": "deepseek",
-        "id": "deepseek-v3.1",
-        "knowledge": "2024-07",
-        "last_updated": "2025-08-21",
-        "limit": {
-          "context": 131072,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek-V3.1",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-08-21",
-        "temperature": true,
-        "tool_call": true
       },
       "deepseek-v3.2": {
         "attachment": false,
@@ -32781,66 +31605,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-01-25",
-        "temperature": true,
-        "tool_call": false
-      },
-      "gpt-3.5-turbo-0301": {
-        "attachment": false,
-        "cost": {
-          "input": 1.5,
-          "output": 2
-        },
-        "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-        "family": "gpt",
-        "id": "gpt-3.5-turbo-0301",
-        "knowledge": "2021-08",
-        "last_updated": "2023-03-01",
-        "limit": {
-          "context": 4096,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-3.5 Turbo 0301",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2023-03-01",
-        "temperature": true,
-        "tool_call": false
-      },
-      "gpt-3.5-turbo-0613": {
-        "attachment": false,
-        "cost": {
-          "input": 3,
-          "output": 4
-        },
-        "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-        "family": "gpt",
-        "id": "gpt-3.5-turbo-0613",
-        "knowledge": "2021-08",
-        "last_updated": "2023-06-13",
-        "limit": {
-          "context": 16384,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-3.5 Turbo 0613",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2023-06-13",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": false
       },
@@ -32871,6 +31636,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2023-11-06",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": false
       },
@@ -32901,68 +31667,9 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2023-09-21",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": false
-      },
-      "gpt-4": {
-        "attachment": false,
-        "cost": {
-          "input": 60,
-          "output": 120
-        },
-        "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt",
-        "id": "gpt-4",
-        "knowledge": "2023-11",
-        "last_updated": "2023-03-14",
-        "limit": {
-          "context": 8192,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-4",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2023-03-14",
-        "temperature": true,
-        "tool_call": true
-      },
-      "gpt-4-32k": {
-        "attachment": false,
-        "cost": {
-          "input": 60,
-          "output": 120
-        },
-        "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt",
-        "id": "gpt-4-32k",
-        "knowledge": "2023-11",
-        "last_updated": "2023-03-14",
-        "limit": {
-          "context": 32768,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-4 32K",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2023-03-14",
-        "temperature": true,
-        "tool_call": true
       },
       "gpt-4-turbo": {
         "attachment": true,
@@ -32992,6 +31699,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2023-11-06",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -33023,6 +31731,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2023-11-06",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -33055,6 +31764,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-04-14",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -33087,6 +31797,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-04-14",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -33119,6 +31830,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-04-14",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -33151,6 +31863,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-05-13",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -33183,6 +31896,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-07-18",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -33229,39 +31943,6 @@
         "release_date": "2025-08-07",
         "temperature": false,
         "tool_call": true
-      },
-      "gpt-5-chat": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.13,
-          "input": 1.25,
-          "output": 10
-        },
-        "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-        "family": "gpt-codex",
-        "id": "gpt-5-chat",
-        "knowledge": "2024-10-24",
-        "last_updated": "2025-08-07",
-        "limit": {
-          "context": 128000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5 Chat",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-08-07",
-        "temperature": false,
-        "tool_call": false
       },
       "gpt-5-codex": {
         "attachment": false,
@@ -33482,50 +32163,6 @@
         "temperature": false,
         "tool_call": true
       },
-      "gpt-5.1-chat": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.125,
-          "input": 1.25,
-          "output": 10
-        },
-        "description": "Speech generation model for controllable voice, narration, and audio delivery",
-        "family": "gpt-codex",
-        "id": "gpt-5.1-chat",
-        "knowledge": "2024-09-30",
-        "last_updated": "2025-11-14",
-        "limit": {
-          "context": 128000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio"
-          ],
-          "output": [
-            "text",
-            "image",
-            "audio"
-          ]
-        },
-        "name": "GPT-5.1 Chat",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "medium"
-            ]
-          }
-        ],
-        "release_date": "2025-11-14",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": true
-      },
       "gpt-5.1-codex": {
         "attachment": false,
         "cost": {
@@ -33655,47 +32292,6 @@
               "medium",
               "high",
               "xhigh"
-            ]
-          }
-        ],
-        "release_date": "2025-12-11",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": true
-      },
-      "gpt-5.2-chat": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.175,
-          "input": 1.75,
-          "output": 14
-        },
-        "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-        "family": "gpt-codex",
-        "id": "gpt-5.2-chat",
-        "knowledge": "2025-08-31",
-        "last_updated": "2025-12-11",
-        "limit": {
-          "context": 128000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5.2 Chat",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "medium"
             ]
           }
         ],
@@ -34312,72 +32908,6 @@
         "temperature": false,
         "tool_call": true
       },
-      "grok-4-fast-reasoning": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.05,
-          "input": 0.2,
-          "output": 0.5
-        },
-        "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
-        "family": "grok",
-        "id": "grok-4-fast-reasoning",
-        "knowledge": "2025-07",
-        "last_updated": "2025-09-19",
-        "limit": {
-          "context": 2000000,
-          "output": 30000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Grok 4 Fast (Reasoning)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-09-19",
-        "temperature": true,
-        "tool_call": true
-      },
-      "kimi-k2-thinking": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.15,
-          "input": 0.6,
-          "output": 2.5
-        },
-        "description": "Kimi reasoning model for long-horizon research, planning, and tool use",
-        "family": "kimi-thinking",
-        "id": "kimi-k2-thinking",
-        "interleaved": true,
-        "knowledge": "2024-08",
-        "last_updated": "2025-12-02",
-        "limit": {
-          "context": 262144,
-          "output": 262144
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi K2 Thinking",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-11-06",
-        "temperature": true,
-        "tool_call": true
-      },
       "kimi-k2.5": {
         "attachment": true,
         "cost": {
@@ -34461,68 +32991,6 @@
         ],
         "release_date": "2026-04-21",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "llama-3.2-11b-vision-instruct": {
-        "attachment": true,
-        "cost": {
-          "input": 0.37,
-          "output": 0.37
-        },
-        "description": "Open Llama multimodal model for image understanding and text reasoning",
-        "family": "llama",
-        "id": "llama-3.2-11b-vision-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-09-25",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama-3.2-11B-Vision-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-09-25",
-        "temperature": true,
-        "tool_call": true
-      },
-      "llama-3.2-90b-vision-instruct": {
-        "attachment": true,
-        "cost": {
-          "input": 2.04,
-          "output": 2.04
-        },
-        "description": "Open Llama multimodal model for image understanding and text reasoning",
-        "family": "llama",
-        "id": "llama-3.2-90b-vision-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-09-25",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama-3.2-90B-Vision-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-09-25",
         "temperature": true,
         "tool_call": true
       },
@@ -34618,156 +33086,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "meta-llama-3-70b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 2.68,
-          "output": 3.54
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta-llama-3-70b-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-04-18",
-        "limit": {
-          "context": 8192,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Meta-Llama-3-70B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-18",
-        "temperature": true,
-        "tool_call": false
-      },
-      "meta-llama-3-8b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.3,
-          "output": 0.61
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta-llama-3-8b-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-04-18",
-        "limit": {
-          "context": 8192,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Meta-Llama-3-8B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-18",
-        "temperature": true,
-        "tool_call": false
-      },
-      "meta-llama-3.1-405b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 5.33,
-          "output": 16
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta-llama-3.1-405b-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-07-23",
-        "limit": {
-          "context": 128000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Meta-Llama-3.1-405B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-07-23",
-        "temperature": true,
-        "tool_call": true
-      },
-      "meta-llama-3.1-70b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 2.68,
-          "output": 3.54
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta-llama-3.1-70b-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-07-23",
-        "limit": {
-          "context": 128000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Meta-Llama-3.1-70B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-07-23",
-        "temperature": true,
-        "tool_call": true
-      },
-      "meta-llama-3.1-8b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.3,
-          "output": 0.61
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta-llama-3.1-8b-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-07-23",
-        "limit": {
-          "context": 128000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Meta-Llama-3.1-8B-Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-07-23",
-        "temperature": true,
-        "tool_call": true
-      },
       "ministral-3b": {
         "attachment": false,
         "cost": {
@@ -34795,36 +33113,6 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-10-22",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mistral-large-2411": {
-        "attachment": false,
-        "cost": {
-          "input": 2,
-          "output": 6
-        },
-        "description": "Flagship Mistral model for advanced reasoning, coding, and multilingual work",
-        "family": "mistral-large",
-        "id": "mistral-large-2411",
-        "knowledge": "2024-09",
-        "last_updated": "2024-11-01",
-        "limit": {
-          "context": 128000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Mistral Large 24.11",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-11-01",
         "temperature": true,
         "tool_call": true
       },
@@ -34856,36 +33144,6 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-05-07",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mistral-nemo": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 0.15
-        },
-        "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-        "family": "mistral-nemo",
-        "id": "mistral-nemo",
-        "knowledge": "2024-07",
-        "last_updated": "2024-07-18",
-        "limit": {
-          "context": 128000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Mistral Nemo",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-07-18",
         "temperature": true,
         "tool_call": true
       },
@@ -34988,38 +33246,7 @@
           }
         ],
         "release_date": "2024-12-05",
-        "temperature": false,
-        "tool_call": true
-      },
-      "o1-mini": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.55,
-          "input": 1.1,
-          "output": 4.4
-        },
-        "description": "O-series reasoning model for hard analysis, math, coding, and planning",
-        "family": "o-mini",
-        "id": "o1-mini",
-        "knowledge": "2023-09",
-        "last_updated": "2024-09-12",
-        "limit": {
-          "context": 128000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "o1-mini",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2024-09-12",
+        "status": "deprecated",
         "temperature": false,
         "tool_call": true
       },
@@ -35103,6 +33330,7 @@
           }
         ],
         "release_date": "2024-12-20",
+        "status": "deprecated",
         "temperature": false,
         "tool_call": true
       },
@@ -35145,248 +33373,9 @@
           }
         ],
         "release_date": "2025-04-16",
+        "status": "deprecated",
         "temperature": false,
         "tool_call": true
-      },
-      "phi-3-medium-128k-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.17,
-          "output": 0.68
-        },
-        "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
-        "family": "phi",
-        "id": "phi-3-medium-128k-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-04-23",
-        "limit": {
-          "context": 128000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3-medium-instruct (128k)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-23",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3-medium-4k-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.17,
-          "output": 0.68
-        },
-        "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
-        "family": "phi",
-        "id": "phi-3-medium-4k-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-04-23",
-        "limit": {
-          "context": 4096,
-          "output": 1024
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3-medium-instruct (4k)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-23",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3-mini-128k-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.13,
-          "output": 0.52
-        },
-        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-        "family": "phi",
-        "id": "phi-3-mini-128k-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-04-23",
-        "limit": {
-          "context": 128000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3-mini-instruct (128k)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-23",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3-mini-4k-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.13,
-          "output": 0.52
-        },
-        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-        "family": "phi",
-        "id": "phi-3-mini-4k-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-04-23",
-        "limit": {
-          "context": 4096,
-          "output": 1024
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3-mini-instruct (4k)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-23",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3-small-128k-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 0.6
-        },
-        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-        "family": "phi",
-        "id": "phi-3-small-128k-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-04-23",
-        "limit": {
-          "context": 128000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3-small-instruct (128k)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-23",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3-small-8k-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 0.6
-        },
-        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-        "family": "phi",
-        "id": "phi-3-small-8k-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-04-23",
-        "limit": {
-          "context": 8192,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3-small-instruct (8k)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-23",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3.5-mini-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.13,
-          "output": 0.52
-        },
-        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-        "family": "phi",
-        "id": "phi-3.5-mini-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-08-20",
-        "limit": {
-          "context": 128000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3.5-mini-instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-08-20",
-        "temperature": true,
-        "tool_call": false
-      },
-      "phi-3.5-moe-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.16,
-          "output": 0.64
-        },
-        "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
-        "family": "phi",
-        "id": "phi-3.5-moe-instruct",
-        "knowledge": "2023-10",
-        "last_updated": "2024-08-20",
-        "limit": {
-          "context": 128000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Phi-3.5-MoE-instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-08-20",
-        "temperature": true,
-        "tool_call": false
       },
       "phi-4": {
         "attachment": false,
