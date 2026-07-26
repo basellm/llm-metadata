@@ -149050,8 +149050,8 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.06,
-          "input": 0.25,
-          "output": 0.8
+          "input": 0.22,
+          "output": 0.85
         },
         "description": "Flagship model for demanding analysis, coding, and production agent workflows",
         "family": "trinity",
@@ -149059,7 +149059,7 @@
         "last_updated": "2026-04-01",
         "limit": {
           "context": 262144,
-          "output": 80000
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -149852,9 +149852,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.01876,
-          "input": 0.0938,
-          "output": 0.1876
+          "cache_read": 0.028,
+          "input": 0.14,
+          "output": 0.28
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -149866,7 +149866,7 @@
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1048576,
-          "output": 65536
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -153103,9 +153103,9 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.144,
-          "input": 0.684,
-          "output": 3.42
+          "cache_read": 0.1088,
+          "input": 0.646,
+          "output": 2.72
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -155971,9 +155971,8 @@
       "openai/gpt-oss-20b": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.03,
           "input": 0.03,
-          "output": 0.13
+          "output": 0.14
         },
         "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
         "family": "gpt-oss",
@@ -157424,8 +157423,8 @@
       "qwen/qwen3-30b-a3b-instruct-2507": {
         "attachment": false,
         "cost": {
-          "input": 0.1,
-          "output": 0.3
+          "input": 0.04815,
+          "output": 0.19305
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen",
@@ -158391,8 +158390,9 @@
       "qwen/qwen3.6-27b": {
         "attachment": true,
         "cost": {
-          "input": 0.289,
-          "output": 2.4
+          "cache_read": 0.15,
+          "input": 0.3,
+          "output": 2
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -158400,7 +158400,7 @@
         "last_updated": "2026-04-22",
         "limit": {
           "context": 262144,
-          "output": 131072
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -160059,9 +160059,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.14794,
-          "input": 0.7966,
-          "output": 2.5036
+          "cache_read": 0.13338,
+          "input": 0.7182,
+          "output": 2.2572
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -197177,54 +197177,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "anthropic/claude-opus-4.7-fast": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 3,
-          "cache_write": 37.5,
-          "input": 30,
-          "output": 150
-        },
-        "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
-        "family": "claude-opus",
-        "id": "anthropic/claude-opus-4.7-fast",
-        "knowledge": "2026-01-31",
-        "last_updated": "2026-04-16",
-        "limit": {
-          "context": 1000000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Opus 4.7 (Fast)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high",
-              "xhigh"
-            ]
-          }
-        ],
-        "release_date": "2026-04-16",
-        "temperature": true,
-        "tool_call": true
-      },
       "anthropic/claude-opus-4.8": {
         "attachment": true,
         "cost": {
@@ -199122,51 +199074,6 @@
         "structured_output": false,
         "temperature": true,
         "tool_call": false
-      },
-      "google/gemini-3.1-flash-lite-preview": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.03,
-          "input": 0.25,
-          "output": 1.5
-        },
-        "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
-        "family": "gemini",
-        "id": "google/gemini-3.1-flash-lite-preview",
-        "knowledge": "2025-01",
-        "last_updated": "2026-03-03",
-        "limit": {
-          "context": 1000000,
-          "output": 65000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemini 3.1 Flash Lite Preview",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "minimal",
-              "low",
-              "medium",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2026-03-03",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
       },
       "google/gemini-3.1-pro-preview": {
         "attachment": true,
@@ -201982,42 +201889,6 @@
         "temperature": false,
         "tool_call": true
       },
-      "openai/gpt-5-chat": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.125,
-          "input": 1.25,
-          "output": 10
-        },
-        "description": "Image model for prompt-driven generation, editing, and visual design workflows",
-        "family": "gpt",
-        "id": "openai/gpt-5-chat",
-        "knowledge": "2024-10",
-        "last_updated": "2025-08-07",
-        "limit": {
-          "context": 128000,
-          "input": 111616,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text",
-            "image"
-          ]
-        },
-        "name": "GPT-5 Chat",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-08-07",
-        "temperature": true,
-        "tool_call": true
-      },
       "openai/gpt-5-codex": {
         "attachment": true,
         "cost": {
@@ -202446,40 +202317,6 @@
         ],
         "release_date": "2025-12-11",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "openai/gpt-5.2-chat": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.175,
-          "input": 1.75,
-          "output": 14
-        },
-        "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-        "family": "gpt",
-        "id": "openai/gpt-5.2-chat",
-        "knowledge": "2024-10",
-        "last_updated": "2025-08-07",
-        "limit": {
-          "context": 128000,
-          "input": 111616,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5.2 Chat",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-12-11",
         "temperature": true,
         "tool_call": true
       },
@@ -207507,9 +207344,9 @@
       "MiniMaxAI/MiniMax-M3": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.06,
-          "input": 0.29,
-          "output": 1.2
+          "cache_read": 0.05,
+          "input": 0.23,
+          "output": 0.96
         },
         "description": "MiniMax M3 is a multimodal MoE model with 23B active parameters optimized for coding and agentic workflows.",
         "family": "minimax-m3",
@@ -207955,9 +207792,9 @@
       "google/gemma-4-31B-it": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.09,
-          "input": 0.12,
-          "output": 0.35
+          "cache_read": 0.1,
+          "input": 0.1,
+          "output": 0.34
         },
         "description": "Gemma 4 31B Dense is designed for advanced reasoning, agentic workflows, and longer context and is natively trained on 140+ languages.",
         "family": "gemma",
@@ -208185,9 +208022,9 @@
       "moonshotai/Kimi-K2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.16,
-          "input": 0.95,
-          "output": 4
+          "cache_read": 0.15,
+          "input": 0.65,
+          "output": 3.41
         },
         "description": "Kimi K2.6 is a multimodal Mixture-of-Experts language model featuring 32 billion activated parameters and a total of 1 trillion parameters.",
         "family": "kimi-k2",
@@ -208219,9 +208056,9 @@
       "moonshotai/Kimi-K2.7-Code": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.19,
-          "input": 0.94,
-          "output": 4
+          "cache_read": 0.15,
+          "input": 0.71,
+          "output": 3.5
         },
         "description": "Kimi K2.7 Code is a 1T-parameter MoE model with 32B active parameters purpose-built for long-horizon agentic coding and software engineering.",
         "family": "kimi-k2",
@@ -208325,9 +208162,9 @@
       "openai/gpt-oss-120b": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.04,
-          "input": 0.04,
-          "output": 0.14
+          "cache_read": 0.03,
+          "input": 0.03,
+          "output": 0.17
         },
         "description": "Efficient Mixture-of-Experts model designed for high-reasoning, agentic and general-purpose use cases.",
         "family": "gpt-oss",
@@ -208425,9 +208262,9 @@
       "zai-org/GLM-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.26,
-          "input": 1.39,
-          "output": 4.4
+          "cache_read": 0.14,
+          "input": 0.76,
+          "output": 2.42
         },
         "description": "GLM-5.2 is a Mixture-of-Experts language model featuring 40 billion activated parameters and a total of 744 billion parameters.",
         "family": "glm",
