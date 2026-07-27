@@ -305,6 +305,59 @@
       "temperature": true,
       "tool_call": true
     },
+    "accounts/fireworks/models/kimi-k3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "accounts/fireworks/models/kimi-k3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-27",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-27",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "accounts/fireworks/models/minimax-m2p7": {
       "attachment": false,
       "cost": {
@@ -601,6 +654,59 @@
       ],
       "release_date": "2026-06-12",
       "temperature": true,
+      "tool_call": true
+    },
+    "accounts/fireworks/routers/kimi-k3-fast": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.45,
+        "input": 4.5,
+        "output": 22.5
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "accounts/fireworks/routers/kimi-k3-fast",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-27",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3 Fast",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-27",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     }
   },

@@ -1386,7 +1386,17 @@
       "name": "Kimi K2.6",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-20",
       "structured_output": true,
       "temperature": true,
@@ -1460,16 +1470,9 @@
         ]
       },
       "name": "Kimi K3",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "max"
-          ]
-        }
-      ],
+      "reasoning_options": [],
       "release_date": "2026-07-16",
       "structured_output": true,
       "temperature": false,
@@ -3082,7 +3085,7 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.05,
-        "input": 0.15,
+        "input": 0.1,
         "output": 1
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
