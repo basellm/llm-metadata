@@ -756,6 +756,56 @@
       "temperature": false,
       "tool_call": true
     },
+    "kimi-k3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2,
+        "output": 8
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "kimi-k3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1000000,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "provider": {
+        "npm": "@ai-sdk/openai-compatible"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "mimo-v2.5-pro": {
       "attachment": false,
       "cost": {

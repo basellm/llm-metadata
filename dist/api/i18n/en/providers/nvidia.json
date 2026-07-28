@@ -7,14 +7,14 @@
   "iconURL": "https://models.dev/logos/nvidia.svg",
   "id": "nvidia",
   "models": {
-    "abacusai/dracarys-llama-3_1-70b-instruct": {
+    "abacusai/dracarys-llama-3.1-70b-instruct": {
       "attachment": false,
       "cost": {
         "input": 0,
         "output": 0
       },
       "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-      "id": "abacusai/dracarys-llama-3_1-70b-instruct",
+      "id": "abacusai/dracarys-llama-3.1-70b-instruct",
       "last_updated": "2025-05-22",
       "limit": {
         "context": 128000,
@@ -331,6 +331,66 @@
       "reasoning": false,
       "release_date": "2024-07-16",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-3-12b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "family": "gemma",
+      "id": "google/gemma-3-12b-it",
+      "last_updated": "2025-03-12",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 12B IT",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-3-4b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "family": "gemma",
+      "id": "google/gemma-3-4b-it",
+      "last_updated": "2025-03-12",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 4B IT",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-12",
       "temperature": true,
       "tool_call": true
     },
@@ -943,14 +1003,44 @@
       "structured_output": false,
       "tool_call": false
     },
-    "mistralai/mistral-7b-instruct-v03": {
+    "mistralai/ministral-14b-instruct-2512": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Compact Mistral VLM for chat and instruction-based workloads",
+      "family": "ministral",
+      "id": "mistralai/ministral-14b-instruct-2512",
+      "last_updated": "2025-12-02",
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ministral 3 14B Instruct 2512",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/mistral-7b-instruct-v0.3": {
       "attachment": false,
       "cost": {
         "input": 0,
         "output": 0
       },
       "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-      "id": "mistralai/mistral-7b-instruct-v03",
+      "id": "mistralai/mistral-7b-instruct-v0.3",
       "last_updated": "2025-04-01",
       "limit": {
         "context": 65536,
@@ -1034,6 +1124,46 @@
       "release_date": "2025-09-25",
       "structured_output": false,
       "tool_call": false
+    },
+    "mistralai/mistral-medium-3.5-128b": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Balanced Mistral model for enterprise assistants, multilingual work, and tools",
+      "family": "mistral-medium",
+      "id": "mistralai/mistral-medium-3.5-128b",
+      "last_updated": "2026-04-29",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Medium 3.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "mistralai/mistral-nemotron": {
       "attachment": false,
@@ -1327,6 +1457,37 @@
       "temperature": false,
       "tool_call": false
     },
+    "nvidia/cosmos-reason2-8b": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Vision language model for physical-world understanding with structured reasoning on video and images",
+      "id": "nvidia/cosmos-reason2-8b",
+      "last_updated": "2025-12-01",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Cosmos Reason2 8B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-12-01",
+      "temperature": true,
+      "tool_call": true
+    },
     "nvidia/cosmos-transfer1-7b": {
       "attachment": true,
       "cost": {
@@ -1415,7 +1576,101 @@
       "temperature": true,
       "tool_call": false
     },
-    "nvidia/llama-3_1-nemotron-safety-guard-8b-v3": {
+    "nvidia/llama-3.1-nemotron-70b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
+      "family": "nemotron",
+      "id": "nvidia/llama-3.1-nemotron-70b-instruct",
+      "last_updated": "2025-04-15",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 Nemotron 70B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/llama-3.1-nemotron-nano-8b-v1": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
+      "family": "nemotron",
+      "id": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+      "last_updated": "2025-03-18",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 Nemotron Nano 8B v1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-03-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/llama-3.1-nemotron-nano-vl-8b-v1": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron multimodal model for visual reasoning and agentic AI workflows",
+      "family": "nemotron",
+      "id": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+      "last_updated": "2025-04-10",
+      "limit": {
+        "context": 32768,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 Nemotron Nano VL 8B v1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-04-10",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/llama-3.1-nemotron-safety-guard-8b-v3": {
       "attachment": false,
       "cost": {
         "input": 0,
@@ -1423,7 +1678,7 @@
       },
       "description": "Safety model for policy screening, moderation, and risk-aware routing workflows",
       "family": "nemotron",
-      "id": "nvidia/llama-3_1-nemotron-safety-guard-8b-v3",
+      "id": "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
       "last_updated": "2025-10-28",
       "limit": {
         "context": 128000,
@@ -1443,6 +1698,108 @@
       "release_date": "2025-10-28",
       "temperature": false,
       "tool_call": false
+    },
+    "nvidia/llama-3.1-nemotron-ultra-253b-v1": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Flagship Nemotron model for high-throughput reasoning and complex agents",
+      "family": "nemotron",
+      "id": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+      "last_updated": "2025-04-07",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 Nemotron Ultra 253B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-04-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/llama-3.3-nemotron-super-49b-v1": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
+      "family": "nemotron",
+      "id": "nvidia/llama-3.3-nemotron-super-49b-v1",
+      "last_updated": "2025-04-07",
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.3 Nemotron Super 49B v1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-04-07",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/llama-3.3-nemotron-super-49b-v1.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
+      "family": "nemotron",
+      "id": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "last_updated": "2025-07-25",
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.3 Nemotron Super 49B v1.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-07-25",
+      "temperature": true,
+      "tool_call": true
     },
     "nvidia/llama-3_2-nemoretriever-300m-embed-v1": {
       "attachment": false,
@@ -1798,6 +2155,38 @@
       "temperature": true,
       "tool_call": true
     },
+    "nvidia/nemotron-nano-12b-v2-vl": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron multimodal model for visual reasoning and agentic AI workflows",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-nano-12b-v2-vl",
+      "last_updated": "2025-10-28",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron Nano 12B v2 VL",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-10-28",
+      "temperature": true,
+      "tool_call": true
+    },
     "nvidia/nemotron-voicechat": {
       "attachment": true,
       "cost": {
@@ -1947,14 +2336,14 @@
       "temperature": false,
       "tool_call": false
     },
-    "nvidia/riva-translate-4b-instruct-v1_1": {
+    "nvidia/riva-translate-4b-instruct-v1.1": {
       "attachment": false,
       "cost": {
         "input": 0,
         "output": 0
       },
       "description": "Translation model for multilingual conversion, localization, and cross-language workflows",
-      "id": "nvidia/riva-translate-4b-instruct-v1_1",
+      "id": "nvidia/riva-translate-4b-instruct-v1.1",
       "last_updated": "2025-12-12",
       "limit": {
         "context": 128000,
@@ -2253,6 +2642,37 @@
       "release_date": "2023-09-01",
       "temperature": false,
       "tool_call": false
+    },
+    "poolside/laguna-xs-2.1": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Agentic coding model from Poolside in the XS size class for local deployment",
+      "family": "laguna",
+      "id": "poolside/laguna-xs-2.1",
+      "last_updated": "2026-07-02",
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Laguna XS 2.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-02",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
     },
     "qwen/qwen-image": {
       "attachment": true,
@@ -2588,14 +3008,46 @@
       "temperature": true,
       "tool_call": true
     },
-    "upstage/solar-10_7b-instruct": {
+    "thinkingmachines/inkling": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Multimodal MoE reasoning model (975B total, 41B active) for text, image, and audio",
+      "family": "ling",
+      "id": "thinkingmachines/inkling",
+      "last_updated": "2026-07-15",
+      "limit": {
+        "context": 1048576,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "upstage/solar-10.7b-instruct": {
       "attachment": false,
       "cost": {
         "input": 0,
         "output": 0
       },
       "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
-      "id": "upstage/solar-10_7b-instruct",
+      "id": "upstage/solar-10.7b-instruct",
       "last_updated": "2025-04-10",
       "limit": {
         "context": 128000,

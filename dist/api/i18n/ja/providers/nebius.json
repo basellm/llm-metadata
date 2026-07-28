@@ -884,6 +884,51 @@
       "temperature": false,
       "tool_call": true
     },
+    "moonshotai/Kimi-K3": {
+      "attachment": false,
+      "cost": {
+        "input": 3,
+        "output": 15
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "moonshotai/Kimi-K3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 8000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "nvidia/Llama-3_1-Nemotron-Ultra-253B-v1": {
       "attachment": false,
       "cost": {

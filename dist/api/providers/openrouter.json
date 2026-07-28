@@ -2594,7 +2594,7 @@
       "knowledge": "2025-01",
       "last_updated": "2026-02-26",
       "limit": {
-        "context": 131072,
+        "context": 65536,
         "output": 65536
       },
       "modalities": {
@@ -3208,8 +3208,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.05,
-        "input": 0.12,
-        "output": 0.35
+        "input": 0.14,
+        "output": 0.42
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -5362,7 +5362,7 @@
       ],
       "release_date": "2026-07-16",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "morph/morph-v3-fast": {
@@ -6513,37 +6513,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "openai/gpt-4o-search-preview": {
-      "attachment": false,
-      "cost": {
-        "input": 2.5,
-        "output": 10
-      },
-      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-      "family": "gpt",
-      "id": "openai/gpt-4o-search-preview",
-      "knowledge": "2023-10-31",
-      "last_updated": "2025-03-12",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-4o Search Preview",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-03-12",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": false
-    },
     "openai/gpt-5": {
       "attachment": true,
       "cost": {
@@ -6589,40 +6558,6 @@
       "structured_output": true,
       "temperature": false,
       "tool_call": true
-    },
-    "openai/gpt-5-chat": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.125,
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-      "family": "gpt-codex",
-      "id": "openai/gpt-5-chat",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-08-07",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "pdf",
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5 Chat",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-08-07",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": false
     },
     "openai/gpt-5-codex": {
       "attachment": true,
@@ -6922,7 +6857,7 @@
     "openai/gpt-5.1-chat": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.125,
+        "cache_read": 0.13,
         "input": 1.25,
         "output": 10
       },
@@ -6933,7 +6868,7 @@
       "last_updated": "2025-11-13",
       "limit": {
         "context": 128000,
-        "output": 16384
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -7661,10 +7596,10 @@
     "openai/gpt-5.6-luna": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.1,
-        "cache_write": 1.25,
-        "input": 1,
-        "output": 6
+        "cache_read": 0.05,
+        "cache_write": 0.625,
+        "input": 0.5,
+        "output": 3
       },
       "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
       "family": "gpt-luna",
@@ -7710,10 +7645,10 @@
     "openai/gpt-5.6-luna-pro": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.1,
-        "cache_write": 1.25,
-        "input": 1,
-        "output": 6
+        "cache_read": 0.05,
+        "cache_write": 0.625,
+        "input": 0.5,
+        "output": 3
       },
       "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
       "family": "gpt-luna",
@@ -7857,10 +7792,10 @@
     "openai/gpt-5.6-terra": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.25,
-        "cache_write": 3.125,
-        "input": 2.5,
-        "output": 15
+        "cache_read": 0.125,
+        "cache_write": 1.5625,
+        "input": 1.25,
+        "output": 7.5
       },
       "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
       "family": "gpt-terra",
@@ -7906,10 +7841,10 @@
     "openai/gpt-5.6-terra-pro": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.25,
-        "cache_write": 3.125,
-        "input": 2.5,
-        "output": 15
+        "cache_read": 0.125,
+        "cache_write": 1.5625,
+        "input": 1.25,
+        "output": 7.5
       },
       "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
       "family": "gpt-terra",
@@ -10272,7 +10207,8 @@
     "qwen/qwen3.5-35b-a3b": {
       "attachment": true,
       "cost": {
-        "input": 0.14,
+        "cache_read": 0.05,
+        "input": 0.15,
         "output": 1
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
@@ -10709,6 +10645,45 @@
       ],
       "release_date": "2026-04-02",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3.7-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.006,
+        "cache_write": 0.038,
+        "input": 0.03,
+        "output": 0.13
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen/qwen3.7-flash",
+      "last_updated": "2026-07-27",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-27",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -12180,9 +12155,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.12428,
-        "input": 0.6692,
-        "output": 2.1032
+        "cache_read": 0.13702,
+        "input": 0.7378,
+        "output": 2.3188
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -12563,7 +12538,7 @@
       "last_updated": "2026-04-27",
       "limit": {
         "context": 1048576,
-        "output": 262144
+        "output": 1048576
       },
       "modalities": {
         "input": [
@@ -12589,7 +12564,7 @@
       ],
       "release_date": "2026-04-27",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "~openai/gpt-latest": {

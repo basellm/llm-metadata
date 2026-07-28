@@ -837,9 +837,9 @@
     "deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.0028,
-        "input": 0.14,
-        "output": 0.28
+        "cache_read": 0.014,
+        "input": 0.076,
+        "output": 0.153
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -1535,8 +1535,9 @@
     "gemma-4-31b-it": {
       "attachment": true,
       "cost": {
-        "input": 0.13,
-        "output": 0.38
+        "cache_read": 0.012,
+        "input": 0.102,
+        "output": 0.297
       },
       "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
       "family": "gemma",
@@ -2074,10 +2075,10 @@
     "glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.234,
+        "cache_read": 0.16,
         "cache_write": 0,
-        "input": 1.26,
-        "output": 3.96
+        "input": 0.8,
+        "output": 2.55
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -2413,6 +2414,37 @@
       "temperature": true,
       "tool_call": false
     },
+    "gpt-4o-mini-transcribe": {
+      "attachment": true,
+      "cost": {
+        "input": 1.25,
+        "output": 5
+      },
+      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "family": "gpt",
+      "id": "gpt-4o-mini-transcribe",
+      "last_updated": "2025-03-20",
+      "limit": {
+        "context": 16000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o Mini Transcribe",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-03-20",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "gpt-4o-search-preview": {
       "attachment": true,
       "cost": {
@@ -2443,6 +2475,37 @@
       "structured_output": false,
       "temperature": true,
       "tool_call": false
+    },
+    "gpt-4o-transcribe": {
+      "attachment": true,
+      "cost": {
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "family": "gpt",
+      "id": "gpt-4o-transcribe",
+      "last_updated": "2025-03-20",
+      "limit": {
+        "context": 16000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o Transcribe",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-03-20",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
     },
     "gpt-5": {
       "attachment": true,
@@ -3496,8 +3559,9 @@
     "gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "input": 0.05,
-        "output": 0.25
+        "cache_read": 0.032,
+        "input": 0.032,
+        "output": 0.14
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
