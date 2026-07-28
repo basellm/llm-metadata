@@ -38,7 +38,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "high",
             "xhigh"
           ]
@@ -93,9 +92,9 @@
     "gemma-4-26b-a4b-it": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.057,
-        "input": 0.114,
-        "output": 0.398
+        "cache_write": 0.065,
+        "input": 0.13,
+        "output": 0.424
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -124,9 +123,9 @@
     "glm-5": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.455,
-        "input": 0.91,
-        "output": 2.814
+        "cache_write": 0.405,
+        "input": 0.81,
+        "output": 2.624
       },
       "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
       "family": "glm",
@@ -154,9 +153,9 @@
     "glm-5.1": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.283075,
-        "input": 1.52425,
-        "output": 4.7905
+        "cache_read": 0.283088,
+        "input": 1.52432,
+        "output": 4.79072
       },
       "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
       "family": "glm",
@@ -203,8 +202,8 @@
       "id": "glm-5.2",
       "last_updated": "2026-07-22",
       "limit": {
-        "context": 1048576,
-        "output": 131072
+        "context": 1000000,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -222,7 +221,7 @@
           "type": "effort",
           "values": [
             "high",
-            "max"
+            "xhigh"
           ]
         }
       ],
@@ -234,9 +233,9 @@
     "gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.089,
-        "input": 0.178,
-        "output": 0.68
+        "cache_write": 0.088,
+        "input": 0.176,
+        "output": 0.652
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -273,11 +272,11 @@
       "tool_call": true
     },
     "kimi-k2.5": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
-        "cache_write": 0.265,
-        "input": 0.53,
-        "output": 2.66
+        "cache_write": 0.264,
+        "input": 0.528,
+        "output": 2.79
       },
       "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
       "family": "kimi-k2",
@@ -360,8 +359,8 @@
       "knowledge": "2025-01",
       "last_updated": "2026-07-22",
       "limit": {
-        "context": 262000,
-        "output": 262000
+        "context": 256000,
+        "output": 16000
       },
       "modalities": {
         "input": [
@@ -414,9 +413,9 @@
     "llama-4-maverick-17b-128e-instruct-fp8": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.13375,
-        "input": 0.2675,
-        "output": 0.9175
+        "cache_write": 0.142,
+        "input": 0.284,
+        "output": 0.934
       },
       "description": "Open multimodal Llama for strong reasoning with efficient everyday serving",
       "family": "llama",
@@ -445,9 +444,9 @@
     "minimax-m2.7": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.21,
-        "input": 0.42,
-        "output": 1.62
+        "cache_write": 0.174,
+        "input": 0.348,
+        "output": 1.332
       },
       "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
       "family": "minimax",
@@ -475,9 +474,9 @@
     "qwen3-coder-480b-a35b-instruct-int4-mixed-ar": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.3005,
-        "input": 0.601,
-        "output": 2.085
+        "cache_write": 0.2845,
+        "input": 0.569,
+        "output": 2.135
       },
       "description": "Open Qwen coding heavyweight for repository reasoning and agentic engineering",
       "family": "qwen",
@@ -506,9 +505,9 @@
     "qwen3-next-80b-a3b-instruct": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.06094,
-        "input": 0.12188,
-        "output": 1.145
+        "cache_write": 0.05875,
+        "input": 0.1175,
+        "output": 1.136
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -681,8 +680,7 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "video"
+          "image"
         ],
         "output": [
           "text"
