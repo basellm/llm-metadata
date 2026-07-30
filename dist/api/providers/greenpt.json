@@ -1,0 +1,855 @@
+{
+  "api": "https://api.greenpt.ai/v1",
+  "doc": "https://docs.greenpt.ai",
+  "env": [
+    "GREENPT_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/greenpt.svg",
+  "id": "greenpt",
+  "models": {
+    "devstral-2-123b-instruct-2512": {
+      "attachment": false,
+      "cost": {
+        "input": 0.57,
+        "output": 2.736
+      },
+      "description": "Mistral's coding-agent model for repository work, terminal tasks, and software fixes",
+      "family": "devstral",
+      "id": "devstral-2-123b-instruct-2512",
+      "knowledge": "2025-12",
+      "last_updated": "2025-12-09",
+      "limit": {
+        "context": 200000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral 2",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-09",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemma-3-27b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.342,
+        "output": 0.684
+      },
+      "description": "Google Gemma 3 multimodal model for chat, reasoning, and image understanding",
+      "family": "gemma",
+      "id": "gemma-3-27b-it",
+      "knowledge": "2024-08",
+      "last_updated": "2025-03-12",
+      "limit": {
+        "context": 40000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 27B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemma4": {
+      "attachment": true,
+      "cost": {
+        "input": 0.57,
+        "output": 1.71
+      },
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "family": "gemma",
+      "id": "gemma4",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemma4",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.1": {
+      "attachment": false,
+      "cost": {
+        "input": 1.756,
+        "output": 5.518
+      },
+      "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
+      "family": "glm",
+      "id": "glm-5.1",
+      "last_updated": "2026-04-07",
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2": {
+      "attachment": false,
+      "cost": {
+        "input": 1.254,
+        "output": 5.016
+      },
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "family": "glm",
+      "id": "glm-5.2",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-oss-120b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.228,
+        "output": 0.798
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "gpt-oss-120b",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "green-l": {
+      "attachment": true,
+      "cost": {
+        "input": 0.285,
+        "output": 0.912
+      },
+      "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
+      "family": "mistral-small",
+      "id": "green-l",
+      "knowledge": "2025-03",
+      "last_updated": "2025-06-20",
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Green L",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-06-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "green-l-raw": {
+      "attachment": true,
+      "cost": {
+        "input": 0.285,
+        "output": 0.912
+      },
+      "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
+      "family": "mistral-small",
+      "id": "green-l-raw",
+      "knowledge": "2025-03",
+      "last_updated": "2025-06-20",
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Green L Raw",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-06-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "green-r": {
+      "attachment": true,
+      "cost": {
+        "input": 0.399,
+        "output": 1.083
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "green-r",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Green R",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "green-r-raw": {
+      "attachment": true,
+      "cost": {
+        "input": 0.399,
+        "output": 1.083
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "green-r-raw",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Green R Raw",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "green-s": {
+      "attachment": false,
+      "cost": {
+        "input": 0.00437,
+        "output": 0
+      },
+      "description": "GreenPT speech-to-text model for pre-recorded and live transcription",
+      "id": "green-s",
+      "last_updated": "2025-01",
+      "limit": {
+        "context": 0,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Green S",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-01",
+      "temperature": false,
+      "tool_call": false
+    },
+    "green-s-pro": {
+      "attachment": false,
+      "cost": {
+        "input": 0.00437,
+        "output": 0
+      },
+      "description": "GreenPT advanced speech-to-text model with multilingual transcription support",
+      "id": "green-s-pro",
+      "last_updated": "2025-02",
+      "limit": {
+        "context": 0,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Green S Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-02",
+      "temperature": false,
+      "tool_call": false
+    },
+    "holo2-30b-a3b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.399,
+        "output": 0.969
+      },
+      "description": "H Company Holo2 vision model for GUI navigation and computer-use agents",
+      "id": "holo2-30b-a3b",
+      "last_updated": "2025-11",
+      "limit": {
+        "context": 22016,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Holo2 30B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-11",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.6": {
+      "attachment": true,
+      "cost": {
+        "input": 0.828,
+        "output": 4.389
+      },
+      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
+      "family": "kimi-k2",
+      "id": "kimi-k2.6",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.6-fast": {
+      "attachment": true,
+      "cost": {
+        "input": 1.655,
+        "output": 8.778
+      },
+      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
+      "family": "kimi-k2",
+      "id": "kimi-k2.6-fast",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6 Fast",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.7-code": {
+      "attachment": false,
+      "cost": {
+        "input": 0.941,
+        "output": 4.389
+      },
+      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
+      "family": "kimi-k2",
+      "id": "kimi-k2.7-code",
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "llama-3.3-70b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 1.254,
+        "output": 1.254
+      },
+      "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
+      "family": "llama",
+      "id": "llama-3.3-70b-instruct",
+      "knowledge": "2023-12",
+      "last_updated": "2024-12-06",
+      "limit": {
+        "context": 100000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama-3.3-70B-Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-12-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m2.5": {
+      "attachment": false,
+      "cost": {
+        "input": 0.188,
+        "output": 1.129
+      },
+      "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
+      "family": "minimax",
+      "id": "minimax-m2.5",
+      "last_updated": "2026-02-12",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-02-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistral-medium-3.5-128b": {
+      "attachment": true,
+      "cost": {
+        "input": 2.052,
+        "output": 10.26
+      },
+      "description": "Balanced Mistral model for enterprise assistants, multilingual work, and tools",
+      "family": "mistral-medium",
+      "id": "mistral-medium-3.5-128b",
+      "last_updated": "2026-04-29",
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Medium 3.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistral-small-3.2-24b-instruct-2506": {
+      "attachment": true,
+      "cost": {
+        "input": 0.228,
+        "output": 0.456
+      },
+      "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
+      "family": "mistral-small",
+      "id": "mistral-small-3.2-24b-instruct-2506",
+      "knowledge": "2025-03",
+      "last_updated": "2025-06-20",
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Small 3.2",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-06-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "pixtral-12b-2409": {
+      "attachment": true,
+      "cost": {
+        "input": 0.285,
+        "output": 0.285
+      },
+      "description": "Mistral vision-language model for image understanding and multimodal chat",
+      "family": "pixtral",
+      "id": "pixtral-12b-2409",
+      "knowledge": "2024-09",
+      "last_updated": "2024-09-01",
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Pixtral 12B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-09-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-235b-a22b-instruct-2507": {
+      "attachment": false,
+      "cost": {
+        "input": 1.026,
+        "output": 3.078
+      },
+      "description": "Qwen3 235B MoE instruct model for long-context multilingual chat and reasoning",
+      "family": "qwen",
+      "id": "qwen3-235b-a22b-instruct-2507",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-21",
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 235B A22B Instruct 2507",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-coder-30b-a3b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 0.285,
+        "output": 1.083
+      },
+      "description": "Smaller Qwen coder for efficient local agents and repo-level fixes",
+      "family": "qwen",
+      "id": "qwen3-coder-30b-a3b-instruct",
+      "knowledge": "2025-04",
+      "last_updated": "2025-04",
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3-Coder 30B-A3B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-04",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.5-397b-a17b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.798,
+        "output": 4.959
+      },
+      "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
+      "family": "qwen",
+      "id": "qwen3.5-397b-a17b",
+      "last_updated": "2026-02-15",
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 397B-A17B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-02-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.6-35b-a3b": {
+      "attachment": true,
+      "cost": {
+        "input": 0.342,
+        "output": 2.052
+      },
+      "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
+      "family": "qwen",
+      "id": "qwen3.6-35b-a3b",
+      "last_updated": "2026-04-17",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B-A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "voxtral-small-24b-2507": {
+      "attachment": true,
+      "cost": {
+        "input": 0.228,
+        "output": 0.513
+      },
+      "description": "Mistral Voxtral audio-understanding model for speech and transcription tasks",
+      "family": "mistral",
+      "id": "voxtral-small-24b-2507",
+      "knowledge": "2025-07",
+      "last_updated": "2025-07-15",
+      "limit": {
+        "context": 32768,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Voxtral Small 24B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-15",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "GreenPT",
+  "npm": "@ai-sdk/openai-compatible"
+}

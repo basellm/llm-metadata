@@ -27,13 +27,12 @@
   "last_updated": "2026-04-17",
   "limit": {
     "context": 1000000,
-    "output": 30000
+    "output": 1000000
   },
   "modalities": {
     "input": [
       "text",
-      "image",
-      "pdf"
+      "image"
     ],
     "output": [
       "text"
@@ -42,7 +41,11 @@
   "name": "Grok 4.3",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    }
+  ],
   "release_date": "2026-04-17",
   "structured_output": true,
   "temperature": true,
