@@ -2,19 +2,19 @@
   "api": "https://api.thegrid.ai/v1",
   "doc": "https://thegrid.ai/docs",
   "env": [
-    "THEGRIDAI_API_KEY"
+    "THEGRID_API_KEY"
   ],
   "iconURL": "https://models.dev/logos/the-grid-ai.svg",
   "id": "the-grid-ai",
   "models": {
     "agent-max": {
-      "attachment": false,
+      "attachment": true,
       "description": "Frontier models for autonomous research, deep multi-step tool chains, and complex long-horizon tasks. Any model that meets the contract spec can serve your request.",
       "id": "agent-max",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-07-06",
+      "last_updated": "2026-07-24",
       "limit": {
         "context": 1000000,
         "input": 922000,
@@ -50,7 +50,7 @@
       "release_date": "2026-05-04",
       "status": "beta",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "agent-prime": {
@@ -60,7 +60,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-07-06",
+      "last_updated": "2026-07-15",
       "limit": {
         "context": 196608,
         "input": 120000,
@@ -100,7 +100,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-07-06",
+      "last_updated": "2026-07-15",
       "limit": {
         "context": 128000,
         "input": 120000,
@@ -134,13 +134,13 @@
       "tool_call": true
     },
     "code-max": {
-      "attachment": false,
+      "attachment": true,
       "description": "Frontier models for complex research, architectural decisions, debugging, and multi-file development. Any model that meets the contract spec can serve your request.",
       "id": "code-max",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-07-06",
+      "last_updated": "2026-07-24",
       "limit": {
         "context": 1000000,
         "input": 922000,
@@ -176,7 +176,7 @@
       "release_date": "2026-05-04",
       "status": "beta",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "code-prime": {
@@ -186,7 +186,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-07-06",
+      "last_updated": "2026-07-15",
       "limit": {
         "context": 196608,
         "input": 120000,
@@ -226,7 +226,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-07-06",
+      "last_updated": "2026-07-15",
       "limit": {
         "context": 128000,
         "input": 120000,
@@ -260,13 +260,13 @@
       "tool_call": true
     },
     "text-max": {
-      "attachment": false,
+      "attachment": true,
       "description": "Frontier models for deep reasoning, long context, and complex workflows. Any model that meets the contract spec can serve your request.",
       "id": "text-max",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-07-06",
+      "last_updated": "2026-07-24",
       "limit": {
         "context": 1000000,
         "input": 922000,
@@ -299,9 +299,9 @@
           ]
         }
       ],
-      "release_date": "2026-03-24",
+      "release_date": "2026-02-26",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "text-prime": {
@@ -311,7 +311,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-07-06",
+      "last_updated": "2026-07-15",
       "limit": {
         "context": 196608,
         "input": 120000,
@@ -350,7 +350,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-07-06",
+      "last_updated": "2026-07-15",
       "limit": {
         "context": 128000,
         "input": 120000,

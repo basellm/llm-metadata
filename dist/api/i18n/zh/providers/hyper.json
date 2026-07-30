@@ -92,9 +92,9 @@
     "gemma-4-26b-a4b-it": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.058,
-        "input": 0.116,
-        "output": 0.408
+        "cache_write": 0.061,
+        "input": 0.122,
+        "output": 0.424
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -123,9 +123,9 @@
     "glm-5": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.405,
-        "input": 0.81,
-        "output": 2.624
+        "cache_write": 0.44,
+        "input": 0.88,
+        "output": 2.78
       },
       "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
       "family": "glm",
@@ -235,7 +235,7 @@
       "cost": {
         "cache_write": 0.089,
         "input": 0.178,
-        "output": 0.68
+        "output": 0.612
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -274,9 +274,9 @@
     "kimi-k2.5": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.264,
-        "input": 0.528,
-        "output": 2.79
+        "cache_write": 0.267,
+        "input": 0.534,
+        "output": 2.82
       },
       "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
       "family": "kimi-k2",
@@ -379,12 +379,44 @@
       "temperature": false,
       "tool_call": true
     },
+    "kimi-k3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.32664,
+        "input": 3.2664,
+        "output": 16.332
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "kimi-k3",
+      "last_updated": "2026-07-30",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-07-27",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "llama-3.3-70b-instruct": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.3033,
-        "input": 0.6066,
-        "output": 1.0386
+        "cache_write": 0.2563,
+        "input": 0.5126,
+        "output": 1.0446
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
@@ -444,9 +476,9 @@
     "minimax-m2.7": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.205,
-        "input": 0.41,
-        "output": 1.52
+        "cache_write": 0.24,
+        "input": 0.48,
+        "output": 1.86
       },
       "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
       "family": "minimax",
@@ -629,6 +661,35 @@
       "reasoning": false,
       "release_date": "2026-05-20",
       "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.7-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.04,
+        "input": 0.2,
+        "output": 0.8
+      },
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "id": "qwen3.7-flash",
+      "last_updated": "2026-07-30",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7-Flash",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-07-27",
       "tool_call": true
     },
     "qwen3.7-max": {
