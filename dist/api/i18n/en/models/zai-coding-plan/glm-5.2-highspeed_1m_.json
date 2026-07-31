@@ -6,15 +6,15 @@
     "input": 0,
     "output": 0
   },
-  "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+  "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
   "family": "glm",
-  "id": "glm-5.1",
+  "id": "glm-5.2-highspeed[1m]",
   "interleaved": {
     "field": "reasoning_content"
   },
-  "last_updated": "2026-03-27",
+  "last_updated": "2026-06-13",
   "limit": {
-    "context": 200000,
+    "context": 1000000,
     "output": 131072
   },
   "modalities": {
@@ -25,15 +25,19 @@
       "text"
     ]
   },
-  "name": "GLM-5.1",
-  "open_weights": false,
+  "name": "GLM-5.2 Highspeed",
+  "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
+      "type": "effort",
+      "values": [
+        "high",
+        "max"
+      ]
     }
   ],
-  "release_date": "2026-03-27",
+  "release_date": "2026-06-13",
   "structured_output": true,
   "temperature": true,
   "tool_call": true

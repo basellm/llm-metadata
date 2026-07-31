@@ -7,43 +7,6 @@
   "iconURL": "https://models.dev/logos/zhipuai-coding-plan.svg",
   "id": "zhipuai-coding-plan",
   "models": {
-    "glm-4.5-air": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0,
-        "cache_write": 0,
-        "input": 0,
-        "output": 0
-      },
-      "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
-      "family": "glm-air",
-      "id": "glm-4.5-air",
-      "knowledge": "2025-04",
-      "last_updated": "2025-07-28",
-      "limit": {
-        "context": 131072,
-        "output": 98304
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM-4.5-Air",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-07-28",
-      "temperature": true,
-      "tool_call": true
-    },
     "glm-4.6v": {
       "attachment": true,
       "cost": {
@@ -229,6 +192,50 @@
         ]
       },
       "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-highspeed[1m]": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "family": "glm",
+      "id": "glm-5.2-highspeed[1m]",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2 Highspeed",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [

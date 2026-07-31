@@ -2105,6 +2105,47 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek/deepseek-v4-flash-0731": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.0028,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "last_updated": "2026-07-31",
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0731",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-31",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepseek/deepseek-v4-pro": {
       "attachment": false,
       "cost": {
@@ -4510,40 +4551,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "mistralai/devstral-2512": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.04,
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "Mistral's coding-agent model for repository work, terminal tasks, and software fixes",
-      "family": "devstral",
-      "id": "mistralai/devstral-2512",
-      "knowledge": "2025-12",
-      "last_updated": "2025-12-09",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Devstral 2",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-09",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "mistralai/ministral-14b-2512": {
       "attachment": true,
       "cost": {
@@ -5021,9 +5028,8 @@
     "mistralai/mistral-small-3.2-24b-instruct": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.01,
-        "input": 0.1,
-        "output": 0.3
+        "input": 0.075,
+        "output": 0.2
       },
       "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
       "family": "mistral-small",
@@ -5255,9 +5261,9 @@
     "moonshotai/kimi-k2.6": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.16,
-        "input": 0.95,
-        "output": 4
+        "cache_read": 0.0992,
+        "input": 0.589,
+        "output": 2.48
       },
       "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
       "family": "kimi-k2",
@@ -6811,40 +6817,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "openai/gpt-5.1-chat": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.13,
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-      "family": "gpt-codex",
-      "id": "openai/gpt-5.1-chat",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 128000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "pdf",
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.1 Chat",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-11-13",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
     "openai/gpt-5.1-codex": {
       "attachment": true,
       "cost": {
@@ -7984,9 +7956,8 @@
     "openai/gpt-oss-20b": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.03,
         "input": 0.03,
-        "output": 0.13
+        "output": 0.14
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
@@ -9233,8 +9204,8 @@
     "qwen/qwen3-235b-a22b-thinking-2507": {
       "attachment": false,
       "cost": {
-        "input": 0.3,
-        "output": 3
+        "input": 0.23,
+        "output": 2.3
       },
       "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
       "family": "qwen",
@@ -9796,8 +9767,8 @@
     "qwen/qwen3-vl-30b-a3b-instruct": {
       "attachment": true,
       "cost": {
-        "input": 0.15,
-        "output": 0.6
+        "input": 0.13,
+        "output": 0.52
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -9806,7 +9777,7 @@
       "last_updated": "2025-10-06",
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -10522,7 +10493,7 @@
       "last_updated": "2026-05-21",
       "limit": {
         "context": 1000000,
-        "output": 65536
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -10565,7 +10536,7 @@
       "last_updated": "2026-06-02",
       "limit": {
         "context": 1000000,
-        "output": 65536
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -11208,6 +11179,51 @@
       "temperature": true,
       "tool_call": true
     },
+    "thinkingmachines/inkling-small": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.116,
+        "input": 0.58,
+        "output": 1.44
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "id": "thinkingmachines/inkling-small",
+      "last_updated": "2026-07-30",
+      "limit": {
+        "context": 524288,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling Small",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-30",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
     "undi95/remm-slerp-l2-13b": {
       "attachment": false,
       "cost": {
@@ -11445,7 +11461,7 @@
       "cost": {
         "cache_read": 0.3,
         "context_over_200k": {
-          "cache_read": 1,
+          "cache_read": 0.6,
           "input": 4,
           "output": 12
         },
@@ -11453,7 +11469,7 @@
         "output": 6,
         "tiers": [
           {
-            "cache_read": 1,
+            "cache_read": 0.6,
             "input": 4,
             "output": 12,
             "tier": {
@@ -11976,9 +11992,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.1794,
-        "input": 0.966,
-        "output": 3.036
+        "cache_read": 0.208,
+        "input": 1.12,
+        "output": 3.52
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
