@@ -14,7 +14,7 @@
         "input": 0.14,
         "output": 0.28
       },
-      "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
       "id": "deepseek-v4-flash",
       "interleaved": {
@@ -34,7 +34,7 @@
           "text"
         ]
       },
-      "name": "DeepSeek V4 Flash",
+      "name": "DeepSeek V4 Flash (New)",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -207,6 +207,76 @@
       "release_date": "2026-06-13",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5.6-luna": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "context_over_200k": {
+          "cache_read": 0.02,
+          "cache_write": 0.25,
+          "input": 0.2,
+          "output": 0.9
+        },
+        "input": 0.1,
+        "output": 0.6,
+        "tiers": [
+          {
+            "cache_read": 0.02,
+            "cache_write": 0.25,
+            "input": 0.2,
+            "output": 0.9,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
+      "family": "gpt-luna",
+      "id": "gpt-5.6-luna",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Luna (2x usage)",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/openai"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "grok-4.5": {
@@ -451,7 +521,7 @@
           "text"
         ]
       },
-      "name": "Kimi K3 (2x usage)",
+      "name": "Kimi K3",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
