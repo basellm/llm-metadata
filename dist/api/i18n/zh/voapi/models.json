@@ -7123,7 +7123,7 @@
       },
       "name": "Abliterated Model",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.3,
         "cacheWrite": null,
         "input": 3,
         "output": 3
@@ -7159,7 +7159,7 @@
       },
       "name": "Abliterated Model Large",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.5,
         "cacheWrite": null,
         "input": 5,
         "output": 5
@@ -36587,80 +36587,6 @@
       "tags": []
     },
     {
-      "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
-      "firm": "chutes",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": true,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:chutes",
-      "id": "MiniMaxAI/MiniMax-M2.5-TEE",
-      "knowledge": null,
-      "lastUpdated": "2026-02-12",
-      "maxCtxTokens": 196608,
-      "maxOutputTokens": 65536,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax M2.5 TEE",
-      "price": {
-        "cacheRead": 0.075,
-        "cacheWrite": null,
-        "input": 0.15,
-        "output": 1.2
-      },
-      "releaseDate": "2026-02-12",
-      "tags": []
-    },
-    {
-      "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
-      "firm": "chutes",
-      "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": true,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:chutes",
-      "id": "moonshotai/Kimi-K2.5-TEE",
-      "knowledge": "2024-10",
-      "lastUpdated": "2026-01",
-      "maxCtxTokens": 262144,
-      "maxOutputTokens": 65535,
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2.5 TEE",
-      "price": {
-        "cacheRead": 0.22,
-        "cacheWrite": null,
-        "input": 0.44,
-        "output": 2
-      },
-      "releaseDate": "2026-01",
-      "tags": []
-    },
-    {
       "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
       "firm": "chutes",
       "flags": {
@@ -36952,42 +36878,6 @@
         "output": 0.0978
       },
       "releaseDate": "2024-07-01",
-      "tags": []
-    },
-    {
-      "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
-      "firm": "chutes",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": true,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:chutes",
-      "id": "zai-org/GLM-5-TEE",
-      "knowledge": null,
-      "lastUpdated": "2026-02-12",
-      "maxCtxTokens": 202752,
-      "maxOutputTokens": 65535,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5 TEE",
-      "price": {
-        "cacheRead": 0.475,
-        "cacheWrite": null,
-        "input": 0.95,
-        "output": 2.55
-      },
-      "releaseDate": "2026-02-12",
       "tags": []
     },
     {
@@ -99124,6 +99014,44 @@
       "tags": []
     },
     {
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "firm": "llmgateway",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "kimi-k3-fast",
+      "knowledge": null,
+      "lastUpdated": "2026-07-16",
+      "maxCtxTokens": 1040384,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "price": {
+        "cacheRead": 0.45,
+        "cacheWrite": null,
+        "input": 4.5,
+        "output": 22.5
+      },
+      "releaseDate": "2026-07-16",
+      "tags": []
+    },
+    {
       "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "firm": "llmgateway",
       "flags": {
@@ -101395,9 +101323,9 @@
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "firm": "llmgateway",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": true,
         "reasoning": true,
         "temperature": true,
@@ -101411,7 +101339,9 @@
       "maxOutputTokens": 65536,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -108690,8 +108620,8 @@
       },
       "name": "MiniMax-M2.1",
       "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
+        "cacheRead": 0.03,
+        "cacheWrite": 0.375,
         "input": 0.3,
         "output": 1.2
       },
@@ -108944,8 +108874,8 @@
       },
       "name": "MiniMax-M2.1",
       "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
+        "cacheRead": 0.03,
+        "cacheWrite": 0.375,
         "input": 0.3,
         "output": 1.2
       },
@@ -110978,12 +110908,49 @@
       },
       "name": "MiniMax-M2.1",
       "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
+        "cacheRead": 2.1,
+        "cacheWrite": 8.4,
         "input": 2.1,
         "output": 8.4
       },
       "releaseDate": "2025-12-23",
+      "tags": []
+    },
+    {
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "firm": "modal",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "moonshotai/Kimi-K3",
+      "knowledge": null,
+      "lastUpdated": "2026-07-16",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "price": {
+        "cacheRead": 0.3,
+        "cacheWrite": null,
+        "input": 3,
+        "output": 15
+      },
+      "releaseDate": "2026-07-16",
       "tags": []
     },
     {
@@ -173794,9 +173761,9 @@
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "firm": "pioneer",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": true,
         "reasoning": true,
         "temperature": true,
@@ -173810,7 +173777,9 @@
       "maxOutputTokens": 32768,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -183556,9 +183525,9 @@
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "firm": "qvac",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": true,
         "reasoning": true,
         "temperature": true,
@@ -183572,7 +183541,9 @@
       "maxOutputTokens": 8192,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -186096,9 +186067,9 @@
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "firm": "routing-run",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": true,
         "reasoning": true,
         "temperature": true,
@@ -186112,7 +186083,9 @@
       "maxOutputTokens": 32000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -188934,7 +188907,7 @@
       },
       "name": "MiniMaxAI/MiniMax-M2.5",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.03,
         "cacheWrite": null,
         "input": 0.3,
         "output": 1.2
@@ -188971,7 +188944,7 @@
       },
       "name": "moonshotai/Kimi-K2.5",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.07,
         "cacheWrite": null,
         "input": 0.45,
         "output": 2.25
@@ -190095,7 +190068,7 @@
       },
       "name": "zai-org/GLM-5",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.2,
         "cacheWrite": null,
         "input": 0.95,
         "output": 2.55
@@ -190131,7 +190104,7 @@
       },
       "name": "zai-org/GLM-5.1",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.26,
         "cacheWrite": null,
         "input": 1.4,
         "output": 4.4
@@ -190167,7 +190140,7 @@
       },
       "name": "GLM-5.2",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.26,
         "cacheWrite": null,
         "input": 1.4,
         "output": 4.4
@@ -190204,7 +190177,7 @@
       },
       "name": "zai-org/GLM-5V-Turbo",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.24,
         "cacheWrite": null,
         "input": 1.2,
         "output": 4
@@ -190819,7 +190792,7 @@
       },
       "name": "Pro/moonshotai/Kimi-K2.5",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.07,
         "cacheWrite": null,
         "input": 0.45,
         "output": 2.25
@@ -190928,7 +190901,7 @@
       },
       "name": "Pro/zai-org/GLM-5.1",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.26,
         "cacheWrite": null,
         "input": 1.4,
         "output": 4.4
@@ -191921,7 +191894,7 @@
       },
       "name": "GLM-5.2",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.26,
         "cacheWrite": null,
         "input": 1.4,
         "output": 4.4
@@ -194933,6 +194906,852 @@
       "tags": []
     },
     {
+      "description": "DeepSeek chat model for instruction following, coding, and analysis",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "deepseek/deepseek-chat-v3.1",
+      "knowledge": "2024-11",
+      "lastUpdated": "2025-08-21",
+      "maxCtxTokens": 164000,
+      "maxOutputTokens": 163840,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek Chat V3.1",
+      "price": {
+        "cacheRead": 0.05,
+        "cacheWrite": 0.25,
+        "input": 0.2,
+        "output": 0.8
+      },
+      "releaseDate": "2025-08-21",
+      "tags": []
+    },
+    {
+      "description": "Classic open reasoning model for transparent math, coding, and deliberate problem solving",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "deepseek/deepseek-r1-0528",
+      "knowledge": "2024-07",
+      "lastUpdated": "2025-05-28",
+      "maxCtxTokens": 164000,
+      "maxOutputTokens": 8192,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek R1-0528",
+      "price": {
+        "cacheRead": 0.165,
+        "cacheWrite": 0.825,
+        "input": 0.66,
+        "output": 2.6
+      },
+      "releaseDate": "2025-05-28",
+      "tags": []
+    },
+    {
+      "description": "DeepSeek chat model for instruction following, coding, and analysis",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "deepseek/deepseek-v3.2",
+      "knowledge": "2025-05",
+      "lastUpdated": "2025-12-01",
+      "maxCtxTokens": 163840,
+      "maxOutputTokens": 163840,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3.2",
+      "price": {
+        "cacheRead": 0.075,
+        "cacheWrite": 0.375,
+        "input": 0.3,
+        "output": 0.5
+      },
+      "releaseDate": "2025-12-01",
+      "tags": []
+    },
+    {
+      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "deepseek/deepseek-v4-flash",
+      "knowledge": "2025-05",
+      "lastUpdated": "2026-04-24",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 384000,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash",
+      "price": {
+        "cacheRead": 0.0375,
+        "cacheWrite": 0.1875,
+        "input": 0.15,
+        "output": 0.3
+      },
+      "releaseDate": "2026-04-24",
+      "tags": []
+    },
+    {
+      "description": "Open MoE flagship with million-token context for coding and long agent runs",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "deepseek/deepseek-v4-pro",
+      "knowledge": "2025-05",
+      "lastUpdated": "2026-04-24",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 384000,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro",
+      "price": {
+        "cacheRead": 0.4375,
+        "cacheWrite": 2.185,
+        "input": 1.75,
+        "output": 3.5
+      },
+      "releaseDate": "2026-04-24",
+      "tags": []
+    },
+    {
+      "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "minimax/minimax-m2.5",
+      "knowledge": null,
+      "lastUpdated": "2026-02-12",
+      "maxCtxTokens": 196608,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.5",
+      "price": {
+        "cacheRead": 0.075,
+        "cacheWrite": 0.375,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "releaseDate": "2026-02-12",
+      "tags": []
+    },
+    {
+      "description": "MiniMax multimodal model for long-context coding, perception, and agent planning",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "minimax/minimax-m3",
+      "knowledge": null,
+      "lastUpdated": "2026-06-01",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3",
+      "price": {
+        "cacheRead": 0.1,
+        "cacheWrite": null,
+        "input": 0.4,
+        "output": 2
+      },
+      "releaseDate": "2026-06-01",
+      "tags": []
+    },
+    {
+      "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "moonshotai/kimi-k2.5",
+      "knowledge": "2025-01",
+      "lastUpdated": "2026-01",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.5",
+      "price": {
+        "cacheRead": 0.125,
+        "cacheWrite": 0.625,
+        "input": 0.5,
+        "output": 2.8
+      },
+      "releaseDate": "2026-01",
+      "tags": []
+    },
+    {
+      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "moonshotai/kimi-k2.6",
+      "knowledge": "2025-01",
+      "lastUpdated": "2026-04-21",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "price": {
+        "cacheRead": 0.25,
+        "cacheWrite": 1.25,
+        "input": 1,
+        "output": 4
+      },
+      "releaseDate": "2026-04-21",
+      "tags": []
+    },
+    {
+      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "moonshotai/kimi-k2.7-code",
+      "knowledge": "2025-01",
+      "lastUpdated": "2026-06-12",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "price": {
+        "cacheRead": 0.3125,
+        "cacheWrite": null,
+        "input": 1.25,
+        "output": 4.5
+      },
+      "releaseDate": "2026-06-12",
+      "tags": []
+    },
+    {
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "nvidia/nemotron-3-super-120b-a12b",
+      "knowledge": null,
+      "lastUpdated": "2026-03-11",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Super 120B A12B",
+      "price": {
+        "cacheRead": 0.075,
+        "cacheWrite": 0.375,
+        "input": 0.3,
+        "output": 0.9
+      },
+      "releaseDate": "2026-03-11",
+      "tags": []
+    },
+    {
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "openai/gpt-oss-120b",
+      "knowledge": "2024-10",
+      "lastUpdated": "2025-08-05",
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 32768,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "price": {
+        "cacheRead": 0.01,
+        "cacheWrite": 0.05,
+        "input": 0.04,
+        "output": 0.2
+      },
+      "releaseDate": "2025-08-05",
+      "tags": []
+    },
+    {
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "qwen/qwen3-235b-a22b-2507",
+      "knowledge": "2025-06-30",
+      "lastUpdated": "2025-07-21",
+      "maxCtxTokens": 131000,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 235B-A22B-2507",
+      "price": {
+        "cacheRead": 0.018,
+        "cacheWrite": 0.09,
+        "input": 0.072,
+        "output": 0.464
+      },
+      "releaseDate": "2025-07-21",
+      "tags": []
+    },
+    {
+      "description": "Smaller Qwen coder for efficient local agents and repo-level fixes",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "qwen/qwen3-coder-30b-a3b-instruct",
+      "knowledge": "2025-04",
+      "lastUpdated": "2025-04",
+      "maxCtxTokens": 262000,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3-Coder 30B-A3B Instruct",
+      "price": {
+        "cacheRead": 0.015,
+        "cacheWrite": 0.075,
+        "input": 0.06,
+        "output": 0.25
+      },
+      "releaseDate": "2025-04",
+      "tags": []
+    },
+    {
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "qwen/qwen3-vl-235b-a22b-instruct",
+      "knowledge": "2025-03-31",
+      "lastUpdated": "2025-09-23",
+      "maxCtxTokens": 131000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 VL 235B-A22B Instruct",
+      "price": {
+        "cacheRead": 0.0525,
+        "cacheWrite": 0.2625,
+        "input": 0.21,
+        "output": 1.9
+      },
+      "releaseDate": "2025-09-23",
+      "tags": []
+    },
+    {
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": true,
+        "audio": true,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "qwen/qwen3.5-122b-a10b",
+      "knowledge": null,
+      "lastUpdated": "2026-02-23",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 122B-A10B",
+      "price": {
+        "cacheRead": 0.125,
+        "cacheWrite": 0.625,
+        "input": 0.5,
+        "output": 3.5
+      },
+      "releaseDate": "2026-02-23",
+      "tags": []
+    },
+    {
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "qwen/qwen3.5-9b",
+      "knowledge": null,
+      "lastUpdated": "2026-02-23",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 9B",
+      "price": {
+        "cacheRead": 0.0375,
+        "cacheWrite": 0.1875,
+        "input": 0.15,
+        "output": 0.2
+      },
+      "releaseDate": "2026-02-23",
+      "tags": []
+    },
+    {
+      "description": "Mature GLM model for dependable coding, reasoning, and structured agent tasks",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "z-ai/glm-4.7",
+      "knowledge": "2025-04",
+      "lastUpdated": "2025-12-22",
+      "maxCtxTokens": 200000,
+      "maxOutputTokens": 200000,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.7",
+      "price": {
+        "cacheRead": 0.15,
+        "cacheWrite": 0.75,
+        "input": 0.6,
+        "output": 2.2
+      },
+      "releaseDate": "2025-12-22",
+      "tags": []
+    },
+    {
+      "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "z-ai/glm-5",
+      "knowledge": null,
+      "lastUpdated": "2026-02-12",
+      "maxCtxTokens": 202752,
+      "maxOutputTokens": 202752,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5",
+      "price": {
+        "cacheRead": 0.25,
+        "cacheWrite": 1.25,
+        "input": 1,
+        "output": 3.2
+      },
+      "releaseDate": "2026-02-12",
+      "tags": []
+    },
+    {
+      "description": "Faster GLM-5 lane for coding agents that need lower latency",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "z-ai/glm-5-turbo",
+      "knowledge": null,
+      "lastUpdated": "2026-03-16",
+      "maxCtxTokens": 202752,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5-Turbo",
+      "price": {
+        "cacheRead": 0.3,
+        "cacheWrite": 1.5,
+        "input": 1.2,
+        "output": 4
+      },
+      "releaseDate": "2026-03-16",
+      "tags": []
+    },
+    {
+      "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "z-ai/glm-5.1",
+      "knowledge": null,
+      "lastUpdated": "2026-04-07",
+      "maxCtxTokens": 202752,
+      "maxOutputTokens": 202752,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.1",
+      "price": {
+        "cacheRead": 0.35,
+        "cacheWrite": 1.75,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "releaseDate": "2026-04-07",
+      "tags": []
+    },
+    {
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "z-ai/glm-5.2",
+      "knowledge": null,
+      "lastUpdated": "2026-06-13",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "price": {
+        "cacheRead": 0.375,
+        "cacheWrite": null,
+        "input": 1.5,
+        "output": 4.5
+      },
+      "releaseDate": "2026-06-13",
+      "tags": []
+    },
+    {
+      "description": "Fast GLM vision model for screenshots, documents, and multimodal agent tasks",
+      "firm": "tensorx",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "z-ai/glm-5v-turbo",
+      "knowledge": null,
+      "lastUpdated": "2026-04-01",
+      "maxCtxTokens": 202752,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5V-Turbo",
+      "price": {
+        "cacheRead": 0.3,
+        "cacheWrite": 1.5,
+        "input": 1.2,
+        "output": 4
+      },
+      "releaseDate": "2026-04-01",
+      "tags": []
+    },
+    {
       "description": "Frontier models for autonomous research, deep multi-step tool chains, and complex long-horizon tasks. Any model that meets the contract spec can serve your request.",
       "firm": "the-grid-ai",
       "flags": {
@@ -196560,7 +197379,7 @@
       },
       "name": "Qwen3.5 397B A17B",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.35,
         "cacheWrite": null,
         "input": 0.6,
         "output": 3.6
@@ -196669,7 +197488,7 @@
       },
       "name": "Qwen3.7 Max",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.125,
         "cacheWrite": null,
         "input": 1.25,
         "output": 3.75
@@ -196779,7 +197598,7 @@
       },
       "name": "GLM-5.1",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.26,
         "cacheWrite": null,
         "input": 1.4,
         "output": 4.4
@@ -199121,6 +199940,42 @@
         "output": 0.275
       },
       "releaseDate": "2026-04-24",
+      "tags": []
+    },
+    {
+      "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+      "firm": "venice",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:veniceai",
+      "id": "deepseek-v4-flash-0731",
+      "knowledge": null,
+      "lastUpdated": "2026-08-01",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 32768,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0731",
+      "price": {
+        "cacheRead": 0.035,
+        "cacheWrite": null,
+        "input": 0.175,
+        "output": 0.35
+      },
+      "releaseDate": "2026-07-31",
       "tags": []
     },
     {
@@ -201745,10 +202600,10 @@
       },
       "name": "GLM 4.7 Flash",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.01,
         "cacheWrite": null,
-        "input": 0.125,
-        "output": 0.5
+        "input": 0.06,
+        "output": 0.4
       },
       "releaseDate": "2026-01-29",
       "tags": []
@@ -205233,6 +206088,42 @@
       "tags": []
     },
     {
+      "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+      "firm": "vercel",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:vercel-color",
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "knowledge": null,
+      "lastUpdated": "2026-04-23",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 384000,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0731",
+      "price": {
+        "cacheRead": 0.028,
+        "cacheWrite": null,
+        "input": 0.13,
+        "output": 0.26
+      },
+      "releaseDate": "2026-04-23",
+      "tags": []
+    },
+    {
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "firm": "vercel",
       "flags": {
@@ -205328,7 +206219,8 @@
       "maxOutputTokens": 65536,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text",
@@ -205481,7 +206373,8 @@
       "maxOutputTokens": 32768,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text",
@@ -206313,6 +207206,42 @@
       "tags": []
     },
     {
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "firm": "vercel",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:vercel-color",
+      "id": "google/veo-3.1-lite-generate-001",
+      "knowledge": null,
+      "lastUpdated": "2026-04-02",
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Veo 3.1 Lite Generate",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-04-02",
+      "tags": []
+    },
+    {
       "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "firm": "vercel",
       "flags": {
@@ -206752,7 +207681,7 @@
       "flags": {
         "attachment": false,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": true,
         "temperature": true,
@@ -206766,7 +207695,8 @@
       "maxOutputTokens": 80000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -206860,7 +207790,7 @@
       "flags": {
         "attachment": false,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": true,
         "temperature": true,
@@ -206874,7 +207804,8 @@
       "maxOutputTokens": 80000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -207917,7 +208848,7 @@
       "flags": {
         "attachment": false,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": false,
         "temperature": true,
@@ -207931,7 +208862,8 @@
       "maxOutputTokens": 128000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -210813,7 +211745,7 @@
       "flags": {
         "attachment": false,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": true,
         "temperature": true,
@@ -210827,7 +211759,8 @@
       "maxOutputTokens": 8000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -211318,7 +212251,7 @@
       "flags": {
         "attachment": false,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": true,
         "temperature": true,
@@ -211332,7 +212265,8 @@
       "maxOutputTokens": 262114,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -215924,7 +216858,7 @@
       "firm": "xai",
       "flags": {
         "attachment": true,
-        "audio": false,
+        "audio": true,
         "image": true,
         "open_weights": false,
         "reasoning": false,
@@ -215941,6 +216875,7 @@
         "input": [
           "text",
           "image",
+          "audio",
           "pdf"
         ],
         "output": [
@@ -218058,7 +218993,7 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "glm-5.2-highspeed[1m]",
+      "id": "glm-5.2-highspeed",
       "knowledge": null,
       "lastUpdated": "2026-06-13",
       "maxCtxTokens": 1000000,
@@ -223291,7 +224226,7 @@
         "tool_call": true
       },
       "icon": "",
-      "id": "glm-5.2-highspeed[1m]",
+      "id": "glm-5.2-highspeed",
       "knowledge": null,
       "lastUpdated": "2026-06-13",
       "maxCtxTokens": 1000000,
