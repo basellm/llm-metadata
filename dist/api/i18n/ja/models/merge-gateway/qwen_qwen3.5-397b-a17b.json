@@ -1,5 +1,5 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
     "cache_read": 0.0344,
     "input": 0.172,
@@ -10,12 +10,13 @@
   "id": "qwen/qwen3.5-397b-a17b",
   "last_updated": "2026-02-15",
   "limit": {
-    "context": 131072,
-    "output": 32768
+    "context": 256000,
+    "output": 64000
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image"
     ],
     "output": [
       "text"
@@ -32,5 +33,5 @@
   "release_date": "2026-02-15",
   "structured_output": false,
   "temperature": true,
-  "tool_call": false
+  "tool_call": true
 }

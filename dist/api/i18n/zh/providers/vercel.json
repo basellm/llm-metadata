@@ -877,7 +877,7 @@
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "alibaba/qwen3.7-flash",
-      "last_updated": "2026-07-28",
+      "last_updated": "2026-07-15",
       "limit": {
         "context": 991000,
         "output": 64000
@@ -897,6 +897,8 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-07-28",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "alibaba/qwen3.7-max": {
@@ -3078,10 +3080,11 @@
         "input": 0.13,
         "output": 0.26
       },
-      "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
-      "family": "deepseek",
+      "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+      "family": "deepseek-flash",
       "id": "deepseek/deepseek-v4-flash-0731",
-      "last_updated": "2026-04-23",
+      "knowledge": "2025-05",
+      "last_updated": "2026-07-31",
       "limit": {
         "context": 1000000,
         "output": 384000
@@ -3095,10 +3098,12 @@
         ]
       },
       "name": "DeepSeek V4 Flash 0731",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-04-23",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "deepseek/deepseek-v4-pro": {
@@ -8989,6 +8994,7 @@
         }
       ],
       "release_date": "2026-07-30",
+      "temperature": true,
       "tool_call": true
     },
     "voyage/rerank-2.5": {

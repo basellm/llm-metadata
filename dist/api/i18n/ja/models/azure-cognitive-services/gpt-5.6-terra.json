@@ -1,19 +1,22 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.2,
+    "cache_read": 0.25,
+    "cache_write": 3.125,
     "context_over_200k": {
-      "cache_read": 0.4,
-      "input": 4,
-      "output": 18
+      "cache_read": 0.5,
+      "cache_write": 6.25,
+      "input": 5,
+      "output": 22.5
     },
-    "input": 2,
-    "output": 12,
+    "input": 2.5,
+    "output": 15,
     "tiers": [
       {
-        "cache_read": 0.4,
-        "input": 4,
-        "output": 18,
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 22.5,
         "tier": {
           "size": 272000,
           "type": "context"

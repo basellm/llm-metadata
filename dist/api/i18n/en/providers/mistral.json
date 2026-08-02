@@ -963,6 +963,86 @@
       "release_date": "2024-11-01",
       "temperature": true,
       "tool_call": true
+    },
+    "voxtral-mini-latest": {
+      "attachment": false,
+      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "family": "voxtral",
+      "id": "voxtral-mini-latest",
+      "last_updated": "2026-02-01",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Voxtral Mini (latest)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-02-01",
+      "temperature": false,
+      "tool_call": false
+    },
+    "voxtral-mini-tts-latest": {
+      "attachment": false,
+      "description": "Multilingual text-to-speech model with zero-shot voice cloning",
+      "family": "voxtral",
+      "id": "voxtral-mini-tts-latest",
+      "last_updated": "2026-03-01",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "Voxtral Mini TTS (latest)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-01",
+      "temperature": false,
+      "tool_call": false
+    },
+    "voxtral-small-latest": {
+      "attachment": true,
+      "cost": {
+        "input": 0.1,
+        "output": 0.3
+      },
+      "description": "Instruct model with native audio input for speech understanding and tool use",
+      "family": "voxtral",
+      "id": "voxtral-small-latest",
+      "last_updated": "2025-07-15",
+      "limit": {
+        "context": 32000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Voxtral Small (latest)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-15",
+      "temperature": true,
+      "tool_call": true
     }
   },
   "name": "Mistral",

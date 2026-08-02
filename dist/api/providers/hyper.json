@@ -48,6 +48,48 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek-v4-flash-0731": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.030486,
+        "input": 0.152432,
+        "output": 0.304864
+      },
+      "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4-flash-0731",
+      "knowledge": "2025-05",
+      "last_updated": "2026-08-02",
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0731",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepseek-v4-pro": {
       "attachment": false,
       "cost": {
@@ -92,9 +134,9 @@
     "gemma-4-26b-a4b-it": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.061,
-        "input": 0.122,
-        "output": 0.388
+        "cache_write": 0.065,
+        "input": 0.13,
+        "output": 0.43
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -123,9 +165,9 @@
     "glm-5": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.43,
-        "input": 0.86,
-        "output": 2.784
+        "cache_write": 0.425,
+        "input": 0.85,
+        "output": 2.622
       },
       "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
       "family": "glm",
@@ -274,9 +316,9 @@
     "kimi-k2.5": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.264,
-        "input": 0.528,
-        "output": 2.79
+        "cache_write": 0.282,
+        "input": 0.564,
+        "output": 2.82
       },
       "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
       "family": "kimi-k2",
@@ -405,7 +447,17 @@
       },
       "name": "Kimi K3",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-07-27",
       "structured_output": true,
       "temperature": false,
@@ -476,9 +528,9 @@
     "minimax-m2.7": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.21,
-        "input": 0.42,
-        "output": 1.62
+        "cache_write": 0.218,
+        "input": 0.436,
+        "output": 1.72
       },
       "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
       "family": "minimax",
@@ -547,9 +599,9 @@
     "qwen3-coder-480b-a35b-instruct-int4-mixed-ar": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.2925,
-        "input": 0.585,
-        "output": 2.245
+        "cache_write": 0.2845,
+        "input": 0.569,
+        "output": 2.135
       },
       "description": "Open Qwen coding heavyweight for repository reasoning and agentic engineering",
       "family": "qwen",
@@ -712,10 +764,12 @@
         "output": 0.8
       },
       "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "family": "qwen",
       "id": "qwen3.7-flash",
       "last_updated": "2026-07-30",
       "limit": {
         "context": 1000000,
+        "input": 991000,
         "output": 64000
       },
       "modalities": {
@@ -727,10 +781,12 @@
           "text"
         ]
       },
-      "name": "Qwen3.7-Flash",
+      "name": "Qwen3.7 Flash",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-07-27",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "qwen3.7-max": {

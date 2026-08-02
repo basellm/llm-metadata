@@ -59,6 +59,58 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek-v4-flash-0731": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.14,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4-flash-0731",
+      "knowledge": "2025-05",
+      "last_updated": "2026-07-31",
+      "limit": {
+        "context": 1000000,
+        "output": 393216
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0731",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 393216,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-31",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepseek-v4-pro": {
       "attachment": false,
       "cost": {
@@ -1516,6 +1568,80 @@
         }
       ],
       "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-7-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.006,
+        "input": 0.03,
+        "output": 0.13,
+        "tiers": [
+          {
+            "cache_read": 0.02,
+            "input": 0.1,
+            "output": 0.4,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          },
+          {
+            "cache_read": 0.04,
+            "input": 0.2,
+            "output": 0.8,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Lightweight multimodal Qwen model for high-throughput text, image, and video tasks",
+      "family": "qwen",
+      "id": "qwen3-7-flash",
+      "last_updated": "2026-07-15",
+      "limit": {
+        "context": 1000000,
+        "input": 991000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 131072,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-15",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
