@@ -2,8 +2,24 @@
   "attachment": true,
   "cost": {
     "cache_write": 0.40625,
+    "context_over_200k": {
+      "cache_write": 1.625,
+      "input": 1.3,
+      "output": 3.9
+    },
     "input": 0.325,
-    "output": 1.95
+    "output": 1.95,
+    "tiers": [
+      {
+        "cache_write": 1.625,
+        "input": 1.3,
+        "output": 3.9,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Earlier Qwen multimodal workhorse for million-token agent and document tasks",
   "family": "qwen",

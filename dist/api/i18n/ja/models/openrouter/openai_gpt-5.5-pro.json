@@ -1,8 +1,22 @@
 {
   "attachment": true,
   "cost": {
+    "context_over_200k": {
+      "input": 60,
+      "output": 270
+    },
     "input": 30,
-    "output": 180
+    "output": 180,
+    "tiers": [
+      {
+        "input": 60,
+        "output": 270,
+        "tier": {
+          "size": 272000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Highest-accuracy GPT-5.5 tier for slower, precision-heavy reasoning and coding",
   "family": "gpt-pro",

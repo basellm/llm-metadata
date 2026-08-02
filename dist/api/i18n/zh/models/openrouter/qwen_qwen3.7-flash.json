@@ -4,7 +4,29 @@
     "cache_read": 0.006,
     "cache_write": 0.038,
     "input": 0.03,
-    "output": 0.13
+    "output": 0.13,
+    "tiers": [
+      {
+        "cache_read": 0.02,
+        "cache_write": 0.125,
+        "input": 0.1,
+        "output": 0.4,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      },
+      {
+        "cache_read": 0.04,
+        "cache_write": 0.25,
+        "input": 0.2,
+        "output": 0.8,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
   "family": "qwen",

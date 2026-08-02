@@ -4,7 +4,29 @@
     "cache_read": 0.156,
     "cache_write": 0.975,
     "input": 0.78,
-    "output": 3.9
+    "output": 3.9,
+    "tiers": [
+      {
+        "cache_read": 0.312,
+        "cache_write": 1.95,
+        "input": 1.56,
+        "output": 7.8,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      },
+      {
+        "cache_read": 0.39,
+        "cache_write": 2.4375,
+        "input": 1.95,
+        "output": 9.75,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Flagship Qwen3 model for coding agents, complex reasoning, and tool use",
   "family": "qwen",

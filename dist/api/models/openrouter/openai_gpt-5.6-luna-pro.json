@@ -3,8 +3,26 @@
   "cost": {
     "cache_read": 0.01,
     "cache_write": 0.125,
+    "context_over_200k": {
+      "cache_read": 0.02,
+      "cache_write": 0.25,
+      "input": 0.2,
+      "output": 0.9
+    },
     "input": 0.1,
-    "output": 0.6
+    "output": 0.6,
+    "tiers": [
+      {
+        "cache_read": 0.02,
+        "cache_write": 0.25,
+        "input": 0.2,
+        "output": 0.9,
+        "tier": {
+          "size": 272000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
   "family": "gpt-luna",

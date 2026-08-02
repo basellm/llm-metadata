@@ -3,9 +3,25 @@
   "cost": {
     "cache_read": 0.125,
     "cache_write": 0.375,
+    "context_over_200k": {
+      "cache_read": 0.25,
+      "input": 2.5,
+      "output": 15
+    },
     "input": 1.25,
     "output": 10,
-    "reasoning": 10
+    "reasoning": 10,
+    "tiers": [
+      {
+        "cache_read": 0.25,
+        "input": 2.5,
+        "output": 15,
+        "tier": {
+          "size": 200000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Advanced Gemini model for complex reasoning, coding, and multimodal analysis",
   "family": "gemini-pro",

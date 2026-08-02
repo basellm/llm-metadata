@@ -1,8 +1,22 @@
 {
   "attachment": false,
   "cost": {
+    "context_over_200k": {
+      "input": 0.78,
+      "output": 2.34
+    },
     "input": 0.26,
-    "output": 0.78
+    "output": 0.78,
+    "tiers": [
+      {
+        "input": 0.78,
+        "output": 2.34,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
   "family": "qwen",

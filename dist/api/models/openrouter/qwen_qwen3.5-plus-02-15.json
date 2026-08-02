@@ -1,8 +1,22 @@
 {
   "attachment": true,
   "cost": {
+    "context_over_200k": {
+      "input": 0.325,
+      "output": 1.95
+    },
     "input": 0.26,
-    "output": 1.56
+    "output": 1.56,
+    "tiers": [
+      {
+        "input": 0.325,
+        "output": 1.95,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
   "family": "qwen",

@@ -4,7 +4,29 @@
     "cache_read": 0.039,
     "cache_write": 0.24375,
     "input": 0.195,
-    "output": 0.975
+    "output": 0.975,
+    "tiers": [
+      {
+        "cache_read": 0.065,
+        "cache_write": 0.40625,
+        "input": 0.325,
+        "output": 1.625,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      },
+      {
+        "cache_read": 0.104,
+        "cache_write": 0.65,
+        "input": 0.52,
+        "output": 2.6,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen coding model for software agents, repository edits, and code reasoning",
   "family": "qwen",

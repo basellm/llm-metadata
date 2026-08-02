@@ -2,8 +2,24 @@
   "attachment": true,
   "cost": {
     "cache_write": 0.375,
+    "context_over_200k": {
+      "cache_write": 0.46875,
+      "input": 0.375,
+      "output": 2.25
+    },
     "input": 0.3,
-    "output": 1.8
+    "output": 1.8,
+    "tiers": [
+      {
+        "cache_write": 0.46875,
+        "input": 0.375,
+        "output": 2.25,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
   "family": "qwen3.5",

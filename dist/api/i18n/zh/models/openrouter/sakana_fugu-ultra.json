@@ -2,8 +2,24 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.5,
+    "context_over_200k": {
+      "cache_read": 1,
+      "input": 10,
+      "output": 45
+    },
     "input": 5,
-    "output": 30
+    "output": 30,
+    "tiers": [
+      {
+        "cache_read": 1,
+        "input": 10,
+        "output": 45,
+        "tier": {
+          "size": 272000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Quality-first multi-agent model for hard research, analysis, and competitions",
   "family": "fugu",

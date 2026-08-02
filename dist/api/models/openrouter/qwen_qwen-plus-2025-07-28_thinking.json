@@ -2,8 +2,24 @@
   "attachment": false,
   "cost": {
     "cache_write": 0.5,
+    "context_over_200k": {
+      "cache_write": 1.5,
+      "input": 1.2,
+      "output": 3.6
+    },
     "input": 0.4,
-    "output": 1.2
+    "output": 1.2,
+    "tiers": [
+      {
+        "cache_write": 1.5,
+        "input": 1.2,
+        "output": 3.6,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
   "family": "qwen",

@@ -3,8 +3,26 @@
   "cost": {
     "cache_read": 0.052,
     "cache_write": 0.325,
+    "context_over_200k": {
+      "cache_read": 0.156,
+      "cache_write": 0.975,
+      "input": 0.78,
+      "output": 2.34
+    },
     "input": 0.26,
-    "output": 0.78
+    "output": 0.78,
+    "tiers": [
+      {
+        "cache_read": 0.156,
+        "cache_write": 0.975,
+        "input": 0.78,
+        "output": 2.34,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
   "family": "qwen",

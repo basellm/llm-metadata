@@ -3,8 +3,26 @@
   "cost": {
     "cache_read": 0.064,
     "cache_write": 0.4,
+    "context_over_200k": {
+      "cache_read": 0.192,
+      "cache_write": 1.2,
+      "input": 0.96,
+      "output": 3.84
+    },
     "input": 0.32,
-    "output": 1.28
+    "output": 1.28,
+    "tiers": [
+      {
+        "cache_read": 0.192,
+        "cache_write": 1.2,
+        "input": 0.96,
+        "output": 3.84,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
   "family": "qwen",
