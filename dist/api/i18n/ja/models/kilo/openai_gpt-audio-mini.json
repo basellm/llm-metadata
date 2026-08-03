@@ -1,30 +1,33 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
     "input": 0.6,
     "output": 2.4
   },
   "description": "Speech generation model for controllable voice, narration, and audio delivery",
+  "family": "gpt",
   "id": "openai/gpt-audio-mini",
-  "last_updated": "2026-03-15",
+  "last_updated": "2026-01-19",
   "limit": {
     "context": 128000,
     "output": 16384
   },
   "modalities": {
     "input": [
+      "text",
       "audio",
-      "text"
+      "pdf"
     ],
     "output": [
-      "audio",
-      "text"
+      "text",
+      "audio"
     ]
   },
   "name": "OpenAI: GPT Audio Mini",
   "open_weights": false,
   "reasoning": false,
-  "release_date": "2026-01-20",
+  "release_date": "2026-01-19",
+  "structured_output": true,
   "temperature": true,
-  "tool_call": false
+  "tool_call": true
 }

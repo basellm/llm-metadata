@@ -1,12 +1,14 @@
 {
   "attachment": false,
   "cost": {
-    "input": 0.0975,
-    "output": 0.78
+    "input": 0.15,
+    "output": 1.2
   },
   "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
+  "family": "qwen",
   "id": "qwen/qwen3-next-80b-a3b-thinking",
-  "last_updated": "2026-03-15",
+  "knowledge": "2025-04",
+  "last_updated": "2025-09",
   "limit": {
     "context": 131072,
     "output": 32768
@@ -19,11 +21,20 @@
       "text"
     ]
   },
-  "name": "Qwen: Qwen3 Next 80B A3B Thinking",
+  "name": "Qwen3-Next 80B-A3B (Thinking)",
   "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
-  "release_date": "2025-09-11",
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
+    }
+  ],
+  "release_date": "2025-09",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

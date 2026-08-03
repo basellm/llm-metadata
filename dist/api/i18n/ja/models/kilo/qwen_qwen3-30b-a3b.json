@@ -1,16 +1,16 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.03,
-    "input": 0.08,
-    "output": 0.28
+    "input": 0.13,
+    "output": 0.52
   },
   "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+  "family": "qwen",
   "id": "qwen/qwen3-30b-a3b",
-  "last_updated": "2026-03-15",
+  "last_updated": "2025-04-28",
   "limit": {
     "context": 40960,
-    "output": 40960
+    "output": 16384
   },
   "modalities": {
     "input": [
@@ -21,14 +21,19 @@
     ]
   },
   "name": "Qwen: Qwen3 30B A3B",
-  "open_weights": true,
+  "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
     }
   ],
-  "release_date": "2025-04",
+  "release_date": "2025-04-28",
+  "structured_output": false,
   "temperature": true,
   "tool_call": true
 }

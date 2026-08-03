@@ -1,15 +1,16 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.13,
-    "input": 0.21,
-    "output": 0.79
+    "cache_read": 0.135,
+    "input": 0.27,
+    "output": 1
   },
   "description": "DeepSeek chat model for instruction following, coding, and analysis",
+  "family": "deepseek",
   "id": "deepseek/deepseek-v3.1-terminus",
   "last_updated": "2025-09-22",
   "limit": {
-    "context": 163840,
+    "context": 131072,
     "output": 32768
   },
   "modalities": {
@@ -21,14 +22,20 @@
     ]
   },
   "name": "DeepSeek: DeepSeek V3.1 Terminus",
-  "open_weights": true,
+  "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
+      "type": "effort",
+      "values": [
+        "none",
+        "high",
+        "xhigh"
+      ]
     }
   ],
   "release_date": "2025-09-22",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

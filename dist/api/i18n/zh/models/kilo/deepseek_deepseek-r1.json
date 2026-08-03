@@ -5,8 +5,10 @@
     "output": 2.5
   },
   "description": "DeepSeek reasoning model for multi-step analysis, math, coding, and tools",
+  "family": "deepseek-thinking",
   "id": "deepseek/deepseek-r1",
-  "last_updated": "2025-01-20",
+  "knowledge": "2024-07",
+  "last_updated": "2025-05-29",
   "limit": {
     "context": 64000,
     "output": 16000
@@ -19,11 +21,21 @@
       "text"
     ]
   },
-  "name": "DeepSeek: R1",
+  "name": "DeepSeek-R1",
   "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "high",
+        "xhigh"
+      ]
+    }
+  ],
   "release_date": "2025-01-20",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

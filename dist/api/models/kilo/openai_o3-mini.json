@@ -6,25 +6,41 @@
     "output": 4.4
   },
   "description": "O-series reasoning model for hard analysis, math, coding, and planning",
+  "family": "o-mini",
   "id": "openai/o3-mini",
-  "last_updated": "2026-03-15",
+  "knowledge": "2024-05",
+  "last_updated": "2025-01-29",
   "limit": {
     "context": 200000,
     "output": 100000
   },
   "modalities": {
     "input": [
-      "pdf",
-      "text"
+      "text",
+      "pdf"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "OpenAI: o3 Mini",
+  "name": "o3-mini",
   "open_weights": false,
-  "reasoning": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2024-12-20",
+  "structured_output": true,
   "temperature": false,
   "tool_call": true
 }

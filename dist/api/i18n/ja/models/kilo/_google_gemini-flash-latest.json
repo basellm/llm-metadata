@@ -2,13 +2,15 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.15,
-    "cache_write": 0.08333333333333334,
+    "cache_write": 0.083333,
     "input": 1.5,
-    "output": 9
+    "output": 7.5,
+    "reasoning": 7.5
   },
   "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+  "family": "gemini-flash",
   "id": "~google/gemini-flash-latest",
-  "last_updated": "2026-05-19",
+  "last_updated": "2026-04-27",
   "limit": {
     "context": 1048576,
     "output": 65536
@@ -17,15 +19,15 @@
     "input": [
       "text",
       "image",
-      "audio",
       "video",
-      "pdf"
+      "pdf",
+      "audio"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Google: Gemini Flash Latest",
+  "name": "Google Gemini Flash Latest",
   "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
@@ -39,7 +41,8 @@
       ]
     }
   ],
-  "release_date": "2026-05-19",
+  "release_date": "2026-04-27",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

@@ -5,6 +5,7 @@
     "output": 0.41
   },
   "description": "DeepSeek chat model for instruction following, coding, and analysis",
+  "family": "deepseek",
   "id": "deepseek/deepseek-v3.2-exp",
   "last_updated": "2025-09-29",
   "limit": {
@@ -20,14 +21,20 @@
     ]
   },
   "name": "DeepSeek: DeepSeek V3.2 Exp",
-  "open_weights": true,
+  "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
+      "type": "effort",
+      "values": [
+        "none",
+        "high",
+        "xhigh"
+      ]
     }
   ],
-  "release_date": "2025-01-01",
+  "release_date": "2025-09-29",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

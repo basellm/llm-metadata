@@ -7,8 +7,9 @@
     "output": 5
   },
   "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
+  "family": "claude-haiku",
   "id": "~anthropic/claude-haiku-latest",
-  "last_updated": "2026-05-01",
+  "last_updated": "2026-04-27",
   "limit": {
     "context": 200000,
     "output": 64000
@@ -23,28 +24,24 @@
       "text"
     ]
   },
-  "name": "Anthropic: Claude Haiku Latest",
+  "name": "Anthropic Claude Haiku Latest",
   "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
-    },
-    {
       "type": "effort",
       "values": [
+        "none",
         "low",
         "medium",
         "high",
-        "max"
+        "xhigh",
+        "xhigh"
       ]
-    },
-    {
-      "min": 1024,
-      "type": "budget_tokens"
     }
   ],
-  "release_date": "2025-10-15",
+  "release_date": "2026-04-27",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

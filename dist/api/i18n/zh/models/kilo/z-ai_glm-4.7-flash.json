@@ -2,15 +2,17 @@
   "attachment": false,
   "cost": {
     "cache_read": 0.01,
-    "input": 0.06,
+    "input": 0.07,
     "output": 0.4
   },
   "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
+  "family": "glm-flash",
   "id": "z-ai/glm-4.7-flash",
+  "knowledge": "2025-04",
   "last_updated": "2026-01-19",
   "limit": {
     "context": 202752,
-    "output": 40551
+    "output": 16384
   },
   "modalities": {
     "input": [
@@ -20,22 +22,21 @@
       "text"
     ]
   },
-  "name": "Z.ai: GLM 4.7 Flash",
+  "name": "GLM-4.7-Flash",
   "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
-    },
-    {
       "type": "effort",
       "values": [
+        "none",
         "high",
         "xhigh"
       ]
     }
   ],
   "release_date": "2026-01-19",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

@@ -1,13 +1,14 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.15,
     "input": 0.455,
     "output": 1.82
   },
   "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+  "family": "qwen",
   "id": "qwen/qwen3-235b-a22b",
-  "last_updated": "2026-03-15",
+  "knowledge": "2025-04",
+  "last_updated": "2025-04",
   "limit": {
     "context": 131072,
     "output": 8192
@@ -20,20 +21,20 @@
       "text"
     ]
   },
-  "name": "Qwen: Qwen3 235B A22B",
+  "name": "Qwen3 235B-A22B",
   "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
-    },
-    {
-      "max": 38912,
-      "min": 1,
-      "type": "budget_tokens"
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
     }
   ],
-  "release_date": "2024-12-01",
+  "release_date": "2025-04",
+  "structured_output": false,
   "temperature": true,
   "tool_call": true
 }

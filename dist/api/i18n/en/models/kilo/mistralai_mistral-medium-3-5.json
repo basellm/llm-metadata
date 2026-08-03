@@ -5,16 +5,18 @@
     "output": 7.5
   },
   "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
+  "family": "mistral-medium",
   "id": "mistralai/mistral-medium-3-5",
-  "last_updated": "2026-05-07",
+  "last_updated": "2026-04-30",
   "limit": {
     "context": 262144,
     "output": 262144
   },
   "modalities": {
     "input": [
+      "text",
       "image",
-      "text"
+      "pdf"
     ],
     "output": [
       "text"
@@ -25,7 +27,11 @@
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
     }
   ],
   "release_date": "2026-04-30",

@@ -1,13 +1,14 @@
 {
   "attachment": true,
   "cost": {
-    "cache_write": 0.3125,
-    "input": 0.25,
-    "output": 1.5
+    "cache_write": 0.234375,
+    "input": 0.1875,
+    "output": 1.125
   },
   "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+  "family": "qwen3.6",
   "id": "qwen/qwen3.6-flash",
-  "last_updated": "2026-05-01",
+  "last_updated": "2026-04-27",
   "limit": {
     "context": 1000000,
     "output": 65536
@@ -22,20 +23,20 @@
       "text"
     ]
   },
-  "name": "Qwen: Qwen3.6 Flash",
+  "name": "Qwen3.6 Flash",
   "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
-    },
-    {
-      "max": 81920,
-      "min": 1,
-      "type": "budget_tokens"
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
     }
   ],
   "release_date": "2026-04-27",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

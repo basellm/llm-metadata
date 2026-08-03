@@ -1,14 +1,16 @@
 {
   "attachment": false,
   "cost": {
-    "input": 0.72,
-    "output": 2.3
+    "cache_read": 0.2,
+    "input": 1,
+    "output": 3.2
   },
   "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+  "family": "glm",
   "id": "z-ai/glm-5",
-  "last_updated": "2026-03-15",
+  "last_updated": "2026-02-12",
   "limit": {
-    "context": 202752,
+    "context": 204800,
     "output": 131072
   },
   "modalities": {
@@ -19,22 +21,21 @@
       "text"
     ]
   },
-  "name": "Z.ai: GLM 5",
+  "name": "GLM-5",
   "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
-    },
-    {
       "type": "effort",
       "values": [
+        "none",
         "high",
         "xhigh"
       ]
     }
   ],
   "release_date": "2026-02-12",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

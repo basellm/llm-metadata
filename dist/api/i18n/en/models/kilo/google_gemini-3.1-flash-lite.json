@@ -2,31 +2,33 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.025,
-    "cache_write": 0.08333,
+    "cache_write": 0.083333,
     "input": 0.25,
     "output": 1.5,
     "reasoning": 1.5
   },
   "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
+  "family": "gemini-flash-lite",
   "id": "google/gemini-3.1-flash-lite",
-  "last_updated": "2026-05-16",
+  "knowledge": "2025-01",
+  "last_updated": "2026-05-07",
   "limit": {
     "context": 1048576,
     "output": 65536
   },
   "modalities": {
     "input": [
-      "audio",
-      "image",
-      "pdf",
       "text",
-      "video"
+      "image",
+      "video",
+      "audio",
+      "pdf"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Google: Gemini 3.1 Flash Lite",
+  "name": "Gemini 3.1 Flash Lite",
   "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
@@ -41,6 +43,7 @@
     }
   ],
   "release_date": "2026-05-07",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

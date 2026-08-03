@@ -1,14 +1,14 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.2,
+    "cache_read": 0.004,
     "context_over_200k": {
       "cache_read": 0.4,
       "input": 2,
       "output": 6
     },
-    "input": 1,
-    "output": 3,
+    "input": 0.435,
+    "output": 0.87,
     "tiers": [
       {
         "cache_read": 0.4,
@@ -41,11 +41,20 @@
       "text"
     ]
   },
-  "name": "Xiaomi: MiMo V2.5 Pro",
+  "name": "MiMo-V2.5-Pro",
   "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-04-22",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

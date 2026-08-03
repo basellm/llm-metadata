@@ -6,23 +6,26 @@
     "output": 4.5
   },
   "description": "Compact GPT model for low-latency assistance and high-volume workloads",
+  "family": "gpt-mini",
   "id": "openai/gpt-5.4-mini",
-  "last_updated": "2026-04-11",
+  "knowledge": "2025-08-31",
+  "last_updated": "2026-03-17",
   "limit": {
     "context": 400000,
+    "input": 272000,
     "output": 128000
   },
   "modalities": {
     "input": [
-      "image",
       "pdf",
+      "image",
       "text"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "OpenAI: GPT-5.4 Mini",
+  "name": "GPT-5.4 mini",
   "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
@@ -33,11 +36,13 @@
         "low",
         "medium",
         "high",
-        "xhigh"
+        "xhigh",
+        "max"
       ]
     }
   ],
   "release_date": "2026-03-17",
+  "structured_output": true,
   "temperature": false,
   "tool_call": true
 }

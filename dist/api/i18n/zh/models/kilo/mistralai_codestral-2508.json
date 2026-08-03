@@ -1,10 +1,12 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
+    "cache_read": 0.03,
     "input": 0.3,
     "output": 0.9
   },
   "description": "Mistral coding model for code completion, generation, and developer workflows",
+  "family": "codestral",
   "id": "mistralai/codestral-2508",
   "last_updated": "2025-08-01",
   "limit": {
@@ -13,16 +15,18 @@
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "pdf"
     ],
     "output": [
       "text"
     ]
   },
   "name": "Mistral: Codestral 2508",
-  "open_weights": true,
+  "open_weights": false,
   "reasoning": false,
   "release_date": "2025-08-01",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

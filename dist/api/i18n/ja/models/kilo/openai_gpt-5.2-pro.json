@@ -5,36 +5,43 @@
     "output": 168
   },
   "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+  "family": "gpt-pro",
   "id": "openai/gpt-5.2-pro",
-  "last_updated": "2026-03-15",
+  "knowledge": "2025-08-31",
+  "last_updated": "2025-12-11",
   "limit": {
     "context": 400000,
+    "input": 272000,
     "output": 128000
   },
   "modalities": {
     "input": [
       "image",
-      "pdf",
-      "text"
+      "text",
+      "pdf"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "OpenAI: GPT-5.2 Pro",
+  "name": "GPT-5.2 Pro",
   "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
     {
       "type": "effort",
       "values": [
+        "none",
+        "low",
         "medium",
         "high",
-        "xhigh"
+        "xhigh",
+        "max"
       ]
     }
   ],
   "release_date": "2025-12-11",
+  "structured_output": true,
   "temperature": false,
   "tool_call": true
 }

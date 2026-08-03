@@ -1,35 +1,41 @@
 {
   "attachment": true,
   "cost": {
-    "input": 0.05,
+    "input": 0.1,
     "output": 0.15
   },
   "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+  "family": "qwen",
   "id": "qwen/qwen3.5-9b",
-  "last_updated": "2026-03-15",
+  "last_updated": "2026-02-23",
   "limit": {
-    "context": 256000,
-    "output": 32768
+    "context": 262144,
+    "output": 262144
   },
   "modalities": {
     "input": [
-      "image",
       "text",
+      "image",
       "video"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Qwen: Qwen3.5-9B",
+  "name": "Qwen3.5 9B",
   "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
     }
   ],
-  "release_date": "2026-03-10",
+  "release_date": "2026-02-23",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

@@ -6,36 +6,42 @@
     "output": 8
   },
   "description": "O-series reasoning model for hard analysis, math, coding, and planning",
+  "family": "o",
   "id": "openai/o3",
-  "last_updated": "2026-03-15",
+  "knowledge": "2024-05",
+  "last_updated": "2025-04-16",
   "limit": {
     "context": 200000,
     "output": 100000
   },
   "modalities": {
     "input": [
+      "text",
       "image",
-      "pdf",
-      "text"
+      "pdf"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "OpenAI: o3",
+  "name": "o3",
   "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
     {
       "type": "effort",
       "values": [
+        "none",
         "low",
         "medium",
-        "high"
+        "high",
+        "xhigh",
+        "max"
       ]
     }
   ],
   "release_date": "2025-04-16",
+  "structured_output": true,
   "temperature": false,
   "tool_call": true
 }

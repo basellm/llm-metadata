@@ -1,29 +1,32 @@
 {
   "attachment": true,
   "cost": {
+    "cache_read": 0.015,
     "input": 0.15,
     "output": 0.15
   },
   "description": "Compact Mistral model for edge, latency-sensitive, and cost-efficient workloads",
+  "family": "ministral",
   "id": "mistralai/ministral-8b-2512",
-  "last_updated": "2026-03-15",
+  "last_updated": "2025-12-02",
   "limit": {
     "context": 262144,
     "output": 32768
   },
   "modalities": {
     "input": [
-      "image",
-      "text"
+      "text",
+      "image"
     ],
     "output": [
       "text"
     ]
   },
   "name": "Mistral: Ministral 3 8B 2512",
-  "open_weights": true,
+  "open_weights": false,
   "reasoning": false,
   "release_date": "2025-12-02",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

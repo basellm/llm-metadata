@@ -1,15 +1,17 @@
 {
   "attachment": false,
   "cost": {
-    "input": 0.15,
-    "output": 0.75
+    "cache_read": 0.135,
+    "input": 0.27,
+    "output": 1
   },
   "description": "DeepSeek chat model for instruction following, coding, and analysis",
+  "family": "deepseek",
   "id": "deepseek/deepseek-chat-v3.1",
   "last_updated": "2025-08-21",
   "limit": {
-    "context": 32768,
-    "output": 7168
+    "context": 163840,
+    "output": 32768
   },
   "modalities": {
     "input": [
@@ -20,14 +22,20 @@
     ]
   },
   "name": "DeepSeek: DeepSeek V3.1",
-  "open_weights": true,
+  "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
+      "type": "effort",
+      "values": [
+        "none",
+        "high",
+        "xhigh"
+      ]
     }
   ],
   "release_date": "2025-08-21",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

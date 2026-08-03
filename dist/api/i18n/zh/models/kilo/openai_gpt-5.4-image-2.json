@@ -6,8 +6,9 @@
     "output": 15
   },
   "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+  "family": "gpt",
   "id": "openai/gpt-5.4-image-2",
-  "last_updated": "2026-05-01",
+  "last_updated": "2026-04-21",
   "limit": {
     "context": 272000,
     "output": 128000
@@ -26,8 +27,21 @@
   "name": "OpenAI: GPT-5.4 Image 2",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2026-04-21",
+  "structured_output": true,
   "temperature": false,
   "tool_call": false
 }

@@ -1,15 +1,17 @@
 {
   "attachment": true,
   "cost": {
-    "input": 0.14,
-    "output": 0.4
+    "cache_read": 0.05,
+    "input": 0.09,
+    "output": 0.34
   },
   "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+  "family": "gemma",
   "id": "google/gemma-4-31b-it",
-  "last_updated": "2026-04-11",
+  "last_updated": "2026-04-02",
   "limit": {
     "context": 262144,
-    "output": 131072
+    "output": 262144
   },
   "modalities": {
     "input": [
@@ -21,15 +23,20 @@
       "text"
     ]
   },
-  "name": "Google: Gemma 4 31B",
+  "name": "Gemma 4 31B IT",
   "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
     }
   ],
   "release_date": "2026-04-02",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

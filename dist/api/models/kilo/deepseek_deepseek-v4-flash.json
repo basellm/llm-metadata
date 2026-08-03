@@ -1,16 +1,18 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.0028,
+    "cache_read": 0.028,
     "input": 0.14,
     "output": 0.28
   },
   "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+  "family": "deepseek-flash",
   "id": "deepseek/deepseek-v4-flash",
-  "last_updated": "2026-05-01",
+  "knowledge": "2025-05",
+  "last_updated": "2026-04-24",
   "limit": {
     "context": 1048576,
-    "output": 384000
+    "output": 393216
   },
   "modalities": {
     "input": [
@@ -20,22 +22,21 @@
       "text"
     ]
   },
-  "name": "DeepSeek: DeepSeek V4 Flash",
-  "open_weights": false,
+  "name": "DeepSeek V4 Flash",
+  "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
-    },
-    {
       "type": "effort",
       "values": [
+        "none",
         "high",
         "xhigh"
       ]
     }
   ],
   "release_date": "2026-04-24",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

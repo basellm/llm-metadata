@@ -4,20 +4,22 @@
     "cache_read": 0.4,
     "cache_write": 5,
     "input": 4,
-    "output": 20
+    "output": 20,
+    "reasoning": 0
   },
   "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+  "family": "claude-opus",
   "id": "stealth/claude-opus-4.7",
-  "last_updated": "2026-05-27",
+  "last_updated": "2025-08-26",
   "limit": {
     "context": 1000000,
     "output": 128000
   },
   "modalities": {
     "input": [
+      "text",
       "image",
-      "pdf",
-      "text"
+      "pdf"
     ],
     "output": [
       "text"
@@ -28,20 +30,19 @@
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
-    },
-    {
       "type": "effort",
       "values": [
+        "none",
         "low",
         "medium",
         "high",
         "xhigh",
-        "max"
+        "xhigh"
       ]
     }
   ],
-  "release_date": "2026-04-16",
-  "temperature": false,
+  "release_date": "2025-08-26",
+  "structured_output": false,
+  "temperature": true,
   "tool_call": true
 }

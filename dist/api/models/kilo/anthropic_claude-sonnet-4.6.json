@@ -1,48 +1,48 @@
 {
   "attachment": true,
   "cost": {
+    "cache_read": 0.3,
+    "cache_write": 3.75,
     "input": 3,
     "output": 15
   },
   "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+  "family": "claude-sonnet",
   "id": "anthropic/claude-sonnet-4.6",
   "knowledge": "2025-08-31",
-  "last_updated": "2026-03-15",
+  "last_updated": "2026-03-13",
   "limit": {
     "context": 1000000,
     "output": 128000
   },
   "modalities": {
     "input": [
+      "text",
       "image",
-      "text"
+      "pdf"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Anthropic: Claude Sonnet 4.6",
+  "name": "Claude Sonnet 4.6",
   "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
-    },
-    {
       "type": "effort",
       "values": [
+        "none",
         "low",
         "medium",
         "high",
-        "max"
+        "xhigh",
+        "xhigh"
       ]
-    },
-    {
-      "min": 1024,
-      "type": "budget_tokens"
     }
   ],
   "release_date": "2026-02-17",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

@@ -7,7 +7,7 @@
   "description": "Open Nemotron omni model combining reasoning with text, vision, and audio",
   "family": "nemotron",
   "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-  "last_updated": "2026-05-01",
+  "last_updated": "2026-04-28",
   "limit": {
     "context": 256000,
     "output": 65536
@@ -15,16 +15,16 @@
   "modalities": {
     "input": [
       "text",
-      "audio",
       "image",
-      "video"
+      "video",
+      "audio"
     ],
     "output": [
       "text"
     ]
   },
   "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
@@ -35,6 +35,7 @@
     }
   ],
   "release_date": "2026-04-28",
+  "structured_output": false,
   "temperature": true,
   "tool_call": true
 }
