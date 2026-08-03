@@ -1,12 +1,14 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.028,
-    "input": 0.14,
-    "output": 0.28
+    "cache_read": 0.014,
+    "input": 0.07,
+    "output": 0.14
   },
-  "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+  "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+  "family": "deepseek-flash",
   "id": "deepseek/deepseek-v4-flash:thinking",
+  "knowledge": "2025-05",
   "last_updated": "2026-04-24",
   "limit": {
     "context": 1048576,
@@ -22,18 +24,20 @@
     ]
   },
   "name": "DeepSeek V4 Flash (Thinking)",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
       "type": "effort",
       "values": [
+        "none",
         "high",
-        "xhigh"
+        "max"
       ]
     }
   ],
   "release_date": "2026-04-24",
   "structured_output": true,
+  "temperature": true,
   "tool_call": true
 }

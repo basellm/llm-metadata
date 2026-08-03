@@ -971,7 +971,7 @@
       ],
       "release_date": "2026-07-24",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "anthropic/claude-opus-5-fast": {
@@ -9479,8 +9479,8 @@
     "qwen/qwen3-235b-a22b-2507": {
       "attachment": false,
       "cost": {
-        "input": 0.09,
-        "output": 0.55
+        "input": 0.1495,
+        "output": 0.598
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -9489,7 +9489,7 @@
       "last_updated": "2025-07-21",
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -9746,7 +9746,7 @@
       "attachment": false,
       "cost": {
         "input": 0.07,
-        "output": 0.28
+        "output": 0.27
       },
       "description": "Smaller Qwen coder for efficient local agents and repo-level fixes",
       "family": "qwen",
@@ -9755,7 +9755,7 @@
       "last_updated": "2025-04",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -10124,8 +10124,8 @@
     "qwen/qwen3-vl-235b-a22b-thinking": {
       "attachment": true,
       "cost": {
-        "input": 0.4,
-        "output": 4
+        "input": 0.98,
+        "output": 3.95
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -10659,9 +10659,8 @@
     "qwen/qwen3.6-27b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.15,
-        "input": 0.3,
-        "output": 2
+        "input": 0.289,
+        "output": 2.4
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -10669,7 +10668,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -11065,6 +11064,52 @@
         }
       ],
       "release_date": "2026-06-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3.8-max": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 6
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen/qwen3.8-max",
+      "last_updated": "2026-08-03",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-03",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -11527,7 +11572,7 @@
         }
       ],
       "release_date": "2026-04-20",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -11635,7 +11680,7 @@
       "last_updated": "2024-11-08",
       "limit": {
         "context": 1024000,
-        "output": 32768
+        "output": 1024000
       },
       "modalities": {
         "input": [
@@ -12561,9 +12606,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.05278,
-        "input": 0.2842,
-        "output": 0.8932
+        "cache_read": 0.11674,
+        "input": 0.6286,
+        "output": 1.9756
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",

@@ -1,0 +1,44 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 1.5,
+    "input": 3,
+    "output": 15
+  },
+  "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+  "family": "kimi-k3",
+  "id": "TEE/kimi-k3",
+  "last_updated": "2026-07-16",
+  "limit": {
+    "context": 1048576,
+    "input": 1048576,
+    "output": 65535
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Kimi K3 TEE",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "high",
+        "max"
+      ]
+    }
+  ],
+  "release_date": "2026-07-16",
+  "structured_output": true,
+  "temperature": false,
+  "tool_call": true
+}

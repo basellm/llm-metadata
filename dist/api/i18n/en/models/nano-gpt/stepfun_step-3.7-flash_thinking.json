@@ -5,12 +5,13 @@
     "input": 0.2,
     "output": 1.15
   },
-  "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
+  "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
   "id": "stepfun/step-3.7-flash:thinking",
+  "knowledge": "2026-03-01",
   "last_updated": "2026-05-29",
   "limit": {
-    "context": 256000,
-    "input": 256000,
+    "context": 262144,
+    "input": 262144,
     "output": 256000
   },
   "modalities": {
@@ -24,10 +25,21 @@
     ]
   },
   "name": "Step 3.7 Flash Thinking",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-05-29",
   "structured_output": true,
+  "temperature": true,
   "tool_call": true
 }

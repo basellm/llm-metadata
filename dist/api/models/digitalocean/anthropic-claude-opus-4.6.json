@@ -4,8 +4,8 @@
     "cache_read": 0.5,
     "cache_write": 6.25,
     "context_over_200k": {
-      "cache_read": 0.5,
-      "cache_write": 6.25,
+      "cache_read": 1,
+      "cache_write": 12.5,
       "input": 10,
       "output": 37.5
     },
@@ -13,8 +13,8 @@
     "output": 25,
     "tiers": [
       {
-        "cache_read": 0.5,
-        "cache_write": 6.25,
+        "cache_read": 1,
+        "cache_write": 12.5,
         "input": 10,
         "output": 37.5,
         "tier": {
@@ -30,20 +30,19 @@
   "knowledge": "2025-05-31",
   "last_updated": "2026-03-13",
   "limit": {
-    "context": 1000000,
-    "output": 128000
+    "context": 200000,
+    "output": 8192
   },
   "modalities": {
     "input": [
       "text",
-      "image",
-      "pdf"
+      "image"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Claude Opus 4.6",
+  "name": "Anthropic Claude Opus 4.6",
   "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
@@ -52,7 +51,8 @@
       "values": [
         "low",
         "medium",
-        "high"
+        "high",
+        "max"
       ]
     }
   ],

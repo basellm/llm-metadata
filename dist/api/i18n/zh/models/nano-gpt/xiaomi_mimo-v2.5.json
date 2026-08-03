@@ -2,11 +2,14 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.0028,
+    "cache_write": 0,
     "input": 0.14,
     "output": 0.28
   },
-  "description": "MiMo omni model for text, image, video, audio, and agents",
+  "description": "Open MiMo model for multimodal coding agents and long-context automation",
+  "family": "mimo",
   "id": "xiaomi/mimo-v2.5",
+  "knowledge": "2024-12",
   "last_updated": "2026-04-22",
   "limit": {
     "context": 1048576,
@@ -24,14 +27,19 @@
     ]
   },
   "name": "MiMo V2.5",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
     }
   ],
   "release_date": "2026-04-22",
   "structured_output": true,
+  "temperature": true,
   "tool_call": true
 }

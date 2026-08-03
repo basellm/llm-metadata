@@ -1,13 +1,16 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.04,
+    "cache_read": 0.08,
+    "cache_write": 0.5,
     "input": 0.4,
     "output": 1.6
   },
-  "description": "Compact GPT model for low-latency assistance and high-volume workloads",
+  "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
+  "family": "qwen",
   "id": "qwen3.7-plus:thinking",
-  "last_updated": "2026-06-01",
+  "knowledge": "2025-04",
+  "last_updated": "2026-06-02",
   "limit": {
     "context": 983616,
     "input": 983616,
@@ -28,12 +31,15 @@
   "reasoning": true,
   "reasoning_options": [
     {
-      "max": 262144,
-      "min": 1024,
-      "type": "budget_tokens"
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
     }
   ],
-  "release_date": "2026-06-01",
+  "release_date": "2026-06-02",
   "structured_output": false,
+  "temperature": true,
   "tool_call": false
 }

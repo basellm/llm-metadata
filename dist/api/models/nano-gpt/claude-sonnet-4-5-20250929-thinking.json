@@ -1,11 +1,14 @@
 {
   "attachment": true,
   "cost": {
-    "input": 2.992,
-    "output": 14.994
+    "cache_read": 0.3,
+    "input": 3,
+    "output": 15
   },
-  "description": "Compact GPT model for low-latency assistance and high-volume workloads",
+  "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+  "family": "claude-sonnet",
   "id": "claude-sonnet-4-5-20250929-thinking",
+  "knowledge": "2025-07-31",
   "last_updated": "2025-09-29",
   "limit": {
     "context": 1000000,
@@ -25,8 +28,20 @@
   "name": "Claude Sonnet 4.5 Thinking",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2025-09-29",
   "structured_output": true,
+  "temperature": true,
   "tool_call": true
 }

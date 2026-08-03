@@ -1,11 +1,14 @@
 {
   "attachment": true,
   "cost": {
-    "input": 4.998,
-    "output": 25.007
+    "cache_read": 0.5,
+    "input": 5,
+    "output": 25
   },
-  "description": "Compact GPT model for low-latency assistance and high-volume workloads",
+  "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+  "family": "claude-opus",
   "id": "claude-opus-4-5-20251101:thinking",
+  "knowledge": "2025-05",
   "last_updated": "2025-11-01",
   "limit": {
     "context": 200000,
@@ -25,8 +28,20 @@
   "name": "Claude 4.5 Opus Thinking",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2025-11-01",
   "structured_output": true,
+  "temperature": true,
   "tool_call": true
 }

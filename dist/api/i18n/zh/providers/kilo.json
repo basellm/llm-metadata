@@ -450,7 +450,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -498,7 +497,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -545,7 +543,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -593,7 +590,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -641,7 +637,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -689,7 +684,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -737,7 +731,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -785,7 +778,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -833,7 +825,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -881,7 +872,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -929,7 +919,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -977,7 +966,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -1024,7 +1012,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -1072,7 +1059,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -1120,7 +1106,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -1168,7 +1153,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -9543,8 +9527,8 @@
       "knowledge": "2025-04",
       "last_updated": "2025-04",
       "limit": {
-        "context": 262144,
-        "output": 262144
+        "context": 160000,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -10385,8 +10369,8 @@
       "id": "qwen/qwen3.6-27b",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 262144,
-        "output": 65536
+        "context": 131072,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -10710,6 +10694,49 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen/qwen3.8-max": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 6
+      },
+      "description": "Qwen3.8 Max is the flagship model in Alibaba's Qwen3.8 series, the general-availability successor to the Qwen3.8 Max Preview. It is a multimodal reasoning model intended for complex reasoning, visual understanding,...",
+      "family": "qwen",
+      "id": "qwen/qwen3.8-max",
+      "last_updated": "2026-08-03",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-08-03",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "rekaai/reka-edge": {
       "attachment": true,
       "cost": {
@@ -10959,7 +10986,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -11007,7 +11033,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -11055,7 +11080,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -11103,7 +11127,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -11431,7 +11454,40 @@
         }
       ],
       "release_date": "2026-04-20",
-      "structured_output": true,
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "tencent/hy3:free": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0,
+        "reasoning": 0
+      },
+      "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent, activating 21B parameters per token. It supports configurable reasoning effort, agentic workflows, reliable tool calling, and long-context tasks across coding, document processing, financial analysis, and frontend development.",
+      "family": "Hy",
+      "id": "tencent/hy3:free",
+      "last_updated": "2026-07-06",
+      "limit": {
+        "context": 262144,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Tencent: Hy3 (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-06",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -12473,7 +12529,7 @@
       "last_updated": "2026-06-13",
       "limit": {
         "context": 1048576,
-        "output": 262144
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -12581,7 +12637,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -12628,7 +12683,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -12675,7 +12729,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }
@@ -12723,7 +12776,6 @@
             "low",
             "medium",
             "high",
-            "xhigh",
             "xhigh"
           ]
         }

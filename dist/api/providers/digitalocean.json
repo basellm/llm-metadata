@@ -18,8 +18,8 @@
       "id": "alibaba-qwen3-32b",
       "last_updated": "2026-04-16",
       "limit": {
-        "context": 131000,
-        "output": 40960
+        "context": 32768,
+        "output": 6554
       },
       "modalities": {
         "input": [
@@ -29,7 +29,7 @@
           "text"
         ]
       },
-      "name": "Qwen3-32B",
+      "name": "Qwen3 32B",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -238,19 +238,18 @@
       "last_updated": "2025-08-05",
       "limit": {
         "context": 200000,
-        "output": 32000
+        "output": 8192
       },
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Opus 4.1",
+      "name": "Anthropic Claude 4.1 Opus",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -316,8 +315,8 @@
         "cache_read": 0.3,
         "cache_write": 3.75,
         "context_over_200k": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
+          "cache_read": 0.6,
+          "cache_write": 7.5,
           "input": 6,
           "output": 22.5
         },
@@ -325,8 +324,8 @@
         "output": 15,
         "tiers": [
           {
-            "cache_read": 0.3,
-            "cache_write": 3.75,
+            "cache_read": 0.6,
+            "cache_write": 7.5,
             "input": 6,
             "output": 22.5,
             "tier": {
@@ -342,20 +341,19 @@
       "knowledge": "2025-07-31",
       "last_updated": "2025-09-29",
       "limit": {
-        "context": 1000000,
+        "context": 200000,
         "output": 64000
       },
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Sonnet 4.5",
+      "name": "Anthropic Claude 4.5 Sonnet",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -378,8 +376,8 @@
         "cache_read": 0.3,
         "cache_write": 3.75,
         "context_over_200k": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
+          "cache_read": 0.6,
+          "cache_write": 7.5,
           "input": 6,
           "output": 22.5
         },
@@ -387,8 +385,8 @@
         "output": 15,
         "tiers": [
           {
-            "cache_read": 0.3,
-            "cache_write": 3.75,
+            "cache_read": 0.6,
+            "cache_write": 7.5,
             "input": 6,
             "output": 22.5,
             "tier": {
@@ -404,20 +402,19 @@
       "knowledge": "2025-08-31",
       "last_updated": "2026-03-13",
       "limit": {
-        "context": 1000000,
-        "output": 64000
+        "context": 200000,
+        "output": 8192
       },
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Sonnet 4.6",
+      "name": "Anthropic Claude Sonnet 4.6",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -426,7 +423,8 @@
           "values": [
             "low",
             "medium",
-            "high"
+            "high",
+            "max"
           ]
         }
       ],
@@ -434,8 +432,57 @@
       "temperature": true,
       "tool_call": true
     },
+    "anthropic-claude-5-sonnet": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 10
+      },
+      "description": "Everyday Claude agent model for coding, planning, browsing, and general work",
+      "family": "claude-sonnet",
+      "id": "anthropic-claude-5-sonnet",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-06-30",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Anthropic Claude Sonnet 5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-06-30",
+      "temperature": false,
+      "tool_call": true
+    },
     "anthropic-claude-fable-5": {
       "attachment": true,
+      "cost": {
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "input": 10,
+        "output": 50
+      },
       "description": "Claude model for creative writing, analysis, and controlled agent workflows",
       "family": "claude-fable",
       "id": "anthropic-claude-fable-5",
@@ -463,7 +510,8 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -474,7 +522,7 @@
     "anthropic-claude-haiku-4.5": {
       "attachment": true,
       "cost": {
-        "cache_read": 1,
+        "cache_read": 0.1,
         "cache_write": 1.25,
         "input": 1,
         "output": 5
@@ -486,19 +534,18 @@
       "last_updated": "2025-10-15",
       "limit": {
         "context": 200000,
-        "output": 64000
+        "output": 8192
       },
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Haiku 4.5",
+      "name": "Anthropic Claude Haiku 4.5",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -574,19 +621,18 @@
       "last_updated": "2025-11-24",
       "limit": {
         "context": 200000,
-        "output": 64000
+        "output": 8192
       },
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Opus 4.5",
+      "name": "Anthropic Claude Opus 4.5",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -595,7 +641,8 @@
           "values": [
             "low",
             "medium",
-            "high"
+            "high",
+            "max"
           ]
         }
       ],
@@ -609,8 +656,8 @@
         "cache_read": 0.5,
         "cache_write": 6.25,
         "context_over_200k": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
+          "cache_read": 1,
+          "cache_write": 12.5,
           "input": 10,
           "output": 37.5
         },
@@ -618,8 +665,8 @@
         "output": 25,
         "tiers": [
           {
-            "cache_read": 0.5,
-            "cache_write": 6.25,
+            "cache_read": 1,
+            "cache_write": 12.5,
             "input": 10,
             "output": 37.5,
             "tier": {
@@ -635,20 +682,19 @@
       "knowledge": "2025-05-31",
       "last_updated": "2026-03-13",
       "limit": {
-        "context": 1000000,
-        "output": 128000
+        "context": 200000,
+        "output": 8192
       },
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Opus 4.6",
+      "name": "Anthropic Claude Opus 4.6",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -657,7 +703,8 @@
           "values": [
             "low",
             "medium",
-            "high"
+            "high",
+            "max"
           ]
         }
       ],
@@ -679,20 +726,19 @@
       "knowledge": "2026-01-31",
       "last_updated": "2026-04-16",
       "limit": {
-        "context": 1000000,
-        "output": 128000
+        "context": 200000,
+        "output": 8192
       },
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Claude Opus 4.7",
+      "name": "Anthropic Claude Opus 4.7",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -702,7 +748,7 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "max"
           ]
         }
       ],
@@ -735,7 +781,7 @@
           "text"
         ]
       },
-      "name": "Claude Opus 4.8",
+      "name": "Anthropic Claude Opus 4.8",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -745,12 +791,57 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "max"
           ]
         }
       ],
       "release_date": "2026-05-28",
       "temperature": true,
+      "tool_call": true
+    },
+    "anthropic-claude-opus-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Strongest Claude Opus model for coding, agents, and professional work",
+      "family": "claude-opus",
+      "id": "anthropic-claude-opus-5",
+      "knowledge": "2026-05",
+      "last_updated": "2026-07-24",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Anthropic Claude Opus 5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-24",
+      "temperature": false,
       "tool_call": true
     },
     "anthropic-claude-sonnet-4": {
@@ -827,8 +918,8 @@
       "id": "arcee-trinity-large-thinking",
       "last_updated": "2026-04-16",
       "limit": {
-        "context": 256000,
-        "output": 128000
+        "context": 128000,
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -838,7 +929,7 @@
           "text"
         ]
       },
-      "name": "Trinity Large Thinking",
+      "name": "Arcee Trinity Large Thinking (Public Preview)",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -852,7 +943,6 @@
         }
       ],
       "release_date": "2026-04-02",
-      "status": "beta",
       "temperature": true,
       "tool_call": true
     },
@@ -917,8 +1007,9 @@
     "deepseek-3.2": {
       "attachment": false,
       "cost": {
-        "input": 0.5,
-        "output": 1.6
+        "cache_read": 0.15,
+        "input": 0.425,
+        "output": 1.36
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -929,8 +1020,8 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-30",
       "limit": {
-        "context": 128000,
-        "output": 64000
+        "context": 163840,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -940,7 +1031,7 @@
           "text"
         ]
       },
-      "name": "DeepSeek V3.2",
+      "name": "Deepseek 3.2",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -960,13 +1051,18 @@
     },
     "deepseek-4-flash": {
       "attachment": false,
+      "cost": {
+        "cache_read": 0.028,
+        "input": 0.112,
+        "output": 0.224
+      },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek",
       "id": "deepseek-4-flash",
       "last_updated": "2026-05-29",
       "limit": {
         "context": 262144,
-        "output": 8192
+        "output": 52429
       },
       "modalities": {
         "input": [
@@ -994,8 +1090,8 @@
       "id": "deepseek-r1-distill-llama-70b",
       "last_updated": "2025-01-30",
       "limit": {
-        "context": 131072,
-        "output": 32768
+        "context": 32678,
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -1054,8 +1150,9 @@
     "deepseek-v4-pro": {
       "attachment": false,
       "cost": {
-        "input": 1.74,
-        "output": 3.48
+        "cache_read": 0.348,
+        "input": 1.392,
+        "output": 2.784
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
       "family": "deepseek-thinking",
@@ -1066,8 +1163,8 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1048576,
-        "output": 393216
+        "context": 262144,
+        "output": 52429
       },
       "modalities": {
         "input": [
@@ -1077,7 +1174,7 @@
           "text"
         ]
       },
-      "name": "DeepSeek V4 Pro",
+      "name": "Deepseek V4 Pro",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -1227,6 +1324,7 @@
     "gemma-4-31B-it": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.036,
         "input": 0.18,
         "output": 0.5
       },
@@ -1241,13 +1339,14 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Gemma 4 31B",
+      "name": "Gemma 4",
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-04-22",
@@ -1258,8 +1357,9 @@
     "glm-5": {
       "attachment": false,
       "cost": {
-        "input": 1,
-        "output": 3.2
+        "cache_read": 0.2,
+        "input": 0.75,
+        "output": 2.4
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
@@ -1269,8 +1369,8 @@
       },
       "last_updated": "2026-04-16",
       "limit": {
-        "context": 202752,
-        "output": 128000
+        "context": 64000,
+        "output": 12800
       },
       "modalities": {
         "input": [
@@ -1296,6 +1396,7 @@
         }
       ],
       "release_date": "2026-02-11",
+      "temperature": true,
       "tool_call": true
     },
     "glm-5.1": {
@@ -1313,8 +1414,8 @@
       },
       "last_updated": "2026-04-07",
       "limit": {
-        "context": 200000,
-        "output": 131072
+        "context": 163840,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -1327,7 +1428,16 @@
       "name": "GLM-5.1",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-04-07",
       "structured_output": true,
       "temperature": true,
@@ -1348,8 +1458,8 @@
       },
       "last_updated": "2026-06-13",
       "limit": {
-        "context": 1000000,
-        "output": 131072
+        "context": 262144,
+        "output": 52429
       },
       "modalities": {
         "input": [
@@ -1366,11 +1476,9 @@
         {
           "type": "effort",
           "values": [
-            "none",
-            "low",
             "medium",
             "high",
-            "max"
+            "xhigh"
           ]
         }
       ],
@@ -1409,10 +1517,11 @@
       "tool_call": false
     },
     "kimi-k2.5": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
-        "input": 0.5,
-        "output": 2.7
+        "cache_read": 0.203,
+        "input": 0.375,
+        "output": 2.025
       },
       "description": "Kimi model for long-context chat, coding, and agentic reasoning",
       "family": "kimi-k2",
@@ -1424,11 +1533,12 @@
       "last_updated": "2026-04-16",
       "limit": {
         "context": 262144,
-        "output": 32768
+        "output": 52429
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -1456,8 +1566,9 @@
     "kimi-k2.6": {
       "attachment": true,
       "cost": {
-        "input": 0.95,
-        "output": 4
+        "cache_read": 0.19,
+        "input": 0.76,
+        "output": 3.2
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi-k2",
@@ -1469,7 +1580,7 @@
       "last_updated": "2026-04-21",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 52429
       },
       "modalities": {
         "input": [
@@ -1556,7 +1667,7 @@
       "knowledge": "2024-08",
       "last_updated": "2026-04-30",
       "limit": {
-        "context": 1000000,
+        "context": 128000,
         "output": 16384
       },
       "modalities": {
@@ -1568,7 +1679,7 @@
           "text"
         ]
       },
-      "name": "Llama 4 Maverick 17B 128E Instruct",
+      "name": "Llama 4 Maverick",
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-04-05",
@@ -1619,7 +1730,7 @@
       "last_updated": "2024-12-06",
       "limit": {
         "context": 128000,
-        "output": 128000
+        "output": 4096
       },
       "modalities": {
         "input": [
@@ -1629,18 +1740,62 @@
           "text"
         ]
       },
-      "name": "Llama 3.3 Instruct 70B",
+      "name": "Llama 3.3 Instruct (70B)",
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-12-06",
       "temperature": true,
       "tool_call": true
     },
-    "minimax-m2.5": {
+    "mimo-v2.5-pro": {
       "attachment": false,
       "cost": {
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.16,
+        "input": 0.6,
+        "output": 3
+      },
+      "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+      "family": "mimo",
+      "id": "mimo-v2.5-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 262144,
+        "output": 52429
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo V2.5 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m2.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.225,
+        "output": 0.9
       },
       "description": "MiniMax model for chat, coding, office work, and agentic tasks",
       "family": "minimax-m2.5",
@@ -1648,18 +1803,19 @@
       "knowledge": "2025-08",
       "last_updated": "2026-04-16",
       "limit": {
-        "context": 204800,
-        "output": 128000
+        "context": 65536,
+        "output": 13107
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "MiniMax M2.5",
+      "name": "MiniMax M2.5 (Public Preview)",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -1673,7 +1829,6 @@
         }
       ],
       "release_date": "2026-02-12",
-      "status": "beta",
       "temperature": true,
       "tool_call": true
     },
@@ -1725,7 +1880,7 @@
           "text"
         ]
       },
-      "name": "Ministral 3 14B Instruct",
+      "name": "Ministral 3 14B",
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-12-15",
@@ -1863,23 +2018,22 @@
       "description": "Open Nemotron omni model combining reasoning with text, vision, and audio",
       "family": "nemotron",
       "id": "nemotron-3-nano-omni",
-      "last_updated": "2026-04-30",
+      "last_updated": "2026-04-28",
       "limit": {
         "context": 65536,
-        "output": 65536
+        "output": 13107
       },
       "modalities": {
         "input": [
           "text",
           "image",
-          "video",
-          "audio"
+          "video"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Nemotron Nano 3 Omni",
+      "name": "Nemotron 3 Nano Omni",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -1901,13 +2055,17 @@
     },
     "nemotron-3-ultra-550b": {
       "attachment": false,
+      "cost": {
+        "input": 0.9,
+        "output": 1.7
+      },
       "description": "Flagship Nemotron model for high-throughput reasoning and complex agents",
       "family": "nemotron",
       "id": "nemotron-3-ultra-550b",
       "last_updated": "2026-06-12",
       "limit": {
         "context": 131072,
-        "output": 8192
+        "output": 26214
       },
       "modalities": {
         "input": [
@@ -1933,8 +2091,7 @@
       "description": "Nemotron multimodal model for visual reasoning and agentic AI workflows",
       "family": "nemotron",
       "id": "nemotron-nano-12b-v2-vl",
-      "knowledge": "2024-10",
-      "last_updated": "2026-04-30",
+      "last_updated": "2025-10-28",
       "limit": {
         "context": 128000,
         "output": 16384
@@ -1942,13 +2099,14 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Nemotron Nano 12B v2 VL",
+      "name": "Nemotron-nano 12b v2-vl",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -1963,23 +2121,23 @@
           ]
         }
       ],
-      "release_date": "2025-12-01",
+      "release_date": "2025-10-28",
       "temperature": true,
       "tool_call": true
     },
     "nvidia-nemotron-3-super-120b": {
       "attachment": false,
       "cost": {
-        "input": 0.3,
-        "output": 0.65
+        "cache_read": 0.06,
+        "input": 0.21,
+        "output": 0.455
       },
       "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
       "family": "nemotron",
       "id": "nvidia-nemotron-3-super-120b",
-      "knowledge": "2026-02",
-      "last_updated": "2026-04-16",
+      "last_updated": "2026-03-11",
       "limit": {
-        "context": 256000,
+        "context": 1000000,
         "output": 32768
       },
       "modalities": {
@@ -1990,7 +2148,7 @@
           "text"
         ]
       },
-      "name": "Nemotron-3-Super-120B",
+      "name": "NVIDIA Nemotron 3 Super 120B  (Public Preview)",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -2006,7 +2164,6 @@
         }
       ],
       "release_date": "2026-03-11",
-      "status": "beta",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -2030,14 +2187,13 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "GPT-4.1",
+      "name": "OpenAI GPT-4.1",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-04-14",
@@ -2064,14 +2220,13 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "GPT-4o",
+      "name": "OpenAI GPT-4o",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-05-13",
@@ -2098,16 +2253,25 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "GPT-4o mini",
+      "name": "OpenAI GPT-4o mini",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2024-07-18",
       "structured_output": true,
       "temperature": true,
@@ -2138,7 +2302,7 @@
           "text"
         ]
       },
-      "name": "GPT-5",
+      "name": "OpenAI GPT-5",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -2182,7 +2346,7 @@
           "text"
         ]
       },
-      "name": "GPT-5 mini",
+      "name": "OpenAI GPT-5 Mini",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -2226,7 +2390,7 @@
           "text"
         ]
       },
-      "name": "GPT-5 nano",
+      "name": "OpenAI GPT-5 Nano",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -2314,18 +2478,17 @@
           "text"
         ]
       },
-      "name": "GPT-5.2",
+      "name": "OpenAI GPT-5.2",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
-            "none",
+            "minimal",
             "low",
             "medium",
-            "high",
-            "xhigh"
+            "high"
           ]
         }
       ],
@@ -2358,16 +2521,17 @@
           "text"
         ]
       },
-      "name": "GPT-5.2 pro",
+      "name": "OpenAI GPT-5.2 Pro",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
+            "minimal",
+            "low",
             "medium",
-            "high",
-            "xhigh"
+            "high"
           ]
         }
       ],
@@ -2394,14 +2558,13 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "GPT-5.3 Codex",
+      "name": "OpenAI GPT-5.3 Codex",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -2425,8 +2588,24 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.25,
+        "context_over_200k": {
+          "cache_read": 0.5,
+          "input": 5,
+          "output": 22.5
+        },
         "input": 2.5,
-        "output": 15
+        "output": 15,
+        "tiers": [
+          {
+            "cache_read": 0.5,
+            "input": 5,
+            "output": 22.5,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
       "family": "gpt",
@@ -2434,20 +2613,19 @@
       "knowledge": "2025-08-31",
       "last_updated": "2026-03-05",
       "limit": {
-        "context": 1000000,
+        "context": 400000,
         "output": 128000
       },
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "GPT-5.4",
+      "name": "OpenAI GPT-5.4",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -2492,7 +2670,7 @@
           "text"
         ]
       },
-      "name": "GPT-5.4 mini",
+      "name": "OpenAI GPT-5.4 Mini",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -2537,7 +2715,7 @@
           "text"
         ]
       },
-      "name": "GPT-5.4 nano",
+      "name": "OpenAI GPT-5.4 Nano",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -2560,8 +2738,22 @@
     "openai-gpt-5.4-pro": {
       "attachment": true,
       "cost": {
+        "context_over_200k": {
+          "input": 60,
+          "output": 270
+        },
         "input": 30,
-        "output": 180
+        "output": 180,
+        "tiers": [
+          {
+            "input": 60,
+            "output": 270,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
       "family": "gpt-pro",
@@ -2569,7 +2761,7 @@
       "knowledge": "2025-08-31",
       "last_updated": "2026-03-05",
       "limit": {
-        "context": 400000,
+        "context": 1050000,
         "output": 128000
       },
       "modalities": {
@@ -2581,7 +2773,7 @@
           "text"
         ]
       },
-      "name": "GPT-5.4 pro",
+      "name": "OpenAI GPT-5.4 Pro",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -2633,14 +2825,13 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "GPT-5.5",
+      "name": "OpenAI GPT-5.5",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -2656,6 +2847,195 @@
         }
       ],
       "release_date": "2026-04-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai-gpt-5.6-luna": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.02,
+        "context_over_200k": {
+          "cache_read": 0.04,
+          "input": 0.4,
+          "output": 1.8
+        },
+        "input": 0.2,
+        "output": 1.2,
+        "tiers": [
+          {
+            "cache_read": 0.04,
+            "input": 0.4,
+            "output": 1.8,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
+      "family": "gpt-luna",
+      "id": "openai-gpt-5.6-luna",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI GPT-5.6 Luna",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai-gpt-5.6-sol": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 1,
+          "input": 10,
+          "output": 45
+        },
+        "input": 5,
+        "output": 30,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "input": 10,
+            "output": 45,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
+      "family": "gpt-sol",
+      "id": "openai-gpt-5.6-sol",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI GPT-5.6 Sol",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai-gpt-5.6-terra": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 4,
+          "output": 18
+        },
+        "input": 2,
+        "output": 12,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
+      "family": "gpt-terra",
+      "id": "openai-gpt-5.6-terra",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI GPT-5.6 Terra",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -2704,7 +3084,7 @@
       "last_updated": "2025-11-25",
       "limit": {
         "context": 0,
-        "output": 0
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -2712,10 +3092,11 @@
           "image"
         ],
         "output": [
-          "image"
+          "image",
+          "text"
         ]
       },
-      "name": "GPT Image 1.5",
+      "name": "OpenAI GPT Image 1.5",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-11-25",
@@ -2724,13 +3105,17 @@
     },
     "openai-gpt-image-2": {
       "attachment": true,
+      "cost": {
+        "input": 8,
+        "output": 30
+      },
       "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "gpt-image",
       "id": "openai-gpt-image-2",
       "last_updated": "2025-04-24",
       "limit": {
         "context": 0,
-        "output": 0
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -2738,10 +3123,11 @@
           "image"
         ],
         "output": [
-          "image"
+          "image",
+          "text"
         ]
       },
-      "name": "GPT Image 2",
+      "name": "OpenAI GPT Image 2",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-04-24",
@@ -2751,8 +3137,9 @@
     "openai-gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "input": 0.1,
-        "output": 0.7
+        "cache_read": 0.02,
+        "input": 0.07,
+        "output": 0.49
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
@@ -2763,8 +3150,8 @@
       "knowledge": "2024-06",
       "last_updated": "2026-04-16",
       "limit": {
-        "context": 131072,
-        "output": 131072
+        "context": 128000,
+        "output": 4096
       },
       "modalities": {
         "input": [
@@ -2774,7 +3161,7 @@
           "text"
         ]
       },
-      "name": "gpt-oss-120b",
+      "name": "OpenAI GPT-oss-120b",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -2804,8 +3191,8 @@
       "knowledge": "2024-06",
       "last_updated": "2026-04-16",
       "limit": {
-        "context": 131072,
-        "output": 131072
+        "context": 128000,
+        "output": 4096
       },
       "modalities": {
         "input": [
@@ -2815,7 +3202,7 @@
           "text"
         ]
       },
-      "name": "gpt-oss-20b",
+      "name": "OpenAI GPT-oss-20b",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -2852,14 +3239,13 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "o1",
+      "name": "OpenAI o1",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -2896,14 +3282,13 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "o3",
+      "name": "OpenAI o3",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -2922,7 +3307,7 @@
       "tool_call": true
     },
     "openai-o3-mini": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.55,
         "input": 1.1,
@@ -2939,13 +3324,14 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "o3-mini",
+      "name": "OpenAI o3 mini",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -2992,6 +3378,7 @@
     "qwen3-coder-flash": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.09,
         "input": 0.45,
         "output": 1.7
       },
@@ -3002,7 +3389,7 @@
       "last_updated": "2026-04-30",
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 52429
       },
       "modalities": {
         "input": [
@@ -3075,22 +3462,25 @@
       "tool_call": false
     },
     "qwen3.5-397b-a17b": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
-        "input": 0.55,
-        "output": 3.5
+        "cache_read": 0.111,
+        "input": 0.385,
+        "output": 2.45
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen3.5",
       "id": "qwen3.5-397b-a17b",
       "last_updated": "2026-04-30",
       "limit": {
-        "context": 262144,
-        "output": 81920
+        "context": 131072,
+        "output": 26214
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"

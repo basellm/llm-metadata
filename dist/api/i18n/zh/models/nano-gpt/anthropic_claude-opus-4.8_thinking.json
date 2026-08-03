@@ -1,12 +1,14 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.4998,
-    "input": 4.998,
-    "output": 25.007
+    "cache_read": 0.5,
+    "input": 5,
+    "output": 25
   },
-  "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+  "description": "Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents",
+  "family": "claude-opus",
   "id": "anthropic/claude-opus-4.8:thinking",
+  "knowledge": "2026-01",
   "last_updated": "2026-05-28",
   "limit": {
     "context": 1000000,
@@ -26,8 +28,20 @@
   "name": "Claude Opus 4.8 Thinking",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2026-05-28",
   "structured_output": true,
+  "temperature": false,
   "tool_call": true
 }

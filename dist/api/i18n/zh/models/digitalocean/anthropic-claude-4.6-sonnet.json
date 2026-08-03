@@ -4,8 +4,8 @@
     "cache_read": 0.3,
     "cache_write": 3.75,
     "context_over_200k": {
-      "cache_read": 0.3,
-      "cache_write": 3.75,
+      "cache_read": 0.6,
+      "cache_write": 7.5,
       "input": 6,
       "output": 22.5
     },
@@ -13,8 +13,8 @@
     "output": 15,
     "tiers": [
       {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
+        "cache_read": 0.6,
+        "cache_write": 7.5,
         "input": 6,
         "output": 22.5,
         "tier": {
@@ -30,20 +30,19 @@
   "knowledge": "2025-08-31",
   "last_updated": "2026-03-13",
   "limit": {
-    "context": 1000000,
-    "output": 64000
+    "context": 200000,
+    "output": 8192
   },
   "modalities": {
     "input": [
       "text",
-      "image",
-      "pdf"
+      "image"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Claude Sonnet 4.6",
+  "name": "Anthropic Claude Sonnet 4.6",
   "open_weights": false,
   "reasoning": true,
   "reasoning_options": [
@@ -52,7 +51,8 @@
       "values": [
         "low",
         "medium",
-        "high"
+        "high",
+        "max"
       ]
     }
   ],

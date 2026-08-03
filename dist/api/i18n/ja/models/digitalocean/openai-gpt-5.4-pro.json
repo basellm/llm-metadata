@@ -1,8 +1,22 @@
 {
   "attachment": true,
   "cost": {
+    "context_over_200k": {
+      "input": 60,
+      "output": 270
+    },
     "input": 30,
-    "output": 180
+    "output": 180,
+    "tiers": [
+      {
+        "input": 60,
+        "output": 270,
+        "tier": {
+          "size": 272000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
   "family": "gpt-pro",
@@ -10,7 +24,7 @@
   "knowledge": "2025-08-31",
   "last_updated": "2026-03-05",
   "limit": {
-    "context": 400000,
+    "context": 1050000,
     "output": 128000
   },
   "modalities": {
@@ -22,7 +36,7 @@
       "text"
     ]
   },
-  "name": "GPT-5.4 pro",
+  "name": "OpenAI GPT-5.4 Pro",
   "open_weights": false,
   "reasoning": true,
   "reasoning_options": [

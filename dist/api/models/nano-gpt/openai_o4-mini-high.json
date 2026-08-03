@@ -1,6 +1,7 @@
 {
   "attachment": false,
   "cost": {
+    "cache_read": 0.55,
     "input": 1.1,
     "output": 4.4
   },
@@ -24,8 +25,17 @@
   "name": "OpenAI o4-mini high",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
-  "release_date": "2025-04-16",
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "release_date": "2025-12-04",
   "structured_output": true,
   "tool_call": true
 }

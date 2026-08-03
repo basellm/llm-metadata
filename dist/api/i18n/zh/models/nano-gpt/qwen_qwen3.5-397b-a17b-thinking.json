@@ -1,12 +1,14 @@
 {
   "attachment": true,
   "cost": {
+    "cache_read": 0.3,
     "input": 0.6,
     "output": 3.6
   },
-  "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+  "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
+  "family": "qwen",
   "id": "qwen/qwen3.5-397b-a17b-thinking",
-  "last_updated": "2026-02-16",
+  "last_updated": "2026-02-15",
   "limit": {
     "context": 258048,
     "input": 258048,
@@ -23,7 +25,7 @@
     ]
   },
   "name": "Qwen3.5 397B A17B Thinking",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
@@ -32,7 +34,8 @@
       "type": "budget_tokens"
     }
   ],
-  "release_date": "2026-02-16",
+  "release_date": "2026-02-15",
   "structured_output": false,
+  "temperature": true,
   "tool_call": false
 }

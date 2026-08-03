@@ -1,13 +1,14 @@
 {
   "attachment": false,
   "cost": {
-    "input": 0.3,
-    "output": 2.55
+    "cache_read": 0.15,
+    "input": 0.75,
+    "output": 2.6
   },
-  "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+  "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
   "family": "glm",
   "id": "zai-org/glm-5.1",
-  "last_updated": "2026-03-27",
+  "last_updated": "2026-04-07",
   "limit": {
     "context": 200000,
     "input": 200000,
@@ -26,10 +27,15 @@
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
     }
   ],
-  "release_date": "2026-03-27",
+  "release_date": "2026-04-07",
   "structured_output": true,
+  "temperature": true,
   "tool_call": true
 }

@@ -1,13 +1,15 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
-    "input": 0.3,
-    "output": 1.9
+    "cache_read": 0.3,
+    "input": 0.6,
+    "output": 3
   },
-  "description": "Kimi model for long-context chat, coding, and agentic reasoning",
+  "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
   "family": "kimi-k2",
   "id": "TEE/kimi-k2.5",
-  "last_updated": "2026-01-29",
+  "knowledge": "2025-01",
+  "last_updated": "2026-01",
   "limit": {
     "context": 128000,
     "input": 128000,
@@ -15,16 +17,18 @@
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image"
     ],
     "output": [
       "text"
     ]
   },
   "name": "Kimi K2.5 TEE",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": false,
-  "release_date": "2026-01-29",
+  "release_date": "2026-01",
   "structured_output": false,
+  "temperature": false,
   "tool_call": false
 }

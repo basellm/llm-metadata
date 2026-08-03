@@ -1,10 +1,12 @@
 {
   "attachment": true,
   "cost": {
+    "cache_read": 0.75,
     "input": 1.5,
     "output": 7.5
   },
   "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
+  "family": "mistral-medium",
   "id": "mistral/mistral-medium-3.5:thinking",
   "last_updated": "2026-04-30",
   "limit": {
@@ -22,9 +24,17 @@
     ]
   },
   "name": "Mistral Medium 3.5 Thinking",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-04-30",
   "structured_output": true,
   "tool_call": true

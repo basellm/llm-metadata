@@ -2,15 +2,17 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.5,
+    "cache_write": 6.25,
     "input": 5,
     "output": 30
   },
   "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
+  "family": "gpt",
   "id": "openai/gpt-chat-latest",
   "last_updated": "2026-05-03",
   "limit": {
-    "context": 400000,
-    "input": 400000,
+    "context": 1050000,
+    "input": 1050000,
     "output": 128000
   },
   "modalities": {
@@ -25,7 +27,20 @@
   },
   "name": "GPT Chat Latest",
   "open_weights": false,
-  "reasoning": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2026-05-03",
   "structured_output": true,
   "tool_call": true

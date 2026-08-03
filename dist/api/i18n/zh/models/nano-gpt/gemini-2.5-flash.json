@@ -1,12 +1,15 @@
 {
   "attachment": true,
   "cost": {
+    "cache_read": 0.03,
     "input": 0.3,
     "output": 2.5
   },
-  "description": "Compact GPT model for low-latency assistance and high-volume workloads",
+  "description": "Fast Gemini workhorse for multimodal apps where latency and price matter",
+  "family": "gemini-flash",
   "id": "gemini-2.5-flash",
-  "last_updated": "2025-06-05",
+  "knowledge": "2025-01",
+  "last_updated": "2025-06-17",
   "limit": {
     "context": 1048756,
     "input": 1048756,
@@ -15,7 +18,8 @@
   "modalities": {
     "input": [
       "text",
-      "image"
+      "image",
+      "audio"
     ],
     "output": [
       "text"
@@ -28,14 +32,14 @@
     {
       "type": "effort",
       "values": [
-        "none",
         "low",
         "medium",
         "high"
       ]
     }
   ],
-  "release_date": "2025-06-05",
+  "release_date": "2025-06-17",
   "structured_output": false,
+  "temperature": true,
   "tool_call": false
 }

@@ -583,7 +583,7 @@
         ]
       },
       "name": "DeepSeek V4 Flash 0731",
-      "open_weights": true,
+      "open_weights": false,
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-07-31",
@@ -1507,6 +1507,39 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k3-fast-api": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.45,
+        "input": 4.5,
+        "output": 22.5
+      },
+      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
+      "family": "kimi-k3",
+      "id": "kimi-k3-fast-api",
+      "last_updated": "2026-08-03",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3 Fast",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-08-03",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -2827,6 +2860,40 @@
       "reasoning_options": [],
       "release_date": "2026-06-02",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen-3-8-max": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3125,
+        "cache_write": 3.125,
+        "input": 2.5,
+        "output": 7.5
+      },
+      "description": "Preview Qwen flagship for million-token multimodal reasoning and long-horizon agentic workflows",
+      "family": "qwen",
+      "id": "qwen-3-8-max",
+      "last_updated": "2026-07-19",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3.8 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-22",
       "temperature": true,
       "tool_call": true
     },

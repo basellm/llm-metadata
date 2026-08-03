@@ -13,8 +13,8 @@
   },
   "last_updated": "2026-04-07",
   "limit": {
-    "context": 200000,
-    "output": 131072
+    "context": 163840,
+    "output": 32768
   },
   "modalities": {
     "input": [
@@ -27,7 +27,16 @@
   "name": "GLM-5.1",
   "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    }
+  ],
   "release_date": "2026-04-07",
   "structured_output": true,
   "temperature": true,

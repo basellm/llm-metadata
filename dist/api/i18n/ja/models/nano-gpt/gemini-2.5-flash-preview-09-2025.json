@@ -1,10 +1,12 @@
 {
   "attachment": true,
   "cost": {
+    "cache_read": 0.03,
     "input": 0.3,
     "output": 2.5
   },
   "description": "Compact GPT model for low-latency assistance and high-volume workloads",
+  "family": "gemini",
   "id": "gemini-2.5-flash-preview-09-2025",
   "last_updated": "2025-09-25",
   "limit": {
@@ -16,6 +18,7 @@
     "input": [
       "text",
       "image",
+      "audio",
       "pdf"
     ],
     "output": [
@@ -29,7 +32,6 @@
     {
       "type": "effort",
       "values": [
-        "none",
         "low",
         "medium",
         "high"

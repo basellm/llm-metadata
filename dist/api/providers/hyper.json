@@ -51,7 +51,7 @@
     "deepseek-v4-flash-0731": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.030486,
+        "cache_read": 0.032664,
         "input": 0.152432,
         "output": 0.304864
       },
@@ -134,9 +134,9 @@
     "gemma-4-26b-a4b-it": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.065,
-        "input": 0.13,
-        "output": 0.43
+        "cache_write": 0.063,
+        "input": 0.126,
+        "output": 0.42
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -156,7 +156,8 @@
       },
       "name": "Gemma 4 26B A4B IT",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-04-30",
       "structured_output": true,
       "temperature": true,
@@ -187,7 +188,8 @@
       },
       "name": "GLM-5",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-04-13",
       "temperature": true,
       "tool_call": true
@@ -316,9 +318,9 @@
     "kimi-k2.5": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.282,
-        "input": 0.564,
-        "output": 2.82
+        "cache_write": 0.27,
+        "input": 0.54,
+        "output": 2.85
       },
       "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
       "family": "kimi-k2",
@@ -339,7 +341,8 @@
       },
       "name": "Kimi K2.5",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-04-13",
       "structured_output": true,
       "temperature": false,
@@ -415,7 +418,8 @@
       },
       "name": "Kimi K2.7 Code",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-07-03",
       "structured_output": true,
       "temperature": false,
@@ -528,17 +532,17 @@
     "minimax-m2.7": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.218,
-        "input": 0.436,
-        "output": 1.72
+        "cache_write": 0.21,
+        "input": 0.42,
+        "output": 1.62
       },
       "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
       "family": "minimax",
       "id": "minimax-m2.7",
       "last_updated": "2026-07-22",
       "limit": {
-        "context": 204800,
-        "output": 20480
+        "context": 262100,
+        "output": 6553
       },
       "modalities": {
         "input": [
@@ -550,7 +554,8 @@
       },
       "name": "MiniMax-M2.7",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-06-05",
       "temperature": true,
       "tool_call": true
@@ -599,9 +604,9 @@
     "qwen3-coder-480b-a35b-instruct-int4-mixed-ar": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.2845,
-        "input": 0.569,
-        "output": 2.135
+        "cache_write": 0.2875,
+        "input": 0.575,
+        "output": 2.145
       },
       "description": "Open Qwen coding heavyweight for repository reasoning and agentic engineering",
       "family": "qwen",
@@ -685,7 +690,8 @@
       },
       "name": "Qwen3.6 Flash",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-05-20",
       "structured_output": true,
       "temperature": true,
@@ -718,7 +724,8 @@
       },
       "name": "Qwen3.6 Max Preview",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-05-20",
       "temperature": true,
       "tool_call": true
@@ -751,7 +758,8 @@
       },
       "name": "Qwen3.6 Plus",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-05-20",
       "temperature": true,
       "tool_call": true
@@ -783,7 +791,8 @@
       },
       "name": "Qwen3.7 Flash",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-07-27",
       "structured_output": true,
       "temperature": true,
@@ -814,7 +823,8 @@
       },
       "name": "Qwen3.7 Max",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-05-28",
       "temperature": true,
       "tool_call": true
@@ -846,8 +856,40 @@
       },
       "name": "Qwen3.7 Plus",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [],
       "release_date": "2026-06-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.8-max": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2,
+        "output": 6
+      },
+      "description": "Preview Qwen flagship for million-token multimodal reasoning and long-horizon agentic workflows",
+      "family": "qwen",
+      "id": "qwen3.8-max",
+      "last_updated": "2026-07-19",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Max Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-19",
       "temperature": true,
       "tool_call": true
     }

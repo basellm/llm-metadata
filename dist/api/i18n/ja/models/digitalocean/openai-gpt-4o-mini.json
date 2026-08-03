@@ -17,16 +17,25 @@
   "modalities": {
     "input": [
       "text",
-      "image",
-      "pdf"
+      "image"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "GPT-4o mini",
+  "name": "OpenAI GPT-4o mini",
   "open_weights": false,
-  "reasoning": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2024-07-18",
   "structured_output": true,
   "temperature": true,

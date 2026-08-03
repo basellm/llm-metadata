@@ -2,11 +2,14 @@
   "attachment": false,
   "cost": {
     "cache_read": 0.0036,
+    "cache_write": 0,
     "input": 0.435,
     "output": 0.87
   },
-  "description": "MiMo pro model for strong multimodal reasoning and agent execution",
+  "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+  "family": "mimo",
   "id": "xiaomi/mimo-v2.5-pro",
+  "knowledge": "2024-12",
   "last_updated": "2026-04-22",
   "limit": {
     "context": 1048576,
@@ -22,14 +25,19 @@
     ]
   },
   "name": "MiMo V2.5 Pro",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
     }
   ],
   "release_date": "2026-04-22",
   "structured_output": true,
+  "temperature": true,
   "tool_call": true
 }

@@ -1,10 +1,12 @@
 {
   "attachment": true,
   "cost": {
+    "cache_read": 0.015,
     "input": 0.15,
     "output": 3.5
   },
   "description": "Compact GPT model for low-latency assistance and high-volume workloads",
+  "family": "gemini",
   "id": "gemini-2.5-flash-preview-05-20:thinking",
   "last_updated": "2025-05-20",
   "limit": {
@@ -24,7 +26,16 @@
   "name": "Gemini 2.5 Flash 0520 Thinking",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2025-05-20",
   "structured_output": false,
   "tool_call": false
