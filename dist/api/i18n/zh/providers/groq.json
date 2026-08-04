@@ -7,6 +7,34 @@
   "id": "groq",
   "lobeIcon": "Groq.Color",
   "models": {
+    "allam-2-7b": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "ALLaM-2-7b instruction tuned model by SDAIA",
+      "id": "allam-2-7b",
+      "last_updated": "2025-01-23",
+      "limit": {
+        "context": 4096,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "ALLaM-2-7b",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-01-23",
+      "temperature": true,
+      "tool_call": false
+    },
     "canopylabs/orpheus-arabic-saudi": {
       "attachment": false,
       "description": "Speech generation model for controllable voice, narration, and audio delivery",
@@ -166,39 +194,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-12-06",
-      "temperature": true,
-      "tool_call": true
-    },
-    "meta-llama/llama-4-scout-17b-16e-instruct": {
-      "attachment": true,
-      "cost": {
-        "input": 0.11,
-        "output": 0.34
-      },
-      "description": "Open multimodal Llama model for long-context analysis and efficient agents",
-      "family": "llama",
-      "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-      "knowledge": "2024-08",
-      "last_updated": "2025-04-05",
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 4 Scout 17B 16E",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-04-05",
-      "status": "beta",
-      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -385,29 +380,31 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen/qwen3-32b": {
-      "attachment": false,
+    "qwen/qwen3.6-27b": {
+      "attachment": true,
       "cost": {
-        "input": 0.29,
-        "output": 0.59
+        "cache_read": 0.3,
+        "input": 0.6,
+        "output": 3
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
-      "id": "qwen/qwen3-32b",
-      "last_updated": "2025-06-12",
+      "id": "qwen/qwen3.6-27b",
+      "last_updated": "2026-04-22",
       "limit": {
         "context": 131072,
-        "output": 40960
+        "output": 16384
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Qwen3-32B",
+      "name": "Qwen3.6 27B",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -419,8 +416,8 @@
           ]
         }
       ],
-      "release_date": "2025-06-11",
-      "status": "beta",
+      "release_date": "2026-04-22",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
