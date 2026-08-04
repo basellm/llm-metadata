@@ -7,6 +7,50 @@
   "iconURL": "https://models.dev/logos/greenpt.svg",
   "id": "greenpt",
   "models": {
+    "deepseek-v4-flash-0731": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.0456,
+        "input": 0.1596,
+        "output": 0.399
+      },
+      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4-flash-0731",
+      "knowledge": "2025-05",
+      "last_updated": "2026-07-31",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0731",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-31",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "devstral-2-123b-instruct-2512": {
       "attachment": false,
       "cost": {
@@ -139,6 +183,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-04-07",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -146,6 +191,7 @@
     "glm-5.2": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.3135,
         "input": 1.254,
         "output": 5.016
       },
@@ -168,7 +214,405 @@
       "name": "GLM-5.2",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-caveman": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3135,
+        "input": 1.254,
+        "output": 5.016
+      },
+      "description": "glm-5.2 carrying a built-in ruleset that compresses prose, keeping code and technical detail verbatim. The middle tier, and the ruleset as its authors wrote it. Same upstream model and price per token as glm-5.2, with fewer output tokens.",
+      "family": "glm",
+      "id": "glm-5.2-caveman",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2 Caveman",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-caveman-lite": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3135,
+        "input": 1.254,
+        "output": 5.016
+      },
+      "description": "glm-5.2 carrying a built-in ruleset that compresses prose, keeping code and technical detail verbatim. The gentlest tier: it cuts filler only and keeps the explanation intact. Same upstream model and price per token as glm-5.2, with fewer output tokens.",
+      "family": "glm",
+      "id": "glm-5.2-caveman-lite",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2 Caveman Lite",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-caveman-ultra": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3135,
+        "input": 1.254,
+        "output": 5.016
+      },
+      "description": "glm-5.2 carrying a built-in ruleset that compresses prose, keeping code and technical detail verbatim. The most aggressive tier, close to answer-only. Same upstream model and price per token as glm-5.2, with fewer output tokens.",
+      "family": "glm",
+      "id": "glm-5.2-caveman-ultra",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2 Caveman Ultra",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-honey": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3135,
+        "input": 1.254,
+        "output": 5.016
+      },
+      "description": "glm-5.2 carrying a built-in ruleset that compresses both generated code and prose. The middle tier, and the ruleset as its authors wrote it. Same upstream model and price per token as glm-5.2, with fewer output tokens.",
+      "family": "glm",
+      "id": "glm-5.2-honey",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2 Honey",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-honey-lite": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3135,
+        "input": 1.254,
+        "output": 5.016
+      },
+      "description": "glm-5.2 carrying a built-in ruleset that compresses both generated code and prose. The gentlest tier: it cuts filler only and keeps the explanation intact. Same upstream model and price per token as glm-5.2, with fewer output tokens.",
+      "family": "glm",
+      "id": "glm-5.2-honey-lite",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2 Honey Lite",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-honey-ultra": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3135,
+        "input": 1.254,
+        "output": 5.016
+      },
+      "description": "glm-5.2 carrying a built-in ruleset that compresses both generated code and prose. The most aggressive tier, close to answer-only. Same upstream model and price per token as glm-5.2, with fewer output tokens.",
+      "family": "glm",
+      "id": "glm-5.2-honey-ultra",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2 Honey Ultra",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-ponytail": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3135,
+        "input": 1.254,
+        "output": 5.016
+      },
+      "description": "glm-5.2 carrying a built-in ruleset that compresses generated code, preferring platform features over custom code. The middle tier, and the ruleset as its authors wrote it. Same upstream model and price per token as glm-5.2, with fewer output tokens.",
+      "family": "glm",
+      "id": "glm-5.2-ponytail",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2 Ponytail",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-ponytail-lite": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3135,
+        "input": 1.254,
+        "output": 5.016
+      },
+      "description": "glm-5.2 carrying a built-in ruleset that compresses generated code, preferring platform features over custom code. The gentlest tier: it cuts filler only and keeps the explanation intact. Same upstream model and price per token as glm-5.2, with fewer output tokens.",
+      "family": "glm",
+      "id": "glm-5.2-ponytail-lite",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2 Ponytail Lite",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2-ponytail-ultra": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.3135,
+        "input": 1.254,
+        "output": 5.016
+      },
+      "description": "glm-5.2 carrying a built-in ruleset that compresses generated code, preferring platform features over custom code. The most aggressive tier, close to answer-only. Same upstream model and price per token as glm-5.2, with fewer output tokens.",
+      "family": "glm",
+      "id": "glm-5.2-ponytail-ultra",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2 Ponytail Ultra",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-06-13",
       "structured_output": true,
       "temperature": true,
@@ -200,7 +644,16 @@
       "name": "GPT OSS 120B",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-08-05",
       "structured_output": true,
       "temperature": true,
@@ -298,8 +751,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
-            "minimal",
             "low",
             "medium",
             "high"
@@ -341,8 +792,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
-            "minimal",
             "low",
             "medium",
             "high"
@@ -435,7 +884,16 @@
       "name": "Holo2 30B A3B",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-11",
       "structured_output": false,
       "temperature": true,
@@ -444,8 +902,9 @@
     "kimi-k2.6": {
       "attachment": true,
       "cost": {
-        "input": 0.828,
-        "output": 4.389
+        "cache_read": 0.2508,
+        "input": 0.7524,
+        "output": 4.275
       },
       "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
       "family": "kimi-k2",
@@ -468,7 +927,18 @@
       "name": "Kimi K2.6",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-21",
       "structured_output": true,
       "temperature": true,
@@ -503,6 +973,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-04-21",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -510,7 +981,8 @@
     "kimi-k2.7-code": {
       "attachment": false,
       "cost": {
-        "input": 0.941,
+        "cache_read": 0.1881,
+        "input": 0.9006,
         "output": 4.389
       },
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
@@ -533,8 +1005,63 @@
       "name": "Kimi K2.7 Code",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.9405,
+        "input": 3.762,
+        "output": 18.81
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "kimi-k3",
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -572,7 +1099,8 @@
     "minimax-m2.5": {
       "attachment": false,
       "cost": {
-        "input": 0.188,
+        "cache_read": 0.0627,
+        "input": 0.1938,
         "output": 1.129
       },
       "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
@@ -594,7 +1122,18 @@
       "name": "MiniMax-M2.5",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-02-12",
       "temperature": true,
       "tool_call": true
@@ -625,7 +1164,15 @@
       "name": "Mistral Medium 3.5",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-29",
       "structured_output": true,
       "temperature": true,
@@ -779,7 +1326,18 @@
       "name": "Qwen3.5 397B-A17B",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-02-15",
       "structured_output": true,
       "temperature": true,
@@ -811,7 +1369,18 @@
       "name": "Qwen3.6 35B-A3B",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-17",
       "structured_output": true,
       "temperature": true,

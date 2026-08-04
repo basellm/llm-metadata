@@ -8,22 +8,22 @@
   "id": "requesty",
   "lobeIcon": "Requesty",
   "models": {
-    "anthropic/claude-3-7-sonnet": {
+    "claude-fable-5": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "input": 10,
+        "output": 50
       },
-      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
-      "family": "claude-sonnet",
-      "id": "anthropic/claude-3-7-sonnet",
-      "knowledge": "2024-01",
-      "last_updated": "2025-02-19",
+      "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+      "family": "claude-fable",
+      "id": "claude-fable-5",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-06-09",
       "limit": {
-        "context": 200000,
-        "output": 64000
+        "context": 1000000,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -35,7 +35,7 @@
           "text"
         ]
       },
-      "name": "Claude Sonnet 3.7",
+      "name": "Claude Fable 5",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -53,11 +53,12 @@
           "type": "budget_tokens"
         }
       ],
-      "release_date": "2025-02-19",
-      "temperature": true,
+      "release_date": "2026-06-09",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
-    "anthropic/claude-haiku-4-5": {
+    "claude-haiku-4-5": {
       "attachment": true,
       "cost": {
         "cache_read": 0.1,
@@ -65,14 +66,14 @@
         "input": 1,
         "output": 5
       },
-      "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
+      "description": "Fast Claude lane for lightweight agents, office tasks, and responsive chat",
       "family": "claude-haiku",
-      "id": "anthropic/claude-haiku-4-5",
-      "knowledge": "2025-02-01",
+      "id": "claude-haiku-4-5",
+      "knowledge": "2025-02-28",
       "last_updated": "2025-10-15",
       "limit": {
         "context": 200000,
-        "output": 62000
+        "output": 64000
       },
       "modalities": {
         "input": [
@@ -84,7 +85,7 @@
           "text"
         ]
       },
-      "name": "Claude Haiku 4.5",
+      "name": "Claude Haiku 4.5 (latest)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -103,25 +104,26 @@
         }
       ],
       "release_date": "2025-10-15",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-opus-4": {
+    "claude-haiku-4-5@eu": {
       "attachment": true,
       "cost": {
-        "cache_read": 1.5,
-        "cache_write": 18.75,
-        "input": 15,
-        "output": 75
+        "cache_read": 0.11,
+        "cache_write": 1.375,
+        "input": 1.1,
+        "output": 5.5
       },
-      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
-      "family": "claude-opus",
-      "id": "anthropic/claude-opus-4",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-22",
+      "description": "Fast Claude lane for lightweight agents, office tasks, and responsive chat",
+      "family": "claude-haiku",
+      "id": "claude-haiku-4-5@eu",
+      "knowledge": "2025-02-28",
+      "last_updated": "2025-10-15",
       "limit": {
         "context": 200000,
-        "output": 32000
+        "output": 64000
       },
       "modalities": {
         "input": [
@@ -133,7 +135,7 @@
           "text"
         ]
       },
-      "name": "Claude Opus 4",
+      "name": "Claude Haiku 4.5 (latest) (EU)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -151,11 +153,12 @@
           "type": "budget_tokens"
         }
       ],
-      "release_date": "2025-05-22",
+      "release_date": "2025-10-15",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-opus-4-1": {
+    "claude-opus-4-1": {
       "attachment": true,
       "cost": {
         "cache_read": 1.5,
@@ -165,7 +168,7 @@
       },
       "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
-      "id": "anthropic/claude-opus-4-1",
+      "id": "claude-opus-4-1",
       "knowledge": "2025-03-31",
       "last_updated": "2025-08-05",
       "limit": {
@@ -182,7 +185,7 @@
           "text"
         ]
       },
-      "name": "Claude Opus 4.1",
+      "name": "Claude Opus 4.1 (latest)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -201,10 +204,11 @@
         }
       ],
       "release_date": "2025-08-05",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-opus-4-5": {
+    "claude-opus-4-5": {
       "attachment": true,
       "cost": {
         "cache_read": 0.5,
@@ -214,8 +218,8 @@
       },
       "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
-      "id": "anthropic/claude-opus-4-5",
-      "knowledge": "2025-03-31",
+      "id": "claude-opus-4-5",
+      "knowledge": "2025-05",
       "last_updated": "2025-11-24",
       "limit": {
         "context": 200000,
@@ -231,7 +235,7 @@
           "text"
         ]
       },
-      "name": "Claude Opus 4.5",
+      "name": "Claude Opus 4.5 (latest)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -250,40 +254,73 @@
         }
       ],
       "release_date": "2025-11-24",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-opus-4-6": {
+    "claude-opus-4-5@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.55,
+        "cache_write": 6.875,
+        "input": 5.5,
+        "output": 27.5
+      },
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "id": "claude-opus-4-5@eu",
+      "knowledge": "2025-05",
+      "last_updated": "2025-11-24",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.5 (latest) (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-11-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-4-6": {
       "attachment": true,
       "cost": {
         "cache_read": 0.5,
         "cache_write": 6.25,
-        "context_over_200k": {
-          "cache_read": 1,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 37.5
-        },
         "input": 5,
-        "output": 25,
-        "tiers": [
-          {
-            "cache_read": 1,
-            "cache_write": 12.5,
-            "input": 10,
-            "output": 37.5,
-            "tier": {
-              "size": 200000,
-              "type": "context"
-            }
-          }
-        ]
+        "output": 25
       },
-      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+      "description": "High-end Claude for difficult coding, planning, and slower expert reasoning",
       "family": "claude-opus",
-      "id": "anthropic/claude-opus-4-6",
+      "id": "claude-opus-4-6",
       "knowledge": "2025-05-31",
-      "last_updated": "2026-02-05",
+      "last_updated": "2026-03-13",
       "limit": {
         "context": 1000000,
         "output": 128000
@@ -321,71 +358,22 @@
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-sonnet-4": {
+    "claude-opus-4-6@eu": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
+        "cache_read": 0.55,
+        "cache_write": 6.88,
+        "input": 5.5,
+        "output": 27.5
       },
-      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
-      "family": "claude-sonnet",
-      "id": "anthropic/claude-sonnet-4",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-22",
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 4",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-05-22",
-      "temperature": true,
-      "tool_call": true
-    },
-    "anthropic/claude-sonnet-4-5": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
-      "family": "claude-sonnet",
-      "id": "anthropic/claude-sonnet-4-5",
-      "knowledge": "2025-07-31",
-      "last_updated": "2025-09-29",
+      "description": "High-end Claude for difficult coding, planning, and slower expert reasoning",
+      "family": "claude-opus",
+      "id": "claude-opus-4-6@eu",
+      "knowledge": "2025-05-31",
+      "last_updated": "2026-03-13",
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -397,7 +385,7 @@
           "text"
         ]
       },
-      "name": "Claude Sonnet 4.5",
+      "name": "Claude Opus 4.6 (EU)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -415,11 +403,312 @@
           "type": "budget_tokens"
         }
       ],
-      "release_date": "2025-09-29",
+      "release_date": "2026-02-05",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-sonnet-4-6": {
+    "claude-opus-4-7": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
+      "family": "claude-opus",
+      "id": "claude-opus-4-7",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-04-16",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.7",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "claude-opus-4-7@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.55,
+        "cache_write": 6.875,
+        "input": 5.5,
+        "output": 27.5
+      },
+      "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
+      "family": "claude-opus",
+      "id": "claude-opus-4-7@eu",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-04-16",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.7 (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "claude-opus-4-8": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "id": "claude-opus-4-8",
+      "knowledge": "2026-01",
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.8",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-05-28",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "claude-opus-4-8@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.55,
+        "cache_write": 6.875,
+        "input": 5.5,
+        "output": 27.5
+      },
+      "description": "Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "id": "claude-opus-4-8@eu",
+      "knowledge": "2026-01",
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.8 (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-05-28",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "claude-opus-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Strongest Claude Opus model for coding, agents, and professional work",
+      "family": "claude-opus",
+      "id": "claude-opus-5",
+      "knowledge": "2026-05",
+      "last_updated": "2026-07-24",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-24",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "claude-opus-5@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.55,
+        "cache_write": 6.875,
+        "input": 5.5,
+        "output": 27.5
+      },
+      "description": "Strongest Claude Opus model for coding, agents, and professional work",
+      "family": "claude-opus",
+      "id": "claude-opus-5@eu",
+      "knowledge": "2026-05",
+      "last_updated": "2026-07-24",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 5 (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-24",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "claude-sonnet-4-5": {
       "attachment": true,
       "cost": {
         "cache_read": 0.3,
@@ -447,9 +736,127 @@
       },
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
-      "id": "anthropic/claude-sonnet-4-6",
+      "id": "claude-sonnet-4-5",
+      "knowledge": "2025-07-31",
+      "last_updated": "2025-09-29",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.5 (latest)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-09-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-sonnet-4-5@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 4.125,
+        "context_over_200k": {
+          "cache_read": 0.6,
+          "cache_write": 8.25,
+          "input": 6.6,
+          "output": 24.75
+        },
+        "input": 3.3,
+        "output": 16.5,
+        "tiers": [
+          {
+            "cache_read": 0.6,
+            "cache_write": 8.25,
+            "input": 6.6,
+            "output": 24.75,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4-5@eu",
+      "knowledge": "2025-07-31",
+      "last_updated": "2025-09-29",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.5 (latest) (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-09-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-sonnet-4-6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Claude workhorse for coding agents, careful analysis, and production cost control",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4-6",
       "knowledge": "2025-08-31",
-      "last_updated": "2026-02-17",
+      "last_updated": "2026-03-13",
       "limit": {
         "context": 1000000,
         "output": 128000
@@ -457,7 +864,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -486,36 +894,34 @@
       "temperature": true,
       "tool_call": true
     },
-    "google/gemini-2.5-flash": {
+    "claude-sonnet-4-6@eu": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.075,
-        "cache_write": 0.55,
-        "input": 0.3,
-        "output": 2.5
+        "cache_read": 0.3,
+        "cache_write": 4.125,
+        "input": 3.3,
+        "output": 16.5
       },
-      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
-      "family": "gemini-flash",
-      "id": "google/gemini-2.5-flash",
-      "knowledge": "2025-01",
-      "last_updated": "2025-06-17",
+      "description": "Claude workhorse for coding agents, careful analysis, and production cost control",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4-6@eu",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-13",
       "limit": {
-        "context": 1048576,
-        "output": 65536
+        "context": 1000000,
+        "output": 64000
       },
       "modalities": {
         "input": [
           "text",
           "image",
-          "audio",
-          "video",
           "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Gemini 2.5 Flash",
+      "name": "Claude Sonnet 4.6 (EU)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -533,27 +939,30 @@
           "type": "budget_tokens"
         }
       ],
-      "release_date": "2025-06-17",
+      "release_date": "2026-02-17",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "google/gemini-2.5-pro": {
+    "claude-sonnet-4@eu": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.31,
-        "cache_write": 2.375,
+        "cache_read": 0.3,
+        "cache_write": 3.75,
         "context_over_200k": {
-          "cache_read": 0.25,
-          "input": 2.5,
-          "output": 15
+          "cache_read": 0.6,
+          "cache_write": 7.5,
+          "input": 6,
+          "output": 22.5
         },
-        "input": 1.25,
-        "output": 10,
+        "input": 3,
+        "output": 15,
         "tiers": [
           {
-            "cache_read": 0.25,
-            "input": 2.5,
-            "output": 15,
+            "cache_read": 0.6,
+            "cache_write": 7.5,
+            "input": 6,
+            "output": 22.5,
             "tier": {
               "size": 200000,
               "type": "context"
@@ -561,14 +970,164 @@
           }
         ]
       },
-      "description": "Google's proven reasoning model for coding, math, and multimodal analysis",
-      "family": "gemini-pro",
-      "id": "google/gemini-2.5-pro",
+      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4@eu",
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-05-22",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4 (latest) (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-05-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-sonnet-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 10
+      },
+      "description": "Everyday Claude agent model for coding, planning, browsing, and general work",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-5",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-06-30",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-06-30",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "claude-sonnet-5@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.22,
+        "cache_write": 2.75,
+        "input": 2.2,
+        "output": 11
+      },
+      "description": "Everyday Claude agent model for coding, planning, browsing, and general work",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-5@eu",
+      "knowledge": "2026-01-31",
+      "last_updated": "2026-06-30",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 5 (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-06-30",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gemini-2.5-flash@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "cache_write": 0.55,
+        "input": 0.3,
+        "output": 2.5
+      },
+      "description": "Fast Gemini workhorse for multimodal apps where latency and price matter",
+      "family": "gemini-flash",
+      "id": "gemini-2.5-flash@eu",
       "knowledge": "2025-01",
       "last_updated": "2025-06-17",
       "limit": {
         "context": 1048576,
-        "output": 65536
+        "output": 65535
       },
       "modalities": {
         "input": [
@@ -582,7 +1141,7 @@
           "text"
         ]
       },
-      "name": "Gemini 2.5 Pro",
+      "name": "Gemini 2.5 Flash (EU)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -601,748 +1160,281 @@
         }
       ],
       "release_date": "2025-06-17",
-      "temperature": true,
-      "tool_call": true
-    },
-    "google/gemini-3-flash-preview": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.05,
-        "cache_write": 1,
-        "input": 0.5,
-        "output": 3
-      },
-      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
-      "id": "google/gemini-3-flash-preview",
-      "knowledge": "2025-01",
-      "last_updated": "2025-12-17",
-      "limit": {
-        "context": 1048576,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 3 Flash",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-12-17",
-      "temperature": true,
-      "tool_call": true
-    },
-    "google/gemini-3-pro-preview": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.2,
-        "cache_write": 4.5,
-        "input": 2,
-        "output": 12
-      },
-      "description": "Advanced Gemini model for complex reasoning, coding, and multimodal analysis",
-      "family": "gemini-pro",
-      "id": "google/gemini-3-pro-preview",
-      "knowledge": "2025-01",
-      "last_updated": "2025-11-18",
-      "limit": {
-        "context": 1048576,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 3 Pro",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-11-18",
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-4.1": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.5,
-        "input": 2,
-        "output": 8
-      },
-      "description": "Long-lived GPT workhorse for coding, instruction following, and production apps",
-      "family": "gpt",
-      "id": "openai/gpt-4.1",
-      "knowledge": "2024-04",
-      "last_updated": "2025-04-14",
-      "limit": {
-        "context": 1047576,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-4.1",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-04-14",
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-4.1-mini": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.1,
-        "input": 0.4,
-        "output": 1.6
-      },
-      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-      "family": "gpt-mini",
-      "id": "openai/gpt-4.1-mini",
-      "knowledge": "2024-04",
-      "last_updated": "2025-04-14",
-      "limit": {
-        "context": 1047576,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-4.1 Mini",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-04-14",
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-4o-mini": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.08,
-        "input": 0.15,
-        "output": 0.6
-      },
-      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-      "family": "gpt-mini",
-      "id": "openai/gpt-4o-mini",
-      "knowledge": "2024-10",
-      "last_updated": "2024-07-18",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-4o Mini",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-07-18",
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-5": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.13,
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
-      "family": "gpt",
-      "id": "openai/gpt-5",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-08-07",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "audio",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text",
-          "audio",
-          "image"
-        ]
-      },
-      "name": "GPT-5",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-08-07",
-      "temperature": false,
-      "tool_call": true
-    },
-    "openai/gpt-5-chat": {
-      "attachment": true,
-      "cost": {
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-      "family": "gpt-codex",
-      "id": "openai/gpt-5-chat",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-08-07",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5 Chat (latest)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-08-07",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
-    "openai/gpt-5-codex": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.125,
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
-      "family": "gpt-codex",
-      "id": "openai/gpt-5-codex",
-      "knowledge": "2024-10-01",
-      "last_updated": "2025-09-15",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5 Codex",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-09-15",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "openai/gpt-5-image": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 1.25,
-        "input": 5,
-        "output": 10
-      },
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
-      "family": "gpt",
-      "id": "openai/gpt-5-image",
-      "knowledge": "2024-10-01",
-      "last_updated": "2025-10-14",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "name": "GPT-5 Image",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-10-14",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-5-mini": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.03,
-        "input": 0.25,
-        "output": 2
-      },
-      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-      "family": "gpt-mini",
-      "id": "openai/gpt-5-mini",
-      "knowledge": "2024-05-30",
-      "last_updated": "2025-08-07",
-      "limit": {
-        "context": 128000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5 Mini",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-08-07",
-      "temperature": false,
-      "tool_call": true
-    },
-    "openai/gpt-5-nano": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.01,
-        "input": 0.05,
-        "output": 0.4
-      },
-      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-      "family": "gpt-nano",
-      "id": "openai/gpt-5-nano",
-      "knowledge": "2024-05-30",
-      "last_updated": "2025-08-07",
-      "limit": {
-        "context": 16000,
-        "output": 4000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5 Nano",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-08-07",
-      "temperature": false,
-      "tool_call": true
-    },
-    "openai/gpt-5-pro": {
-      "attachment": true,
-      "cost": {
-        "input": 15,
-        "output": 120
-      },
-      "description": "Higher-accuracy GPT-5 tier for tough analysis, coding reviews, and planning",
-      "family": "gpt-pro",
-      "id": "openai/gpt-5-pro",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-10-06",
-      "limit": {
-        "context": 400000,
-        "output": 272000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5 Pro",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-10-06",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "openai/gpt-5.1": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.125,
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-      "family": "gpt",
-      "id": "openai/gpt-5.1",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.1",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-11-13",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-5.1-chat": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.125,
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-      "family": "gpt-codex",
-      "id": "openai/gpt-5.1-chat",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.1 Chat",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-11-13",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-5.1-codex": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.125,
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
-      "family": "gpt-codex",
-      "id": "openai/gpt-5.1-codex",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.1-Codex",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-11-13",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-5.1-codex-max": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.11,
-        "input": 1.1,
-        "output": 9
-      },
-      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
-      "family": "gpt-codex",
-      "id": "openai/gpt-5.1-codex-max",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.1-Codex-Max",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-11-13",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-5.1-codex-mini": {
+    "gemini-3.1-flash-lite@eu": {
       "attachment": true,
       "cost": {
         "cache_read": 0.025,
+        "cache_write": 0.08333,
+        "context_over_200k": {
+          "cache_read": 0.025,
+          "cache_write": 0.08333,
+          "input": 0.5,
+          "output": 2.25
+        },
         "input": 0.25,
-        "output": 2
+        "output": 1.5,
+        "tiers": [
+          {
+            "cache_read": 0.025,
+            "cache_write": 0.08333,
+            "input": 0.5,
+            "output": 2.25,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
-      "family": "gpt-codex",
-      "id": "openai/gpt-5.1-codex-mini",
-      "knowledge": "2024-09-30",
-      "last_updated": "2025-11-13",
+      "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
+      "family": "gemini-flash-lite",
+      "id": "gemini-3.1-flash-lite@eu",
+      "knowledge": "2025-01",
+      "last_updated": "2026-05-07",
       "limit": {
-        "context": 400000,
+        "context": 1048576,
+        "output": 65535
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.1 Flash Lite (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-05-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemini-3.5-flash@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 1.583,
+        "input": 1.5,
+        "output": 9
+      },
+      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+      "family": "gemini-flash",
+      "id": "gemini-3.5-flash@eu",
+      "knowledge": "2025-01",
+      "last_updated": "2026-05-19",
+      "limit": {
+        "context": 1048576,
+        "output": 65535
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.5 Flash (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-05-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1-mini@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.11,
+        "input": 0.44,
+        "output": 1.76
+      },
+      "description": "Affordable GPT-4.1 lane for fast coding help and structured extraction",
+      "family": "gpt-mini",
+      "id": "gpt-4.1-mini@eu",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1 mini (EU)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1-nano@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0275,
+        "input": 0.11,
+        "output": 0.44
+      },
+      "description": "Tiny GPT-4.1 option for classification, routing, and very high-volume tasks",
+      "family": "gpt-nano",
+      "id": "gpt-4.1-nano@eu",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1 nano (EU)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.55,
+        "input": 2.2,
+        "output": 8.8
+      },
+      "description": "Long-lived GPT workhorse for coding, instruction following, and production apps",
+      "family": "gpt",
+      "id": "gpt-4.1@eu",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1 (EU)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4o-mini@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0825,
+        "input": 0.165,
+        "output": 0.66
+      },
+      "description": "Small omni GPT for cheap multimodal assistance and production-scale traffic",
+      "family": "gpt-mini",
+      "id": "gpt-4o-mini@eu",
+      "knowledge": "2023-09",
+      "last_updated": "2024-07-18",
+      "limit": {
+        "context": 128000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o mini (EU)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-07-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-5-mini@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0275,
+        "input": 0.275,
+        "output": 2.2
+      },
+      "description": "Small GPT-5 for responsive agents, coding help, and everyday automation",
+      "family": "gpt-mini",
+      "id": "gpt-5-mini@eu",
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 200000,
         "output": 100000
       },
       "modalities": {
@@ -1354,7 +1446,104 @@
           "text"
         ]
       },
-      "name": "GPT-5.1-Codex-Mini",
+      "name": "GPT-5 Mini (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5-nano@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0055,
+        "input": 0.055,
+        "output": 0.44
+      },
+      "description": "Tiny GPT-5 lane for routing, extraction, classification, and bulk jobs",
+      "family": "gpt-nano",
+      "id": "gpt-5-nano@eu",
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Nano (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.1@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1375,
+        "input": 1.375,
+        "output": 11
+      },
+      "description": "Sharper GPT-5 generation for coding, product work, and tool-assisted tasks",
+      "family": "gpt",
+      "id": "gpt-5.1@eu",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1 (EU)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -1374,250 +1563,10 @@
       ],
       "release_date": "2025-11-13",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-5.2": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.175,
-        "input": 1.75,
-        "output": 14
-      },
-      "description": "Reliable GPT generation for broad coding, writing, and tool-assisted product work",
-      "family": "gpt",
-      "id": "openai/gpt-5.2",
-      "knowledge": "2025-08-31",
-      "last_updated": "2025-12-11",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.2",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-12-11",
-      "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
-    "openai/gpt-5.2-chat": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.175,
-        "input": 1.75,
-        "output": 14
-      },
-      "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-      "family": "gpt-codex",
-      "id": "openai/gpt-5.2-chat",
-      "knowledge": "2025-08-31",
-      "last_updated": "2025-12-11",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.2 Chat",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-12-11",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "openai/gpt-5.2-codex": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.175,
-        "input": 1.75,
-        "output": 14
-      },
-      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
-      "family": "gpt-codex",
-      "id": "openai/gpt-5.2-codex",
-      "knowledge": "2025-08-31",
-      "last_updated": "2026-01-14",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.2-Codex",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2026-01-14",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-5.2-pro": {
-      "attachment": true,
-      "cost": {
-        "input": 21,
-        "output": 168
-      },
-      "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
-      "family": "gpt-pro",
-      "id": "openai/gpt-5.2-pro",
-      "knowledge": "2025-08-31",
-      "last_updated": "2025-12-11",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.2 Pro",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-12-11",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "openai/gpt-5.3-codex": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.175,
-        "input": 1.75,
-        "output": 14
-      },
-      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
-      "family": "gpt-codex",
-      "id": "openai/gpt-5.3-codex",
-      "knowledge": "2025-08-31",
-      "last_updated": "2026-02-24",
-      "limit": {
-        "context": 400000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.3-Codex",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2026-02-24",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "openai/gpt-5.4": {
+    "gpt-5.4@eu": {
       "attachment": true,
       "cost": {
         "cache_read": 0.25,
@@ -1642,7 +1591,7 @@
       },
       "description": "Agent-ready GPT for coding and computer-use workflows at a lower cost",
       "family": "gpt",
-      "id": "openai/gpt-5.4",
+      "id": "gpt-5.4@eu",
       "knowledge": "2025-08-31",
       "last_updated": "2026-03-05",
       "limit": {
@@ -1660,7 +1609,7 @@
           "text"
         ]
       },
-      "name": "GPT-5.4",
+      "name": "GPT-5.4 (EU)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -1683,18 +1632,34 @@
       "temperature": false,
       "tool_call": true
     },
-    "openai/gpt-5.4-pro": {
+    "gpt-5.5@eu": {
       "attachment": true,
       "cost": {
-        "cache_read": 30,
-        "input": 30,
-        "output": 180
+        "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 1,
+          "input": 10,
+          "output": 45
+        },
+        "input": 5,
+        "output": 30,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "input": 10,
+            "output": 45,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
-      "family": "gpt-pro",
-      "id": "openai/gpt-5.4-pro",
-      "knowledge": "2025-08-31",
-      "last_updated": "2026-03-05",
+      "description": "Default frontier GPT for coding, computer use, research, and knowledge work",
+      "family": "gpt",
+      "id": "gpt-5.5@eu",
+      "knowledge": "2025-12-01",
+      "last_updated": "2026-04-23",
       "limit": {
         "context": 1050000,
         "input": 922000,
@@ -1710,7 +1675,7 @@
           "text"
         ]
       },
-      "name": "GPT-5.4 Pro",
+      "name": "GPT-5.5 (EU)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -1728,22 +1693,317 @@
           "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-03-05",
-      "structured_output": false,
+      "release_date": "2026-04-23",
+      "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
-    "openai/o4-mini": {
+    "gpt-5.6-luna@eu": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.28,
+        "cache_read": 0.11,
         "input": 1.1,
-        "output": 4.4
+        "output": 6.6
       },
-      "description": "O-series reasoning model for hard analysis, math, coding, and planning",
+      "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
+      "family": "gpt-luna",
+      "id": "gpt-5.6-luna@eu",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Luna (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.6-sol@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.55,
+        "input": 5.5,
+        "output": 33
+      },
+      "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
+      "family": "gpt-sol",
+      "id": "gpt-5.6-sol@eu",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Sol (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5.6-terra@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.275,
+        "input": 2.75,
+        "output": 16.5
+      },
+      "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
+      "family": "gpt-terra",
+      "id": "gpt-5.6-terra@eu",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.6 Terra (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-5@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1375,
+        "input": 1.375,
+        "output": 11
+      },
+      "description": "Original GPT-5 workhorse for reasoning, coding, writing, and tool workflows",
+      "family": "gpt",
+      "id": "gpt-5@eu",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 (EU)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.225,
+        "input": 2.25,
+        "output": 11.25
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "kimi-k3",
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k3@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.225,
+        "input": 2.25,
+        "output": 11.25
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "kimi-k3@eu",
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3 (EU)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "o4-mini@eu": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3025,
+        "input": 1.21,
+        "output": 4.84
+      },
+      "description": "Fast o-series model for compact reasoning, coding, and tool use",
       "family": "o-mini",
-      "id": "openai/o4-mini",
-      "knowledge": "2024-06",
+      "id": "o4-mini@eu",
+      "knowledge": "2024-05",
       "last_updated": "2025-04-16",
       "limit": {
         "context": 200000,
@@ -1758,7 +2018,7 @@
           "text"
         ]
       },
-      "name": "o4 Mini",
+      "name": "o4-mini (EU)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -1777,74 +2037,8 @@
         }
       ],
       "release_date": "2025-04-16",
-      "temperature": true,
-      "tool_call": true
-    },
-    "xai/grok-4": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.75,
-        "cache_write": 3,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
-      "family": "grok",
-      "id": "xai/grok-4",
-      "knowledge": "2025-01",
-      "last_updated": "2025-09-09",
-      "limit": {
-        "context": 256000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Grok 4",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2025-09-09",
-      "temperature": true,
-      "tool_call": true
-    },
-    "xai/grok-4-fast": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.05,
-        "cache_write": 0.2,
-        "input": 0.2,
-        "output": 0.5
-      },
-      "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
-      "family": "grok",
-      "id": "xai/grok-4-fast",
-      "knowledge": "2025-01",
-      "last_updated": "2025-09-19",
-      "limit": {
-        "context": 2000000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Grok 4 Fast",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2025-09-19",
-      "temperature": true,
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     }
   },

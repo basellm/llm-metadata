@@ -1,0 +1,52 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.15,
+    "cache_write": 1.583,
+    "input": 1.5,
+    "output": 9
+  },
+  "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+  "family": "gemini-flash",
+  "id": "gemini-3.5-flash@eu",
+  "knowledge": "2025-01",
+  "last_updated": "2026-05-19",
+  "limit": {
+    "context": 1048576,
+    "output": 65535
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video",
+      "audio",
+      "pdf"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Gemini 3.5 Flash (EU)",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-05-19",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

@@ -1,7 +1,8 @@
 {
   "attachment": false,
   "cost": {
-    "input": 0.188,
+    "cache_read": 0.0627,
+    "input": 0.1938,
     "output": 1.129
   },
   "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
@@ -23,7 +24,18 @@
   "name": "MiniMax-M2.5",
   "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-02-12",
   "temperature": true,
   "tool_call": true

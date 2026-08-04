@@ -1,8 +1,9 @@
 {
   "attachment": true,
   "cost": {
-    "input": 0.828,
-    "output": 4.389
+    "cache_read": 0.2508,
+    "input": 0.7524,
+    "output": 4.275
   },
   "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
   "family": "kimi-k2",
@@ -25,7 +26,18 @@
   "name": "Kimi K2.6",
   "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-04-21",
   "structured_output": true,
   "temperature": true,
