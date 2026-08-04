@@ -46513,6 +46513,49 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen/qwen3.8-max": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.23,
+          "cache_write": 2.35,
+          "input": 1.88,
+          "output": 5.63
+        },
+        "description": "2.4-trillion-parameter MoE flagship for coding, professional work, multimodal understanding, and long-horizon agentic workflows",
+        "family": "qwen",
+        "id": "qwen/qwen3.8-max",
+        "last_updated": "2026-08-03",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text",
+            "audio"
+          ]
+        },
+        "name": "Qwen3.8 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-08-03",
+        "temperature": true,
+        "tool_call": true
+      },
       "tencent/hy3": {
         "attachment": false,
         "cost": {
@@ -95188,8 +95231,8 @@
         "id": "qwen/qwen3-vl-30b-a3b-instruct",
         "last_updated": "2025-10-06",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 262144,
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -170655,8 +170698,8 @@
       "qwen/qwen3-vl-30b-a3b-instruct": {
         "attachment": true,
         "cost": {
-          "input": 0.13,
-          "output": 0.52
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -170665,7 +170708,7 @@
         "last_updated": "2025-10-06",
         "limit": {
           "context": 262144,
-          "output": 32768
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -207251,7 +207294,7 @@
             "text"
           ]
         },
-        "name": "DeepSeek V4 Flash",
+        "name": "DeepSeek V4 Flash 0423",
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [],
