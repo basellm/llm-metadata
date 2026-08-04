@@ -35451,7 +35451,7 @@
       "Nemotron-3-Nano-Omni-30B-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.01225,
+          "cache_read": 0.0024499999999999995,
           "input": 0.0245,
           "output": 0.0978
         },
@@ -35481,7 +35481,7 @@
       "Qwen/Qwen3-235B-A22B-Thinking-2507-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.14945,
+          "cache_read": 0.029889999999999993,
           "input": 0.2989,
           "output": 1.1957
         },
@@ -35517,7 +35517,7 @@
       "Qwen/Qwen3-32B-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.052,
+          "cache_read": 0.010399999999999998,
           "input": 0.104,
           "output": 0.416
         },
@@ -35554,7 +35554,7 @@
       "Qwen/Qwen3.5-397B-A17B-TEE": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.225,
+          "cache_read": 0.04499999999999999,
           "input": 0.45,
           "output": 3
         },
@@ -35594,7 +35594,7 @@
       "Qwen/Qwen3.6-27B-TEE": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.15,
+          "cache_read": 0.029999999999999992,
           "input": 0.3,
           "output": 2
         },
@@ -35631,7 +35631,7 @@
       "deepseek-ai/DeepSeek-V3.2-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.5,
+          "cache_read": 0.09999999999999998,
           "input": 1,
           "output": 1
         },
@@ -35670,7 +35670,7 @@
       "deepseek-ai/DeepSeek-V4-Flash-0731-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.07,
+          "cache_read": 0.013999999999999999,
           "input": 0.14,
           "output": 0.28
         },
@@ -35707,7 +35707,7 @@
       "google/gemma-4-31B-turbo-TEE": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.06,
+          "cache_read": 0.011999999999999997,
           "input": 0.12,
           "output": 0.37
         },
@@ -35744,7 +35744,7 @@
       "moonshotai/Kimi-K2.6-TEE": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.33,
+          "cache_read": 0.06599999999999999,
           "input": 0.66,
           "output": 3.5
         },
@@ -35786,7 +35786,7 @@
       "moonshotai/Kimi-K3-TEE": {
         "attachment": true,
         "cost": {
-          "cache_read": 1.5,
+          "cache_read": 0.29999999999999993,
           "input": 3,
           "output": 15
         },
@@ -35824,7 +35824,7 @@
       "unsloth/Mistral-Nemo-Instruct-2407-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.01225,
+          "cache_read": 0.0024499999999999995,
           "input": 0.0245,
           "output": 0.0978
         },
@@ -35855,7 +35855,7 @@
       "zai-org/GLM-5.1-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.49,
+          "cache_read": 0.09799999999999998,
           "input": 0.98,
           "output": 3.08
         },
@@ -35894,7 +35894,7 @@
       "zai-org/GLM-5.2-TEE": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.625,
+          "cache_read": 0.12499999999999997,
           "input": 1.25,
           "output": 3.95
         },
@@ -49142,6 +49142,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-06-01",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -89470,7 +89471,7 @@
         "last_updated": "2024-12-06",
         "limit": {
           "context": 131072,
-          "output": 128000
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -95049,7 +95050,7 @@
         "last_updated": "2025-09",
         "limit": {
           "context": 262144,
-          "output": 262144
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -95079,7 +95080,7 @@
         "knowledge": "2025-04",
         "last_updated": "2025-09",
         "limit": {
-          "context": 131072,
+          "context": 128000,
           "output": 32768
         },
         "modalities": {
@@ -97850,8 +97851,8 @@
         "id": "z-ai/glm-5.2",
         "last_updated": "2026-06-13",
         "limit": {
-          "context": 1048576,
-          "output": 131072
+          "context": 262144,
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -136959,6 +136960,53 @@
         "temperature": true,
         "tool_call": false
       },
+      "qwen3.8-max": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 2.5,
+          "input": 2,
+          "output": 6
+        },
+        "description": "2.4-trillion-parameter MoE flagship for coding, professional work, multimodal understanding, and long-horizon agentic workflows",
+        "family": "qwen",
+        "id": "qwen3.8-max",
+        "last_updated": "2026-08-03",
+        "limit": {
+          "context": 991000,
+          "input": 991000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.8 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3.8-max-preview": {
         "attachment": false,
         "cost": {
@@ -164007,8 +164055,8 @@
       "gryphe/mythomax-l2-13b": {
         "attachment": false,
         "cost": {
-          "input": 0.06,
-          "output": 0.06
+          "input": 0.08,
+          "output": 0.11
         },
         "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
         "id": "gryphe/mythomax-l2-13b",
@@ -164567,8 +164615,8 @@
       "meta-llama/llama-3.3-70b-instruct": {
         "attachment": false,
         "cost": {
-          "input": 0.13,
-          "output": 0.4
+          "input": 0.1,
+          "output": 0.32
         },
         "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
         "family": "llama",
@@ -164577,7 +164625,7 @@
         "last_updated": "2024-12-06",
         "limit": {
           "context": 131072,
-          "output": 128000
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -165807,9 +165855,9 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.2,
-          "input": 0.6,
-          "output": 3.41
+          "cache_read": 0.0992,
+          "input": 0.589,
+          "output": 2.48
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -170484,8 +170532,7 @@
       "qwen/qwen3-next-80b-a3b-instruct": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.07,
-          "input": 0.1,
+          "input": 0.09,
           "output": 1.1
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
@@ -170495,7 +170542,7 @@
         "last_updated": "2025-09",
         "limit": {
           "context": 262144,
-          "output": 262144
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -173063,9 +173110,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.11674,
-          "input": 0.6286,
-          "output": 1.9756
+          "cache_read": 0.14,
+          "input": 0.76,
+          "output": 2.42
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -173076,7 +173123,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -203971,6 +204018,53 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek-ai/DeepSeek-V4-Flash-0731": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.14,
+          "output": 0.28
+        },
+        "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+        "family": "deepseek-flash",
+        "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-07-31",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash 0731",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-31",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "deepseek-ai/DeepSeek-V4-Pro": {
         "attachment": false,
         "cost": {
@@ -204969,6 +205063,54 @@
         "temperature": false,
         "tool_call": true
       },
+      "umans-deepseek-v4-flash-0731": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.028,
+          "input": 0.14,
+          "output": 0.28
+        },
+        "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+        "family": "deepseek-flash",
+        "id": "umans-deepseek-v4-flash-0731",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-07-31",
+        "limit": {
+          "context": 1048576,
+          "output": 393215
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-31",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "umans-flash": {
         "attachment": true,
         "cost": {
@@ -205141,6 +205283,54 @@
         "structured_output": true,
         "temperature": false,
         "tool_call": true
+      },
+      "umans-kimi-k3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+        "family": "kimi-k3",
+        "id": "umans-kimi-k3",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-07-16",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-16",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
       }
     },
     "name": "Umans AI",
@@ -205191,6 +205381,55 @@
         "release_date": "2026-06-12",
         "structured_output": true,
         "temperature": false,
+        "tool_call": true
+      },
+      "umans-deepseek-v4-flash-0731": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+        "family": "deepseek-flash",
+        "id": "umans-deepseek-v4-flash-0731",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-07-31",
+        "limit": {
+          "context": 1048576,
+          "output": 393215
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-31",
+        "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "umans-flash": {
@@ -205366,6 +205605,55 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-06-12",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "umans-kimi-k3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+        "family": "kimi-k3",
+        "id": "umans-kimi-k3",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-07-16",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-16",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -207005,7 +207293,17 @@
         "name": "DeepSeek V4 Flash 0731",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-07-31",
         "structured_output": true,
         "temperature": true,
@@ -210154,7 +210452,16 @@
         "name": "GLM 5.2",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-06-16",
         "structured_output": true,
         "temperature": true,

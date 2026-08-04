@@ -36836,7 +36836,7 @@
       },
       "name": "DeepSeek V3.2 TEE",
       "price": {
-        "cacheRead": 0.5,
+        "cacheRead": 0.09999999999999998,
         "cacheWrite": null,
         "input": 1,
         "output": 1
@@ -36872,7 +36872,7 @@
       },
       "name": "DeepSeek V4 Flash 0731 TEE",
       "price": {
-        "cacheRead": 0.07,
+        "cacheRead": 0.013999999999999999,
         "cacheWrite": null,
         "input": 0.14,
         "output": 0.28
@@ -36909,7 +36909,7 @@
       },
       "name": "gemma 4 31B turbo TEE",
       "price": {
-        "cacheRead": 0.06,
+        "cacheRead": 0.011999999999999997,
         "cacheWrite": null,
         "input": 0.12,
         "output": 0.37
@@ -36947,7 +36947,7 @@
       },
       "name": "Kimi K2.6 TEE",
       "price": {
-        "cacheRead": 0.33,
+        "cacheRead": 0.06599999999999999,
         "cacheWrite": null,
         "input": 0.66,
         "output": 3.5
@@ -36985,7 +36985,7 @@
       },
       "name": "Kimi K3 TEE",
       "price": {
-        "cacheRead": 1.5,
+        "cacheRead": 0.29999999999999993,
         "cacheWrite": null,
         "input": 3,
         "output": 15
@@ -37021,7 +37021,7 @@
       },
       "name": "Nemotron 3 Nano Omni 30B TEE",
       "price": {
-        "cacheRead": 0.01225,
+        "cacheRead": 0.0024499999999999995,
         "cacheWrite": null,
         "input": 0.0245,
         "output": 0.0978
@@ -37057,7 +37057,7 @@
       },
       "name": "Qwen3 235B A22B Thinking 2507 TEE",
       "price": {
-        "cacheRead": 0.14945,
+        "cacheRead": 0.029889999999999993,
         "cacheWrite": null,
         "input": 0.2989,
         "output": 1.1957
@@ -37093,7 +37093,7 @@
       },
       "name": "Qwen3 32B TEE",
       "price": {
-        "cacheRead": 0.052,
+        "cacheRead": 0.010399999999999998,
         "cacheWrite": null,
         "input": 0.104,
         "output": 0.416
@@ -37130,7 +37130,7 @@
       },
       "name": "Qwen3.5 397B A17B TEE",
       "price": {
-        "cacheRead": 0.225,
+        "cacheRead": 0.04499999999999999,
         "cacheWrite": null,
         "input": 0.45,
         "output": 3
@@ -37167,7 +37167,7 @@
       },
       "name": "Qwen3.6 27B TEE",
       "price": {
-        "cacheRead": 0.15,
+        "cacheRead": 0.029999999999999992,
         "cacheWrite": null,
         "input": 0.3,
         "output": 2
@@ -37203,7 +37203,7 @@
       },
       "name": "Mistral Nemo Instruct 2407 TEE",
       "price": {
-        "cacheRead": 0.01225,
+        "cacheRead": 0.0024499999999999995,
         "cacheWrite": null,
         "input": 0.0245,
         "output": 0.0978
@@ -37239,7 +37239,7 @@
       },
       "name": "GLM 5.1 TEE",
       "price": {
-        "cacheRead": 0.49,
+        "cacheRead": 0.09799999999999998,
         "cacheWrite": null,
         "input": 0.98,
         "output": 3.08
@@ -37275,7 +37275,7 @@
       },
       "name": "GLM 5.2 TEE",
       "price": {
-        "cacheRead": 0.625,
+        "cacheRead": 0.12499999999999997,
         "cacheWrite": null,
         "input": 1.25,
         "output": 3.95
@@ -88091,7 +88091,7 @@
       "knowledge": "2023-12",
       "lastUpdated": "2024-12-06",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 128000,
+      "maxOutputTokens": 16384,
       "modalities": {
         "input": [
           "text"
@@ -93690,7 +93690,7 @@
       "knowledge": "2025-04",
       "lastUpdated": "2025-09",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 262144,
+      "maxOutputTokens": 16384,
       "modalities": {
         "input": [
           "text"
@@ -93725,7 +93725,7 @@
       "id": "qwen/qwen3-next-80b-a3b-thinking",
       "knowledge": "2025-04",
       "lastUpdated": "2025-09",
-      "maxCtxTokens": 131072,
+      "maxCtxTokens": 128000,
       "maxOutputTokens": 32768,
       "modalities": {
         "input": [
@@ -96353,8 +96353,8 @@
       "id": "z-ai/glm-5.2",
       "knowledge": null,
       "lastUpdated": "2026-06-13",
-      "maxCtxTokens": 1048576,
-      "maxOutputTokens": 131072,
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
       "modalities": {
         "input": [
           "text"
@@ -133023,6 +133023,44 @@
       "tags": []
     },
     {
+      "description": "2.4-trillion-parameter MoE flagship for coding, professional work, multimodal understanding, and long-horizon agentic workflows",
+      "firm": "nano-gpt",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "qwen3.8-max",
+      "knowledge": null,
+      "lastUpdated": "2026-08-03",
+      "maxCtxTokens": 991000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Max",
+      "price": {
+        "cacheRead": 0.25,
+        "cacheWrite": 2.5,
+        "input": 2,
+        "output": 6
+      },
+      "releaseDate": "2026-08-03",
+      "tags": []
+    },
+    {
       "description": "Preview Qwen flagship for million-token multimodal reasoning and long-horizon agentic workflows",
       "firm": "nano-gpt",
       "flags": {
@@ -161018,8 +161056,8 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.06,
-        "output": 0.06
+        "input": 0.08,
+        "output": 0.11
       },
       "releaseDate": "2023-07-02",
       "tags": []
@@ -161617,7 +161655,7 @@
       "knowledge": "2023-12",
       "lastUpdated": "2024-12-06",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 128000,
+      "maxOutputTokens": 16384,
       "modalities": {
         "input": [
           "text"
@@ -161630,8 +161668,8 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.13,
-        "output": 0.4
+        "input": 0.1,
+        "output": 0.32
       },
       "releaseDate": "2024-12-06",
       "tags": []
@@ -162993,10 +163031,10 @@
       },
       "name": "Kimi K2.6",
       "price": {
-        "cacheRead": 0.2,
+        "cacheRead": 0.0992,
         "cacheWrite": null,
-        "input": 0.6,
-        "output": 3.41
+        "input": 0.589,
+        "output": 2.48
       },
       "releaseDate": "2026-04-21",
       "tags": []
@@ -167385,7 +167423,7 @@
       "knowledge": "2025-04",
       "lastUpdated": "2025-09",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 262144,
+      "maxOutputTokens": 16384,
       "modalities": {
         "input": [
           "text"
@@ -167396,9 +167434,9 @@
       },
       "name": "Qwen3-Next 80B-A3B Instruct",
       "price": {
-        "cacheRead": 0.07,
+        "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.1,
+        "input": 0.09,
         "output": 1.1
       },
       "releaseDate": "2025-09",
@@ -169786,7 +169824,7 @@
       "knowledge": null,
       "lastUpdated": "2026-06-13",
       "maxCtxTokens": 1048576,
-      "maxOutputTokens": 131072,
+      "maxOutputTokens": 262144,
       "modalities": {
         "input": [
           "text"
@@ -169797,10 +169835,10 @@
       },
       "name": "GLM-5.2",
       "price": {
-        "cacheRead": 0.11674,
+        "cacheRead": 0.14,
         "cacheWrite": null,
-        "input": 0.6286,
-        "output": 1.9756
+        "input": 0.76,
+        "output": 2.42
       },
       "releaseDate": "2026-06-13",
       "tags": []
@@ -199500,6 +199538,42 @@
       "tags": []
     },
     {
+      "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+      "firm": "togetherai",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:togetherai-color",
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "knowledge": "2025-05",
+      "lastUpdated": "2026-07-31",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 384000,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0731",
+      "price": {
+        "cacheRead": 0.03,
+        "cacheWrite": null,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "releaseDate": "2026-07-31",
+      "tags": []
+    },
+    {
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
       "firm": "togetherai",
       "flags": {
@@ -200894,6 +200968,42 @@
       "tags": []
     },
     {
+      "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+      "firm": "umans-ai",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "umans-deepseek-v4-flash-0731",
+      "knowledge": "2025-05",
+      "lastUpdated": "2026-07-31",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 393215,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash",
+      "price": {
+        "cacheRead": 0.028,
+        "cacheWrite": null,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "releaseDate": "2026-07-31",
+      "tags": []
+    },
+    {
       "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
       "firm": "umans-ai",
       "flags": {
@@ -201043,6 +201153,43 @@
       "tags": []
     },
     {
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "firm": "umans-ai",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "umans-kimi-k3",
+      "knowledge": null,
+      "lastUpdated": "2026-07-16",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "price": {
+        "cacheRead": 0.3,
+        "cacheWrite": null,
+        "input": 3,
+        "output": 15
+      },
+      "releaseDate": "2026-07-16",
+      "tags": []
+    },
+    {
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "firm": "umans-ai-coding-plan",
       "flags": {
@@ -201077,6 +201224,42 @@
         "output": null
       },
       "releaseDate": "2026-06-12",
+      "tags": []
+    },
+    {
+      "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+      "firm": "umans-ai-coding-plan",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "umans-deepseek-v4-flash-0731",
+      "knowledge": "2025-05",
+      "lastUpdated": "2026-07-31",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 393215,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-07-31",
       "tags": []
     },
     {
@@ -201226,6 +201409,43 @@
         "output": null
       },
       "releaseDate": "2026-06-12",
+      "tags": []
+    },
+    {
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "firm": "umans-ai-coding-plan",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "umans-kimi-k3",
+      "knowledge": null,
+      "lastUpdated": "2026-07-16",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-07-16",
       "tags": []
     },
     {
