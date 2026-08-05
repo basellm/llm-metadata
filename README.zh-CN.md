@@ -118,7 +118,7 @@ i18n/
 
 - push 到 `src/**`、`data/**`、`web/**` 等路径
 - `workflow_dispatch` 手动触发
-- `schedule` 每 6 小时定时
+- `schedule` 每天定时
 
 ## 自动更新策略（模型级开关）
 

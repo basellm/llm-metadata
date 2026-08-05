@@ -119,7 +119,7 @@ GitHub Actions トリガー:
 
 - `push`（`src/**`, `data/**`, `web/**` 等）
 - `workflow_dispatch`（手動）
-- `schedule`（6 時間ごと）
+- `schedule`（毎日）
 
 ## 自動更新ポリシー
 

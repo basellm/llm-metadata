@@ -118,7 +118,7 @@ GitHub Actions triggers:
 
 - `push` to `src/**`, `data/**`, `web/**`, etc.
 - `workflow_dispatch` manual run
-- `schedule` every 6 hours
+- `schedule` daily
 
 ## Auto-update Policy
 
