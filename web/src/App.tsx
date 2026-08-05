@@ -192,7 +192,7 @@ export default function App() {
                 <SelectContent>
                   {providers.map((p) => (
                     <SelectItem key={p.id} value={p.id}>
-                      <ProviderIcon name={p.name} iconURL={p.iconURL} className="size-4" />
+                      <ProviderIcon id={p.id} name={p.name} iconURL={p.iconURL} className="size-4" />
                       <span className="truncate">{p.name}</span>
                       <span className="text-muted-foreground font-mono text-xs tabular-nums">
                         {p.modelCount}
@@ -207,6 +207,8 @@ export default function App() {
           {selectedMeta && (
             <div className="flex shrink-0 flex-wrap items-center gap-3">
               <ProviderIcon
+                key={selectedMeta.id}
+                id={selectedMeta.id}
                 name={selectedMeta.name}
                 iconURL={selectedMeta.iconURL}
                 className="size-8 rounded-md"

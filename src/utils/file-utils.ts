@@ -64,10 +64,11 @@ export function sanitizeFileSegment(segment: string): string {
   return segment.replace(/[^a-zA-Z0-9\-_.]/g, '_');
 }
 
-/** 删除目录中不在保留清单内的 .json 文件（按不含扩展名的文件名匹配），返回删除数量 */
-export function pruneJsonFiles(
+/** 删除目录中不在保留清单内的指定扩展名文件（按不含扩展名的文件名匹配），返回删除数量 */
+export function pruneFiles(
   dirPath: string,
   keep: ReadonlySet<string>,
+  extension: string,
   options: { dryRun?: boolean } = {},
 ): number {
   if (!existsSync(dirPath)) return 0;
@@ -75,8 +76,8 @@ export function pruneJsonFiles(
   let removed = 0;
   for (const item of readdirSync(dirPath)) {
     const itemPath = join(dirPath, item);
-    if (!statSync(itemPath).isFile() || extname(item) !== '.json') continue;
-    if (keep.has(item.slice(0, -'.json'.length))) continue;
+    if (!statSync(itemPath).isFile() || extname(item) !== extension) continue;
+    if (keep.has(item.slice(0, -extension.length))) continue;
 
     if (!options.dryRun) {
       unlinkSync(itemPath);

@@ -55,7 +55,7 @@ export function ProviderSidebar({
                     active ? 'bg-accent text-foreground font-medium' : 'text-muted-foreground',
                   )}
                 >
-                  <ProviderIcon name={provider.name} iconURL={provider.iconURL} />
+                  <ProviderIcon id={provider.id} name={provider.name} iconURL={provider.iconURL} />
                   <span className="min-w-0 flex-1 truncate">{provider.name}</span>
                   <span
                     className={cn(

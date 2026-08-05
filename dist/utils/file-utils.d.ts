@@ -9,8 +9,8 @@ export declare function removeNonJsonFiles(dirPath: string, options?: {
 }): void;
 /** 安全的文件名段 */
 export declare function sanitizeFileSegment(segment: string): string;
-/** 删除目录中不在保留清单内的 .json 文件（按不含扩展名的文件名匹配），返回删除数量 */
-export declare function pruneJsonFiles(dirPath: string, keep: ReadonlySet<string>, options?: {
+/** 删除目录中不在保留清单内的指定扩展名文件（按不含扩展名的文件名匹配），返回删除数量 */
+export declare function pruneFiles(dirPath: string, keep: ReadonlySet<string>, extension: string, options?: {
     dryRun?: boolean;
 }): number;
 /** 删除目录中不在保留清单内的子目录（递归删除），返回删除数量 */

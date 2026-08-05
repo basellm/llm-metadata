@@ -51,6 +51,11 @@ function sanitizeFileSegment(segment: string): string {
   return segment.replace(/[^a-zA-Z0-9\-_.]/g, '_');
 }
 
+/** 同源镜像的供应商 logo 地址（构建时下载到 dist/api/logos/） */
+export function providerLogoURL(id: string): string {
+  return `${API_BASE}/logos/${sanitizeFileSegment(id)}.svg`;
+}
+
 export function fetchProviders(): Promise<{ providers: ProviderIndexItem[] }> {
   return fetchJSON('providers.json');
 }

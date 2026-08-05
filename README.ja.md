@@ -42,8 +42,8 @@ npm run build
   "version": 1,
   "exchangeRates": { "CNY": 7.3, "EUR": 0.92 },
   "providers": {
-    "openai": {},
-    "zai": { "priority": 20 },
+    "openai": { "lobeIcon": "OpenAI" },
+    "zai": { "priority": 20, "lobeIcon": "ZAI" },
     "alibaba": { "priority": 30, "excludeModels": ["^deepseek", "^kimi"] }
   }
 }
@@ -53,7 +53,10 @@ npm run build
 - `excludeModels` — 大文字小文字を区別しない正規表現。ネイティブプロバイダーのプラットフォームでホストされるサードパーティモデル（例: Alibaba 上で再販される DeepSeek モデル）を除外し、自社モデルのみを保持します。
 - `priority` — 同一ベンダーの複数エンドポイント（例: `zai` と `zhipuai`）間で同名モデルが競合した場合の解決に使用。集約 NewAPI 出力では値が大きい方が優先され、同値の場合はプロバイダー ID 順になります。`/api/newapi/providers/<id>/` 配下のプロバイダー別ファイルには常にそのプロバイダー自身の価格が保持されます。
 - `exchangeRates` — 1 USD あたりの通貨単位。非 USD 価格（例: 人民元）を NewAPI の USD ベース倍率体系（1 倍率 = $2 / 100 万入力トークン）に正規化するために使用します。レート未設定の通貨は価格出力からスキップされ、ビルド警告が出ます。
+- `lobeIcon` — [@lobehub/icons](https://github.com/lobehub/lobe-icons) のエクスポート名（例: `Claude.Color`）。NewAPI `vendors.json` のベンダーアイコンとして使用されます。
 - このファイルが存在しない場合、フィルタリングは無効になり、ビルド警告が出力されます。
+
+プロバイダーのロゴはビルド時に `dist/api/logos/<id>.svg` へミラーリングされ、Web UI は同一オリジンからアイコンを読み込みます（リモート `iconURL` とイニシャルバッジがフォールバック）。models.dev へのホットリンクは行いません。
 
 NewAPI 互換性: `dist/api/newapi/ratio_config-v1-base.json` は new-api の `/api/ratio_config` ペイロード形式に準拠しており、new-api の倍率同期 UI に組み込まれた「公式倍率プリセット」のデータソースです。`vendors.json` / `models.json` はモデルメタデータ同期に使用されます。
 

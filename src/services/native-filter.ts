@@ -92,26 +92,31 @@ export class NativeFilter {
     let excludedModels = 0;
 
     for (const [providerId, provider] of Object.entries(normalized.providers)) {
-      if (!this.config.providers[providerId]) {
+      const rule = this.config.providers[providerId];
+      if (!rule) {
         excludedProviders++;
         continue;
       }
 
+      // 目录中的 lobeIcon 注入供应商数据（用于 NewAPI vendors 图标），不覆盖已有值
+      const enriched =
+        rule.lobeIcon && !provider.lobeIcon ? { ...provider, lobeIcon: rule.lobeIcon } : provider;
+
       const patterns = this.excludePatterns.get(providerId);
       if (!patterns) {
-        providers[providerId] = provider;
+        providers[providerId] = enriched;
         continue;
       }
 
       const models: Record<string, Model> = {};
-      for (const [modelId, model] of Object.entries(provider.models || {})) {
+      for (const [modelId, model] of Object.entries(enriched.models || {})) {
         if (patterns.some((pattern) => pattern.test(modelId))) {
           excludedModels++;
         } else {
           models[modelId] = model;
         }
       }
-      providers[providerId] = { ...provider, models };
+      providers[providerId] = { ...enriched, models };
     }
 
     // 配置漂移检测：白名单中的供应商在上游消失时提醒维护者

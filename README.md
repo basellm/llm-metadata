@@ -42,8 +42,8 @@ Catalog: `data/native-providers.json`
   "version": 1,
   "exchangeRates": { "CNY": 7.3, "EUR": 0.92 },
   "providers": {
-    "openai": {},
-    "zai": { "priority": 20 },
+    "openai": { "lobeIcon": "OpenAI" },
+    "zai": { "priority": 20, "lobeIcon": "ZAI" },
     "alibaba": { "priority": 30, "excludeModels": ["^deepseek", "^kimi"] }
   }
 }
@@ -53,7 +53,10 @@ Catalog: `data/native-providers.json`
 - `excludeModels` — case-insensitive regexes that drop third-party models hosted on a native provider (e.g., DeepSeek models resold on Alibaba's platform), keeping only the provider's own models.
 - `priority` — resolves model-ID conflicts across regional/plan endpoints of the same vendor (e.g., `zai` vs `zhipuai`) in the aggregated NewAPI outputs; the highest value wins, ties break by provider ID. Per-provider files under `/api/newapi/providers/<id>/` always keep that provider's own prices.
 - `exchangeRates` — currency units per 1 USD, used to normalize non-USD costs (e.g., CNY) into the USD-based NewAPI ratio system (1 ratio = $2 per 1M input tokens). Models with an unknown currency are skipped from pricing outputs with a build warning.
+- `lobeIcon` — [@lobehub/icons](https://github.com/lobehub/lobe-icons) export name (e.g., `Claude.Color`) used as the vendor icon in NewAPI `vendors.json`.
 - If the file is missing, filtering is disabled and the build emits a warning.
+
+Provider logos are mirrored at build time to `dist/api/logos/<id>.svg`, so the web UI loads icons same-origin (with the remote `iconURL` and a monogram as fallbacks) instead of hotlinking models.dev.
 
 NewAPI compatibility: `dist/api/newapi/ratio_config-v1-base.json` follows new-api's `/api/ratio_config` payload and is consumed by new-api's built-in "official ratio preset" in its upstream ratio sync UI; `vendors.json` / `models.json` feed its model metadata sync.
 

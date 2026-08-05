@@ -98,6 +98,8 @@ export interface NativeProviderRule {
     priority?: number;
     /** 需要排除的非自研模型 ID 模式（不区分大小写的正则表达式） */
     excludeModels?: string[];
+    /** NewAPI vendors 图标标识（@lobehub/icons 导出名，如 "Claude.Color"） */
+    lobeIcon?: string;
     /** 维护备注（构建时忽略） */
     notes?: string;
 }

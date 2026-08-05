@@ -7,6 +7,7 @@ import { pathToFileURL } from 'node:url';
 import { DataLoader } from './services/data-loader.js';
 import { DataProcessor } from './services/data-processor.js';
 import { IndexBuilder } from './services/index-builder.js';
+import { mirrorProviderLogos } from './services/logo-mirror.js';
 import { NativeFilter } from './services/native-filter.js';
 import { NewApiBuilder } from './services/newapi-builder.js';
 import { I18nService } from './services/i18n-service.js';
@@ -15,7 +16,7 @@ import { parseArgv } from './utils/cli-utils.js';
 import {
   copyDirSyncIfExists,
   ensureDirSync,
-  pruneJsonFiles,
+  pruneFiles,
   pruneSubdirectories,
   removeNonJsonFiles,
   sanitizeFileSegment,
@@ -68,7 +69,7 @@ class Builder {
     const keepProviders = new Set(Object.keys(dataset.providers).map(sanitizeFileSegment));
 
     // 清理已不在数据集中的供应商产物
-    changes += pruneJsonFiles(providersDir, keepProviders, options);
+    changes += pruneFiles(providersDir, keepProviders, '.json', options);
     changes += pruneSubdirectories(modelsBaseDir, keepProviders, options);
 
     for (const [providerId, provider] of Object.entries(dataset.providers)) {
@@ -94,7 +95,7 @@ class Builder {
 
       const models = provider.models || {};
       const keepModels = new Set(Object.keys(models).map(sanitizeFileSegment));
-      changes += pruneJsonFiles(providerModelsDir, keepModels, options);
+      changes += pruneFiles(providerModelsDir, keepModels, '.json', options);
 
       for (const [modelId, modelData] of Object.entries(models)) {
         const allowAuto = this.dataProcessor.shouldAutoUpdate(policy, providerId, modelId);
@@ -433,6 +434,16 @@ class Builder {
     }
 
     warnings.push(...newApiWarnings);
+
+    // 镜像供应商 logo（Web UI 同源加载，摆脱第三方主机可达性依赖）
+    console.log('Mirroring provider logos...');
+    const logoResult = await mirrorProviderLogos(
+      allModelsData.providers,
+      { cacheDir: join(this.CACHE_DIR, 'logos'), outDir: join(this.API_DIR, 'logos') },
+      { dryRun, force },
+    );
+    changes += logoResult.changes;
+    warnings.push(...logoResult.warnings);
 
     // 写入单独的提供商和模型文件
     console.log('Writing individual provider and model files...');

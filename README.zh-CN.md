@@ -42,8 +42,8 @@ npm run build
   "version": 1,
   "exchangeRates": { "CNY": 7.3, "EUR": 0.92 },
   "providers": {
-    "openai": {},
-    "zai": { "priority": 20 },
+    "openai": { "lobeIcon": "OpenAI" },
+    "zai": { "priority": 20, "lobeIcon": "ZAI" },
     "alibaba": { "priority": 30, "excludeModels": ["^deepseek", "^kimi"] }
   }
 }
@@ -53,7 +53,10 @@ npm run build
 - `excludeModels`——不区分大小写的正则，用于剔除原生供应商平台上托管的第三方模型（例如阿里平台上转售的 DeepSeek 模型），只保留自研模型。
 - `priority`——解决同一厂商多端点（如 `zai` 与 `zhipuai`）在聚合 NewAPI 输出中的同名模型冲突；数值大者胜出，相同时按供应商 ID 排序。`/api/newapi/providers/<id>/` 下的按供应商文件始终保留该供应商自己的价格。
 - `exchangeRates`——每 1 USD 对应的货币数量，用于将非美元价格（如人民币）换算进 NewAPI 的美元倍率体系（1 倍率 = $2 / 1M 输入 tokens）。缺少汇率的货币会跳过价格输出并给出构建警告。
+- `lobeIcon`——[@lobehub/icons](https://github.com/lobehub/lobe-icons) 的导出名（如 `Claude.Color`），作为 NewAPI `vendors.json` 中的厂商图标。
 - 若该文件缺失，过滤将被禁用并输出构建警告。
+
+供应商 logo 会在构建时镜像到 `dist/api/logos/<id>.svg`，Web UI 以同源地址加载图标（远程 `iconURL` 与首字母徽标作为回退），不再热链 models.dev。
 
 NewAPI 兼容性：`dist/api/newapi/ratio_config-v1-base.json` 遵循 new-api 的 `/api/ratio_config` 载荷格式，是 new-api 倍率同步界面内置"官方倍率预设"的数据源；`vendors.json` / `models.json` 供其模型元数据同步使用。
 
