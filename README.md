@@ -5,13 +5,13 @@
 
 English | [中文文档](README.zh-CN.md) | [日本語](README.ja.md)
 
-High-throughput friendly, static-by-default interface: rebuild on change; serve static JSON via GitHub Pages.
+High-throughput friendly, static-by-default interface: rebuild on change; serve static JSON via GitHub Pages. The live site ships a minimal pricing browser (`web/`, Vite + React + Tailwind + shadcn/ui) rendering per-provider model price tables straight from the static API.
 
-Sources: [models.dev/api.json](https://models.dev/api.json) + basellm community contributions.
+Sources: [models.dev/api.json](https://models.dev/api.json) + basellm community contributions, filtered to native (first-party) providers via `data/native-providers.json`.
 
 ## Quick Start
 
-Requirement: Node.js 18+ (with native `fetch`).
+Requirement: Node.js 20.19+ (API build works on 18+; the web UI toolchain requires 20.19+).
 
 ```bash
 npm install
@@ -28,28 +28,50 @@ Scripts:
 - `npm run clean` — Remove `.cache` and `dist`
 - `npm run compile` — Compile TypeScript only
 - `npm run dev` — Watch mode compilation
+- `npm run web:dev` — Pricing UI dev server (run `npm run build` once first so `dist/api` exists)
+- `npm run web:build` — Build the pricing UI into `dist/` (run `npm install` in `web/` first)
 
-## Internationalization (Docs & API)
+## Native Providers
 
-Docs i18n is driven by `i18n/docs/*.json` and `i18n/locales.json` with mkdocs-static-i18n; API i18n is driven by `i18n/api/*.json` and overrides in `data/overrides/**`.
+The upstream models.dev dataset mixes first-party providers with aggregators, resellers, and cloud hosts. The build keeps only native (first-party) providers — the companies that actually create the models — so every published price is an official one.
+
+Catalog: `data/native-providers.json`
+
+```json
+{
+  "version": 1,
+  "exchangeRates": { "CNY": 7.3, "EUR": 0.92 },
+  "providers": {
+    "openai": {},
+    "zai": { "priority": 20 },
+    "alibaba": { "priority": 30, "excludeModels": ["^deepseek", "^kimi"] }
+  }
+}
+```
+
+- `providers` — allowlist. Providers not listed here are dropped from every output (JSON API, NewAPI, VoAPI, web UI), and their previously generated files are pruned from `dist/api/`.
+- `excludeModels` — case-insensitive regexes that drop third-party models hosted on a native provider (e.g., DeepSeek models resold on Alibaba's platform), keeping only the provider's own models.
+- `priority` — resolves model-ID conflicts across regional/plan endpoints of the same vendor (e.g., `zai` vs `zhipuai`) in the aggregated NewAPI outputs; the highest value wins, ties break by provider ID. Per-provider files under `/api/newapi/providers/<id>/` always keep that provider's own prices.
+- `exchangeRates` — currency units per 1 USD, used to normalize non-USD costs (e.g., CNY) into the USD-based NewAPI ratio system (1 ratio = $2 per 1M input tokens). Models with an unknown currency are skipped from pricing outputs with a build warning.
+- If the file is missing, filtering is disabled and the build emits a warning.
+
+NewAPI compatibility: `dist/api/newapi/ratio_config-v1-base.json` follows new-api's `/api/ratio_config` payload and is consumed by new-api's built-in "official ratio preset" in its upstream ratio sync UI; `vendors.json` / `models.json` feed its model metadata sync.
+
+Expression billing (`tiered_expr`): models with length-tiered pricing (e.g., `input_32k_128k`) or thinking-mode differential pricing (`thinking_input` / `thinking_output`) additionally emit `billing_mode` / `billing_expr` maps in the ratio config, generated as expr-lang expressions with USD-per-1M coefficients (`len`-based tier ternaries wrapped in `tier()`, thinking mode gated by `param("enable_thinking")`). new-api prefers the expression over ratios when applied; plain ratios are still emitted as a fallback.
+
+## Internationalization (API)
+
+API i18n is driven by `i18n/locales.json` (language list), `i18n/api/*.json` (capability labels and default description templates), and overrides in `data/overrides/**`.
 
 ### Folder & config
 
 ```
 i18n/
   locales.json          # language list (source of truth)
-  docs/
-    en.json             # UI strings for docs (fallback)
-    zh.json
-    ja.json
   api/
     en.json             # capability labels + default description template
     zh.json
     ja.json
-docs/
-  en/ index.md data.md
-  zh/ index.md data.md
-  ja/ index.md data.md
 ```
 
 ### Add a language (example: `fr`)
@@ -67,11 +89,8 @@ docs/
 }
 ```
 
-2. Create `i18n/docs/fr.json` (copy from `en.json` and translate keys)
-3. Create `i18n/api/fr.json` (translate capability labels and optional default description template)
-4. Add `docs/fr/index.md` (landing) and an empty `docs/fr/data.md` (will be generated)
-5. Optional: in `mkdocs.yml` add nav_translations for `fr`
-6. Build: `npm run build`
+2. Create `i18n/api/fr.json` (translate capability labels and optional default description template)
+3. Build: `npm run build`
 
 ### API i18n details
 
@@ -90,12 +109,6 @@ docs/
   - `i18n/api/<locale>.json` → `defaults.model_description`, placeholders: `${modelName}`, `${providerId}`
   - If a model's description equals the English default, localized builds replace it with the locale template
 
-### Docs i18n (mkdocs)
-
-- Strings from `i18n/docs/<locale>.json`; missing keys fall back to `en.json`
-- Build docs pages `docs/<locale>/data.md` automatically on `npm run build`
-- Preview docs: `pip install -r requirements.txt` then `mkdocs serve`
-
 ## Update Modes
 
 - Manual: edit `data/**` and push to main; CI builds and publishes
@@ -103,7 +116,7 @@ docs/
 
 GitHub Actions triggers:
 
-- `push` to `scripts/**`, `data/**`, etc.
+- `push` to `src/**`, `data/**`, `web/**`, etc.
 - `workflow_dispatch` manual run
 - `schedule` every 6 hours
 

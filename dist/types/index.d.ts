@@ -81,6 +81,22 @@ export interface PolicyConfig {
         auto?: boolean;
     }>;
 }
+/** 原生供应商规则 */
+export interface NativeProviderRule {
+    /** 聚合价格输出中同名模型冲突时的优先级（数值大者胜出，默认 0） */
+    priority?: number;
+    /** 需要排除的非自研模型 ID 模式（不区分大小写的正则表达式） */
+    excludeModels?: string[];
+    /** 维护备注（构建时忽略） */
+    notes?: string;
+}
+/** 原生供应商目录配置（data/native-providers.json） */
+export interface NativeProvidersConfig {
+    version: number;
+    /** 非 USD 货币兑美元汇率（每 1 USD 对应的货币数量） */
+    exchangeRates?: Record<string, number>;
+    providers: Record<string, NativeProviderRule>;
+}
 /** 覆写配置 */
 export interface OverrideConfig {
     providers?: Record<string, Partial<ProviderBase>>;
@@ -195,6 +211,10 @@ export interface NewApiPriceConfig {
         model_ratio: Record<string, number>;
         /** 单位计费价格（按最小可用单价，单位与提供商标注一致，例如 /img 或 /s 等） */
         model_price: Record<string, number>;
+        /** 表达式计费模式（值为 "tiered_expr"，仅分层/思考差价模型输出） */
+        billing_mode: Record<string, string>;
+        /** 表达式计费表达式（expr-lang 语法，系数单位 USD/1M tokens） */
+        billing_expr: Record<string, string>;
     };
     message: string;
     success: boolean;
@@ -203,6 +223,13 @@ export interface NewApiPriceConfig {
 export interface NewApiSyncPayload {
     vendors: NewApiVendor[];
     models: NewApiModel[];
+}
+/** NewAPI 定价选项（货币换算与同名模型冲突解析） */
+export interface NewApiPricingOptions {
+    /** 非 USD 货币兑美元汇率（每 1 USD 对应的货币数量） */
+    exchangeRates: Record<string, number>;
+    /** 供应商优先级（同名模型时数值大者胜出，缺省为 0） */
+    providerPriority: Record<string, number>;
 }
 export interface VoAPIFirm {
     id: string;
@@ -254,6 +281,8 @@ export interface VoAPIApiSyncPayload {
 export interface BuildStats {
     providers: number;
     models: number;
+    excludedProviders: number;
+    excludedModels: number;
     filesChanged: number;
     dryRun: boolean;
 }
@@ -264,6 +293,7 @@ export interface BuildManifest {
     sourceHash: string;
     overridesHash: string;
     policyHash: string;
+    nativeProvidersHash: string;
     stats: BuildStats;
     warnings?: string[] | undefined;
 }
@@ -275,8 +305,6 @@ export interface NormalizedData {
 export interface BuildConfig {
     dryRun: boolean;
     force: boolean;
-    docsMdOnly: boolean;
-    apiOnly: boolean;
 }
 /** 模型键 */
 export type ModelKey = `${string}/${string}`;

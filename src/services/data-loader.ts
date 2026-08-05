@@ -2,6 +2,7 @@ import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, extname, basename } from 'node:path';
 
 import type {
+  NativeProvidersConfig,
   OverrideConfig,
   PolicyConfig,
   SourceData,
@@ -59,6 +60,16 @@ export class DataLoader {
   loadPolicy(): PolicyConfig {
     const policyPath = join(this.dataDir, 'policy.json');
     return this.readJSONSafe(policyPath, { providers: {}, models: {} });
+  }
+
+  /** 加载原生供应商目录（缺失时返回 null，构建将跳过过滤） */
+  loadNativeProviders(): NativeProvidersConfig | null {
+    const configPath = join(this.dataDir, 'native-providers.json');
+    const config = this.readJSONSafe<NativeProvidersConfig | null>(configPath, null);
+    if (!config || typeof config !== 'object' || typeof config.providers !== 'object') {
+      return null;
+    }
+    return config;
   }
 
   /** 加载覆写配置 */

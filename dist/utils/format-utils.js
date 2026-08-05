@@ -237,6 +237,29 @@ export function buildModelTags(model, map) {
 function extractValidPrice(value) {
     return typeof value === 'number' && value > 0 ? value : null;
 }
+/**
+ * 将成本对象规范化为 USD。
+ * NewAPI 的倍率体系以 USD 为基准（1 = $0.002/1K tokens），
+ * 非 USD 价格若不换算会产生错误倍率。
+ */
+export function normalizeCostToUSD(cost, exchangeRates) {
+    if (!cost)
+        return {};
+    const currency = cost.currency || 'USD';
+    if (currency === 'USD')
+        return { cost };
+    const rate = exchangeRates[currency];
+    if (typeof rate !== 'number' || rate <= 0) {
+        return { unknownCurrency: currency };
+    }
+    const converted = { currency: 'USD' };
+    for (const [key, value] of Object.entries(cost)) {
+        if (key === 'currency')
+            continue;
+        converted[key] = typeof value === 'number' ? Number((value / rate).toPrecision(6)) : value;
+    }
+    return { cost: converted };
+}
 /** 构建模型价格信息 */
 export function buildModelPriceInfo(cost) {
     return {

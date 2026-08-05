@@ -1,32 +1,30 @@
 {
-  "attachment": true,
+  "attachment": false,
   "cost": {
-    "cache_read": 0.06,
-    "cache_write": 0.45,
-    "input": 6,
-    "output": 12
+    "input": 0.1,
+    "output": 0
   },
-  "description": "针对各种NLP任务优化的基于Ada的文本嵌入模型。",
+  "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
   "family": "text-embedding",
   "id": "text-embedding-ada-002",
-  "knowledge": "2023-10",
-  "last_updated": "2023-10-01",
+  "knowledge": "2022-12",
+  "last_updated": "2022-12-15",
   "limit": {
-    "context": 60000,
-    "output": 1500
+    "context": 8192,
+    "output": 1536
   },
   "modalities": {
     "input": [
       "text"
     ],
     "output": [
-      "vector"
+      "text"
     ]
   },
-  "name": "TEXT-EMBEDDING-ADA-002",
+  "name": "text-embedding-ada-002",
   "open_weights": false,
-  "reasoning": true,
-  "release_date": "2023-11-20",
-  "temperature": true,
-  "tool_call": true
+  "reasoning": false,
+  "release_date": "2022-12-15",
+  "temperature": false,
+  "tool_call": false
 }

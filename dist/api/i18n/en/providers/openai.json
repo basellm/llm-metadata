@@ -1,12 +1,10 @@
 {
-  "description": "OpenAI, Inc. is an American artificial intelligence (AI) organization headquartered in San Francisco, California. It aims to develop \"safe and beneficial\" artificial general intelligence (AGI), which it defines as \"highly autonomous systems that outperform humans at most economically valuable work.\" As a leading organization in the ongoing AI boom, OpenAI is known for the GPT family of large language models, the DALL-E series of text-to-image models, and a text-to-video model named Sora. Its release of ChatGPT in November 2022 has been credited with catalyzing widespread interest in generative AI.",
   "doc": "https://platform.openai.com/docs/models",
   "env": [
     "OPENAI_API_KEY"
   ],
   "iconURL": "https://models.dev/logos/openai.svg",
   "id": "openai",
-  "lobeIcon": "OpenAI.Color",
   "models": {
     "chatgpt-image-latest": {
       "attachment": true,
@@ -35,68 +33,6 @@
       "release_date": "2025-12-16",
       "temperature": false,
       "tool_call": false
-    },
-    "dall-e-2": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.01,
-        "cache_write": 0.05,
-        "input": 0.02,
-        "output": 0.1
-      },
-      "description": "An AI model that generates images from textual descriptions.",
-      "id": "dall-e-2",
-      "knowledge": "2021-04",
-      "last_updated": "2022-06-15",
-      "limit": {
-        "context": 1024,
-        "output": 1
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "image"
-        ]
-      },
-      "name": "DALL-E 2",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2022-04-06",
-      "temperature": false,
-      "tool_call": true
-    },
-    "dall-e-3": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.01,
-        "cache_write": 0.05,
-        "input": 0.03,
-        "output": 0.15
-      },
-      "description": "The latest version of DALL-E for generating images from text.",
-      "id": "dall-e-3",
-      "knowledge": "2024-04",
-      "last_updated": "2024-08-15",
-      "limit": {
-        "context": 2048,
-        "output": 1
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "image"
-        ]
-      },
-      "name": "DALL-E 3",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-03-01",
-      "temperature": false,
-      "tool_call": true
     },
     "gpt-3.5-turbo": {
       "attachment": false,
@@ -1698,37 +1634,31 @@
     },
     "gpt-image-1": {
       "attachment": true,
-      "cost": {
-        "cache_read": 0.1,
-        "cache_write": 0.6,
-        "input": 10,
-        "output": 20
-      },
-      "description": "An advanced AI model for generating images from textual descriptions.",
+      "description": "OpenAI image model for production generation, edits, and brand-safe visual workflows",
       "family": "gpt-image",
       "id": "gpt-image-1",
-      "knowledge": "2023-10",
-      "last_updated": "2024-10-01",
+      "last_updated": "2025-04-24",
       "limit": {
-        "context": 1000,
+        "context": 0,
         "input": 0,
-        "output": 512
+        "output": 0
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "image"
         ]
       },
-      "name": "GPT-IMAGE-1",
-      "open_weights": true,
-      "reasoning": true,
-      "release_date": "2024-01-15",
+      "name": "gpt-image-1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-24",
       "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
+      "temperature": false,
+      "tool_call": false
     },
     "gpt-image-1-mini": {
       "attachment": true,
@@ -2130,100 +2060,94 @@
       "tool_call": true
     },
     "text-embedding-3-large": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
-        "cache_read": 0.05,
-        "cache_write": 0.4,
-        "input": 7,
-        "output": 10
+        "input": 0.13,
+        "output": 0
       },
-      "description": "Large size text embedding model for extensive natural language processing tasks.",
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
       "family": "text-embedding",
       "id": "text-embedding-3-large",
-      "knowledge": "2023-10",
-      "last_updated": "2023-10-01",
+      "knowledge": "2024-01",
+      "last_updated": "2024-01-25",
       "limit": {
-        "context": 64000,
-        "output": 2048
+        "context": 8191,
+        "output": 3072
       },
       "modalities": {
         "input": [
           "text"
         ],
         "output": [
-          "vector"
+          "text"
         ]
       },
-      "name": "TEXT-EMBEDDING-3-LARGE",
+      "name": "text-embedding-3-large",
       "open_weights": false,
-      "reasoning": true,
-      "release_date": "2023-12-15",
-      "temperature": true,
-      "tool_call": true
+      "reasoning": false,
+      "release_date": "2024-01-25",
+      "temperature": false,
+      "tool_call": false
     },
     "text-embedding-3-small": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
-        "cache_read": 0.04,
-        "cache_write": 0.3,
-        "input": 4,
-        "output": 8
+        "input": 0.02,
+        "output": 0
       },
-      "description": "Small size text embedding model for efficient processing.",
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
       "family": "text-embedding",
       "id": "text-embedding-3-small",
-      "knowledge": "2023-10",
-      "last_updated": "2023-10-01",
+      "knowledge": "2024-01",
+      "last_updated": "2024-01-25",
       "limit": {
-        "context": 32000,
-        "output": 1024
+        "context": 8191,
+        "output": 1536
       },
       "modalities": {
         "input": [
           "text"
         ],
         "output": [
-          "vector"
+          "text"
         ]
       },
-      "name": "TEXT-EMBEDDING-3-SMALL",
+      "name": "text-embedding-3-small",
       "open_weights": false,
-      "reasoning": true,
-      "release_date": "2023-11-10",
-      "temperature": true,
-      "tool_call": true
+      "reasoning": false,
+      "release_date": "2024-01-25",
+      "temperature": false,
+      "tool_call": false
     },
     "text-embedding-ada-002": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
-        "cache_read": 0.06,
-        "cache_write": 0.45,
-        "input": 6,
-        "output": 12
+        "input": 0.1,
+        "output": 0
       },
-      "description": "Ada-based text embedding model optimized for various NLP tasks.",
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
       "family": "text-embedding",
       "id": "text-embedding-ada-002",
-      "knowledge": "2023-10",
-      "last_updated": "2023-10-01",
+      "knowledge": "2022-12",
+      "last_updated": "2022-12-15",
       "limit": {
-        "context": 60000,
-        "output": 1500
+        "context": 8192,
+        "output": 1536
       },
       "modalities": {
         "input": [
           "text"
         ],
         "output": [
-          "vector"
+          "text"
         ]
       },
-      "name": "TEXT-EMBEDDING-ADA-002",
+      "name": "text-embedding-ada-002",
       "open_weights": false,
-      "reasoning": true,
-      "release_date": "2023-11-20",
-      "temperature": true,
-      "tool_call": true
+      "reasoning": false,
+      "release_date": "2022-12-15",
+      "temperature": false,
+      "tool_call": false
     }
   },
   "name": "OpenAI",

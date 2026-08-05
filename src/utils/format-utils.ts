@@ -292,6 +292,41 @@ function extractValidPrice(value?: number): number | null {
   return typeof value === 'number' && value > 0 ? value : null;
 }
 
+/** 货币换算结果 */
+export interface UsdCostResult {
+  /** 换算为 USD 后的成本（原始即 USD 时原样返回；无法换算时为 undefined） */
+  cost?: ModelCost;
+  /** 无法换算的货币代码（缺少汇率时返回） */
+  unknownCurrency?: string;
+}
+
+/**
+ * 将成本对象规范化为 USD。
+ * NewAPI 的倍率体系以 USD 为基准（1 = $0.002/1K tokens），
+ * 非 USD 价格若不换算会产生错误倍率。
+ */
+export function normalizeCostToUSD(
+  cost: ModelCost | undefined,
+  exchangeRates: Record<string, number>,
+): UsdCostResult {
+  if (!cost) return {};
+
+  const currency = cost.currency || 'USD';
+  if (currency === 'USD') return { cost };
+
+  const rate = exchangeRates[currency];
+  if (typeof rate !== 'number' || rate <= 0) {
+    return { unknownCurrency: currency };
+  }
+
+  const converted: ModelCost = { currency: 'USD' };
+  for (const [key, value] of Object.entries(cost)) {
+    if (key === 'currency') continue;
+    converted[key] = typeof value === 'number' ? Number((value / rate).toPrecision(6)) : value;
+  }
+  return { cost: converted };
+}
+
 /** 构建模型价格信息 */
 export function buildModelPriceInfo(cost?: ModelCost) {
   return {

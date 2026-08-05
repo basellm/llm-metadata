@@ -221,7 +221,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci || npm i --no-audit --no-fund
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Build API (check changes)
         run: |

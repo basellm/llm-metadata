@@ -9,12 +9,16 @@ export declare function removeNonJsonFiles(dirPath: string, options?: {
 }): void;
 /** 安全的文件名段 */
 export declare function sanitizeFileSegment(segment: string): string;
+/** 删除目录中不在保留清单内的 .json 文件（按不含扩展名的文件名匹配），返回删除数量 */
+export declare function pruneJsonFiles(dirPath: string, keep: ReadonlySet<string>, options?: {
+    dryRun?: boolean;
+}): number;
+/** 删除目录中不在保留清单内的子目录（递归删除），返回删除数量 */
+export declare function pruneSubdirectories(dirPath: string, keep: ReadonlySet<string>, options?: {
+    dryRun?: boolean;
+}): number;
 /** 检查文件内容是否发生变化并写入 */
 export declare function writeJSONIfChanged(filePath: string, data: any, options?: {
-    dryRun?: boolean;
-}): boolean;
-/** 检查文本内容是否发生变化并写入 */
-export declare function writeTextIfChanged(filePath: string, content: string, options?: {
     dryRun?: boolean;
 }): boolean;
 /** 读取 JSON 文件（如果存在） */

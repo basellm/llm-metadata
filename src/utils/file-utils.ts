@@ -3,6 +3,7 @@ import {
   mkdirSync,
   readdirSync,
   readFileSync,
+  rmSync,
   statSync,
   unlinkSync,
   writeFileSync,
@@ -63,6 +64,49 @@ export function sanitizeFileSegment(segment: string): string {
   return segment.replace(/[^a-zA-Z0-9\-_.]/g, '_');
 }
 
+/** 删除目录中不在保留清单内的 .json 文件（按不含扩展名的文件名匹配），返回删除数量 */
+export function pruneJsonFiles(
+  dirPath: string,
+  keep: ReadonlySet<string>,
+  options: { dryRun?: boolean } = {},
+): number {
+  if (!existsSync(dirPath)) return 0;
+
+  let removed = 0;
+  for (const item of readdirSync(dirPath)) {
+    const itemPath = join(dirPath, item);
+    if (!statSync(itemPath).isFile() || extname(item) !== '.json') continue;
+    if (keep.has(item.slice(0, -'.json'.length))) continue;
+
+    if (!options.dryRun) {
+      unlinkSync(itemPath);
+    }
+    removed++;
+  }
+  return removed;
+}
+
+/** 删除目录中不在保留清单内的子目录（递归删除），返回删除数量 */
+export function pruneSubdirectories(
+  dirPath: string,
+  keep: ReadonlySet<string>,
+  options: { dryRun?: boolean } = {},
+): number {
+  if (!existsSync(dirPath)) return 0;
+
+  let removed = 0;
+  for (const item of readdirSync(dirPath)) {
+    const itemPath = join(dirPath, item);
+    if (!statSync(itemPath).isDirectory() || keep.has(item)) continue;
+
+    if (!options.dryRun) {
+      rmSync(itemPath, { recursive: true, force: true });
+    }
+    removed++;
+  }
+  return removed;
+}
+
 /** 检查文件内容是否发生变化并写入 */
 export function writeJSONIfChanged(
   filePath: string,
@@ -87,33 +131,6 @@ export function writeJSONIfChanged(
   if (!options.dryRun) {
     ensureDirSync(path.dirname(filePath));
     writeFileSync(filePath, newContent, 'utf8');
-  }
-
-  return true; // 有变化
-}
-
-/** 检查文本内容是否发生变化并写入 */
-export function writeTextIfChanged(
-  filePath: string,
-  content: string,
-  options: { dryRun?: boolean } = {},
-): boolean {
-  let existingContent = '';
-  if (existsSync(filePath)) {
-    try {
-      existingContent = readFileSync(filePath, 'utf8');
-    } catch (error) {
-      // 读取失败，视为需要写入
-    }
-  }
-
-  if (content === existingContent) {
-    return false; // 无变化
-  }
-
-  if (!options.dryRun) {
-    ensureDirSync(path.dirname(filePath));
-    writeFileSync(filePath, content, 'utf8');
   }
 
   return true; // 有变化

@@ -1,0 +1,82 @@
+{
+  "$comment": "Native (first-party) provider catalog. Only providers listed here are kept in build outputs; everything else from upstream (aggregators, resellers, cloud hosts) is filtered out. See README 'Native providers' for field semantics.",
+  "version": 1,
+  "exchangeRates": {
+    "$comment": "Currency units per 1 USD, used to normalize non-USD costs for NewAPI pricing outputs. CNY follows new-api's USD2RMB constant.",
+    "CNY": 7.3,
+    "EUR": 0.92
+  },
+  "providers": {
+    "openai": {},
+    "anthropic": {},
+    "google": {},
+    "meta": {},
+    "llama": { "notes": "Meta's first-party Llama API (api.llama.com)." },
+    "xai": {},
+    "mistral": {},
+    "cohere": {},
+    "perplexity": {},
+    "deepseek": {},
+    "alibaba": {
+      "priority": 30,
+      "excludeModels": ["^deepseek", "^glm", "^kimi", "^llama", "^meta-llama", "^minimax", "^moonshot", "^abab"],
+      "notes": "International Model Studio endpoint; hosted third-party models excluded."
+    },
+    "alibaba-cn": {
+      "priority": 20,
+      "excludeModels": ["^deepseek", "^glm", "^kimi", "^llama", "^meta-llama", "^minimax", "^moonshot", "^abab"]
+    },
+    "alibaba-coding-plan": {
+      "priority": 5,
+      "excludeModels": ["^deepseek", "^glm", "^kimi", "^llama", "^meta-llama", "^minimax", "^moonshot", "^abab"]
+    },
+    "alibaba-coding-plan-cn": {
+      "priority": 4,
+      "excludeModels": ["^deepseek", "^glm", "^kimi", "^llama", "^meta-llama", "^minimax", "^moonshot", "^abab"]
+    },
+    "alibaba-token-plan": {
+      "priority": 3,
+      "excludeModels": ["^deepseek", "^glm", "^kimi", "^llama", "^meta-llama", "^minimax", "^moonshot", "^abab"]
+    },
+    "alibaba-token-plan-cn": {
+      "priority": 2,
+      "excludeModels": ["^deepseek", "^glm", "^kimi", "^llama", "^meta-llama", "^minimax", "^moonshot", "^abab"]
+    },
+    "moonshotai": { "priority": 20 },
+    "moonshotai-cn": { "priority": 10 },
+    "kimi-for-coding": { "priority": 5 },
+    "zai": { "priority": 20, "notes": "Z.AI international endpoint; preferred USD pricing for GLM models." },
+    "zhipuai": { "priority": 10 },
+    "zai-coding-plan": { "priority": 5 },
+    "zhipuai-coding-plan": { "priority": 4 },
+    "minimax": { "priority": 20 },
+    "minimax-cn": { "priority": 10 },
+    "minimax-coding-plan": { "priority": 5 },
+    "minimax-cn-coding-plan": { "priority": 4 },
+    "stepfun-ai": { "priority": 20, "notes": "StepFun global endpoint." },
+    "stepfun": { "priority": 10 },
+    "stepfun-ai-step-plan": { "priority": 5 },
+    "stepfun-step-plan": { "priority": 4 },
+    "xiaomi": { "priority": 20 },
+    "xiaomi-token-plan-ams": {},
+    "xiaomi-token-plan-cn": {},
+    "xiaomi-token-plan-sgp": {},
+    "tencent-tokenhub": { "priority": 20 },
+    "tencent-token-plan": { "priority": 10 },
+    "tencent-coding-plan": {
+      "excludeModels": ["^deepseek", "^glm", "^kimi", "^minimax"],
+      "notes": "Keeps only Tencent's own Hunyuan models."
+    },
+    "longcat": {},
+    "bailing": { "notes": "Ant Group Ling/Ring models." },
+    "nova": { "notes": "Amazon's first-party Nova API (api.nova.amazon.com)." },
+    "upstage": {},
+    "sarvam": {},
+    "sakana": {},
+    "thinkingmachines": {},
+    "poolside": {},
+    "inception": {},
+    "morph": {},
+    "v0": { "notes": "Vercel's own v0 models (not the AI Gateway)." }
+  }
+}

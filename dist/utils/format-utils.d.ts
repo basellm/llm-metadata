@@ -31,6 +31,19 @@ export declare function formatDetails(model: {
 export declare function formatLimit(value?: number): string;
 /** 构建模型标签字符串 */
 export declare function buildModelTags(model: any, map?: Record<string, string>): string[];
+/** 货币换算结果 */
+export interface UsdCostResult {
+    /** 换算为 USD 后的成本（原始即 USD 时原样返回；无法换算时为 undefined） */
+    cost?: ModelCost;
+    /** 无法换算的货币代码（缺少汇率时返回） */
+    unknownCurrency?: string;
+}
+/**
+ * 将成本对象规范化为 USD。
+ * NewAPI 的倍率体系以 USD 为基准（1 = $0.002/1K tokens），
+ * 非 USD 价格若不换算会产生错误倍率。
+ */
+export declare function normalizeCostToUSD(cost: ModelCost | undefined, exchangeRates: Record<string, number>): UsdCostResult;
 /** 构建模型价格信息 */
 export declare function buildModelPriceInfo(cost?: ModelCost): {
     input: number | null;

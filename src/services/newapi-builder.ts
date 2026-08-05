@@ -2,16 +2,71 @@ import type {
   ModelCost,
   NewApiModel,
   NewApiPriceConfig,
+  NewApiPricingOptions,
   NewApiRatios,
   NewApiSyncPayload,
   NewApiVendor,
   NormalizedData,
 } from '../types/index.js';
-import { buildModelPriceInfo, buildModelTags, getMaxPrices } from '../utils/format-utils.js';
+import { buildTieredBillingExpr } from '../utils/billing-expr.js';
+import {
+  buildModelPriceInfo,
+  buildModelTags,
+  getMaxPrices,
+  normalizeCostToUSD,
+} from '../utils/format-utils.js';
+
+/** NewAPI 同步载荷构建结果 */
+export interface NewApiSyncResult extends NewApiSyncPayload {
+  warnings: string[];
+}
+
+/** NewAPI 价格配置构建结果 */
+export interface NewApiPriceConfigResult {
+  config: NewApiPriceConfig;
+  warnings: string[];
+}
 
 /** NewAPI 构建服务 */
 export class NewApiBuilder {
-  /** 计算 NewAPI 价格比率（使用分层定价中的最高价格） */
+  constructor(private readonly pricing: NewApiPricingOptions) {}
+
+  /** 供应商优先级（同名模型冲突时数值大者胜出） */
+  private priorityOf(providerId: string): number {
+    return this.pricing.providerPriority[providerId] ?? 0;
+  }
+
+  /** 按优先级降序、ID 升序排列供应商，保证冲突解析的确定性 */
+  private sortProviderIds(providerIds: string[]): string[] {
+    return [...providerIds].sort(
+      (a, b) => this.priorityOf(b) - this.priorityOf(a) || a.localeCompare(b),
+    );
+  }
+
+  /** 将成本换算为 USD；无法换算时记录聚合警告并返回 undefined */
+  private toUsdCost(
+    cost: ModelCost | undefined,
+    providerId: string,
+    skipped: Map<string, number>,
+  ): ModelCost | undefined {
+    const result = normalizeCostToUSD(cost, this.pricing.exchangeRates);
+    if (result.unknownCurrency) {
+      const key = `${providerId}\u0000${result.unknownCurrency}`;
+      skipped.set(key, (skipped.get(key) || 0) + 1);
+      return undefined;
+    }
+    return result.cost;
+  }
+
+  /** 汇总货币换算失败的警告 */
+  private collectCurrencyWarnings(skipped: Map<string, number>): string[] {
+    return [...skipped.entries()].map(([key, count]) => {
+      const [providerId, currency] = key.split('\u0000');
+      return `newapi: skipped pricing for ${count} model(s) from "${providerId}" (no exchange rate for ${currency})`;
+    });
+  }
+
+  /** 计算 NewAPI 价格比率（使用分层定价中的最高价格，成本须为 USD） */
   private calculateRatios(cost?: ModelCost): NewApiRatios | null {
     const { maxInput, maxOutput, maxCacheRead } = getMaxPrices(cost);
 
@@ -53,7 +108,7 @@ export class NewApiBuilder {
     return Math.min(...unitPrices);
   }
 
-  /** 计算每百万 tokens 的美元价格与倍率字段 */
+  /** 计算每百万 tokens 的美元价格与倍率字段（成本须为 USD） */
   private buildPricingFields(cost?: ModelCost): {
     price_per_m_input: number | null;
     price_per_m_output: number | null;
@@ -77,34 +132,34 @@ export class NewApiBuilder {
     };
   }
 
-  /** 构建 NewAPI 同步载荷 */
+  /**
+   * 构建 NewAPI 同步载荷。
+   * 同名模型跨供应商时按优先级归属唯一供应商，无模型的供应商不输出。
+   */
   buildSyncPayload(
     allModelsData: NormalizedData,
     tagMap?: Record<string, string>,
-  ): NewApiSyncPayload {
-    const vendors: NewApiVendor[] = [];
+  ): NewApiSyncResult {
     const models: NewApiModel[] = [];
+    const skipped = new Map<string, number>();
+    const claimedModels = new Set<string>();
+    const vendorsWithModels = new Set<string>();
 
-    const providerIds = Object.keys(allModelsData.providers).sort();
+    const providerIds = this.sortProviderIds(Object.keys(allModelsData.providers));
 
     for (const providerId of providerIds) {
       const provider = allModelsData.providers[providerId];
-
-      // 构建供应商数据
-      vendors.push({
-        name: provider.name || providerId,
-        description: provider.description || '',
-        icon: provider.lobeIcon || '',
-        status: 1,
-      });
-
-      // 构建模型数据
       const modelEntries = Object.entries(provider.models || {}).sort(([a], [b]) =>
         a.localeCompare(b),
       );
 
       for (const [modelId, model] of modelEntries) {
-        const pricing = this.buildPricingFields(model.cost);
+        if (claimedModels.has(modelId)) continue;
+        claimedModels.add(modelId);
+        vendorsWithModels.add(providerId);
+
+        const usdCost = this.toUsdCost(model.cost, providerId, skipped);
+        const pricing = this.buildPricingFields(usdCost);
         models.push({
           model_name: modelId,
           description: model.description || '',
@@ -125,39 +180,76 @@ export class NewApiBuilder {
       }
     }
 
-    return { vendors, models };
+    const vendors: NewApiVendor[] = [...vendorsWithModels]
+      .sort((a, b) => a.localeCompare(b))
+      .map((providerId) => {
+        const provider = allModelsData.providers[providerId];
+        return {
+          name: provider.name || providerId,
+          description: provider.description || '',
+          icon: provider.lobeIcon || '',
+          status: 1,
+        };
+      });
+
+    models.sort((a, b) => a.model_name.localeCompare(b.model_name));
+
+    return { vendors, models, warnings: this.collectCurrencyWarnings(skipped) };
   }
 
   /** 构建 NewAPI 价格配置（可选按提供商过滤） */
-  buildPriceConfig(allModelsData: NormalizedData, providerId?: string): NewApiPriceConfig {
+  buildPriceConfig(allModelsData: NormalizedData, providerId?: string): NewApiPriceConfigResult {
     const config: NewApiPriceConfig = {
       data: {
         cache_ratio: {},
         completion_ratio: {},
         model_ratio: {},
         model_price: {},
+        billing_mode: {},
+        billing_expr: {},
       },
       message: '',
       success: true,
     };
 
-    const providers = providerId
+    const providerIds = providerId
       ? allModelsData.providers[providerId]
-        ? [allModelsData.providers[providerId]]
+        ? [providerId]
         : []
-      : Object.values(allModelsData.providers);
+      : this.sortProviderIds(Object.keys(allModelsData.providers));
 
-    for (const provider of providers) {
+    const skipped = new Map<string, number>();
+    const claimedModels = new Set<string>();
+
+    for (const id of providerIds) {
+      const provider = allModelsData.providers[id];
       for (const [modelId, model] of Object.entries(provider.models || {})) {
-        const minUnit = this.getMinUnitPrice(model.cost);
+        if (claimedModels.has(modelId)) continue;
+
+        const usdCost = this.toUsdCost(model.cost, id, skipped);
+        if (!usdCost) continue;
+
+        const minUnit = this.getMinUnitPrice(usdCost);
         if (minUnit !== null) {
           // 单位计费模型：只输出 model_price，且不输出任何 ratio 字段
+          claimedModels.add(modelId);
           config.data.model_price[modelId] = minUnit;
           continue;
         }
 
+        // 分层/思考差价模型：输出表达式计费（new-api 优先采用；倍率仍作回退）
+        const billingExpr = buildTieredBillingExpr(usdCost);
+        const ratios = this.calculateRatios(usdCost);
+        if (!billingExpr && !ratios) continue;
+
+        claimedModels.add(modelId);
+
+        if (billingExpr) {
+          config.data.billing_mode[modelId] = 'tiered_expr';
+          config.data.billing_expr[modelId] = billingExpr;
+        }
+
         // 非单位计费模型：按 token 定价计算比率
-        const ratios = this.calculateRatios(model.cost);
         if (ratios) {
           config.data.model_ratio[modelId] = ratios.model;
 
@@ -172,6 +264,6 @@ export class NewApiBuilder {
       }
     }
 
-    return config;
+    return { config, warnings: this.collectCurrencyWarnings(skipped) };
   }
 }

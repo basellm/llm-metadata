@@ -12,8 +12,8 @@
     "compile": "tsc",
     "compile:watch": "tsc --watch",
     "dev": "npm run compile:watch",
-    "docs-md-only": "npm run compile && node dist/build.js --docs-md-only",
-    "api-only": "npm run compile && node dist/build.js --api-only",
+    "web:dev": "npm --prefix web run dev",
+    "web:build": "npm --prefix web run build",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx}\""
   },

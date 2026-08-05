@@ -16,9 +16,7 @@ on:
       - 'src/**'
       - 'data/**'
       - 'public/**'
-      - 'docs/**'
-      - 'mkdocs.yml'
-      - 'requirements.txt'
+      - 'web/**'
       - 'package.json'
       - '.github/workflows/build.yml'
   workflow_dispatch:
@@ -63,16 +61,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install MkDocs and dependencies
-        run: |
-          pip install -r requirements.txt
+          node-version: '22'
 
       - name: Install Node dependencies
         run: |
@@ -84,24 +73,26 @@ jobs:
           npm run check || echo "CHANGED=$?" >> $GITHUB_OUTPUT
         shell: bash
 
-      - name: Generate docs markdown from API
-        if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
-        run: |
-          npm run docs-md-only
-
-      - name: Build MkDocs documentation
-        if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
-        run: |
-          mkdocs build -d dist
-
       - name: Build API data
         if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
-            npm run api-only -- --force
+            npm run build -- --force
           else
-            npm run api-only
+            npm run build
           fi
+
+      - name: Install web dependencies
+        if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
+        working-directory: web
+        run: |
+          npm ci
+
+      - name: Build web app
+        if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
+        working-directory: web
+        run: |
+          npm run build
 
       - name: Commit and push changes
         if: ${{ steps.check.outputs.CHANGED == '2' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}

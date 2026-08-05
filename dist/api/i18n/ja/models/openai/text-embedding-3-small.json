@@ -1,32 +1,30 @@
 {
-  "attachment": true,
+  "attachment": false,
   "cost": {
-    "cache_read": 0.04,
-    "cache_write": 0.3,
-    "input": 4,
-    "output": 8
+    "input": 0.02,
+    "output": 0
   },
-  "description": "効率的な処理のための小型テキスト埋め込みモデル。",
+  "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
   "family": "text-embedding",
   "id": "text-embedding-3-small",
-  "knowledge": "2023-10",
-  "last_updated": "2023-10-01",
+  "knowledge": "2024-01",
+  "last_updated": "2024-01-25",
   "limit": {
-    "context": 32000,
-    "output": 1024
+    "context": 8191,
+    "output": 1536
   },
   "modalities": {
     "input": [
       "text"
     ],
     "output": [
-      "vector"
+      "text"
     ]
   },
-  "name": "TEXT-EMBEDDING-3-SMALL",
+  "name": "text-embedding-3-small",
   "open_weights": false,
-  "reasoning": true,
-  "release_date": "2023-11-10",
-  "temperature": true,
-  "tool_call": true
+  "reasoning": false,
+  "release_date": "2024-01-25",
+  "temperature": false,
+  "tool_call": false
 }
