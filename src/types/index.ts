@@ -61,9 +61,24 @@ export interface ModelCost {
   per_10k_chars?: number;
   per_image?: number;
 
+  // 结构化阶梯（上游透传）：tiers 中价格在 tier.size 以上生效；
+  // context_over_200k 为同一信息的遗留表示（tiers 存在时以 tiers 为准）
+  tiers?: ModelCostTier[];
+  context_over_200k?: CostFamilyCells;
+
   // 动态字段支持（分段定价、推理模式等）
   // 支持模式如: input_32k_128k, output_128k_256k, thinking_input, thinking_output_256k_1m 等
-  [key: string]: number | string | undefined;
+  [key: string]: number | string | ModelCostTier[] | CostFamilyCells | undefined;
+}
+
+/** 各计费家族的价格单元（USD 或 cost.currency 指定货币 / 1M tokens） */
+export type CostFamilyCells = Partial<
+  Record<'input' | 'output' | 'cache_read' | 'cache_write', number>
+>;
+
+/** 结构化上下文阶梯条目（价格在 tier.size tokens 以上生效） */
+export interface ModelCostTier extends CostFamilyCells {
+  tier?: { size?: number; type?: string };
 }
 
 /** 模型支持的模态 */

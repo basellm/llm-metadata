@@ -1,8 +1,9 @@
 /**
  * new-api 表达式计费（tiered_expr）生成器。
  *
- * 将带分层定价（input_32k_128k 等）或思考模式差价（thinking_*）的
- * USD 成本转换为 new-api 的 billing_expr 表达式（expr-lang 语法）：
+ * 将带分层定价（扁平键 input_32k_128k、结构化 tiers 数组、遗留
+ * context_over_200k）或思考模式差价（thinking_*）的 USD 成本转换为
+ * new-api 的 billing_expr 表达式（expr-lang 语法）：
  * - 系数单位为 USD / 1M tokens，与 new-api v1 表达式语义一致；
  * - 档位条件使用 len（完整输入上下文长度），阈值采用十进制
  *   （32k = 32000，1m = 1000000），与 new-api 前端预设一致；

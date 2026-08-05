@@ -1,7 +1,13 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
+    "billing_expr": {
+      "qwen3.6-plus": "len <= 256000 ? tier(\"0_256k\", p * 0.5 + c * 3 + cr * 0.05 + cc * 0.625) : tier(\"256k_plus\", p * 2 + c * 6 + cr * 0.2 + cc * 2.5)",
+      "qwen3.7-plus": "len <= 256000 ? tier(\"0_256k\", p * 0.5 + c * 3 + cr * 0.05 + cc * 0.625) : tier(\"256k_plus\", p * 2 + c * 6 + cr * 0.2 + cc * 2.5)"
+    },
+    "billing_mode": {
+      "qwen3.6-plus": "tiered_expr",
+      "qwen3.7-plus": "tiered_expr"
+    },
     "cache_ratio": {
       "qwen3.6-max-preview": 0.1,
       "qwen3.6-plus": 0.1,

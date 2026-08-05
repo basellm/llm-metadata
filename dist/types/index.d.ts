@@ -42,7 +42,18 @@ export interface ModelCost {
     per_second?: number;
     per_10k_chars?: number;
     per_image?: number;
-    [key: string]: number | string | undefined;
+    tiers?: ModelCostTier[];
+    context_over_200k?: CostFamilyCells;
+    [key: string]: number | string | ModelCostTier[] | CostFamilyCells | undefined;
+}
+/** 各计费家族的价格单元（USD 或 cost.currency 指定货币 / 1M tokens） */
+export type CostFamilyCells = Partial<Record<'input' | 'output' | 'cache_read' | 'cache_write', number>>;
+/** 结构化上下文阶梯条目（价格在 tier.size tokens 以上生效） */
+export interface ModelCostTier extends CostFamilyCells {
+    tier?: {
+        size?: number;
+        type?: string;
+    };
 }
 /** 模型支持的模态 */
 export interface ModelModalities {

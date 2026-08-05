@@ -1,7 +1,23 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
+    "billing_expr": {
+      "deep-research-max-preview-04-2026": "len <= 200000 ? tier(\"0_200k\", p * 2 + c * 12 + cr * 0.2) : tier(\"200k_plus\", p * 4 + c * 18 + cr * 0.4)",
+      "deep-research-preview-04-2026": "len <= 200000 ? tier(\"0_200k\", p * 2 + c * 12 + cr * 0.2) : tier(\"200k_plus\", p * 4 + c * 18 + cr * 0.4)",
+      "gemini-2.5-computer-use-preview-10-2025": "len <= 200000 ? tier(\"0_200k\", p * 1.25 + c * 10) : tier(\"200k_plus\", p * 2.5 + c * 15)",
+      "gemini-2.5-pro": "len <= 200000 ? tier(\"0_200k\", p * 1.25 + c * 10 + cr * 0.125) : tier(\"200k_plus\", p * 2.5 + c * 15 + cr * 0.25)",
+      "gemini-3-pro-preview": "len <= 200000 ? tier(\"0_200k\", p * 2 + c * 12 + cr * 0.2) : tier(\"200k_plus\", p * 4 + c * 18 + cr * 0.4)",
+      "gemini-3.1-pro-preview": "len <= 200000 ? tier(\"0_200k\", p * 2 + c * 12 + cr * 0.2) : tier(\"200k_plus\", p * 4 + c * 18 + cr * 0.4)",
+      "gemini-3.1-pro-preview-customtools": "len <= 200000 ? tier(\"0_200k\", p * 2 + c * 12 + cr * 0.2) : tier(\"200k_plus\", p * 4 + c * 18 + cr * 0.4)"
+    },
+    "billing_mode": {
+      "deep-research-max-preview-04-2026": "tiered_expr",
+      "deep-research-preview-04-2026": "tiered_expr",
+      "gemini-2.5-computer-use-preview-10-2025": "tiered_expr",
+      "gemini-2.5-pro": "tiered_expr",
+      "gemini-3-pro-preview": "tiered_expr",
+      "gemini-3.1-pro-preview": "tiered_expr",
+      "gemini-3.1-pro-preview-customtools": "tiered_expr"
+    },
     "cache_ratio": {
       "deep-research-max-preview-04-2026": 0.1,
       "deep-research-preview-04-2026": 0.1,

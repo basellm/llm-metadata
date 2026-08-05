@@ -1,8 +1,9 @@
 /**
  * new-api 表达式计费（tiered_expr）生成器。
  *
- * 将带分层定价（input_32k_128k 等）或思考模式差价（thinking_*）的
- * USD 成本转换为 new-api 的 billing_expr 表达式（expr-lang 语法）：
+ * 将带分层定价（扁平键 input_32k_128k、结构化 tiers 数组、遗留
+ * context_over_200k）或思考模式差价（thinking_*）的 USD 成本转换为
+ * new-api 的 billing_expr 表达式（expr-lang 语法）：
  * - 系数单位为 USD / 1M tokens，与 new-api v1 表达式语义一致；
  * - 档位条件使用 len（完整输入上下文长度），阈值采用十进制
  *   （32k = 32000，1m = 1000000），与 new-api 前端预设一致；
@@ -11,7 +12,7 @@
  *   OpenAI 兼容端点的官方开关参数）。
  */
 
-import type { ModelCost } from '../types/index.js';
+import type { CostFamilyCells, ModelCost } from '../types/index.js';
 
 /** 计费家族到 new-api 表达式变量的映射 */
 const FAMILY_VARS = [
@@ -44,16 +45,26 @@ function formatSizeToken(tokens: number): string {
   return String(tokens);
 }
 
-/** 收集某前缀（'' 或 'thinking_'）下各家族的价格档位，按 lo 升序 */
+/**
+ * 收集某前缀（'' 或 'thinking_'）下各家族的价格档位，按 lo 升序。
+ * 标准分支额外摄入结构化阶梯：tiers 数组（阈值以上生效）优先，
+ * 缺失时回退遗留 context_over_200k；同阈值时结构化值覆盖扁平键。
+ */
 function collectSegments(cost: ModelCost, prefix: string): Map<Family, TierSegment[]> {
-  const segments = new Map<Family, TierSegment[]>();
+  const byFamily = new Map<Family, Map<number, number>>();
+  const put = (family: Family, lo: number, price: number) => {
+    let entries = byFamily.get(family);
+    if (!entries) {
+      entries = new Map();
+      byFamily.set(family, entries);
+    }
+    entries.set(lo, price);
+  };
 
   for (const [family] of FAMILY_VARS) {
-    const list: TierSegment[] = [];
-
     const base = cost[`${prefix}${family}`];
     if (typeof base === 'number' && base >= 0) {
-      list.push({ lo: 0, price: base });
+      put(family, 0, base);
     }
 
     const tierKeyRe = new RegExp(
@@ -64,15 +75,40 @@ function collectSegments(cost: ModelCost, prefix: string): Map<Family, TierSegme
       if (!match || typeof value !== 'number') continue;
       const lo = parseSizeToken(match[1]);
       if (lo === null) continue;
-      list.push({ lo, price: value });
-    }
-
-    if (list.length > 0) {
-      list.sort((a, b) => a.lo - b.lo);
-      segments.set(family, list);
+      put(family, lo, value);
     }
   }
 
+  if (prefix === '') {
+    const structured: { threshold: number; cells: CostFamilyCells }[] = [];
+    if (Array.isArray(cost.tiers)) {
+      for (const entry of cost.tiers) {
+        const size = entry?.tier?.size;
+        if (typeof size === 'number' && size > 0) {
+          structured.push({ threshold: size, cells: entry });
+        }
+      }
+    }
+    if (structured.length === 0 && cost.context_over_200k) {
+      structured.push({ threshold: 200_000, cells: cost.context_over_200k });
+    }
+    for (const { threshold, cells } of structured) {
+      for (const [family] of FAMILY_VARS) {
+        const price = cells[family];
+        if (typeof price === 'number' && price >= 0) {
+          put(family, threshold, price);
+        }
+      }
+    }
+  }
+
+  const segments = new Map<Family, TierSegment[]>();
+  for (const [family, entries] of byFamily) {
+    segments.set(
+      family,
+      [...entries.entries()].map(([lo, price]) => ({ lo, price })).sort((a, b) => a.lo - b.lo),
+    );
+  }
   return segments;
 }
 

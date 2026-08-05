@@ -42,6 +42,8 @@ export interface UsdCostResult {
  * 将成本对象规范化为 USD。
  * NewAPI 的倍率体系以 USD 为基准（1 = $0.002/1K tokens），
  * 非 USD 价格若不换算会产生错误倍率。
+ * 结构化阶梯（tiers / context_over_200k）中的价格一并换算，
+ * 但 tier 描述符（size 为 token 阈值）保持原样。
  */
 export declare function normalizeCostToUSD(cost: ModelCost | undefined, exchangeRates: Record<string, number>): UsdCostResult;
 /** 构建模型价格信息 */

@@ -1,7 +1,21 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
+    "billing_expr": {
+      "grok-4.20-0309-non-reasoning": "len <= 200000 ? tier(\"0_200k\", p * 1.25 + c * 2.5 + cr * 0.2) : tier(\"200k_plus\", p * 2.5 + c * 5 + cr * 0.4)",
+      "grok-4.20-0309-reasoning": "len <= 200000 ? tier(\"0_200k\", p * 1.25 + c * 2.5 + cr * 0.2) : tier(\"200k_plus\", p * 2.5 + c * 5 + cr * 0.4)",
+      "grok-4.20-multi-agent-0309": "len <= 200000 ? tier(\"0_200k\", p * 1.25 + c * 2.5 + cr * 0.2) : tier(\"200k_plus\", p * 2.5 + c * 5 + cr * 0.4)",
+      "grok-4.3": "len <= 200000 ? tier(\"0_200k\", p * 1.25 + c * 2.5 + cr * 0.2) : tier(\"200k_plus\", p * 2.5 + c * 5 + cr * 0.4)",
+      "grok-4.5": "len <= 200000 ? tier(\"0_200k\", p * 2 + c * 6 + cr * 0.3) : tier(\"200k_plus\", p * 4 + c * 12 + cr * 0.6)",
+      "grok-build-0.1": "len <= 200000 ? tier(\"0_200k\", p * 1 + c * 2 + cr * 0.2) : tier(\"200k_plus\", p * 2 + c * 4 + cr * 0.4)"
+    },
+    "billing_mode": {
+      "grok-4.20-0309-non-reasoning": "tiered_expr",
+      "grok-4.20-0309-reasoning": "tiered_expr",
+      "grok-4.20-multi-agent-0309": "tiered_expr",
+      "grok-4.3": "tiered_expr",
+      "grok-4.5": "tiered_expr",
+      "grok-build-0.1": "tiered_expr"
+    },
     "cache_ratio": {
       "grok-4.20-0309-non-reasoning": 0.16,
       "grok-4.20-0309-reasoning": 0.16,

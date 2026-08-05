@@ -1,7 +1,11 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
+    "billing_expr": {
+      "MiniMax-M3": "len <= 512000 ? tier(\"0_512k\", p * 0.3 + c * 1.2 + cr * 0.06) : tier(\"512k_plus\", p * 0.6 + c * 2.4 + cr * 0.12)"
+    },
+    "billing_mode": {
+      "MiniMax-M3": "tiered_expr"
+    },
     "cache_ratio": {
       "MiniMax-M2.1": 0.1,
       "MiniMax-M2.5": 0.1,

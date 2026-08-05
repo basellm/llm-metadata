@@ -1,7 +1,13 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
+    "billing_expr": {
+      "fugu-ultra": "len <= 272000 ? tier(\"0_272k\", p * 5 + c * 30 + cr * 0.5) : tier(\"272k_plus\", p * 10 + c * 45 + cr * 1)",
+      "fugu-ultra-20260615": "len <= 272000 ? tier(\"0_272k\", p * 5 + c * 30 + cr * 0.5) : tier(\"272k_plus\", p * 10 + c * 45 + cr * 1)"
+    },
+    "billing_mode": {
+      "fugu-ultra": "tiered_expr",
+      "fugu-ultra-20260615": "tiered_expr"
+    },
     "cache_ratio": {
       "fugu-ultra": 0.1,
       "fugu-ultra-20260615": 0.1

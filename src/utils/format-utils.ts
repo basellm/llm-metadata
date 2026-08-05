@@ -1,6 +1,6 @@
 /** 格式化工具函数 */
 
-import { ModelCost } from '../types/index.js';
+import { CostFamilyCells, ModelCost } from '../types/index.js';
 
 /** 将 token 数量格式化为 K/M 形式 */
 export function formatTokensToKM(tokens?: number): string | null {
@@ -304,6 +304,8 @@ export interface UsdCostResult {
  * 将成本对象规范化为 USD。
  * NewAPI 的倍率体系以 USD 为基准（1 = $0.002/1K tokens），
  * 非 USD 价格若不换算会产生错误倍率。
+ * 结构化阶梯（tiers / context_over_200k）中的价格一并换算，
+ * 但 tier 描述符（size 为 token 阈值）保持原样。
  */
 export function normalizeCostToUSD(
   cost: ModelCost | undefined,
@@ -319,10 +321,33 @@ export function normalizeCostToUSD(
     return { unknownCurrency: currency };
   }
 
+  const toUsd = (value: number) => Number((value / rate).toPrecision(6));
+
   const converted: ModelCost = { currency: 'USD' };
   for (const [key, value] of Object.entries(cost)) {
     if (key === 'currency') continue;
-    converted[key] = typeof value === 'number' ? Number((value / rate).toPrecision(6)) : value;
+    if (typeof value === 'number') {
+      converted[key] = toUsd(value);
+    } else if (key === 'tiers' && Array.isArray(value)) {
+      converted.tiers = value.map((entry) => {
+        const out = { ...entry };
+        for (const [cellKey, cellValue] of Object.entries(entry)) {
+          if (cellKey !== 'tier' && typeof cellValue === 'number') {
+            (out as Record<string, unknown>)[cellKey] = toUsd(cellValue);
+          }
+        }
+        return out;
+      });
+    } else if (key === 'context_over_200k' && value && typeof value === 'object') {
+      converted.context_over_200k = Object.fromEntries(
+        Object.entries(value).map(([cellKey, cellValue]) => [
+          cellKey,
+          typeof cellValue === 'number' ? toUsd(cellValue) : cellValue,
+        ]),
+      ) as CostFamilyCells;
+    } else {
+      converted[key] = value;
+    }
   }
   return { cost: converted };
 }
