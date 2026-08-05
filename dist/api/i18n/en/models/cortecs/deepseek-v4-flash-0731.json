@@ -1,21 +1,21 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.174,
-    "input": 0.87,
-    "output": 1.74
+    "cache_read": 0.0645,
+    "input": 0.258,
+    "output": 0.31
   },
-  "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
-  "family": "deepseek-thinking",
-  "id": "deepseek-v4-pro",
+  "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+  "family": "deepseek-flash",
+  "id": "deepseek-v4-flash-0731",
   "interleaved": {
     "field": "reasoning_content"
   },
   "knowledge": "2025-05",
-  "last_updated": "2026-04-24",
+  "last_updated": "2026-07-31",
   "limit": {
-    "context": 262144,
-    "output": 52429
+    "context": 1048576,
+    "output": 384000
   },
   "modalities": {
     "input": [
@@ -25,7 +25,7 @@
       "text"
     ]
   },
-  "name": "Deepseek V4 Pro",
+  "name": "DeepSeek V4 Flash 0731",
   "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
@@ -34,13 +34,11 @@
       "values": [
         "low",
         "medium",
-        "high",
-        "xhigh"
+        "high"
       ]
     }
   ],
-  "release_date": "2026-04-24",
-  "structured_output": true,
+  "release_date": "2026-07-31",
   "temperature": true,
   "tool_call": true
 }
