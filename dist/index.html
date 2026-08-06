@@ -1,8 +1,22 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // 首帧前应用主题，避免闪烁（键名与 ThemeProvider 保持一致）
+      (function () {
+        try {
+          var theme = localStorage.getItem('llm-metadata.theme');
+          if (
+            theme === 'dark' ||
+            (theme !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+          ) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta
       name="description"
       content="Native provider pricing for LLMs — a lightweight static API and pricing browser."
@@ -12,8 +26,8 @@
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23f6821f'/%3E%3C/svg%3E"
     />
     <title>LLM Metadata — Native Provider Pricing</title>
-    <script type="module" crossorigin src="./app/index-Bp2na0OZ.js"></script>
-    <link rel="stylesheet" crossorigin href="./app/index-Cn3Yhx9z.css">
+    <script type="module" crossorigin src="./app/index-67BNrJUm.js"></script>
+    <link rel="stylesheet" crossorigin href="./app/index-j5j3BdtP.css">
   </head>
   <body>
     <div id="root"></div>

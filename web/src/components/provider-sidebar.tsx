@@ -4,6 +4,7 @@ import { Search } from 'lucide-react';
 import { ProviderIcon } from '@/components/provider-icon';
 import { Input } from '@/components/ui/input';
 import type { ProviderIndexItem } from '@/lib/api';
+import { useI18n } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
 
 export function ProviderSidebar({
@@ -15,6 +16,7 @@ export function ProviderSidebar({
   selectedId: string | null;
   onSelect: (id: string) => void;
 }) {
+  const { t } = useI18n();
   const [query, setQuery] = useState('');
 
   const filtered = useMemo(() => {
@@ -32,15 +34,18 @@ export function ProviderSidebar({
         <Input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Filter providers…"
+          placeholder={t('sidebar.filter')}
           className="pl-8"
-          aria-label="Filter providers"
+          aria-label={t('sidebar.filter')}
         />
       </div>
       <div className="text-muted-foreground shrink-0 px-2 text-[11px] font-medium tracking-wider uppercase">
-        Providers
+        {t('sidebar.title')}
       </div>
-      <nav aria-label="Providers" className="-mx-1 min-h-0 flex-1 overflow-y-auto px-1 pb-4">
+      <nav
+        aria-label={t('sidebar.title')}
+        className="-mx-1 min-h-0 flex-1 overflow-y-auto px-1 pb-4"
+      >
         <ul className="flex flex-col gap-px">
           {filtered.map((provider) => {
             const active = provider.id === selectedId;
@@ -70,7 +75,9 @@ export function ProviderSidebar({
             );
           })}
           {filtered.length === 0 && (
-            <li className="text-muted-foreground px-2 py-4 text-center text-sm">No providers.</li>
+            <li className="text-muted-foreground px-2 py-4 text-center text-sm">
+              {t('sidebar.empty')}
+            </li>
           )}
         </ul>
       </nav>

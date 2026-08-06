@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { BookOpen, Search, TriangleAlert } from 'lucide-react';
 
+import { LocaleToggle } from '@/components/locale-toggle';
 import { PricingTable } from '@/components/pricing-table';
 import { ProviderIcon } from '@/components/provider-icon';
 import { ProviderSidebar } from '@/components/provider-sidebar';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { Input } from '@/components/ui/input';
 import {
   Select,
@@ -23,6 +25,7 @@ import {
   type ProviderIndexItem,
 } from '@/lib/api';
 import { formatDate } from '@/lib/format';
+import { useI18n } from '@/lib/i18n';
 
 const REPO_URL = 'https://github.com/basellm/llm-metadata';
 
@@ -37,6 +40,26 @@ function GithubIcon({ className }: { className?: string }) {
 function readProviderFromHash(): string | null {
   const match = /^#p=([^&]+)/.exec(window.location.hash);
   return match ? decodeURIComponent(match[1]) : null;
+}
+
+/** 数据来源脚注：消息中的 {link} 占位符渲染为 models.dev 链接 */
+function FooterSource() {
+  const { t } = useI18n();
+  const [before, after] = t('app.footerSource').split('{link}');
+  return (
+    <span>
+      {before}
+      <a
+        href="https://models.dev"
+        target="_blank"
+        rel="noreferrer"
+        className="hover:text-foreground underline underline-offset-2"
+      >
+        models.dev
+      </a>
+      {after}
+    </span>
+  );
 }
 
 function TableSkeleton() {
@@ -59,6 +82,7 @@ function TableSkeleton() {
 }
 
 export default function App() {
+  const { locale, t } = useI18n();
   const [providers, setProviders] = useState<ProviderIndexItem[] | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [provider, setProvider] = useState<Provider | null>(null);
@@ -69,17 +93,22 @@ export default function App() {
   // 重试令牌：selectedId 不变时也能重新触发加载 effect
   const [reloadKey, setReloadKey] = useState(0);
 
-  // 加载供应商索引与构建元信息，并根据 URL hash 恢复选中项
+  // 加载供应商索引与构建元信息，并根据 URL hash 恢复选中项（语言切换后重取本地化数据）
   useEffect(() => {
     let cancelled = false;
-    fetchProviders()
+    fetchProviders(locale)
       .then(({ providers: list }) => {
         if (cancelled) return;
         const sorted = [...list].sort((a, b) => a.name.localeCompare(b.name));
         setProviders(sorted);
         const fromHash = readProviderFromHash();
-        const initial = sorted.find((p) => p.id === fromHash) ?? sorted[0];
-        if (initial) setSelectedId(initial.id);
+        setSelectedId((current) => {
+          const initial =
+            sorted.find((p) => p.id === (current ?? fromHash)) ??
+            sorted.find((p) => p.id === fromHash) ??
+            sorted[0];
+          return initial ? initial.id : null;
+        });
       })
       .catch((err: unknown) => {
         if (!cancelled) setError(err instanceof Error ? err.message : String(err));
@@ -90,7 +119,7 @@ export default function App() {
     return () => {
       cancelled = true;
     };
-  }, [reloadKey]);
+  }, [locale, reloadKey]);
 
   // 加载选中供应商的模型与表达式计费映射
   useEffect(() => {
@@ -99,7 +128,7 @@ export default function App() {
     setProvider(null);
     setBillingExpr(null);
     setError(null);
-    Promise.all([fetchProvider(selectedId), fetchBillingExpr(selectedId)])
+    Promise.all([fetchProvider(locale, selectedId), fetchBillingExpr(selectedId)])
       .then(([data, expr]) => {
         if (cancelled) return;
         setProvider(data);
@@ -111,7 +140,7 @@ export default function App() {
     return () => {
       cancelled = true;
     };
-  }, [selectedId, reloadKey]);
+  }, [locale, selectedId, reloadKey]);
 
   const handleSelect = useCallback((id: string) => {
     setSelectedId(id);
@@ -148,20 +177,22 @@ export default function App() {
             LLM Metadata
           </a>
           <span className="text-muted-foreground hidden text-sm sm:inline">
-            Native provider pricing
+            {t('app.tagline')}
           </span>
-          <div className="ml-auto flex items-center gap-3">
+          <div className="ml-auto flex items-center gap-1.5">
             {providers && (
-              <span className="text-muted-foreground hidden rounded-full border px-2.5 py-0.5 font-mono text-[11px] tabular-nums sm:inline">
-                {providers.length} providers · {totalModels} models
+              <span className="text-muted-foreground mr-1.5 hidden rounded-full border px-2.5 py-0.5 font-mono text-[11px] tabular-nums sm:inline">
+                {t('app.stats', { providers: providers.length, models: totalModels })}
               </span>
             )}
+            <LocaleToggle />
+            <ThemeToggle />
             <a
               href={REPO_URL}
               target="_blank"
               rel="noreferrer"
-              aria-label="GitHub repository"
-              className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 rounded-sm transition-colors focus-visible:ring-2 focus-visible:outline-none"
+              aria-label={t('app.github')}
+              className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 flex size-8 items-center justify-center rounded-md transition-colors focus-visible:ring-2 focus-visible:outline-none"
             >
               <GithubIcon className="size-5" />
             </a>
@@ -186,7 +217,7 @@ export default function App() {
           {providers && selectedId && (
             <div className="shrink-0 md:hidden">
               <Select value={selectedId} onValueChange={handleSelect}>
-                <SelectTrigger aria-label="Select provider">
+                <SelectTrigger aria-label={t('app.selectProvider')}>
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -225,7 +256,7 @@ export default function App() {
                   className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs transition-colors focus-visible:ring-2 focus-visible:outline-none"
                 >
                   <BookOpen className="size-3.5" />
-                  Docs
+                  {t('app.docs')}
                 </a>
               )}
               <div className="relative ml-auto w-full sm:w-72">
@@ -233,9 +264,9 @@ export default function App() {
                 <Input
                   value={modelQuery}
                   onChange={(e) => setModelQuery(e.target.value)}
-                  placeholder="Search models…"
+                  placeholder={t('app.searchModels')}
                   className="pl-8"
-                  aria-label="Search models"
+                  aria-label={t('app.searchModels')}
                 />
               </div>
             </div>
@@ -250,7 +281,7 @@ export default function App() {
                 onClick={handleRetry}
                 className="border-input hover:bg-accent focus-visible:ring-ring/50 rounded-md border px-3 py-1.5 text-sm transition-colors focus-visible:ring-2 focus-visible:outline-none"
               >
-                Retry
+                {t('app.retry')}
               </button>
             </div>
           ) : provider ? (
@@ -262,8 +293,7 @@ export default function App() {
                 billingExpr={billingExpr}
               />
               <p className="text-muted-foreground text-xs">
-                {models.length} models · Prices per 1M tokens in the provider's billing currency ·
-                Expand a row for tier details.
+                {t('app.tableFootnote', { count: models.length })}
               </p>
             </>
           ) : (
@@ -272,26 +302,15 @@ export default function App() {
 
           <footer className="mt-auto shrink-0 border-t pt-4">
             <div className="text-muted-foreground flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
-              <span>
-                Data from{' '}
-                <a
-                  href="https://models.dev"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-foreground underline underline-offset-2"
-                >
-                  models.dev
-                </a>{' '}
-                and community overrides · Native providers only
-              </span>
-              {updatedAt && <span>Updated {formatDate(updatedAt)}</span>}
+              <FooterSource />
+              {updatedAt && <span>{t('app.updated', { date: formatDate(updatedAt, locale) })}</span>}
               <a
                 href={`${REPO_URL}#readme`}
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-foreground ml-auto underline underline-offset-2"
               >
-                API documentation
+                {t('app.apiDocs')}
               </a>
             </div>
           </footer>

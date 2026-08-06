@@ -1,8 +1,22 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // 首帧前应用主题，避免闪烁（键名与 ThemeProvider 保持一致）
+      (function () {
+        try {
+          var theme = localStorage.getItem('llm-metadata.theme');
+          if (
+            theme === 'dark' ||
+            (theme !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+          ) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta
       name="description"
       content="Native provider pricing for LLMs — a lightweight static API and pricing browser."

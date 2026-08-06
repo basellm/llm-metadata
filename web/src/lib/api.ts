@@ -1,5 +1,7 @@
 /** 静态 API 数据访问层（相对路径，兼容子路径与根路径部署） */
 
+import type { Locale } from './i18n';
+
 export interface ModelCost {
   currency?: string;
   /** 价格键为数字；少数复合键（tiers 数组、context_over_200k 对象）为结构化数据 */
@@ -56,19 +58,25 @@ export function providerLogoURL(id: string): string {
   return `${API_BASE}/logos/${sanitizeFileSegment(id)}.svg`;
 }
 
-export function fetchProviders(): Promise<{ providers: ProviderIndexItem[] }> {
-  return fetchJSON('providers.json');
+/** 英文为基准数据（根路径），其余语言走 i18n 子树 */
+function localePath(locale: Locale, path: string): string {
+  return locale === 'en' ? path : `i18n/${locale}/${path}`;
+}
+
+export function fetchProviders(locale: Locale): Promise<{ providers: ProviderIndexItem[] }> {
+  return fetchJSON(localePath(locale, 'providers.json'));
 }
 
 const providerCache = new Map<string, Promise<Provider>>();
 
-/** 按需加载单个供应商（含全部模型），带内存缓存 */
-export function fetchProvider(id: string): Promise<Provider> {
-  let cached = providerCache.get(id);
+/** 按需加载单个供应商（含全部模型），按语言维度内存缓存 */
+export function fetchProvider(locale: Locale, id: string): Promise<Provider> {
+  const cacheKey = `${locale}:${id}`;
+  let cached = providerCache.get(cacheKey);
   if (!cached) {
-    cached = fetchJSON<Provider>(`providers/${sanitizeFileSegment(id)}.json`);
-    cached.catch(() => providerCache.delete(id));
-    providerCache.set(id, cached);
+    cached = fetchJSON<Provider>(localePath(locale, `providers/${sanitizeFileSegment(id)}.json`));
+    cached.catch(() => providerCache.delete(cacheKey));
+    providerCache.set(cacheKey, cached);
   }
   return cached;
 }

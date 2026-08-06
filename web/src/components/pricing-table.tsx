@@ -21,6 +21,7 @@ import {
 } from '@/components/ui/table';
 import type { Model } from '@/lib/api';
 import { formatContext, formatTokenPrice } from '@/lib/format';
+import { useI18n } from '@/lib/i18n';
 import { parseModelPricing, type DetailRow, type ModelPricing } from '@/lib/pricing';
 import { cn } from '@/lib/utils';
 
@@ -122,13 +123,13 @@ function DetailSectionHeader({ title }: { title: string }) {
 }
 
 /** new-api 表达式计费子行（可复制，恒为展开块末行） */
-function DetailExprRow({ expr }: { expr: string }) {
+function DetailExprRow({ expr, title }: { expr: string; title: string }) {
   return (
     <TableRow className={cn(DETAIL_ROW, 'border-b')}>
       <TableCell colSpan={6} className="p-0 pl-3">
         <div className={cn(GUIDE, 'py-2 pr-3')}>
           <div className="text-muted-foreground mb-1.5 flex items-center gap-1 text-[11px] font-medium tracking-wider uppercase">
-            new-api billing expression
+            {title}
             <CopyButton text={expr} />
           </div>
           <code className="bg-background/60 text-muted-foreground block rounded-md border px-2.5 py-2 font-mono text-xs leading-relaxed break-all whitespace-pre-wrap">
@@ -149,6 +150,7 @@ export function PricingTable({
   query: string;
   billingExpr: Record<string, string> | null;
 }) {
+  const { t } = useI18n();
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [direction, setDirection] = useState<1 | -1>(1);
   const [expanded, setExpanded] = useState<ReadonlySet<string>>(new Set());
@@ -163,7 +165,7 @@ export function PricingTable({
     );
 
     const list = filtered.map((model) => {
-      const pricing = parseModelPricing(model.cost);
+      const pricing = parseModelPricing(model.cost, t);
       const expr = billingExpr?.[model.id];
       return { model, pricing, expr, expandable: pricing.sections.length > 0 || !!expr };
     });
@@ -180,7 +182,7 @@ export function PricingTable({
       return direction * (av - bv) || a.model.id.localeCompare(b.model.id);
     });
     return list;
-  }, [models, query, sortKey, direction, billingExpr]);
+  }, [models, query, sortKey, direction, billingExpr, t]);
 
   const handleSort = (key: SortKey) => {
     if (key === sortKey) {
@@ -203,7 +205,7 @@ export function PricingTable({
     return (
       <div className="text-muted-foreground flex h-44 flex-col items-center justify-center gap-2 rounded-lg border border-dashed text-sm">
         <SearchX className="size-5 opacity-60" />
-        No models match your search.
+        {t('table.empty')}
       </div>
     );
   }
@@ -216,25 +218,25 @@ export function PricingTable({
           <TableHeader className="bg-card sticky top-0 z-10 shadow-[inset_0_-1px_0_0_var(--border)] [&_tr]:border-0">
             <TableRow className="bg-card hover:bg-card">
               <SortableHead
-                label="Model"
+                label={t('table.model')}
                 sortKey="name"
                 activeKey={sortKey}
                 direction={direction}
                 onSort={handleSort}
               />
-              <TableHead className="text-right">Context</TableHead>
+              <TableHead className="text-right">{t('table.context')}</TableHead>
               <SortableHead
-                label="Input"
+                label={t('table.input')}
                 sortKey="input"
                 activeKey={sortKey}
                 direction={direction}
                 onSort={handleSort}
                 className="text-right [&>button]:flex-row-reverse"
               />
-              <TableHead className="text-right">Cache read</TableHead>
-              <TableHead className="text-right">Cache write</TableHead>
+              <TableHead className="text-right">{t('table.cacheRead')}</TableHead>
+              <TableHead className="text-right">{t('table.cacheWrite')}</TableHead>
               <SortableHead
-                label="Output"
+                label={t('table.output')}
                 sortKey="output"
                 activeKey={sortKey}
                 direction={direction}
@@ -263,7 +265,9 @@ export function PricingTable({
                               toggle(model.id);
                             }}
                             aria-expanded={open}
-                            aria-label={`${open ? 'Collapse' : 'Expand'} pricing details for ${model.name || model.id}`}
+                            aria-label={t(open ? 'table.collapse' : 'table.expand', {
+                              model: model.name || model.id,
+                            })}
                             className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 -ml-1 flex size-5 shrink-0 items-center justify-center rounded-sm transition-colors focus-visible:ring-2 focus-visible:outline-none"
                           >
                             <ChevronRight
@@ -282,13 +286,13 @@ export function PricingTable({
                             {pricing.tiered && (
                               <Badge>
                                 <Layers />
-                                Tiered
+                                {t('table.tiered')}
                               </Badge>
                             )}
                             {pricing.thinking && (
                               <Badge variant="secondary">
                                 <Brain />
-                                Thinking
+                                {t('table.thinking')}
                               </Badge>
                             )}
                           </div>
@@ -336,7 +340,7 @@ export function PricingTable({
                           ))}
                         </Fragment>
                       ))}
-                      {expr && <DetailExprRow expr={expr} />}
+                      {expr && <DetailExprRow expr={expr} title={t('table.expr')} />}
                     </>
                   )}
                 </Fragment>

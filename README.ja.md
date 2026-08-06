@@ -5,7 +5,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md) | 日本語
 
-高スループットに親和的な静的インターフェース: 変更時のみ再ビルドし、GitHub Pages から静的 JSON を配信します。ライブサイトにはミニマルな価格ブラウザ（`web/`、Vite + React + Tailwind + shadcn/ui）が含まれ、静的 API から直接プロバイダーごとのモデル価格テーブルを表示します。
+高スループットに親和的な静的インターフェース: 変更時のみ再ビルドし、GitHub Pages から静的 JSON を配信します。ライブサイトにはミニマルな価格ブラウザ（`web/`、Vite + React + Tailwind + shadcn/ui）が含まれ、静的 API から直接プロバイダーごとのモデル価格テーブルを表示します。ライト/ダークテーマ（既定でシステムに追従）と英語/中国語/日本語の UI に対応しています。
 
 データソース: [models.dev/api.json](https://models.dev/api.json) + BaseLLM コミュニティの貢献。`data/native-providers.json` によりネイティブ（ファーストパーティ）プロバイダーのみを保持します。
 

@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { Check, Copy } from 'lucide-react';
 
+import { useI18n } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
 
 /** 小型复制按钮：成功后短暂显示对勾 */
 export function CopyButton({ text, className }: { text: string; className?: string }) {
+  const { t } = useI18n();
   const [copied, setCopied] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
@@ -26,13 +28,17 @@ export function CopyButton({ text, className }: { text: string; className?: stri
     <button
       type="button"
       onClick={handleCopy}
-      aria-label={copied ? 'Copied' : 'Copy to clipboard'}
+      aria-label={copied ? t('copy.copied') : t('copy.copy')}
       className={cn(
         'text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 inline-flex size-6 items-center justify-center rounded-md transition-colors focus-visible:ring-2 focus-visible:outline-none',
         className,
       )}
     >
-      {copied ? <Check className="size-3.5 text-emerald-400" /> : <Copy className="size-3.5" />}
+      {copied ? (
+        <Check className="size-3.5 text-emerald-600 dark:text-emerald-400" />
+      ) : (
+        <Copy className="size-3.5" />
+      )}
     </button>
   );
 }

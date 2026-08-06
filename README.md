@@ -5,7 +5,7 @@
 
 English | [中文文档](README.zh-CN.md) | [日本語](README.ja.md)
 
-High-throughput friendly, static-by-default interface: rebuild on change; serve static JSON via GitHub Pages. The live site ships a minimal pricing browser (`web/`, Vite + React + Tailwind + shadcn/ui) rendering per-provider model price tables straight from the static API.
+High-throughput friendly, static-by-default interface: rebuild on change; serve static JSON via GitHub Pages. The live site ships a minimal pricing browser (`web/`, Vite + React + Tailwind + shadcn/ui) rendering per-provider model price tables straight from the static API, with light/dark themes (system-following by default) and an English/Chinese/Japanese UI.
 
 Sources: [models.dev/api.json](https://models.dev/api.json) + basellm community contributions, filtered to native (first-party) providers via `data/native-providers.json`.
 

@@ -1,5 +1,7 @@
 /** 纯格式化工具（金额、上下文长度、日期） */
 
+import type { Locale } from './i18n';
+
 const CURRENCY_SYMBOLS: Record<string, string> = { USD: '$', CNY: '¥', EUR: '€' };
 
 export function currencySymbol(currency?: string): string {
@@ -34,9 +36,11 @@ export function formatContext(tokens?: number): string {
   return String(tokens);
 }
 
-/** ISO 时间戳 → 简洁日期（Aug 6, 2026） */
-export function formatDate(iso: string): string {
+const DATE_LOCALES: Record<Locale, string> = { en: 'en', zh: 'zh-CN', ja: 'ja' };
+
+/** ISO 时间戳 → 本地化简洁日期（Aug 6, 2026 / 2026年8月6日） */
+export function formatDate(iso: string, locale: Locale = 'en'): string {
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return iso;
-  return new Intl.DateTimeFormat('en', { dateStyle: 'medium' }).format(date);
+  return new Intl.DateTimeFormat(DATE_LOCALES[locale], { dateStyle: 'medium' }).format(date);
 }

@@ -3,9 +3,34 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-/* shadcn/ui design tokens（暗色单主题，Cloudflare/Vercel 式中性色 + 单一强调色） */
+/* class 驱动的暗色模式（由 ThemeProvider 控制 html.dark） */
+@custom-variant dark (&:is(.dark *));
+
+/* shadcn/ui design tokens（Cloudflare/Vercel 式中性色 + 单一强调色，浅/深双主题） */
 :root {
+  color-scheme: light;
   --radius: 0.5rem;
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.155 0.005 285.82);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.155 0.005 285.82);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.155 0.005 285.82);
+  --muted: oklch(0.96 0.002 286);
+  --muted-foreground: oklch(0.5 0.012 286);
+  --border: oklch(0.9 0.005 286);
+  --input: oklch(0.9 0.005 286);
+  --ring: oklch(0.64 0.15 55);
+  --primary: oklch(0.64 0.15 55);
+  --primary-foreground: oklch(0.99 0 0);
+  --accent: oklch(0.955 0.003 286);
+  --accent-foreground: oklch(0.21 0.006 286);
+  --secondary: oklch(0.955 0.003 286);
+  --secondary-foreground: oklch(0.21 0.006 286);
+}
+
+.dark {
+  color-scheme: dark;
   --background: oklch(0.13 0.004 285.82);
   --foreground: oklch(0.96 0 0);
   --card: oklch(0.16 0.005 285.82);
@@ -55,9 +80,6 @@
     @apply border-border outline-ring/50;
     scrollbar-width: thin;
     scrollbar-color: color-mix(in oklab, var(--border) 90%, transparent) transparent;
-  }
-  html {
-    color-scheme: dark;
   }
   body {
     @apply bg-background text-foreground antialiased;

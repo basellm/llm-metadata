@@ -1,5 +1,6 @@
 import type { ModelCost } from './api';
 import { currencySymbol, formatContext, formatMoney } from './format';
+import type { MessageKey, Translator } from './i18n';
 
 /** 价格列（与主表列对齐） */
 export type PriceColumn = 'input' | 'cacheRead' | 'cacheWrite' | 'output';
@@ -35,25 +36,25 @@ const FAMILY_TO_COLUMN: Record<string, PriceColumn> = {
   cache_write: 'cacheWrite',
 };
 
-/** 已知复合费率键 → 行标签与所属列 */
-const KNOWN_RATES: Record<string, { label: string; column: PriceColumn }> = {
-  text_input: { label: 'Text', column: 'input' },
-  text: { label: 'Text', column: 'input' },
-  vision_input: { label: 'Vision', column: 'input' },
-  vl: { label: 'Vision', column: 'input' },
-  audio_input: { label: 'Audio', column: 'input' },
-  input_audio: { label: 'Audio', column: 'input' },
-  output_audio: { label: 'Audio', column: 'output' },
-  audio_output: { label: 'Audio', column: 'output' },
-  multiin_text_output: { label: 'Text output · multimodal input', column: 'output' },
-  purein_text_output: { label: 'Text output · text-only input', column: 'output' },
-  multi_output: { label: 'Multimodal output', column: 'output' },
-  embedding_text: { label: 'Embedding · text', column: 'input' },
-  embedding_image: { label: 'Embedding · image', column: 'input' },
-  text_input_cache: { label: 'Text', column: 'cacheRead' },
-  audio_input_cache: { label: 'Audio', column: 'cacheRead' },
-  vision_input_cache: { label: 'Vision', column: 'cacheRead' },
-  reasoning: { label: 'Reasoning mode', column: 'output' },
+/** 已知复合费率键 → 行标签消息键与所属列 */
+const KNOWN_RATES: Record<string, { labelKey: MessageKey; column: PriceColumn }> = {
+  text_input: { labelKey: 'pricing.text', column: 'input' },
+  text: { labelKey: 'pricing.text', column: 'input' },
+  vision_input: { labelKey: 'pricing.vision', column: 'input' },
+  vl: { labelKey: 'pricing.vision', column: 'input' },
+  audio_input: { labelKey: 'pricing.audio', column: 'input' },
+  input_audio: { labelKey: 'pricing.audio', column: 'input' },
+  output_audio: { labelKey: 'pricing.audio', column: 'output' },
+  audio_output: { labelKey: 'pricing.audio', column: 'output' },
+  multiin_text_output: { labelKey: 'pricing.textOutputMultimodal', column: 'output' },
+  purein_text_output: { labelKey: 'pricing.textOutputTextOnly', column: 'output' },
+  multi_output: { labelKey: 'pricing.multimodalOutput', column: 'output' },
+  embedding_text: { labelKey: 'pricing.embeddingText', column: 'input' },
+  embedding_image: { labelKey: 'pricing.embeddingImage', column: 'input' },
+  text_input_cache: { labelKey: 'pricing.text', column: 'cacheRead' },
+  audio_input_cache: { labelKey: 'pricing.audio', column: 'cacheRead' },
+  vision_input_cache: { labelKey: 'pricing.vision', column: 'cacheRead' },
+  reasoning: { labelKey: 'pricing.reasoningMode', column: 'output' },
 };
 
 const TIER_KEY_RE =
@@ -66,22 +67,22 @@ function parseBound(raw: string): number {
 }
 
 /** per_* 键 → 行标签（"Per second · 1080p"、"Per 10K characters"） */
-function unitLabel(key: string): string {
-  if (key === 'per_10k_chars') return 'Per 10K characters';
-  if (key === 'per_image') return 'Per image';
-  if (key === 'per_second') return 'Per second';
+function unitLabel(key: string, t: Translator): string {
+  if (key === 'per_10k_chars') return t('pricing.per10kChars');
+  if (key === 'per_image') return t('pricing.perImage');
+  if (key === 'per_second') return t('pricing.perSecond');
   if (key.startsWith('per_second_')) {
     const variant = key.slice('per_second_'.length).replace(/(\d)x(\d)/g, '$1×$2');
-    return `Per second · ${variant}`;
+    return t('pricing.perSecondVariant', { variant });
   }
   return humanizeKey(key);
 }
 
 /** per_* 键 → 摘要用短单位（"/s"、"/10K chars"） */
-function unitSuffix(key: string): string {
-  if (key.startsWith('per_second')) return '/s';
-  if (key === 'per_10k_chars') return '/10K chars';
-  if (key === 'per_image') return '/image';
+function unitSuffix(key: string, t: Translator): string {
+  if (key.startsWith('per_second')) return t('pricing.suffixPerSecond');
+  if (key === 'per_10k_chars') return t('pricing.suffixPer10kChars');
+  if (key === 'per_image') return t('pricing.suffixPerImage');
   return '';
 }
 
@@ -131,11 +132,11 @@ function toCells(value: Record<string, unknown>): PriceCells {
 }
 
 /**
- * 将 ModelCost 解析为主行摘要 + 明细分组。
+ * 将 ModelCost 解析为主行摘要 + 明细分组（标签经 t 本地化）。
  * 覆盖三种阶梯表示：键式（input_32k_128k）、tiers 数组（阈值以上生效）、
  * 遗留 context_over_200k（tiers 存在时忽略）；以及思考模式、模态与按量费率。
  */
-export function parseModelPricing(cost?: ModelCost): ModelPricing {
+export function parseModelPricing(cost: ModelCost | undefined, t: Translator): ModelPricing {
   const symbol = currencySymbol(cost?.currency);
   const base: PriceCells = { ...EMPTY_CELLS };
   const contextTiers = new RowMap();
@@ -184,8 +185,8 @@ export function parseModelPricing(cost?: ModelCost): ModelPricing {
     }
 
     if (key.startsWith('per_')) {
-      unitRows.set(unitLabel(key), 'input', value);
-      const suffix = unitSuffix(key);
+      unitRows.set(unitLabel(key, t), 'input', value);
+      const suffix = unitSuffix(key, t);
       if (value > 0 && (!summaryUnit || value < summaryUnit.value)) {
         summaryUnit = { value, suffix };
       }
@@ -199,7 +200,7 @@ export function parseModelPricing(cost?: ModelCost): ModelPricing {
         thinkingBase[column] = value;
       } else {
         const known = KNOWN_RATES[rest];
-        if (known) thinkingRows.set(known.label, known.column, value);
+        if (known) thinkingRows.set(t(known.labelKey), known.column, value);
         else thinkingRows.set(humanizeKey(rest), 'input', value);
       }
       continue;
@@ -212,7 +213,7 @@ export function parseModelPricing(cost?: ModelCost): ModelPricing {
     }
 
     const known = KNOWN_RATES[key];
-    if (known) modalityRows.set(known.label, known.column, value);
+    if (known) modalityRows.set(t(known.labelKey), known.column, value);
     else {
       const fallback: PriceColumn = key.includes('output')
         ? 'output'
@@ -244,7 +245,7 @@ export function parseModelPricing(cost?: ModelCost): ModelPricing {
       : legacyOver200k && minKeyTierBound === Infinity
         ? 200_000
         : minKeyTierBound;
-    const label = firstBound === Infinity ? 'Base' : `≤ ${formatContext(firstBound)}`;
+    const label = firstBound === Infinity ? t('pricing.base') : `≤ ${formatContext(firstBound)}`;
     for (const column of Object.values(FAMILY_TO_COLUMN)) {
       const v = base[column];
       if (v !== null) contextTiers.set(label, column, v, -1);
@@ -254,7 +255,9 @@ export function parseModelPricing(cost?: ModelCost): ModelPricing {
   // 思考模式基础行
   if (Object.values(thinkingBase).some((v) => v !== null)) {
     const label =
-      minThinkingTierBound === Infinity ? 'Base' : `≤ ${formatContext(minThinkingTierBound)}`;
+      minThinkingTierBound === Infinity
+        ? t('pricing.base')
+        : `≤ ${formatContext(minThinkingTierBound)}`;
     for (const column of Object.values(FAMILY_TO_COLUMN)) {
       const v = thinkingBase[column];
       if (v !== null) thinkingRows.set(label, column, v, -1);
@@ -262,10 +265,13 @@ export function parseModelPricing(cost?: ModelCost): ModelPricing {
   }
 
   const sections: DetailSection[] = [];
-  if (contextTiers.size > 0) sections.push({ title: 'Context pricing', rows: contextTiers.rows() });
-  if (thinkingRows.size > 0) sections.push({ title: 'Thinking mode', rows: thinkingRows.rows() });
-  if (modalityRows.size > 0) sections.push({ title: 'Modality rates', rows: modalityRows.rows() });
-  if (unitRows.size > 0) sections.push({ title: 'Unit pricing', rows: unitRows.rows() });
+  if (contextTiers.size > 0)
+    sections.push({ title: t('pricing.contextPricing'), rows: contextTiers.rows() });
+  if (thinkingRows.size > 0)
+    sections.push({ title: t('pricing.thinkingMode'), rows: thinkingRows.rows() });
+  if (modalityRows.size > 0)
+    sections.push({ title: t('pricing.modalityRates'), rows: modalityRows.rows() });
+  if (unitRows.size > 0) sections.push({ title: t('pricing.unitPricing'), rows: unitRows.rows() });
 
   // 主行摘要兜底：无通用输入价时回退到文本/嵌入价
   if (base.input === null) {
