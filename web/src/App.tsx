@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { BookOpen, Search, TriangleAlert } from 'lucide-react';
 
 import { LocaleToggle } from '@/components/locale-toggle';
+import { ModelDetail } from '@/components/model-detail';
 import { PricingTable } from '@/components/pricing-table';
 import { ProviderIcon } from '@/components/provider-icon';
 import { ProviderSidebar } from '@/components/provider-sidebar';
@@ -37,9 +38,16 @@ function GithubIcon({ className }: { className?: string }) {
   );
 }
 
-function readProviderFromHash(): string | null {
-  const match = /^#p=([^&]+)/.exec(window.location.hash);
-  return match ? decodeURIComponent(match[1]) : null;
+/** hash 路由：#p=<provider>（列表）/ #p=<provider>&m=<model>（详情） */
+function readHash(): { provider: string | null; model: string | null } {
+  const params = new URLSearchParams(window.location.hash.slice(1));
+  return { provider: params.get('p'), model: params.get('m') };
+}
+
+function buildHash(providerId: string, modelId?: string | null): string {
+  const params = new URLSearchParams({ p: providerId });
+  if (modelId) params.set('m', modelId);
+  return `#${params.toString()}`;
 }
 
 /** 数据来源脚注：消息中的 {link} 占位符渲染为 models.dev 链接 */
@@ -85,6 +93,7 @@ export default function App() {
   const { locale, t } = useI18n();
   const [providers, setProviders] = useState<ProviderIndexItem[] | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [selectedModelId, setSelectedModelId] = useState<string | null>(() => readHash().model);
   const [provider, setProvider] = useState<Provider | null>(null);
   const [billingExpr, setBillingExpr] = useState<Record<string, string> | null>(null);
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
@@ -101,7 +110,7 @@ export default function App() {
         if (cancelled) return;
         const sorted = [...list].sort((a, b) => a.name.localeCompare(b.name));
         setProviders(sorted);
-        const fromHash = readProviderFromHash();
+        const fromHash = readHash().provider;
         setSelectedId((current) => {
           const initial =
             sorted.find((p) => p.id === (current ?? fromHash)) ??
@@ -120,6 +129,17 @@ export default function App() {
       cancelled = true;
     };
   }, [locale, reloadKey]);
+
+  // 浏览器前进/后退：hash 变化同步选中的供应商与模型
+  useEffect(() => {
+    const onHashChange = () => {
+      const { provider: providerId, model: modelId } = readHash();
+      if (providerId) setSelectedId(providerId);
+      setSelectedModelId(modelId);
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
 
   // 加载选中供应商的模型与表达式计费映射
   useEffect(() => {
@@ -144,9 +164,25 @@ export default function App() {
 
   const handleSelect = useCallback((id: string) => {
     setSelectedId(id);
+    setSelectedModelId(null);
     setModelQuery('');
-    history.replaceState(null, '', `#p=${encodeURIComponent(id)}`);
+    history.replaceState(null, '', buildHash(id));
   }, []);
+
+  // 打开/关闭详情走 hash 赋值（产生历史记录，支持浏览器返回）
+  const handleOpenModel = useCallback(
+    (modelId: string) => {
+      if (!selectedId) return;
+      setSelectedModelId(modelId);
+      window.location.hash = buildHash(selectedId, modelId);
+    },
+    [selectedId],
+  );
+
+  const handleCloseModel = useCallback(() => {
+    setSelectedModelId(null);
+    if (selectedId) window.location.hash = buildHash(selectedId);
+  }, [selectedId]);
 
   const handleRetry = useCallback(() => {
     setError(null);
@@ -164,6 +200,17 @@ export default function App() {
   );
 
   const selectedMeta = providers?.find((p) => p.id === selectedId) ?? null;
+  const selectedModel = (selectedModelId && provider?.models[selectedModelId]) || null;
+
+  // hash 指向不存在的模型时回退到列表并纠正 URL
+  useEffect(() => {
+    if (provider && selectedModelId && !provider.models[selectedModelId] && selectedId) {
+      setSelectedModelId(null);
+      history.replaceState(null, '', buildHash(selectedId));
+    }
+  }, [provider, selectedModelId, selectedId]);
+
+  const detailOpen = Boolean(selectedModel && selectedMeta);
 
   return (
     <div className="flex h-dvh flex-col">
@@ -235,7 +282,7 @@ export default function App() {
             </div>
           )}
 
-          {selectedMeta && (
+          {selectedMeta && !detailOpen && (
             <div className="flex shrink-0 flex-wrap items-center gap-3">
               <ProviderIcon
                 key={selectedMeta.id}
@@ -284,6 +331,14 @@ export default function App() {
                 {t('app.retry')}
               </button>
             </div>
+          ) : detailOpen && selectedModel && selectedMeta ? (
+            <ModelDetail
+              key={`${selectedMeta.id}/${selectedModel.id}`}
+              model={selectedModel}
+              provider={selectedMeta}
+              expr={billingExpr?.[selectedModel.id]}
+              onBack={handleCloseModel}
+            />
           ) : provider ? (
             <>
               <PricingTable
@@ -291,6 +346,7 @@ export default function App() {
                 models={models}
                 query={modelQuery}
                 billingExpr={billingExpr}
+                onOpenModel={handleOpenModel}
               />
               <p className="text-muted-foreground text-xs">
                 {t('app.tableFootnote', { count: models.length })}

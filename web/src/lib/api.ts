@@ -14,9 +14,15 @@ export interface Model {
   description?: string;
   release_date?: string;
   last_updated?: string;
+  /** 知识截止日期（ISO） */
+  knowledge?: string;
   reasoning?: boolean;
   tool_call?: boolean;
-  limit?: { context?: number; output?: number };
+  structured_output?: boolean;
+  attachment?: boolean;
+  temperature?: boolean;
+  open_weights?: boolean;
+  limit?: { context?: number; input?: number; output?: number };
   modalities?: { input?: string[]; output?: string[] };
   cost?: ModelCost;
 }

@@ -145,10 +145,12 @@ export function PricingTable({
   models,
   query,
   billingExpr,
+  onOpenModel,
 }: {
   models: Model[];
   query: string;
   billingExpr: Record<string, string> | null;
+  onOpenModel: (id: string) => void;
 }) {
   const { t } = useI18n();
   const [sortKey, setSortKey] = useState<SortKey>('name');
@@ -251,9 +253,9 @@ export function PricingTable({
               return (
                 <Fragment key={model.id}>
                   <TableRow
-                    onClick={expandable ? () => toggle(model.id) : undefined}
+                    onClick={() => onOpenModel(model.id)}
                     data-state={open ? 'open' : undefined}
-                    className={cn(expandable && 'cursor-pointer', open && 'bg-muted/20 border-0')}
+                    className={cn('cursor-pointer', open && 'bg-muted/20 border-0')}
                   >
                     <TableCell className="max-w-80">
                       <div className="flex items-center gap-1.5">
@@ -282,7 +284,17 @@ export function PricingTable({
                         )}
                         <div className="min-w-0">
                           <div className="flex items-center gap-2">
-                            <span className="truncate font-medium">{model.name || model.id}</span>
+                            <button
+                              type="button"
+                              onClick={(event) => {
+                                event.stopPropagation();
+                                onOpenModel(model.id);
+                              }}
+                              aria-label={t('table.viewDetails', { model: model.name || model.id })}
+                              className="focus-visible:ring-ring/50 truncate rounded-sm font-medium hover:underline focus-visible:ring-2 focus-visible:outline-none"
+                            >
+                              {model.name || model.id}
+                            </button>
                             {pricing.tiered && (
                               <Badge>
                                 <Layers />

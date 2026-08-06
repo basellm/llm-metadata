@@ -44,3 +44,8 @@ export function formatDate(iso: string, locale: Locale = 'en'): string {
   if (Number.isNaN(date.getTime())) return iso;
   return new Intl.DateTimeFormat(DATE_LOCALES[locale], { dateStyle: 'medium' }).format(date);
 }
+
+/** 本地化千分位整数（1,050,000） */
+export function formatNumber(value: number, locale: Locale = 'en'): string {
+  return new Intl.NumberFormat(DATE_LOCALES[locale]).format(value);
+}
