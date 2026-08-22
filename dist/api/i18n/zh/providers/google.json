@@ -1088,10 +1088,10 @@
     "gemini-3.6-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.15,
-        "input": 1.5,
-        "input_audio": 1.5,
-        "output": 7.5
+        "cache_read": 0.075,
+        "input": 0.75,
+        "input_audio": 0.75,
+        "output": 3.75
       },
       "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash",
@@ -1248,16 +1248,16 @@
     "gemini-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.15,
-        "input": 1.5,
-        "input_audio": 1.5,
-        "output": 9
+        "cache_read": 0.075,
+        "input": 0.75,
+        "input_audio": 0.75,
+        "output": 3.75
       },
-      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+      "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
       "family": "gemini-flash",
       "id": "gemini-flash-latest",
-      "knowledge": "2025-01",
-      "last_updated": "2026-05-19",
+      "knowledge": "2026-03",
+      "last_updated": "2026-08-13",
       "limit": {
         "context": 1048576,
         "output": 65536
@@ -1281,14 +1281,13 @@
         {
           "type": "effort",
           "values": [
-            "minimal",
             "low",
             "medium",
             "high"
           ]
         }
       ],
-      "release_date": "2026-05-19",
+      "release_date": "2026-08-13",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1296,16 +1295,15 @@
     "gemini-flash-lite-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.025,
-        "input": 0.25,
-        "input_audio": 0.5,
-        "output": 1.5
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 2.5
       },
-      "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
+      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash-lite",
       "id": "gemini-flash-lite-latest",
-      "knowledge": "2025-01",
-      "last_updated": "2026-05-07",
+      "knowledge": "2026-03",
+      "last_updated": "2026-07-21",
       "limit": {
         "context": 1048576,
         "output": 65536
@@ -1336,7 +1334,7 @@
           ]
         }
       ],
-      "release_date": "2026-05-07",
+      "release_date": "2026-07-21",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
