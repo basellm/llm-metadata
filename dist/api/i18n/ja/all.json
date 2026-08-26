@@ -6941,73 +6941,6 @@
     "id": "deepseek",
     "lobeIcon": "DeepSeek.Color",
     "models": {
-      "deepseek-chat": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.0028,
-          "input": 0.14,
-          "output": 0.28
-        },
-        "description": "DeepSeek chat model for instruction following, coding, and analysis",
-        "family": "deepseek",
-        "id": "deepseek-chat",
-        "knowledge": "2025-09",
-        "last_updated": "2026-02-28",
-        "limit": {
-          "context": 1000000,
-          "output": 384000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek Chat",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-12-01",
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek-reasoner": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.0028,
-          "input": 0.14,
-          "output": 0.28,
-          "reasoning": 0.28
-        },
-        "description": "DeepSeek reasoning model for multi-step analysis, math, coding, and tools",
-        "family": "deepseek-thinking",
-        "id": "deepseek-reasoner",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2025-09",
-        "last_updated": "2026-02-28",
-        "limit": {
-          "context": 1000000,
-          "output": 384000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek Reasoner",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-12-01",
-        "temperature": true,
-        "tool_call": true
-      },
       "deepseek-v4-flash": {
         "attachment": false,
         "cost": {
@@ -13762,22 +13695,22 @@
       "gpt-5.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
+          "cache_read": 0.4,
+          "cache_write": 5,
           "context_over_200k": {
-            "cache_read": 1,
-            "cache_write": 12.5,
-            "input": 10,
-            "output": 45
+            "cache_read": 0.8,
+            "cache_write": 10,
+            "input": 8,
+            "output": 30
           },
-          "input": 5,
-          "output": 30,
+          "input": 4,
+          "output": 20,
           "tiers": [
             {
-              "cache_read": 1,
-              "cache_write": 12.5,
-              "input": 10,
-              "output": 45,
+              "cache_read": 0.8,
+              "cache_write": 10,
+              "input": 8,
+              "output": 30,
               "tier": {
                 "size": 272000,
                 "type": "context"
@@ -13790,10 +13723,10 @@
           "modes": {
             "fast": {
               "cost": {
-                "cache_read": 1,
-                "cache_write": 12.5,
-                "input": 10,
-                "output": 60
+                "cache_read": 0.8,
+                "cache_write": 10,
+                "input": 8,
+                "output": 40
               },
               "provider": {
                 "body": {
@@ -13948,22 +13881,22 @@
       "gpt-5.6-sol": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
+          "cache_read": 0.4,
+          "cache_write": 5,
           "context_over_200k": {
-            "cache_read": 1,
-            "cache_write": 12.5,
-            "input": 10,
-            "output": 45
+            "cache_read": 0.8,
+            "cache_write": 10,
+            "input": 8,
+            "output": 30
           },
-          "input": 5,
-          "output": 30,
+          "input": 4,
+          "output": 20,
           "tiers": [
             {
-              "cache_read": 1,
-              "cache_write": 12.5,
-              "input": 10,
-              "output": 45,
+              "cache_read": 0.8,
+              "cache_write": 10,
+              "input": 8,
+              "output": 30,
               "tier": {
                 "size": 272000,
                 "type": "context"
@@ -13976,10 +13909,10 @@
           "modes": {
             "fast": {
               "cost": {
-                "cache_read": 1,
-                "cache_write": 12.5,
-                "input": 10,
-                "output": 60
+                "cache_read": 0.8,
+                "cache_write": 10,
+                "input": 8,
+                "output": 40
               },
               "provider": {
                 "body": {
@@ -18862,6 +18795,51 @@
           }
         ],
         "release_date": "2026-06-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.26,
+          "cache_write": 0,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+        "family": "glm",
+        "id": "glm-5.3",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-14",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-14",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
