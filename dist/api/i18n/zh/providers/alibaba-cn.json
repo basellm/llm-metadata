@@ -1126,7 +1126,25 @@
       "attachment": false,
       "cost": {
         "input": 0.216,
-        "output": 0.861
+        "output": 0.861,
+        "tiers": [
+          {
+            "input": 0.323,
+            "output": 1.291,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          },
+          {
+            "input": 0.538,
+            "output": 2.151,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
@@ -1156,7 +1174,25 @@
       "attachment": false,
       "cost": {
         "input": 0.861,
-        "output": 3.441
+        "output": 3.441,
+        "tiers": [
+          {
+            "input": 1.291,
+            "output": 5.161,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          },
+          {
+            "input": 2.151,
+            "output": 8.602,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
@@ -1523,9 +1559,20 @@
     "qwen3.5-397b-a17b": {
       "attachment": false,
       "cost": {
-        "input": 0.43,
-        "output": 2.58,
-        "reasoning": 2.58
+        "input": 0.172,
+        "output": 1.032,
+        "reasoning": 1.032,
+        "tiers": [
+          {
+            "input": 0.43,
+            "output": 2.58,
+            "reasoning": 2.58,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",

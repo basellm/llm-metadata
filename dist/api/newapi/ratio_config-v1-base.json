@@ -25,6 +25,8 @@
       "grok-4.5": "len <= 200000 ? tier(\"0_200k\", p * 2 + c * 6 + cr * 0.3) : tier(\"200k_plus\", p * 4 + c * 12 + cr * 0.6)",
       "grok-4.6": "len <= 200000 ? tier(\"0_200k\", p * 2 + c * 6 + cr * 0.5) : tier(\"200k_plus\", p * 4 + c * 12 + cr * 1)",
       "grok-build-0.1": "len <= 200000 ? tier(\"0_200k\", p * 1 + c * 2 + cr * 0.2) : tier(\"200k_plus\", p * 2 + c * 4 + cr * 0.4)",
+      "qwen3-coder-30b-a3b-instruct": "len <= 32000 ? tier(\"0_32k\", p * 0.45 + c * 2.25) : len <= 128000 ? tier(\"32k_128k\", p * 0.75 + c * 3.75) : tier(\"128k_plus\", p * 1.2 + c * 6)",
+      "qwen3-coder-480b-a35b-instruct": "len <= 32000 ? tier(\"0_32k\", p * 1.5 + c * 7.5) : len <= 128000 ? tier(\"32k_128k\", p * 2.7 + c * 13.5) : tier(\"128k_plus\", p * 4.5 + c * 22.5)",
       "qwen3.6-plus": "len <= 256000 ? tier(\"0_256k\", p * 0.5 + c * 3 + cr * 0.05 + cc * 0.625) : tier(\"256k_plus\", p * 2 + c * 6 + cr * 0.2 + cc * 2.5)",
       "qwen3.7-flash": "len <= 32000 ? tier(\"0_32k\", p * 0.02962 + c * 0.1185 + cr * 0.002962 + cc * 0.03703) : len <= 256000 ? tier(\"32k_256k\", p * 0.08887 + c * 0.35549 + cr * 0.008887 + cc * 0.11109) : tier(\"256k_plus\", p * 0.17774 + c * 0.71098 + cr * 0.017774 + cc * 0.22218)",
       "qwen3.7-plus": "len <= 256000 ? tier(\"0_256k\", p * 0.5 + c * 3 + cr * 0.05 + cc * 0.625) : tier(\"256k_plus\", p * 2 + c * 6 + cr * 0.2 + cc * 2.5)"
@@ -54,6 +56,8 @@
       "grok-4.5": "tiered_expr",
       "grok-4.6": "tiered_expr",
       "grok-build-0.1": "tiered_expr",
+      "qwen3-coder-30b-a3b-instruct": "tiered_expr",
+      "qwen3-coder-480b-a35b-instruct": "tiered_expr",
       "qwen3.6-plus": "tiered_expr",
       "qwen3.7-flash": "tiered_expr",
       "qwen3.7-plus": "tiered_expr"
@@ -111,6 +115,7 @@
       "glm-5.1": 0.18571428571428572,
       "glm-5.2": 0.18571428571428572,
       "glm-5.3": 0.18571428571428572,
+      "glm-5.3-flash": 0.2,
       "glm-5v-turbo": 0.2,
       "gpt-4.1": 0.25,
       "gpt-4.1-mini": 0.25,
@@ -145,6 +150,7 @@
       "grok-4.5": 0.15,
       "grok-4.6": 0.25,
       "grok-build-0.1": 0.2,
+      "hy4-preview": 0.05035971223021583,
       "kimi-k2-0711-preview": 0.25,
       "kimi-k2-0905-preview": 0.25,
       "kimi-k2-thinking": 0.25,
@@ -184,7 +190,8 @@
       "step-3.5-flash-2603": 0.19999999999999998,
       "step-3.7-flash": 0.19999999999999998,
       "thinkingmachines/Inkling": 0.19999999999999998,
-      "thinkingmachines/Inkling:peft:262144": 0.19999999999999998
+      "thinkingmachines/Inkling:peft:262144": 0.19999999999999998,
+      "zai-glm-5-2": 0.10000000000000002
     },
     "completion_ratio": {
       "Ling-1T": 4.017543859649123,
@@ -274,6 +281,7 @@
       "glm-5.1": 3.1428571428571432,
       "glm-5.2": 3.1428571428571432,
       "glm-5.3": 3.1428571428571432,
+      "glm-5.3-flash": 3.3333333333333335,
       "glm-5v-turbo": 3.3333333333333335,
       "gpt-3.5-turbo": 3,
       "gpt-4": 2,
@@ -316,6 +324,7 @@
       "grok-4.5": 3,
       "grok-4.6": 3,
       "grok-build-0.1": 2,
+      "hy4-preview": 2.998800959232614,
       "kimi-k2-0711-preview": 4.166666666666667,
       "kimi-k2-0905-preview": 4.166666666666667,
       "kimi-k2-thinking": 4.166666666666667,
@@ -455,7 +464,8 @@
       "v0-1.0-md": 5,
       "v0-1.5-lg": 5,
       "v0-1.5-md": 5,
-      "voxtral-small-latest": 2.9999999999999996
+      "voxtral-small-latest": 2.9999999999999996,
+      "zai-glm-5-2": 3.1428571428571432
     },
     "model_price": {},
     "model_ratio": {
@@ -548,6 +558,7 @@
       "glm-5.1": 0.7,
       "glm-5.2": 0.7,
       "glm-5.3": 0.7,
+      "glm-5.3-flash": 0.0375,
       "glm-5v-turbo": 0.6,
       "gpt-3.5-turbo": 0.25,
       "gpt-4": 15,
@@ -590,6 +601,7 @@
       "grok-4.5": 1,
       "grok-4.6": 1,
       "grok-build-0.1": 0.5,
+      "hy4-preview": 0.417,
       "kimi-k2-0711-preview": 0.3,
       "kimi-k2-0905-preview": 0.3,
       "kimi-k2-thinking": 0.3,
@@ -733,7 +745,8 @@
       "v0-1.0-md": 1.5,
       "v0-1.5-lg": 7.5,
       "v0-1.5-md": 1.5,
-      "voxtral-small-latest": 0.05
+      "voxtral-small-latest": 0.05,
+      "zai-glm-5-2": 0.7
     }
   },
   "message": "",

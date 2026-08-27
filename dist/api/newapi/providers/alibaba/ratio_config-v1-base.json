@@ -1,10 +1,14 @@
 {
   "data": {
     "billing_expr": {
+      "qwen3-coder-30b-a3b-instruct": "len <= 32000 ? tier(\"0_32k\", p * 0.45 + c * 2.25) : len <= 128000 ? tier(\"32k_128k\", p * 0.75 + c * 3.75) : tier(\"128k_plus\", p * 1.2 + c * 6)",
+      "qwen3-coder-480b-a35b-instruct": "len <= 32000 ? tier(\"0_32k\", p * 1.5 + c * 7.5) : len <= 128000 ? tier(\"32k_128k\", p * 2.7 + c * 13.5) : tier(\"128k_plus\", p * 4.5 + c * 22.5)",
       "qwen3.6-plus": "len <= 256000 ? tier(\"0_256k\", p * 0.5 + c * 3 + cr * 0.05 + cc * 0.625) : tier(\"256k_plus\", p * 2 + c * 6 + cr * 0.2 + cc * 2.5)",
       "qwen3.7-plus": "len <= 256000 ? tier(\"0_256k\", p * 0.5 + c * 3 + cr * 0.05 + cc * 0.625) : tier(\"256k_plus\", p * 2 + c * 6 + cr * 0.2 + cc * 2.5)"
     },
     "billing_mode": {
+      "qwen3-coder-30b-a3b-instruct": "tiered_expr",
+      "qwen3-coder-480b-a35b-instruct": "tiered_expr",
       "qwen3.6-plus": "tiered_expr",
       "qwen3.7-plus": "tiered_expr"
     },

@@ -848,7 +848,25 @@
         "attachment": false,
         "cost": {
           "input": 0.45,
-          "output": 2.25
+          "output": 2.25,
+          "tiers": [
+            {
+              "input": 0.75,
+              "output": 3.75,
+              "tier": {
+                "size": 32000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 1.2,
+              "output": 6,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Smaller Qwen coder for efficient local agents and repo-level fixes",
         "family": "qwen",
@@ -878,7 +896,25 @@
         "attachment": false,
         "cost": {
           "input": 1.5,
-          "output": 7.5
+          "output": 7.5,
+          "tiers": [
+            {
+              "input": 2.7,
+              "output": 13.5,
+              "tier": {
+                "size": 32000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 4.5,
+              "output": 22.5,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Open Qwen coding heavyweight for repository reasoning and agentic engineering",
         "family": "qwen",
@@ -3032,7 +3068,25 @@
         "attachment": false,
         "cost": {
           "input": 0.216,
-          "output": 0.861
+          "output": 0.861,
+          "tiers": [
+            {
+              "input": 0.323,
+              "output": 1.291,
+              "tier": {
+                "size": 32000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 0.538,
+              "output": 2.151,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen coding model for software agents, repository edits, and code reasoning",
         "family": "qwen",
@@ -3062,7 +3116,25 @@
         "attachment": false,
         "cost": {
           "input": 0.861,
-          "output": 3.441
+          "output": 3.441,
+          "tiers": [
+            {
+              "input": 1.291,
+              "output": 5.161,
+              "tier": {
+                "size": 32000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 2.151,
+              "output": 8.602,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen coding model for software agents, repository edits, and code reasoning",
         "family": "qwen",
@@ -3429,9 +3501,20 @@
       "qwen3.5-397b-a17b": {
         "attachment": false,
         "cost": {
-          "input": 0.43,
-          "output": 2.58,
-          "reasoning": 2.58
+          "input": 0.172,
+          "output": 1.032,
+          "reasoning": 1.032,
+          "tiers": [
+            {
+              "input": 0.43,
+              "output": 2.58,
+              "reasoning": 2.58,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -9435,8 +9518,8 @@
         "id": "MiniMax-M2",
         "last_updated": "2025-10-27",
         "limit": {
-          "context": 196608,
-          "output": 128000
+          "context": 204800,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -9642,8 +9725,8 @@
         "id": "MiniMax-M3",
         "last_updated": "2026-06-25",
         "limit": {
-          "context": 1000000,
-          "output": 128000
+          "context": 1048576,
+          "output": 512000
         },
         "modalities": {
           "input": [
@@ -9692,8 +9775,8 @@
         "id": "MiniMax-M2",
         "last_updated": "2025-10-27",
         "limit": {
-          "context": 196608,
-          "output": 128000
+          "context": 204800,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -9899,8 +9982,8 @@
         "id": "MiniMax-M3",
         "last_updated": "2026-06-25",
         "limit": {
-          "context": 1000000,
-          "output": 128000
+          "context": 1048576,
+          "output": 512000
         },
         "modalities": {
           "input": [
@@ -9949,8 +10032,8 @@
         "id": "MiniMax-M2",
         "last_updated": "2025-10-27",
         "limit": {
-          "context": 196608,
-          "output": 128000
+          "context": 204800,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -10141,8 +10224,8 @@
         "id": "MiniMax-M3",
         "last_updated": "2026-06-25",
         "limit": {
-          "context": 1000000,
-          "output": 128000
+          "context": 1048576,
+          "output": 512000
         },
         "modalities": {
           "input": [
@@ -10191,8 +10274,8 @@
         "id": "MiniMax-M2",
         "last_updated": "2025-10-27",
         "limit": {
-          "context": 196608,
-          "output": 128000
+          "context": 204800,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -10383,8 +10466,8 @@
         "id": "MiniMax-M3",
         "last_updated": "2026-06-25",
         "limit": {
-          "context": 1000000,
-          "output": 128000
+          "context": 1048576,
+          "output": 512000
         },
         "modalities": {
           "input": [
@@ -11455,6 +11538,47 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-15",
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-glm-5-2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.14,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+        "family": "glm",
+        "id": "zai-glm-5-2",
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.2",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-06-13",
+        "status": "beta",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       }
@@ -13051,7 +13175,7 @@
         ],
         "release_date": "2025-11-13",
         "structured_output": true,
-        "temperature": false,
+        "temperature": true,
         "tool_call": true
       },
       "gpt-5.2": {
@@ -13097,7 +13221,7 @@
         ],
         "release_date": "2025-12-11",
         "structured_output": true,
-        "temperature": false,
+        "temperature": true,
         "tool_call": true
       },
       "gpt-5.2-chat-latest": {
@@ -13261,7 +13385,7 @@
         ],
         "release_date": "2026-02-05",
         "structured_output": true,
-        "temperature": false,
+        "temperature": true,
         "tool_call": true
       },
       "gpt-5.3-codex-spark": {
@@ -13387,7 +13511,7 @@
         ],
         "release_date": "2026-03-05",
         "structured_output": true,
-        "temperature": false,
+        "temperature": true,
         "tool_call": true
       },
       "gpt-5.4-mini": {
@@ -13449,7 +13573,7 @@
         ],
         "release_date": "2026-03-17",
         "structured_output": true,
-        "temperature": false,
+        "temperature": true,
         "tool_call": true
       },
       "gpt-5.4-nano": {
@@ -13495,7 +13619,7 @@
         ],
         "release_date": "2026-03-17",
         "structured_output": true,
-        "temperature": false,
+        "temperature": true,
         "tool_call": true
       },
       "gpt-5.4-pro": {
@@ -16252,13 +16376,54 @@
           {
             "type": "effort",
             "values": [
-              "low",
-              "medium",
+              "none",
               "high"
             ]
           }
         ],
         "release_date": "2026-07-06",
+        "temperature": true,
+        "tool_call": true
+      },
+      "hy4-preview": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.042,
+          "input": 0.834,
+          "output": 2.501
+        },
+        "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
+        "family": "Hy",
+        "id": "hy4-preview",
+        "last_updated": "2026-08-28",
+        "limit": {
+          "context": 1024000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hy4 preview",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-28",
         "temperature": true,
         "tool_call": true
       }
@@ -16310,8 +16475,7 @@
           {
             "type": "effort",
             "values": [
-              "low",
-              "medium",
+              "none",
               "high"
             ]
           }
@@ -16361,6 +16525,48 @@
           }
         ],
         "release_date": "2026-04-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "hy4-preview": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.042,
+          "input": 0.834,
+          "output": 2.501
+        },
+        "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
+        "family": "Hy",
+        "id": "hy4-preview",
+        "last_updated": "2026-08-28",
+        "limit": {
+          "context": 1024000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hy4 preview",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-28",
         "temperature": true,
         "tool_call": true
       }
@@ -18844,6 +19050,54 @@
         "temperature": true,
         "tool_call": true
       },
+      "glm-5.3-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.015,
+          "cache_write": 0,
+          "input": 0.075,
+          "output": 0.25
+        },
+        "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+        "family": "glm",
+        "id": "glm-5.3-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-26",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-26",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "glm-5v-turbo": {
         "attachment": true,
         "cost": {
@@ -19096,6 +19350,99 @@
           ]
         },
         "name": "GLM-5.3",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-14",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+        "family": "glm",
+        "id": "glm-5.3-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-26",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-26",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3-highspeed": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+        "family": "glm",
+        "id": "glm-5.3-highspeed",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-14",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3 Highspeed",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
@@ -19586,6 +19933,99 @@
         "temperature": true,
         "tool_call": true
       },
+      "glm-5.3": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.26,
+          "cache_write": 0,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+        "family": "glm",
+        "id": "glm-5.3",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-14",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-14",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.015,
+          "cache_write": 0,
+          "input": 0.075,
+          "output": 0.25
+        },
+        "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+        "family": "glm",
+        "id": "glm-5.3-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-26",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-26",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "glm-5v-turbo": {
         "attachment": true,
         "cost": {
@@ -19915,6 +20355,99 @@
           ]
         },
         "name": "GLM-5.3",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-14",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+        "family": "glm",
+        "id": "glm-5.3-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-26",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-26",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3-highspeed": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+        "family": "glm",
+        "id": "glm-5.3-highspeed",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-14",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3 Highspeed",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [

@@ -1,11 +1,17 @@
 {
   "data": {
     "billing_expr": {
+      "qwen3-coder-30b-a3b-instruct": "len <= 32000 ? tier(\"0_32k\", p * 0.216 + c * 0.861) : len <= 128000 ? tier(\"32k_128k\", p * 0.323 + c * 1.291) : tier(\"128k_plus\", p * 0.538 + c * 2.151)",
+      "qwen3-coder-480b-a35b-instruct": "len <= 32000 ? tier(\"0_32k\", p * 0.861 + c * 3.441) : len <= 128000 ? tier(\"32k_128k\", p * 1.291 + c * 5.161) : tier(\"128k_plus\", p * 2.151 + c * 8.602)",
+      "qwen3.5-397b-a17b": "len <= 128000 ? tier(\"0_128k\", p * 0.172 + c * 1.032) : tier(\"128k_plus\", p * 0.43 + c * 2.58)",
       "qwen3.6-plus": "len <= 256000 ? tier(\"0_256k\", p * 0.5 + c * 3 + cr * 0.05 + cc * 0.625) : tier(\"256k_plus\", p * 2 + c * 6 + cr * 0.2 + cc * 2.5)",
       "qwen3.7-flash": "len <= 32000 ? tier(\"0_32k\", p * 0.02962 + c * 0.1185 + cr * 0.002962 + cc * 0.03703) : len <= 256000 ? tier(\"32k_256k\", p * 0.08887 + c * 0.35549 + cr * 0.008887 + cc * 0.11109) : tier(\"256k_plus\", p * 0.17774 + c * 0.71098 + cr * 0.017774 + cc * 0.22218)",
       "qwen3.7-plus": "len <= 128000 ? tier(\"0_128k\", p * 0.5 + c * 3 + cr * 0.05 + cc * 0.625) : tier(\"128k_plus\", p * 2 + c * 6 + cr * 0.2 + cc * 2.5)"
     },
     "billing_mode": {
+      "qwen3-coder-30b-a3b-instruct": "tiered_expr",
+      "qwen3-coder-480b-a35b-instruct": "tiered_expr",
+      "qwen3.5-397b-a17b": "tiered_expr",
       "qwen3.6-plus": "tiered_expr",
       "qwen3.7-flash": "tiered_expr",
       "qwen3.7-plus": "tiered_expr"
@@ -66,7 +72,7 @@
       "qwen3-vl-235b-a22b": 4,
       "qwen3-vl-30b-a3b": 3.990740740740741,
       "qwen3-vl-plus": 9.999965121064783,
-      "qwen3.5-397b-a17b": 6,
+      "qwen3.5-397b-a17b": 6.000000000000001,
       "qwen3.5-flash": 10,
       "qwen3.5-plus": 6.003490401396161,
       "qwen3.6-flash": 6,
@@ -132,7 +138,7 @@
       "qwen3-vl-235b-a22b": 0.1433525,
       "qwen3-vl-30b-a3b": 0.054,
       "qwen3-vl-plus": 0.0716765,
-      "qwen3.5-397b-a17b": 0.215,
+      "qwen3.5-397b-a17b": 0.086,
       "qwen3.5-flash": 0.086,
       "qwen3.5-plus": 0.2865,
       "qwen3.6-flash": 0.09375,
