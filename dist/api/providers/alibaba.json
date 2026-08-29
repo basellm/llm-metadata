@@ -1848,6 +1848,59 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen3.8-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.016,
+        "cache_write": 0.2,
+        "input": 0.15,
+        "output": 0.47
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen3.8-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        },
+        {
+          "max": 262144,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "tool_call": true
+    },
     "qwen3.8-max": {
       "attachment": true,
       "cost": {
