@@ -8758,7 +8758,7 @@
       "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
       "firm": "kimi-for-coding",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
         "image": true,
         "open_weights": true,
@@ -8796,7 +8796,7 @@
       "description": "256K-context version of Kimi K3, reducing token consumption for shorter coding sessions",
       "firm": "kimi-for-coding",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
         "image": true,
         "open_weights": true,
@@ -13807,6 +13807,44 @@
       "tags": []
     },
     {
+      "description": "GPT-6 Astra is OpenAI's most capable model for complex reasoning, coding, computer use, research, and document creation.",
+      "firm": "openai",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:openai",
+      "id": "gpt-6-astra",
+      "knowledge": null,
+      "lastUpdated": "2026-09-04",
+      "maxCtxTokens": 1050000,
+      "maxOutputTokens": 128000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Astra",
+      "price": {
+        "cacheRead": 1,
+        "cacheWrite": 12.5,
+        "input": 10,
+        "output": 50
+      },
+      "releaseDate": "2026-09-04",
+      "tags": []
+    },
+    {
       "description": "OpenAI image model for production generation, edits, and brand-safe visual workflows",
       "firm": "openai",
       "flags": {
@@ -16608,7 +16646,7 @@
       "id": "grok-imagine-image",
       "knowledge": null,
       "lastUpdated": "2026-01-28",
-      "maxCtxTokens": 8000,
+      "maxCtxTokens": 16000,
       "maxOutputTokens": 0,
       "modalities": {
         "input": [
@@ -16647,7 +16685,7 @@
       "id": "grok-imagine-image-2.0",
       "knowledge": null,
       "lastUpdated": "2026-08-07",
-      "maxCtxTokens": 8000,
+      "maxCtxTokens": 64000,
       "maxOutputTokens": 0,
       "modalities": {
         "input": [
@@ -16686,7 +16724,7 @@
       "id": "grok-imagine-image-quality",
       "knowledge": null,
       "lastUpdated": "2026-04-03",
-      "maxCtxTokens": 8000,
+      "maxCtxTokens": 16000,
       "maxOutputTokens": 0,
       "modalities": {
         "input": [

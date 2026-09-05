@@ -8,7 +8,8 @@
       "gpt-5.6": "len <= 272000 ? tier(\"0_272k\", p * 4 + c * 20 + cr * 0.4 + cc * 5) : tier(\"272k_plus\", p * 8 + c * 30 + cr * 0.8 + cc * 10)",
       "gpt-5.6-luna": "len <= 272000 ? tier(\"0_272k\", p * 0.2 + c * 1.2 + cr * 0.02 + cc * 0.25) : tier(\"272k_plus\", p * 0.4 + c * 1.8 + cr * 0.04 + cc * 0.5)",
       "gpt-5.6-sol": "len <= 272000 ? tier(\"0_272k\", p * 4 + c * 20 + cr * 0.4 + cc * 5) : tier(\"272k_plus\", p * 8 + c * 30 + cr * 0.8 + cc * 10)",
-      "gpt-5.6-terra": "len <= 272000 ? tier(\"0_272k\", p * 2 + c * 12 + cr * 0.2 + cc * 2.5) : tier(\"272k_plus\", p * 4 + c * 18 + cr * 0.4 + cc * 5)"
+      "gpt-5.6-terra": "len <= 272000 ? tier(\"0_272k\", p * 2 + c * 12 + cr * 0.2 + cc * 2.5) : tier(\"272k_plus\", p * 4 + c * 18 + cr * 0.4 + cc * 5)",
+      "gpt-6-astra": "len <= 272000 ? tier(\"0_272k\", p * 10 + c * 50 + cr * 1 + cc * 12.5) : tier(\"272k_plus\", p * 20 + c * 75 + cr * 2 + cc * 25)"
     },
     "billing_mode": {
       "gpt-5.4": "tiered_expr",
@@ -18,7 +19,8 @@
       "gpt-5.6": "tiered_expr",
       "gpt-5.6-luna": "tiered_expr",
       "gpt-5.6-sol": "tiered_expr",
-      "gpt-5.6-terra": "tiered_expr"
+      "gpt-5.6-terra": "tiered_expr",
+      "gpt-6-astra": "tiered_expr"
     },
     "cache_ratio": {
       "gpt-4.1": 0.25,
@@ -45,6 +47,7 @@
       "gpt-5.6-luna": 0.09999999999999999,
       "gpt-5.6-sol": 0.1,
       "gpt-5.6-terra": 0.1,
+      "gpt-6-astra": 0.1,
       "gpt-image-2": 0.25,
       "gpt-realtime-2.1": 0.0125,
       "o1": 0.5,
@@ -85,6 +88,7 @@
       "gpt-5.6-luna": 5.999999999999999,
       "gpt-5.6-sol": 5,
       "gpt-5.6-terra": 6,
+      "gpt-6-astra": 5,
       "gpt-image-2": 6,
       "gpt-realtime-2.1": 2,
       "o1": 4,
@@ -128,6 +132,7 @@
       "gpt-5.6-luna": 0.1,
       "gpt-5.6-sol": 2,
       "gpt-5.6-terra": 1,
+      "gpt-6-astra": 5,
       "gpt-image-2": 2.5,
       "gpt-realtime-2.1": 16,
       "o1": 7.5,

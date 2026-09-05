@@ -9161,7 +9161,7 @@
     "lobeIcon": "Kimi.Color",
     "models": {
       "k3": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -9208,7 +9208,7 @@
         "tool_call": true
       },
       "k3-256k": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -9792,7 +9792,8 @@
               "low",
               "medium",
               "high",
-              "xhigh"
+              "xhigh",
+              "max"
             ]
           }
         ],
@@ -14545,6 +14546,97 @@
         "temperature": false,
         "tool_call": true
       },
+      "gpt-6-astra": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "context_over_200k": {
+            "cache_read": 2,
+            "cache_write": 25,
+            "input": 20,
+            "output": 75
+          },
+          "input": 10,
+          "output": 50,
+          "tiers": [
+            {
+              "cache_read": 2,
+              "cache_write": 25,
+              "input": 20,
+              "output": 75,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "GPT-6 Astra is OpenAI's most capable model for complex reasoning, coding, computer use, research, and document creation.",
+        "experimental": {
+          "modes": {
+            "fast": {
+              "cost": {
+                "cache_read": 2,
+                "cache_write": 25,
+                "input": 20,
+                "output": 100
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            },
+            "pro": {
+              "provider": {
+                "body": {
+                  "reasoning": {
+                    "mode": "pro"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "family": "gpt-astra",
+        "id": "gpt-6-astra",
+        "last_updated": "2026-09-04",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-6 Astra",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-04",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "gpt-image-1": {
         "attachment": true,
         "description": "OpenAI image model for production generation, edits, and brand-safe visual workflows",
@@ -17718,7 +17810,7 @@
         "id": "grok-imagine-image",
         "last_updated": "2026-01-28",
         "limit": {
-          "context": 8000,
+          "context": 16000,
           "output": 0
         },
         "modalities": {
@@ -17746,7 +17838,7 @@
         "id": "grok-imagine-image-2.0",
         "last_updated": "2026-08-07",
         "limit": {
-          "context": 8000,
+          "context": 64000,
           "output": 0
         },
         "modalities": {
@@ -17774,7 +17866,7 @@
         "id": "grok-imagine-image-quality",
         "last_updated": "2026-04-03",
         "limit": {
-          "context": 8000,
+          "context": 16000,
           "output": 0
         },
         "modalities": {
