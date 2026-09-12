@@ -6,9 +6,9 @@ const STORAGE_KEY = 'llm-metadata.view';
 
 export function readStoredViewMode(): ViewMode {
   try {
-    return localStorage.getItem(STORAGE_KEY) === 'cards' ? 'cards' : 'table';
+    return localStorage.getItem(STORAGE_KEY) === 'table' ? 'table' : 'cards';
   } catch {
-    return 'table';
+    return 'cards';
   }
 }
 
