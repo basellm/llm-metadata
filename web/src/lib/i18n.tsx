@@ -26,6 +26,8 @@ const en = {
   'app.retry': 'Retry',
   'app.tableFootnote':
     "{count} models · Prices per 1M tokens in the provider's billing currency · Expand a row for tier details.",
+  'app.cardsFootnote':
+    "{count} models · Prices per 1M tokens in the provider's billing currency · Open a card for tier details.",
   'app.footerSource': 'Data from {link} and community overrides · Native providers only',
   'app.updated': 'Updated {date}',
   'app.apiDocs': 'API documentation',
@@ -34,6 +36,10 @@ const en = {
   'theme.dark': 'Dark',
   'theme.system': 'System',
   'locale.change': 'Change language',
+  'view.table': 'Table view',
+  'view.cards': 'Card view',
+  'card.inputTypes': 'Input types',
+  'card.outputTypes': 'Output types',
   'sidebar.filter': 'Filter providers…',
   'sidebar.title': 'Providers',
   'sidebar.empty': 'No providers.',
@@ -123,6 +129,8 @@ const zh: Messages = {
   'app.retry': '重试',
   'app.tableFootnote':
     '{count} 个模型 · 价格按每 100 万 tokens 计（供应商结算货币） · 点击行可展开阶梯明细。',
+  'app.cardsFootnote':
+    '{count} 个模型 · 价格按每 100 万 tokens 计（供应商结算货币） · 点击卡片查看阶梯明细。',
   'app.footerSource': '数据来自 {link} 与社区覆写 · 仅收录原生供应商',
   'app.updated': '更新于 {date}',
   'app.apiDocs': 'API 文档',
@@ -131,6 +139,10 @@ const zh: Messages = {
   'theme.dark': '深色',
   'theme.system': '跟随系统',
   'locale.change': '切换语言',
+  'view.table': '表格视图',
+  'view.cards': '卡片视图',
+  'card.inputTypes': '输入类型',
+  'card.outputTypes': '输出类型',
   'sidebar.filter': '筛选供应商…',
   'sidebar.title': '供应商',
   'sidebar.empty': '没有匹配的供应商。',
@@ -217,6 +229,8 @@ const ja: Messages = {
   'app.retry': '再試行',
   'app.tableFootnote':
     '{count} モデル · 価格は 100 万トークンあたり（プロバイダーの請求通貨） · 行を展開すると段階詳細を表示します。',
+  'app.cardsFootnote':
+    '{count} モデル · 価格は 100 万トークンあたり（プロバイダーの請求通貨） · カードを開くと段階詳細を表示します。',
   'app.footerSource': 'データは {link} とコミュニティの上書きに基づく · ネイティブプロバイダーのみ',
   'app.updated': '更新日 {date}',
   'app.apiDocs': 'API ドキュメント',
@@ -225,6 +239,10 @@ const ja: Messages = {
   'theme.dark': 'ダーク',
   'theme.system': 'システム',
   'locale.change': '言語を変更',
+  'view.table': 'テーブル表示',
+  'view.cards': 'カード表示',
+  'card.inputTypes': '入力タイプ',
+  'card.outputTypes': '出力タイプ',
   'sidebar.filter': 'プロバイダーを絞り込む…',
   'sidebar.title': 'プロバイダー',
   'sidebar.empty': '該当するプロバイダーがありません。',

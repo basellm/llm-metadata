@@ -2,29 +2,24 @@ import { useEffect } from 'react';
 import {
   ArrowDownToLine,
   ArrowUpFromLine,
-  AudioLines,
   Braces,
   Brain,
   CalendarDays,
   ChevronLeft,
-  Clock,
   Diamond,
   FileText,
   GraduationCap,
   History,
-  Image as ImageIcon,
-  Layers,
   Paperclip,
-  Sparkles,
   Thermometer,
-  Type,
-  Video,
   Weight,
   Wrench,
   type LucideIcon,
 } from 'lucide-react';
 
 import { CopyButton } from '@/components/copy-button';
+import { ModalityIcons } from '@/components/modality-icons';
+import { ModelBadges } from '@/components/model-badges';
 import { ProviderIcon } from '@/components/provider-icon';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -37,7 +32,6 @@ import {
 } from '@/components/ui/table';
 import type { Model, ProviderIndexItem } from '@/lib/api';
 import {
-  NEW_MODEL_WINDOW_DAYS,
   formatContext,
   formatDate,
   formatMoney,
@@ -45,20 +39,12 @@ import {
   formatTokenPrice,
   isNewRelease,
 } from '@/lib/format';
-import { useI18n, type MessageKey, type Translator } from '@/lib/i18n';
+import { useI18n, type MessageKey } from '@/lib/i18n';
+import { CORE_MODALITIES, MODALITY_META, modalityLabel } from '@/lib/modalities';
 import { parseModelPricing, type DetailSection } from '@/lib/pricing';
 import { cn } from '@/lib/utils';
 
 const NUMERIC_CELL = 'text-right font-mono text-[13px] tabular-nums';
-
-const CORE_MODALITIES = ['text', 'image', 'audio', 'video'] as const;
-
-const MODALITY_META: Record<string, { icon: LucideIcon; labelKey: MessageKey }> = {
-  text: { icon: Type, labelKey: 'pricing.text' },
-  image: { icon: ImageIcon, labelKey: 'detail.image' },
-  audio: { icon: AudioLines, labelKey: 'pricing.audio' },
-  video: { icon: Video, labelKey: 'detail.video' },
-};
 
 /** 能力项：字段未定义（未知）时不展示，避免误报“不支持” */
 const FEATURES: ReadonlyArray<{
@@ -80,12 +66,6 @@ const FEATURES: ReadonlyArray<{
   { field: 'open_weights', icon: Weight, labelKey: 'detail.openWeights' },
 ];
 
-function modalityLabel(value: string, t: Translator): string {
-  const meta = MODALITY_META[value];
-  if (meta) return t(meta.labelKey);
-  return value.length <= 3 ? value.toUpperCase() : value.charAt(0).toUpperCase() + value.slice(1);
-}
-
 /** 概览条单元格 */
 function StatCell({ label, value, sub }: { label: string; value: React.ReactNode; sub?: string }) {
   return (
@@ -96,26 +76,6 @@ function StatCell({ label, value, sub }: { label: string; value: React.ReactNode
       <div className="mt-1.5 flex h-6 items-center font-mono text-sm tabular-nums">{value}</div>
       {sub && <div className="text-muted-foreground mt-0.5 text-xs">{sub}</div>}
     </div>
-  );
-}
-
-/** 概览条内的模态图标行（不支持的置灰） */
-function ModalityIcons({ supported }: { supported: ReadonlySet<string> }) {
-  const { t } = useI18n();
-  return (
-    <span className="flex items-center gap-2.5">
-      {CORE_MODALITIES.map((value) => {
-        const { icon: Icon } = MODALITY_META[value];
-        const active = supported.has(value);
-        return (
-          <Icon
-            key={value}
-            aria-label={modalityLabel(value, t)}
-            className={cn('size-4', active ? 'text-foreground' : 'text-muted-foreground/30')}
-          />
-        );
-      })}
-    </span>
   );
 }
 
@@ -288,30 +248,7 @@ export function ModelDetail({
           className="size-10 rounded-lg"
         />
         <h1 className="text-2xl font-semibold tracking-tight">{model.name || model.id}</h1>
-        {isNewRelease(model.release_date, Date.now()) && (
-          <Badge variant="success" title={t('table.newHint', { days: NEW_MODEL_WINDOW_DAYS })}>
-            <Sparkles />
-            {t('table.new')}
-          </Badge>
-        )}
-        {pricing.tiered && (
-          <Badge>
-            <Layers />
-            {t('table.tiered')}
-          </Badge>
-        )}
-        {pricing.thinking && (
-          <Badge variant="secondary">
-            <Brain />
-            {t('table.thinking')}
-          </Badge>
-        )}
-        {pricing.scheduled && (
-          <Badge variant="outline">
-            <Clock />
-            {t('table.timeBased')}
-          </Badge>
-        )}
+        <ModelBadges pricing={pricing} isNew={isNewRelease(model.release_date, Date.now())} />
       </div>
       <div className="mt-2 flex items-center gap-1">
         <code className="bg-muted text-muted-foreground rounded px-1.5 py-0.5 font-mono text-xs">

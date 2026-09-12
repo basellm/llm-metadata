@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { BookOpen, Search, TriangleAlert } from 'lucide-react';
+import { BookOpen, LayoutGrid, List, Search, TriangleAlert } from 'lucide-react';
 
 import { LocaleToggle } from '@/components/locale-toggle';
+import { ModelCards } from '@/components/model-cards';
 import { ModelDetail } from '@/components/model-detail';
 import { PricingTable } from '@/components/pricing-table';
 import { ProviderIcon } from '@/components/provider-icon';
@@ -27,6 +28,8 @@ import {
 } from '@/lib/api';
 import { formatDate } from '@/lib/format';
 import { useI18n } from '@/lib/i18n';
+import { cn } from '@/lib/utils';
+import { readStoredViewMode, storeViewMode, type ViewMode } from '@/lib/view-mode';
 
 const REPO_URL = 'https://github.com/basellm/llm-metadata';
 
@@ -70,7 +73,16 @@ function FooterSource() {
   );
 }
 
-function TableSkeleton() {
+function ModelsSkeleton({ view }: { view: ViewMode }) {
+  if (view === 'cards') {
+    return (
+      <div className="grid min-h-0 flex-1 gap-4 overflow-hidden sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+        {Array.from({ length: 6 }, (_, i) => (
+          <Skeleton key={i} className="h-64 rounded-lg" />
+        ))}
+      </div>
+    );
+  }
   return (
     <div className="min-h-0 flex-1 overflow-hidden rounded-lg border">
       <div className="bg-card h-9 border-b" />
@@ -89,6 +101,36 @@ function TableSkeleton() {
   );
 }
 
+const VIEW_OPTIONS: ReadonlyArray<{ value: ViewMode; icon: typeof List }> = [
+  { value: 'table', icon: List },
+  { value: 'cards', icon: LayoutGrid },
+];
+
+/** 表格 / 卡片视图切换（分段控件） */
+function ViewToggle({ view, onChange }: { view: ViewMode; onChange: (view: ViewMode) => void }) {
+  const { t } = useI18n();
+  return (
+    <div role="group" className="flex shrink-0 rounded-md border p-0.5">
+      {VIEW_OPTIONS.map(({ value, icon: Icon }) => (
+        <button
+          key={value}
+          type="button"
+          aria-pressed={view === value}
+          aria-label={t(`view.${value}`)}
+          title={t(`view.${value}`)}
+          onClick={() => onChange(value)}
+          className={cn(
+            'text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 flex size-7 items-center justify-center rounded-sm transition-colors focus-visible:ring-2 focus-visible:outline-none',
+            view === value && 'bg-accent text-foreground',
+          )}
+        >
+          <Icon className="size-4" />
+        </button>
+      ))}
+    </div>
+  );
+}
+
 export default function App() {
   const { locale, t } = useI18n();
   const [providers, setProviders] = useState<ProviderIndexItem[] | null>(null);
@@ -99,6 +141,7 @@ export default function App() {
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [modelQuery, setModelQuery] = useState('');
+  const [view, setView] = useState<ViewMode>(readStoredViewMode);
   // 重试令牌：selectedId 不变时也能重新触发加载 effect
   const [reloadKey, setReloadKey] = useState(0);
 
@@ -187,6 +230,11 @@ export default function App() {
   const handleRetry = useCallback(() => {
     setError(null);
     setReloadKey((key) => key + 1);
+  }, []);
+
+  const handleViewChange = useCallback((next: ViewMode) => {
+    setView(next);
+    storeViewMode(next);
   }, []);
 
   const models = useMemo<Model[]>(
@@ -309,15 +357,18 @@ export default function App() {
                   {t('app.docs')}
                 </a>
               )}
-              <div className="relative ml-auto w-full sm:w-72">
-                <Search className="text-muted-foreground pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2" />
-                <Input
-                  value={modelQuery}
-                  onChange={(e) => setModelQuery(e.target.value)}
-                  placeholder={t('app.searchModels')}
-                  className="pl-8"
-                  aria-label={t('app.searchModels')}
-                />
+              <div className="ml-auto flex w-full items-center gap-2 sm:w-auto">
+                <div className="relative flex-1 sm:w-72">
+                  <Search className="text-muted-foreground pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2" />
+                  <Input
+                    value={modelQuery}
+                    onChange={(e) => setModelQuery(e.target.value)}
+                    placeholder={t('app.searchModels')}
+                    className="pl-8"
+                    aria-label={t('app.searchModels')}
+                  />
+                </div>
+                <ViewToggle view={view} onChange={handleViewChange} />
               </div>
             </div>
           )}
@@ -342,21 +393,34 @@ export default function App() {
               expr={billingExpr?.[selectedModel.id]}
               onBack={handleCloseModel}
             />
-          ) : provider ? (
+          ) : provider && selectedMeta ? (
             <>
-              <PricingTable
-                key={provider.id}
-                models={models}
-                query={modelQuery}
-                billingExpr={billingExpr}
-                onOpenModel={handleOpenModel}
-              />
+              {view === 'cards' ? (
+                <ModelCards
+                  key={provider.id}
+                  models={models}
+                  query={modelQuery}
+                  billingExpr={billingExpr}
+                  provider={selectedMeta}
+                  onOpenModel={handleOpenModel}
+                />
+              ) : (
+                <PricingTable
+                  key={provider.id}
+                  models={models}
+                  query={modelQuery}
+                  billingExpr={billingExpr}
+                  onOpenModel={handleOpenModel}
+                />
+              )}
               <p className="text-muted-foreground text-xs">
-                {t('app.tableFootnote', { count: models.length })}
+                {t(view === 'cards' ? 'app.cardsFootnote' : 'app.tableFootnote', {
+                  count: models.length,
+                })}
               </p>
             </>
           ) : (
-            <TableSkeleton />
+            <ModelsSkeleton view={view} />
           )}
 
           <footer className="mt-auto shrink-0 border-t pt-4">

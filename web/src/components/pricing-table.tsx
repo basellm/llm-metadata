@@ -1,17 +1,9 @@
 import { Fragment, useMemo, useState } from 'react';
-import {
-  ArrowDown,
-  ArrowUp,
-  ArrowUpDown,
-  Brain,
-  ChevronRight,
-  Clock,
-  Layers,
-  SearchX,
-  Sparkles,
-} from 'lucide-react';
+import { ArrowDown, ArrowUp, ArrowUpDown, ChevronRight } from 'lucide-react';
 
 import { CopyButton } from '@/components/copy-button';
+import { ModelBadges } from '@/components/model-badges';
+import { ModelsEmpty } from '@/components/models-empty';
 import { Badge } from '@/components/ui/badge';
 import {
   Table,
@@ -22,34 +14,16 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import type { Model } from '@/lib/api';
-import {
-  NEW_MODEL_WINDOW_DAYS,
-  formatContext,
-  formatDate,
-  formatTokenPrice,
-  isNewRelease,
-} from '@/lib/format';
+import { formatContext, formatDate, formatTokenPrice } from '@/lib/format';
 import { useI18n } from '@/lib/i18n';
-import { parseModelPricing, type DetailRow, type ModelPricing } from '@/lib/pricing';
+import {
+  DEFAULT_DIRECTION,
+  buildModelRows,
+  type SortDirection,
+  type SortKey,
+} from '@/lib/model-rows';
+import type { DetailRow } from '@/lib/pricing';
 import { cn } from '@/lib/utils';
-
-type SortKey = 'name' | 'released' | 'input' | 'output';
-
-/** 首次点击列头时的方向：日期默认最新在前，其余升序 */
-const DEFAULT_DIRECTION: Record<SortKey, 1 | -1> = {
-  name: 1,
-  released: -1,
-  input: 1,
-  output: 1,
-};
-
-interface Row {
-  model: Model;
-  pricing: ModelPricing;
-  expr: string | undefined;
-  expandable: boolean;
-  isNew: boolean;
-}
 
 const NUMERIC_CELL = 'text-right font-mono text-[13px] tabular-nums';
 /** 明细子行首格：连续左引导线（单元格无内边距，由内层容器撑起整高） */
@@ -67,7 +41,7 @@ function SortableHead({
   label: string;
   sortKey: SortKey;
   activeKey: SortKey;
-  direction: 1 | -1;
+  direction: SortDirection;
   onSort: (key: SortKey) => void;
   className?: string;
 }) {
@@ -175,51 +149,13 @@ export function PricingTable({
 }) {
   const { locale, t } = useI18n();
   const [sortKey, setSortKey] = useState<SortKey>('released');
-  const [direction, setDirection] = useState<1 | -1>(DEFAULT_DIRECTION.released);
+  const [direction, setDirection] = useState<SortDirection>(DEFAULT_DIRECTION.released);
   const [expanded, setExpanded] = useState<ReadonlySet<string>>(new Set());
 
-  const rows = useMemo<Row[]>(() => {
-    const normalized = query.trim().toLowerCase();
-    const filtered = models.filter(
-      (model) =>
-        !normalized ||
-        model.id.toLowerCase().includes(normalized) ||
-        (model.name || '').toLowerCase().includes(normalized),
-    );
-
-    const now = Date.now();
-    const list = filtered.map((model) => {
-      const pricing = parseModelPricing(model.cost, t, locale);
-      const expr = billingExpr?.[model.id];
-      return {
-        model,
-        pricing,
-        expr,
-        expandable: pricing.sections.length > 0 || !!expr,
-        isNew: isNewRelease(model.release_date, now),
-      };
-    });
-    // 排序取值：ISO 日期按字符串比较即为时间序；缺失值不论方向始终排在末尾
-    const sortValue = (row: Row): string | number | null => {
-      if (sortKey === 'name') return row.model.id;
-      if (sortKey === 'released') return row.model.release_date ?? null;
-      return row.pricing.base[sortKey];
-    };
-    list.sort((a, b) => {
-      const av = sortValue(a);
-      const bv = sortValue(b);
-      const byId = a.model.id.localeCompare(b.model.id);
-      if (av === null && bv === null) return byId;
-      if (av === null) return 1;
-      if (bv === null) return -1;
-      const order =
-        typeof av === 'number' && typeof bv === 'number'
-          ? av - bv
-          : String(av).localeCompare(String(bv));
-      return direction * order || byId;
-    });
-    return list;
-  }, [models, query, sortKey, direction, billingExpr, t, locale]);
+  const rows = useMemo(
+    () => buildModelRows(models, { query, billingExpr, sortKey, direction, t, locale }),
+    [models, query, billingExpr, sortKey, direction, t, locale],
+  );
 
   const handleSort = (key: SortKey) => {
     if (key === sortKey) {
@@ -238,14 +174,7 @@ export function PricingTable({
     });
   };
 
-  if (rows.length === 0) {
-    return (
-      <div className="text-muted-foreground flex h-44 flex-col items-center justify-center gap-2 rounded-lg border border-dashed text-sm">
-        <SearchX className="size-5 opacity-60" />
-        {t('table.empty')}
-      </div>
-    );
-  }
+  if (rows.length === 0) return <ModelsEmpty />;
 
   return (
     <div className="min-h-0 flex-1">
@@ -291,7 +220,8 @@ export function PricingTable({
             </TableRow>
           </TableHeader>
           <TableBody>
-            {rows.map(({ model, pricing, expr, expandable, isNew }) => {
+            {rows.map(({ model, pricing, expr, isNew }) => {
+              const expandable = pricing.sections.length > 0 || !!expr;
               const open = expandable && expanded.has(model.id);
               return (
                 <Fragment key={model.id}>
@@ -338,33 +268,7 @@ export function PricingTable({
                             >
                               {model.name || model.id}
                             </button>
-                            {isNew && (
-                              <Badge
-                                variant="success"
-                                title={t('table.newHint', { days: NEW_MODEL_WINDOW_DAYS })}
-                              >
-                                <Sparkles />
-                                {t('table.new')}
-                              </Badge>
-                            )}
-                            {pricing.tiered && (
-                              <Badge>
-                                <Layers />
-                                {t('table.tiered')}
-                              </Badge>
-                            )}
-                            {pricing.thinking && (
-                              <Badge variant="secondary">
-                                <Brain />
-                                {t('table.thinking')}
-                              </Badge>
-                            )}
-                            {pricing.scheduled && (
-                              <Badge variant="outline">
-                                <Clock />
-                                {t('table.timeBased')}
-                              </Badge>
-                            )}
+                            <ModelBadges pricing={pricing} isNew={isNew} />
                           </div>
                           <div className="text-muted-foreground truncate font-mono text-xs">
                             {model.id}
