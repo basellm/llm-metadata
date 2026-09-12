@@ -4,6 +4,7 @@ import type { Model } from './api';
 import { isNewRelease } from './format';
 import type { Locale, Translator } from './i18n';
 import { parseModelPricing, type ModelPricing } from './pricing';
+import { matchesQuery, normalizeQuery } from './search';
 
 export type SortKey = 'name' | 'released' | 'input' | 'output';
 export type SortDirection = 1 | -1;
@@ -32,14 +33,6 @@ export interface ModelRowsOptions {
   locale: Locale;
 }
 
-function matches(model: Model, normalizedQuery: string): boolean {
-  return (
-    !normalizedQuery ||
-    model.id.toLowerCase().includes(normalizedQuery) ||
-    (model.name || '').toLowerCase().includes(normalizedQuery)
-  );
-}
-
 /** 排序取值：ISO 日期按字符串比较即为时间序 */
 function sortValue(row: ModelRow, key: SortKey): string | number | null {
   if (key === 'name') return row.model.id;
@@ -49,11 +42,11 @@ function sortValue(row: ModelRow, key: SortKey): string | number | null {
 
 export function buildModelRows(models: Model[], options: ModelRowsOptions): ModelRow[] {
   const { query, billingExpr, sortKey, direction, t, locale } = options;
-  const normalized = query.trim().toLowerCase();
+  const normalized = normalizeQuery(query);
   const now = Date.now();
 
   const rows = models
-    .filter((model) => matches(model, normalized))
+    .filter((model) => matchesQuery(model, normalized))
     .map<ModelRow>((model) => ({
       model,
       pricing: parseModelPricing(model.cost, t, locale),

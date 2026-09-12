@@ -44,6 +44,13 @@ export interface ProviderIndexItem {
   modelCount: number;
 }
 
+/** 全局模型索引项（index.json），用于跨供应商搜索 */
+export interface ModelIndexItem {
+  id: string;
+  providerId: string;
+  name: string;
+}
+
 const API_BASE = './api';
 
 async function fetchJSON<T>(path: string): Promise<T> {
@@ -83,6 +90,21 @@ export function fetchProvider(locale: Locale, id: string): Promise<Provider> {
     cached = fetchJSON<Provider>(localePath(locale, `providers/${sanitizeFileSegment(id)}.json`));
     cached.catch(() => providerCache.delete(cacheKey));
     providerCache.set(cacheKey, cached);
+  }
+  return cached;
+}
+
+const modelIndexCache = new Map<Locale, Promise<ModelIndexItem[]>>();
+
+/** 全部模型的轻量索引，仅在用户发起全局搜索时按语言懒加载 */
+export function fetchModelIndex(locale: Locale): Promise<ModelIndexItem[]> {
+  let cached = modelIndexCache.get(locale);
+  if (!cached) {
+    cached = fetchJSON<{ models: ModelIndexItem[] }>(localePath(locale, 'index.json')).then(
+      (index) => index.models,
+    );
+    cached.catch(() => modelIndexCache.delete(locale));
+    modelIndexCache.set(locale, cached);
   }
   return cached;
 }

@@ -222,6 +222,17 @@ export default function App() {
     [selectedId],
   );
 
+  // 全局搜索跳转：切换供应商并直接打开模型详情（跨供应商时清空列表内搜索）
+  const handleOpenModelIn = useCallback(
+    (providerId: string, modelId: string) => {
+      setSelectedId(providerId);
+      setSelectedModelId(modelId);
+      if (providerId !== selectedId) setModelQuery('');
+      window.location.hash = buildHash(providerId, modelId);
+    },
+    [selectedId],
+  );
+
   const handleCloseModel = useCallback(() => {
     setSelectedModelId(null);
     if (selectedId) window.location.hash = buildHash(selectedId);
@@ -237,9 +248,13 @@ export default function App() {
     storeViewMode(next);
   }, []);
 
+  // 切换供应商后到新数据抵达前，provider 仍是上一家的数据；与 selectedId 校验后再使用，
+  // 避免用旧数据误判模型不存在或短暂渲染错误的供应商
+  const loadedProvider = provider?.id === selectedId ? provider : null;
+
   const models = useMemo<Model[]>(
-    () => (provider ? Object.values(provider.models) : []),
-    [provider],
+    () => (loadedProvider ? Object.values(loadedProvider.models) : []),
+    [loadedProvider],
   );
 
   const totalModels = useMemo(
@@ -248,15 +263,15 @@ export default function App() {
   );
 
   const selectedMeta = providers?.find((p) => p.id === selectedId) ?? null;
-  const selectedModel = (selectedModelId && provider?.models[selectedModelId]) || null;
+  const selectedModel = (selectedModelId && loadedProvider?.models[selectedModelId]) || null;
 
   // hash 指向不存在的模型时回退到列表并纠正 URL
   useEffect(() => {
-    if (provider && selectedModelId && !provider.models[selectedModelId] && selectedId) {
+    if (loadedProvider && selectedModelId && !loadedProvider.models[selectedModelId]) {
       setSelectedModelId(null);
-      history.replaceState(null, '', buildHash(selectedId));
+      history.replaceState(null, '', buildHash(loadedProvider.id));
     }
-  }, [provider, selectedModelId, selectedId]);
+  }, [loadedProvider, selectedModelId]);
 
   const detailOpen = Boolean(selectedModel && selectedMeta);
 
@@ -295,7 +310,12 @@ export default function App() {
 
       <div className="flex min-h-0 flex-1 gap-6 px-4 pt-6 sm:px-6">
         {providers ? (
-          <ProviderSidebar providers={providers} selectedId={selectedId} onSelect={handleSelect} />
+          <ProviderSidebar
+            providers={providers}
+            selectedId={selectedId}
+            onSelect={handleSelect}
+            onSelectModel={handleOpenModelIn}
+          />
         ) : (
           <aside className="hidden w-60 shrink-0 flex-col gap-2 md:flex">
             <Skeleton className="h-9 w-full" />
@@ -393,11 +413,11 @@ export default function App() {
               expr={billingExpr?.[selectedModel.id]}
               onBack={handleCloseModel}
             />
-          ) : provider && selectedMeta ? (
+          ) : loadedProvider && selectedMeta ? (
             <>
               {view === 'cards' ? (
                 <ModelCards
-                  key={provider.id}
+                  key={loadedProvider.id}
                   models={models}
                   query={modelQuery}
                   billingExpr={billingExpr}
@@ -406,7 +426,7 @@ export default function App() {
                 />
               ) : (
                 <PricingTable
-                  key={provider.id}
+                  key={loadedProvider.id}
                   models={models}
                   query={modelQuery}
                   billingExpr={billingExpr}
