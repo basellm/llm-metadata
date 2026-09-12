@@ -10,6 +10,7 @@ import type { Model, ProviderIndexItem } from '@/lib/api';
 import { formatContext, formatDate, formatTokenPrice } from '@/lib/format';
 import { useI18n } from '@/lib/i18n';
 import { DEFAULT_DIRECTION, buildModelRows, type ModelRow } from '@/lib/model-rows';
+import { inputPriceLabel } from '@/lib/pricing';
 
 /** 卡片内的一项基础信息（标签左、值右） */
 function Stat({ label, value }: { label: string; value: ReactNode }) {
@@ -32,10 +33,6 @@ function ModelCard({
 }) {
   const { locale, t } = useI18n();
   const name = model.name || model.id;
-  const inputPrice =
-    pricing.base.input === null && pricing.unit
-      ? pricing.unit
-      : formatTokenPrice(pricing.symbol, pricing.base.input);
 
   return (
     <article
@@ -88,7 +85,7 @@ function ModelCard({
             <ModalityIcons supported={new Set(model.modalities?.output)} className="gap-1.5" />
           }
         />
-        <Stat label={t('table.input')} value={inputPrice} />
+        <Stat label={t('table.input')} value={inputPriceLabel(pricing)} />
         <Stat
           label={t('table.output')}
           value={formatTokenPrice(pricing.symbol, pricing.base.output)}

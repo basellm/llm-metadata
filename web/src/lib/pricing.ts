@@ -1,5 +1,5 @@
 import type { ModelCost } from './api';
-import { currencySymbol, formatContext, formatMoney } from './format';
+import { currencySymbol, formatContext, formatMoney, formatTokenPrice } from './format';
 import type { Locale, MessageKey, Translator } from './i18n';
 import { describeWindow, isSchedule, isWindowActive, type Schedule } from './schedule';
 
@@ -356,4 +356,11 @@ export function parseModelPricing(
     scheduled: schedule !== null,
     sections,
   };
+}
+
+/** 主行 / 卡片的输入价文案：无 token 输入价时回退为按量摘要（如 "¥0.08/s"） */
+export function inputPriceLabel(pricing: ModelPricing): string {
+  return pricing.base.input === null && pricing.unit
+    ? pricing.unit
+    : formatTokenPrice(pricing.symbol, pricing.base.input);
 }

@@ -22,7 +22,7 @@ import {
   type SortDirection,
   type SortKey,
 } from '@/lib/model-rows';
-import type { DetailRow } from '@/lib/pricing';
+import { inputPriceLabel, type DetailRow } from '@/lib/pricing';
 import { cn } from '@/lib/utils';
 
 const NUMERIC_CELL = 'text-right font-mono text-[13px] tabular-nums';
@@ -284,11 +284,7 @@ export function PricingTable({
                     <TableCell className={cn(NUMERIC_CELL, 'text-muted-foreground')}>
                       {formatContext(model.limit?.context)}
                     </TableCell>
-                    <TableCell className={NUMERIC_CELL}>
-                      {pricing.base.input === null && pricing.unit
-                        ? pricing.unit
-                        : formatTokenPrice(pricing.symbol, pricing.base.input)}
-                    </TableCell>
+                    <TableCell className={NUMERIC_CELL}>{inputPriceLabel(pricing)}</TableCell>
                     <TableCell className={cn(NUMERIC_CELL, 'text-muted-foreground')}>
                       {formatTokenPrice(pricing.symbol, pricing.base.cacheRead)}
                     </TableCell>
