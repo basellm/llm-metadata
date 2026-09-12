@@ -215,7 +215,7 @@ export default function App() {
   return (
     <div className="flex h-dvh flex-col">
       <header className="shrink-0 border-b">
-        <div className="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4">
+        <div className="flex h-14 items-center gap-3 px-4 sm:px-6">
           <a
             href="./"
             className="focus-visible:ring-ring/50 flex items-center gap-2 rounded-sm font-semibold tracking-tight focus-visible:ring-2 focus-visible:outline-none"
@@ -245,7 +245,7 @@ export default function App() {
         </div>
       </header>
 
-      <div className="mx-auto flex min-h-0 w-full max-w-7xl flex-1 gap-6 px-4 pt-6">
+      <div className="flex min-h-0 flex-1 gap-6 px-4 pt-6 sm:px-6">
         {providers ? (
           <ProviderSidebar providers={providers} selectedId={selectedId} onSelect={handleSelect} />
         ) : (
