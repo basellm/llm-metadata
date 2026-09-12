@@ -11,13 +11,25 @@ import { formatContext, formatDate, formatTokenPrice } from '@/lib/format';
 import { useI18n } from '@/lib/i18n';
 import { DEFAULT_DIRECTION, buildModelRows, type ModelRow } from '@/lib/model-rows';
 import { inputPriceLabel } from '@/lib/pricing';
+import { cn } from '@/lib/utils';
+
+/** 卡片网格：按最小卡宽自适应列数（窄屏退化为单列且不横向溢出） */
+export const CARD_GRID = 'grid gap-4 grid-cols-[repeat(auto-fill,minmax(min(21rem,100%),1fr))]';
 
 /** 卡片内的一项基础信息（标签左、值右） */
-function Stat({ label, value }: { label: string; value: ReactNode }) {
+function Stat({
+  label,
+  value,
+  className,
+}: {
+  label: string;
+  value: ReactNode;
+  className?: string;
+}) {
   return (
-    <div className="flex min-w-0 items-center justify-between gap-3">
+    <div className={cn('flex items-center justify-between gap-3', className)}>
       <dt className="text-muted-foreground shrink-0">{label}</dt>
-      <dd className="truncate font-mono tabular-nums">{value}</dd>
+      <dd className="font-mono whitespace-nowrap tabular-nums">{value}</dd>
     </div>
   );
 }
@@ -76,14 +88,14 @@ function ModelCard({
 
       <dl className="bg-muted/40 mt-auto grid grid-cols-2 gap-x-5 gap-y-2 rounded-md px-3 py-2.5 text-[13px]">
         <Stat
+          className="col-span-2"
           label={t('card.inputTypes')}
-          value={<ModalityIcons supported={new Set(model.modalities?.input)} className="gap-1.5" />}
+          value={<ModalityIcons supported={new Set(model.modalities?.input)} />}
         />
         <Stat
+          className="col-span-2"
           label={t('card.outputTypes')}
-          value={
-            <ModalityIcons supported={new Set(model.modalities?.output)} className="gap-1.5" />
-          }
+          value={<ModalityIcons supported={new Set(model.modalities?.output)} />}
         />
         <Stat label={t('table.input')} value={inputPriceLabel(pricing)} />
         <Stat
@@ -136,7 +148,7 @@ export function ModelCards({
 
   return (
     <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+      <div className={CARD_GRID}>
         {rows.map((row) => (
           <ModelCard
             key={row.model.id}

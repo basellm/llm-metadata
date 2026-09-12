@@ -20,7 +20,10 @@ export function ModalityIcons({
           <Icon
             key={value}
             aria-label={modalityLabel(value, t)}
-            className={cn('size-4', active ? 'text-foreground' : 'text-muted-foreground/30')}
+            className={cn(
+              'size-4 shrink-0',
+              active ? 'text-foreground' : 'text-muted-foreground/30',
+            )}
           />
         );
       })}

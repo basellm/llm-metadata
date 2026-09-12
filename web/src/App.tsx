@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { BookOpen, LayoutGrid, List, Search, TriangleAlert } from 'lucide-react';
 
 import { LocaleToggle } from '@/components/locale-toggle';
-import { ModelCards } from '@/components/model-cards';
+import { CARD_GRID, ModelCards } from '@/components/model-cards';
 import { ModelDetail } from '@/components/model-detail';
 import { PricingTable } from '@/components/pricing-table';
 import { ProviderIcon } from '@/components/provider-icon';
@@ -76,7 +76,7 @@ function FooterSource() {
 function ModelsSkeleton({ view }: { view: ViewMode }) {
   if (view === 'cards') {
     return (
-      <div className="grid min-h-0 flex-1 gap-4 overflow-hidden sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+      <div className={cn(CARD_GRID, 'min-h-0 flex-1 overflow-hidden')}>
         {Array.from({ length: 6 }, (_, i) => (
           <Skeleton key={i} className="h-64 rounded-lg" />
         ))}
