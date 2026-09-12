@@ -1,11 +1,19 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {},
-    "completion_ratio": {},
-    "model_price": {},
-    "model_ratio": {}
+    "billing_expr": {
+      "hunyuan-2.0-instruct": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "hunyuan-2.0-thinking": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "hunyuan-t1": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "hunyuan-turbos": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "tc-code-latest": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)"
+    },
+    "billing_mode": {
+      "hunyuan-2.0-instruct": "tiered_expr",
+      "hunyuan-2.0-thinking": "tiered_expr",
+      "hunyuan-t1": "tiered_expr",
+      "hunyuan-turbos": "tiered_expr",
+      "tc-code-latest": "tiered_expr"
+    }
   },
   "message": "",
   "success": true

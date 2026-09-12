@@ -43,8 +43,13 @@ npm run build
   "exchangeRates": { "CNY": 7.3, "EUR": 0.92 },
   "providers": {
     "openai": { "lobeIcon": "OpenAI" },
+    "anthropic": { "lobeIcon": "Claude.Color", "cacheWrite1h": 2 },
     "zai": { "priority": 20, "lobeIcon": "ZAI" },
-    "alibaba": { "priority": 30, "excludeModels": ["^deepseek", "^kimi"] }
+    "alibaba": {
+      "priority": 30,
+      "excludeModels": ["^deepseek", "^kimi"],
+      "thinkingToggle": { "param": "enable_thinking", "value": true }
+    }
   }
 }
 ```
@@ -52,15 +57,29 @@ npm run build
 - `providers`——白名单。未列出的供应商会从所有输出（JSON API、NewAPI、VoAPI、Web UI）中移除，其历史产物也会在构建时从 `dist/api/` 清理。
 - `excludeModels`——不区分大小写的正则，用于剔除原生供应商平台上托管的第三方模型（例如阿里平台上转售的 DeepSeek 模型），只保留自研模型。
 - `priority`——解决同一厂商多端点（如 `zai` 与 `zhipuai`）在聚合 NewAPI 输出中的同名模型冲突；数值大者胜出，相同时按供应商 ID 排序。`/api/newapi/providers/<id>/` 下的按供应商文件始终保留该供应商自己的价格。
-- `exchangeRates`——每 1 USD 对应的货币数量，用于将非美元价格（如人民币）换算进 NewAPI 的美元倍率体系（1 倍率 = $2 / 1M 输入 tokens）。缺少汇率的货币会跳过价格输出并给出构建警告。
+- `exchangeRates`——每 1 USD 对应的货币数量，用于将非美元价格（如人民币）换算为 NewAPI 计费表达式中的美元系数。缺少汇率的货币会跳过价格输出并给出构建警告。
+- `thinkingToggle`——该供应商混合推理模型切换到思考模式的请求体字段（gjson 路径）与取值。当模型 `cost.reasoning` 与 `cost.output` 不同时，表达式以 `param("<param>") == <value>` 为条件按 reasoning 价计输出 tokens；未配置时按 output 价计费并给出构建警告。
+- `cacheWrite1h`——1 小时 TTL 提示缓存写入价相对输入价的倍数（Anthropic 为 2）。在 `cc`（models.dev 的 `cache_write` 价）旁额外输出 `cc1h` 项；否则 new-api 对 Claude 格式用量的 1h 缓存写入不计费。
 - `lobeIcon`——[@lobehub/icons](https://github.com/lobehub/lobe-icons) 的导出名（如 `Claude.Color`），作为 NewAPI `vendors.json` 中的厂商图标。
 - 若该文件缺失，过滤将被禁用并输出构建警告。
 
 供应商 logo 会在构建时镜像到 `dist/api/logos/<id>.svg`，Web UI 以同源地址加载图标（远程 `iconURL` 与首字母徽标作为回退），不再热链 models.dev。
 
-NewAPI 兼容性：`dist/api/newapi/ratio_config-v1-base.json` 遵循 new-api 的 `/api/ratio_config` 载荷格式，是 new-api 倍率同步界面内置"官方倍率预设"的数据源；`vendors.json` / `models.json` 供其模型元数据同步使用。
+## NewAPI 计费表达式
 
-表达式计费（`tiered_expr`）：具有长度分层定价（如 `input_32k_128k`）或思考模式差价（`thinking_input` / `thinking_output`）的模型，会在倍率配置中额外输出 `billing_mode` / `billing_expr` 映射，表达式为 expr-lang 语法、系数单位 USD/1M tokens（`len` 三元链 + `tier()` 档位包裹，思考模式经 `param("enable_thinking")` 判定）。new-api 应用后表达式优先于倍率生效；普通倍率仍会同时输出作为回退。
+`dist/api/newapi/ratio_config-v1-base.json` 遵循 new-api 的 `/api/ratio_config` 载荷格式，是 new-api 倍率同步界面内置"官方倍率预设"的数据源；按供应商版本位于 `/api/newapi/providers/<id>/`。`vendors.json` / `models.json` 只承载元数据（描述、标签、厂商、图标），供 new-api 的模型元数据同步使用。
+
+所有有价模型均以 new-api 计费表达式发布（`billing_mode: "tiered_expr"` + `billing_expr`）——倍率配置中不再含 `model_ratio` / `completion_ratio` / `cache_ratio` / `model_price` 字段。表达式为 expr-lang 语法，系数为 USD/1M tokens 实价，每个价格叶子以 `tier("<name>", …)` 包裹：
+
+| 定价形态                              | 来源字段                                                    | 表达式                                                                                                                 |
+| ------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 单一价                                | `input`、`output`、`cache_read`、`cache_write`、`*_audio`   | `tier("standard", p * 3 + cr * 0.3 + cc * 3.75 + cc1h * 6 + c * 15)`                                                   |
+| 上下文阶梯                            | `tiers[]`（`context_over_200k` 为遗留回退）                 | `len <= 200000 ? tier("0_200k", …) : tier("200k_plus", …)`                                                             |
+| 思考模式（供应商 `thinkingToggle`）   | `reasoning` ≠ `output`                                      | `param("enable_thinking") == true ? tier("thinking", p * 0.4 + c * 4) : tier("standard", p * 0.4 + c * 1.2)`            |
+| 分时段（波峰/波谷）                   | `schedule`（覆写扩展，见下文）                              | `weekday("UTC") >= 1 && weekday("UTC") <= 5 && ((hour("UTC") >= 1 && hour("UTC") < 4) \|\| …) ? tier("peak", …) : tier("off_peak", …)` |
+| 按图                                  | `per_image`（无 token 价时）                                | `tier("image", fixed(0.04)) * image_count`                                                                             |
+
+分支自外向内为 时段 → 思考模式 → 上下文阶梯，与 new-api 价格页面可结构化展示的形状一致（时段条件显示为 "Mon–Fri 01:00–04:00 or 06:00–10:00 (UTC)" 等）。显式 0 价保留为 `cr * 0` 等项，因为 new-api 只在表达式引用对应变量时才把缓存/音频 tokens 从 `p`/`c` 中剔除。无法表达的价格（如没有开关的独立推理 token 价）仍按文档输出价生成表达式，并在 `manifest.json` 的 warnings 中记录。
 
 ## 国际化（API）
 
@@ -179,8 +198,40 @@ data/
 }
 ```
 
+分时段定价（`data/overrides/models/deepseek/deepseek-flash.json`）——`cost.schedule` 是本仓库对 models.dev 成本结构的扩展，用于有波峰/波谷价的供应商：
+
+```json
+{
+  "cost": {
+    "input": 0.15,
+    "output": 0.6,
+    "reasoning": 0.6,
+    "cache_read": 0.003,
+    "schedule": {
+      "timezone": "UTC",
+      "fallback": "off_peak",
+      "windows": [
+        {
+          "name": "peak",
+          "weekdays": [1, 2, 3, 4, 5],
+          "hours": ["01:00-04:00", "06:00-10:00"],
+          "input": 0.3,
+          "output": 1.2,
+          "reasoning": 1.2,
+          "cache_read": 0.006
+        }
+      ]
+    }
+  }
+}
+```
+
+- 基础 `cost` 价格在所有窗口之外生效，档位名为 `fallback`；窗口按顺序匹配，可覆盖任意价格家族（未给出的家族沿用基础价）。带上下文 `tiers` 的模型，其窗口必须自带 `tiers`。
+- `timezone` 为 IANA 时区；`weekdays` 采用 0 = 周日 … 6 = 周六；`hours` 为 `HH:MM-HH:MM`（结束不含，允许 `24:00`），结束早于开始表示跨午夜。整点窗口生成 new-api 可结构化展示的 `hour(tz)` 比较；含分钟的窗口生成按分钟数的算式。
+- 非法的时段配置会明确失败：该模型不输出表达式，原因记录在 `manifest.json` 的 warnings 中。
+
 说明：
 
-- 使用深度合并；未声明字段会保持原值。
-- 模型覆写字段白名单（会进行清洗）：`id`、`name`、`description`、`reasoning`、`tool_call`、`attachment`、`temperature`、`knowledge`、`release_date`、`last_updated`、`open_weights`、`modalities`、`limit`、`cost`。
+- 使用深度合并；未声明字段会保持原值。覆写中请固定所有依赖的价格（含 `reasoning`），避免上游变动导致窗口价与基础价不一致。
+- 模型覆写字段白名单（会进行清洗）：`id`、`name`、`description`、`reasoning`、`tool_call`、`attachment`、`temperature`、`knowledge`、`release_date`、`last_updated`、`open_weights`、`modalities`、`limit`、`cost`。`$comment` 等键会被丢弃，可安全用作维护备注。
 - 仅从 `data/overrides/**` 读取。

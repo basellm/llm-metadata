@@ -1,31 +1,20 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {
-      "mimo-v2-flash": 0.019999999999999997,
-      "mimo-v2-omni": 0.019999999999999997,
-      "mimo-v2-pro": 0.008275862068965517,
-      "mimo-v2.5": 0.019999999999999997,
-      "mimo-v2.5-pro": 0.008275862068965517,
-      "mimo-v2.5-pro-ultraspeed": 0.008275862068965517
+    "billing_expr": {
+      "mimo-v2-flash": "tier(\"standard\", p * 0.14 + cr * 0.0028 + c * 0.28)",
+      "mimo-v2-omni": "tier(\"standard\", p * 0.14 + cr * 0.0028 + c * 0.28)",
+      "mimo-v2-pro": "tier(\"standard\", p * 0.435 + cr * 0.0036 + c * 0.87)",
+      "mimo-v2.5": "tier(\"standard\", p * 0.14 + cr * 0.0028 + c * 0.28)",
+      "mimo-v2.5-pro": "tier(\"standard\", p * 0.435 + cr * 0.0036 + c * 0.87)",
+      "mimo-v2.5-pro-ultraspeed": "tier(\"standard\", p * 1.305 + cr * 0.0108 + c * 2.61)"
     },
-    "completion_ratio": {
-      "mimo-v2-flash": 2,
-      "mimo-v2-omni": 2,
-      "mimo-v2-pro": 2,
-      "mimo-v2.5": 2,
-      "mimo-v2.5-pro": 2,
-      "mimo-v2.5-pro-ultraspeed": 2
-    },
-    "model_price": {},
-    "model_ratio": {
-      "mimo-v2-flash": 0.07,
-      "mimo-v2-omni": 0.07,
-      "mimo-v2-pro": 0.2175,
-      "mimo-v2.5": 0.07,
-      "mimo-v2.5-pro": 0.2175,
-      "mimo-v2.5-pro-ultraspeed": 0.6525
+    "billing_mode": {
+      "mimo-v2-flash": "tiered_expr",
+      "mimo-v2-omni": "tiered_expr",
+      "mimo-v2-pro": "tiered_expr",
+      "mimo-v2.5": "tiered_expr",
+      "mimo-v2.5-pro": "tiered_expr",
+      "mimo-v2.5-pro-ultraspeed": "tiered_expr"
     }
   },
   "message": "",

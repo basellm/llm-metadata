@@ -7,12 +7,15 @@ import {
   Brain,
   CalendarDays,
   ChevronLeft,
+  Clock,
   Diamond,
   FileText,
   GraduationCap,
   History,
   Image as ImageIcon,
+  Layers,
   Paperclip,
+  Sparkles,
   Thermometer,
   Type,
   Video,
@@ -33,7 +36,15 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import type { Model, ProviderIndexItem } from '@/lib/api';
-import { formatContext, formatDate, formatMoney, formatNumber, formatTokenPrice } from '@/lib/format';
+import {
+  NEW_MODEL_WINDOW_DAYS,
+  formatContext,
+  formatDate,
+  formatMoney,
+  formatNumber,
+  formatTokenPrice,
+  isNewRelease,
+} from '@/lib/format';
 import { useI18n, type MessageKey, type Translator } from '@/lib/i18n';
 import { parseModelPricing, type DetailSection } from '@/lib/pricing';
 import { cn } from '@/lib/utils';
@@ -51,7 +62,13 @@ const MODALITY_META: Record<string, { icon: LucideIcon; labelKey: MessageKey }> 
 
 /** 能力项：字段未定义（未知）时不展示，避免误报“不支持” */
 const FEATURES: ReadonlyArray<{
-  field: 'reasoning' | 'tool_call' | 'structured_output' | 'attachment' | 'temperature' | 'open_weights';
+  field:
+    | 'reasoning'
+    | 'tool_call'
+    | 'structured_output'
+    | 'attachment'
+    | 'temperature'
+    | 'open_weights';
   icon: LucideIcon;
   labelKey: MessageKey;
 }> = [
@@ -136,9 +153,7 @@ function StatusItem({
   active: boolean;
 }) {
   return (
-    <div
-      className={cn('flex items-center gap-3 rounded-lg border p-3.5', !active && 'opacity-45')}
-    >
+    <div className={cn('flex items-center gap-3 rounded-lg border p-3.5', !active && 'opacity-45')}>
       <span className="bg-muted flex size-8 shrink-0 items-center justify-center rounded-md">
         <Icon aria-hidden className="size-4" />
       </span>
@@ -172,15 +187,22 @@ function PricingSectionTable({ section, symbol }: { section: DetailSection; symb
           <TableBody>
             {section.rows.map((row) => (
               <TableRow key={row.label} className="hover:bg-transparent">
-                <TableCell className="text-[13px]">{row.label}</TableCell>
-                <TableCell className={NUMERIC_CELL}>{formatTokenPrice(symbol, row.input)}</TableCell>
+                <TableCell className="text-[13px]">
+                  {row.label}
+                  {row.active && <Badge className="ml-2 align-middle">{t('pricing.now')}</Badge>}
+                </TableCell>
+                <TableCell className={NUMERIC_CELL}>
+                  {formatTokenPrice(symbol, row.input)}
+                </TableCell>
                 <TableCell className={cn(NUMERIC_CELL, 'text-muted-foreground')}>
                   {formatTokenPrice(symbol, row.cacheRead)}
                 </TableCell>
                 <TableCell className={cn(NUMERIC_CELL, 'text-muted-foreground')}>
                   {formatTokenPrice(symbol, row.cacheWrite)}
                 </TableCell>
-                <TableCell className={NUMERIC_CELL}>{formatTokenPrice(symbol, row.output)}</TableCell>
+                <TableCell className={NUMERIC_CELL}>
+                  {formatTokenPrice(symbol, row.output)}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -202,7 +224,7 @@ export function ModelDetail({
   onBack: () => void;
 }) {
   const { locale, t } = useI18n();
-  const pricing = parseModelPricing(model.cost, t);
+  const pricing = parseModelPricing(model.cost, t, locale);
 
   // 详情页设置文档标题，返回列表时还原
   useEffect(() => {
@@ -233,7 +255,9 @@ export function ModelDetail({
       { labelKey: 'table.cacheWrite', value: pricing.base.cacheWrite },
       { labelKey: 'table.output', value: pricing.base.output },
     ] as const
-  ).flatMap((card) => (card.value === null ? [] : [{ labelKey: card.labelKey, value: card.value }]));
+  ).flatMap((card) =>
+    card.value === null ? [] : [{ labelKey: card.labelKey, value: card.value }],
+  );
 
   const modalityStatus = (value: string): { text: string; active: boolean } => {
     const input = inputModalities.has(value);
@@ -264,8 +288,30 @@ export function ModelDetail({
           className="size-10 rounded-lg"
         />
         <h1 className="text-2xl font-semibold tracking-tight">{model.name || model.id}</h1>
-        {pricing.tiered && <Badge>{t('table.tiered')}</Badge>}
-        {pricing.thinking && <Badge variant="secondary">{t('table.thinking')}</Badge>}
+        {isNewRelease(model.release_date, Date.now()) && (
+          <Badge variant="success" title={t('table.newHint', { days: NEW_MODEL_WINDOW_DAYS })}>
+            <Sparkles />
+            {t('table.new')}
+          </Badge>
+        )}
+        {pricing.tiered && (
+          <Badge>
+            <Layers />
+            {t('table.tiered')}
+          </Badge>
+        )}
+        {pricing.thinking && (
+          <Badge variant="secondary">
+            <Brain />
+            {t('table.thinking')}
+          </Badge>
+        )}
+        {pricing.scheduled && (
+          <Badge variant="outline">
+            <Clock />
+            {t('table.timeBased')}
+          </Badge>
+        )}
       </div>
       <div className="mt-2 flex items-center gap-1">
         <code className="bg-muted text-muted-foreground rounded px-1.5 py-0.5 font-mono text-xs">

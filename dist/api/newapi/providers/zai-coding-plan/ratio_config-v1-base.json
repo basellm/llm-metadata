@@ -1,11 +1,23 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {},
-    "completion_ratio": {},
-    "model_price": {},
-    "model_ratio": {}
+    "billing_expr": {
+      "glm-4.7": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "glm-5-turbo": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "glm-5.2": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "glm-5.2-highspeed": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "glm-5.3": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "glm-5.3-flash": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "glm-5.3-highspeed": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)"
+    },
+    "billing_mode": {
+      "glm-4.7": "tiered_expr",
+      "glm-5-turbo": "tiered_expr",
+      "glm-5.2": "tiered_expr",
+      "glm-5.2-highspeed": "tiered_expr",
+      "glm-5.3": "tiered_expr",
+      "glm-5.3-flash": "tiered_expr",
+      "glm-5.3-highspeed": "tiered_expr"
+    }
   },
   "message": "",
   "success": true

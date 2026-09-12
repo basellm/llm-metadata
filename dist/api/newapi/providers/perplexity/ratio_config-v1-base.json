@@ -1,20 +1,16 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {},
-    "completion_ratio": {
-      "sonar": 1,
-      "sonar-deep-research": 4,
-      "sonar-pro": 5,
-      "sonar-reasoning-pro": 4
+    "billing_expr": {
+      "sonar": "tier(\"standard\", p * 1 + c * 1)",
+      "sonar-deep-research": "tier(\"standard\", p * 2 + c * 8)",
+      "sonar-pro": "tier(\"standard\", p * 3 + c * 15)",
+      "sonar-reasoning-pro": "tier(\"standard\", p * 2 + c * 8)"
     },
-    "model_price": {},
-    "model_ratio": {
-      "sonar": 0.5,
-      "sonar-deep-research": 1,
-      "sonar-pro": 1.5,
-      "sonar-reasoning-pro": 1
+    "billing_mode": {
+      "sonar": "tiered_expr",
+      "sonar-deep-research": "tiered_expr",
+      "sonar-pro": "tiered_expr",
+      "sonar-reasoning-pro": "tiered_expr"
     }
   },
   "message": "",

@@ -1,16 +1,12 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {},
-    "completion_ratio": {
-      "Ling-1T": 4.017543859649123,
-      "Ring-1T": 4.017543859649123
+    "billing_expr": {
+      "Ling-1T": "tier(\"standard\", p * 0.57 + c * 2.29)",
+      "Ring-1T": "tier(\"standard\", p * 0.57 + c * 2.29)"
     },
-    "model_price": {},
-    "model_ratio": {
-      "Ling-1T": 0.285,
-      "Ring-1T": 0.285
+    "billing_mode": {
+      "Ling-1T": "tiered_expr",
+      "Ring-1T": "tiered_expr"
     }
   },
   "message": "",

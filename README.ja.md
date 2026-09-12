@@ -43,8 +43,13 @@ npm run build
   "exchangeRates": { "CNY": 7.3, "EUR": 0.92 },
   "providers": {
     "openai": { "lobeIcon": "OpenAI" },
+    "anthropic": { "lobeIcon": "Claude.Color", "cacheWrite1h": 2 },
     "zai": { "priority": 20, "lobeIcon": "ZAI" },
-    "alibaba": { "priority": 30, "excludeModels": ["^deepseek", "^kimi"] }
+    "alibaba": {
+      "priority": 30,
+      "excludeModels": ["^deepseek", "^kimi"],
+      "thinkingToggle": { "param": "enable_thinking", "value": true }
+    }
   }
 }
 ```
@@ -52,15 +57,29 @@ npm run build
 - `providers` — 許可リスト。未記載のプロバイダーはすべての出力（JSON API、NewAPI、VoAPI、Web UI）から除外され、過去の生成物もビルド時に `dist/api/` から削除されます。
 - `excludeModels` — 大文字小文字を区別しない正規表現。ネイティブプロバイダーのプラットフォームでホストされるサードパーティモデル（例: Alibaba 上で再販される DeepSeek モデル）を除外し、自社モデルのみを保持します。
 - `priority` — 同一ベンダーの複数エンドポイント（例: `zai` と `zhipuai`）間で同名モデルが競合した場合の解決に使用。集約 NewAPI 出力では値が大きい方が優先され、同値の場合はプロバイダー ID 順になります。`/api/newapi/providers/<id>/` 配下のプロバイダー別ファイルには常にそのプロバイダー自身の価格が保持されます。
-- `exchangeRates` — 1 USD あたりの通貨単位。非 USD 価格（例: 人民元）を NewAPI の USD ベース倍率体系（1 倍率 = $2 / 100 万入力トークン）に正規化するために使用します。レート未設定の通貨は価格出力からスキップされ、ビルド警告が出ます。
+- `exchangeRates` — 1 USD あたりの通貨単位。非 USD 価格（例: 人民元）を NewAPI 課金式の USD 係数へ正規化するために使用します。レート未設定の通貨は価格出力からスキップされ、ビルド警告が出ます。
+- `thinkingToggle` — そのプロバイダーのハイブリッド推論モデルを思考モードに切り替えるリクエストボディのフィールド（gjson パス）と値。モデルの `cost.reasoning` が `cost.output` と異なる場合、式は `param("<param>") == <value>` を条件に出力トークンを reasoning 価格で課金します。未設定なら output 価格が適用され、ビルド警告が出ます。
+- `cacheWrite1h` — 1 時間 TTL のプロンプトキャッシュ書き込み価格を入力価格の倍率で指定（Anthropic は 2）。`cc`（models.dev の `cache_write` 価格）の隣に `cc1h` 項を出力します。未設定の場合、new-api は Claude 形式の 1h キャッシュ書き込みを課金しません。
 - `lobeIcon` — [@lobehub/icons](https://github.com/lobehub/lobe-icons) のエクスポート名（例: `Claude.Color`）。NewAPI `vendors.json` のベンダーアイコンとして使用されます。
 - このファイルが存在しない場合、フィルタリングは無効になり、ビルド警告が出力されます。
 
 プロバイダーのロゴはビルド時に `dist/api/logos/<id>.svg` へミラーリングされ、Web UI は同一オリジンからアイコンを読み込みます（リモート `iconURL` とイニシャルバッジがフォールバック）。models.dev へのホットリンクは行いません。
 
-NewAPI 互換性: `dist/api/newapi/ratio_config-v1-base.json` は new-api の `/api/ratio_config` ペイロード形式に準拠しており、new-api の倍率同期 UI に組み込まれた「公式倍率プリセット」のデータソースです。`vendors.json` / `models.json` はモデルメタデータ同期に使用されます。
+## NewAPI 課金式
 
-式ベース課金（`tiered_expr`）: 長さ階層別価格（例: `input_32k_128k`）や思考モード差額価格（`thinking_input` / `thinking_output`）を持つモデルは、倍率設定に `billing_mode` / `billing_expr` マップを追加出力します。式は expr-lang 構文で、係数は USD/100 万トークン単位（`len` による三項演算子チェーン + `tier()` ラップ、思考モードは `param("enable_thinking")` で判定）です。new-api 適用後は式が倍率より優先されます。通常の倍率もフォールバックとして併せて出力されます。
+`dist/api/newapi/ratio_config-v1-base.json` は new-api の `/api/ratio_config` ペイロード形式に準拠しており、new-api の倍率同期 UI に組み込まれた「公式倍率プリセット」のデータソースです。プロバイダー別のファイルは `/api/newapi/providers/<id>/` にあります。`vendors.json` / `models.json` はメタデータ（説明、タグ、ベンダー、アイコン）のみを含み、new-api のモデルメタデータ同期に使用されます。
+
+価格を持つすべてのモデルは new-api 課金式（`billing_mode: "tiered_expr"` + `billing_expr`）として公開されます。倍率設定に `model_ratio` / `completion_ratio` / `cache_ratio` / `model_price` は含まれません。式は expr-lang 構文で、係数は USD/100 万トークンの実価格、各価格リーフは `tier("<name>", …)` でラップされます:
+
+| 価格形態                                    | 元フィールド                                                | 式                                                                                                                     |
+| ------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 単一価格                                    | `input`, `output`, `cache_read`, `cache_write`, `*_audio`   | `tier("standard", p * 3 + cr * 0.3 + cc * 3.75 + cc1h * 6 + c * 15)`                                                   |
+| コンテキスト段階                            | `tiers[]`（`context_over_200k` はレガシーのフォールバック） | `len <= 200000 ? tier("0_200k", …) : tier("200k_plus", …)`                                                             |
+| 思考モード（プロバイダーの `thinkingToggle`）| `reasoning` ≠ `output`                                      | `param("enable_thinking") == true ? tier("thinking", p * 0.4 + c * 4) : tier("standard", p * 0.4 + c * 1.2)`            |
+| 時間帯別（ピーク/オフピーク）               | `schedule`（上書き拡張、下記参照）                          | `weekday("UTC") >= 1 && weekday("UTC") <= 5 && ((hour("UTC") >= 1 && hour("UTC") < 4) \|\| …) ? tier("peak", …) : tier("off_peak", …)` |
+| 画像 1 枚あたり                             | `per_image`（トークン価格なし）                             | `tier("image", fixed(0.04)) * image_count`                                                                             |
+
+分岐は外側から 時間帯 → 思考モード → コンテキスト段階 の順にネストし、new-api の価格 UI が構造的に表示できる形状に一致します（時間帯条件は "Mon–Fri 01:00–04:00 or 06:00–10:00 (UTC)" のように表示）。明示的なゼロ価格は `cr * 0` などとして保持されます。new-api は式が変数を参照する場合にのみキャッシュ/音声トークンを `p`/`c` から除外するためです。表現できない価格（トグルのない独立した推論トークン価格など）は文書上の出力価格で式を生成し、`manifest.json` の warnings に記録されます。
 
 ## 国際化（API）
 
@@ -180,8 +199,40 @@ data/
 }
 ```
 
+時間帯別価格（`data/overrides/models/deepseek/deepseek-flash.json`）— `cost.schedule` は、ピーク/オフピーク料金を持つプロバイダー向けの、models.dev コストスキーマに対する本リポジトリの拡張です:
+
+```json
+{
+  "cost": {
+    "input": 0.15,
+    "output": 0.6,
+    "reasoning": 0.6,
+    "cache_read": 0.003,
+    "schedule": {
+      "timezone": "UTC",
+      "fallback": "off_peak",
+      "windows": [
+        {
+          "name": "peak",
+          "weekdays": [1, 2, 3, 4, 5],
+          "hours": ["01:00-04:00", "06:00-10:00"],
+          "input": 0.3,
+          "output": 1.2,
+          "reasoning": 1.2,
+          "cache_read": 0.006
+        }
+      ]
+    }
+  }
+}
+```
+
+- 基本の `cost` 価格はすべてのウィンドウ外で適用され、段階名は `fallback` になります。ウィンドウは順に照合され、任意の価格ファミリーを上書きできます（未指定のファミリーは基本価格を継承）。コンテキスト `tiers` を持つモデルのウィンドウは独自の `tiers` を定義する必要があります。
+- `timezone` は IANA タイムゾーン、`weekdays` は 0 = 日曜 … 6 = 土曜、`hours` は `HH:MM-HH:MM`（終了は含まない、`24:00` 可）で、終了が開始より前なら日付をまたぎます。正時のウィンドウは new-api が構造的に表示できる `hour(tz)` 比較に、分単位のウィンドウは分数の算術式にコンパイルされます。
+- 不正なスケジュールは明示的に失敗します。そのモデルは式を出力せず、理由が `manifest.json` の warnings に記録されます。
+
 注意:
 
-- 深いマージを適用。未指定のフィールドは保持されます。
-- モデル上書きの許可キー（サニタイズ対象）: `id`, `name`, `description`, `reasoning`, `tool_call`, `attachment`, `temperature`, `knowledge`, `release_date`, `last_updated`, `open_weights`, `modalities`, `limit`, `cost`。
+- 深いマージを適用。未指定のフィールドは保持されます。上書きでは依存するすべての価格（`reasoning` を含む）を固定し、上流の変更でウィンドウ価格と基本価格が食い違わないようにしてください。
+- モデル上書きの許可キー（サニタイズ対象）: `id`, `name`, `description`, `reasoning`, `tool_call`, `attachment`, `temperature`, `knowledge`, `release_date`, `last_updated`, `open_weights`, `modalities`, `limit`, `cost`。`$comment` などのキーは破棄されるため、メンテナー用メモとして安全に使えます。
 - 参照元は `data/overrides/**` のみ。

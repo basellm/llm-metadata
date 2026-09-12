@@ -5,8 +5,10 @@ import {
   ArrowUpDown,
   Brain,
   ChevronRight,
+  Clock,
   Layers,
   SearchX,
+  Sparkles,
 } from 'lucide-react';
 
 import { CopyButton } from '@/components/copy-button';
@@ -20,18 +22,33 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import type { Model } from '@/lib/api';
-import { formatContext, formatTokenPrice } from '@/lib/format';
+import {
+  NEW_MODEL_WINDOW_DAYS,
+  formatContext,
+  formatDate,
+  formatTokenPrice,
+  isNewRelease,
+} from '@/lib/format';
 import { useI18n } from '@/lib/i18n';
 import { parseModelPricing, type DetailRow, type ModelPricing } from '@/lib/pricing';
 import { cn } from '@/lib/utils';
 
-type SortKey = 'name' | 'input' | 'output';
+type SortKey = 'name' | 'released' | 'input' | 'output';
+
+/** 首次点击列头时的方向：日期默认最新在前，其余升序 */
+const DEFAULT_DIRECTION: Record<SortKey, 1 | -1> = {
+  name: 1,
+  released: -1,
+  input: 1,
+  output: 1,
+};
 
 interface Row {
   model: Model;
   pricing: ModelPricing;
   expr: string | undefined;
   expandable: boolean;
+  isNew: boolean;
 }
 
 const NUMERIC_CELL = 'text-right font-mono text-[13px] tabular-nums';
@@ -76,7 +93,7 @@ function SortableHead({
   );
 }
 
-/** 明细子行：标签 + 与主表对齐的四个价格列 */
+/** 明细子行：标签 + 与主表对齐的四个价格列（时段行标记当前所处时段） */
 function DetailPriceRow({
   row,
   symbol,
@@ -86,6 +103,7 @@ function DetailPriceRow({
   symbol: string;
   isLast: boolean;
 }) {
+  const { t } = useI18n();
   const cell = (value: number | null) => (
     <span className={value === null ? 'text-muted-foreground/40' : 'text-muted-foreground'}>
       {formatTokenPrice(symbol, value)}
@@ -94,9 +112,12 @@ function DetailPriceRow({
   return (
     <TableRow className={cn(DETAIL_ROW, isLast && 'border-b')}>
       <TableCell className="p-0 pl-3">
-        <div className={cn(GUIDE, 'py-2 text-[13px]')}>{row.label}</div>
+        <div className={cn(GUIDE, 'py-2 text-[13px]')}>
+          {row.label}
+          {row.active && <Badge className="ml-2 align-middle">{t('pricing.now')}</Badge>}
+        </div>
       </TableCell>
-      <TableCell />
+      <TableCell colSpan={2} />
       <TableCell className={NUMERIC_CELL}>{cell(row.input)}</TableCell>
       <TableCell className={NUMERIC_CELL}>{cell(row.cacheRead)}</TableCell>
       <TableCell className={NUMERIC_CELL}>{cell(row.cacheWrite)}</TableCell>
@@ -108,7 +129,7 @@ function DetailPriceRow({
 function DetailSectionHeader({ title }: { title: string }) {
   return (
     <TableRow className={DETAIL_ROW}>
-      <TableCell colSpan={6} className="p-0 pl-3">
+      <TableCell colSpan={7} className="p-0 pl-3">
         <div
           className={cn(
             GUIDE,
@@ -126,7 +147,7 @@ function DetailSectionHeader({ title }: { title: string }) {
 function DetailExprRow({ expr, title }: { expr: string; title: string }) {
   return (
     <TableRow className={cn(DETAIL_ROW, 'border-b')}>
-      <TableCell colSpan={6} className="p-0 pl-3">
+      <TableCell colSpan={7} className="p-0 pl-3">
         <div className={cn(GUIDE, 'py-2 pr-3')}>
           <div className="text-muted-foreground mb-1.5 flex items-center gap-1 text-[11px] font-medium tracking-wider uppercase">
             {title}
@@ -152,9 +173,9 @@ export function PricingTable({
   billingExpr: Record<string, string> | null;
   onOpenModel: (id: string) => void;
 }) {
-  const { t } = useI18n();
-  const [sortKey, setSortKey] = useState<SortKey>('name');
-  const [direction, setDirection] = useState<1 | -1>(1);
+  const { locale, t } = useI18n();
+  const [sortKey, setSortKey] = useState<SortKey>('released');
+  const [direction, setDirection] = useState<1 | -1>(DEFAULT_DIRECTION.released);
   const [expanded, setExpanded] = useState<ReadonlySet<string>>(new Set());
 
   const rows = useMemo<Row[]>(() => {
@@ -166,32 +187,46 @@ export function PricingTable({
         (model.name || '').toLowerCase().includes(normalized),
     );
 
+    const now = Date.now();
     const list = filtered.map((model) => {
-      const pricing = parseModelPricing(model.cost, t);
+      const pricing = parseModelPricing(model.cost, t, locale);
       const expr = billingExpr?.[model.id];
-      return { model, pricing, expr, expandable: pricing.sections.length > 0 || !!expr };
+      return {
+        model,
+        pricing,
+        expr,
+        expandable: pricing.sections.length > 0 || !!expr,
+        isNew: isNewRelease(model.release_date, now),
+      };
     });
+    // 排序取值：ISO 日期按字符串比较即为时间序；缺失值不论方向始终排在末尾
+    const sortValue = (row: Row): string | number | null => {
+      if (sortKey === 'name') return row.model.id;
+      if (sortKey === 'released') return row.model.release_date ?? null;
+      return row.pricing.base[sortKey];
+    };
     list.sort((a, b) => {
-      if (sortKey === 'name') {
-        return direction * a.model.id.localeCompare(b.model.id);
-      }
-      const av = a.pricing.base[sortKey];
-      const bv = b.pricing.base[sortKey];
-      // 无价格的行始终排在末尾
-      if (av === null && bv === null) return a.model.id.localeCompare(b.model.id);
+      const av = sortValue(a);
+      const bv = sortValue(b);
+      const byId = a.model.id.localeCompare(b.model.id);
+      if (av === null && bv === null) return byId;
       if (av === null) return 1;
       if (bv === null) return -1;
-      return direction * (av - bv) || a.model.id.localeCompare(b.model.id);
+      const order =
+        typeof av === 'number' && typeof bv === 'number'
+          ? av - bv
+          : String(av).localeCompare(String(bv));
+      return direction * order || byId;
     });
     return list;
-  }, [models, query, sortKey, direction, billingExpr, t]);
+  }, [models, query, sortKey, direction, billingExpr, t, locale]);
 
   const handleSort = (key: SortKey) => {
     if (key === sortKey) {
       setDirection((d) => (d === 1 ? -1 : 1));
     } else {
       setSortKey(key);
-      setDirection(1);
+      setDirection(DEFAULT_DIRECTION[key]);
     }
   };
 
@@ -226,6 +261,14 @@ export function PricingTable({
                 direction={direction}
                 onSort={handleSort}
               />
+              <SortableHead
+                label={t('table.released')}
+                sortKey="released"
+                activeKey={sortKey}
+                direction={direction}
+                onSort={handleSort}
+                className="text-right [&>button]:flex-row-reverse"
+              />
               <TableHead className="text-right">{t('table.context')}</TableHead>
               <SortableHead
                 label={t('table.input')}
@@ -248,7 +291,7 @@ export function PricingTable({
             </TableRow>
           </TableHeader>
           <TableBody>
-            {rows.map(({ model, pricing, expr, expandable }) => {
+            {rows.map(({ model, pricing, expr, expandable, isNew }) => {
               const open = expandable && expanded.has(model.id);
               return (
                 <Fragment key={model.id}>
@@ -295,6 +338,15 @@ export function PricingTable({
                             >
                               {model.name || model.id}
                             </button>
+                            {isNew && (
+                              <Badge
+                                variant="success"
+                                title={t('table.newHint', { days: NEW_MODEL_WINDOW_DAYS })}
+                              >
+                                <Sparkles />
+                                {t('table.new')}
+                              </Badge>
+                            )}
                             {pricing.tiered && (
                               <Badge>
                                 <Layers />
@@ -307,12 +359,23 @@ export function PricingTable({
                                 {t('table.thinking')}
                               </Badge>
                             )}
+                            {pricing.scheduled && (
+                              <Badge variant="outline">
+                                <Clock />
+                                {t('table.timeBased')}
+                              </Badge>
+                            )}
                           </div>
                           <div className="text-muted-foreground truncate font-mono text-xs">
                             {model.id}
                           </div>
                         </div>
                       </div>
+                    </TableCell>
+                    <TableCell
+                      className={cn(NUMERIC_CELL, 'text-muted-foreground whitespace-nowrap')}
+                    >
+                      {model.release_date ? formatDate(model.release_date, locale) : '—'}
                     </TableCell>
                     <TableCell className={cn(NUMERIC_CELL, 'text-muted-foreground')}>
                       {formatContext(model.limit?.context)}

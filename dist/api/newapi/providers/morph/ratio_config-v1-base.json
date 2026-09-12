@@ -1,18 +1,14 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {},
-    "completion_ratio": {
-      "auto": 1.823529411764706,
-      "morph-v3-fast": 1.4999999999999998,
-      "morph-v3-large": 2.111111111111111
+    "billing_expr": {
+      "auto": "tier(\"standard\", p * 0.85 + c * 1.55)",
+      "morph-v3-fast": "tier(\"standard\", p * 0.8 + c * 1.2)",
+      "morph-v3-large": "tier(\"standard\", p * 0.9 + c * 1.9)"
     },
-    "model_price": {},
-    "model_ratio": {
-      "auto": 0.425,
-      "morph-v3-fast": 0.4,
-      "morph-v3-large": 0.45
+    "billing_mode": {
+      "auto": "tiered_expr",
+      "morph-v3-fast": "tiered_expr",
+      "morph-v3-large": "tiered_expr"
     }
   },
   "message": "",

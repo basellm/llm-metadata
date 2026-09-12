@@ -1,18 +1,24 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {
-      "qwen3.7-max": 0.2
+    "billing_expr": {
+      "qwen3-coder-next": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "qwen3-coder-plus": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "qwen3-max-2026-01-23": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "qwen3.5-plus": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "qwen3.6-flash": "tier(\"standard\", p * 0.1875 + cc * 0.234375 + c * 1.125)",
+      "qwen3.6-plus": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "qwen3.7-max": "tier(\"standard\", p * 2.5 + cr * 0.5 + cc * 3.125 + c * 7.5)",
+      "qwen3.7-plus": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)"
     },
-    "completion_ratio": {
-      "qwen3.6-flash": 6,
-      "qwen3.7-max": 3
-    },
-    "model_price": {},
-    "model_ratio": {
-      "qwen3.6-flash": 0.09375,
-      "qwen3.7-max": 1.25
+    "billing_mode": {
+      "qwen3-coder-next": "tiered_expr",
+      "qwen3-coder-plus": "tiered_expr",
+      "qwen3-max-2026-01-23": "tiered_expr",
+      "qwen3.5-plus": "tiered_expr",
+      "qwen3.6-flash": "tiered_expr",
+      "qwen3.6-plus": "tiered_expr",
+      "qwen3.7-max": "tiered_expr",
+      "qwen3.7-plus": "tiered_expr"
     }
   },
   "message": "",

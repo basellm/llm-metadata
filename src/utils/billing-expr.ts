@@ -1,224 +1,386 @@
 /**
  * new-api 表达式计费（tiered_expr）生成器。
  *
- * 将带分层定价（扁平键 input_32k_128k、结构化 tiers 数组、遗留
- * context_over_200k）或思考模式差价（thinking_*）的 USD 成本转换为
- * new-api 的 billing_expr 表达式（expr-lang 语法）：
- * - 系数单位为 USD / 1M tokens，与 new-api v1 表达式语义一致；
- * - 档位条件使用 len（完整输入上下文长度），阈值采用十进制
- *   （32k = 32000，1m = 1000000），与 new-api 前端预设一致；
- * - 每个档位叶子用 tier("<name>", ...) 包裹以便命中记录；
- * - 思考模式用 param("enable_thinking") 判定（阿里 DashScope /
- *   OpenAI 兼容端点的官方开关参数）。
+ * 将 models.dev 形态的 USD 成本（基础价、reasoning 思考价、tiers 上下文阶梯、
+ * 音频价）与仓库扩展（schedule 时段定价、per_image 按图价）转换为 new-api 的
+ * billing_expr（expr-lang 语法）：
+ * - 系数为 USD / 1M tokens 实价，与 new-api v1 表达式语义一致；
+ * - 每个价格叶子以 tier("<name>", …) 包裹，供 new-api 记录命中档位；
+ * - 显式 0 价保留为 `cr * 0` 等项：new-api 仅在表达式引用变量时才把对应 token
+ *   从 p/c 中剔除，省略与 0 价并不等价；
+ * - 分支自外向内：时段窗口（weekday/hour/minute 探针）→ 思考模式（param 探针）
+ *   → 上下文阶梯（len，十进制阈值）；
+ * - 时段条件采用 new-api 前端可结构化展示的形状：
+ *   weekday(tz) >= a && weekday(tz) <= b && ((hour(tz) >= s && hour(tz) < e) || …)。
  */
 
-import type { CostFamilyCells, ModelCost } from '../types/index.js';
+import { COST_FAMILIES, type CostFamily } from '../constants/cost-families.js';
+import type {
+  CostFamilyCells,
+  CostSchedule,
+  CostScheduleWindow,
+  ModelCost,
+  ProviderBillingRule,
+} from '../types/index.js';
 
-/** 计费家族到 new-api 表达式变量的映射 */
-const FAMILY_VARS = [
-  ['input', 'p'],
-  ['output', 'c'],
-  ['cache_read', 'cr'],
-  ['cache_write', 'cc'],
-] as const;
+/** 生成选项：供应商级计费规则中影响表达式的部分 */
+export type BillingExprOptions = Pick<ProviderBillingRule, 'thinkingToggle' | 'cacheWrite1h'>;
 
-type Family = (typeof FAMILY_VARS)[number][0];
+/** 生成结果：expr 为 null 表示该模型无法以表达式计费（原因见 warnings） */
+export interface BillingExprResult {
+  expr: string | null;
+  warnings: string[];
+}
 
-/** 单个价格档位（lo 为该档位的起始 token 数，含基础档 lo=0） */
-interface TierSegment {
+/** 价格段：lo 为生效起点 token 数（基础段 lo = 0） */
+interface PriceSegment {
   lo: number;
-  price: number;
+  cells: CostFamilyCells;
 }
 
-/** 解析 "32k" / "1m" 形式的档位边界为 token 数（十进制） */
-function parseSizeToken(size: string): number | null {
-  const match = /^(\d+(?:\.\d+)?)(k|m)$/.exec(size);
-  if (!match) return null;
-  const value = Number(match[1]);
-  return match[2] === 'k' ? value * 1_000 : value * 1_000_000;
+const MINUTES_PER_DAY = 24 * 60;
+const HOUR_RANGE_RE = /^(\d{2}):(\d{2})-(\d{2}):(\d{2})$/;
+
+/** 系数按十进制原样输出（避免科学计数法） */
+const COEFFICIENT_FORMAT = new Intl.NumberFormat('en-US', {
+  useGrouping: false,
+  maximumFractionDigits: 20,
+});
+
+function formatCoefficient(value: number): string {
+  return COEFFICIENT_FORMAT.format(value);
 }
 
-/** 将 token 数格式化回 "32k" / "1m" 形式（用于档位命名） */
+/** 派生系数去除浮点噪声（保留 12 位有效数字） */
+function scale(value: number, multiplier: number): number {
+  return Number((value * multiplier).toPrecision(12));
+}
+
+/** token 阈值 → 档位名片段（32000 → "32k"，1000000 → "1m"） */
 function formatSizeToken(tokens: number): string {
   if (tokens >= 1_000_000 && tokens % 1_000_000 === 0) return `${tokens / 1_000_000}m`;
   if (tokens % 1_000 === 0) return `${tokens / 1_000}k`;
   return String(tokens);
 }
 
-/**
- * 收集某前缀（'' 或 'thinking_'）下各家族的价格档位，按 lo 升序。
- * 标准分支额外摄入结构化阶梯：tiers 数组（阈值以上生效）优先，
- * 缺失时回退遗留 context_over_200k；同阈值时结构化值覆盖扁平键。
- */
-function collectSegments(cost: ModelCost, prefix: string): Map<Family, TierSegment[]> {
-  const byFamily = new Map<Family, Map<number, number>>();
-  const put = (family: Family, lo: number, price: number) => {
-    let entries = byFamily.get(family);
-    if (!entries) {
-      entries = new Map();
-      byFamily.set(family, entries);
-    }
-    entries.set(lo, price);
-  };
-
-  for (const [family] of FAMILY_VARS) {
-    const base = cost[`${prefix}${family}`];
-    if (typeof base === 'number' && base >= 0) {
-      put(family, 0, base);
-    }
-
-    const tierKeyRe = new RegExp(
-      `^${prefix}${family}_(\\d+(?:\\.\\d+)?[km])_(\\d+(?:\\.\\d+)?[km])$`,
-    );
-    for (const [key, value] of Object.entries(cost)) {
-      const match = tierKeyRe.exec(key);
-      if (!match || typeof value !== 'number') continue;
-      const lo = parseSizeToken(match[1]);
-      if (lo === null) continue;
-      put(family, lo, value);
-    }
+/** 仅保留有效（有限、非负）的计费家族价格 */
+function pickCells(source: CostFamilyCells): CostFamilyCells {
+  const cells: CostFamilyCells = {};
+  for (const family of COST_FAMILIES) {
+    const value = source[family];
+    if (typeof value === 'number' && Number.isFinite(value) && value >= 0) cells[family] = value;
   }
-
-  if (prefix === '') {
-    const structured: { threshold: number; cells: CostFamilyCells }[] = [];
-    if (Array.isArray(cost.tiers)) {
-      for (const entry of cost.tiers) {
-        const size = entry?.tier?.size;
-        if (typeof size === 'number' && size > 0) {
-          structured.push({ threshold: size, cells: entry });
-        }
-      }
-    }
-    if (structured.length === 0 && cost.context_over_200k) {
-      structured.push({ threshold: 200_000, cells: cost.context_over_200k });
-    }
-    for (const { threshold, cells } of structured) {
-      for (const [family] of FAMILY_VARS) {
-        const price = cells[family];
-        if (typeof price === 'number' && price >= 0) {
-          put(family, threshold, price);
-        }
-      }
-    }
-  }
-
-  const segments = new Map<Family, TierSegment[]>();
-  for (const [family, entries] of byFamily) {
-    segments.set(
-      family,
-      [...entries.entries()].map(([lo, price]) => ({ lo, price })).sort((a, b) => a.lo - b.lo),
-    );
-  }
-  return segments;
+  return cells;
 }
 
-/** 取家族在指定档位起点处生效的价格（lo ≤ start 的最后一档） */
-function priceAt(segments: TierSegment[] | undefined, start: number): number | null {
-  if (!segments) return null;
-  let price: number | null = null;
+/** 基础段 + 结构化阶梯（tiers 优先，缺失时回退遗留 context_over_200k），按 lo 升序 */
+function collectSegments(cost: ModelCost): PriceSegment[] {
+  const byStart = new Map<number, CostFamilyCells>([[0, pickCells(cost)]]);
+  const tiers = Array.isArray(cost.tiers) ? cost.tiers : [];
+  const sized = tiers.filter((tier) => typeof tier.tier?.size === 'number' && tier.tier.size > 0);
+  if (sized.length > 0) {
+    for (const tier of sized) byStart.set(tier.tier!.size!, pickCells(tier));
+  } else if (cost.context_over_200k) {
+    byStart.set(200_000, pickCells(cost.context_over_200k));
+  }
+  return [...byStart].map(([lo, cells]) => ({ lo, cells })).sort((a, b) => a.lo - b.lo);
+}
+
+/** 家族在 start 处的生效价：lo ≤ start 且定义了该家族的最后一段（上层段继承下层未覆盖的家族） */
+function cellAt(segments: PriceSegment[], family: CostFamily, start: number): number | undefined {
+  let value: number | undefined;
   for (const segment of segments) {
-    if (segment.lo <= start) price = segment.price;
-    else break;
+    if (segment.lo > start) break;
+    if (segment.cells[family] !== undefined) value = segment.cells[family];
   }
-  return price;
+  return value;
 }
 
-/** 生成单个档位叶子的成本项（p * X + c * Y + ...） */
+/** 思考模式下的输出价：段内 reasoning 覆盖 output；后续段只给 output 时以其为准 */
+function thinkingOutputAt(segments: PriceSegment[], start: number): number | undefined {
+  let value: number | undefined;
+  for (const segment of segments) {
+    if (segment.lo > start) break;
+    if (segment.cells.reasoning !== undefined) value = segment.cells.reasoning;
+    else if (segment.cells.output !== undefined) value = segment.cells.output;
+  }
+  return value;
+}
+
+/** 叶子成本项（输入侧 → 输出侧）；家族缺失则不引用对应变量 */
 function buildLeafTerms(
-  segments: Map<Family, TierSegment[]>,
+  segments: PriceSegment[],
   start: number,
-  audioTerms: string[],
-): string | null {
-  const terms: string[] = [];
-  for (const [family, variable] of FAMILY_VARS) {
-    const price = priceAt(segments.get(family), start);
-    if (price !== null && price > 0) {
-      terms.push(`${variable} * ${price}`);
+  thinking: boolean,
+  options: BillingExprOptions,
+): string {
+  const input = cellAt(segments, 'input', start)!;
+  const terms = [`p * ${formatCoefficient(input)}`];
+
+  const cacheRead = cellAt(segments, 'cache_read', start);
+  if (cacheRead !== undefined) terms.push(`cr * ${formatCoefficient(cacheRead)}`);
+
+  const cacheWrite = cellAt(segments, 'cache_write', start);
+  if (cacheWrite !== undefined) {
+    terms.push(`cc * ${formatCoefficient(cacheWrite)}`);
+    if (options.cacheWrite1h !== undefined) {
+      terms.push(`cc1h * ${formatCoefficient(scale(input, options.cacheWrite1h))}`);
     }
   }
-  terms.push(...audioTerms);
-  return terms.length > 0 ? terms.join(' + ') : null;
+
+  const audioIn = cellAt(segments, 'input_audio', start);
+  if (audioIn !== undefined) terms.push(`ai * ${formatCoefficient(audioIn)}`);
+
+  const output = thinking ? thinkingOutputAt(segments, start) : cellAt(segments, 'output', start);
+  if (output !== undefined) terms.push(`c * ${formatCoefficient(output)}`);
+
+  const audioOut = cellAt(segments, 'output_audio', start);
+  if (audioOut !== undefined) terms.push(`ao * ${formatCoefficient(audioOut)}`);
+
+  return terms.join(' + ');
 }
 
-/**
- * 生成一个分支（标准或思考模式）的档位链表达式。
- * 无档位阈值时返回单叶子；有阈值时返回 len 三元链。
- */
-function buildBranch(
-  segments: Map<Family, TierSegment[]>,
-  audioTerms: string[],
-  namePrefix: string,
-): string | null {
-  const thresholds = [...new Set([...segments.values()].flatMap((list) => list.map((s) => s.lo)))]
-    .filter((lo) => lo > 0)
-    .sort((a, b) => a - b);
+/** 非叶子分支作为三元分支时加括号 */
+function wrapBranch(expr: string): string {
+  return expr.startsWith('tier(') ? expr : `(${expr})`;
+}
 
-  if (thresholds.length === 0) {
-    const terms = buildLeafTerms(segments, 0, audioTerms);
-    if (terms === null) return null;
-    return `tier("${namePrefix}standard", ${terms})`;
-  }
-
+/** 上下文阶梯链：无阈值为单叶子，有阈值为 len 三元链 */
+function buildTierChain(
+  segments: PriceSegment[],
+  nameParts: string[],
+  thinking: boolean,
+  options: BillingExprOptions,
+): string {
+  const thresholds = segments.map((segment) => segment.lo).filter((lo) => lo > 0);
   const starts = [0, ...thresholds];
-  const leaves: string[] = [];
-  for (let i = 0; i < starts.length; i++) {
-    const name =
-      i === 0
-        ? `${namePrefix}0_${formatSizeToken(thresholds[0])}`
-        : i < thresholds.length
-          ? `${namePrefix}${formatSizeToken(starts[i])}_${formatSizeToken(thresholds[i])}`
-          : `${namePrefix}${formatSizeToken(starts[i])}_plus`;
-    const terms = buildLeafTerms(segments, starts[i], audioTerms);
-    if (terms === null) return null;
-    leaves.push(`tier("${name}", ${terms})`);
+
+  const leaves = starts.map((start, index) => {
+    const range =
+      thresholds.length === 0
+        ? null
+        : index === 0
+          ? `0_${formatSizeToken(thresholds[0])}`
+          : index < thresholds.length
+            ? `${formatSizeToken(start)}_${formatSizeToken(thresholds[index])}`
+            : `${formatSizeToken(start)}_plus`;
+    const name = [...nameParts, ...(range ? [range] : [])].join('_') || 'standard';
+    return `tier(${JSON.stringify(name)}, ${buildLeafTerms(segments, start, thinking, options)})`;
+  });
+
+  return (
+    thresholds.map((threshold, index) => `len <= ${threshold} ? ${leaves[index]} : `).join('') +
+    leaves[leaves.length - 1]
+  );
+}
+
+/** 标准 / 思考模式分支：仅当某段 reasoning 价与 output 价不同且供应商定义了开关时才分叉 */
+function buildModeBranch(
+  segments: PriceSegment[],
+  nameParts: string[],
+  options: BillingExprOptions,
+  warnings: string[],
+): string {
+  const standard = buildTierChain(segments, nameParts, false, options);
+
+  const divergentStart = segments
+    .map((segment) => segment.lo)
+    .find((start) => thinkingOutputAt(segments, start) !== cellAt(segments, 'output', start));
+  if (divergentStart === undefined) return standard;
+
+  if (!options.thinkingToggle) {
+    const describe = (value: number | undefined) =>
+      value === undefined ? 'unset' : `$${formatCoefficient(value)}`;
+    warnings.push(
+      `reasoning price ${describe(thinkingOutputAt(segments, divergentStart))} differs from output price ` +
+        `${describe(cellAt(segments, 'output', divergentStart))} but the provider defines no thinkingToggle; ` +
+        'output price applies to all completion tokens',
+    );
+    return standard;
   }
 
-  const parts: string[] = [];
-  for (let i = 0; i < thresholds.length; i++) {
-    parts.push(`len <= ${thresholds[i]} ? ${leaves[i]} : `);
+  const { param, value } = options.thinkingToggle;
+  const thinking = buildTierChain(segments, [...nameParts, 'thinking'], true, options);
+  return `param(${JSON.stringify(param)}) == ${JSON.stringify(value)} ? ${wrapBranch(thinking)} : ${wrapBranch(standard)}`;
+}
+
+// === 时段定价 ===
+
+/** "HH:MM" → 自午夜起的分钟数；"24:00" 允许作为结束时刻 */
+function parseHourRange(text: string): [number, number] {
+  const match = HOUR_RANGE_RE.exec(text);
+  if (!match) throw new Error(`hours entry "${text}" must match "HH:MM-HH:MM"`);
+  const [startHour, startMinute, endHour, endMinute] = match.slice(1).map(Number);
+  const valid = (hour: number, minute: number, isEnd: boolean) =>
+    minute < 60 && (hour < 24 || (isEnd && hour === 24 && minute === 0));
+  if (!valid(startHour, startMinute, false) || !valid(endHour, endMinute, true)) {
+    throw new Error(`hours entry "${text}" is out of range`);
   }
-  return parts.join('') + leaves[leaves.length - 1];
+  const start = startHour * 60 + startMinute;
+  const end = endHour * 60 + endMinute;
+  if (start === end) throw new Error(`hours entry "${text}" is empty`);
+  if (start === 0 && end === MINUTES_PER_DAY) {
+    throw new Error(`hours entry "${text}" covers the whole day; omit hours instead`);
+  }
+  return [start, end];
+}
+
+function isValidTimeZone(timezone: string): boolean {
+  try {
+    new Intl.DateTimeFormat('en-US', { timeZone: timezone });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/** 校验时段配置；不合法时抛出说明原因的错误 */
+function validateSchedule(schedule: CostSchedule, base: ModelCost): void {
+  if (typeof schedule.timezone !== 'string' || !isValidTimeZone(schedule.timezone)) {
+    throw new Error(`timezone "${String(schedule.timezone)}" is not a valid IANA zone`);
+  }
+  if (typeof schedule.fallback !== 'string' || !schedule.fallback) {
+    throw new Error('fallback tier name is required');
+  }
+  if (!Array.isArray(schedule.windows) || schedule.windows.length === 0) {
+    throw new Error('at least one window is required');
+  }
+
+  const tiered = collectSegments(base).length > 1;
+  const names = new Set<string>([schedule.fallback]);
+  for (const window of schedule.windows) {
+    if (typeof window.name !== 'string' || !window.name) throw new Error('window name is required');
+    if (names.has(window.name)) throw new Error(`duplicate tier name "${window.name}"`);
+    names.add(window.name);
+
+    if (window.weekdays === undefined && window.hours === undefined) {
+      throw new Error(`window "${window.name}" needs weekdays and/or hours`);
+    }
+    if (window.weekdays !== undefined) {
+      const days = new Set(Array.isArray(window.weekdays) ? window.weekdays : []);
+      if (
+        days.size === 0 ||
+        [...days].some((day) => !Number.isInteger(day) || day < 0 || day > 6)
+      ) {
+        throw new Error(`window "${window.name}" weekdays must be integers 0 (Sunday) to 6`);
+      }
+      if (days.size === 7) {
+        throw new Error(`window "${window.name}" weekdays cover every day; omit weekdays instead`);
+      }
+    }
+    if (window.hours !== undefined) {
+      if (!Array.isArray(window.hours) || window.hours.length === 0) {
+        throw new Error(`window "${window.name}" hours must be a non-empty array`);
+      }
+      window.hours.forEach(parseHourRange);
+    }
+
+    if (Object.keys(pickCells(window)).length === 0) {
+      throw new Error(`window "${window.name}" overrides no price`);
+    }
+    if (tiered && !Array.isArray(window.tiers)) {
+      throw new Error(`window "${window.name}" must define its own tiers on a tiered model`);
+    }
+  }
+}
+
+/** 星期条件：连续区间合并为 >= / <=，单日为 ==，多区间以 || 连接 */
+function weekdayCondition(zone: string, weekdays: number[]): string {
+  const runs: [number, number][] = [];
+  for (const day of [...new Set(weekdays)].sort((a, b) => a - b)) {
+    const last = runs[runs.length - 1];
+    if (last && last[1] === day - 1) last[1] = day;
+    else runs.push([day, day]);
+  }
+  const parts = runs.map(([from, to]) =>
+    from === to
+      ? `weekday(${zone}) == ${from}`
+      : `weekday(${zone}) >= ${from} && weekday(${zone}) <= ${to}`,
+  );
+  if (parts.length === 1) return parts[0];
+  return `(${parts.map((part) => (part.includes(' && ') ? `(${part})` : part)).join(' || ')})`;
+}
+
+/** 单个时间区间条件：整点区间用 hour()，含分钟用分钟数；跨午夜以 || 表达 */
+function hourRangeCondition(zone: string, start: number, end: number): string {
+  const wholeHours = start % 60 === 0 && end % 60 === 0;
+  const probe = wholeHours ? `hour(${zone})` : `hour(${zone}) * 60 + minute(${zone})`;
+  const unit = wholeHours ? 60 : 1;
+  const from = start / unit;
+  const to = end / unit;
+  if (start > end) return `(${probe} >= ${from} || ${probe} < ${to})`;
+
+  const bounds: string[] = [];
+  if (start > 0) bounds.push(`${probe} >= ${from}`);
+  if (end < MINUTES_PER_DAY) bounds.push(`${probe} < ${to}`);
+  return bounds.join(' && ');
+}
+
+/** 窗口条件：星期 && 时间区间组 */
+function windowCondition(window: CostScheduleWindow, timezone: string): string {
+  const zone = JSON.stringify(timezone);
+  const parts: string[] = [];
+  if (window.weekdays) parts.push(weekdayCondition(zone, window.weekdays));
+  if (window.hours) {
+    const ranges = window.hours.map((text) => hourRangeCondition(zone, ...parseHourRange(text)));
+    parts.push(
+      ranges.length === 1
+        ? ranges[0]
+        : `(${ranges.map((range) => (range.includes(' && ') ? `(${range})` : range)).join(' || ')})`,
+    );
+  }
+  return parts.join(' && ');
+}
+
+/** 窗口内成本：基础成本浅合并窗口价格（窗口自带 tiers 时替换基础阶梯） */
+function windowCost(base: ModelCost, window: CostScheduleWindow): ModelCost {
+  return { ...base, ...pickCells(window), ...(window.tiers ? { tiers: window.tiers } : {}) };
 }
 
 /**
- * 从 USD 成本生成 new-api tiered_expr 计费表达式。
- * 仅当模型具有分层定价或思考模式差价时返回表达式，否则返回 null
- * （常规单价模型继续使用 model_ratio 体系）。
+ * 从 USD 成本生成 new-api 计费表达式。
+ * 无 token 输入价时回退按图价（tier("image", fixed(USD)) * image_count）；
+ * 均缺失或时段配置不合法时返回 null 并给出原因。
  */
-export function buildTieredBillingExpr(cost: ModelCost | undefined): string | null {
-  if (!cost) return null;
+export function buildBillingExpr(cost: ModelCost, options: BillingExprOptions): BillingExprResult {
+  const warnings: string[] = [];
+  const perImage = typeof cost.per_image === 'number' && cost.per_image >= 0;
 
-  const standard = collectSegments(cost, '');
-  const thinking = collectSegments(cost, 'thinking_');
-
-  const hasTiers = [...standard.values()].some((list) => list.some((s) => s.lo > 0));
-  const hasThinking = thinking.has('input') || thinking.has('output');
-  if (!hasTiers && !hasThinking) return null;
-
-  // 基础输入价缺失时无法构造可靠表达式（如特殊多模态模型），回退倍率体系
-  if (priceAt(standard.get('input'), 0) === null) return null;
-
-  // 音频 token 单价不分档，作为附加项加入每个叶子
-  const audioTerms: string[] = [];
-  const audioIn = cost['input_audio'];
-  if (typeof audioIn === 'number' && audioIn > 0) audioTerms.push(`ai * ${audioIn}`);
-  const audioOut = cost['output_audio'];
-  if (typeof audioOut === 'number' && audioOut > 0) audioTerms.push(`ao * ${audioOut}`);
-
-  const standardBranch = buildBranch(standard, audioTerms, '');
-  if (standardBranch === null) return null;
-
-  if (!hasThinking) return standardBranch;
-
-  // 思考分支：缺失的家族回退到标准价（如思考模式缓存价与标准一致时上游只标注一份）
-  const merged = new Map(thinking);
-  for (const [family] of FAMILY_VARS) {
-    if (!merged.has(family) && standard.has(family)) {
-      merged.set(family, standard.get(family)!);
+  if (typeof cost.input !== 'number' || cost.input < 0) {
+    if (perImage) {
+      return {
+        expr: `tier("image", fixed(${formatCoefficient(cost.per_image!)})) * image_count`,
+        warnings,
+      };
     }
+    if (Object.values(cost).some((value) => typeof value === 'number')) {
+      warnings.push('no token input price or per_image price; not expressible');
+    }
+    return { expr: null, warnings };
   }
-  const thinkingBranch = buildBranch(merged, audioTerms, 'thinking_');
-  if (thinkingBranch === null) return standardBranch;
+  if (perImage) warnings.push('per_image ignored in favour of token pricing');
 
-  return `param("enable_thinking") == true ? (${thinkingBranch}) : (${standardBranch})`;
+  const { schedule, ...base } = cost;
+  if (schedule === undefined) {
+    return { expr: buildModeBranch(collectSegments(base), [], options, warnings), warnings };
+  }
+
+  try {
+    validateSchedule(schedule, base);
+  } catch (error) {
+    warnings.push(`invalid schedule: ${(error as Error).message}`);
+    return { expr: null, warnings };
+  }
+
+  const branches = schedule.windows.map((window) => {
+    const branch = buildModeBranch(
+      collectSegments(windowCost(base, window)),
+      [window.name],
+      options,
+      warnings,
+    );
+    return `${windowCondition(window, schedule.timezone)} ? ${wrapBranch(branch)} : `;
+  });
+  const fallback = buildModeBranch(collectSegments(base), [schedule.fallback], options, warnings);
+  return { expr: branches.join('') + wrapBranch(fallback), warnings };
 }

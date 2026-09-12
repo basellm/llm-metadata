@@ -8,6 +8,7 @@
 export class NativeFilter {
     config;
     excludePatterns = new Map();
+    providerRules = {};
     configWarnings = [];
     constructor(config) {
         this.config = config;
@@ -26,6 +27,7 @@ export class NativeFilter {
             if (patterns.length > 0) {
                 this.excludePatterns.set(providerId, patterns);
             }
+            this.providerRules[providerId] = this.sanitizeBillingRule(providerId, rule);
         }
         for (const [currency, rate] of Object.entries(config.exchangeRates || {})) {
             if (currency.startsWith('$'))
@@ -34,6 +36,36 @@ export class NativeFilter {
                 this.configWarnings.push(`native-providers: invalid exchange rate for "${currency}" (must be a positive number)`);
             }
         }
+    }
+    /** 校验供应商级计费规则，非法字段丢弃并警告 */
+    sanitizeBillingRule(providerId, rule) {
+        const sanitized = {};
+        const warn = (field, requirement) => this.configWarnings.push(`native-providers: invalid ${field} for "${providerId}" (${requirement}; ignored)`);
+        if (rule.priority !== undefined) {
+            if (typeof rule.priority === 'number' && Number.isFinite(rule.priority)) {
+                sanitized.priority = rule.priority;
+            }
+            else
+                warn('priority', 'must be a number');
+        }
+        if (rule.thinkingToggle !== undefined) {
+            const { param, value } = rule.thinkingToggle ?? {};
+            if (typeof param === 'string' &&
+                param &&
+                ['boolean', 'string', 'number'].includes(typeof value)) {
+                sanitized.thinkingToggle = { param, value };
+            }
+            else
+                warn('thinkingToggle', 'needs a non-empty param and a boolean/string/number value');
+        }
+        if (rule.cacheWrite1h !== undefined) {
+            if (typeof rule.cacheWrite1h === 'number' && rule.cacheWrite1h > 0) {
+                sanitized.cacheWrite1h = rule.cacheWrite1h;
+            }
+            else
+                warn('cacheWrite1h', 'must be a positive number');
+        }
+        return sanitized;
     }
     /** 是否启用过滤（配置缺失时构建保持全量并给出警告） */
     get enabled() {
@@ -49,15 +81,9 @@ export class NativeFilter {
         }
         return rates;
     }
-    /** 供应商优先级映射（用于同名模型冲突解析） */
-    getPriorities() {
-        const priorities = {};
-        for (const [providerId, rule] of Object.entries(this.config?.providers || {})) {
-            if (typeof rule.priority === 'number') {
-                priorities[providerId] = rule.priority;
-            }
-        }
-        return priorities;
+    /** 已校验的供应商级计费规则（优先级、思考开关、1h 缓存写倍数） */
+    getProviderRules() {
+        return this.providerRules;
     }
     /** 应用白名单与模型排除规则 */
     apply(normalized) {

@@ -1,11 +1,13 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {},
-    "completion_ratio": {},
-    "model_price": {},
-    "model_ratio": {}
+    "billing_expr": {
+      "nova-2-lite-v1": "tier(\"standard\", p * 0 + c * 0)",
+      "nova-2-pro-v1": "tier(\"standard\", p * 0 + c * 0)"
+    },
+    "billing_mode": {
+      "nova-2-lite-v1": "tiered_expr",
+      "nova-2-pro-v1": "tiered_expr"
+    }
   },
   "message": "",
   "success": true

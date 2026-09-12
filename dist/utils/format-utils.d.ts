@@ -1,5 +1,5 @@
 /** 格式化工具函数 */
-import { ModelCost } from '../types/index.js';
+import type { ModelCost } from '../types/index.js';
 /** 将 token 数量格式化为 K/M 形式 */
 export declare function formatTokensToKM(tokens?: number): string | null;
 /** 转义 Markdown 管道符 */
@@ -39,11 +39,9 @@ export interface UsdCostResult {
     unknownCurrency?: string;
 }
 /**
- * 将成本对象规范化为 USD。
- * NewAPI 的倍率体系以 USD 为基准（1 = $0.002/1K tokens），
- * 非 USD 价格若不换算会产生错误倍率。
- * 结构化阶梯（tiers / context_over_200k）中的价格一并换算，
- * 但 tier 描述符（size 为 token 阈值）保持原样。
+ * 将成本对象规范化为 USD（new-api 表达式系数以 USD 为基准）。
+ * 顶层数字字段与嵌套结构（tiers / context_over_200k / schedule 窗口及其 tiers）
+ * 中的计费家族价格一并换算；tier.size、weekdays 等非价格字段保持原样。
  */
 export declare function normalizeCostToUSD(cost: ModelCost | undefined, exchangeRates: Record<string, number>): UsdCostResult;
 /** 构建模型价格信息 */
@@ -52,12 +50,6 @@ export declare function buildModelPriceInfo(cost?: ModelCost): {
     output: number | null;
     cacheRead: number | null;
     cacheWrite: number | null;
-};
-/** 获取最高价格（用于 NewAPI 比率计算） */
-export declare function getMaxPrices(cost?: ModelCost): {
-    maxInput: number | null;
-    maxOutput: number | null;
-    maxCacheRead: number | null;
 };
 export {};
 //# sourceMappingURL=format-utils.d.ts.map

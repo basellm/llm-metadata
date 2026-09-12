@@ -1,22 +1,16 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {
-      "solar-pro4": 0.2
+    "billing_expr": {
+      "solar-mini": "tier(\"standard\", p * 0.15 + c * 0.15)",
+      "solar-pro2": "tier(\"standard\", p * 0.25 + c * 0.25)",
+      "solar-pro3": "tier(\"standard\", p * 0.25 + c * 0.25)",
+      "solar-pro4": "tier(\"standard\", p * 0.3 + cr * 0.06 + c * 1.2)"
     },
-    "completion_ratio": {
-      "solar-mini": 1,
-      "solar-pro2": 1,
-      "solar-pro3": 1,
-      "solar-pro4": 4
-    },
-    "model_price": {},
-    "model_ratio": {
-      "solar-mini": 0.075,
-      "solar-pro2": 0.125,
-      "solar-pro3": 0.125,
-      "solar-pro4": 0.15
+    "billing_mode": {
+      "solar-mini": "tiered_expr",
+      "solar-pro2": "tiered_expr",
+      "solar-pro3": "tiered_expr",
+      "solar-pro4": "tiered_expr"
     }
   },
   "message": "",

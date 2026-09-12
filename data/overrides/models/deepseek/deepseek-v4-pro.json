@@ -1,0 +1,24 @@
+{
+  "$comment": "DeepSeek-V4-Pro-0813, https://api-docs.deepseek.com/quick_start/pricing. Base prices are off-peak; peak (Mon-Fri 01:00-04:00 & 06:00-10:00 UTC) is 2x. From 2026-09-14 04:00 UTC DeepSeek routes deepseek-v4-pro to V4.1-Flash at Flash prices until V4.1-Pro ships; switch this file to the deepseek-flash prices then.",
+  "cost": {
+    "input": 0.66,
+    "output": 1.98,
+    "reasoning": 1.98,
+    "cache_read": 0.022,
+    "schedule": {
+      "timezone": "UTC",
+      "fallback": "off_peak",
+      "windows": [
+        {
+          "name": "peak",
+          "weekdays": [1, 2, 3, 4, 5],
+          "hours": ["01:00-04:00", "06:00-10:00"],
+          "input": 1.32,
+          "output": 3.96,
+          "reasoning": 3.96,
+          "cache_read": 0.044
+        }
+      ]
+    }
+  }
+}

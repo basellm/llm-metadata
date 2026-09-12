@@ -1,11 +1,23 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {},
-    "completion_ratio": {},
-    "model_price": {},
-    "model_ratio": {}
+    "billing_expr": {
+      "mimo-v2-pro": "tier(\"standard\", p * 0 + cr * 0 + c * 0)",
+      "mimo-v2-tts": "tier(\"standard\", p * 0 + c * 0)",
+      "mimo-v2.5": "tier(\"standard\", p * 0 + cr * 0 + c * 0)",
+      "mimo-v2.5-pro": "tier(\"standard\", p * 0 + cr * 0 + c * 0)",
+      "mimo-v2.5-tts": "tier(\"standard\", p * 0 + c * 0)",
+      "mimo-v2.5-tts-voiceclone": "tier(\"standard\", p * 0 + c * 0)",
+      "mimo-v2.5-tts-voicedesign": "tier(\"standard\", p * 0 + c * 0)"
+    },
+    "billing_mode": {
+      "mimo-v2-pro": "tiered_expr",
+      "mimo-v2-tts": "tiered_expr",
+      "mimo-v2.5": "tiered_expr",
+      "mimo-v2.5-pro": "tiered_expr",
+      "mimo-v2.5-tts": "tiered_expr",
+      "mimo-v2.5-tts-voiceclone": "tiered_expr",
+      "mimo-v2.5-tts-voicedesign": "tiered_expr"
+    }
   },
   "message": "",
   "success": true

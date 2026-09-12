@@ -194,10 +194,10 @@ class Builder {
     );
     const allModelsData = filtered.data;
 
-    // NewAPI 构建器（货币换算 + 同名模型优先级解析）
+    // NewAPI 构建器（货币换算 + 供应商级计费规则）
     const newApiBuilder = new NewApiBuilder({
       exchangeRates: nativeFilter.getExchangeRates(),
-      providerPriority: nativeFilter.getPriorities(),
+      providers: nativeFilter.getProviderRules(),
     });
     const newApiWarnings = new Set<string>();
 
@@ -335,7 +335,6 @@ class Builder {
       'en',
     );
     const newapiSync = newApiBuilder.buildSyncPayload(allModelsDataEn, tagMapEn);
-    newapiSync.warnings.forEach((w) => newApiWarnings.add(w));
     if (
       writeJSONIfChanged(
         join(newapiDir, 'vendors.json'),
@@ -411,7 +410,6 @@ class Builder {
           locale,
         );
         const payload = newApiBuilder.buildSyncPayload(localized, tagMap);
-        payload.warnings.forEach((w) => newApiWarnings.add(w));
         if (
           writeJSONIfChanged(
             join(outDir, 'vendors.json'),

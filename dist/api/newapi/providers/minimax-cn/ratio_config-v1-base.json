@@ -1,37 +1,22 @@
 {
   "data": {
     "billing_expr": {
-      "MiniMax-M3": "len <= 512000 ? tier(\"0_512k\", p * 0.3 + c * 1.2 + cr * 0.06) : tier(\"512k_plus\", p * 0.6 + c * 2.4 + cr * 0.12)"
+      "MiniMax-M2": "tier(\"standard\", p * 0.3 + c * 1.2)",
+      "MiniMax-M2.1": "tier(\"standard\", p * 0.3 + cr * 0.03 + cc * 0.375 + c * 1.2)",
+      "MiniMax-M2.5": "tier(\"standard\", p * 0.3 + cr * 0.03 + cc * 0.375 + c * 1.2)",
+      "MiniMax-M2.5-highspeed": "tier(\"standard\", p * 0.6 + cr * 0.06 + cc * 0.375 + c * 2.4)",
+      "MiniMax-M2.7": "tier(\"standard\", p * 0.3 + cr * 0.06 + cc * 0.375 + c * 1.2)",
+      "MiniMax-M2.7-highspeed": "tier(\"standard\", p * 0.6 + cr * 0.06 + cc * 0.375 + c * 2.4)",
+      "MiniMax-M3": "len <= 512000 ? tier(\"0_512k\", p * 0.3 + cr * 0.06 + c * 1.2) : tier(\"512k_plus\", p * 0.6 + cr * 0.12 + c * 2.4)"
     },
     "billing_mode": {
+      "MiniMax-M2": "tiered_expr",
+      "MiniMax-M2.1": "tiered_expr",
+      "MiniMax-M2.5": "tiered_expr",
+      "MiniMax-M2.5-highspeed": "tiered_expr",
+      "MiniMax-M2.7": "tiered_expr",
+      "MiniMax-M2.7-highspeed": "tiered_expr",
       "MiniMax-M3": "tiered_expr"
-    },
-    "cache_ratio": {
-      "MiniMax-M2.1": 0.1,
-      "MiniMax-M2.5": 0.1,
-      "MiniMax-M2.5-highspeed": 0.1,
-      "MiniMax-M2.7": 0.2,
-      "MiniMax-M2.7-highspeed": 0.1,
-      "MiniMax-M3": 0.2
-    },
-    "completion_ratio": {
-      "MiniMax-M2": 4,
-      "MiniMax-M2.1": 4,
-      "MiniMax-M2.5": 4,
-      "MiniMax-M2.5-highspeed": 4,
-      "MiniMax-M2.7": 4,
-      "MiniMax-M2.7-highspeed": 4,
-      "MiniMax-M3": 4
-    },
-    "model_price": {},
-    "model_ratio": {
-      "MiniMax-M2": 0.15,
-      "MiniMax-M2.1": 0.15,
-      "MiniMax-M2.5": 0.15,
-      "MiniMax-M2.5-highspeed": 0.3,
-      "MiniMax-M2.7": 0.15,
-      "MiniMax-M2.7-highspeed": 0.3,
-      "MiniMax-M3": 0.15
     }
   },
   "message": "",

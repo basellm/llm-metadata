@@ -1,16 +1,10 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {
-      "LongCat-2.0": 0.02
+    "billing_expr": {
+      "LongCat-2.0": "tier(\"standard\", p * 0.75 + cr * 0.015 + c * 2.95)"
     },
-    "completion_ratio": {
-      "LongCat-2.0": 3.9333333333333336
-    },
-    "model_price": {},
-    "model_ratio": {
-      "LongCat-2.0": 0.375
+    "billing_mode": {
+      "LongCat-2.0": "tiered_expr"
     }
   },
   "message": "",

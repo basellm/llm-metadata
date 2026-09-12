@@ -1,4 +1,4 @@
-import type { NativeProvidersConfig, NormalizedData } from '../types/index.js';
+import type { NativeProvidersConfig, NormalizedData, ProviderBillingRule } from '../types/index.js';
 /** 过滤结果 */
 export interface NativeFilterResult {
     data: NormalizedData;
@@ -16,14 +16,17 @@ export interface NativeFilterResult {
 export declare class NativeFilter {
     private readonly config;
     private readonly excludePatterns;
+    private readonly providerRules;
     private readonly configWarnings;
     constructor(config: NativeProvidersConfig | null);
+    /** 校验供应商级计费规则，非法字段丢弃并警告 */
+    private sanitizeBillingRule;
     /** 是否启用过滤（配置缺失时构建保持全量并给出警告） */
     get enabled(): boolean;
     /** 非 USD 货币兑美元汇率（每 1 USD 对应的货币数量） */
     getExchangeRates(): Record<string, number>;
-    /** 供应商优先级映射（用于同名模型冲突解析） */
-    getPriorities(): Record<string, number>;
+    /** 已校验的供应商级计费规则（优先级、思考开关、1h 缓存写倍数） */
+    getProviderRules(): Record<string, ProviderBillingRule>;
     /** 应用白名单与模型排除规则 */
     apply(normalized: NormalizedData): NativeFilterResult;
 }

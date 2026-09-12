@@ -43,8 +43,13 @@ Catalog: `data/native-providers.json`
   "exchangeRates": { "CNY": 7.3, "EUR": 0.92 },
   "providers": {
     "openai": { "lobeIcon": "OpenAI" },
+    "anthropic": { "lobeIcon": "Claude.Color", "cacheWrite1h": 2 },
     "zai": { "priority": 20, "lobeIcon": "ZAI" },
-    "alibaba": { "priority": 30, "excludeModels": ["^deepseek", "^kimi"] }
+    "alibaba": {
+      "priority": 30,
+      "excludeModels": ["^deepseek", "^kimi"],
+      "thinkingToggle": { "param": "enable_thinking", "value": true }
+    }
   }
 }
 ```
@@ -52,15 +57,29 @@ Catalog: `data/native-providers.json`
 - `providers` — allowlist. Providers not listed here are dropped from every output (JSON API, NewAPI, VoAPI, web UI), and their previously generated files are pruned from `dist/api/`.
 - `excludeModels` — case-insensitive regexes that drop third-party models hosted on a native provider (e.g., DeepSeek models resold on Alibaba's platform), keeping only the provider's own models.
 - `priority` — resolves model-ID conflicts across regional/plan endpoints of the same vendor (e.g., `zai` vs `zhipuai`) in the aggregated NewAPI outputs; the highest value wins, ties break by provider ID. Per-provider files under `/api/newapi/providers/<id>/` always keep that provider's own prices.
-- `exchangeRates` — currency units per 1 USD, used to normalize non-USD costs (e.g., CNY) into the USD-based NewAPI ratio system (1 ratio = $2 per 1M input tokens). Models with an unknown currency are skipped from pricing outputs with a build warning.
+- `exchangeRates` — currency units per 1 USD, used to normalize non-USD costs (e.g., CNY) into the USD coefficients of NewAPI billing expressions. Models with an unknown currency are skipped from pricing outputs with a build warning.
+- `thinkingToggle` — request-body field (gjson path) and value that switch the provider's hybrid models into thinking mode. When a model's `cost.reasoning` differs from `cost.output`, the expression bills completion tokens at the reasoning price behind `param("<param>") == <value>`. Without it the output price applies and the build warns.
+- `cacheWrite1h` — 1-hour-TTL prompt-cache write price as a multiple of the input price (Anthropic: 2). Emits a `cc1h` term next to `cc` (the models.dev `cache_write` price); new-api otherwise leaves 1h cache writes unpriced for Claude-format usage.
 - `lobeIcon` — [@lobehub/icons](https://github.com/lobehub/lobe-icons) export name (e.g., `Claude.Color`) used as the vendor icon in NewAPI `vendors.json`.
 - If the file is missing, filtering is disabled and the build emits a warning.
 
 Provider logos are mirrored at build time to `dist/api/logos/<id>.svg`, so the web UI loads icons same-origin (with the remote `iconURL` and a monogram as fallbacks) instead of hotlinking models.dev.
 
-NewAPI compatibility: `dist/api/newapi/ratio_config-v1-base.json` follows new-api's `/api/ratio_config` payload and is consumed by new-api's built-in "official ratio preset" in its upstream ratio sync UI; `vendors.json` / `models.json` feed its model metadata sync.
+## NewAPI Billing Expressions
 
-Expression billing (`tiered_expr`): models with length-tiered pricing (e.g., `input_32k_128k`) or thinking-mode differential pricing (`thinking_input` / `thinking_output`) additionally emit `billing_mode` / `billing_expr` maps in the ratio config, generated as expr-lang expressions with USD-per-1M coefficients (`len`-based tier ternaries wrapped in `tier()`, thinking mode gated by `param("enable_thinking")`). new-api prefers the expression over ratios when applied; plain ratios are still emitted as a fallback.
+`dist/api/newapi/ratio_config-v1-base.json` follows new-api's `/api/ratio_config` payload and is consumed by new-api's built-in "official ratio preset" in its upstream ratio sync UI; per-provider variants live under `/api/newapi/providers/<id>/`. `vendors.json` / `models.json` carry metadata only (description, tags, vendor, icon) and feed new-api's model metadata sync.
+
+Every priced model is published as a new-api billing expression (`billing_mode: "tiered_expr"` + `billing_expr`) — the ratio config contains no `model_ratio` / `completion_ratio` / `cache_ratio` / `model_price` fields. Expressions use expr-lang syntax with real USD-per-1M-token coefficients and every price leaf wrapped in `tier("<name>", …)`:
+
+| Pricing shape                              | Source fields                                                | Expression                                                                                                           |
+| ------------------------------------------ | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| Flat                                       | `input`, `output`, `cache_read`, `cache_write`, `*_audio`    | `tier("standard", p * 3 + cr * 0.3 + cc * 3.75 + cc1h * 6 + c * 15)`                                                 |
+| Context tiers                              | `tiers[]` (`context_over_200k` as legacy fallback)           | `len <= 200000 ? tier("0_200k", …) : tier("200k_plus", …)`                                                           |
+| Thinking mode (provider `thinkingToggle`)  | `reasoning` ≠ `output`                                       | `param("enable_thinking") == true ? tier("thinking", p * 0.4 + c * 4) : tier("standard", p * 0.4 + c * 1.2)`          |
+| Time-of-day windows                        | `schedule` (override extension, see below)                   | `weekday("UTC") >= 1 && weekday("UTC") <= 5 && ((hour("UTC") >= 1 && hour("UTC") < 4) \|\| …) ? tier("peak", …) : tier("off_peak", …)` |
+| Per image                                  | `per_image` (no token price)                                 | `tier("image", fixed(0.04)) * image_count`                                                                           |
+
+Branches nest schedule → thinking → context tiers, matching the shapes new-api's pricing UI renders structurally (time-window conditions display as e.g. "Mon–Fri 01:00–04:00 or 06:00–10:00 (UTC)"). Explicit zero prices are kept as `cr * 0` etc., because new-api only excludes cache/audio tokens from `p`/`c` when the expression references their variable. Models whose only price cannot be expressed (e.g., separately priced reasoning tokens without a toggle) still get an expression at the documented output price plus a build warning listed in `manifest.json`.
 
 ## Internationalization (API)
 
@@ -181,8 +200,40 @@ Model override (`data/overrides/models/openai/gpt-4o.json`):
 }
 ```
 
+Time-of-day pricing (`data/overrides/models/deepseek/deepseek-flash.json`) — `cost.schedule` is a repository extension of the models.dev cost schema for providers with peak/off-peak rates:
+
+```json
+{
+  "cost": {
+    "input": 0.15,
+    "output": 0.6,
+    "reasoning": 0.6,
+    "cache_read": 0.003,
+    "schedule": {
+      "timezone": "UTC",
+      "fallback": "off_peak",
+      "windows": [
+        {
+          "name": "peak",
+          "weekdays": [1, 2, 3, 4, 5],
+          "hours": ["01:00-04:00", "06:00-10:00"],
+          "input": 0.3,
+          "output": 1.2,
+          "reasoning": 1.2,
+          "cache_read": 0.006
+        }
+      ]
+    }
+  }
+}
+```
+
+- Base `cost` prices apply outside every window and are labelled `fallback`; windows are matched in order and may override any price family (missing families inherit the base price). A window on a model with context `tiers` must define its own `tiers`.
+- `timezone` is an IANA zone; `weekdays` uses 0 = Sunday … 6 = Saturday; `hours` entries are `HH:MM-HH:MM` with an exclusive end (`24:00` allowed), and an end before the start wraps past midnight. Whole-hour windows compile to `hour(tz)` comparisons that new-api displays structurally; minute-precision windows compile to minute-of-day arithmetic.
+- Invalid schedules fail loudly: the model is left without an expression and the reason is listed in `manifest.json` warnings.
+
 Notes
 
-- Deep-merge applies; unspecified fields are preserved.
-- Model override allowlist (sanitization): `id`, `name`, `description`, `reasoning`, `tool_call`, `attachment`, `temperature`, `knowledge`, `release_date`, `last_updated`, `open_weights`, `modalities`, `limit`, `cost`.
+- Deep-merge applies; unspecified fields are preserved. Pin every price you depend on inside the override (including `reasoning`) so upstream changes cannot make the window prices inconsistent with the base.
+- Model override allowlist (sanitization): `id`, `name`, `description`, `reasoning`, `tool_call`, `attachment`, `temperature`, `knowledge`, `release_date`, `last_updated`, `open_weights`, `modalities`, `limit`, `cost`. Keys such as `$comment` are dropped, so they are safe for maintainer notes.
 - Build reads overrides from `data/overrides/**`.

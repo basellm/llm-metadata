@@ -1,11 +1,15 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {},
-    "completion_ratio": {},
-    "model_price": {},
-    "model_ratio": {}
+    "billing_expr": {
+      "poolside/laguna-m.1": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "poolside/laguna-s-2.1": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "poolside/laguna-xs-2.1": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)"
+    },
+    "billing_mode": {
+      "poolside/laguna-m.1": "tiered_expr",
+      "poolside/laguna-s-2.1": "tiered_expr",
+      "poolside/laguna-xs-2.1": "tiered_expr"
+    }
   },
   "message": "",
   "success": true

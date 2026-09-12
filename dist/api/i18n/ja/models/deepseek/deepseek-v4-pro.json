@@ -1,10 +1,34 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.003625,
-    "input": 0.435,
-    "output": 0.87,
-    "reasoning": 0.87
+    "cache_read": 0.022,
+    "input": 0.66,
+    "output": 1.98,
+    "reasoning": 1.98,
+    "schedule": {
+      "fallback": "off_peak",
+      "timezone": "UTC",
+      "windows": [
+        {
+          "cache_read": 0.044,
+          "hours": [
+            "01:00-04:00",
+            "06:00-10:00"
+          ],
+          "input": 1.32,
+          "name": "peak",
+          "output": 3.96,
+          "reasoning": 3.96,
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    }
   },
   "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
   "family": "deepseek-thinking",

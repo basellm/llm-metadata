@@ -134,10 +134,10 @@ class Builder {
         console.log(`Native filter: kept ${Object.keys(filtered.data.providers).length} provider(s), ` +
             `excluded ${filtered.excludedProviders} provider(s) and ${filtered.excludedModels} hosted model(s)`);
         const allModelsData = filtered.data;
-        // NewAPI 构建器（货币换算 + 同名模型优先级解析）
+        // NewAPI 构建器（货币换算 + 供应商级计费规则）
         const newApiBuilder = new NewApiBuilder({
             exchangeRates: nativeFilter.getExchangeRates(),
-            providerPriority: nativeFilter.getPriorities(),
+            providers: nativeFilter.getProviderRules(),
         });
         const newApiWarnings = new Set();
         // 构建索引
@@ -226,7 +226,6 @@ class Builder {
         // 使用英文本地化数据集，以便提供商的国际化信息（如描述）应用于基础 NewAPI 输出
         const allModelsDataEn = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, 'en');
         const newapiSync = newApiBuilder.buildSyncPayload(allModelsDataEn, tagMapEn);
-        newapiSync.warnings.forEach((w) => newApiWarnings.add(w));
         if (writeJSONIfChanged(join(newapiDir, 'vendors.json'), { success: true, message: '', data: newapiSync.vendors }, { dryRun })) {
             changes++;
         }
@@ -271,7 +270,6 @@ class Builder {
                 ensureDirSync(outDir);
                 const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale);
                 const payload = newApiBuilder.buildSyncPayload(localized, tagMap);
-                payload.warnings.forEach((w) => newApiWarnings.add(w));
                 if (writeJSONIfChanged(join(outDir, 'vendors.json'), { success: true, message: '', data: payload.vendors }, { dryRun })) {
                     changes++;
                 }

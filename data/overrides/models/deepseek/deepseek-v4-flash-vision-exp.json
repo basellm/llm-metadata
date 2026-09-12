@@ -1,0 +1,24 @@
+{
+  "$comment": "Legacy name routed to DeepSeek-V4.1-Flash and billed at the Flash price, https://api-docs.deepseek.com/quick_start/pricing. Base prices are off-peak; peak (Mon-Fri 01:00-04:00 & 06:00-10:00 UTC) is 2x.",
+  "cost": {
+    "input": 0.15,
+    "output": 0.6,
+    "reasoning": 0.6,
+    "cache_read": 0.003,
+    "schedule": {
+      "timezone": "UTC",
+      "fallback": "off_peak",
+      "windows": [
+        {
+          "name": "peak",
+          "weekdays": [1, 2, 3, 4, 5],
+          "hours": ["01:00-04:00", "06:00-10:00"],
+          "input": 0.3,
+          "output": 1.2,
+          "reasoning": 1.2,
+          "cache_read": 0.006
+        }
+      ]
+    }
+  }
+}

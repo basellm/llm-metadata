@@ -1,19 +1,12 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {
-      "thinkingmachines/Inkling": 0.19999999999999998,
-      "thinkingmachines/Inkling:peft:262144": 0.19999999999999998
+    "billing_expr": {
+      "thinkingmachines/Inkling": "tier(\"standard\", p * 1.87 + cr * 0.374 + c * 4.68)",
+      "thinkingmachines/Inkling:peft:262144": "tier(\"standard\", p * 3.74 + cr * 0.748 + c * 9.36)"
     },
-    "completion_ratio": {
-      "thinkingmachines/Inkling": 2.5026737967914436,
-      "thinkingmachines/Inkling:peft:262144": 2.5026737967914436
-    },
-    "model_price": {},
-    "model_ratio": {
-      "thinkingmachines/Inkling": 0.935,
-      "thinkingmachines/Inkling:peft:262144": 1.87
+    "billing_mode": {
+      "thinkingmachines/Inkling": "tiered_expr",
+      "thinkingmachines/Inkling:peft:262144": "tiered_expr"
     }
   },
   "message": "",

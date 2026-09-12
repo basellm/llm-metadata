@@ -1,30 +1,28 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {},
-    "completion_ratio": {
-      "command-a-03-2025": 4,
-      "command-a-plus-05-2026": 4,
-      "command-a-reasoning-08-2025": 4,
-      "command-a-translate-08-2025": 4,
-      "command-a-vision-07-2025": 4,
-      "command-r-08-2024": 4,
-      "command-r-plus-08-2024": 4,
-      "command-r7b-12-2024": 4,
-      "command-r7b-arabic-02-2025": 4
+    "billing_expr": {
+      "command-a-03-2025": "tier(\"standard\", p * 2.5 + c * 10)",
+      "command-a-plus-05-2026": "tier(\"standard\", p * 2.5 + c * 10)",
+      "command-a-reasoning-08-2025": "tier(\"standard\", p * 2.5 + c * 10)",
+      "command-a-translate-08-2025": "tier(\"standard\", p * 2.5 + c * 10)",
+      "command-a-vision-07-2025": "tier(\"standard\", p * 2.5 + c * 10)",
+      "command-r-08-2024": "tier(\"standard\", p * 0.15 + c * 0.6)",
+      "command-r-plus-08-2024": "tier(\"standard\", p * 2.5 + c * 10)",
+      "command-r7b-12-2024": "tier(\"standard\", p * 0.0375 + c * 0.15)",
+      "command-r7b-arabic-02-2025": "tier(\"standard\", p * 0.0375 + c * 0.15)",
+      "north-mini-code-1-0": "tier(\"standard\", p * 0 + c * 0)"
     },
-    "model_price": {},
-    "model_ratio": {
-      "command-a-03-2025": 1.25,
-      "command-a-plus-05-2026": 1.25,
-      "command-a-reasoning-08-2025": 1.25,
-      "command-a-translate-08-2025": 1.25,
-      "command-a-vision-07-2025": 1.25,
-      "command-r-08-2024": 0.075,
-      "command-r-plus-08-2024": 1.25,
-      "command-r7b-12-2024": 0.01875,
-      "command-r7b-arabic-02-2025": 0.01875
+    "billing_mode": {
+      "command-a-03-2025": "tiered_expr",
+      "command-a-plus-05-2026": "tiered_expr",
+      "command-a-reasoning-08-2025": "tiered_expr",
+      "command-a-translate-08-2025": "tiered_expr",
+      "command-a-vision-07-2025": "tiered_expr",
+      "command-r-08-2024": "tiered_expr",
+      "command-r-plus-08-2024": "tiered_expr",
+      "command-r7b-12-2024": "tiered_expr",
+      "command-r7b-arabic-02-2025": "tiered_expr",
+      "north-mini-code-1-0": "tiered_expr"
     }
   },
   "message": "",

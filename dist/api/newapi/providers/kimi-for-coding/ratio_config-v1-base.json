@@ -1,11 +1,17 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {},
-    "completion_ratio": {},
-    "model_price": {},
-    "model_ratio": {}
+    "billing_expr": {
+      "k3": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "k3-256k": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "kimi-for-coding": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "kimi-for-coding-highspeed": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)"
+    },
+    "billing_mode": {
+      "k3": "tiered_expr",
+      "k3-256k": "tiered_expr",
+      "kimi-for-coding": "tiered_expr",
+      "kimi-for-coding-highspeed": "tiered_expr"
+    }
   },
   "message": "",
   "success": true

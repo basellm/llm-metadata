@@ -223,9 +223,7 @@ export default function App() {
             <span aria-hidden className="bg-primary size-2.5 rounded-full" />
             LLM Metadata
           </a>
-          <span className="text-muted-foreground hidden text-sm sm:inline">
-            {t('app.tagline')}
-          </span>
+          <span className="text-muted-foreground hidden text-sm sm:inline">{t('app.tagline')}</span>
           <div className="ml-auto flex items-center gap-1.5">
             {providers && (
               <span className="text-muted-foreground mr-1.5 hidden rounded-full border px-2.5 py-0.5 font-mono text-[11px] tabular-nums sm:inline">
@@ -270,7 +268,12 @@ export default function App() {
                 <SelectContent>
                   {providers.map((p) => (
                     <SelectItem key={p.id} value={p.id}>
-                      <ProviderIcon id={p.id} name={p.name} iconURL={p.iconURL} className="size-4" />
+                      <ProviderIcon
+                        id={p.id}
+                        name={p.name}
+                        iconURL={p.iconURL}
+                        className="size-4"
+                      />
                       <span className="truncate">{p.name}</span>
                       <span className="text-muted-foreground font-mono text-xs tabular-nums">
                         {p.modelCount}
@@ -359,7 +362,9 @@ export default function App() {
           <footer className="mt-auto shrink-0 border-t pt-4">
             <div className="text-muted-foreground flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
               <FooterSource />
-              {updatedAt && <span>{t('app.updated', { date: formatDate(updatedAt, locale) })}</span>}
+              {updatedAt && (
+                <span>{t('app.updated', { date: formatDate(updatedAt, locale) })}</span>
+              )}
               <a
                 href={`${REPO_URL}#readme`}
                 target="_blank"

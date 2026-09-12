@@ -1,16 +1,12 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {
-      "hy4-preview": 0.05035971223021583
+    "billing_expr": {
+      "hy3": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
+      "hy4-preview": "tier(\"standard\", p * 0.834 + cr * 0.042 + c * 2.501)"
     },
-    "completion_ratio": {
-      "hy4-preview": 2.998800959232614
-    },
-    "model_price": {},
-    "model_ratio": {
-      "hy4-preview": 0.417
+    "billing_mode": {
+      "hy3": "tiered_expr",
+      "hy4-preview": "tiered_expr"
     }
   },
   "message": "",

@@ -1,28 +1,14 @@
 {
   "data": {
     "billing_expr": {
-      "fugu-ultra": "len <= 272000 ? tier(\"0_272k\", p * 5 + c * 30 + cr * 0.5) : tier(\"272k_plus\", p * 10 + c * 45 + cr * 1)",
-      "fugu-ultra-20260615": "len <= 272000 ? tier(\"0_272k\", p * 5 + c * 30 + cr * 0.5) : tier(\"272k_plus\", p * 10 + c * 45 + cr * 1)"
+      "fugu-ultra": "len <= 272000 ? tier(\"0_272k\", p * 5 + cr * 0.5 + c * 30) : tier(\"272k_plus\", p * 10 + cr * 1 + c * 45)",
+      "fugu-ultra-20260615": "len <= 272000 ? tier(\"0_272k\", p * 5 + cr * 0.5 + c * 30) : tier(\"272k_plus\", p * 10 + cr * 1 + c * 45)",
+      "sakana-namazu": "tier(\"standard\", p * 0.95 + cr * 0.15 + c * 4)"
     },
     "billing_mode": {
       "fugu-ultra": "tiered_expr",
-      "fugu-ultra-20260615": "tiered_expr"
-    },
-    "cache_ratio": {
-      "fugu-ultra": 0.1,
-      "fugu-ultra-20260615": 0.1,
-      "sakana-namazu": 0.15789473684210525
-    },
-    "completion_ratio": {
-      "fugu-ultra": 6,
-      "fugu-ultra-20260615": 6,
-      "sakana-namazu": 4.2105263157894735
-    },
-    "model_price": {},
-    "model_ratio": {
-      "fugu-ultra": 2.5,
-      "fugu-ultra-20260615": 2.5,
-      "sakana-namazu": 0.475
+      "fugu-ultra-20260615": "tiered_expr",
+      "sakana-namazu": "tiered_expr"
     }
   },
   "message": "",

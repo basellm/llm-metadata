@@ -1,6 +1,7 @@
 import type { ModelCost } from './api';
 import { currencySymbol, formatContext, formatMoney } from './format';
-import type { MessageKey, Translator } from './i18n';
+import type { Locale, MessageKey, Translator } from './i18n';
+import { describeWindow, isSchedule, isWindowActive, type Schedule } from './schedule';
 
 /** 价格列（与主表列对齐） */
 export type PriceColumn = 'input' | 'cacheRead' | 'cacheWrite' | 'output';
@@ -9,6 +10,8 @@ export type PriceCells = Record<PriceColumn, number | null>;
 
 export interface DetailRow extends PriceCells {
   label: string;
+  /** 时段行：当前时刻正处于该时段 */
+  active?: boolean;
 }
 
 export interface DetailSection {
@@ -19,11 +22,13 @@ export interface DetailSection {
 /** 模型价格：主行摘要 + 二级明细分组 */
 export interface ModelPricing {
   symbol: string;
+  /** 基础价（时段定价模型为基础时段价） */
   base: PriceCells;
   /** 非 token 计费摘要（如 "¥0.08/s"），仅当无 token 输入价时用于主行 */
   unit: string | null;
   tiered: boolean;
   thinking: boolean;
+  scheduled: boolean;
   sections: DetailSection[];
 }
 
@@ -99,13 +104,18 @@ function humanizeKey(key: string): string {
 class RowMap {
   private readonly map = new Map<string, { row: DetailRow; sortKey: number }>();
 
-  set(label: string, column: PriceColumn, value: number, sortKey = Number.MAX_SAFE_INTEGER): void {
+  /** 取（或创建）行，供直接写入单元格与标记 */
+  row(label: string, sortKey = Number.MAX_SAFE_INTEGER): DetailRow {
     let entry = this.map.get(label);
     if (!entry) {
       entry = { row: { label, ...EMPTY_CELLS }, sortKey };
       this.map.set(label, entry);
     }
-    entry.row[column] = value;
+    return entry.row;
+  }
+
+  set(label: string, column: PriceColumn, value: number, sortKey = Number.MAX_SAFE_INTEGER): void {
+    this.row(label, sortKey)[column] = value;
   }
 
   rows(): DetailRow[] {
@@ -131,12 +141,53 @@ function toCells(value: Record<string, unknown>): PriceCells {
   return cells;
 }
 
+/** 时段分组：各窗口行（缺失列沿用基础价）+ 基础时段行，并标记当前所处时段 */
+function buildScheduleRows(
+  schedule: Schedule,
+  base: PriceCells,
+  t: Translator,
+  locale: Locale,
+  now: Date,
+): DetailRow[] {
+  const rows = new RowMap();
+  let anyActive = false;
+
+  schedule.windows.forEach((window, index) => {
+    const row = rows.row(
+      `${humanizeKey(window.name)} · ${describeWindow(window, schedule.timezone, locale)}`,
+      index,
+    );
+    for (const [family, column] of Object.entries(FAMILY_TO_COLUMN)) {
+      const value = window[family];
+      row[column] = typeof value === 'number' ? value : base[column];
+    }
+    if (isWindowActive(window, schedule.timezone, now)) {
+      row.active = true;
+      anyActive = true;
+    }
+  });
+
+  const fallback = rows.row(
+    `${humanizeKey(schedule.fallback)} · ${t('pricing.otherTimes')}`,
+    schedule.windows.length,
+  );
+  Object.assign(fallback, base);
+  if (!anyActive) fallback.active = true;
+
+  return rows.rows();
+}
+
 /**
  * 将 ModelCost 解析为主行摘要 + 明细分组（标签经 t 本地化）。
  * 覆盖三种阶梯表示：键式（input_32k_128k）、tiers 数组（阈值以上生效）、
- * 遗留 context_over_200k（tiers 存在时忽略）；以及思考模式、模态与按量费率。
+ * 遗留 context_over_200k（tiers 存在时忽略）；以及时段、思考模式、模态与按量费率。
  */
-export function parseModelPricing(cost: ModelCost | undefined, t: Translator): ModelPricing {
+export function parseModelPricing(
+  cost: ModelCost | undefined,
+  t: Translator,
+  locale: Locale,
+  now = new Date(),
+): ModelPricing {
   const symbol = currencySymbol(cost?.currency);
   const base: PriceCells = { ...EMPTY_CELLS };
   const contextTiers = new RowMap();
@@ -147,12 +198,18 @@ export function parseModelPricing(cost: ModelCost | undefined, t: Translator): M
   const thinkingBase: PriceCells = { ...EMPTY_CELLS };
   const structuredTiers: StructuredTier[] = [];
   let legacyOver200k: PriceCells | null = null;
+  let schedule: Schedule | null = null;
   let minKeyTierBound = Infinity;
   let minThinkingTierBound = Infinity;
   let summaryUnit: { value: number; suffix: string } | null = null;
 
   for (const [key, value] of Object.entries(cost ?? {})) {
     if (key === 'currency') continue;
+
+    if (key === 'schedule') {
+      if (isSchedule(value)) schedule = value;
+      continue;
+    }
 
     if (key === 'tiers' && Array.isArray(value)) {
       for (const entry of value) {
@@ -265,6 +322,11 @@ export function parseModelPricing(cost: ModelCost | undefined, t: Translator): M
   }
 
   const sections: DetailSection[] = [];
+  if (schedule)
+    sections.push({
+      title: t('pricing.timeBased'),
+      rows: buildScheduleRows(schedule, base, t, locale, now),
+    });
   if (contextTiers.size > 0)
     sections.push({ title: t('pricing.contextPricing'), rows: contextTiers.rows() });
   if (thinkingRows.size > 0)
@@ -291,6 +353,7 @@ export function parseModelPricing(cost: ModelCost | undefined, t: Translator): M
     unit: summaryUnit ? `${formatMoney(symbol, summaryUnit.value)}${summaryUnit.suffix}` : null,
     tiered: contextTiers.size > 0,
     thinking: thinkingRows.size > 0,
+    scheduled: schedule !== null,
     sections,
   };
 }

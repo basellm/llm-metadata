@@ -1,25 +1,16 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {
-      "deepseek-flash": 0.02,
-      "deepseek-v4-flash": 0.02,
-      "deepseek-v4-flash-vision-exp": 0.02,
-      "deepseek-v4-pro": 0.008333333333333333
+    "billing_expr": {
+      "deepseek-flash": "weekday(\"UTC\") >= 1 && weekday(\"UTC\") <= 5 && ((hour(\"UTC\") >= 1 && hour(\"UTC\") < 4) || (hour(\"UTC\") >= 6 && hour(\"UTC\") < 10)) ? tier(\"peak\", p * 0.3 + cr * 0.006 + c * 1.2) : tier(\"off_peak\", p * 0.15 + cr * 0.003 + c * 0.6)",
+      "deepseek-v4-flash": "weekday(\"UTC\") >= 1 && weekday(\"UTC\") <= 5 && ((hour(\"UTC\") >= 1 && hour(\"UTC\") < 4) || (hour(\"UTC\") >= 6 && hour(\"UTC\") < 10)) ? tier(\"peak\", p * 0.3 + cr * 0.006 + c * 1.2) : tier(\"off_peak\", p * 0.15 + cr * 0.003 + c * 0.6)",
+      "deepseek-v4-flash-vision-exp": "weekday(\"UTC\") >= 1 && weekday(\"UTC\") <= 5 && ((hour(\"UTC\") >= 1 && hour(\"UTC\") < 4) || (hour(\"UTC\") >= 6 && hour(\"UTC\") < 10)) ? tier(\"peak\", p * 0.3 + cr * 0.006 + c * 1.2) : tier(\"off_peak\", p * 0.15 + cr * 0.003 + c * 0.6)",
+      "deepseek-v4-pro": "weekday(\"UTC\") >= 1 && weekday(\"UTC\") <= 5 && ((hour(\"UTC\") >= 1 && hour(\"UTC\") < 4) || (hour(\"UTC\") >= 6 && hour(\"UTC\") < 10)) ? tier(\"peak\", p * 1.32 + cr * 0.044 + c * 3.96) : tier(\"off_peak\", p * 0.66 + cr * 0.022 + c * 1.98)"
     },
-    "completion_ratio": {
-      "deepseek-flash": 4,
-      "deepseek-v4-flash": 4,
-      "deepseek-v4-flash-vision-exp": 4,
-      "deepseek-v4-pro": 2
-    },
-    "model_price": {},
-    "model_ratio": {
-      "deepseek-flash": 0.075,
-      "deepseek-v4-flash": 0.075,
-      "deepseek-v4-flash-vision-exp": 0.075,
-      "deepseek-v4-pro": 0.2175
+    "billing_mode": {
+      "deepseek-flash": "tiered_expr",
+      "deepseek-v4-flash": "tiered_expr",
+      "deepseek-v4-flash-vision-exp": "tiered_expr",
+      "deepseek-v4-pro": "tiered_expr"
     }
   },
   "message": "",

@@ -1,18 +1,14 @@
 {
   "data": {
-    "billing_expr": {},
-    "billing_mode": {},
-    "cache_ratio": {},
-    "completion_ratio": {
-      "v0-1.0-md": 5,
-      "v0-1.5-lg": 5,
-      "v0-1.5-md": 5
+    "billing_expr": {
+      "v0-1.0-md": "tier(\"standard\", p * 3 + c * 15)",
+      "v0-1.5-lg": "tier(\"standard\", p * 15 + c * 75)",
+      "v0-1.5-md": "tier(\"standard\", p * 3 + c * 15)"
     },
-    "model_price": {},
-    "model_ratio": {
-      "v0-1.0-md": 1.5,
-      "v0-1.5-lg": 7.5,
-      "v0-1.5-md": 1.5
+    "billing_mode": {
+      "v0-1.0-md": "tiered_expr",
+      "v0-1.5-lg": "tiered_expr",
+      "v0-1.5-md": "tiered_expr"
     }
   },
   "message": "",

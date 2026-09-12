@@ -1,6 +1,7 @@
 /** 格式化工具函数 */
 
-import { CostFamilyCells, ModelCost } from '../types/index.js';
+import { COST_FAMILIES } from '../constants/cost-families.js';
+import type { CostFamilyCells, CostSchedule, ModelCost, ModelCostTier } from '../types/index.js';
 
 /** 将 token 数量格式化为 K/M 形式 */
 export function formatTokensToKM(tokens?: number): string | null {
@@ -301,11 +302,9 @@ export interface UsdCostResult {
 }
 
 /**
- * 将成本对象规范化为 USD。
- * NewAPI 的倍率体系以 USD 为基准（1 = $0.002/1K tokens），
- * 非 USD 价格若不换算会产生错误倍率。
- * 结构化阶梯（tiers / context_over_200k）中的价格一并换算，
- * 但 tier 描述符（size 为 token 阈值）保持原样。
+ * 将成本对象规范化为 USD（new-api 表达式系数以 USD 为基准）。
+ * 顶层数字字段与嵌套结构（tiers / context_over_200k / schedule 窗口及其 tiers）
+ * 中的计费家族价格一并换算；tier.size、weekdays 等非价格字段保持原样。
  */
 export function normalizeCostToUSD(
   cost: ModelCost | undefined,
@@ -322,6 +321,15 @@ export function normalizeCostToUSD(
   }
 
   const toUsd = (value: number) => Number((value / rate).toPrecision(6));
+  const convertCells = <T extends CostFamilyCells>(cells: T): T => {
+    const out = { ...cells };
+    for (const family of COST_FAMILIES) {
+      const value = out[family];
+      if (typeof value === 'number') out[family] = toUsd(value);
+    }
+    return out;
+  };
+  const convertTiers = (tiers: ModelCostTier[]) => tiers.map(convertCells);
 
   const converted: ModelCost = { currency: 'USD' };
   for (const [key, value] of Object.entries(cost)) {
@@ -329,22 +337,18 @@ export function normalizeCostToUSD(
     if (typeof value === 'number') {
       converted[key] = toUsd(value);
     } else if (key === 'tiers' && Array.isArray(value)) {
-      converted.tiers = value.map((entry) => {
-        const out = { ...entry };
-        for (const [cellKey, cellValue] of Object.entries(entry)) {
-          if (cellKey !== 'tier' && typeof cellValue === 'number') {
-            (out as Record<string, unknown>)[cellKey] = toUsd(cellValue);
-          }
-        }
-        return out;
-      });
+      converted.tiers = convertTiers(value);
     } else if (key === 'context_over_200k' && value && typeof value === 'object') {
-      converted.context_over_200k = Object.fromEntries(
-        Object.entries(value).map(([cellKey, cellValue]) => [
-          cellKey,
-          typeof cellValue === 'number' ? toUsd(cellValue) : cellValue,
-        ]),
-      ) as CostFamilyCells;
+      converted.context_over_200k = convertCells(value as CostFamilyCells);
+    } else if (key === 'schedule' && value && typeof value === 'object') {
+      const schedule = value as CostSchedule;
+      converted.schedule = {
+        ...schedule,
+        windows: (Array.isArray(schedule.windows) ? schedule.windows : []).map((window) => ({
+          ...convertCells(window),
+          ...(Array.isArray(window.tiers) ? { tiers: convertTiers(window.tiers) } : {}),
+        })),
+      };
     } else {
       converted[key] = value;
     }
@@ -359,48 +363,5 @@ export function buildModelPriceInfo(cost?: ModelCost) {
     output: extractValidPrice(cost?.output),
     cacheRead: extractValidPrice(cost?.cache_read),
     cacheWrite: extractValidPrice(cost?.cache_write),
-  };
-}
-
-/** 获取最高价格（用于 NewAPI 比率计算） */
-export function getMaxPrices(cost?: ModelCost): {
-  maxInput: number | null;
-  maxOutput: number | null;
-  maxCacheRead: number | null;
-} {
-  if (!cost) {
-    return { maxInput: null, maxOutput: null, maxCacheRead: null };
-  }
-
-  const numericFields = extractNumericFields(cost);
-
-  // 收集所有 input 相关字段
-  const inputFields = numericFields
-    .filter(
-      ([key]) => key === 'input' || key.startsWith('input_') || key.startsWith('thinking_input'),
-    )
-    .map(([, value]) => value);
-
-  // 收集所有 output 相关字段
-  const outputFields = numericFields
-    .filter(
-      ([key]) => key === 'output' || key.startsWith('output_') || key.startsWith('thinking_output'),
-    )
-    .map(([, value]) => value);
-
-  // 收集所有 cache_read 相关字段
-  const cacheReadFields = numericFields
-    .filter(
-      ([key]) =>
-        key === 'cache_read' ||
-        key.startsWith('cache_read_') ||
-        key.startsWith('thinking_cache_read'),
-    )
-    .map(([, value]) => value);
-
-  return {
-    maxInput: inputFields.length > 0 ? Math.max(...inputFields) : null,
-    maxOutput: outputFields.length > 0 ? Math.max(...outputFields) : null,
-    maxCacheRead: cacheReadFields.length > 0 ? Math.max(...cacheReadFields) : null,
   };
 }

@@ -7289,7 +7289,31 @@
           "cache_read": 0.003,
           "input": 0.15,
           "output": 0.6,
-          "reasoning": 0.6
+          "reasoning": 0.6,
+          "schedule": {
+            "fallback": "off_peak",
+            "timezone": "UTC",
+            "windows": [
+              {
+                "cache_read": 0.006,
+                "hours": [
+                  "01:00-04:00",
+                  "06:00-10:00"
+                ],
+                "input": 0.3,
+                "name": "peak",
+                "output": 1.2,
+                "reasoning": 1.2,
+                "weekdays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          }
         },
         "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
         "family": "deepseek-flash",
@@ -7339,7 +7363,31 @@
           "cache_read": 0.003,
           "input": 0.15,
           "output": 0.6,
-          "reasoning": 0.6
+          "reasoning": 0.6,
+          "schedule": {
+            "fallback": "off_peak",
+            "timezone": "UTC",
+            "windows": [
+              {
+                "cache_read": 0.006,
+                "hours": [
+                  "01:00-04:00",
+                  "06:00-10:00"
+                ],
+                "input": 0.3,
+                "name": "peak",
+                "output": 1.2,
+                "reasoning": 1.2,
+                "weekdays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          }
         },
         "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
         "family": "deepseek-flash",
@@ -7389,7 +7437,31 @@
           "cache_read": 0.003,
           "input": 0.15,
           "output": 0.6,
-          "reasoning": 0.6
+          "reasoning": 0.6,
+          "schedule": {
+            "fallback": "off_peak",
+            "timezone": "UTC",
+            "windows": [
+              {
+                "cache_read": 0.006,
+                "hours": [
+                  "01:00-04:00",
+                  "06:00-10:00"
+                ],
+                "input": 0.3,
+                "name": "peak",
+                "output": 1.2,
+                "reasoning": 1.2,
+                "weekdays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          }
         },
         "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
         "family": "deepseek-flash",
@@ -7436,10 +7508,34 @@
       "deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.003625,
-          "input": 0.435,
-          "output": 0.87,
-          "reasoning": 0.87
+          "cache_read": 0.022,
+          "input": 0.66,
+          "output": 1.98,
+          "reasoning": 1.98,
+          "schedule": {
+            "fallback": "off_peak",
+            "timezone": "UTC",
+            "windows": [
+              {
+                "cache_read": 0.044,
+                "hours": [
+                  "01:00-04:00",
+                  "06:00-10:00"
+                ],
+                "input": 1.32,
+                "name": "peak",
+                "output": 3.96,
+                "reasoning": 3.96,
+                "weekdays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            ]
+          }
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
