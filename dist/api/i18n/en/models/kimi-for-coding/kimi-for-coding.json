@@ -6,13 +6,12 @@
     "input": 0,
     "output": 0
   },
-  "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
+  "description": "Kimi coding model with more efficient thinking and up to 1M context, available through Kimi Code",
   "family": "kimi-k2",
   "id": "kimi-for-coding",
-  "knowledge": "2025-01",
-  "last_updated": "2026-06-12",
+  "last_updated": "2026-09-11",
   "limit": {
-    "context": 262144,
+    "context": 1048576,
     "output": 32768
   },
   "modalities": {
@@ -25,12 +24,22 @@
       "text"
     ]
   },
-  "name": "Kimi K2.7 Code",
-  "open_weights": true,
+  "name": "kimi-for-coding",
+  "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
-  "release_date": "2026-06-12",
-  "structured_output": true,
-  "temperature": false,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "high",
+        "max"
+      ]
+    }
+  ],
+  "release_date": "2026-09-11",
   "tool_call": true
 }
