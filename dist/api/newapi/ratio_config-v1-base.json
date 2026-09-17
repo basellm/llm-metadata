@@ -278,7 +278,7 @@
       "qwen3.5-27b": "tier(\"standard\", p * 0.3 + c * 2.4)",
       "qwen3.5-35b-a3b": "tier(\"standard\", p * 0.25 + c * 2)",
       "qwen3.5-397b-a17b": "tier(\"standard\", p * 0.6 + c * 3.6)",
-      "qwen3.5-flash": "tier(\"standard\", p * 0.172 + c * 1.72)",
+      "qwen3.5-flash": "len <= 256000 ? tier(\"0_256k\", p * 0.172 + c * 1.033) : tier(\"256k_plus\", p * 0.689 + c * 4.133)",
       "qwen3.5-plus": "tier(\"standard\", p * 0.4 + c * 2.4)",
       "qwen3.6-27b": "tier(\"standard\", p * 0.6 + c * 3.6)",
       "qwen3.6-35b-a3b": "tier(\"standard\", p * 0.248 + c * 1.485)",

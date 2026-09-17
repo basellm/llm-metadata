@@ -1,15 +1,31 @@
 {
   "attachment": true,
   "cost": {
+    "context_over_200k": {
+      "input": 0.689,
+      "output": 4.133,
+      "reasoning": 4.133
+    },
     "input": 0.172,
-    "output": 1.72,
-    "reasoning": 1.72
+    "output": 1.033,
+    "reasoning": 1.033,
+    "tiers": [
+      {
+        "input": 0.689,
+        "output": 4.133,
+        "reasoning": 4.133,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
   "family": "qwen",
   "id": "qwen3.5-flash",
   "knowledge": "2025-04",
-  "last_updated": "2026-02-23",
+  "last_updated": "2026-09-11",
   "limit": {
     "context": 1000000,
     "output": 65536
