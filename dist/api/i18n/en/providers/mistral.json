@@ -1074,6 +1074,7 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "high",
             "max"
           ]
@@ -1081,6 +1082,47 @@
       ],
       "release_date": "2026-06-13",
       "status": "beta",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-glm-5-3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.14,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "zai-glm-5-3",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
