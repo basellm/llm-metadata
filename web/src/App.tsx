@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { motion } from 'motion/react';
 import { BookOpen, LayoutGrid, List, Search, TriangleAlert } from 'lucide-react';
 
 import { CopyButton } from '@/components/copy-button';
@@ -9,8 +10,13 @@ import { NewApiSettings } from '@/components/newapi-settings';
 import { PricingTable } from '@/components/pricing-table';
 import { ProviderIcon } from '@/components/provider-icon';
 import { ProviderSidebar } from '@/components/provider-sidebar';
+import { StatePanel } from '@/components/state-panel';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { AnimatedShinyText } from '@/components/ui/animated-shiny-text';
+import { BlurFade } from '@/components/ui/blur-fade';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { NumberTicker } from '@/components/ui/number-ticker';
 import {
   Select,
   SelectContent,
@@ -19,6 +25,8 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Skeleton } from '@/components/ui/skeleton';
+import { TextAnimate } from '@/components/ui/text-animate';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import {
   fetchManifest,
   fetchProvider,
@@ -28,8 +36,8 @@ import {
   type Provider,
   type ProviderIndexItem,
 } from '@/lib/api';
-import { formatDate } from '@/lib/format';
-import { useI18n } from '@/lib/i18n';
+import { INTL_LOCALES, formatDate } from '@/lib/format';
+import { renderMessage, useI18n } from '@/lib/i18n';
 import { NewApiProvider, providerRatioConfig, useNewApi } from '@/lib/newapi';
 import { cn } from '@/lib/utils';
 import { readStoredViewMode, storeViewMode, type ViewMode } from '@/lib/view-mode';
@@ -56,22 +64,37 @@ function buildHash(providerId: string, modelId?: string | null): string {
   return `#${params.toString()}`;
 }
 
+/** 头部统计胶囊：供应商与模型数以滚动数字呈现 */
+function HeaderStats({ providers, models }: { providers: number; models: number }) {
+  const { locale, t } = useI18n();
+  const intl = INTL_LOCALES[locale];
+  return (
+    <span className="text-muted-foreground mr-1.5 hidden rounded-full border px-2.5 py-0.5 font-mono text-[11px] tabular-nums sm:inline">
+      {renderMessage(t('app.stats'), {
+        providers: <NumberTicker value={providers} locale={intl} />,
+        models: <NumberTicker value={models} locale={intl} />,
+      })}
+    </span>
+  );
+}
+
 /** 数据来源脚注：消息中的 {link} 占位符渲染为 models.dev 链接 */
 function FooterSource() {
   const { t } = useI18n();
-  const [before, after] = t('app.footerSource').split('{link}');
   return (
     <span>
-      {before}
-      <a
-        href="https://models.dev"
-        target="_blank"
-        rel="noreferrer"
-        className="hover:text-foreground underline underline-offset-2"
-      >
-        models.dev
-      </a>
-      {after}
+      {renderMessage(t('app.footerSource'), {
+        link: (
+          <a
+            href="https://models.dev"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-foreground underline underline-offset-2"
+          >
+            models.dev
+          </a>
+        ),
+      })}
     </span>
   );
 }
@@ -109,27 +132,42 @@ const VIEW_OPTIONS: ReadonlyArray<{ value: ViewMode; icon: typeof List }> = [
   { value: 'cards', icon: LayoutGrid },
 ];
 
-/** 表格 / 卡片视图切换（分段控件） */
+/** 表格 / 卡片视图切换（分段控件，选中底色在两项间滑动） */
 function ViewToggle({ view, onChange }: { view: ViewMode; onChange: (view: ViewMode) => void }) {
   const { t } = useI18n();
   return (
     <div role="group" className="flex shrink-0 rounded-md border p-0.5">
-      {VIEW_OPTIONS.map(({ value, icon: Icon }) => (
-        <button
-          key={value}
-          type="button"
-          aria-pressed={view === value}
-          aria-label={t(`view.${value}`)}
-          title={t(`view.${value}`)}
-          onClick={() => onChange(value)}
-          className={cn(
-            'text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 flex size-7 items-center justify-center rounded-sm transition-colors focus-visible:ring-2 focus-visible:outline-none',
-            view === value && 'bg-accent text-foreground',
-          )}
-        >
-          <Icon className="size-4" />
-        </button>
-      ))}
+      {VIEW_OPTIONS.map(({ value, icon: Icon }) => {
+        const active = view === value;
+        return (
+          <Tooltip key={value}>
+            <TooltipTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon-xs"
+                aria-pressed={active}
+                aria-label={t(`view.${value}`)}
+                onClick={() => onChange(value)}
+                className={cn(
+                  'relative size-7 rounded-sm hover:bg-transparent',
+                  active && 'text-foreground',
+                )}
+              >
+                {active && (
+                  <motion.span
+                    layoutId="view-toggle-indicator"
+                    aria-hidden
+                    className="bg-accent absolute inset-0 rounded-sm"
+                    transition={{ type: 'spring', stiffness: 500, damping: 40 }}
+                  />
+                )}
+                <Icon className="relative size-4" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>{t(`view.${value}`)}</TooltipContent>
+          </Tooltip>
+        );
+      })}
     </div>
   );
 }
@@ -311,25 +349,24 @@ function Workspace({ updatedAt }: { updatedAt: string | null }) {
             <span aria-hidden className="bg-primary size-2.5 rounded-full" />
             LLM Metadata
           </a>
-          <span className="text-muted-foreground hidden text-sm sm:inline">{t('app.tagline')}</span>
+          <AnimatedShinyText className="hidden text-sm sm:inline">
+            {t('app.tagline')}
+          </AnimatedShinyText>
           <div className="ml-auto flex items-center gap-1.5">
-            {providers && (
-              <span className="text-muted-foreground mr-1.5 hidden rounded-full border px-2.5 py-0.5 font-mono text-[11px] tabular-nums sm:inline">
-                {t('app.stats', { providers: providers.length, models: totalModels })}
-              </span>
-            )}
+            {providers && <HeaderStats providers={providers.length} models={totalModels} />}
             <NewApiSettings />
             <LocaleToggle />
             <ThemeToggle />
-            <a
-              href={REPO_URL}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={t('app.github')}
-              className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 flex size-8 items-center justify-center rounded-md transition-colors focus-visible:ring-2 focus-visible:outline-none"
-            >
-              <GithubIcon className="size-5" />
-            </a>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button asChild variant="ghost" size="icon-sm">
+                  <a href={REPO_URL} target="_blank" rel="noreferrer" aria-label={t('app.github')}>
+                    <GithubIcon className="size-5" />
+                  </a>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>{t('app.github')}</TooltipContent>
+            </Tooltip>
           </div>
         </div>
       </header>
@@ -381,48 +418,69 @@ function Workspace({ updatedAt }: { updatedAt: string | null }) {
 
           {selectedMeta && !detailOpen && (
             <div className="flex shrink-0 flex-wrap items-center gap-3">
-              <ProviderIcon
+              {/* 供应商标识按 ID 重挂载，切换时整体渐入、名称逐字揭示；搜索框保持稳定不重挂载 */}
+              <BlurFade
                 key={selectedMeta.id}
-                id={selectedMeta.id}
-                name={selectedMeta.name}
-                iconURL={selectedMeta.iconURL}
-                className="size-8 rounded-md"
-              />
-              <h1 className="text-xl font-semibold tracking-tight">{selectedMeta.name}</h1>
-              <span className="bg-muted text-muted-foreground rounded px-1.5 py-0.5 font-mono text-[11px]">
-                {selectedMeta.id}
-              </span>
-              {selectedMeta.currency && (
-                <span
-                  title={t('app.billingCurrency', { currency: selectedMeta.currency })}
-                  className="text-muted-foreground rounded-full border px-2 py-0.5 font-mono text-[11px]"
-                >
-                  {selectedMeta.currency}
-                </span>
-              )}
-              {selectedMeta.doc && (
-                <a
-                  href={selectedMeta.doc}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs transition-colors focus-visible:ring-2 focus-visible:outline-none"
-                >
-                  <BookOpen className="size-3.5" />
-                  {t('app.docs')}
-                </a>
-              )}
-              {loadedProvider && (
-                <CopyButton
-                  label={t('newapi.copyProvider')}
-                  text={() =>
-                    JSON.stringify(
-                      providerRatioConfig(loadedProvider, deployment, exchangeRates),
-                      null,
-                      2,
-                    )
-                  }
+                direction="right"
+                className="flex min-w-0 flex-wrap items-center gap-3"
+              >
+                <ProviderIcon
+                  id={selectedMeta.id}
+                  name={selectedMeta.name}
+                  iconURL={selectedMeta.iconURL}
+                  className="size-8 rounded-md"
                 />
-              )}
+                <TextAnimate
+                  as="h1"
+                  by="character"
+                  className="text-xl font-semibold tracking-tight"
+                >
+                  {selectedMeta.name}
+                </TextAnimate>
+                <span className="bg-muted text-muted-foreground rounded px-1.5 py-0.5 font-mono text-[11px]">
+                  {selectedMeta.id}
+                </span>
+                {selectedMeta.currency && (
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <span
+                        tabIndex={0}
+                        className="text-muted-foreground focus-visible:ring-ring/50 rounded-full border px-2 py-0.5 font-mono text-[11px] focus-visible:ring-2 focus-visible:outline-none"
+                      >
+                        {selectedMeta.currency}
+                      </span>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      {t('app.billingCurrency', { currency: selectedMeta.currency })}
+                    </TooltipContent>
+                  </Tooltip>
+                )}
+                {selectedMeta.doc && (
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="xs"
+                    className="text-muted-foreground hover:text-foreground rounded-full px-2.5 font-normal"
+                  >
+                    <a href={selectedMeta.doc} target="_blank" rel="noreferrer">
+                      <BookOpen className="size-3.5" />
+                      {t('app.docs')}
+                    </a>
+                  </Button>
+                )}
+                {loadedProvider && (
+                  <CopyButton
+                    label={t('newapi.copyProvider')}
+                    text={() =>
+                      JSON.stringify(
+                        providerRatioConfig(loadedProvider, deployment, exchangeRates),
+                        null,
+                        2,
+                      )
+                    }
+                  />
+                )}
+              </BlurFade>
               <div className="ml-auto flex w-full items-center gap-2 sm:w-auto">
                 <div className="relative flex-1 sm:w-72">
                   <Search className="text-muted-foreground pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2" />
@@ -440,17 +498,11 @@ function Workspace({ updatedAt }: { updatedAt: string | null }) {
           )}
 
           {error ? (
-            <div className="flex h-44 flex-col items-center justify-center gap-3 rounded-lg border border-dashed text-sm">
-              <TriangleAlert className="text-muted-foreground size-5" />
-              <p className="text-muted-foreground">{error}</p>
-              <button
-                type="button"
-                onClick={handleRetry}
-                className="border-input hover:bg-accent focus-visible:ring-ring/50 rounded-md border px-3 py-1.5 text-sm transition-colors focus-visible:ring-2 focus-visible:outline-none"
-              >
+            <StatePanel icon={TriangleAlert} message={error}>
+              <Button type="button" variant="outline" size="sm" onClick={handleRetry}>
                 {t('app.retry')}
-              </button>
-            </div>
+              </Button>
+            </StatePanel>
           ) : detailOpen && selectedModel && selectedMeta ? (
             <ModelDetail
               key={`${selectedMeta.id}/${selectedModel.id}`}

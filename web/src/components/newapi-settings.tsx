@@ -1,6 +1,7 @@
 import { useCallback, useMemo, useState, type ReactNode } from 'react';
 import { Download, SlidersHorizontal } from 'lucide-react';
 
+import { Button } from '@/components/ui/button';
 import {
   Dialog,
   DialogBody,
@@ -20,6 +21,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { CURRENCIES, type Currency } from '@billing/currencies';
 import {
   QUOTA_DISPLAY_TYPES,
@@ -32,15 +34,6 @@ import { buildRatioConfig } from '@billing/ratio-config';
 import { fetchAllProviders } from '@/lib/api';
 import { useI18n, type MessageKey, type Translator } from '@/lib/i18n';
 import { quotaUsdDisplay, useNewApi } from '@/lib/newapi';
-import { cn } from '@/lib/utils';
-
-const BUTTON =
-  'focus-visible:ring-ring/50 inline-flex h-8 items-center gap-1.5 rounded-md border px-3 text-sm transition-colors focus-visible:ring-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50';
-const BUTTON_GHOST = cn(BUTTON, 'border-input hover:bg-accent');
-const BUTTON_PRIMARY = cn(
-  BUTTON,
-  'bg-primary text-primary-foreground border-primary hover:opacity-90',
-);
 
 /** 表单草稿：数值以原始字符串保存，允许输入过程中的中间状态 */
 interface Draft {
@@ -308,19 +301,27 @@ export function NewApiSettings() {
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogTrigger
-        aria-label={t('newapi.title')}
-        title={customized ? t('newapi.customized') : t('newapi.title')}
-        className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 flex h-8 items-center gap-1.5 rounded-md px-2 text-sm transition-colors focus-visible:ring-2 focus-visible:outline-none"
-      >
-        <SlidersHorizontal className="size-4" />
-        <span className="hidden sm:inline">new-api</span>
-        {customized && (
-          <span className="bg-primary/10 text-primary rounded px-1.5 py-px font-mono text-[11px]">
-            {displaySymbol(deployment)}
-          </span>
-        )}
-      </DialogTrigger>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <DialogTrigger asChild>
+            <Button
+              variant="ghost"
+              size="sm"
+              aria-label={t('newapi.title')}
+              className="px-2 font-normal"
+            >
+              <SlidersHorizontal />
+              <span className="hidden sm:inline">new-api</span>
+              {customized && (
+                <span className="bg-primary/10 text-primary rounded px-1.5 py-px font-mono text-[11px]">
+                  {displaySymbol(deployment)}
+                </span>
+              )}
+            </Button>
+          </DialogTrigger>
+        </TooltipTrigger>
+        <TooltipContent>{customized ? t('newapi.customized') : t('newapi.title')}</TooltipContent>
+      </Tooltip>
       <DialogContent closeLabel={t('newapi.close')}>
         <DialogHeader>
           <DialogTitle>{t('newapi.title')}</DialogTitle>
@@ -435,11 +436,13 @@ export function NewApiSettings() {
         </DialogBody>
 
         <DialogFooter>
-          <button
+          <Button
             type="button"
+            variant="outline"
+            size="sm"
             onClick={() => void handleExport()}
             disabled={!candidate || exportState === 'loading'}
-            className={cn(BUTTON_GHOST, 'mr-auto')}
+            className="mr-auto"
           >
             <Download className="size-3.5" />
             {exportState === 'loading'
@@ -447,22 +450,18 @@ export function NewApiSettings() {
               : exportState === 'error'
                 ? t('newapi.exportFailed')
                 : t('newapi.exportAll')}
-          </button>
-          <button
+          </Button>
+          <Button
             type="button"
+            variant="outline"
+            size="sm"
             onClick={() => setDraft(toDraft(defaults))}
-            className={BUTTON_GHOST}
           >
             {t('newapi.reset')}
-          </button>
-          <button
-            type="button"
-            onClick={handleSave}
-            disabled={!candidate}
-            className={BUTTON_PRIMARY}
-          >
+          </Button>
+          <Button type="button" size="sm" onClick={handleSave} disabled={!candidate}>
             {t('newapi.save')}
-          </button>
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

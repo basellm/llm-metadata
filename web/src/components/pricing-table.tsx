@@ -1,11 +1,13 @@
 import { Fragment, useMemo, useState } from 'react';
-import { ArrowDown, ArrowUp, ArrowUpDown, ChevronRight } from 'lucide-react';
+import { motion } from 'motion/react';
+import { ArrowDown, ArrowUp, ArrowUpDown, ChevronRight, SearchX } from 'lucide-react';
 
 import { ExprBlock } from '@/components/expr-block';
 import { ModelBadges } from '@/components/model-badges';
-import { ModelsEmpty } from '@/components/models-empty';
 import { PriceValue } from '@/components/price-value';
+import { StatePanel } from '@/components/state-panel';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import {
   Table,
   TableBody,
@@ -31,6 +33,14 @@ const NUMERIC_CELL = 'text-right font-mono text-[13px] tabular-nums';
 /** 明细子行首格：连续左引导线（单元格无内边距，由内层容器撑起整高） */
 const GUIDE = 'ml-[26px] border-l pl-4';
 const DETAIL_ROW = 'border-0 bg-muted/20 hover:bg-muted/20';
+
+/** 展开块中的子行：淡入出现（tr 不能被包裹，逐行动画） */
+const MotionTableRow = motion.create(TableRow);
+const DETAIL_ROW_MOTION = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.2 },
+} as const;
 
 function SortableHead({
   label,
@@ -86,7 +96,7 @@ function DetailPriceRow({
     </span>
   );
   return (
-    <TableRow className={cn(DETAIL_ROW, isLast && 'border-b')}>
+    <MotionTableRow {...DETAIL_ROW_MOTION} className={cn(DETAIL_ROW, isLast && 'border-b')}>
       <TableCell className="p-0 pl-3">
         <div className={cn(GUIDE, 'py-2 text-[13px]')}>
           {row.label}
@@ -98,13 +108,13 @@ function DetailPriceRow({
       <TableCell className={NUMERIC_CELL}>{cell(row.cacheRead)}</TableCell>
       <TableCell className={NUMERIC_CELL}>{cell(row.cacheWrite)}</TableCell>
       <TableCell className={NUMERIC_CELL}>{cell(row.output)}</TableCell>
-    </TableRow>
+    </MotionTableRow>
   );
 }
 
 function DetailSectionHeader({ title }: { title: string }) {
   return (
-    <TableRow className={DETAIL_ROW}>
+    <MotionTableRow {...DETAIL_ROW_MOTION} className={DETAIL_ROW}>
       <TableCell colSpan={7} className="p-0 pl-3">
         <div
           className={cn(
@@ -115,7 +125,7 @@ function DetailSectionHeader({ title }: { title: string }) {
           {title}
         </div>
       </TableCell>
-    </TableRow>
+    </MotionTableRow>
   );
 }
 
@@ -160,7 +170,7 @@ function DetailPricingRows({
 /** new-api 表达式计费子行（可复制，恒为展开块末行） */
 function DetailExprRow({ expr, primaryCurrency }: { expr: ModelExpr; primaryCurrency: string }) {
   return (
-    <TableRow className={cn(DETAIL_ROW, 'border-b')}>
+    <MotionTableRow {...DETAIL_ROW_MOTION} className={cn(DETAIL_ROW, 'border-b')}>
       <TableCell colSpan={7} className="p-0 pl-3">
         <ExprBlock
           expr={expr}
@@ -169,7 +179,7 @@ function DetailExprRow({ expr, primaryCurrency }: { expr: ModelExpr; primaryCurr
           codeClassName="bg-background/60"
         />
       </TableCell>
-    </TableRow>
+    </MotionTableRow>
   );
 }
 
@@ -236,10 +246,16 @@ export function PricingTable({
     });
   };
 
-  if (rows.length === 0) return <ModelsEmpty />;
+  if (rows.length === 0) return <StatePanel icon={SearchX} message={t('table.empty')} />;
 
   return (
-    <div className="min-h-0 flex-1">
+    // 入场动画放在滚动容器之外的包裹层：不给大表格滚动容器附加 filter / transform
+    <motion.div
+      initial={{ opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, ease: 'easeOut' }}
+      className="min-h-0 flex-1"
+    >
       {/* 表格独立纵向滚动，表头吸顶；横向滚动同容器承载 */}
       <div className="max-h-full overflow-auto overscroll-contain rounded-lg border">
         <Table>
@@ -301,8 +317,10 @@ export function PricingTable({
                     <TableCell className="max-w-80">
                       <div className="flex items-center gap-1.5">
                         {expandable ? (
-                          <button
+                          <Button
                             type="button"
+                            variant="ghost"
+                            size="icon-xs"
                             onClick={(event) => {
                               event.stopPropagation();
                               toggle(model.id);
@@ -311,7 +329,7 @@ export function PricingTable({
                             aria-label={t(open ? 'table.collapse' : 'table.expand', {
                               model: model.name || model.id,
                             })}
-                            className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 -ml-1 flex size-5 shrink-0 items-center justify-center rounded-sm transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                            className="-ml-1 size-5 rounded-sm hover:bg-transparent"
                           >
                             <ChevronRight
                               className={cn(
@@ -319,7 +337,7 @@ export function PricingTable({
                                 open && 'rotate-90',
                               )}
                             />
-                          </button>
+                          </Button>
                         ) : (
                           <span aria-hidden className="-ml-1 size-5 shrink-0" />
                         )}
@@ -399,6 +417,6 @@ export function PricingTable({
           </TableBody>
         </Table>
       </div>
-    </div>
+    </motion.div>
   );
 }

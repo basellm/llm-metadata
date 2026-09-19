@@ -69,8 +69,3 @@ export function formatDate(value: string, locale: Locale = 'en'): string {
       : { year: 'numeric', month: 'short', timeZone: 'UTC' };
   return new Intl.DateTimeFormat(INTL_LOCALES[locale], options).format(date);
 }
-
-/** 本地化千分位整数（1,050,000） */
-export function formatNumber(value: number, locale: Locale = 'en'): string {
-  return new Intl.NumberFormat(INTL_LOCALES[locale]).format(value);
-}

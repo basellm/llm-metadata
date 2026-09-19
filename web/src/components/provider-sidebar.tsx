@@ -1,7 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
+import { motion } from 'motion/react';
 import { Search } from 'lucide-react';
 
 import { ProviderIcon } from '@/components/provider-icon';
+import { BlurFade } from '@/components/ui/blur-fade';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Skeleton } from '@/components/ui/skeleton';
 import { fetchModelIndex, type ModelIndexItem, type ProviderIndexItem } from '@/lib/api';
@@ -13,7 +16,7 @@ import { cn } from '@/lib/utils';
 const MAX_MODEL_RESULTS = 50;
 
 const ITEM_BUTTON =
-  'hover:bg-accent focus-visible:ring-ring/50 flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left text-[13px] transition-colors focus-visible:ring-2 focus-visible:outline-none';
+  'hover:bg-accent focus-visible:ring-ring/50 relative flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left text-[13px] transition-colors focus-visible:ring-2 focus-visible:outline-none';
 const HINT = 'text-muted-foreground px-2 py-4 text-center text-sm';
 
 type ModelIndexState =
@@ -124,18 +127,28 @@ export function ProviderSidebar({
                     aria-current={active ? 'true' : undefined}
                     className={cn(
                       ITEM_BUTTON,
-                      active ? 'bg-accent text-foreground font-medium' : 'text-muted-foreground',
+                      active ? 'text-foreground font-medium' : 'text-muted-foreground',
                     )}
                   >
+                    {/* 选中底色在列表项之间滑动（共享布局动画） */}
+                    {active && (
+                      <motion.span
+                        layoutId="sidebar-active"
+                        aria-hidden
+                        className="bg-accent absolute inset-0 rounded-md"
+                        transition={{ type: 'spring', stiffness: 500, damping: 40 }}
+                      />
+                    )}
                     <ProviderIcon
                       id={provider.id}
                       name={provider.name}
                       iconURL={provider.iconURL}
+                      className="relative"
                     />
-                    <span className="min-w-0 flex-1 truncate">{provider.name}</span>
+                    <span className="relative min-w-0 flex-1 truncate">{provider.name}</span>
                     <span
                       className={cn(
-                        'font-mono text-[11px] tabular-nums',
+                        'relative font-mono text-[11px] tabular-nums',
                         active ? 'text-muted-foreground' : 'text-muted-foreground/60',
                       )}
                     >
@@ -150,60 +163,63 @@ export function ProviderSidebar({
         </nav>
 
         {searching && (
-          <nav aria-label={t('sidebar.models')}>
-            <SectionLabel
-              title={t('sidebar.models')}
-              count={index.status === 'ready' ? modelResults.length : undefined}
-            />
-            {index.status === 'error' ? (
-              <div className={cn(HINT, 'flex flex-col items-center gap-2')}>
-                {t('sidebar.modelsError')}
-                <button
-                  type="button"
-                  onClick={() => setAttempt((n) => n + 1)}
-                  className="border-input hover:bg-accent focus-visible:ring-ring/50 rounded-md border px-2.5 py-1 text-xs transition-colors focus-visible:ring-2 focus-visible:outline-none"
-                >
-                  {t('app.retry')}
-                </button>
-              </div>
-            ) : index.status !== 'ready' ? (
-              <div className="flex flex-col gap-1 px-2" aria-busy>
-                {Array.from({ length: 4 }, (_, i) => (
-                  <Skeleton key={i} className="h-9 w-full" />
-                ))}
-              </div>
-            ) : (
-              <ul className="flex flex-col gap-px">
-                {visibleModels.map(({ model, provider }) => (
-                  <li key={`${provider.id}/${model.id}`}>
-                    <button
-                      type="button"
-                      onClick={() => onSelectModel(provider.id, model.id)}
-                      className={cn(ITEM_BUTTON, 'text-muted-foreground')}
-                    >
-                      <ProviderIcon
-                        id={provider.id}
-                        name={provider.name}
-                        iconURL={provider.iconURL}
-                      />
-                      <span className="min-w-0 flex-1">
-                        <span className="text-foreground block truncate">{model.name}</span>
-                        <span className="block truncate font-mono text-[11px]">
-                          {provider.name} · {model.id}
+          <BlurFade>
+            <nav aria-label={t('sidebar.models')}>
+              <SectionLabel
+                title={t('sidebar.models')}
+                count={index.status === 'ready' ? modelResults.length : undefined}
+              />
+              {index.status === 'error' ? (
+                <div className={cn(HINT, 'flex flex-col items-center gap-2')}>
+                  {t('sidebar.modelsError')}
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="xs"
+                    onClick={() => setAttempt((n) => n + 1)}
+                  >
+                    {t('app.retry')}
+                  </Button>
+                </div>
+              ) : index.status !== 'ready' ? (
+                <div className="flex flex-col gap-1 px-2" aria-busy>
+                  {Array.from({ length: 4 }, (_, i) => (
+                    <Skeleton key={i} className="h-9 w-full" />
+                  ))}
+                </div>
+              ) : (
+                <ul className="flex flex-col gap-px">
+                  {visibleModels.map(({ model, provider }) => (
+                    <li key={`${provider.id}/${model.id}`}>
+                      <button
+                        type="button"
+                        onClick={() => onSelectModel(provider.id, model.id)}
+                        className={cn(ITEM_BUTTON, 'text-muted-foreground')}
+                      >
+                        <ProviderIcon
+                          id={provider.id}
+                          name={provider.name}
+                          iconURL={provider.iconURL}
+                        />
+                        <span className="min-w-0 flex-1">
+                          <span className="text-foreground block truncate">{model.name}</span>
+                          <span className="block truncate font-mono text-[11px]">
+                            {provider.name} · {model.id}
+                          </span>
                         </span>
-                      </span>
-                    </button>
-                  </li>
-                ))}
-                {modelResults.length === 0 && <li className={HINT}>{t('table.empty')}</li>}
-                {hiddenCount > 0 && (
-                  <li className="text-muted-foreground px-2 py-2 text-center text-[11px]">
-                    {t('sidebar.moreResults', { count: hiddenCount })}
-                  </li>
-                )}
-              </ul>
-            )}
-          </nav>
+                      </button>
+                    </li>
+                  ))}
+                  {modelResults.length === 0 && <li className={HINT}>{t('table.empty')}</li>}
+                  {hiddenCount > 0 && (
+                    <li className="text-muted-foreground px-2 py-2 text-center text-[11px]">
+                      {t('sidebar.moreResults', { count: hiddenCount })}
+                    </li>
+                  )}
+                </ul>
+              )}
+            </nav>
+          </BlurFade>
         )}
       </div>
     </aside>

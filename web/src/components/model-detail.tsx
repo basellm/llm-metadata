@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, type ReactNode } from 'react';
 import {
   ArrowDownToLine,
   ArrowUpFromLine,
@@ -27,6 +27,10 @@ import { ModelBadges } from '@/components/model-badges';
 import { ProviderIcon } from '@/components/provider-icon';
 import { SiblingEndpoints } from '@/components/sibling-endpoints';
 import { Badge } from '@/components/ui/badge';
+import { BlurFade } from '@/components/ui/blur-fade';
+import { BorderBeam } from '@/components/ui/border-beam';
+import { Button } from '@/components/ui/button';
+import { NumberTicker } from '@/components/ui/number-ticker';
 import {
   Table,
   TableBody,
@@ -35,12 +39,13 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { TextAnimate } from '@/components/ui/text-animate';
 import type { Model, ProviderIndexItem } from '@/lib/api';
 import {
+  INTL_LOCALES,
   formatContext,
   formatDate,
   formatMoney,
-  formatNumber,
   formatTokenPrice,
   isNewRelease,
 } from '@/lib/format';
@@ -84,7 +89,7 @@ const PRICE_CARDS = [
 ] as const;
 
 /** 概览条单元格 */
-function StatCell({ label, value, sub }: { label: string; value: React.ReactNode; sub?: string }) {
+function StatCell({ label, value, sub }: { label: string; value: ReactNode; sub?: string }) {
   return (
     <div className="bg-card p-4">
       <div className="text-muted-foreground text-[11px] font-medium tracking-wider uppercase">
@@ -96,8 +101,8 @@ function StatCell({ label, value, sub }: { label: string; value: React.ReactNode
   );
 }
 
-/** 关键参数行（"1,050,000 · 上下文窗口" 式） */
-function Fact({ icon: Icon, value, label }: { icon: LucideIcon; value: string; label: string }) {
+/** 关键参数行（"1,050,000 · 上下文窗口" 式），数值型参数以滚动数字呈现 */
+function Fact({ icon: Icon, value, label }: { icon: LucideIcon; value: ReactNode; label: string }) {
   return (
     <li className="flex items-center gap-2.5 text-sm">
       <Icon aria-hidden className="text-muted-foreground size-4 shrink-0" />
@@ -247,6 +252,7 @@ export function ModelDetail({
 }) {
   const { locale, t } = useI18n();
   const { deployment, exchangeRates } = useNewApi();
+  const intl = INTL_LOCALES[locale];
   const pricing = parseModelPricing(model.cost, t, locale, {
     providerCurrency: provider.currency,
   });
@@ -291,40 +297,47 @@ export function ModelDetail({
 
   return (
     <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
-      <button
+      <Button
         type="button"
+        variant="ghost"
+        size="sm"
         onClick={onBack}
-        className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 -ml-1 inline-flex items-center gap-1 rounded-sm text-sm transition-colors focus-visible:ring-2 focus-visible:outline-none"
+        className="-ml-2 gap-1 font-normal"
       >
-        <ChevronLeft className="size-4" />
+        <ChevronLeft />
         {t('detail.back')}
-      </button>
+      </Button>
 
-      {/* 标题区 */}
-      <div className="mt-4 flex flex-wrap items-center gap-3">
+      {/* 标题区：名称逐字揭示，其余元素随之渐入 */}
+      <BlurFade direction="right" className="mt-4 flex flex-wrap items-center gap-3">
         <ProviderIcon
           id={provider.id}
           name={provider.name}
           iconURL={provider.iconURL}
           className="size-10 rounded-lg"
         />
-        <h1 className="text-2xl font-semibold tracking-tight">{model.name || model.id}</h1>
+        <TextAnimate as="h1" by="character" className="text-2xl font-semibold tracking-tight">
+          {model.name || model.id}
+        </TextAnimate>
         <ModelBadges
           pricing={pricing}
           isNew={isNewRelease(model.release_date, Date.now())}
           status={model.status}
           providerCurrency={provider.currency}
         />
-      </div>
-      <div className="mt-2 flex items-center gap-1">
+      </BlurFade>
+      <BlurFade delay={0.05} className="mt-2 flex items-center gap-1">
         <code className="bg-muted text-muted-foreground rounded px-1.5 py-0.5 font-mono text-xs">
           {model.id}
         </code>
         <CopyButton text={model.id} />
-      </div>
+      </BlurFade>
 
-      {/* 概览条 */}
-      <div className="mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-lg border bg-(--border) sm:grid-cols-3 lg:grid-cols-5">
+      {/* 概览条：边框上缓慢流转的光束标记页面焦点 */}
+      <BlurFade
+        delay={0.1}
+        className="relative mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-lg border bg-(--border) sm:grid-cols-3 lg:grid-cols-5"
+      >
         <StatCell
           label={t('detail.price')}
           value={priceValue}
@@ -345,68 +358,76 @@ export function ModelDetail({
           label={t('table.output')}
           value={<ModalityIcons supported={outputModalities} />}
         />
-      </div>
+        <BorderBeam
+          size={120}
+          duration={10}
+          colorFrom="var(--color-primary)"
+          colorTo="transparent"
+        />
+      </BlurFade>
 
       {/* 描述 + 关键参数 */}
-      <section className="grid gap-6 py-8 md:grid-cols-2">
-        {model.description && (
-          <p className="text-muted-foreground max-w-prose text-sm leading-relaxed">
-            {model.description}
-          </p>
-        )}
-        <ul className="flex flex-col gap-2.5">
-          {model.limit?.context != null && (
-            <Fact
-              icon={Diamond}
-              value={formatNumber(model.limit.context, locale)}
-              label={t('detail.contextWindow')}
-            />
+      <BlurFade delay={0.15}>
+        <section className="grid gap-6 py-8 md:grid-cols-2">
+          {model.description && (
+            <p className="text-muted-foreground max-w-prose text-sm leading-relaxed">
+              {model.description}
+            </p>
           )}
-          {model.limit?.input != null && (
-            <Fact
-              icon={ArrowDownToLine}
-              value={formatNumber(model.limit.input, locale)}
-              label={t('detail.maxInput')}
-            />
-          )}
-          {model.limit?.output != null && (
-            <Fact
-              icon={ArrowUpFromLine}
-              value={formatNumber(model.limit.output, locale)}
-              label={t('detail.maxOutput')}
-            />
-          )}
-          {reasoningEfforts.length > 0 && (
-            <Fact
-              icon={Gauge}
-              value={reasoningEfforts.join(' · ')}
-              label={t('detail.reasoningEffort')}
-            />
-          )}
-          {model.family && <Fact icon={Tag} value={model.family} label={t('detail.family')} />}
-          {model.knowledge && (
-            <Fact
-              icon={GraduationCap}
-              value={formatDate(model.knowledge, locale)}
-              label={t('detail.knowledge')}
-            />
-          )}
-          {model.release_date && (
-            <Fact
-              icon={CalendarDays}
-              value={formatDate(model.release_date, locale)}
-              label={t('detail.release')}
-            />
-          )}
-          {model.last_updated && (
-            <Fact
-              icon={History}
-              value={formatDate(model.last_updated, locale)}
-              label={t('detail.updated')}
-            />
-          )}
-        </ul>
-      </section>
+          <ul className="flex flex-col gap-2.5">
+            {model.limit?.context != null && (
+              <Fact
+                icon={Diamond}
+                value={<NumberTicker value={model.limit.context} locale={intl} />}
+                label={t('detail.contextWindow')}
+              />
+            )}
+            {model.limit?.input != null && (
+              <Fact
+                icon={ArrowDownToLine}
+                value={<NumberTicker value={model.limit.input} locale={intl} />}
+                label={t('detail.maxInput')}
+              />
+            )}
+            {model.limit?.output != null && (
+              <Fact
+                icon={ArrowUpFromLine}
+                value={<NumberTicker value={model.limit.output} locale={intl} />}
+                label={t('detail.maxOutput')}
+              />
+            )}
+            {reasoningEfforts.length > 0 && (
+              <Fact
+                icon={Gauge}
+                value={reasoningEfforts.join(' · ')}
+                label={t('detail.reasoningEffort')}
+              />
+            )}
+            {model.family && <Fact icon={Tag} value={model.family} label={t('detail.family')} />}
+            {model.knowledge && (
+              <Fact
+                icon={GraduationCap}
+                value={formatDate(model.knowledge, locale)}
+                label={t('detail.knowledge')}
+              />
+            )}
+            {model.release_date && (
+              <Fact
+                icon={CalendarDays}
+                value={formatDate(model.release_date, locale)}
+                label={t('detail.release')}
+              />
+            )}
+            {model.last_updated && (
+              <Fact
+                icon={History}
+                value={formatDate(model.last_updated, locale)}
+                label={t('detail.updated')}
+              />
+            )}
+          </ul>
+        </section>
+      </BlurFade>
 
       {/* 价格：主价目 + 同一端点的其他货币官方价目 + new-api 表达式 */}
       {(hasPrices(pricing) || pricing.alternates.length > 0 || expr) && (

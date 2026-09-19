@@ -5,6 +5,7 @@ import { DetailSection } from '@/components/detail-section';
 import { ModelBadges } from '@/components/model-badges';
 import { PriceValue } from '@/components/price-value';
 import { ProviderIcon } from '@/components/provider-icon';
+import { Button } from '@/components/ui/button';
 import {
   Table,
   TableBody,
@@ -161,17 +162,19 @@ export function SiblingEndpoints({
                       <PriceValue pricing={pricing} column="output" />
                     </TableCell>
                     <TableCell className="w-0 pr-3 text-right">
-                      <button
+                      <Button
                         type="button"
+                        variant="ghost"
+                        size="icon-xs"
                         onClick={(event) => {
                           event.stopPropagation();
                           onOpen(provider.id, modelId);
                         }}
                         aria-label={t('table.viewDetails', { model: provider.name })}
-                        className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 inline-flex size-7 items-center justify-center rounded-md transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                        className="size-7"
                       >
                         <ArrowUpRight className="size-4" />
-                      </button>
+                      </Button>
                     </TableCell>
                   </TableRow>
                 );

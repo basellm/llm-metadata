@@ -1,4 +1,5 @@
 import {
+  Fragment,
   createContext,
   useCallback,
   useContext,
@@ -9,6 +10,19 @@ import {
 } from 'react';
 
 export type Locale = 'en' | 'zh' | 'ja';
+
+const PLACEHOLDER_RE = /(\{\w+\})/;
+
+/**
+ * 把消息中的 {name} 占位符替换为 React 节点（链接、动效数字等）；纯文本参数请直接用 t()。
+ * 未提供的占位符按原文保留。
+ */
+export function renderMessage(template: string, params: Record<string, ReactNode>): ReactNode {
+  return template.split(PLACEHOLDER_RE).map((part, index) => {
+    const name = part.startsWith('{') && part.endsWith('}') ? part.slice(1, -1) : null;
+    return <Fragment key={index}>{name !== null && name in params ? params[name] : part}</Fragment>;
+  });
+}
 
 export const LOCALES: ReadonlyArray<{ value: Locale; label: string }> = [
   { value: 'en', label: 'English' },

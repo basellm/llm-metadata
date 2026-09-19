@@ -1,16 +1,17 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type MouseEvent } from 'react';
 import { Check, Copy } from 'lucide-react';
 
+import { Button } from '@/components/ui/button';
 import { useI18n } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
 
-const ICON_ONLY =
-  'text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 inline-flex size-6 items-center justify-center rounded-md transition-colors focus-visible:ring-2 focus-visible:outline-none';
-const PILL =
-  'text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs transition-colors focus-visible:ring-2 focus-visible:outline-none';
+// Tailwind v4 的 scale-* 写入 CSS `scale` 属性而非 transform，过渡需列出 scale
+const ICON =
+  'absolute size-3.5 transition-[opacity,scale] duration-200 motion-reduce:transition-none';
 
 /**
- * 复制按钮：成功后短暂显示对勾。无 label 时为图标按钮；有 label 时为带文字的胶囊按钮。
+ * 复制按钮：成功后图标以缩放交叉切换为对勾并短暂停留（纯 CSS 过渡，列表中大量实例无运行时开销）。
+ * 无 label 时为图标按钮；有 label 时为带文字的胶囊按钮。
  * `text` 可为惰性函数，避免为未点击的复制预先序列化大载荷。
  */
 export function CopyButton({
@@ -28,7 +29,7 @@ export function CopyButton({
 
   useEffect(() => () => clearTimeout(timer.current), []);
 
-  const handleCopy = async (event: React.MouseEvent) => {
+  const handleCopy = async (event: MouseEvent) => {
     event.stopPropagation();
     try {
       await navigator.clipboard.writeText(typeof text === 'function' ? text() : text);
@@ -40,21 +41,32 @@ export function CopyButton({
     }
   };
 
-  const icon = copied ? (
-    <Check className="size-3.5 text-emerald-600 dark:text-emerald-400" />
-  ) : (
-    <Copy className="size-3.5" />
-  );
-
   return (
-    <button
+    <Button
       type="button"
+      variant={label ? 'outline' : 'ghost'}
+      size={label ? 'xs' : 'icon-xs'}
       onClick={handleCopy}
+      data-copied={copied || undefined}
       aria-label={copied ? t('copy.copied') : (label ?? t('copy.copy'))}
-      className={cn(label ? PILL : ICON_ONLY, className)}
+      className={cn(
+        'group/copy text-muted-foreground hover:text-foreground',
+        label && 'rounded-full px-2.5 font-normal',
+        className,
+      )}
     >
-      {icon}
+      <span className="relative flex size-3.5 items-center justify-center">
+        <Copy
+          className={cn(ICON, 'group-data-copied/copy:scale-50 group-data-copied/copy:opacity-0')}
+        />
+        <Check
+          className={cn(
+            ICON,
+            'text-success scale-50 opacity-0 group-data-copied/copy:scale-100 group-data-copied/copy:opacity-100',
+          )}
+        />
+      </span>
       {label && (copied ? t('copy.copied') : label)}
-    </button>
+    </Button>
   );
 }
