@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { BookOpen, LayoutGrid, List, Search, TriangleAlert } from 'lucide-react';
 
+import { CopyButton } from '@/components/copy-button';
 import { LocaleToggle } from '@/components/locale-toggle';
 import { CARD_GRID, ModelCards } from '@/components/model-cards';
 import { ModelDetail } from '@/components/model-detail';
+import { NewApiSettings } from '@/components/newapi-settings';
 import { PricingTable } from '@/components/pricing-table';
 import { ProviderIcon } from '@/components/provider-icon';
 import { ProviderSidebar } from '@/components/provider-sidebar';
@@ -18,16 +20,17 @@ import {
 } from '@/components/ui/select';
 import { Skeleton } from '@/components/ui/skeleton';
 import {
-  fetchBillingExpr,
   fetchManifest,
   fetchProvider,
   fetchProviders,
+  type Manifest,
   type Model,
   type Provider,
   type ProviderIndexItem,
 } from '@/lib/api';
 import { formatDate } from '@/lib/format';
 import { useI18n } from '@/lib/i18n';
+import { NewApiProvider, providerRatioConfig, useNewApi } from '@/lib/newapi';
 import { cn } from '@/lib/utils';
 import { readStoredViewMode, storeViewMode, type ViewMode } from '@/lib/view-mode';
 
@@ -131,27 +134,53 @@ function ViewToggle({ view, onChange }: { view: ViewMode; onChange: (view: ViewM
   );
 }
 
+/** 根组件：加载构建清单，为整个工作区提供 new-api 部署上下文（默认汇率来自清单） */
 export default function App() {
+  const [manifest, setManifest] = useState<Manifest | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchManifest().then((data) => {
+      if (!cancelled) setManifest(data);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const exchangeRates = useMemo(() => manifest?.newapi?.exchangeRates ?? {}, [manifest]);
+
+  return (
+    <NewApiProvider exchangeRates={exchangeRates}>
+      <Workspace updatedAt={manifest?.generatedAt ?? null} />
+    </NewApiProvider>
+  );
+}
+
+function Workspace({ updatedAt }: { updatedAt: string | null }) {
   const { locale, t } = useI18n();
+  const { deployment, exchangeRates } = useNewApi();
   const [providers, setProviders] = useState<ProviderIndexItem[] | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [selectedModelId, setSelectedModelId] = useState<string | null>(() => readHash().model);
   const [provider, setProvider] = useState<Provider | null>(null);
-  const [billingExpr, setBillingExpr] = useState<Record<string, string> | null>(null);
-  const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [modelQuery, setModelQuery] = useState('');
   const [view, setView] = useState<ViewMode>(readStoredViewMode);
   // 重试令牌：selectedId 不变时也能重新触发加载 effect
   const [reloadKey, setReloadKey] = useState(0);
 
-  // 加载供应商索引与构建元信息，并根据 URL hash 恢复选中项（语言切换后重取本地化数据）
+  // 加载供应商索引，并根据 URL hash 恢复选中项（语言切换后重取本地化数据）。
+  // 订阅套餐端点（Token Plan / Coding Plan）按预付额度抵扣、没有逐 token 价目，不在界面中列出；
+  // 侧栏、移动端选择器、全局搜索与“其他端点”均以此列表为准
   useEffect(() => {
     let cancelled = false;
     fetchProviders(locale)
       .then(({ providers: list }) => {
         if (cancelled) return;
-        const sorted = [...list].sort((a, b) => a.name.localeCompare(b.name));
+        const sorted = list
+          .filter((p) => !p.subscription)
+          .sort((a, b) => a.name.localeCompare(b.name));
         setProviders(sorted);
         const fromHash = readHash().provider;
         setSelectedId((current) => {
@@ -165,37 +194,33 @@ export default function App() {
       .catch((err: unknown) => {
         if (!cancelled) setError(err instanceof Error ? err.message : String(err));
       });
-    fetchManifest().then((manifest) => {
-      if (!cancelled && manifest?.generatedAt) setUpdatedAt(manifest.generatedAt);
-    });
     return () => {
       cancelled = true;
     };
   }, [locale, reloadKey]);
 
-  // 浏览器前进/后退：hash 变化同步选中的供应商与模型
+  // 浏览器前进/后退：hash 变化同步选中的供应商与模型；未列出的供应商 ID（失效链接、
+  // 订阅套餐端点）保持当前选择，不会停在空白骨架上
   useEffect(() => {
+    if (!providers) return;
     const onHashChange = () => {
       const { provider: providerId, model: modelId } = readHash();
-      if (providerId) setSelectedId(providerId);
+      if (providerId && providers.some((p) => p.id === providerId)) setSelectedId(providerId);
       setSelectedModelId(modelId);
     };
     window.addEventListener('hashchange', onHashChange);
     return () => window.removeEventListener('hashchange', onHashChange);
-  }, []);
+  }, [providers]);
 
-  // 加载选中供应商的模型与表达式计费映射
+  // 加载选中供应商的模型（表达式由前端按当前 new-api 部署即时生成）
   useEffect(() => {
     if (!selectedId) return;
     let cancelled = false;
     setProvider(null);
-    setBillingExpr(null);
     setError(null);
-    Promise.all([fetchProvider(locale, selectedId), fetchBillingExpr(selectedId)])
-      .then(([data, expr]) => {
-        if (cancelled) return;
-        setProvider(data);
-        setBillingExpr(expr);
+    fetchProvider(locale, selectedId)
+      .then((data) => {
+        if (!cancelled) setProvider(data);
       })
       .catch((err: unknown) => {
         if (!cancelled) setError(err instanceof Error ? err.message : String(err));
@@ -293,6 +318,7 @@ export default function App() {
                 {t('app.stats', { providers: providers.length, models: totalModels })}
               </span>
             )}
+            <NewApiSettings />
             <LocaleToggle />
             <ThemeToggle />
             <a
@@ -366,6 +392,14 @@ export default function App() {
               <span className="bg-muted text-muted-foreground rounded px-1.5 py-0.5 font-mono text-[11px]">
                 {selectedMeta.id}
               </span>
+              {selectedMeta.currency && (
+                <span
+                  title={t('app.billingCurrency', { currency: selectedMeta.currency })}
+                  className="text-muted-foreground rounded-full border px-2 py-0.5 font-mono text-[11px]"
+                >
+                  {selectedMeta.currency}
+                </span>
+              )}
               {selectedMeta.doc && (
                 <a
                   href={selectedMeta.doc}
@@ -376,6 +410,18 @@ export default function App() {
                   <BookOpen className="size-3.5" />
                   {t('app.docs')}
                 </a>
+              )}
+              {loadedProvider && (
+                <CopyButton
+                  label={t('newapi.copyProvider')}
+                  text={() =>
+                    JSON.stringify(
+                      providerRatioConfig(loadedProvider, deployment, exchangeRates),
+                      null,
+                      2,
+                    )
+                  }
+                />
               )}
               <div className="ml-auto flex w-full items-center gap-2 sm:w-auto">
                 <div className="relative flex-1 sm:w-72">
@@ -410,8 +456,9 @@ export default function App() {
               key={`${selectedMeta.id}/${selectedModel.id}`}
               model={selectedModel}
               provider={selectedMeta}
-              expr={billingExpr?.[selectedModel.id]}
+              providers={providers ?? []}
               onBack={handleCloseModel}
+              onOpenModelIn={handleOpenModelIn}
             />
           ) : loadedProvider && selectedMeta ? (
             <>
@@ -420,7 +467,6 @@ export default function App() {
                   key={loadedProvider.id}
                   models={models}
                   query={modelQuery}
-                  billingExpr={billingExpr}
                   provider={selectedMeta}
                   onOpenModel={handleOpenModel}
                 />
@@ -429,7 +475,8 @@ export default function App() {
                   key={loadedProvider.id}
                   models={models}
                   query={modelQuery}
-                  billingExpr={billingExpr}
+                  providerCurrency={selectedMeta.currency}
+                  billing={selectedMeta.billing}
                   onOpenModel={handleOpenModel}
                 />
               )}

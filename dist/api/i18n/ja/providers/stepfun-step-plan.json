@@ -1,5 +1,9 @@
 {
   "api": "https://api.stepfun.com/step_plan/v1",
+  "billing": {
+    "priority": 4
+  },
+  "currency": "CNY",
   "doc": "https://platform.stepfun.com/docs/zh/step-plan/integrations/reasoning-api",
   "env": [
     "STEPFUN_API_KEY"
@@ -10,7 +14,7 @@
   "models": {
     "step-3.5-flash": {
       "attachment": false,
-      "description": "StepFun flash lane for quick multimodal reasoning and coding assistance",
+      "description": "素早いマルチモーダル推論とコーディング支援向けの StepFun Flash",
       "id": "step-3.5-flash",
       "interleaved": {
         "field": "reasoning_content"
@@ -48,7 +52,7 @@
     },
     "step-3.5-flash-2603": {
       "attachment": false,
-      "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
+      "description": "効率的なマルチモーダル推論、コーディング、ツール利用向けの StepFun Flash モデル",
       "id": "step-3.5-flash-2603",
       "interleaved": {
         "field": "reasoning_content"
@@ -86,7 +90,7 @@
     },
     "step-3.7-flash": {
       "attachment": true,
-      "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
+      "description": "より高速なエージェント、コーディング、マルチモーダルプロンプト向けの StepFun 新世代 Flash モデル",
       "id": "step-3.7-flash",
       "interleaved": {
         "field": "reasoning_content"
@@ -127,7 +131,7 @@
     },
     "step-router-v1": {
       "attachment": false,
-      "description": "StepFun routing model that dispatches requests to the appropriate Step model.",
+      "description": "リクエストを適切な Step モデルに振り分ける StepFun のルーティングモデル。",
       "id": "step-router-v1",
       "knowledge": "2025-01",
       "last_updated": "2026-05-29",
@@ -153,5 +157,6 @@
     }
   },
   "name": "StepFun Step Plan (China)",
-  "npm": "@ai-sdk/openai-compatible"
+  "npm": "@ai-sdk/openai-compatible",
+  "subscription": true
 }

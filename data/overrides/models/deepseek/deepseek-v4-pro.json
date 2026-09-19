@@ -1,5 +1,5 @@
 {
-  "$comment": "DeepSeek-V4-Pro-0813, https://api-docs.deepseek.com/quick_start/pricing. Base prices are off-peak; peak (Mon-Fri 01:00-04:00 & 06:00-10:00 UTC) is 2x. From 2026-09-14 04:00 UTC DeepSeek routes deepseek-v4-pro to V4.1-Flash at Flash prices until V4.1-Pro ships; switch this file to the deepseek-flash prices then.",
+  "$comment": "DeepSeek-V4-Pro-0813, https://api-docs.deepseek.com/quick_start/pricing. Base prices are off-peak; peak (Mon-Fri 01:00-04:00 & 06:00-10:00 UTC) is 2x. DeepSeek withdrew its 2026-09-14 notice about routing deepseek-v4-pro to V4.1-Flash; V4 Pro stays available with unchanged billing until further notice (pricing page footnote). CNY top-ups bill at the official CNY list (https://api-docs.deepseek.com/zh-cn/quick_start/pricing), carried in currency_options.CNY.",
   "cost": {
     "input": 0.66,
     "output": 1.98,
@@ -19,6 +19,29 @@
           "cache_read": 0.044
         }
       ]
+    },
+    "currency_options": {
+      "CNY": {
+        "input": 4.5,
+        "output": 13.5,
+        "reasoning": 13.5,
+        "cache_read": 0.15,
+        "schedule": {
+          "timezone": "UTC",
+          "fallback": "off_peak",
+          "windows": [
+            {
+              "name": "peak",
+              "weekdays": [1, 2, 3, 4, 5],
+              "hours": ["01:00-04:00", "06:00-10:00"],
+              "input": 9,
+              "output": 27,
+              "reasoning": 27,
+              "cache_read": 0.3
+            }
+          ]
+        }
+      }
     }
   }
 }

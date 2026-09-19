@@ -1,14 +1,18 @@
+import { COST_FAMILIES } from '../billing/cost-families.js';
+import { isCurrency } from '../billing/currencies.js';
 /**
  * 原生供应商过滤服务。
  *
  * 上游 models.dev 混杂了大量聚合商/转售商，本服务依据
  * data/native-providers.json 白名单只保留第一方（原生）供应商，
- * 并可按规则剔除原生供应商中托管的第三方模型。
+ * 并可按规则剔除原生供应商中托管的第三方模型；同时把目录中的
+ * 供应商属性（lobeIcon、结算货币、订阅标记、计费规则）注入数据并校验价目货币的一致性。
  */
 export class NativeFilter {
     config;
     excludePatterns = new Map();
     providerRules = {};
+    providerCurrencies = new Map();
     configWarnings = [];
     constructor(config) {
         this.config = config;
@@ -28,12 +32,30 @@ export class NativeFilter {
                 this.excludePatterns.set(providerId, patterns);
             }
             this.providerRules[providerId] = this.sanitizeBillingRule(providerId, rule);
+            if (rule.currency !== undefined) {
+                if (isCurrency(rule.currency)) {
+                    this.providerCurrencies.set(providerId, rule.currency);
+                }
+                else {
+                    this.configWarnings.push(`native-providers: invalid currency "${String(rule.currency)}" for "${providerId}" (ignored)`);
+                }
+            }
+            if (rule.subscription !== undefined && typeof rule.subscription !== 'boolean') {
+                this.configWarnings.push(`native-providers: invalid subscription "${String(rule.subscription)}" for "${providerId}" (must be a boolean; ignored)`);
+            }
         }
         for (const [currency, rate] of Object.entries(config.exchangeRates || {})) {
             if (currency.startsWith('$'))
                 continue; // $comment 等元数据键
             if (typeof rate !== 'number' || rate <= 0) {
                 this.configWarnings.push(`native-providers: invalid exchange rate for "${currency}" (must be a positive number)`);
+            }
+        }
+        // 非 USD 端点缺少汇率时，其价目无法进入 NewAPI / VoAPI 的 USD 输出
+        const rates = this.getExchangeRates();
+        for (const [providerId, currency] of this.providerCurrencies) {
+            if (currency !== 'USD' && rates[currency] === undefined) {
+                this.configWarnings.push(`native-providers: "${providerId}" bills in ${currency} but exchangeRates.${currency} is missing (USD outputs will skip its prices)`);
             }
         }
     }
@@ -67,10 +89,6 @@ export class NativeFilter {
         }
         return sanitized;
     }
-    /** 是否启用过滤（配置缺失时构建保持全量并给出警告） */
-    get enabled() {
-        return this.config !== null;
-    }
     /** 非 USD 货币兑美元汇率（每 1 USD 对应的货币数量） */
     getExchangeRates() {
         const rates = {};
@@ -81,11 +99,45 @@ export class NativeFilter {
         }
         return rates;
     }
-    /** 已校验的供应商级计费规则（优先级、思考开关、1h 缓存写倍数） */
-    getProviderRules() {
-        return this.providerRules;
+    /** 价目是否含正的计费家族价格（全 0 的免费 / 订阅模型与货币无关） */
+    static hasPositivePrice(cost) {
+        return (!!cost &&
+            COST_FAMILIES.some((family) => {
+                const value = cost[family];
+                return typeof value === 'number' && value > 0;
+            }));
     }
-    /** 应用白名单与模型排除规则 */
+    /**
+     * 校验单个模型的价目货币并返回清洗后的模型：
+     * - currency_options 只接受已知且不同于主货币的键，其余丢弃并警告；
+     * - 主货币与端点货币不一致时警告（覆写填错端点的常见错误）。
+     * 返回该模型是否为“非 USD 端点上仍沿用上游 USD 数值”的估算价。
+     */
+    auditModelCurrency(providerId, modelId, model, providerCurrency, warnings) {
+        const cost = model.cost;
+        if (!cost)
+            return { model, estimated: false };
+        const declared = cost.currency;
+        if (declared !== undefined && declared !== providerCurrency) {
+            warnings.push(`pricing: ${providerId}/${modelId}: cost.currency ${declared} differs from the provider billing currency ${providerCurrency}`);
+        }
+        let cleaned = model;
+        if (cost.currency_options !== undefined) {
+            const main = declared ?? 'USD';
+            const options = {};
+            for (const [key, value] of Object.entries(cost.currency_options)) {
+                if (!isCurrency(key) || key === main || !value || typeof value !== 'object') {
+                    warnings.push(`pricing: ${providerId}/${modelId}: invalid currency_options entry "${key}" (dropped)`);
+                    continue;
+                }
+                options[key] = value;
+            }
+            cleaned = { ...model, cost: { ...cost, currency_options: options } };
+        }
+        const estimated = providerCurrency !== 'USD' && declared === undefined && NativeFilter.hasPositivePrice(cost);
+        return { model: cleaned, estimated };
+    }
+    /** 应用白名单、模型排除规则与货币审计 */
     apply(normalized) {
         if (!this.config) {
             return {
@@ -105,21 +157,32 @@ export class NativeFilter {
                 excludedProviders++;
                 continue;
             }
-            // 目录中的 lobeIcon 注入供应商数据（用于 NewAPI vendors 图标），不覆盖已有值
-            const enriched = rule.lobeIcon && !provider.lobeIcon ? { ...provider, lobeIcon: rule.lobeIcon } : provider;
-            const patterns = this.excludePatterns.get(providerId);
-            if (!patterns) {
-                providers[providerId] = enriched;
-                continue;
-            }
+            // 目录中的 lobeIcon / 结算货币 / 订阅标记 / 计费规则注入供应商数据（lobeIcon 不覆盖已有值）
+            const currency = this.providerCurrencies.get(providerId);
+            const billing = this.providerRules[providerId];
+            const enriched = {
+                ...provider,
+                ...(rule.lobeIcon && !provider.lobeIcon ? { lobeIcon: rule.lobeIcon } : {}),
+                ...(currency ? { currency } : {}),
+                ...(rule.subscription === true ? { subscription: true } : {}),
+                ...(billing && Object.keys(billing).length > 0 ? { billing } : {}),
+            };
+            const patterns = this.excludePatterns.get(providerId) ?? [];
+            const providerCurrency = currency ?? 'USD';
             const models = {};
+            let estimatedModels = 0;
             for (const [modelId, model] of Object.entries(enriched.models || {})) {
                 if (patterns.some((pattern) => pattern.test(modelId))) {
                     excludedModels++;
+                    continue;
                 }
-                else {
-                    models[modelId] = model;
-                }
+                const audited = this.auditModelCurrency(providerId, modelId, model, providerCurrency, warnings);
+                if (audited.estimated)
+                    estimatedModels++;
+                models[modelId] = audited.model;
+            }
+            if (estimatedModels > 0) {
+                warnings.push(`pricing: "${providerId}" bills in ${providerCurrency} but ${estimatedModels} model(s) still carry upstream USD estimates; add cost overrides with "currency": "${providerCurrency}"`);
             }
             providers[providerId] = { ...enriched, models };
         }

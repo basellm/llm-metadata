@@ -8,6 +8,7 @@
     "build": "npm run compile && node dist/build.js",
     "build:force": "npm run compile && node dist/build.js --force",
     "check": "npm run compile && node dist/build.js --check",
+    "translate": "npm run compile && node dist/translate.js",
     "clean": "rimraf .cache dist src/**/*.js src/**/*.d.ts",
     "compile": "tsc",
     "compile:watch": "tsc --watch",

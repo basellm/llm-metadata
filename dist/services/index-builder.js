@@ -17,6 +17,9 @@ export class IndexBuilder {
                 doc: effectiveProvider.doc || undefined,
                 iconURL: effectiveProvider.iconURL || undefined,
                 lobeIcon: effectiveProvider.lobeIcon || undefined,
+                currency: effectiveProvider.currency || undefined,
+                subscription: effectiveProvider.subscription || undefined,
+                billing: effectiveProvider.billing || undefined,
                 modelCount: 0,
             };
             // 构建模型索引项

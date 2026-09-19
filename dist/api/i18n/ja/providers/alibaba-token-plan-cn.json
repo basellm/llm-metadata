@@ -1,5 +1,13 @@
 {
   "api": "https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "billing": {
+    "priority": 2,
+    "thinkingToggle": {
+      "param": "enable_thinking",
+      "value": true
+    }
+  },
+  "currency": "CNY",
   "doc": "https://www.alibabacloud.com/help/zh/model-studio/token-plan-overview",
   "env": [
     "ALIBABA_TOKEN_PLAN_API_KEY"
@@ -14,7 +22,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Video model for image-to-video generation",
+      "description": "image-to-video 生成向けの動画モデル",
       "id": "happyhorse-1.1-i2v",
       "last_updated": "2026-07-17",
       "limit": {
@@ -43,7 +51,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Video model for reference-guided video generation",
+      "description": "参照画像・動画に基づく動画生成向けの動画モデル",
       "id": "happyhorse-1.1-r2v",
       "last_updated": "2026-07-17",
       "limit": {
@@ -72,7 +80,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Video model for prompt-driven text-to-video generation",
+      "description": "プロンプト主導の text-to-video 生成向けの動画モデル",
       "id": "happyhorse-1.1-t2v",
       "last_updated": "2026-07-17",
       "limit": {
@@ -100,7 +108,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "description": "プロンプト主導の生成、編集、ビジュアルデザインワークフロー向けの画像モデル",
       "family": "qwen",
       "id": "qwen-image-2.0",
       "last_updated": "2026-03-03",
@@ -129,7 +137,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "description": "プロンプト主導の生成、編集、ビジュアルデザインワークフロー向けの画像モデル",
       "family": "qwen",
       "id": "qwen-image-2.0-pro",
       "last_updated": "2026-03-03",
@@ -160,7 +168,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
       "family": "qwen3.6",
       "id": "qwen3.6-flash",
       "interleaved": {
@@ -206,7 +214,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Earlier Qwen multimodal workhorse for million-token agent and document tasks",
+      "description": "100 万トークン規模のエージェントおよび文書タスク向けの旧世代 Qwen マルチモーダル主力モデル",
       "family": "qwen",
       "id": "qwen3.6-plus",
       "interleaved": {
@@ -253,7 +261,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
+      "description": "エージェントフレームワーク、コーディングアシスタント、長期タスク向けに調整された Qwen フロンティアモデル",
       "family": "qwen",
       "id": "qwen3.7-max",
       "interleaved": {
@@ -297,7 +305,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
+      "description": "長文コンテキストエージェント、視覚入力、コーディング向けのマルチモーダル Qwen 主力モデル",
       "family": "qwen",
       "id": "qwen3.7-plus",
       "interleaved": {
@@ -344,7 +352,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
       "family": "qwen",
       "id": "qwen3.8-flash",
       "interleaved": {
@@ -397,7 +405,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "2.4-trillion-parameter MoE flagship for coding, professional work, multimodal understanding, and long-horizon agentic workflows",
+      "description": "コーディング、専門業務、マルチモーダル理解、長期エージェントワークフロー向けの 2.4 兆パラメータ MoE フラッグシップモデル",
       "family": "qwen",
       "id": "qwen3.8-max",
       "interleaved": {
@@ -453,7 +461,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Preview Qwen flagship for million-token multimodal reasoning and long-horizon agentic workflows",
+      "description": "100 万トークンのマルチモーダル推論と長期エージェントワークフロー向けの Qwen フラッグシップ プレビュー版",
       "family": "qwen",
       "id": "qwen3.8-max-preview",
       "interleaved": {
@@ -504,7 +512,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "description": "プロンプト主導の生成、編集、ビジュアルデザインワークフロー向けの画像モデル",
       "id": "wan2.7-image",
       "last_updated": "2026-05-29",
       "limit": {
@@ -532,7 +540,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "description": "プロンプト主導の生成、編集、ビジュアルデザインワークフロー向けの画像モデル",
       "id": "wan2.7-image-pro",
       "last_updated": "2026-05-29",
       "limit": {
@@ -556,5 +564,6 @@
     }
   },
   "name": "Alibaba Token Plan (China)",
-  "npm": "@ai-sdk/openai-compatible"
+  "npm": "@ai-sdk/openai-compatible",
+  "subscription": true
 }

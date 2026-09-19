@@ -1,28 +1,17 @@
-import { I18nService } from './i18n-service.js';
 import { deepMerge } from '../utils/object-utils.js';
 /** 数据处理服务 */
 export class DataProcessor {
     i18n;
-    constructor() {
-        // 使用项目根默认：运行时由 build.ts 实例化 DataProcessor 后，不会传 root；
-        // 这里在需要 API i18n 时，读取 "i18n/api/*.json" 的英文兜底模板。
-        this.i18n = new I18nService(process.cwd());
+    constructor(i18n) {
+        this.i18n = i18n;
     }
     /** 创建模型键 */
     createModelKey(providerId, modelId) {
         return `${providerId}/${modelId}`;
     }
-    /** 生成默认描述 */
-    generateDefaultDescription(modelName, providerId) {
-        const apiMsg = this.i18n.getApiMessages('en');
-        const tpl = apiMsg.defaults?.model_description ||
-            '${modelName} is an AI model provided by ${providerId}.';
-        return tpl.replace('${modelName}', modelName).replace('${providerId}', providerId);
-    }
     /** 按 locale 生成默认描述（fallback 到英文模板） */
-    generateDefaultDescriptionForLocale(locale, modelName, providerId) {
-        const msg = this.i18n.getApiMessages(locale);
-        const tpl = msg.defaults?.model_description ||
+    generateDefaultDescription(modelName, providerId, locale = 'en') {
+        const tpl = this.i18n.getApiMessages(locale).defaults?.model_description ||
             this.i18n.getApiMessages('en').defaults?.model_description ||
             '${modelName} is an AI model provided by ${providerId}.';
         return tpl.replace('${modelName}', modelName).replace('${providerId}', providerId);
@@ -39,11 +28,27 @@ export class DataProcessor {
             return providerPolicy;
         return true;
     }
-    /** 应用覆写配置 */
-    applyOverrides(entity, override) {
+    /**
+     * 应用模型级覆写。默认深合并；但覆写的 cost 声明了结算货币时整体替换成本对象：
+     * 货币切换意味着每个价格都换了单位，深合并会让上游其他货币的数值（如未固定的 cache_read）残留。
+     */
+    applyModelOverride(model, override) {
         if (!override)
-            return entity;
-        return deepMerge(entity, override);
+            return model;
+        const merged = deepMerge(model, override);
+        if (override.cost?.currency)
+            merged.cost = override.cost;
+        return merged;
+    }
+    /** 应用 i18n 覆写的英文文案（其它语言在本地化阶段切换） */
+    applyEnglishI18n(model, i18nModel) {
+        if (!i18nModel)
+            return model;
+        return {
+            ...model,
+            ...(i18nModel.name?.en ? { name: i18nModel.name.en } : {}),
+            ...(i18nModel.description?.en ? { description: i18nModel.description.en } : {}),
+        };
     }
     /** 处理单个模型数据 */
     processModel(modelData, modelId, providerId, overrides) {
@@ -53,22 +58,14 @@ export class DataProcessor {
         if (!processed.description) {
             processed.description = this.generateDefaultDescription(processed.name || modelId, providerId);
         }
-        // 应用模型级覆写
-        processed = this.applyOverrides(processed, overrides.models?.[modelKey]);
-        // 应用 i18n 文案（若存在，将默认英文写回 name/description；其它语言在 JSON i18n 时再切换）
-        const i18nModel = overrides.i18n?.models?.[modelKey];
-        if (i18nModel) {
-            if (i18nModel.name?.en)
-                processed.name = i18nModel.name.en;
-            if (i18nModel.description?.en)
-                processed.description = i18nModel.description.en;
-        }
-        return processed;
+        processed = this.applyModelOverride(processed, overrides.models?.[modelKey]);
+        return this.applyEnglishI18n(processed, overrides.i18n?.models?.[modelKey]);
     }
     /** 处理单个提供商数据 */
     processProvider(provider, providerId, overrides, sourceProviderIds) {
         // 应用提供商级覆写
-        let processed = this.applyOverrides(provider, overrides.providers?.[providerId]);
+        const providerOverride = overrides.providers?.[providerId];
+        let processed = providerOverride ? deepMerge(provider, providerOverride) : provider;
         // 添加图标URL（如果来自源数据）
         if (sourceProviderIds.has(providerId)) {
             processed = deepMerge(processed, {
@@ -81,31 +78,17 @@ export class DataProcessor {
             processedModels[modelId] = this.processModel(modelData, modelId, providerId, overrides);
         }
         // 基于 overrides 注入不存在的模型（允许仅通过 overrides.models 新增模型）
-        const overrideModels = overrides.models || {};
-        for (const [modelKey, override] of Object.entries(overrideModels)) {
+        for (const [modelKey, override] of Object.entries(overrides.models || {})) {
             const [provId, modId] = modelKey.split('/');
-            if (provId !== providerId)
+            if (provId !== providerId || processedModels[modId])
                 continue;
-            if (processedModels[modId])
-                continue;
-            // 从 override 创建基础模型，并应用默认描述与 i18n 英文兜底
             const baseName = override.name || modId;
             const created = {
                 id: modId,
                 name: baseName,
                 description: this.generateDefaultDescription(baseName, providerId),
-                // 其余字段通过覆写合入
             };
-            const withOverride = this.applyOverrides(created, override);
-            // 应用 i18n 覆写（英文写回）
-            const i18nModel = overrides.i18n?.models?.[modelKey];
-            if (i18nModel) {
-                if (i18nModel.name?.en)
-                    withOverride.name = i18nModel.name.en;
-                if (i18nModel.description?.en)
-                    withOverride.description = i18nModel.description.en;
-            }
-            processedModels[modId] = withOverride;
+            processedModels[modId] = this.applyEnglishI18n(this.applyModelOverride(created, override), overrides.i18n?.models?.[modelKey]);
         }
         return {
             ...processed,
@@ -149,9 +132,15 @@ export class DataProcessor {
         }
         return { providers: processed };
     }
-    /** 根据 locale 应用 i18n 文案到标准化数据（返回深拷贝后的新对象） */
+    /**
+     * 根据 locale 应用 i18n 文案到标准化数据（返回新对象）。
+     * 模型描述的解析顺序：人工覆写（data/overrides/i18n）→ 翻译记忆（i18n/descriptions）
+     * → 默认描述模板 → 保留英文（计入 untranslated）。
+     */
     localizeNormalizedData(data, overrides, locale) {
         const localizedProviders = {};
+        const translations = this.i18n.getDescriptionTranslations(locale);
+        const untranslated = [];
         for (const [providerId, provider] of Object.entries(data.providers)) {
             const provI18n = overrides.i18n?.providers?.[providerId];
             const name = provI18n?.name?.[locale] ?? provider.name;
@@ -160,20 +149,25 @@ export class DataProcessor {
             for (const [modelId, model] of Object.entries(provider.models || {})) {
                 const key = this.createModelKey(providerId, modelId);
                 const modI18n = overrides.i18n?.models?.[key];
-                const modelName = modI18n?.name?.[locale];
-                const modelDesc = modI18n?.description?.[locale];
                 const newModel = { ...model };
+                const modelName = modI18n?.name?.[locale];
                 if (modelName !== undefined)
                     newModel.name = modelName;
-                if (modelDesc !== undefined) {
-                    newModel.description = modelDesc;
+                const overrideDesc = modI18n?.description?.[locale];
+                const source = model.description;
+                if (overrideDesc !== undefined) {
+                    newModel.description = overrideDesc;
                 }
-                else {
-                    // 若原描述等于英文默认描述，则替换为对应语言模板
-                    const baseName = newModel.name || modelId;
-                    const enDefault = this.generateDefaultDescription(baseName, providerId);
-                    if (newModel.description === enDefault) {
-                        newModel.description = this.generateDefaultDescriptionForLocale(locale, baseName, providerId);
+                else if (source && translations[source] !== undefined) {
+                    newModel.description = translations[source];
+                }
+                else if (locale !== 'en' && source) {
+                    // 若原描述等于英文默认描述（以处理阶段的英文名生成），则替换为对应语言模板
+                    if (source === this.generateDefaultDescription(model.name || modelId, providerId)) {
+                        newModel.description = this.generateDefaultDescription(newModel.name || modelId, providerId, locale);
+                    }
+                    else {
+                        untranslated.push(source);
                     }
                 }
                 localizedModels[modelId] = newModel;
@@ -185,7 +179,7 @@ export class DataProcessor {
                 models: localizedModels,
             };
         }
-        return { providers: localizedProviders };
+        return { data: { providers: localizedProviders }, untranslated };
     }
 }
 //# sourceMappingURL=data-processor.js.map

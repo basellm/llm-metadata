@@ -1,12 +1,24 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.03,
+    "cache_read": 0.16,
     "cache_write": 0,
-    "input": 0.2,
-    "output": 1.1
+    "currency": "CNY",
+    "input": 0.8,
+    "output": 6,
+    "tiers": [
+      {
+        "cache_read": 0.24,
+        "input": 1.2,
+        "output": 8,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      }
+    ]
   },
-  "description": "Lighter GLM-4.5 variant for fast coding assistance and cheaper agents",
+  "description": "高速なコーディング支援と低コストエージェント向けの軽量版 GLM-4.5",
   "family": "glm-air",
   "id": "glm-4.5-air",
   "knowledge": "2025-04",

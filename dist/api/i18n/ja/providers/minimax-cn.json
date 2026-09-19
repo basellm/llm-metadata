@@ -1,5 +1,9 @@
 {
   "api": "https://api.minimaxi.com/anthropic/v1",
+  "billing": {
+    "priority": 10
+  },
+  "currency": "CNY",
   "doc": "https://platform.minimaxi.com/docs/guides/quickstart",
   "env": [
     "MINIMAX_API_KEY"
@@ -11,10 +15,13 @@
     "MiniMax-M2": {
       "attachment": false,
       "cost": {
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.21,
+        "cache_write": 2.625,
+        "currency": "CNY",
+        "input": 2.1,
+        "output": 8.4
       },
-      "description": "MiniMax model for chat, coding, office work, and agentic tasks",
+      "description": "チャット、コーディング、オフィス業務、エージェントタスク向けの MiniMax モデル",
       "family": "minimax",
       "id": "MiniMax-M2",
       "last_updated": "2025-10-27",
@@ -41,12 +48,13 @@
     "MiniMax-M2.1": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.03,
-        "cache_write": 0.375,
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.21,
+        "cache_write": 2.625,
+        "currency": "CNY",
+        "input": 2.1,
+        "output": 8.4
       },
-      "description": "MiniMax model for chat, coding, office work, and agentic tasks",
+      "description": "チャット、コーディング、オフィス業務、エージェントタスク向けの MiniMax モデル",
       "family": "minimax",
       "id": "MiniMax-M2.1",
       "last_updated": "2025-12-23",
@@ -73,12 +81,13 @@
     "MiniMax-M2.5": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.03,
-        "cache_write": 0.375,
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.21,
+        "cache_write": 2.625,
+        "currency": "CNY",
+        "input": 2.1,
+        "output": 8.4
       },
-      "description": "MiniMax model for chat, coding, office work, and agentic tasks",
+      "description": "チャット、コーディング、オフィス業務、エージェントタスク向けの MiniMax モデル",
       "family": "minimax",
       "id": "MiniMax-M2.5",
       "last_updated": "2026-02-12",
@@ -105,12 +114,13 @@
     "MiniMax-M2.5-highspeed": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.06,
-        "cache_write": 0.375,
-        "input": 0.6,
-        "output": 2.4
+        "cache_read": 0.21,
+        "cache_write": 2.625,
+        "currency": "CNY",
+        "input": 4.2,
+        "output": 16.8
       },
-      "description": "High-speed MiniMax model for low-latency coding and agent workflows",
+      "description": "低遅延のコーディングとエージェントワークフロー向けの高速 MiniMax モデル",
       "family": "minimax",
       "id": "MiniMax-M2.5-highspeed",
       "last_updated": "2026-02-13",
@@ -137,12 +147,13 @@
     "MiniMax-M2.7": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.06,
-        "cache_write": 0.375,
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.42,
+        "cache_write": 2.625,
+        "currency": "CNY",
+        "input": 2.1,
+        "output": 8.4
       },
-      "description": "MiniMax model for chat, coding, office work, and agentic tasks",
+      "description": "チャット、コーディング、オフィス業務、エージェントタスク向けの MiniMax モデル",
       "family": "minimax",
       "id": "MiniMax-M2.7",
       "last_updated": "2026-03-18",
@@ -169,12 +180,13 @@
     "MiniMax-M2.7-highspeed": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.06,
-        "cache_write": 0.375,
-        "input": 0.6,
-        "output": 2.4
+        "cache_read": 0.42,
+        "cache_write": 2.625,
+        "currency": "CNY",
+        "input": 4.2,
+        "output": 16.8
       },
-      "description": "High-speed MiniMax model for low-latency coding and agent workflows",
+      "description": "低遅延のコーディングとエージェントワークフロー向けの高速 MiniMax モデル",
       "family": "minimax",
       "id": "MiniMax-M2.7-highspeed",
       "last_updated": "2026-03-18",
@@ -201,19 +213,15 @@
     "MiniMax-M3": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.06,
-        "context_over_200k": {
-          "cache_read": 0.12,
-          "input": 0.6,
-          "output": 2.4
-        },
-        "input": 0.3,
-        "output": 1.2,
+        "cache_read": 0.42,
+        "currency": "CNY",
+        "input": 2.1,
+        "output": 8.4,
         "tiers": [
           {
-            "cache_read": 0.12,
-            "input": 0.6,
-            "output": 2.4,
+            "cache_read": 0.84,
+            "input": 4.2,
+            "output": 16.8,
             "tier": {
               "size": 512000,
               "type": "context"
@@ -221,7 +229,7 @@
           }
         ]
       },
-      "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
+      "description": "長文コンテキスト推論とエージェントタスク向けの MiniMax マルチモーダルコーディングモデル",
       "family": "minimax",
       "id": "MiniMax-M3",
       "last_updated": "2026-06-25",

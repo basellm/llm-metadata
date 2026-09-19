@@ -1,0 +1,21 @@
+{
+  "$comment": "Zhipu BigModel (China) official CNY list, https://docs.bigmodel.cn/cn/guide/start/pricing. Cache storage is free for now (cache_write 0). Input < 32K base uses the output >= 0.2K rate (2/8/0.4 applies only when output < 0.2K); [32K, 200K) tier.",
+  "cost": {
+    "currency": "CNY",
+    "input": 3,
+    "output": 14,
+    "cache_read": 0.6,
+    "cache_write": 0,
+    "tiers": [
+      {
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        },
+        "input": 4,
+        "output": 16,
+        "cache_read": 0.8
+      }
+    ]
+  }
+}

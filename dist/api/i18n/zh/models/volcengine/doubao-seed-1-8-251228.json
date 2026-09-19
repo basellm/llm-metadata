@@ -1,0 +1,68 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.16,
+    "currency": "CNY",
+    "input": 0.8,
+    "output": 8,
+    "tiers": [
+      {
+        "input": 1.2,
+        "output": 16,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      },
+      {
+        "input": 2.4,
+        "output": 24,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "字节跳动 Seed 模型，面向多模态推理、长上下文分析与智能体工作流",
+  "family": "seed",
+  "id": "doubao-seed-1-8-251228",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2025-12-28",
+  "limit": {
+    "context": 256000,
+    "output": 64000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Seed 1.8",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
+  "release_date": "2025-12-28",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

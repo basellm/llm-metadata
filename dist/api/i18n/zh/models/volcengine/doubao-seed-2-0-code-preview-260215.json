@@ -1,0 +1,69 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.64,
+    "currency": "CNY",
+    "input": 3.2,
+    "output": 16,
+    "tiers": [
+      {
+        "input": 4.8,
+        "output": 24,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      },
+      {
+        "input": 9.6,
+        "output": 48,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "字节跳动 Seed 编程模型，面向多模态软件工程与长时运行的智能体",
+  "family": "seed",
+  "id": "doubao-seed-2-0-code-preview-260215",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-02-14",
+  "limit": {
+    "context": 262144,
+    "output": 131072
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Seed 2.0 Code",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
+  "release_date": "2026-02-14",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

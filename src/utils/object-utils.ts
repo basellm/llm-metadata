@@ -1,6 +1,11 @@
 /** 对象工具函数 */
 import { createHash } from 'node:crypto';
 
+/** 非 null、非数组的普通对象 */
+export function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
 /** 深度合并对象 */
 export function deepMerge<T>(target: T, source: Partial<T>): T {
   const result = { ...target };

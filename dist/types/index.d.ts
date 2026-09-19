@@ -1,4 +1,6 @@
-import type { CostFamily } from '../constants/cost-families.js';
+import type { ModelCost, ProviderBillingRule } from '../billing/cost.js';
+import type { Currency } from '../billing/currencies.js';
+export type { CurrencyOptions, ModelCost, ProviderBillingRule } from '../billing/cost.js';
 /** 基础模型信息 */
 export interface ModelBase {
     id: string;
@@ -6,6 +8,10 @@ export interface ModelBase {
     description?: string;
     tags?: string[];
     icon?: string;
+    /** 模型系列（models.dev family，如 "qwen"、"claude-opus"） */
+    family?: string;
+    /** 生命周期状态（models.dev status，如 "deprecated"、"beta"）；缺省为正常可用 */
+    status?: string;
     release_date?: string;
     last_updated?: string;
     knowledge?: string;
@@ -16,55 +22,13 @@ export interface ModelCapabilities {
     attachment?: boolean;
     reasoning?: boolean;
     tool_call?: boolean;
+    structured_output?: boolean;
     temperature?: boolean;
 }
 /** 模型输入输出限制 */
 export interface ModelLimits {
     context?: number;
     output?: number;
-}
-/** 各计费家族的价格单元（USD 或 cost.currency 指定货币 / 1M tokens） */
-export type CostFamilyCells = Partial<Record<CostFamily, number>>;
-/** 结构化上下文阶梯条目（价格在 tier.size tokens 以上生效） */
-export interface ModelCostTier extends CostFamilyCells {
-    tier?: {
-        size?: number;
-        type?: string;
-    };
-}
-/**
- * 时段定价窗口（覆写数据）。窗口内给出的价格覆盖基础价，未给出的家族沿用基础价；
- * 基础成本含阶梯时，覆盖价格的窗口必须自带 tiers。
- */
-export interface CostScheduleWindow extends CostFamilyCells {
-    /** 档位名（写入 tier() 名称，如 "peak"） */
-    name: string;
-    /** 生效星期（0=周日 … 6=周六）；缺省为每天 */
-    weekdays?: number[];
-    /** 生效时间区间 "HH:MM-HH:MM"（结束不含；结束早于开始表示跨午夜）；缺省为全天 */
-    hours?: string[];
-    tiers?: ModelCostTier[];
-}
-/** 时段定价：按 IANA 时区评估，窗口按顺序匹配，均不命中时采用基础价 */
-export interface CostSchedule {
-    timezone: string;
-    /** 基础价档位名（如 "off_peak"） */
-    fallback: string;
-    windows: CostScheduleWindow[];
-}
-/**
- * 模型成本信息（与 models.dev Cost 对齐，另含仓库扩展）。
- * tiers 中价格在 tier.size 以上生效；context_over_200k 为同一信息的遗留表示（tiers 存在时忽略）。
- */
-export interface ModelCost extends CostFamilyCells {
-    currency?: 'CNY' | 'USD' | 'EUR';
-    tiers?: ModelCostTier[];
-    context_over_200k?: CostFamilyCells;
-    schedule?: CostSchedule;
-    /** 按图计费（USD / 张） */
-    per_image?: number;
-    /** 其余上游或覆写透传字段 */
-    [key: string]: number | string | ModelCostTier[] | CostFamilyCells | CostSchedule | undefined;
 }
 /** 模型支持的模态 */
 export interface ModelModalities {
@@ -77,7 +41,7 @@ export interface Model extends ModelBase, ModelCapabilities {
     cost?: ModelCost;
     modalities?: ModelModalities;
 }
-/** 基础提供商信息 */
+/** 基础提供商信息（lobeIcon / currency / subscription / billing 由 native-providers.json 注入） */
 export interface ProviderBase {
     id: string;
     name?: string;
@@ -87,6 +51,12 @@ export interface ProviderBase {
     icon?: string;
     iconURL?: string;
     lobeIcon?: string;
+    /** 端点结算货币，缺省 USD */
+    currency?: Currency;
+    /** 订阅套餐端点（Token Plan / Coding Plan）：用量从预付额度抵扣，上游 0 价不具信息量；仅为 true 时输出 */
+    subscription?: boolean;
+    /** new-api 计费规则（优先级、思考开关、1h 缓存写倍数）；无规则时省略 */
+    billing?: ProviderBillingRule;
 }
 /** 完整提供商数据 */
 export interface Provider extends ProviderBase {
@@ -103,27 +73,19 @@ export interface PolicyConfig {
         auto?: boolean;
     }>;
 }
-/** 思考模式开关：请求体字段等于该值时按思考模式（reasoning 价）计费 */
-export interface ThinkingToggle {
-    /** 请求体 JSON 路径（gjson 语法），如 "enable_thinking" */
-    param: string;
-    value: boolean | string | number;
-}
-/** 供应商级计费规则（native-providers.json） */
-export interface ProviderBillingRule {
-    /** 聚合价格输出中同名模型冲突时的优先级（数值大者胜出，默认 0） */
-    priority?: number;
-    /** 思考模式开关；缺省时 reasoning 价无法表达，按 output 价计费并给出警告 */
-    thinkingToggle?: ThinkingToggle;
-    /** 1 小时 TTL 缓存写入价相对 input 价的倍数（Anthropic 为 2）；缺省不输出 cc1h 项 */
-    cacheWrite1h?: number;
-}
 /** 原生供应商规则 */
 export interface NativeProviderRule extends ProviderBillingRule {
     /** 需要排除的非自研模型 ID 模式（不区分大小写的正则表达式） */
     excludeModels?: string[];
     /** NewAPI vendors 图标标识（@lobehub/icons 导出名，如 "Claude.Color"） */
     lobeIcon?: string;
+    /**
+     * 端点结算货币（缺省 USD）。非 USD 端点上未通过覆写给出该货币价目的模型，
+     * 其上游 USD 数值只是估算，构建会汇总警告以推动补齐。
+     */
+    currency?: Currency;
+    /** 订阅套餐端点（Token Plan / Coding Plan）：随供应商输出，Web UI 不列出 */
+    subscription?: boolean;
     /** 维护备注（构建时忽略） */
     notes?: string;
 }
@@ -164,12 +126,8 @@ export interface I18nLocaleConfig {
 export interface I18nConfig {
     locales: I18nLocaleConfig[];
 }
-export interface ApiI18nCapabilityLabels {
-    tools?: string;
-    files?: string;
-    reasoning?: string;
-    temperature?: string;
-}
+/** 标签键（能力 / 模态 / 状态 / 显式 tags）→ 本地化标签 */
+export type ApiI18nCapabilityLabels = Record<string, string>;
 export interface ApiI18nDefaults {
     model_description?: string;
 }
@@ -183,9 +141,11 @@ export interface ProviderIndexItem {
     name: string;
     api?: string | undefined;
     doc?: string | undefined;
-    icon?: string | undefined;
     iconURL?: string | undefined;
     lobeIcon?: string | undefined;
+    currency?: Currency | undefined;
+    subscription?: boolean | undefined;
+    billing?: ProviderBillingRule | undefined;
     modelCount: number;
 }
 /** 模型索引项 */
@@ -227,28 +187,10 @@ export interface NewApiModel {
     name_rule: number;
     icon: string;
 }
-/** NewAPI 价格配置（/api/ratio_config 载荷；全部模型以表达式计费） */
-export interface NewApiPriceConfig {
-    data: {
-        /** 计费模式（恒为 "tiered_expr"） */
-        billing_mode: Record<string, 'tiered_expr'>;
-        /** 计费表达式（expr-lang 语法，系数单位 USD/1M tokens；按次为 fixed(USD)） */
-        billing_expr: Record<string, string>;
-    };
-    message: string;
-    success: boolean;
-}
 /** NewAPI 同步载荷 */
 export interface NewApiSyncPayload {
     vendors: NewApiVendor[];
     models: NewApiModel[];
-}
-/** NewAPI 定价选项（货币换算与供应商级计费规则） */
-export interface NewApiPricingOptions {
-    /** 非 USD 货币兑美元汇率（每 1 USD 对应的货币数量） */
-    exchangeRates: Record<string, number>;
-    /** 供应商计费规则（优先级、思考开关、1h 缓存写倍数） */
-    providers: Record<string, ProviderBillingRule>;
 }
 export interface VoAPIFirm {
     id: string;
@@ -314,6 +256,10 @@ export interface BuildManifest {
     policyHash: string;
     nativeProvidersHash: string;
     stats: BuildStats;
+    /** 静态 NewAPI 预设的生成假设：非美元价目换算到 quota-USD 所用的汇率（每 1 USD 的货币数量） */
+    newapi: {
+        exchangeRates: Record<string, number>;
+    };
     warnings?: string[] | undefined;
 }
 /** 规范化数据 */

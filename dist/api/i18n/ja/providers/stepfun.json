@@ -1,5 +1,9 @@
 {
   "api": "https://api.stepfun.com/v1",
+  "billing": {
+    "priority": 10
+  },
+  "currency": "CNY",
   "doc": "https://platform.stepfun.com/docs/zh/overview/concept",
   "env": [
     "STEPFUN_API_KEY"
@@ -15,7 +19,7 @@
         "input": 2.05,
         "output": 9.59
       },
-      "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
+      "description": "効率的なマルチモーダル推論、コーディング、ツール利用向けの StepFun Flash モデル",
       "id": "step-1-32k",
       "knowledge": "2024-06",
       "last_updated": "2026-02-13",
@@ -46,7 +50,7 @@
         "input": 5.21,
         "output": 16.44
       },
-      "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
+      "description": "効率的なマルチモーダル推論、コーディング、ツール利用向けの StepFun Flash モデル",
       "id": "step-2-16k",
       "knowledge": "2024-06",
       "last_updated": "2026-02-13",
@@ -73,11 +77,12 @@
     "step-3.5-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.02,
-        "input": 0.1,
-        "output": 0.3
+        "cache_read": 0.14,
+        "currency": "CNY",
+        "input": 0.7,
+        "output": 2.1
       },
-      "description": "StepFun flash lane for quick multimodal reasoning and coding assistance",
+      "description": "素早いマルチモーダル推論とコーディング支援向けの StepFun Flash",
       "id": "step-3.5-flash",
       "interleaved": {
         "field": "reasoning_content"
@@ -116,11 +121,12 @@
     "step-3.5-flash-2603": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.02,
-        "input": 0.1,
-        "output": 0.3
+        "cache_read": 0.14,
+        "currency": "CNY",
+        "input": 0.7,
+        "output": 2.1
       },
-      "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
+      "description": "効率的なマルチモーダル推論、コーディング、ツール利用向けの StepFun Flash モデル",
       "id": "step-3.5-flash-2603",
       "interleaved": {
         "field": "reasoning_content"
@@ -159,11 +165,12 @@
     "step-3.7-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.037,
-        "input": 0.185,
-        "output": 1.11
+        "cache_read": 0.27,
+        "currency": "CNY",
+        "input": 1.35,
+        "output": 8.1
       },
-      "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
+      "description": "より高速なエージェント、コーディング、マルチモーダルプロンプト向けの StepFun 新世代 Flash モデル",
       "id": "step-3.7-flash",
       "interleaved": {
         "field": "reasoning_content"
@@ -204,7 +211,7 @@
     },
     "step-tts-2": {
       "attachment": false,
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
       "family": "step",
       "id": "step-tts-2",
       "last_updated": "2026-07-02",
@@ -229,7 +236,7 @@
     },
     "stepaudio-2.5-asr": {
       "attachment": false,
-      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "description": "正確な音声書き起こしと字幕ワークフロー向けの音声認識モデル",
       "family": "step",
       "id": "stepaudio-2.5-asr",
       "last_updated": "2026-07-02",
@@ -254,7 +261,7 @@
     },
     "stepaudio-2.5-tts": {
       "attachment": false,
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
       "family": "step",
       "id": "stepaudio-2.5-tts",
       "last_updated": "2026-07-02",

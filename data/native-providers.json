@@ -20,7 +20,10 @@
     "mistral": { "lobeIcon": "Mistral.Color" },
     "cohere": { "lobeIcon": "Cohere.Color" },
     "perplexity": { "lobeIcon": "Perplexity.Color" },
-    "deepseek": { "lobeIcon": "DeepSeek.Color" },
+    "deepseek": {
+      "lobeIcon": "DeepSeek.Color",
+      "notes": "Single endpoint billed in USD or CNY depending on the top-up currency; overrides carry the official CNY list as cost.currency_options.CNY."
+    },
     "alibaba": {
       "priority": 30,
       "lobeIcon": "Qwen.Color",
@@ -31,61 +34,96 @@
     "alibaba-cn": {
       "priority": 20,
       "lobeIcon": "Qwen.Color",
+      "currency": "CNY",
       "excludeModels": ["^deepseek", "^glm", "^kimi", "^llama", "^meta-llama", "^minimax", "^moonshot", "^abab"],
-      "thinkingToggle": { "param": "enable_thinking", "value": true }
+      "thinkingToggle": { "param": "enable_thinking", "value": true },
+      "notes": "Bailian (China) bills in CNY; upstream figures are USD conversions until per-model CNY overrides land."
     },
     "alibaba-coding-plan": {
       "priority": 5,
       "lobeIcon": "Qwen.Color",
+      "subscription": true,
       "excludeModels": ["^deepseek", "^glm", "^kimi", "^llama", "^meta-llama", "^minimax", "^moonshot", "^abab"],
       "thinkingToggle": { "param": "enable_thinking", "value": true }
     },
     "alibaba-coding-plan-cn": {
       "priority": 4,
       "lobeIcon": "Qwen.Color",
+      "currency": "CNY",
+      "subscription": true,
       "excludeModels": ["^deepseek", "^glm", "^kimi", "^llama", "^meta-llama", "^minimax", "^moonshot", "^abab"],
       "thinkingToggle": { "param": "enable_thinking", "value": true }
     },
     "alibaba-token-plan": {
       "priority": 3,
       "lobeIcon": "Qwen.Color",
+      "subscription": true,
       "excludeModels": ["^deepseek", "^glm", "^kimi", "^llama", "^meta-llama", "^minimax", "^moonshot", "^abab"],
       "thinkingToggle": { "param": "enable_thinking", "value": true }
     },
     "alibaba-token-plan-cn": {
       "priority": 2,
       "lobeIcon": "Qwen.Color",
+      "currency": "CNY",
+      "subscription": true,
       "excludeModels": ["^deepseek", "^glm", "^kimi", "^llama", "^meta-llama", "^minimax", "^moonshot", "^abab"],
       "thinkingToggle": { "param": "enable_thinking", "value": true }
     },
     "moonshotai": { "priority": 20, "lobeIcon": "Moonshot" },
-    "moonshotai-cn": { "priority": 10, "lobeIcon": "Moonshot" },
-    "kimi-for-coding": { "priority": 5, "lobeIcon": "Kimi.Color" },
+    "moonshotai-cn": { "priority": 10, "lobeIcon": "Moonshot", "currency": "CNY" },
+    "kimi-for-coding": { "priority": 5, "lobeIcon": "Kimi.Color", "subscription": true },
     "zai": { "priority": 20, "lobeIcon": "ZAI", "notes": "Z.AI international endpoint; preferred USD pricing for GLM models." },
-    "zhipuai": { "priority": 10, "lobeIcon": "Zhipu.Color" },
-    "zai-coding-plan": { "priority": 5, "lobeIcon": "ZAI" },
-    "zhipuai-coding-plan": { "priority": 4, "lobeIcon": "Zhipu.Color" },
+    "zhipuai": { "priority": 10, "lobeIcon": "Zhipu.Color", "currency": "CNY" },
+    "zai-coding-plan": { "priority": 5, "lobeIcon": "ZAI", "subscription": true },
+    "zhipuai-coding-plan": { "priority": 4, "lobeIcon": "Zhipu.Color", "currency": "CNY", "subscription": true },
     "minimax": { "priority": 20, "lobeIcon": "Minimax.Color" },
-    "minimax-cn": { "priority": 10, "lobeIcon": "Minimax.Color" },
-    "minimax-coding-plan": { "priority": 5, "lobeIcon": "Minimax.Color" },
-    "minimax-cn-coding-plan": { "priority": 4, "lobeIcon": "Minimax.Color" },
+    "minimax-cn": { "priority": 10, "lobeIcon": "Minimax.Color", "currency": "CNY" },
+    "minimax-coding-plan": { "priority": 5, "lobeIcon": "Minimax.Color", "subscription": true },
+    "minimax-cn-coding-plan": { "priority": 4, "lobeIcon": "Minimax.Color", "currency": "CNY", "subscription": true },
     "stepfun-ai": { "priority": 20, "lobeIcon": "Stepfun", "notes": "StepFun global endpoint." },
-    "stepfun": { "priority": 10, "lobeIcon": "Stepfun" },
-    "stepfun-ai-step-plan": { "priority": 5, "lobeIcon": "Stepfun" },
-    "stepfun-step-plan": { "priority": 4, "lobeIcon": "Stepfun" },
+    "stepfun": { "priority": 10, "lobeIcon": "Stepfun", "currency": "CNY" },
+    "stepfun-ai-step-plan": { "priority": 5, "lobeIcon": "Stepfun", "subscription": true },
+    "stepfun-step-plan": { "priority": 4, "lobeIcon": "Stepfun", "currency": "CNY", "subscription": true },
     "xiaomi": { "priority": 20, "lobeIcon": "XiaomiMiMo" },
-    "xiaomi-token-plan-ams": { "lobeIcon": "XiaomiMiMo" },
-    "xiaomi-token-plan-cn": { "lobeIcon": "XiaomiMiMo" },
-    "xiaomi-token-plan-sgp": { "lobeIcon": "XiaomiMiMo" },
-    "tencent-tokenhub": { "priority": 20, "lobeIcon": "Hunyuan.Color" },
-    "tencent-token-plan": { "priority": 10, "lobeIcon": "Hunyuan.Color" },
+    "xiaomi-token-plan-ams": { "lobeIcon": "XiaomiMiMo", "subscription": true },
+    "xiaomi-token-plan-cn": { "lobeIcon": "XiaomiMiMo", "currency": "CNY", "subscription": true },
+    "xiaomi-token-plan-sgp": { "lobeIcon": "XiaomiMiMo", "subscription": true },
+    "volcengine": {
+      "priority": 20,
+      "lobeIcon": "Doubao.Color",
+      "currency": "CNY",
+      "excludeModels": ["^deepseek", "^glm"],
+      "notes": "ByteDance's Volcengine Ark (China); keeps only Doubao Seed models. CNY overrides follow the official Ark price list."
+    },
+    "volcengine-coding-plan": {
+      "priority": 5,
+      "lobeIcon": "Doubao.Color",
+      "currency": "CNY",
+      "subscription": true,
+      "excludeModels": ["^deepseek", "^glm", "^kimi", "^minimax"]
+    },
+    "tencent-tokenhub": {
+      "priority": 20,
+      "lobeIcon": "Hunyuan.Color",
+      "currency": "CNY",
+      "notes": "Pay-as-you-go TokenHub platform endpoint (not the Token Plan subscription)."
+    },
+    "tencent-token-plan": { "priority": 10, "lobeIcon": "Hunyuan.Color", "currency": "CNY", "subscription": true },
     "tencent-coding-plan": {
       "lobeIcon": "Hunyuan.Color",
+      "currency": "CNY",
+      "subscription": true,
       "excludeModels": ["^deepseek", "^glm", "^kimi", "^minimax"],
       "notes": "Keeps only Tencent's own Hunyuan models."
     },
+    "sensenova": {
+      "lobeIcon": "SenseNova.Color",
+      "currency": "CNY",
+      "excludeModels": ["^deepseek", "^glm", "^kimi"],
+      "notes": "SenseTime's SenseNova platform (China); keeps only SenseNova models."
+    },
     "longcat": { "lobeIcon": "LongCat.Color" },
-    "bailing": { "lobeIcon": "AntGroup.Color", "notes": "Ant Group Ling/Ring models." },
+    "bailing": { "lobeIcon": "AntGroup.Color", "currency": "CNY", "notes": "Ant Group Ling/Ring models (api.tbox.cn)." },
     "nova": { "lobeIcon": "Nova.Color", "notes": "Amazon's first-party Nova API (api.nova.amazon.com)." },
     "upstage": { "lobeIcon": "Upstage.Color" },
     "sarvam": {},
@@ -94,6 +132,11 @@
     "poolside": { "lobeIcon": "Poolside.Color" },
     "inception": { "lobeIcon": "Inception" },
     "morph": { "lobeIcon": "Morph.Color" },
+    "arcee": {
+      "lobeIcon": "Arcee",
+      "excludeModels": ["^[^/]+/"],
+      "notes": "Arcee's own Trinity models; namespaced third-party IDs (vendor/model) are hosted models."
+    },
     "v0": { "lobeIcon": "V0", "notes": "Vercel's own v0 models (not the AI Gateway)." }
   }
 }

@@ -1,8 +1,11 @@
 /** 模型列表行：搜索过滤 + 排序 + 派生展示数据（表格视图与卡片视图共用） */
 
-import type { Model } from './api';
+import type { NewApiDeployment } from '@billing/deployment';
+
+import type { Model, ProviderBillingRule } from './api';
 import { isNewRelease } from './format';
 import type { Locale, Translator } from './i18n';
+import { modelExpr, type ExchangeRates, type ModelExpr } from './newapi';
 import { parseModelPricing, type ModelPricing } from './pricing';
 import { matchesQuery, normalizeQuery } from './search';
 
@@ -20,13 +23,19 @@ export const DEFAULT_DIRECTION: Record<SortKey, SortDirection> = {
 export interface ModelRow {
   model: Model;
   pricing: ModelPricing;
-  expr: string | undefined;
+  /** 当前 new-api 部署下的计费表达式（无法定价时缺省） */
+  expr: ModelExpr | undefined;
   isNew: boolean;
 }
 
 export interface ModelRowsOptions {
   query: string;
-  billingExpr: Record<string, string> | null;
+  /** 所属端点的结算货币（用于标记上游 USD 估算价） */
+  providerCurrency: string | undefined;
+  /** 所属端点的 new-api 计费规则 */
+  billing: ProviderBillingRule | undefined;
+  deployment: NewApiDeployment;
+  exchangeRates: ExchangeRates;
   sortKey: SortKey;
   direction: SortDirection;
   t: Translator;
@@ -41,17 +50,18 @@ function sortValue(row: ModelRow, key: SortKey): string | number | null {
 }
 
 export function buildModelRows(models: Model[], options: ModelRowsOptions): ModelRow[] {
-  const { query, billingExpr, sortKey, direction, t, locale } = options;
+  const { query, providerCurrency, billing, deployment, exchangeRates, sortKey, direction, t } =
+    options;
   const normalized = normalizeQuery(query);
-  const now = Date.now();
+  const now = new Date();
 
   const rows = models
     .filter((model) => matchesQuery(model, normalized))
     .map<ModelRow>((model) => ({
       model,
-      pricing: parseModelPricing(model.cost, t, locale),
-      expr: billingExpr?.[model.id],
-      isNew: isNewRelease(model.release_date, now),
+      pricing: parseModelPricing(model.cost, t, options.locale, { providerCurrency, now }),
+      expr: modelExpr(model.cost, billing, deployment, exchangeRates),
+      isNew: isNewRelease(model.release_date, now.getTime()),
     }));
 
   // 缺失值不论方向始终排在末尾；同值按 ID 稳定排序

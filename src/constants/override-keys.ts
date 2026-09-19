@@ -5,8 +5,11 @@ export const ALLOWED_MODEL_OVERRIDE_KEYS = [
   'id',
   'name',
   'description',
+  'family',
+  'status',
   'reasoning',
   'tool_call',
+  'structured_output',
   'attachment',
   'temperature',
   'knowledge',
@@ -16,7 +19,6 @@ export const ALLOWED_MODEL_OVERRIDE_KEYS = [
   'modalities',
   'limit',
   'cost',
-  'currency',
 ] as const;
 
 export type AllowedModelOverrideKey = (typeof ALLOWED_MODEL_OVERRIDE_KEYS)[number];

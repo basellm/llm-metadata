@@ -5,12 +5,13 @@ import { CopyButton } from '@/components/copy-button';
 import { ModalityIcons } from '@/components/modality-icons';
 import { ModelBadges } from '@/components/model-badges';
 import { ModelsEmpty } from '@/components/models-empty';
+import { PriceValue } from '@/components/price-value';
 import { ProviderIcon } from '@/components/provider-icon';
 import type { Model, ProviderIndexItem } from '@/lib/api';
-import { formatContext, formatDate, formatTokenPrice } from '@/lib/format';
+import { formatContext, formatDate } from '@/lib/format';
 import { useI18n } from '@/lib/i18n';
 import { DEFAULT_DIRECTION, buildModelRows, type ModelRow } from '@/lib/model-rows';
-import { inputPriceLabel } from '@/lib/pricing';
+import { useNewApi } from '@/lib/newapi';
 import { cn } from '@/lib/utils';
 
 /** 卡片网格：按最小卡宽自适应列数（窄屏退化为单列且不横向溢出） */
@@ -49,7 +50,10 @@ function ModelCard({
   return (
     <article
       onClick={onOpen}
-      className="bg-card hover:border-foreground/20 flex cursor-pointer flex-col gap-3 rounded-lg border p-4 transition-colors"
+      className={cn(
+        'bg-card hover:border-foreground/20 flex cursor-pointer flex-col gap-3 rounded-lg border p-4 transition-colors',
+        model.status === 'deprecated' && 'opacity-70',
+      )}
     >
       <header className="flex items-start gap-3">
         <ProviderIcon
@@ -71,7 +75,12 @@ function ModelCard({
             >
               {name}
             </button>
-            <ModelBadges pricing={pricing} isNew={isNew} />
+            <ModelBadges
+              pricing={pricing}
+              isNew={isNew}
+              status={model.status}
+              providerCurrency={provider.currency}
+            />
           </div>
           <div className="text-muted-foreground flex items-center gap-0.5 font-mono text-xs">
             <span className="truncate">{model.id}</span>
@@ -97,11 +106,8 @@ function ModelCard({
           label={t('card.outputTypes')}
           value={<ModalityIcons supported={new Set(model.modalities?.output)} />}
         />
-        <Stat label={t('table.input')} value={inputPriceLabel(pricing)} />
-        <Stat
-          label={t('table.output')}
-          value={formatTokenPrice(pricing.symbol, pricing.base.output)}
-        />
+        <Stat label={t('table.input')} value={<PriceValue pricing={pricing} column="input" />} />
+        <Stat label={t('table.output')} value={<PriceValue pricing={pricing} column="output" />} />
         <Stat label={t('table.context')} value={formatContext(model.limit?.context)} />
         <Stat label={t('detail.maxOutputShort')} value={formatContext(model.limit?.output)} />
       </dl>
@@ -120,28 +126,30 @@ function ModelCard({
 export function ModelCards({
   models,
   query,
-  billingExpr,
   provider,
   onOpenModel,
 }: {
   models: Model[];
   query: string;
-  billingExpr: Record<string, string> | null;
   provider: ProviderIndexItem;
   onOpenModel: (id: string) => void;
 }) {
   const { locale, t } = useI18n();
+  const { deployment, exchangeRates } = useNewApi();
   const rows = useMemo(
     () =>
       buildModelRows(models, {
         query,
-        billingExpr,
+        providerCurrency: provider.currency,
+        billing: provider.billing,
+        deployment,
+        exchangeRates,
         sortKey: 'released',
         direction: DEFAULT_DIRECTION.released,
         t,
         locale,
       }),
-    [models, query, billingExpr, t, locale],
+    [models, query, provider.currency, provider.billing, deployment, exchangeRates, t, locale],
   );
 
   if (rows.length === 0) return <ModelsEmpty />;

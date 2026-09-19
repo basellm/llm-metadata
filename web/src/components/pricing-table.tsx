@@ -1,9 +1,10 @@
 import { Fragment, useMemo, useState } from 'react';
 import { ArrowDown, ArrowUp, ArrowUpDown, ChevronRight } from 'lucide-react';
 
-import { CopyButton } from '@/components/copy-button';
+import { ExprBlock } from '@/components/expr-block';
 import { ModelBadges } from '@/components/model-badges';
 import { ModelsEmpty } from '@/components/models-empty';
+import { PriceValue } from '@/components/price-value';
 import { Badge } from '@/components/ui/badge';
 import {
   Table,
@@ -13,7 +14,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import type { Model } from '@/lib/api';
+import type { Model, ProviderBillingRule } from '@/lib/api';
 import { formatContext, formatDate, formatTokenPrice } from '@/lib/format';
 import { useI18n } from '@/lib/i18n';
 import {
@@ -22,7 +23,8 @@ import {
   type SortDirection,
   type SortKey,
 } from '@/lib/model-rows';
-import { inputPriceLabel, type DetailRow } from '@/lib/pricing';
+import { useNewApi, type ModelExpr } from '@/lib/newapi';
+import type { DetailRow, ModelPricing } from '@/lib/pricing';
 import { cn } from '@/lib/utils';
 
 const NUMERIC_CELL = 'text-right font-mono text-[13px] tabular-nums';
@@ -117,20 +119,55 @@ function DetailSectionHeader({ title }: { title: string }) {
   );
 }
 
+/** 展开块中的一个价目（主价目的分组 / 其他货币价目的基础行 + 分组） */
+function DetailPricingRows({
+  pricing,
+  isLast,
+  withBaseRow,
+}: {
+  pricing: ModelPricing;
+  isLast: boolean;
+  withBaseRow: boolean;
+}) {
+  const { t } = useI18n();
+  const lastSection = pricing.sections[pricing.sections.length - 1];
+  return (
+    <>
+      {withBaseRow && (
+        <DetailPriceRow
+          row={{ label: t('pricing.base'), ...pricing.base }}
+          symbol={pricing.symbol}
+          isLast={isLast && pricing.sections.length === 0}
+        />
+      )}
+      {pricing.sections.map((section) => (
+        <Fragment key={section.title}>
+          <DetailSectionHeader title={section.title} />
+          {section.rows.map((row, index) => (
+            <DetailPriceRow
+              key={row.label}
+              row={row}
+              symbol={pricing.symbol}
+              isLast={isLast && section === lastSection && index === section.rows.length - 1}
+            />
+          ))}
+        </Fragment>
+      ))}
+    </>
+  );
+}
+
 /** new-api 表达式计费子行（可复制，恒为展开块末行） */
-function DetailExprRow({ expr, title }: { expr: string; title: string }) {
+function DetailExprRow({ expr, primaryCurrency }: { expr: ModelExpr; primaryCurrency: string }) {
   return (
     <TableRow className={cn(DETAIL_ROW, 'border-b')}>
       <TableCell colSpan={7} className="p-0 pl-3">
-        <div className={cn(GUIDE, 'py-2 pr-3')}>
-          <div className="text-muted-foreground mb-1.5 flex items-center gap-1 text-[11px] font-medium tracking-wider uppercase">
-            {title}
-            <CopyButton text={expr} />
-          </div>
-          <code className="bg-background/60 text-muted-foreground block rounded-md border px-2.5 py-2 font-mono text-xs leading-relaxed break-all whitespace-pre-wrap">
-            {expr}
-          </code>
-        </div>
+        <ExprBlock
+          expr={expr}
+          primaryCurrency={primaryCurrency}
+          className={cn(GUIDE, 'py-2 pr-3')}
+          codeClassName="bg-background/60"
+        />
       </TableCell>
     </TableRow>
   );
@@ -139,22 +176,47 @@ function DetailExprRow({ expr, title }: { expr: string; title: string }) {
 export function PricingTable({
   models,
   query,
-  billingExpr,
+  providerCurrency,
+  billing,
   onOpenModel,
 }: {
   models: Model[];
   query: string;
-  billingExpr: Record<string, string> | null;
+  providerCurrency: string | undefined;
+  billing: ProviderBillingRule | undefined;
   onOpenModel: (id: string) => void;
 }) {
   const { locale, t } = useI18n();
+  const { deployment, exchangeRates } = useNewApi();
   const [sortKey, setSortKey] = useState<SortKey>('released');
   const [direction, setDirection] = useState<SortDirection>(DEFAULT_DIRECTION.released);
   const [expanded, setExpanded] = useState<ReadonlySet<string>>(new Set());
 
   const rows = useMemo(
-    () => buildModelRows(models, { query, billingExpr, sortKey, direction, t, locale }),
-    [models, query, billingExpr, sortKey, direction, t, locale],
+    () =>
+      buildModelRows(models, {
+        query,
+        providerCurrency,
+        billing,
+        deployment,
+        exchangeRates,
+        sortKey,
+        direction,
+        t,
+        locale,
+      }),
+    [
+      models,
+      query,
+      providerCurrency,
+      billing,
+      deployment,
+      exchangeRates,
+      sortKey,
+      direction,
+      t,
+      locale,
+    ],
   );
 
   const handleSort = (key: SortKey) => {
@@ -221,14 +283,20 @@ export function PricingTable({
           </TableHeader>
           <TableBody>
             {rows.map(({ model, pricing, expr, isNew }) => {
-              const expandable = pricing.sections.length > 0 || !!expr;
+              const expandable =
+                pricing.sections.length > 0 || pricing.alternates.length > 0 || !!expr;
               const open = expandable && expanded.has(model.id);
+              const deprecated = model.status === 'deprecated';
               return (
                 <Fragment key={model.id}>
                   <TableRow
                     onClick={() => onOpenModel(model.id)}
                     data-state={open ? 'open' : undefined}
-                    className={cn('cursor-pointer', open && 'bg-muted/20 border-0')}
+                    className={cn(
+                      'cursor-pointer',
+                      open && 'bg-muted/20 border-0',
+                      deprecated && 'text-muted-foreground',
+                    )}
                   >
                     <TableCell className="max-w-80">
                       <div className="flex items-center gap-1.5">
@@ -268,7 +336,12 @@ export function PricingTable({
                             >
                               {model.name || model.id}
                             </button>
-                            <ModelBadges pricing={pricing} isNew={isNew} />
+                            <ModelBadges
+                              pricing={pricing}
+                              isNew={isNew}
+                              status={model.status}
+                              providerCurrency={providerCurrency}
+                            />
                           </div>
                           <div className="text-muted-foreground truncate font-mono text-xs">
                             {model.id}
@@ -284,38 +357,40 @@ export function PricingTable({
                     <TableCell className={cn(NUMERIC_CELL, 'text-muted-foreground')}>
                       {formatContext(model.limit?.context)}
                     </TableCell>
-                    <TableCell className={NUMERIC_CELL}>{inputPriceLabel(pricing)}</TableCell>
-                    <TableCell className={cn(NUMERIC_CELL, 'text-muted-foreground')}>
-                      {formatTokenPrice(pricing.symbol, pricing.base.cacheRead)}
+                    <TableCell className={NUMERIC_CELL}>
+                      <PriceValue pricing={pricing} column="input" />
                     </TableCell>
                     <TableCell className={cn(NUMERIC_CELL, 'text-muted-foreground')}>
-                      {formatTokenPrice(pricing.symbol, pricing.base.cacheWrite)}
+                      <PriceValue pricing={pricing} column="cacheRead" />
+                    </TableCell>
+                    <TableCell className={cn(NUMERIC_CELL, 'text-muted-foreground')}>
+                      <PriceValue pricing={pricing} column="cacheWrite" />
                     </TableCell>
                     <TableCell className={NUMERIC_CELL}>
-                      {formatTokenPrice(pricing.symbol, pricing.base.output)}
+                      <PriceValue pricing={pricing} column="output" />
                     </TableCell>
                   </TableRow>
 
                   {open && (
                     <>
-                      {pricing.sections.map((section) => (
-                        <Fragment key={section.title}>
-                          <DetailSectionHeader title={section.title} />
-                          {section.rows.map((row, index) => (
-                            <DetailPriceRow
-                              key={row.label}
-                              row={row}
-                              symbol={pricing.symbol}
-                              isLast={
-                                !expr &&
-                                section === pricing.sections[pricing.sections.length - 1] &&
-                                index === section.rows.length - 1
-                              }
-                            />
-                          ))}
+                      <DetailPricingRows
+                        pricing={pricing}
+                        withBaseRow={false}
+                        isLast={!expr && pricing.alternates.length === 0}
+                      />
+                      {pricing.alternates.map((alt, index) => (
+                        <Fragment key={alt.currency}>
+                          <DetailSectionHeader
+                            title={t('detail.priceList', { currency: alt.currency })}
+                          />
+                          <DetailPricingRows
+                            pricing={alt}
+                            withBaseRow
+                            isLast={!expr && index === pricing.alternates.length - 1}
+                          />
                         </Fragment>
                       ))}
-                      {expr && <DetailExprRow expr={expr} title={t('table.expr')} />}
+                      {expr && <DetailExprRow expr={expr} primaryCurrency={pricing.currency} />}
                     </>
                   )}
                 </Fragment>

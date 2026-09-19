@@ -3,10 +3,22 @@
   "cost": {
     "cache_read": 1.2,
     "cache_write": 0,
+    "currency": "CNY",
     "input": 5,
-    "output": 22
+    "output": 22,
+    "tiers": [
+      {
+        "cache_read": 1.8,
+        "input": 7,
+        "output": 26,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      }
+    ]
   },
-  "description": "Fast GLM vision model for screenshots, documents, and multimodal agent tasks",
+  "description": "スクリーンショット、文書、マルチモーダルエージェントタスク向けの高速 GLM ビジョンモデル",
   "family": "glm",
   "id": "glm-5v-turbo",
   "interleaved": {

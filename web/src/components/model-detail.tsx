@@ -8,9 +8,11 @@ import {
   ChevronLeft,
   Diamond,
   FileText,
+  Gauge,
   GraduationCap,
   History,
   Paperclip,
+  Tag,
   Thermometer,
   Weight,
   Wrench,
@@ -18,9 +20,12 @@ import {
 } from 'lucide-react';
 
 import { CopyButton } from '@/components/copy-button';
+import { DetailSection } from '@/components/detail-section';
+import { ExprBlock } from '@/components/expr-block';
 import { ModalityIcons } from '@/components/modality-icons';
 import { ModelBadges } from '@/components/model-badges';
 import { ProviderIcon } from '@/components/provider-icon';
+import { SiblingEndpoints } from '@/components/sibling-endpoints';
 import { Badge } from '@/components/ui/badge';
 import {
   Table,
@@ -41,7 +46,12 @@ import {
 } from '@/lib/format';
 import { useI18n, type MessageKey } from '@/lib/i18n';
 import { CORE_MODALITIES, MODALITY_META, modalityLabel } from '@/lib/modalities';
-import { parseModelPricing, type DetailSection } from '@/lib/pricing';
+import { modelExpr, useNewApi } from '@/lib/newapi';
+import {
+  parseModelPricing,
+  type DetailSection as PricingSection,
+  type ModelPricing,
+} from '@/lib/pricing';
 import { cn } from '@/lib/utils';
 
 const NUMERIC_CELL = 'text-right font-mono text-[13px] tabular-nums';
@@ -66,6 +76,13 @@ const FEATURES: ReadonlyArray<{
   { field: 'open_weights', icon: Weight, labelKey: 'detail.openWeights' },
 ];
 
+const PRICE_CARDS = [
+  { labelKey: 'table.input', column: 'input' },
+  { labelKey: 'table.cacheRead', column: 'cacheRead' },
+  { labelKey: 'table.cacheWrite', column: 'cacheWrite' },
+  { labelKey: 'table.output', column: 'output' },
+] as const;
+
 /** 概览条单元格 */
 function StatCell({ label, value, sub }: { label: string; value: React.ReactNode; sub?: string }) {
   return (
@@ -87,16 +104,6 @@ function Fact({ icon: Icon, value, label }: { icon: LucideIcon; value: string; l
       <span className="font-mono tabular-nums">{value}</span>
       <span className="text-muted-foreground">{label}</span>
     </li>
-  );
-}
-
-/** 左标签右内容的分区（OpenAI 式） */
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <section className="grid gap-4 border-t py-8 md:grid-cols-[200px_minmax(0,1fr)]">
-      <h2 className="text-sm font-medium">{title}</h2>
-      <div className="min-w-0">{children}</div>
-    </section>
   );
 }
 
@@ -126,7 +133,7 @@ function StatusItem({
 }
 
 /** 价格明细分组 → 迷你表格 */
-function PricingSectionTable({ section, symbol }: { section: DetailSection; symbol: string }) {
+function PricingSectionTable({ section, symbol }: { section: PricingSection; symbol: string }) {
   const { t } = useI18n();
   return (
     <div className="mt-4">
@@ -172,19 +179,78 @@ function PricingSectionTable({ section, symbol }: { section: DetailSection; symb
   );
 }
 
+/** 一个价目的完整展示：标题行 + 基础价卡片 + 明细分组（主价目与其他货币价目共用） */
+function PriceBlock({
+  pricing,
+  title,
+  hint,
+}: {
+  pricing: ModelPricing;
+  title: string;
+  hint: string;
+}) {
+  const { t } = useI18n();
+  const cards = PRICE_CARDS.flatMap((card) => {
+    const value = pricing.base[card.column];
+    return value === null ? [] : [{ labelKey: card.labelKey, value }];
+  });
+  return (
+    <div>
+      <div className="flex items-baseline justify-between gap-3">
+        <span className="text-sm font-medium">{title}</span>
+        <span className="text-muted-foreground text-xs">{hint}</span>
+      </div>
+      <div className="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-4">
+        {cards.map((card) => (
+          <div key={card.labelKey} className="bg-card rounded-lg border p-4">
+            <div className="text-muted-foreground text-xs">{t(card.labelKey)}</div>
+            <div className="mt-1 font-mono text-xl font-semibold tabular-nums">
+              {formatMoney(pricing.symbol, card.value)}
+            </div>
+          </div>
+        ))}
+        {cards.length === 0 && pricing.unit && (
+          <div className="bg-card rounded-lg border p-4">
+            <div className="text-muted-foreground text-xs">{t('pricing.unitPricing')}</div>
+            <div className="mt-1 font-mono text-xl font-semibold tabular-nums">{pricing.unit}</div>
+          </div>
+        )}
+      </div>
+      {pricing.sections.map((section) => (
+        <PricingSectionTable key={section.title} section={section} symbol={pricing.symbol} />
+      ))}
+    </div>
+  );
+}
+
+/** 价目是否有可展示的内容（基础价、按量摘要或明细分组） */
+function hasPrices(pricing: ModelPricing): boolean {
+  return (
+    Object.values(pricing.base).some((v) => v !== null) ||
+    pricing.unit !== null ||
+    pricing.sections.length > 0
+  );
+}
+
 export function ModelDetail({
   model,
   provider,
-  expr,
+  providers,
   onBack,
+  onOpenModelIn,
 }: {
   model: Model;
   provider: ProviderIndexItem;
-  expr: string | undefined;
+  providers: ProviderIndexItem[];
   onBack: () => void;
+  onOpenModelIn: (providerId: string, modelId: string) => void;
 }) {
   const { locale, t } = useI18n();
-  const pricing = parseModelPricing(model.cost, t, locale);
+  const { deployment, exchangeRates } = useNewApi();
+  const pricing = parseModelPricing(model.cost, t, locale, {
+    providerCurrency: provider.currency,
+  });
+  const expr = modelExpr(model.cost, provider.billing, deployment, exchangeRates);
 
   // 详情页设置文档标题，返回列表时还原
   useEffect(() => {
@@ -203,21 +269,16 @@ export function ModelDetail({
 
   const features = FEATURES.filter(({ field }) => typeof model[field] === 'boolean');
 
+  // 推理强度档位（如 effort: low · medium · high）
+  const reasoningEfforts = (model.reasoning_options ?? [])
+    .flatMap((option) => (Array.isArray(option.values) ? option.values : []))
+    .filter((value): value is string | number => ['string', 'number'].includes(typeof value))
+    .map(String);
+
   const priceValue =
     pricing.base.input === null && pricing.base.output === null
       ? (pricing.unit ?? '—')
       : `${formatTokenPrice(pricing.symbol, pricing.base.input)} · ${formatTokenPrice(pricing.symbol, pricing.base.output)}`;
-
-  const priceCards = (
-    [
-      { labelKey: 'table.input', value: pricing.base.input },
-      { labelKey: 'table.cacheRead', value: pricing.base.cacheRead },
-      { labelKey: 'table.cacheWrite', value: pricing.base.cacheWrite },
-      { labelKey: 'table.output', value: pricing.base.output },
-    ] as const
-  ).flatMap((card) =>
-    card.value === null ? [] : [{ labelKey: card.labelKey, value: card.value }],
-  );
 
   const modalityStatus = (value: string): { text: string; active: boolean } => {
     const input = inputModalities.has(value);
@@ -248,7 +309,12 @@ export function ModelDetail({
           className="size-10 rounded-lg"
         />
         <h1 className="text-2xl font-semibold tracking-tight">{model.name || model.id}</h1>
-        <ModelBadges pricing={pricing} isNew={isNewRelease(model.release_date, Date.now())} />
+        <ModelBadges
+          pricing={pricing}
+          isNew={isNewRelease(model.release_date, Date.now())}
+          status={model.status}
+          providerCurrency={provider.currency}
+        />
       </div>
       <div className="mt-2 flex items-center gap-1">
         <code className="bg-muted text-muted-foreground rounded px-1.5 py-0.5 font-mono text-xs">
@@ -262,7 +328,7 @@ export function ModelDetail({
         <StatCell
           label={t('detail.price')}
           value={priceValue}
-          sub={`${t('table.input')} · ${t('table.output')}`}
+          sub={`${t('table.input')} · ${t('table.output')} · ${pricing.currency}`}
         />
         <StatCell
           label={t('table.context')}
@@ -310,6 +376,14 @@ export function ModelDetail({
               label={t('detail.maxOutput')}
             />
           )}
+          {reasoningEfforts.length > 0 && (
+            <Fact
+              icon={Gauge}
+              value={reasoningEfforts.join(' · ')}
+              label={t('detail.reasoningEffort')}
+            />
+          )}
+          {model.family && <Fact icon={Tag} value={model.family} label={t('detail.family')} />}
           {model.knowledge && (
             <Fact
               icon={GraduationCap}
@@ -334,50 +408,54 @@ export function ModelDetail({
         </ul>
       </section>
 
-      {/* 价格 */}
-      {(priceCards.length > 0 || pricing.unit || pricing.sections.length > 0 || expr) && (
-        <Section title={t('detail.pricing')}>
-          <div className="flex items-baseline justify-between gap-3">
-            <span className="text-sm font-medium">{t('detail.textTokens')}</span>
-            <span className="text-muted-foreground text-xs">{t('detail.per1m')}</span>
-          </div>
-          <div className="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-4">
-            {priceCards.map((card) => (
-              <div key={card.labelKey} className="bg-card rounded-lg border p-4">
-                <div className="text-muted-foreground text-xs">{t(card.labelKey)}</div>
-                <div className="mt-1 font-mono text-xl font-semibold tabular-nums">
-                  {formatMoney(pricing.symbol, card.value)}
-                </div>
-              </div>
-            ))}
-            {priceCards.length === 0 && pricing.unit && (
-              <div className="bg-card rounded-lg border p-4">
-                <div className="text-muted-foreground text-xs">{t('pricing.unitPricing')}</div>
-                <div className="mt-1 font-mono text-xl font-semibold tabular-nums">
-                  {pricing.unit}
-                </div>
-              </div>
+      {/* 价格：主价目 + 同一端点的其他货币官方价目 + new-api 表达式 */}
+      {(hasPrices(pricing) || pricing.alternates.length > 0 || expr) && (
+        <DetailSection
+          title={t('detail.pricing')}
+          hint={
+            pricing.estimated
+              ? t('pricing.estimatedNote', { currency: provider.currency ?? '' })
+              : undefined
+          }
+        >
+          <div className="flex flex-col gap-8">
+            {hasPrices(pricing) && (
+              <PriceBlock
+                pricing={pricing}
+                title={t('detail.textTokens')}
+                hint={`${t('detail.per1m')} · ${pricing.currency}`}
+              />
             )}
+            {pricing.alternates.map((alt) => (
+              <PriceBlock
+                key={alt.currency}
+                pricing={alt}
+                title={t('detail.priceList', { currency: alt.currency })}
+                hint={t('detail.priceListHint')}
+              />
+            ))}
           </div>
-          {pricing.sections.map((section) => (
-            <PricingSectionTable key={section.title} section={section} symbol={pricing.symbol} />
-          ))}
           {expr && (
-            <div className="mt-4">
-              <div className="text-muted-foreground mb-2 flex items-center gap-1 text-[11px] font-medium tracking-wider uppercase">
-                {t('table.expr')}
-                <CopyButton text={expr} />
-              </div>
-              <code className="bg-card text-muted-foreground block rounded-lg border px-3 py-2.5 font-mono text-xs leading-relaxed break-all whitespace-pre-wrap">
-                {expr}
-              </code>
-            </div>
+            <ExprBlock
+              expr={expr}
+              primaryCurrency={pricing.currency}
+              className="mt-4"
+              codeClassName="bg-card rounded-lg px-3 py-2.5"
+            />
           )}
-        </Section>
+        </DetailSection>
       )}
 
+      {/* 其他端点（同一模型的国内 / 国际版本价格对照） */}
+      <SiblingEndpoints
+        modelId={model.id}
+        providerId={provider.id}
+        providers={providers}
+        onOpen={onOpenModelIn}
+      />
+
       {/* 模态 */}
-      <Section title={t('detail.modalities')}>
+      <DetailSection title={t('detail.modalities')}>
         <div className="grid gap-3 sm:grid-cols-2">
           {CORE_MODALITIES.map((value) => {
             const { icon } = MODALITY_META[value];
@@ -405,11 +483,11 @@ export function ModelDetail({
             );
           })}
         </div>
-      </Section>
+      </DetailSection>
 
       {/* 能力 */}
       {features.length > 0 && (
-        <Section title={t('detail.features')}>
+        <DetailSection title={t('detail.features')}>
           <div className="grid gap-3 sm:grid-cols-2">
             {features.map(({ field, icon, labelKey }) => (
               <StatusItem
@@ -421,7 +499,7 @@ export function ModelDetail({
               />
             ))}
           </div>
-        </Section>
+        </DetailSection>
       )}
     </div>
   );

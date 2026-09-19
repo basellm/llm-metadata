@@ -25,6 +25,7 @@ npm run build
 - `npm run build`：编译 TypeScript 并构建 API（如无变化则不改写文件）
 - `npm run build:force`：强制重建所有文件
 - `npm run check`：仅检查是否会产生输出变更（CI 可用）
+- `npm run translate`：为非英文语言补齐模型简介的翻译记忆（见[国际化](#国际化api)）
 - `npm run clean`：清理 `.cache` 与 `dist`
 - `npm run compile`：仅编译 TypeScript
 - `npm run dev`：监听模式编译
@@ -45,6 +46,8 @@ npm run build
     "openai": { "lobeIcon": "OpenAI" },
     "anthropic": { "lobeIcon": "Claude.Color", "cacheWrite1h": 2 },
     "zai": { "priority": 20, "lobeIcon": "ZAI" },
+    "zai-coding-plan": { "priority": 5, "lobeIcon": "ZAI", "subscription": true },
+    "zhipuai": { "priority": 10, "lobeIcon": "Zhipu.Color", "currency": "CNY" },
     "alibaba": {
       "priority": 30,
       "excludeModels": ["^deepseek", "^kimi"],
@@ -57,13 +60,28 @@ npm run build
 - `providers`——白名单。未列出的供应商会从所有输出（JSON API、NewAPI、VoAPI、Web UI）中移除，其历史产物也会在构建时从 `dist/api/` 清理。
 - `excludeModels`——不区分大小写的正则，用于剔除原生供应商平台上托管的第三方模型（例如阿里平台上转售的 DeepSeek 模型），只保留自研模型。
 - `priority`——解决同一厂商多端点（如 `zai` 与 `zhipuai`）在聚合 NewAPI 输出中的同名模型冲突；数值大者胜出，相同时按供应商 ID 排序。`/api/newapi/providers/<id>/` 下的按供应商文件始终保留该供应商自己的价格。
-- `exchangeRates`——每 1 USD 对应的货币数量，用于将非美元价格（如人民币）换算为 NewAPI 计费表达式中的美元系数。缺少汇率的货币会跳过价格输出并给出构建警告。
+- `currency`——端点的结算货币（默认 `USD`），会作为 `currency` 字段输出到供应商 JSON 与 `providers.json`。与模型价格的关系见[结算货币](#结算货币)。
+- `subscription`——标记预付套餐端点（Token Plan / Coding Plan）：用量从订阅额度中抵扣，上游逐 token 价格均为 `0`、不具信息量。会作为 `subscription: true` 输出到供应商 JSON 与 `providers.json`；Web UI 不列出这些端点，JSON API 与 NewAPI/VoAPI 输出仍保留。
+- `priority`、`thinkingToggle`、`cacheWrite1h` 还会合并为 `billing` 字段输出到供应商 JSON 与 `providers.json`，使客户端（包括 Web UI）能自行重新生成 new-api 表达式。
+- `exchangeRates`——每 1 USD 对应的货币数量，用于将非美元价格（如人民币）换算为 NewAPI 计费表达式中的美元系数与 VoAPI 价格。缺少汇率的货币会跳过价格输出并给出构建警告。
 - `thinkingToggle`——该供应商混合推理模型切换到思考模式的请求体字段（gjson 路径）与取值。当模型 `cost.reasoning` 与 `cost.output` 不同时，表达式以 `param("<param>") == <value>` 为条件按 reasoning 价计输出 tokens；未配置时按 output 价计费并给出构建警告。
 - `cacheWrite1h`——1 小时 TTL 提示缓存写入价相对输入价的倍数（Anthropic 为 2）。在 `cc`（models.dev 的 `cache_write` 价）旁额外输出 `cc1h` 项；否则 new-api 对 Claude 格式用量的 1h 缓存写入不计费。
 - `lobeIcon`——[@lobehub/icons](https://github.com/lobehub/lobe-icons) 的导出名（如 `Claude.Color`），作为 NewAPI `vendors.json` 中的厂商图标。
 - 若该文件缺失，过滤将被禁用并输出构建警告。
 
 供应商 logo 会在构建时镜像到 `dist/api/logos/<id>.svg`，Web UI 以同源地址加载图标（远程 `iconURL` 与首字母徽标作为回退），不再热链 models.dev。
+
+## 结算货币
+
+models.dev 没有货币概念：所有价格都是美元数字，包括官方以人民币计价的国内端点（上游数字要么是第三方换算值，要么直接照抄了国际站价格）。本仓库显式建模货币：
+
+- **每份价目只有一种货币。** `cost.currency`（默认 `USD`）声明该 `cost` 对象中所有数字的单位。展示时绝不换算——Web UI 对 CNY 价目显示 `¥`，对 USD 价目显示 `$`。
+- **端点声明结算货币**：`data/native-providers.json` 中的 `currency`。非美元端点上，`cost` 未声明 `currency` 的模型即为*上游美元估算价*：构建按供应商汇总一条警告（`pricing: "alibaba-cn" bills in CNY but 64 model(s) still carry upstream USD estimates`），Web UI 为这些行打上 `≈ USD` 标记，直到官方覆写补齐。0 价（免费 / 订阅套餐）模型不受影响。
+- **官方本币价格来自覆写。** 将官方价目写入 `data/overrides/models/<provider>/<model>.json`，并声明 `"cost": { "currency": "CNY", ... }`。声明了 `cost.currency` 的覆写会**整体替换**上游 `cost` 而非深合并——切换货币意味着上游每个数字都失效（深合并会让美元 `cache_read` 与人民币 `input` 混在一起）。请写全完整价目。
+- **双货币端点**（同一端点、两份官方价目——例如 DeepSeek 对人民币充值按独立的人民币价目计费，而非按汇率折算）把第二份价目放在 `cost.currency_options.<货币代码>` 中，结构与 `cost` 相同（价格家族、`tiers`、`schedule`）。Web UI 在表格与卡片中把它显示在主价格下方，在模型页中单独显示为“CNY 官方价目”区块。`currency_options` 不参与任何美元输出。
+- **NewAPI / VoAPI 输出保持美元**：非美元价目按 `exchangeRates` 换算；缺少汇率的模型跳过并给出警告。
+
+模型页还会列出同一模型 ID 在该厂商其他原生端点上的价格（“其他端点”——例如 `moonshotai` 上以美元计价的 `kimi-k3` 与 `moonshotai-cn` 上以人民币计价的同款并列），方便对照国内外定价。
 
 ## NewAPI 计费表达式
 
@@ -81,9 +99,25 @@ npm run build
 
 分支自外向内为 时段 → 思考模式 → 上下文阶梯，与 new-api 价格页面可结构化展示的形状一致（时段条件显示为 "Mon–Fri 01:00–04:00 or 06:00–10:00 (UTC)" 等）。显式 0 价保留为 `cr * 0` 等项，因为 new-api 只在表达式引用对应变量时才把缓存/音频 tokens 从 `p`/`c` 中剔除。无法表达的价格（如没有开关的独立推理 token 价）仍按文档输出价生成表达式，并在 `manifest.json` 的 warnings 中记录。
 
+### 系数单位与 new-api 部署
+
+new-api 按 `quota = 表达式结果 / 1e6 × QuotaPerUnit × 分组倍率` 结算 v1 表达式，因此系数的单位是部署的**额度美元**（quota USD，即 `QuotaPerUnit` 额度所代表的那 1 单位）。汇率与货币展示从不参与结算，只改变额度的显示方式。出厂部署下 1 额度美元就是 1 真实美元，托管的预设正是按这一情形生成：美元系数，非美元官方价目按 `exchangeRates` 换算（以 `newapi.exchangeRates` 发布在 `manifest.json` 中）。
+
+以其他单位售卖额度的部署需要不同的系数——最常见的是 `USDExchangeRate = 1`、以人民币展示的国内站点（1 额度美元 = 1 元），此时 $3/M 的模型必须按 `p * 21.9` 计费。Web UI 头部的 **new-api** 对话框可为这类部署重新生成全部表达式，用的是与构建完全相同的生成器（`src/billing/`，Node 与浏览器共用）：
+
+| 设置项                 | new-api 选项                                  | 对系数的影响                                                                   |
+| ---------------------- | --------------------------------------------- | ------------------------------------------------------------------------------ |
+| 额度展示类型           | `general_setting.quota_display_type`          | 决定下文的显示汇率 `D`（`TOKENS` 等同 `USD`）                                  |
+| 1 额度美元 = ? 人民币  | `USDExchangeRate`                             | 人民币展示时的 `D`；未设置结算汇率时兼作官方人民币价目的真实汇率               |
+| 自定义货币符号 / 汇率  | `custom_currency_symbol`、`…_exchange_rate`   | 自定义货币展示时的 `D`                                                         |
+| 美元结算汇率 `S`       | `USDSettlementRate`（0 = 未设置）             | 1 真实美元 = `S / D` 额度美元；未设置表示额度美元即真实美元                    |
+| 优先采用的价目货币     | —                                             | 模型公布多份官方价目（`cost.currency_options`）时优先采用该货币的价目          |
+
+对话框可从部署公开的 `GET /api/status`（`quota_display_type`、`usd_exchange_rate`、`custom_currency_*`、`usd_settlement_rate`）导入这些值，保存在浏览器本地，并为每条表达式标注单位（“1 额度美元 = ¥1”）。每个供应商页提供 **复制 ratio_config**，对话框还可下载全部供应商的聚合 `ratio_config`，托管后即可作为 new-api 倍率同步的上游。`QuotaPerUnit` 与分组倍率由 new-api 在表达式之后应用，无需配置。
+
 ## 国际化（API）
 
-API i18n 由 `i18n/locales.json`（语言清单）、`i18n/api/*.json`（能力标签与默认描述模板）以及 `data/overrides/**` 驱动。
+API i18n 由 `i18n/locales.json`（语言清单）、`i18n/api/*.json`（能力标签与默认描述模板）、`i18n/descriptions/*.json`（模型简介翻译记忆）以及 `data/overrides/**` 驱动。
 
 ### 目录与配置
 
@@ -94,7 +128,29 @@ i18n/
     en.json             # 能力标签 + 默认描述模板
     zh.json
     ja.json
+  descriptions/
+    zh.json             # 翻译记忆：英文简介 → 译文
+    ja.json
 ```
+
+### 模型简介
+
+上游简介均为英文。本地化构建按以下顺序解析每个模型的简介：
+
+1. 人工覆写——`data/overrides/i18n/models/<provider>/<model>.json` → `description.<locale>`
+2. 翻译记忆——`i18n/descriptions/<locale>.json`，以英文原文为键（简介相同的模型共用一条）
+3. 默认描述模板——英文简介等于 `${modelName} is an AI model provided by ${providerId}.` 模板时
+4. 回退英文——计入构建警告（`i18n: N model description(s) have no zh translation`）
+
+构建本身完全离线且确定；`npm run translate` 负责让翻译记忆与目录同步：只为各语言缺失的简介调用 OpenAI 兼容的 Chat Completions 接口生成译文，剪除目录中已不存在的原文条目，并按键排序写入以保持 diff 稳定。
+
+```bash
+TRANSLATE_API_KEY=sk-… npm run translate            # 所有非默认语言
+TRANSLATE_API_KEY=sk-… npm run translate -- --locale zh
+npm run translate -- --dry-run                       # 仅报告缺失 / 失效条目
+```
+
+环境变量：`TRANSLATE_API_KEY`（除 `--dry-run` 外必填）、`TRANSLATE_BASE_URL`（默认 `https://api.openai.com/v1`）、`TRANSLATE_MODEL`（默认 `gpt-4o-mini`）。条目也可以手工编辑——文件就是普通的 `{ "英文": "译文" }`。配置了 `TRANSLATE_API_KEY` secret 时，CI 会在构建前运行该脚本。
 
 ### 新增语言（以 `fr` 为例）
 
@@ -120,6 +176,7 @@ i18n/
   - 显式 `model.tags`
   - 布尔能力：tools/files/reasoning/temperature/open_weights
   - 模态衍生标签：vision/audio
+  - 生命周期状态：deprecated/beta（来自 models.dev 的 `status`）
 - 本地化 API 数据输出：
   - `dist/api/i18n/<locale>/all.json`
   - `dist/api/i18n/<locale>/providers.json`、`index.json`
@@ -138,7 +195,7 @@ i18n/
 
 触发策略（GitHub Actions 已配置）：
 
-- push 到 `src/**`、`data/**`、`web/**` 等路径
+- push 到 `src/**`、`data/**`、`i18n/**`、`web/**` 等路径
 - `workflow_dispatch` 手动触发
 - `schedule` 每天定时
 
@@ -230,8 +287,38 @@ data/
 - `timezone` 为 IANA 时区；`weekdays` 采用 0 = 周日 … 6 = 周六；`hours` 为 `HH:MM-HH:MM`（结束不含，允许 `24:00`），结束早于开始表示跨午夜。整点窗口生成 new-api 可结构化展示的 `hour(tz)` 比较；含分钟的窗口生成按分钟数的算式。
 - 非法的时段配置会明确失败：该模型不输出表达式，原因记录在 `manifest.json` 的 warnings 中。
 
+本币官方价目（`data/overrides/models/zhipuai/glm-5.1.json`）——`cost.currency` 声明所有数字的单位；此类覆写会替换上游 `cost` 而非合并：
+
+```json
+{
+  "cost": {
+    "currency": "CNY",
+    "input": 6,
+    "output": 24,
+    "cache_read": 1.3,
+    "cache_write": 0,
+    "tiers": [{ "tier": { "size": 32000, "type": "context" }, "input": 8, "output": 28, "cache_read": 2 }]
+  }
+}
+```
+
+同一端点的第二份官方价目（`cost.currency_options`，见[结算货币](#结算货币)）：
+
+```json
+{
+  "cost": {
+    "input": 0.15,
+    "output": 0.6,
+    "cache_read": 0.003,
+    "currency_options": {
+      "CNY": { "input": 1, "output": 4, "cache_read": 0.02 }
+    }
+  }
+}
+```
+
 说明：
 
-- 使用深度合并；未声明字段会保持原值。覆写中请固定所有依赖的价格（含 `reasoning`），避免上游变动导致窗口价与基础价不一致。
-- 模型覆写字段白名单（会进行清洗）：`id`、`name`、`description`、`reasoning`、`tool_call`、`attachment`、`temperature`、`knowledge`、`release_date`、`last_updated`、`open_weights`、`modalities`、`limit`、`cost`。`$comment` 等键会被丢弃，可安全用作维护备注。
+- 使用深度合并；未声明字段会保持原值。覆写中请固定所有依赖的价格（含 `reasoning`），避免上游变动导致窗口价与基础价不一致。唯一例外：`cost` 声明了 `currency` 的覆写会整体替换上游 `cost`。
+- 模型覆写字段白名单（会进行清洗）：`id`、`name`、`description`、`family`、`status`、`reasoning`、`tool_call`、`structured_output`、`attachment`、`temperature`、`knowledge`、`release_date`、`last_updated`、`open_weights`、`modalities`、`limit`、`cost`。`$comment` 等键会被丢弃，可安全用作维护备注。
 - 仅从 `data/overrides/**` 读取。

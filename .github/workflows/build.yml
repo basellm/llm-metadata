@@ -15,6 +15,7 @@ on:
     paths:
       - 'src/**'
       - 'data/**'
+      - 'i18n/**'
       - 'public/**'
       - 'web/**'
       - 'package.json'
@@ -67,6 +68,20 @@ jobs:
         run: |
           npm ci
 
+      # Keeps i18n/descriptions in sync with upstream descriptions; skipped when the secret is absent,
+      # and a translation outage must never block publishing the static API.
+      - name: Translate model descriptions
+        env:
+          TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
+          TRANSLATE_BASE_URL: ${{ vars.TRANSLATE_BASE_URL }}
+          TRANSLATE_MODEL: ${{ vars.TRANSLATE_MODEL }}
+        run: |
+          if [ -z "$TRANSLATE_API_KEY" ]; then
+            echo "TRANSLATE_API_KEY not configured; skipping description translation"
+            exit 0
+          fi
+          npm run translate || echo "::warning::Description translation failed; building with the committed translation memory"
+
       - name: Build (check changes)
         id: check
         run: |
@@ -103,7 +118,7 @@ jobs:
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add dist
+            git add dist i18n/descriptions
 
             DT=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 

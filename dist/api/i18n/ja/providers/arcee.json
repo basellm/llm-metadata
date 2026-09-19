@@ -1,0 +1,49 @@
+{
+  "api": "https://api.arcee.ai/api/v1",
+  "doc": "https://docs.arcee.ai",
+  "env": [
+    "ARCEE_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/arcee.svg",
+  "id": "arcee",
+  "lobeIcon": "Arcee",
+  "models": {
+    "trinity-large-thinking": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.25,
+        "output": 0.8
+      },
+      "description": "長期・多ターンのツール利用向けに拡張思考を備えた、推論最適化済みの 398B MoE エージェントモデル",
+      "family": "trinity",
+      "id": "trinity-large-thinking",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-05-28",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Trinity Large Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-01",
+      "status": "beta",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Arcee",
+  "npm": "@ai-sdk/openai-compatible"
+}

@@ -1,5 +1,9 @@
 {
   "api": "https://api.minimaxi.com/anthropic/v1",
+  "billing": {
+    "priority": 10
+  },
+  "currency": "CNY",
   "doc": "https://platform.minimaxi.com/docs/guides/quickstart",
   "env": [
     "MINIMAX_API_KEY"
@@ -11,8 +15,11 @@
     "MiniMax-M2": {
       "attachment": false,
       "cost": {
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.21,
+        "cache_write": 2.625,
+        "currency": "CNY",
+        "input": 2.1,
+        "output": 8.4
       },
       "description": "MiniMax model for chat, coding, office work, and agentic tasks",
       "family": "minimax",
@@ -41,10 +48,11 @@
     "MiniMax-M2.1": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.03,
-        "cache_write": 0.375,
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.21,
+        "cache_write": 2.625,
+        "currency": "CNY",
+        "input": 2.1,
+        "output": 8.4
       },
       "description": "MiniMax model for chat, coding, office work, and agentic tasks",
       "family": "minimax",
@@ -73,10 +81,11 @@
     "MiniMax-M2.5": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.03,
-        "cache_write": 0.375,
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.21,
+        "cache_write": 2.625,
+        "currency": "CNY",
+        "input": 2.1,
+        "output": 8.4
       },
       "description": "MiniMax model for chat, coding, office work, and agentic tasks",
       "family": "minimax",
@@ -105,10 +114,11 @@
     "MiniMax-M2.5-highspeed": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.06,
-        "cache_write": 0.375,
-        "input": 0.6,
-        "output": 2.4
+        "cache_read": 0.21,
+        "cache_write": 2.625,
+        "currency": "CNY",
+        "input": 4.2,
+        "output": 16.8
       },
       "description": "High-speed MiniMax model for low-latency coding and agent workflows",
       "family": "minimax",
@@ -137,10 +147,11 @@
     "MiniMax-M2.7": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.06,
-        "cache_write": 0.375,
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.42,
+        "cache_write": 2.625,
+        "currency": "CNY",
+        "input": 2.1,
+        "output": 8.4
       },
       "description": "MiniMax model for chat, coding, office work, and agentic tasks",
       "family": "minimax",
@@ -169,10 +180,11 @@
     "MiniMax-M2.7-highspeed": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.06,
-        "cache_write": 0.375,
-        "input": 0.6,
-        "output": 2.4
+        "cache_read": 0.42,
+        "cache_write": 2.625,
+        "currency": "CNY",
+        "input": 4.2,
+        "output": 16.8
       },
       "description": "High-speed MiniMax model for low-latency coding and agent workflows",
       "family": "minimax",
@@ -201,19 +213,15 @@
     "MiniMax-M3": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.06,
-        "context_over_200k": {
-          "cache_read": 0.12,
-          "input": 0.6,
-          "output": 2.4
-        },
-        "input": 0.3,
-        "output": 1.2,
+        "cache_read": 0.42,
+        "currency": "CNY",
+        "input": 2.1,
+        "output": 8.4,
         "tiers": [
           {
-            "cache_read": 0.12,
-            "input": 0.6,
-            "output": 2.4,
+            "cache_read": 0.84,
+            "input": 4.2,
+            "output": 16.8,
             "tier": {
               "size": 512000,
               "type": "context"

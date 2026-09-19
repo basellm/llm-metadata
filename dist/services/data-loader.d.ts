@@ -12,7 +12,11 @@ export declare class DataLoader {
     loadPolicy(): PolicyConfig;
     /** 加载原生供应商目录（缺失时返回 null，构建将跳过过滤） */
     loadNativeProviders(): NativeProvidersConfig | null;
-    /** 加载覆写配置 */
+    /**
+     * 加载目录化覆写（data/overrides/**）。每个文件对应唯一键：
+     * providers/<provider>.json、models/<provider>/<model>.json，
+     * i18n/providers/<provider>.json、i18n/models/<provider>/<model>.json。
+     */
     loadOverrides(): OverrideConfig;
 }
 //# sourceMappingURL=data-loader.d.ts.map

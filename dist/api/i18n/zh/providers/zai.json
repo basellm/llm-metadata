@@ -1,5 +1,8 @@
 {
   "api": "https://api.z.ai/api/paas/v4",
+  "billing": {
+    "priority": 20
+  },
   "doc": "https://docs.z.ai/guides/overview/pricing",
   "env": [
     "ZHIPU_API_KEY"
@@ -16,7 +19,7 @@
         "input": 0.6,
         "output": 2.2
       },
-      "description": "Hybrid-reasoning GLM release that made the 4.5 line broadly useful",
+      "description": "支持混合推理的 GLM 版本，让 4.5 系列具备了广泛实用性",
       "family": "glm",
       "id": "glm-4.5",
       "knowledge": "2025-04",
@@ -53,7 +56,7 @@
         "input": 0.2,
         "output": 1.1
       },
-      "description": "Lighter GLM-4.5 variant for fast coding assistance and cheaper agents",
+      "description": "更轻量的 GLM-4.5 变体，面向快速编程辅助与更低成本的智能体",
       "family": "glm-air",
       "id": "glm-4.5-air",
       "knowledge": "2025-04",
@@ -90,7 +93,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
+      "description": "高效的 GLM 模型，面向快速推理、编程与智能体工作流",
       "family": "glm-flash",
       "id": "glm-4.5-flash",
       "knowledge": "2025-04",
@@ -125,7 +128,7 @@
         "input": 0.6,
         "output": 1.8
       },
-      "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+      "description": "GLM 视觉模型，面向视觉推理、文档理解与多模态智能体",
       "family": "glm",
       "id": "glm-4.5v",
       "knowledge": "2025-04",
@@ -164,7 +167,7 @@
         "input": 0.6,
         "output": 2.2
       },
-      "description": "Late GLM-4 workhorse for coding agents, reasoning, and structured tasks",
+      "description": "GLM-4 后期主力模型，面向编程智能体、推理与结构化任务",
       "family": "glm",
       "id": "glm-4.6",
       "knowledge": "2025-04",
@@ -199,7 +202,7 @@
         "input": 0.3,
         "output": 0.9
       },
-      "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+      "description": "GLM 视觉模型，面向视觉推理、文档理解与多模态智能体",
       "family": "glm",
       "id": "glm-4.6v",
       "knowledge": "2025-04",
@@ -238,7 +241,7 @@
         "input": 0.6,
         "output": 2.2
       },
-      "description": "Mature GLM model for dependable coding, reasoning, and structured agent tasks",
+      "description": "成熟的 GLM 模型，面向可靠的编程、推理与结构化智能体任务",
       "family": "glm",
       "id": "glm-4.7",
       "interleaved": {
@@ -278,7 +281,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Budget GLM lane for fast coding help, routing, and everyday automation",
+      "description": "经济型 GLM，适合快速编程辅助、路由分发与日常自动化",
       "family": "glm-flash",
       "id": "glm-4.7-flash",
       "knowledge": "2025-04",
@@ -315,7 +318,7 @@
         "input": 0.07,
         "output": 0.4
       },
-      "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
+      "description": "高效的 GLM 模型，面向快速推理、编程与智能体工作流",
       "family": "glm-flash",
       "id": "glm-4.7-flashx",
       "knowledge": "2025-04",
@@ -352,7 +355,7 @@
         "input": 1,
         "output": 3.2
       },
-      "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
+      "description": "通用 GLM 旗舰模型，面向编程、分析与重度工具调用的工程工作流",
       "family": "glm",
       "id": "glm-5",
       "interleaved": {
@@ -391,7 +394,7 @@
         "input": 1.2,
         "output": 4
       },
-      "description": "Faster GLM-5 lane for coding agents that need lower latency",
+      "description": "更快的 GLM-5，适合需要更低延迟的编程智能体",
       "family": "glm",
       "id": "glm-5-turbo",
       "interleaved": {
@@ -431,7 +434,7 @@
         "input": 1.4,
         "output": 4.4
       },
-      "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
+      "description": "强大的 GLM 编程模型，面向智能体工程、终端操作与代码仓库生成",
       "family": "glm",
       "id": "glm-5.1",
       "interleaved": {
@@ -471,7 +474,7 @@
         "input": 1.4,
         "output": 4.4
       },
-      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "description": "开源 GLM 旗舰模型，面向长程编程智能体与百万 token 上下文任务",
       "family": "glm",
       "id": "glm-5.2",
       "interleaved": {
@@ -515,7 +518,7 @@
         "input": 1.4,
         "output": 4.4
       },
-      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "description": "GLM 旗舰模型，面向长程编程、智能体与复杂项目交付",
       "family": "glm",
       "id": "glm-5.3",
       "interleaved": {
@@ -555,12 +558,12 @@
     "glm-5.3-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.015,
+        "cache_read": 0.03,
         "cache_write": 0,
-        "input": 0.075,
-        "output": 0.25
+        "input": 0.15,
+        "output": 0.5
       },
-      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "description": "原生多模态 GLM 模型，面向高效编程与长程智能体任务",
       "family": "glm-flash",
       "id": "glm-5.3-flash",
       "interleaved": {
@@ -600,6 +603,54 @@
       "temperature": true,
       "tool_call": true
     },
+    "glm-5.3-flashx": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "cache_write": 0,
+        "input": 0.37,
+        "output": 1.25
+      },
+      "description": "GLM-5.3-Flash 的高速服务版本，面向编程与智能体工作流",
+      "family": "glm-flash",
+      "id": "glm-5.3-flashx",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-09-18",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-FlashX",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "glm-5v-turbo": {
       "attachment": true,
       "cost": {
@@ -608,7 +659,7 @@
         "input": 1.2,
         "output": 4
       },
-      "description": "Fast GLM vision model for screenshots, documents, and multimodal agent tasks",
+      "description": "快速型 GLM 视觉模型，面向截图、文档与多模态智能体任务",
       "family": "glm",
       "id": "glm-5v-turbo",
       "interleaved": {

@@ -1,5 +1,9 @@
 {
   "api": "https://api.stepfun.com/v1",
+  "billing": {
+    "priority": 10
+  },
+  "currency": "CNY",
   "doc": "https://platform.stepfun.com/docs/zh/overview/concept",
   "env": [
     "STEPFUN_API_KEY"
@@ -73,9 +77,10 @@
     "step-3.5-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.02,
-        "input": 0.1,
-        "output": 0.3
+        "cache_read": 0.14,
+        "currency": "CNY",
+        "input": 0.7,
+        "output": 2.1
       },
       "description": "StepFun flash lane for quick multimodal reasoning and coding assistance",
       "id": "step-3.5-flash",
@@ -116,9 +121,10 @@
     "step-3.5-flash-2603": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.02,
-        "input": 0.1,
-        "output": 0.3
+        "cache_read": 0.14,
+        "currency": "CNY",
+        "input": 0.7,
+        "output": 2.1
       },
       "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
       "id": "step-3.5-flash-2603",
@@ -159,9 +165,10 @@
     "step-3.7-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.037,
-        "input": 0.185,
-        "output": 1.11
+        "cache_read": 0.27,
+        "currency": "CNY",
+        "input": 1.35,
+        "output": 8.1
       },
       "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
       "id": "step-3.7-flash",

@@ -2,20 +2,21 @@
   "data": {
     "billing_expr": {
       "glm-4.5": "tier(\"standard\", p * 0.6 + cr * 0.11 + cc * 0 + c * 2.2)",
-      "glm-4.5-air": "tier(\"standard\", p * 0.2 + cr * 0.03 + cc * 0 + c * 1.1)",
+      "glm-4.5-air": "len <= 32000 ? tier(\"0_32k\", p * 0.109589 + cr * 0.0219178 + cc * 0 + c * 0.821918) : tier(\"32k_plus\", p * 0.164384 + cr * 0.0328767 + cc * 0 + c * 1.09589)",
       "glm-4.5-flash": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
-      "glm-4.5v": "tier(\"standard\", p * 0.6 + c * 1.8)",
+      "glm-4.5v": "len <= 32000 ? tier(\"0_32k\", p * 0.273973 + cr * 0.0547945 + cc * 0 + c * 0.821918) : tier(\"32k_plus\", p * 0.547945 + cr * 0.109589 + cc * 0 + c * 1.64384)",
       "glm-4.6": "tier(\"standard\", p * 0.6 + cr * 0.11 + cc * 0 + c * 2.2)",
-      "glm-4.6v": "tier(\"standard\", p * 0.3 + c * 0.9)",
-      "glm-4.7": "tier(\"standard\", p * 0.6 + cr * 0.11 + cc * 0 + c * 2.2)",
+      "glm-4.6v": "len <= 32000 ? tier(\"0_32k\", p * 0.136986 + cr * 0.0273973 + cc * 0 + c * 0.410959) : tier(\"32k_plus\", p * 0.273973 + cr * 0.0547945 + cc * 0 + c * 0.821918)",
+      "glm-4.7": "len <= 32000 ? tier(\"0_32k\", p * 0.410959 + cr * 0.0821918 + cc * 0 + c * 1.91781) : tier(\"32k_plus\", p * 0.547945 + cr * 0.109589 + cc * 0 + c * 2.19178)",
       "glm-4.7-flash": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
-      "glm-4.7-flashx": "tier(\"standard\", p * 0.07 + cr * 0.01 + cc * 0 + c * 0.4)",
-      "glm-5": "tier(\"standard\", p * 1 + cr * 0.2 + cc * 0 + c * 3.2)",
-      "glm-5.1": "tier(\"standard\", p * 1.4 + cr * 0.26 + cc * 0 + c * 4.4)",
-      "glm-5.2": "tier(\"standard\", p * 1.4 + cr * 0.26 + cc * 0 + c * 4.4)",
-      "glm-5.3": "tier(\"standard\", p * 1.4 + cr * 0.26 + cc * 0 + c * 4.4)",
-      "glm-5.3-flash": "tier(\"standard\", p * 0.075 + cr * 0.015 + cc * 0 + c * 0.25)",
-      "glm-5v-turbo": "tier(\"standard\", p * 5 + cr * 1.2 + cc * 0 + c * 22)"
+      "glm-4.7-flashx": "tier(\"standard\", p * 0.0684932 + cr * 0.0136986 + cc * 0 + c * 0.410959)",
+      "glm-5": "len <= 32000 ? tier(\"0_32k\", p * 0.547945 + cr * 0.136986 + cc * 0 + c * 2.46575) : tier(\"32k_plus\", p * 0.821918 + cr * 0.205479 + cc * 0 + c * 3.0137)",
+      "glm-5.1": "len <= 32000 ? tier(\"0_32k\", p * 0.821918 + cr * 0.178082 + cc * 0 + c * 3.28767) : tier(\"32k_plus\", p * 1.09589 + cr * 0.273973 + cc * 0 + c * 3.83562)",
+      "glm-5.2": "tier(\"standard\", p * 1.09589 + cr * 0.273973 + cc * 0 + c * 3.83562)",
+      "glm-5.3": "tier(\"standard\", p * 1.09589 + cr * 0.273973 + cc * 0 + c * 3.83562)",
+      "glm-5.3-flash": "tier(\"standard\", p * 0.109589 + cr * 0.0315068 + cc * 0 + c * 0.383562)",
+      "glm-5.3-flashx": "tier(\"standard\", p * 0.273973 + cr * 0.0780822 + cc * 0 + c * 0.958904)",
+      "glm-5v-turbo": "len <= 32000 ? tier(\"0_32k\", p * 0.684932 + cr * 0.164384 + cc * 0 + c * 3.0137) : tier(\"32k_plus\", p * 0.958904 + cr * 0.246575 + cc * 0 + c * 3.56164)"
     },
     "billing_mode": {
       "glm-4.5": "tiered_expr",
@@ -32,6 +33,7 @@
       "glm-5.2": "tiered_expr",
       "glm-5.3": "tiered_expr",
       "glm-5.3-flash": "tiered_expr",
+      "glm-5.3-flashx": "tiered_expr",
       "glm-5v-turbo": "tiered_expr"
     }
   },

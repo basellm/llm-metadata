@@ -1,0 +1,27 @@
+{
+  "$comment": "Volcengine Ark (China) official CNY list, https://www.volcengine.com/docs/82379/1544106. Input <= 32K base; (32K, 128K] and (128K, 256K] tiers.",
+  "cost": {
+    "currency": "CNY",
+    "input": 0.6,
+    "output": 3.6,
+    "cache_read": 0.12,
+    "tiers": [
+      {
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        },
+        "input": 0.9,
+        "output": 5.4
+      },
+      {
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        },
+        "input": 1.8,
+        "output": 10.8
+      }
+    ]
+  }
+}

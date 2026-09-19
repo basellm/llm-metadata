@@ -1,45 +1,30 @@
 #!/usr/bin/env node
-import { writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { DataLoader } from './services/data-loader.js';
-import { DataProcessor } from './services/data-processor.js';
+import { defaultDeployment, planeRates } from './billing/deployment.js';
+import { catalogPaths, loadCatalog } from './services/catalog.js';
 import { IndexBuilder } from './services/index-builder.js';
 import { mirrorProviderLogos } from './services/logo-mirror.js';
-import { NativeFilter } from './services/native-filter.js';
 import { NewApiBuilder } from './services/newapi-builder.js';
-import { I18nService } from './services/i18n-service.js';
+import { VoAPIBuilder } from './services/voapi-builder.js';
 import { parseArgv } from './utils/cli-utils.js';
 import { copyDirSyncIfExists, ensureDirSync, pruneFiles, pruneSubdirectories, removeNonJsonFiles, sanitizeFileSegment, writeJSONIfChanged, } from './utils/file-utils.js';
-import { sha256OfObject, stableStringify } from './utils/object-utils.js';
-import { VoAPIBuilder } from './services/voapi-builder.js';
+import { sha256OfObject } from './utils/object-utils.js';
 /** 主构建类 */
 class Builder {
     ROOT;
     DIST_DIR;
     API_DIR;
-    CACHE_DIR;
-    DATA_DIR;
-    SOURCE_URL = 'https://models.dev/api.json';
-    dataLoader;
-    dataProcessor;
-    indexBuilder;
-    voApiBuilder;
-    i18nService;
+    paths;
+    indexBuilder = new IndexBuilder();
     constructor() {
         this.ROOT = resolve(process.cwd());
         this.DIST_DIR = join(this.ROOT, 'dist');
         this.API_DIR = join(this.DIST_DIR, 'api');
-        this.CACHE_DIR = join(this.ROOT, '.cache');
-        this.DATA_DIR = join(this.ROOT, 'data');
-        this.dataLoader = new DataLoader(this.DATA_DIR, this.CACHE_DIR);
-        this.dataProcessor = new DataProcessor();
-        this.indexBuilder = new IndexBuilder();
-        this.voApiBuilder = new VoAPIBuilder();
-        this.i18nService = new I18nService(this.ROOT);
+        this.paths = catalogPaths(this.ROOT);
     }
     /** 写入提供商和模型文件并清理陈旧产物（返回变更数） */
-    writeProvidersAndModels(baseDir, dataset, policy, sourceProviderIds, options) {
+    writeProvidersAndModels(baseDir, dataset, catalog, policy, options) {
         let changes = 0;
         const providersDir = join(baseDir, 'providers');
         const modelsBaseDir = join(baseDir, 'models');
@@ -49,16 +34,8 @@ class Builder {
         changes += pruneSubdirectories(modelsBaseDir, keepProviders, options);
         for (const [providerId, provider] of Object.entries(dataset.providers)) {
             const safeProvider = sanitizeFileSegment(providerId);
-            // 提供商文件
-            let providerOut = { ...provider };
-            if (sourceProviderIds.has(providerId)) {
-                providerOut = {
-                    ...providerOut,
-                    iconURL: `https://models.dev/logos/${providerId}.svg`,
-                };
-            }
             const providerPath = join(providersDir, `${safeProvider}.json`);
-            if (writeJSONIfChanged(providerPath, providerOut, options)) {
+            if (writeJSONIfChanged(providerPath, provider, options)) {
                 changes++;
             }
             // 模型文件
@@ -69,9 +46,9 @@ class Builder {
             const keepModels = new Set(Object.keys(models).map(sanitizeFileSegment));
             changes += pruneFiles(providerModelsDir, keepModels, '.json', options);
             for (const [modelId, modelData] of Object.entries(models)) {
-                const allowAuto = this.dataProcessor.shouldAutoUpdate(policy, providerId, modelId);
+                const allowAuto = catalog.processor.shouldAutoUpdate(policy, providerId, modelId);
                 const modelPath = join(providerModelsDir, `${sanitizeFileSegment(modelId)}.json`);
-                const existing = this.dataLoader.readJSONSafe(modelPath, null);
+                const existing = catalog.loader.readJSONSafe(modelPath, null);
                 if (!options.force && !allowAuto && existing) {
                     continue; // 跳过非自动模式的现有文件
                 }
@@ -82,156 +59,111 @@ class Builder {
         }
         return changes;
     }
-    /** 计算构建清单 */
-    computeManifest(params) {
-        const result = {
-            version: 1,
-            generatedAt: new Date().toISOString(),
-            sourceHash: params.sourceHash,
-            overridesHash: params.overridesHash,
-            policyHash: params.policyHash,
-            nativeProvidersHash: params.nativeProvidersHash,
-            stats: params.stats,
-        };
-        if (params.warnings) {
-            result.warnings = params.warnings;
+    /** 写入 VoAPI 载荷（firms + models）并返回变更数 */
+    writeVoApi(outDir, builder, dataset, dryRun) {
+        ensureDirSync(outDir);
+        const payload = builder.buildFirms(dataset);
+        let changes = 0;
+        for (const [name, data] of [
+            ['firms.json', payload.firms],
+            ['models.json', payload.models],
+        ]) {
+            if (writeJSONIfChanged(join(outDir, name), { success: true, message: '', data }, { dryRun })) {
+                changes++;
+            }
         }
-        return result;
+        return changes;
+    }
+    /** 写入 NewAPI 元数据同步载荷（vendors + models）并返回变更数 */
+    writeNewApiSync(outDir, builder, dataset, tagMap, dryRun) {
+        ensureDirSync(outDir);
+        const payload = builder.buildSyncPayload(dataset, tagMap);
+        let changes = 0;
+        for (const [name, data] of [
+            ['vendors.json', payload.vendors],
+            ['models.json', payload.models],
+        ]) {
+            if (writeJSONIfChanged(join(outDir, name), { success: true, message: '', data }, { dryRun })) {
+                changes++;
+            }
+        }
+        return changes;
     }
     /** 主构建流程 */
     async build(config) {
         const { dryRun, force } = config;
         // 准备目录
-        ensureDirSync(this.CACHE_DIR);
-        ensureDirSync(this.DATA_DIR);
         ensureDirSync(this.DIST_DIR);
         ensureDirSync(this.API_DIR);
         copyDirSyncIfExists(join(this.ROOT, 'public'), this.DIST_DIR);
-        // 加载数据
-        console.log('Loading source data...');
-        const source = await this.dataLoader.loadSourceData(this.SOURCE_URL);
-        // 缓存源数据
-        writeFileSync(join(this.CACHE_DIR, 'api.json'), stableStringify(source), 'utf8');
-        // 加载配置
-        console.log('Loading configuration...');
-        const overrides = this.dataLoader.loadOverrides();
-        const policy = this.dataLoader.loadPolicy();
-        const nativeConfig = this.dataLoader.loadNativeProviders();
-        const nativeFilter = new NativeFilter(nativeConfig);
-        const warnings = [];
-        // 处理数据
-        console.log('Processing data...');
-        let normalized = this.dataProcessor.mapSourceToNormalized(source);
-        const sourceProviderIds = new Set(Object.keys(source));
-        // 注入手动提供商
-        normalized = this.dataProcessor.injectManualProviders(normalized, overrides);
-        // 处理所有数据（含 overrides 注入的模型）
-        const processed = this.dataProcessor.processAllData(normalized, overrides, sourceProviderIds);
-        // 仅保留原生供应商及其自研模型（作为输出前的最后一道过滤）
-        console.log('Filtering to native providers...');
-        const filtered = nativeFilter.apply(processed);
-        warnings.push(...filtered.warnings);
-        console.log(`Native filter: kept ${Object.keys(filtered.data.providers).length} provider(s), ` +
-            `excluded ${filtered.excludedProviders} provider(s) and ${filtered.excludedModels} hosted model(s)`);
-        const allModelsData = filtered.data;
-        // NewAPI 构建器（货币换算 + 供应商级计费规则）
-        const newApiBuilder = new NewApiBuilder({
-            exchangeRates: nativeFilter.getExchangeRates(),
-            providers: nativeFilter.getProviderRules(),
-        });
+        const catalog = await loadCatalog(this.paths);
+        const { overrides, policy, nativeFilter, data: allModelsData } = catalog;
+        const warnings = [...catalog.warnings];
+        // 每个语言只本地化一次，供数据集、VoAPI、NewAPI 与拆分文件复用
+        console.log('Localizing datasets...');
+        const locales = catalog.i18n.getLocales().map((l) => l.locale);
+        const localized = new Map();
+        for (const locale of locales) {
+            const result = catalog.processor.localizeNormalizedData(allModelsData, overrides, locale);
+            localized.set(locale, result.data);
+            if (result.untranslated.length > 0) {
+                warnings.push(`i18n: ${result.untranslated.length} model description(s) have no ${locale} translation (run "npm run translate")`);
+            }
+        }
+        const enData = localized.get('en') ?? allModelsData;
+        // 静态预设按 new-api 出厂部署生成（quota-USD 即真实美元），非美元价目按 exchangeRates 换算
+        const exchangeRates = nativeFilter.getExchangeRates();
+        const deployment = defaultDeployment(exchangeRates);
+        const newApiBuilder = new NewApiBuilder(deployment, exchangeRates);
+        const voApiBuilder = new VoAPIBuilder(planeRates(deployment, exchangeRates));
         const newApiWarnings = new Set();
         // 构建索引
         console.log('Building indexes...');
         const indexes = this.indexBuilder.buildIndexes(allModelsData, overrides);
         const providersOutput = this.indexBuilder.buildProvidersOutput(indexes);
-        // 计算哈希
-        const sourceHash = sha256OfObject(source);
-        const overridesHash = sha256OfObject(overrides);
-        const policyHash = sha256OfObject(policy);
-        const nativeProvidersHash = sha256OfObject(nativeConfig ?? {});
         let changes = 0;
-        // 写入主索引
+        // 写入主索引与完整数据
         console.log('Writing main indexes...');
-        if (writeJSONIfChanged(join(this.API_DIR, 'index.json'), indexes, { dryRun })) {
+        if (writeJSONIfChanged(join(this.API_DIR, 'index.json'), indexes, { dryRun }))
             changes++;
-        }
         if (writeJSONIfChanged(join(this.API_DIR, 'providers.json'), providersOutput, { dryRun })) {
             changes++;
         }
-        // 写入完整数据
         console.log('Writing complete models data...');
         if (writeJSONIfChanged(join(this.API_DIR, 'all.json'), allModelsData.providers, { dryRun })) {
             changes++;
         }
-        // 写入 i18n 版本的完整数据与索引（按配置 locales 循环）
-        {
-            const i18nDir = join(this.API_DIR, 'i18n');
-            ensureDirSync(i18nDir);
-            const locales = this.i18nService.getLocales().map((l) => l.locale);
-            for (const locale of locales) {
-                const allLocalized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale);
-                const outDir = join(i18nDir, locale);
-                ensureDirSync(outDir);
-                if (writeJSONIfChanged(join(outDir, 'all.json'), allLocalized.providers, { dryRun })) {
-                    changes++;
-                }
-                const indexesLoc = this.indexBuilder.buildIndexes(allLocalized, overrides);
-                const providersOutLoc = this.indexBuilder.buildProvidersOutput(indexesLoc);
-                if (writeJSONIfChanged(join(outDir, 'index.json'), indexesLoc, { dryRun })) {
-                    changes++;
-                }
-                if (writeJSONIfChanged(join(outDir, 'providers.json'), providersOutLoc, { dryRun })) {
-                    changes++;
-                }
+        // i18n 版本的完整数据与索引
+        const i18nDir = join(this.API_DIR, 'i18n');
+        for (const [locale, dataset] of localized) {
+            const outDir = join(i18nDir, locale);
+            ensureDirSync(outDir);
+            const indexesLoc = this.indexBuilder.buildIndexes(dataset, overrides);
+            if (writeJSONIfChanged(join(outDir, 'all.json'), dataset.providers, { dryRun }))
+                changes++;
+            if (writeJSONIfChanged(join(outDir, 'index.json'), indexesLoc, { dryRun }))
+                changes++;
+            if (writeJSONIfChanged(join(outDir, 'providers.json'), this.indexBuilder.buildProvidersOutput(indexesLoc), { dryRun })) {
+                changes++;
             }
         }
-        const apiI18nEn = this.i18nService.getApiMessages('en');
-        // 生成 VoAPI 接口
+        // VoAPI（基础 + 多语言）
         console.log('Generating VoAPI endpoints...');
-        const voapiDir = join(this.API_DIR, 'voapi');
-        ensureDirSync(voapiDir);
-        const voapiPayload = this.voApiBuilder.buildFirms(allModelsData);
-        if (writeJSONIfChanged(join(voapiDir, 'firms.json'), { success: true, message: '', data: voapiPayload.firms }, { dryRun })) {
-            changes++;
+        changes += this.writeVoApi(join(this.API_DIR, 'voapi'), voApiBuilder, allModelsData, dryRun);
+        for (const [locale, dataset] of localized) {
+            changes += this.writeVoApi(join(i18nDir, locale, 'voapi'), voApiBuilder, dataset, dryRun);
         }
-        if (writeJSONIfChanged(join(voapiDir, 'models.json'), { success: true, message: '', data: voapiPayload.models }, { dryRun })) {
-            changes++;
-        }
-        // 生成多语言 VoAPI locales 输出至 api/i18n/<locale>/voapi）
-        {
-            const locales = this.i18nService.getLocales().map((l) => l.locale);
-            const i18nBase = join(this.API_DIR, 'i18n');
-            ensureDirSync(i18nBase);
-            for (const locale of locales) {
-                const outDir = join(i18nBase, locale, 'voapi');
-                ensureDirSync(outDir);
-                const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale);
-                const voapiPayload = this.voApiBuilder.buildFirms(localized);
-                if (writeJSONIfChanged(join(outDir, 'firms.json'), { success: true, message: '', data: voapiPayload.firms }, { dryRun })) {
-                    changes++;
-                }
-                if (writeJSONIfChanged(join(outDir, 'models.json'), { success: true, message: '', data: voapiPayload.models }, { dryRun })) {
-                    changes++;
-                }
-            }
-        }
-        // 生成 NewAPI 接口
+        // NewAPI 元数据（基础输出使用英文本地化数据集，保持稳定；tags 用英文标签）
         console.log('Generating NewAPI endpoints...');
         const newapiDir = join(this.API_DIR, 'newapi');
-        ensureDirSync(newapiDir);
-        // 基于默认英文映射生成 tags（保持 NewAPI 输出稳定性）
-        const tagMapEn = {
-            ...(apiI18nEn.capability_labels || {}),
-        };
-        // 使用英文本地化数据集，以便提供商的国际化信息（如描述）应用于基础 NewAPI 输出
-        const allModelsDataEn = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, 'en');
-        const newapiSync = newApiBuilder.buildSyncPayload(allModelsDataEn, tagMapEn);
-        if (writeJSONIfChanged(join(newapiDir, 'vendors.json'), { success: true, message: '', data: newapiSync.vendors }, { dryRun })) {
-            changes++;
+        const tagMapFor = (locale) => ({
+            ...(catalog.i18n.getApiMessages(locale).capability_labels || {}),
+        });
+        changes += this.writeNewApiSync(newapiDir, newApiBuilder, enData, tagMapFor('en'), dryRun);
+        for (const [locale, dataset] of localized) {
+            changes += this.writeNewApiSync(join(i18nDir, locale, 'newapi'), newApiBuilder, dataset, tagMapFor(locale), dryRun);
         }
-        if (writeJSONIfChanged(join(newapiDir, 'models.json'), { success: true, message: '', data: newapiSync.models }, { dryRun })) {
-            changes++;
-        }
+        // NewAPI 价格配置（聚合 + 按供应商，并清理已被过滤供应商的目录）
         const priceConfig = newApiBuilder.buildPriceConfig(allModelsData);
         priceConfig.warnings.forEach((w) => newApiWarnings.add(w));
         if (writeJSONIfChanged(join(newapiDir, 'ratio_config-v1-base.json'), priceConfig.config, {
@@ -239,15 +171,13 @@ class Builder {
         })) {
             changes++;
         }
-        // 按提供商生成 NewAPI 价格配置（并清理已被过滤供应商的目录）
         {
             const providersBaseDir = join(newapiDir, 'providers');
             ensureDirSync(providersBaseDir);
             const keepProviderDirs = new Set(Object.keys(allModelsData.providers).map(sanitizeFileSegment));
             changes += pruneSubdirectories(providersBaseDir, keepProviderDirs, { dryRun });
             for (const providerId of Object.keys(allModelsData.providers)) {
-                const safeProvider = sanitizeFileSegment(providerId);
-                const outDir = join(providersBaseDir, safeProvider);
+                const outDir = join(providersBaseDir, sanitizeFileSegment(providerId));
                 ensureDirSync(outDir);
                 const providerPriceConfig = newApiBuilder.buildPriceConfig(allModelsData, providerId);
                 providerPriceConfig.warnings.forEach((w) => newApiWarnings.add(w));
@@ -256,71 +186,46 @@ class Builder {
                 }
             }
         }
-        // 生成多语言 NewAPI（按 locales 输出至 api/i18n/<locale>/newapi）
-        {
-            const locales = this.i18nService.getLocales().map((l) => l.locale);
-            const i18nBase = join(this.API_DIR, 'i18n');
-            ensureDirSync(i18nBase);
-            for (const locale of locales) {
-                const apiMsg = this.i18nService.getApiMessages(locale);
-                const tagMap = {
-                    ...(apiMsg.capability_labels || {}),
-                };
-                const outDir = join(i18nBase, locale, 'newapi');
-                ensureDirSync(outDir);
-                const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale);
-                const payload = newApiBuilder.buildSyncPayload(localized, tagMap);
-                if (writeJSONIfChanged(join(outDir, 'vendors.json'), { success: true, message: '', data: payload.vendors }, { dryRun })) {
-                    changes++;
-                }
-                if (writeJSONIfChanged(join(outDir, 'models.json'), { success: true, message: '', data: payload.models }, { dryRun })) {
-                    changes++;
-                }
-            }
-        }
         warnings.push(...newApiWarnings);
         // 镜像供应商 logo（Web UI 同源加载，摆脱第三方主机可达性依赖）
         console.log('Mirroring provider logos...');
-        const logoResult = await mirrorProviderLogos(allModelsData.providers, { cacheDir: join(this.CACHE_DIR, 'logos'), outDir: join(this.API_DIR, 'logos') }, { dryRun, force });
+        const logoResult = await mirrorProviderLogos(allModelsData.providers, {
+            cacheDir: join(this.paths.cacheDir, 'logos'),
+            outDir: join(this.API_DIR, 'logos'),
+        }, { dryRun, force });
         changes += logoResult.changes;
         warnings.push(...logoResult.warnings);
-        // 写入单独的提供商和模型文件
+        // 写入单独的提供商和模型文件（基础 + 多语言）
         console.log('Writing individual provider and model files...');
-        changes += this.writeProvidersAndModels(this.API_DIR, allModelsData, policy, sourceProviderIds, {
+        changes += this.writeProvidersAndModels(this.API_DIR, allModelsData, catalog, policy, {
             dryRun,
             force,
         });
-        // 写入 i18n 的提供商与模型文件
-        {
-            console.log('Writing i18n provider and model files...');
-            const locales = this.i18nService.getLocales().map((l) => l.locale);
-            const i18nDir = join(this.API_DIR, 'i18n');
-            for (const locale of locales) {
-                const outDir = join(i18nDir, locale);
-                ensureDirSync(outDir);
-                const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale);
-                changes += this.writeProvidersAndModels(outDir, localized, policy, sourceProviderIds, {
-                    dryRun,
-                    force,
-                });
-            }
+        for (const [locale, dataset] of localized) {
+            changes += this.writeProvidersAndModels(join(i18nDir, locale), dataset, catalog, policy, {
+                dryRun,
+                force,
+            });
         }
         // 生成构建清单
-        const manifest = this.computeManifest({
-            sourceHash,
-            overridesHash,
-            policyHash,
-            nativeProvidersHash,
+        const manifest = {
+            version: 1,
+            generatedAt: new Date().toISOString(),
+            sourceHash: sha256OfObject(catalog.source),
+            overridesHash: sha256OfObject(overrides),
+            policyHash: sha256OfObject(policy),
+            nativeProvidersHash: sha256OfObject(catalog.nativeConfig ?? {}),
             stats: {
                 providers: indexes.providers.length,
                 models: indexes.models.length,
-                excludedProviders: filtered.excludedProviders,
-                excludedModels: filtered.excludedModels,
+                excludedProviders: catalog.excludedProviders,
+                excludedModels: catalog.excludedModels,
                 filesChanged: changes,
                 dryRun,
             },
+            newapi: { exchangeRates },
             ...(warnings.length > 0 && { warnings }),
-        });
+        };
         if (writeJSONIfChanged(join(this.API_DIR, 'manifest.json'), manifest, { dryRun })) {
             changes++;
         }

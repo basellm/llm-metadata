@@ -1,5 +1,12 @@
 {
   "api": "https://coding-intl.dashscope.aliyuncs.com/v1",
+  "billing": {
+    "priority": 5,
+    "thinkingToggle": {
+      "param": "enable_thinking",
+      "value": true
+    }
+  },
   "doc": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
   "env": [
     "ALIBABA_CODING_PLAN_API_KEY"
@@ -16,7 +23,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
+      "description": "Qwen 编程模型，面向软件智能体、代码仓库编辑与代码推理",
       "family": "qwen",
       "id": "qwen3-coder-next",
       "last_updated": "2026-02-03",
@@ -48,7 +55,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
+      "description": "Qwen 编程模型，面向软件智能体、代码仓库编辑与代码推理",
       "family": "qwen",
       "id": "qwen3-coder-plus",
       "knowledge": "2025-04",
@@ -80,7 +87,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Flagship Qwen model for complex reasoning, coding, and agentic workflows",
+      "description": "Qwen 旗舰模型，面向复杂推理、编程与智能体工作流",
       "family": "qwen",
       "id": "qwen3-max-2026-01-23",
       "knowledge": "2025-04",
@@ -112,7 +119,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen3.5-plus",
       "knowledge": "2025-04",
@@ -150,7 +157,7 @@
         "input": 0.1875,
         "output": 1.125
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen3.6",
       "id": "qwen3.6-flash",
       "last_updated": "2026-04-27",
@@ -189,7 +196,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen3.6-plus",
       "knowledge": "2025-04",
@@ -228,7 +235,7 @@
         "input": 2.5,
         "output": 7.5
       },
-      "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
+      "description": "Qwen 前沿模型，针对智能体框架、编程助手与长程任务调优",
       "family": "qwen",
       "id": "qwen3.7-max",
       "last_updated": "2026-05-21",
@@ -264,7 +271,7 @@
         "input": 0,
         "output": 0
       },
-      "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
+      "description": "多模态 Qwen 主力模型，面向长上下文智能体、视觉输入与编程",
       "family": "qwen",
       "id": "qwen3.7-plus",
       "knowledge": "2025-04",
@@ -297,5 +304,6 @@
     }
   },
   "name": "Alibaba Coding Plan",
-  "npm": "@ai-sdk/openai-compatible"
+  "npm": "@ai-sdk/openai-compatible",
+  "subscription": true
 }

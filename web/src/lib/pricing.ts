@@ -1,3 +1,5 @@
+import { isCurrency } from '@billing/currencies';
+
 import type { ModelCost } from './api';
 import { currencySymbol, formatContext, formatMoney, formatTokenPrice } from './format';
 import type { Locale, MessageKey, Translator } from './i18n';
@@ -21,6 +23,8 @@ export interface DetailSection {
 
 /** 模型价格：主行摘要 + 二级明细分组 */
 export interface ModelPricing {
+  /** 价目货币代码（USD / CNY / …） */
+  currency: string;
   symbol: string;
   /** 基础价（时段定价模型为基础时段价） */
   base: PriceCells;
@@ -29,7 +33,17 @@ export interface ModelPricing {
   tiered: boolean;
   thinking: boolean;
   scheduled: boolean;
+  /** 端点以其他货币结算，但价目仍是上游 USD 数值（尚无官方本币价） */
+  estimated: boolean;
   sections: DetailSection[];
+  /** 同一端点以其他货币公布的官方价目（cost.currency_options），按货币代码排序 */
+  alternates: ModelPricing[];
+}
+
+export interface ParsePricingOptions {
+  /** 所属端点的结算货币（providers.json currency），用于判定上游估算价 */
+  providerCurrency?: string | undefined;
+  now?: Date;
 }
 
 const EMPTY_CELLS: PriceCells = { input: null, cacheRead: null, cacheWrite: null, output: null };
@@ -181,14 +195,17 @@ function buildScheduleRows(
  * 将 ModelCost 解析为主行摘要 + 明细分组（标签经 t 本地化）。
  * 覆盖三种阶梯表示：键式（input_32k_128k）、tiers 数组（阈值以上生效）、
  * 遗留 context_over_200k（tiers 存在时忽略）；以及时段、思考模式、模态与按量费率。
+ * currency_options 中的其他货币价目递归解析为 alternates。
  */
 export function parseModelPricing(
   cost: ModelCost | undefined,
   t: Translator,
   locale: Locale,
-  now = new Date(),
+  options: ParsePricingOptions = {},
 ): ModelPricing {
-  const symbol = currencySymbol(cost?.currency);
+  const now = options.now ?? new Date();
+  const currency = cost?.currency || 'USD';
+  const symbol = currencySymbol(currency);
   const base: PriceCells = { ...EMPTY_CELLS };
   const contextTiers = new RowMap();
   const thinkingRows = new RowMap();
@@ -204,7 +221,7 @@ export function parseModelPricing(
   let summaryUnit: { value: number; suffix: string } | null = null;
 
   for (const [key, value] of Object.entries(cost ?? {})) {
-    if (key === 'currency') continue;
+    if (key === 'currency' || key === 'currency_options') continue;
 
     if (key === 'schedule') {
       if (isSchedule(value)) schedule = value;
@@ -347,20 +364,40 @@ export function parseModelPricing(
     }
   }
 
+  // 其他货币的官方价目：货币由键决定，且不再嵌套
+  const alternates = Object.entries(cost?.currency_options ?? {})
+    .flatMap(([code, sheet]) =>
+      isCurrency(code) && typeof sheet === 'object' && sheet !== null
+        ? [{ ...sheet, currency: code } satisfies ModelCost]
+        : [],
+    )
+    .sort((a, b) => a.currency.localeCompare(b.currency))
+    .map((sheet) => parseModelPricing(sheet, t, locale, { now }));
+
+  // 非 USD 端点上未声明货币的正价 = 上游 USD 估算（0 价与货币无关）
+  const providerCurrency = options.providerCurrency ?? 'USD';
+  const estimated =
+    providerCurrency !== 'USD' &&
+    cost?.currency === undefined &&
+    Object.values(base).some((v) => v !== null && v > 0);
+
   return {
+    currency,
     symbol,
     base,
     unit: summaryUnit ? `${formatMoney(symbol, summaryUnit.value)}${summaryUnit.suffix}` : null,
     tiered: contextTiers.size > 0,
     thinking: thinkingRows.size > 0,
     scheduled: schedule !== null,
+    estimated,
     sections,
+    alternates,
   };
 }
 
-/** 主行 / 卡片的输入价文案：无 token 输入价时回退为按量摘要（如 "¥0.08/s"） */
-export function inputPriceLabel(pricing: ModelPricing): string {
-  return pricing.base.input === null && pricing.unit
-    ? pricing.unit
-    : formatTokenPrice(pricing.symbol, pricing.base.input);
+/** 主行 / 卡片的价格单元格文案：输入列无 token 价时回退为按量摘要（如 "¥0.08/s"） */
+export function priceCellLabel(pricing: ModelPricing, column: PriceColumn): string {
+  const value = pricing.base[column];
+  if (column === 'input' && value === null && pricing.unit) return pricing.unit;
+  return formatTokenPrice(pricing.symbol, value);
 }

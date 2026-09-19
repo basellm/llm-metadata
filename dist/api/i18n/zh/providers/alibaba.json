@@ -1,5 +1,12 @@
 {
   "api": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+  "billing": {
+    "priority": 30,
+    "thinkingToggle": {
+      "param": "enable_thinking",
+      "value": true
+    }
+  },
   "doc": "https://www.alibabacloud.com/help/en/model-studio/models",
   "env": [
     "DASHSCOPE_API_KEY"
@@ -14,7 +21,7 @@
         "input": 1.2,
         "output": 4.8
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qvq",
       "id": "qvq-max",
       "knowledge": "2024-04",
@@ -46,7 +53,7 @@
         "input": 0.05,
         "output": 0.4
       },
-      "description": "Efficient Qwen model for fast chat, extraction, and high-volume workloads",
+      "description": "高效的 Qwen 模型，面向快速对话、信息抽取与高吞吐负载",
       "family": "qwen",
       "id": "qwen-flash",
       "knowledge": "2024-04",
@@ -84,7 +91,7 @@
         "input": 1.6,
         "output": 6.4
       },
-      "description": "Flagship Qwen model for complex reasoning, coding, and agentic workflows",
+      "description": "Qwen 旗舰模型，面向复杂推理、编程与智能体工作流",
       "family": "qwen",
       "id": "qwen-max",
       "knowledge": "2024-04",
@@ -114,7 +121,7 @@
         "input": 2.46,
         "output": 7.37
       },
-      "description": "Translation model for multilingual conversion, localization, and cross-language workflows",
+      "description": "翻译模型，面向多语言转换、本地化与跨语言工作流",
       "family": "qwen",
       "id": "qwen-mt-plus",
       "knowledge": "2024-04",
@@ -144,7 +151,7 @@
         "input": 0.16,
         "output": 0.49
       },
-      "description": "Translation model for multilingual conversion, localization, and cross-language workflows",
+      "description": "翻译模型，面向多语言转换、本地化与跨语言工作流",
       "family": "qwen",
       "id": "qwen-mt-turbo",
       "knowledge": "2024-04",
@@ -176,7 +183,7 @@
         "output": 0.27,
         "output_audio": 8.89
       },
-      "description": "Qwen omni model for text, vision, audio, and multimodal agent tasks",
+      "description": "Qwen 全模态模型，面向文本、视觉、音频与多模态智能体任务",
       "family": "qwen",
       "id": "qwen-omni-turbo",
       "knowledge": "2024-04",
@@ -212,7 +219,7 @@
         "output": 1.07,
         "output_audio": 8.89
       },
-      "description": "Qwen omni model for text, vision, audio, and multimodal agent tasks",
+      "description": "Qwen 全模态模型，面向文本、视觉、音频与多模态智能体任务",
       "family": "qwen",
       "id": "qwen-omni-turbo-realtime",
       "knowledge": "2024-04",
@@ -246,7 +253,7 @@
         "output": 1.2,
         "reasoning": 4
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "Qwen 指令模型，面向多语言对话、推理与工具调用",
       "family": "qwen",
       "id": "qwen-plus",
       "knowledge": "2024-04",
@@ -284,7 +291,7 @@
         "input": 0.5,
         "output": 1.4
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "Qwen 指令模型，面向多语言对话、推理与工具调用",
       "family": "qwen",
       "id": "qwen-plus-character-ja",
       "knowledge": "2024-04",
@@ -315,7 +322,7 @@
         "output": 0.2,
         "reasoning": 0.5
       },
-      "description": "Efficient Qwen model for fast chat, extraction, and high-volume workloads",
+      "description": "高效的 Qwen 模型，面向快速对话、信息抽取与高吞吐负载",
       "family": "qwen",
       "id": "qwen-turbo",
       "knowledge": "2024-04",
@@ -353,7 +360,7 @@
         "input": 0.8,
         "output": 3.2
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen-vl-max",
       "knowledge": "2024-04",
@@ -384,7 +391,7 @@
         "input": 0.72,
         "output": 0.72
       },
-      "description": "OCR model for extracting structured text from documents and screenshots",
+      "description": "OCR 模型，用于从文档与截图中提取结构化文本",
       "family": "qwen",
       "id": "qwen-vl-ocr",
       "knowledge": "2024-04",
@@ -415,7 +422,7 @@
         "input": 0.21,
         "output": 0.63
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen-vl-plus",
       "knowledge": "2024-04",
@@ -446,7 +453,7 @@
         "input": 0.35,
         "output": 1.4
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "Qwen 指令模型，面向多语言对话、推理与工具调用",
       "family": "qwen",
       "id": "qwen2-5-14b-instruct",
       "knowledge": "2024-04",
@@ -476,7 +483,7 @@
         "input": 0.7,
         "output": 2.8
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "Qwen 指令模型，面向多语言对话、推理与工具调用",
       "family": "qwen",
       "id": "qwen2-5-32b-instruct",
       "knowledge": "2024-04",
@@ -506,7 +513,7 @@
         "input": 1.4,
         "output": 5.6
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "Qwen 指令模型，面向多语言对话、推理与工具调用",
       "family": "qwen",
       "id": "qwen2-5-72b-instruct",
       "knowledge": "2024-04",
@@ -536,7 +543,7 @@
         "input": 0.175,
         "output": 0.7
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "Qwen 指令模型，面向多语言对话、推理与工具调用",
       "family": "qwen",
       "id": "qwen2-5-7b-instruct",
       "knowledge": "2024-04",
@@ -567,7 +574,7 @@
         "input_audio": 6.76,
         "output": 0.4
       },
-      "description": "Qwen omni model for text, vision, audio, and multimodal agent tasks",
+      "description": "Qwen 全模态模型，面向文本、视觉、音频与多模态智能体任务",
       "family": "qwen",
       "id": "qwen2-5-omni-7b",
       "knowledge": "2024-04",
@@ -601,7 +608,7 @@
         "input": 2.8,
         "output": 8.4
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen2-5-vl-72b-instruct",
       "knowledge": "2024-04",
@@ -632,7 +639,7 @@
         "input": 0.35,
         "output": 1.05
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen2-5-vl-7b-instruct",
       "knowledge": "2024-04",
@@ -664,7 +671,7 @@
         "output": 1.4,
         "reasoning": 4.2
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "Qwen 指令模型，面向多语言对话、推理与工具调用",
       "family": "qwen",
       "id": "qwen3-14b",
       "knowledge": "2025-04",
@@ -703,7 +710,7 @@
         "output": 2.8,
         "reasoning": 8.4
       },
-      "description": "Large open Qwen MoE for multilingual reasoning, coding, and tool use",
+      "description": "大规模开源 Qwen MoE 模型，面向多语言推理、编程与工具调用",
       "family": "qwen",
       "id": "qwen3-235b-a22b",
       "knowledge": "2025-04",
@@ -742,7 +749,7 @@
         "output": 2.8,
         "reasoning": 8.4
       },
-      "description": "Dense open Qwen model for self-hosted chat, reasoning, and coding",
+      "description": "稠密架构的开源 Qwen 模型，适合自托管的对话、推理与编程",
       "family": "qwen",
       "id": "qwen3-32b",
       "knowledge": "2025-04",
@@ -781,7 +788,7 @@
         "output": 0.7,
         "reasoning": 2.1
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "Qwen 指令模型，面向多语言对话、推理与工具调用",
       "family": "qwen",
       "id": "qwen3-8b",
       "knowledge": "2025-04",
@@ -819,7 +826,7 @@
         "input": 0.035,
         "output": 0.035
       },
-      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "description": "语音转写模型，面向精准的音频转文本与字幕工作流",
       "family": "qwen",
       "id": "qwen3-asr-flash",
       "knowledge": "2024-04",
@@ -867,7 +874,7 @@
           }
         ]
       },
-      "description": "Smaller Qwen coder for efficient local agents and repo-level fixes",
+      "description": "更小规模的 Qwen 编程模型，面向高效本地智能体与仓库级代码修复",
       "family": "qwen",
       "id": "qwen3-coder-30b-a3b-instruct",
       "knowledge": "2025-04",
@@ -915,7 +922,7 @@
           }
         ]
       },
-      "description": "Open Qwen coding heavyweight for repository reasoning and agentic engineering",
+      "description": "开源 Qwen 重量级编程模型，面向代码仓库推理与智能体工程",
       "family": "qwen",
       "id": "qwen3-coder-480b-a35b-instruct",
       "knowledge": "2025-04",
@@ -945,7 +952,7 @@
         "input": 0.3,
         "output": 1.5
       },
-      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
+      "description": "Qwen 编程模型，面向软件智能体、代码仓库编辑与代码推理",
       "family": "qwen",
       "id": "qwen3-coder-flash",
       "knowledge": "2025-04",
@@ -975,7 +982,7 @@
         "input": 1,
         "output": 5
       },
-      "description": "Hosted Qwen coder for software agents, repo edits, and long-context code",
+      "description": "托管版 Qwen 编程模型，面向软件智能体、代码仓库编辑与长上下文代码",
       "family": "qwen",
       "id": "qwen3-coder-plus",
       "knowledge": "2025-04",
@@ -1007,7 +1014,7 @@
         "output": 10,
         "output_audio": 38
       },
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "语音生成模型，面向可控音色、旁白解说与音频交付",
       "family": "qwen",
       "id": "qwen3-livetranslate-flash-realtime",
       "knowledge": "2024-04",
@@ -1041,7 +1048,7 @@
         "input": 1.2,
         "output": 6
       },
-      "description": "Flagship Qwen3 model for coding agents, complex reasoning, and tool use",
+      "description": "Qwen3 旗舰模型，面向编程智能体、复杂推理与工具调用",
       "family": "qwen",
       "id": "qwen3-max",
       "knowledge": "2025-04",
@@ -1071,7 +1078,7 @@
         "input": 0.5,
         "output": 2
       },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "description": "Qwen 指令模型，面向多语言对话、推理与工具调用",
       "family": "qwen",
       "id": "qwen3-next-80b-a3b-instruct",
       "knowledge": "2025-04",
@@ -1101,7 +1108,7 @@
         "input": 0.5,
         "output": 6
       },
-      "description": "Efficient Qwen thinking model for local reasoning, math, and coding agents",
+      "description": "高效的 Qwen 思考模型，面向本地推理、数学与编程智能体",
       "family": "qwen",
       "id": "qwen3-next-80b-a3b-thinking",
       "knowledge": "2025-04",
@@ -1138,7 +1145,7 @@
         "output": 1.66,
         "output_audio": 15.11
       },
-      "description": "Qwen omni model for text, vision, audio, and multimodal agent tasks",
+      "description": "Qwen 全模态模型，面向文本、视觉、音频与多模态智能体任务",
       "family": "qwen",
       "id": "qwen3-omni-flash",
       "knowledge": "2024-04",
@@ -1179,7 +1186,7 @@
         "output": 1.99,
         "output_audio": 18.13
       },
-      "description": "Qwen omni model for text, vision, audio, and multimodal agent tasks",
+      "description": "Qwen 全模态模型，面向文本、视觉、音频与多模态智能体任务",
       "family": "qwen",
       "id": "qwen3-omni-flash-realtime",
       "knowledge": "2024-04",
@@ -1214,7 +1221,7 @@
         "output": 2.8,
         "reasoning": 8.4
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen3-vl-235b-a22b",
       "knowledge": "2025-04",
@@ -1251,7 +1258,7 @@
         "output": 0.8,
         "reasoning": 2.4
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen3-vl-30b-a3b",
       "knowledge": "2025-04",
@@ -1288,7 +1295,7 @@
         "output": 1.6,
         "reasoning": 4.8
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen3-vl-plus",
       "knowledge": "2025-04",
@@ -1327,7 +1334,7 @@
         "input": 0.4,
         "output": 3.2
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen3.5-122b-a10b",
       "last_updated": "2026-02-23",
@@ -1368,7 +1375,7 @@
         "input": 0.3,
         "output": 2.4
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen3.5-27b",
       "last_updated": "2026-02-23",
@@ -1409,7 +1416,7 @@
         "input": 0.25,
         "output": 2
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen3.5-35b-a3b",
       "last_updated": "2026-02-23",
@@ -1450,7 +1457,7 @@
         "input": 0.6,
         "output": 3.6
       },
-      "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
+      "description": "大规模开源 Qwen 多模态 MoE 模型，面向视觉智能体与长程技术任务",
       "family": "qwen",
       "id": "qwen3.5-397b-a17b",
       "last_updated": "2026-02-15",
@@ -1492,7 +1499,7 @@
         "output": 2.4,
         "reasoning": 2.4
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen3.5-plus",
       "knowledge": "2025-04",
@@ -1532,7 +1539,7 @@
         "input": 0.6,
         "output": 3.6
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen3.6-27b",
       "last_updated": "2026-04-22",
@@ -1573,7 +1580,7 @@
         "input": 0.248,
         "output": 1.485
       },
-      "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
+      "description": "开源多模态 Qwen MoE 模型，适合需要视觉、音频与代码能力的本地智能体",
       "family": "qwen",
       "id": "qwen3.6-35b-a3b",
       "last_updated": "2026-04-17",
@@ -1615,7 +1622,7 @@
         "input": 0.1875,
         "output": 1.125
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen3.6",
       "id": "qwen3.6-flash",
       "last_updated": "2026-04-27",
@@ -1657,7 +1664,7 @@
         "input": 1.3,
         "output": 7.8
       },
-      "description": "Flagship Qwen model for complex reasoning, coding, and agentic workflows",
+      "description": "Qwen 旗舰模型，面向复杂推理、编程与智能体工作流",
       "family": "qwen",
       "id": "qwen3.6-max-preview",
       "knowledge": "2025-04",
@@ -1715,7 +1722,7 @@
           }
         ]
       },
-      "description": "Earlier Qwen multimodal workhorse for million-token agent and document tasks",
+      "description": "早期版本的 Qwen 多模态主力模型，面向百万 token 的智能体与文档任务",
       "family": "qwen",
       "id": "qwen3.6-plus",
       "knowledge": "2025-04",
@@ -1757,7 +1764,7 @@
         "input": 2.5,
         "output": 7.5
       },
-      "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
+      "description": "Qwen 前沿模型，针对智能体框架、编程助手与长程任务调优",
       "family": "qwen",
       "id": "qwen3.7-max",
       "last_updated": "2026-05-21",
@@ -1814,7 +1821,7 @@
           }
         ]
       },
-      "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
+      "description": "多模态 Qwen 主力模型，面向长上下文智能体、视觉输入与编程",
       "family": "qwen",
       "id": "qwen3.7-plus",
       "knowledge": "2025-04",
@@ -1856,7 +1863,7 @@
         "input": 0.15,
         "output": 0.47
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
       "family": "qwen",
       "id": "qwen3.8-flash",
       "interleaved": {
@@ -1909,7 +1916,7 @@
         "input": 2,
         "output": 6
       },
-      "description": "2.4-trillion-parameter MoE flagship for coding, professional work, multimodal understanding, and long-horizon agentic workflows",
+      "description": "2.4 万亿参数的 MoE 旗舰模型，面向编程、专业工作、多模态理解与长程智能体工作流",
       "family": "qwen",
       "id": "qwen3.8-max",
       "interleaved": {
@@ -1963,7 +1970,7 @@
         "input": 0.8,
         "output": 2.4
       },
-      "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
+      "description": "Qwen 推理模型，面向深思型问题求解、数学与编程",
       "family": "qwen",
       "id": "qwq-plus",
       "knowledge": "2024-04",

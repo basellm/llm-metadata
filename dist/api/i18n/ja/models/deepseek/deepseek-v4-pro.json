@@ -2,6 +2,38 @@
   "attachment": false,
   "cost": {
     "cache_read": 0.022,
+    "currency_options": {
+      "CNY": {
+        "cache_read": 0.15,
+        "input": 4.5,
+        "output": 13.5,
+        "reasoning": 13.5,
+        "schedule": {
+          "fallback": "off_peak",
+          "timezone": "UTC",
+          "windows": [
+            {
+              "cache_read": 0.3,
+              "hours": [
+                "01:00-04:00",
+                "06:00-10:00"
+              ],
+              "input": 9,
+              "name": "peak",
+              "output": 27,
+              "reasoning": 27,
+              "weekdays": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            }
+          ]
+        }
+      }
+    },
     "input": 0.66,
     "output": 1.98,
     "reasoning": 1.98,
@@ -30,7 +62,7 @@
       ]
     }
   },
-  "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+  "description": "100 万トークンのコンテキストと思考／非思考モードに対応した DeepSeek V4 Pro のスナップショット",
   "family": "deepseek-thinking",
   "id": "deepseek-v4-pro",
   "interleaved": {

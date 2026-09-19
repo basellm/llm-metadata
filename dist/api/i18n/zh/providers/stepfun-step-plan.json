@@ -1,5 +1,9 @@
 {
   "api": "https://api.stepfun.com/step_plan/v1",
+  "billing": {
+    "priority": 4
+  },
+  "currency": "CNY",
   "doc": "https://platform.stepfun.com/docs/zh/step-plan/integrations/reasoning-api",
   "env": [
     "STEPFUN_API_KEY"
@@ -10,7 +14,7 @@
   "models": {
     "step-3.5-flash": {
       "attachment": false,
-      "description": "StepFun flash lane for quick multimodal reasoning and coding assistance",
+      "description": "阶跃星辰 Flash 系列，面向快速多模态推理与编程辅助",
       "id": "step-3.5-flash",
       "interleaved": {
         "field": "reasoning_content"
@@ -48,7 +52,7 @@
     },
     "step-3.5-flash-2603": {
       "attachment": false,
-      "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
+      "description": "阶跃星辰 Flash 模型，面向高效多模态推理、编程与工具调用",
       "id": "step-3.5-flash-2603",
       "interleaved": {
         "field": "reasoning_content"
@@ -86,7 +90,7 @@
     },
     "step-3.7-flash": {
       "attachment": true,
-      "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
+      "description": "阶跃星辰更新的 Flash 模型，面向更快的智能体、编程与多模态提示",
       "id": "step-3.7-flash",
       "interleaved": {
         "field": "reasoning_content"
@@ -127,7 +131,7 @@
     },
     "step-router-v1": {
       "attachment": false,
-      "description": "StepFun routing model that dispatches requests to the appropriate Step model.",
+      "description": "阶跃星辰路由模型，将请求分发至合适的 Step 模型。",
       "id": "step-router-v1",
       "knowledge": "2025-01",
       "last_updated": "2026-05-29",
@@ -153,5 +157,6 @@
     }
   },
   "name": "StepFun Step Plan (China)",
-  "npm": "@ai-sdk/openai-compatible"
+  "npm": "@ai-sdk/openai-compatible",
+  "subscription": true
 }

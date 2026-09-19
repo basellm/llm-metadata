@@ -1,5 +1,12 @@
 {
   "api": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1",
+  "billing": {
+    "priority": 3,
+    "thinkingToggle": {
+      "param": "enable_thinking",
+      "value": true
+    }
+  },
   "doc": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
   "env": [
     "ALIBABA_TOKEN_PLAN_API_KEY"
@@ -556,5 +563,6 @@
     }
   },
   "name": "Alibaba Token Plan",
-  "npm": "@ai-sdk/openai-compatible"
+  "npm": "@ai-sdk/openai-compatible",
+  "subscription": true
 }

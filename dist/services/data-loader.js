@@ -1,7 +1,56 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
-import { join, extname, basename } from 'node:path';
-import { deepMerge } from '../utils/object-utils.js';
+import { basename, extname, join } from 'node:path';
 import { ALLOWED_MODEL_OVERRIDE_KEY_SET } from '../constants/override-keys.js';
+import { readJSONIfExists } from '../utils/file-utils.js';
+import { isRecord } from '../utils/object-utils.js';
+/** 目录中直接子级的 .json 文件：文件名（不含扩展名）→ 解析后的对象；非法 JSON 或非对象内容警告并跳过 */
+function readJsonObjects(dir) {
+    const out = new Map();
+    if (!existsSync(dir))
+        return out;
+    for (const name of readdirSync(dir)) {
+        const full = join(dir, name);
+        if (extname(name) !== '.json' || !statSync(full).isFile())
+            continue;
+        const value = readJSONIfExists(full);
+        if (isRecord(value))
+            out.set(basename(name, '.json'), value);
+        else
+            console.warn(`Ignoring ${full}: not a valid JSON object`);
+    }
+    return out;
+}
+/** 两级目录 <dir>/<provider>/<model>.json → "provider/model" 键 */
+function readNestedJsonObjects(dir) {
+    const out = new Map();
+    if (!existsSync(dir))
+        return out;
+    for (const provider of readdirSync(dir)) {
+        const providerDir = join(dir, provider);
+        if (!statSync(providerDir).isDirectory())
+            continue;
+        for (const [model, value] of readJsonObjects(providerDir)) {
+            out.set(`${provider}/${model}`, value);
+        }
+    }
+    return out;
+}
+/** 模型覆写仅保留白名单字段（$comment 等维护备注被丢弃） */
+function sanitizeModelOverride(value) {
+    return Object.fromEntries(Object.entries(value).filter(([key]) => ALLOWED_MODEL_OVERRIDE_KEY_SET.has(key)));
+}
+/** i18n 覆写仅保留 name / description 下的字符串文案 */
+function sanitizeI18nEntity(value) {
+    const textMap = (field) => {
+        if (!isRecord(field))
+            return undefined;
+        const entries = Object.entries(field).filter((entry) => typeof entry[1] === 'string');
+        return entries.length > 0 ? Object.fromEntries(entries) : undefined;
+    };
+    const name = textMap(value.name);
+    const description = textMap(value.description);
+    return { ...(name && { name }), ...(description && { description }) };
+}
 /** 数据加载服务 */
 export class DataLoader {
     dataDir;
@@ -59,137 +108,30 @@ export class DataLoader {
         }
         return config;
     }
-    /** 加载覆写配置 */
+    /**
+     * 加载目录化覆写（data/overrides/**）。每个文件对应唯一键：
+     * providers/<provider>.json、models/<provider>/<model>.json，
+     * i18n/providers/<provider>.json、i18n/models/<provider>/<model>.json。
+     */
     loadOverrides() {
-        // overrides.json is deprecated; start from an empty base and only read from overrides/ directory
-        const base = {
-            providers: {},
-            models: {},
-            i18n: { providers: {}, models: {} },
-        };
-        const folder = join(this.dataDir, 'overrides');
-        if (!existsSync(folder))
-            return base;
-        const safeDeepMerge = (a, b) => deepMerge(a, b);
-        const mergeProviderOverride = (providerId, override) => {
-            base.providers = base.providers || {};
-            base.providers[providerId] = safeDeepMerge(base.providers[providerId] || {}, override || {});
-        };
-        const mergeModelOverride = (providerId, modelId, override) => {
-            const key = `${providerId}/${modelId}`;
-            base.models = base.models || {};
-            base.models[key] = safeDeepMerge(base.models[key] || {}, override || {});
-        };
-        const ensureI18n = () => {
-            if (!base.i18n) {
-                base.i18n = {
-                    providers: {},
-                    models: {},
-                };
-            }
-            else {
-                if (!base.i18n.providers)
-                    base.i18n.providers = {};
-                if (!base.i18n.models)
-                    base.i18n.models = {};
-            }
-            return base.i18n;
-        };
-        const mergeProviderI18n = (providerId, override) => {
-            const i18n = ensureI18n();
-            i18n.providers[providerId] = safeDeepMerge(i18n.providers[providerId] || {}, override || {});
-        };
-        const mergeModelI18n = (providerId, modelId, override) => {
-            const i18n = ensureI18n();
-            const key = `${providerId}/${modelId}`;
-            i18n.models[key] = safeDeepMerge(i18n.models[key] || {}, override || {});
-        };
-        const readJSON = (p) => {
-            try {
-                const txt = readFileSync(p, 'utf8');
-                return JSON.parse(txt);
-            }
-            catch {
-                return undefined;
-            }
-        };
-        const sanitizeModelOverride = (obj) => {
-            if (!obj || typeof obj !== 'object')
-                return {};
-            const out = {};
-            for (const k of Object.keys(obj)) {
-                if (ALLOWED_MODEL_OVERRIDE_KEY_SET.has(k))
-                    out[k] = obj[k];
-            }
-            return out;
-        };
-        const walk = (dir) => {
-            if (!existsSync(dir))
-                return [];
-            const out = [];
-            for (const name of readdirSync(dir)) {
-                const full = join(dir, name);
-                const st = statSync(full);
-                if (st.isDirectory())
-                    out.push(...walk(full));
-                else if (st.isFile() && extname(full) === '.json')
-                    out.push(full);
-            }
-            return out;
-        };
-        // providers overrides: overrides/providers/{provider}.json
-        const provDir = join(folder, 'providers');
-        for (const file of walk(provDir)) {
-            const providerId = basename(file, '.json');
-            const obj = readJSON(file);
-            if (obj)
-                mergeProviderOverride(providerId, obj);
+        const root = join(this.dataDir, 'overrides');
+        const providers = {};
+        for (const [id, value] of readJsonObjects(join(root, 'providers'))) {
+            providers[id] = value;
         }
-        // models overrides: overrides/models/{provider}/{model}.json
-        const modelsDir = join(folder, 'models');
-        if (existsSync(modelsDir)) {
-            for (const provider of readdirSync(modelsDir)) {
-                const pDir = join(modelsDir, provider);
-                if (!statSync(pDir).isDirectory())
-                    continue;
-                for (const file of readdirSync(pDir)) {
-                    const full = join(pDir, file);
-                    if (!statSync(full).isFile() || extname(full) !== '.json')
-                        continue;
-                    const modelId = basename(full, '.json');
-                    const obj = readJSON(full);
-                    if (obj)
-                        mergeModelOverride(provider, modelId, sanitizeModelOverride(obj));
-                }
-            }
+        const models = {};
+        for (const [key, value] of readNestedJsonObjects(join(root, 'models'))) {
+            models[key] = sanitizeModelOverride(value);
         }
-        // i18n overrides (optional): overrides/i18n/providers/*.json & overrides/i18n/models/{provider}/{model}.json
-        const i18nDir = join(folder, 'i18n');
-        const i18nProvDir = join(i18nDir, 'providers');
-        for (const file of walk(i18nProvDir)) {
-            const providerId = basename(file, '.json');
-            const obj = readJSON(file);
-            if (obj)
-                mergeProviderI18n(providerId, obj);
+        const i18nProviders = {};
+        for (const [id, value] of readJsonObjects(join(root, 'i18n', 'providers'))) {
+            i18nProviders[id] = sanitizeI18nEntity(value);
         }
-        const i18nModelsDir = join(i18nDir, 'models');
-        if (existsSync(i18nModelsDir)) {
-            for (const provider of readdirSync(i18nModelsDir)) {
-                const pDir = join(i18nModelsDir, provider);
-                if (!statSync(pDir).isDirectory())
-                    continue;
-                for (const file of readdirSync(pDir)) {
-                    const full = join(pDir, file);
-                    if (!statSync(full).isFile() || extname(full) !== '.json')
-                        continue;
-                    const modelId = basename(full, '.json');
-                    const obj = readJSON(full);
-                    if (obj)
-                        mergeModelI18n(provider, modelId, obj);
-                }
-            }
+        const i18nModels = {};
+        for (const [key, value] of readNestedJsonObjects(join(root, 'i18n', 'models'))) {
+            i18nModels[key] = sanitizeI18nEntity(value);
         }
-        return base;
+        return { providers, models, i18n: { providers: i18nProviders, models: i18nModels } };
     }
 }
 //# sourceMappingURL=data-loader.js.map

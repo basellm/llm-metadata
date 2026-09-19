@@ -1,0 +1,60 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.16,
+    "currency": "CNY",
+    "input": 0.8,
+    "output": 2,
+    "tiers": [
+      {
+        "input": 1.2,
+        "output": 6,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "字节跳动 Seed 模型，针对角色驱动对话与一致的对话行为优化",
+  "family": "seed",
+  "id": "doubao-seed-character-260628",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-06-23",
+  "limit": {
+    "context": 256000,
+    "output": 256000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Seed Character",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "minimal",
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "release_date": "2026-06-23",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

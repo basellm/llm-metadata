@@ -1,22 +1,31 @@
 /** 静态 API 数据访问层（相对路径，兼容子路径与根路径部署） */
 
+import type { ModelCost, ProviderBillingRule } from '@billing/cost';
+
 import type { Locale } from './i18n';
 
-export interface ModelCost {
-  currency?: string;
-  /** 价格键为数字；少数复合键（tiers 数组、context_over_200k 对象）为结构化数据 */
-  [key: string]: unknown;
+export type { ModelCost, ProviderBillingRule };
+
+/** 推理强度选项（models.dev reasoning_options） */
+export interface ReasoningOption {
+  type: string;
+  values?: unknown[];
 }
 
 export interface Model {
   id: string;
   name?: string;
   description?: string;
+  /** 模型系列（如 "qwen"） */
+  family?: string;
+  /** 生命周期状态（"deprecated" / "beta"），缺省为正常可用 */
+  status?: string;
   release_date?: string;
   last_updated?: string;
   /** 知识截止日期（ISO） */
   knowledge?: string;
   reasoning?: boolean;
+  reasoning_options?: ReasoningOption[];
   tool_call?: boolean;
   structured_output?: boolean;
   attachment?: boolean;
@@ -33,6 +42,12 @@ export interface Provider {
   api?: string;
   doc?: string;
   iconURL?: string;
+  /** 端点结算货币（缺省 USD） */
+  currency?: string;
+  /** 订阅套餐端点（Token Plan / Coding Plan）：用量从预付额度抵扣，逐 token 价目不适用 */
+  subscription?: boolean;
+  /** new-api 计费规则（思考开关、1h 缓存写倍数、聚合优先级） */
+  billing?: ProviderBillingRule;
   models: Record<string, Model>;
 }
 
@@ -41,6 +56,9 @@ export interface ProviderIndexItem {
   name: string;
   doc?: string;
   iconURL?: string;
+  currency?: string;
+  subscription?: boolean;
+  billing?: ProviderBillingRule;
   modelCount: number;
 }
 
@@ -109,32 +127,26 @@ export function fetchModelIndex(locale: Locale): Promise<ModelIndexItem[]> {
   return cached;
 }
 
-interface NewApiRatioConfig {
-  data?: { billing_expr?: Record<string, string> };
-}
-
-const billingExprCache = new Map<string, Promise<Record<string, string>>>();
-
-/** 供应商的 new-api 表达式计费映射（modelId → expr）；缺失时返回空映射 */
-export function fetchBillingExpr(id: string): Promise<Record<string, string>> {
-  let cached = billingExprCache.get(id);
-  if (!cached) {
-    cached = fetchJSON<NewApiRatioConfig>(
-      `newapi/providers/${sanitizeFileSegment(id)}/ratio_config-v1-base.json`,
-    ).then(
-      (config) => config.data?.billing_expr ?? {},
-      () => ({}),
-    );
-    billingExprCache.set(id, cached);
-  }
-  return cached;
-}
-
 export interface Manifest {
   generatedAt?: string;
   stats?: { providers?: number; models?: number };
+  /** 静态 NewAPI 预设的生成假设：非美元价目换算所用汇率（每 1 USD 的货币数量） */
+  newapi?: { exchangeRates?: Record<string, number> };
 }
 
 export function fetchManifest(): Promise<Manifest | null> {
   return fetchJSON<Manifest>('manifest.json').catch(() => null);
+}
+
+let allProvidersCache: Promise<Record<string, Provider>> | null = null;
+
+/** 全部供应商及其模型（all.json，约 0.5 MB），仅在导出聚合 ratio_config 时按需加载 */
+export function fetchAllProviders(): Promise<Record<string, Provider>> {
+  if (!allProvidersCache) {
+    allProvidersCache = fetchJSON<Record<string, Provider>>('all.json');
+    allProvidersCache.catch(() => {
+      allProvidersCache = null;
+    });
+  }
+  return allProvidersCache;
 }

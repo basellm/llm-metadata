@@ -1,5 +1,9 @@
 /** 对象工具函数 */
 import { createHash } from 'node:crypto';
+/** 非 null、非数组的普通对象 */
+export function isRecord(value) {
+    return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
 /** 深度合并对象 */
 export function deepMerge(target, source) {
     const result = { ...target };

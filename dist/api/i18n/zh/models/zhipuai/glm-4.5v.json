@@ -1,10 +1,24 @@
 {
   "attachment": true,
   "cost": {
-    "input": 0.6,
-    "output": 1.8
+    "cache_read": 0.4,
+    "cache_write": 0,
+    "currency": "CNY",
+    "input": 2,
+    "output": 6,
+    "tiers": [
+      {
+        "cache_read": 0.8,
+        "input": 4,
+        "output": 12,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      }
+    ]
   },
-  "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+  "description": "GLM 视觉模型，面向视觉推理、文档理解与多模态智能体",
   "family": "glm",
   "id": "glm-4.5v",
   "knowledge": "2025-04",
