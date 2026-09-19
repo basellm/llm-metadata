@@ -113,7 +113,7 @@ new-api は v1 の式を `quota = 式の結果 / 1e6 × QuotaPerUnit × グル�
 | USD 決済レート `S`         | `USDSettlementRate`（0 = 未設定）             | 実際の 1 USD = `S / D` クォータ USD。未設定はクォータ USD が実際のドルであることを意味 |
 | 優先する価格表の通貨       | —                                             | モデルが複数の公式価格表（`cost.currency_options`）を持つ場合、この通貨の表を優先     |
 
-ダイアログはデプロイの公開 `GET /api/status`（`quota_display_type`、`usd_exchange_rate`、`custom_currency_*`、`usd_settlement_rate`）からこれらの値を取り込み、ブラウザに保存し、各式に単位（「1 クォータ USD = ¥1」）を表示します。各プロバイダーページには **ratio_config をコピー** があり、ダイアログからは全プロバイダーを集約した `ratio_config` をダウンロードして、ホスト後に new-api の倍率同期の上流として追加できます。`QuotaPerUnit` とグループ倍率は new-api が式の後に適用するため設定不要です。
+ダイアログはデプロイの公開 `GET /api/status`（`quota_display_type`、`usd_exchange_rate`、`custom_currency_*`、`usd_settlement_rate`）からこれらの値を取り込めます。new-api はこのエンドポイントをクロスオリジンで公開していないため、ブラウザのタブで開いて JSON をダイアログに貼り付けてください。値はブラウザに保存され、各式に単位（「1 クォータ USD = ¥1」）が表示されます。各プロバイダーページには **ratio_config をコピー** があり、ダイアログからは全プロバイダーを集約した `ratio_config` をダウンロードして、ホスト後に new-api の倍率同期の上流として追加できます。`QuotaPerUnit` とグループ倍率は new-api が式の後に適用するため設定不要です。
 
 ## 国際化（API）
 

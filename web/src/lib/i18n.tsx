@@ -113,15 +113,15 @@ const en = {
   'newapi.close': 'Close',
   'newapi.customized': 'Custom new-api deployment active',
   'newapi.description':
-    'Expression coefficients are denominated in your deployment\u2019s quota USD. Enter the values from new-api \u2192 Settings \u2192 Pricing & Display, or import them from the public /api/status endpoint. Expressions on this site update immediately.',
-  'newapi.importUrl': 'new-api site URL',
-  'newapi.import': 'Import',
-  'newapi.importing': 'Importing\u2026',
+    'Expression coefficients are denominated in your deployment\u2019s quota USD. Enter the values from new-api \u2192 Settings \u2192 Pricing & Display, or paste the response of the public /api/status endpoint. Expressions on this site update immediately.',
+  'newapi.importTitle': 'Import from a new-api site',
+  'newapi.importPlaceholder':
+    'Paste the JSON returned by https://your-new-api.example.com/api/status',
   'newapi.importHint':
-    'Reads quota_display_type, usd_exchange_rate and the currency settings from /api/status.',
-  'newapi.imported': 'Imported from {host}',
-  'newapi.importFailed': 'Could not read /api/status ({reason})',
-  'newapi.invalidUrl': 'Enter an http(s) URL',
+    'new-api does not serve /api/status cross-origin, so this page cannot fetch it. Open that URL in a new tab, copy the whole response and paste it here \u2014 quota_display_type, exchange rates and currency settings are filled in automatically.',
+  'newapi.imported': 'Imported the settings of {source}',
+  'newapi.importInvalid':
+    'Not a /api/status response \u2014 paste the complete JSON shown in the browser.',
   'newapi.displayType': 'Quota display type',
   'newapi.displayTypeHint':
     'new-api quota_display_type; "Tokens only" behaves like USD for billing.',
@@ -284,14 +284,13 @@ const zh: Messages = {
   'newapi.close': '关闭',
   'newapi.customized': '已启用自定义 new-api 部署配置',
   'newapi.description':
-    '表达式系数以你的 new-api 部署的「额度美元」计价。填写 new-api → 设置 → 定价与展示 中的同名设置，或从公开的 /api/status 接口导入；本站表达式随即按该配置生成。',
-  'newapi.importUrl': 'new-api 站点地址',
-  'newapi.import': '导入',
-  'newapi.importing': '导入中…',
-  'newapi.importHint': '读取 /api/status 中的 quota_display_type、usd_exchange_rate 与货币设置。',
-  'newapi.imported': '已从 {host} 导入',
-  'newapi.importFailed': '无法读取 /api/status（{reason}）',
-  'newapi.invalidUrl': '请输入 http(s) 地址',
+    '表达式系数以你的 new-api 部署的「额度美元」计价。填写 new-api → 设置 → 定价与展示 中的同名设置，或粘贴公开接口 /api/status 的返回内容导入；本站表达式随即按该配置生成。',
+  'newapi.importTitle': '从 new-api 站点导入',
+  'newapi.importPlaceholder': '粘贴 https://你的站点/api/status 返回的 JSON',
+  'newapi.importHint':
+    'new-api 未对 /api/status 开放跨域访问，本页无法直接读取。请在新标签页打开该地址，复制全部返回内容粘贴到此处，quota_display_type、汇率与货币设置会自动填入。',
+  'newapi.imported': '已导入 {source} 的设置',
+  'newapi.importInvalid': '不是 /api/status 的返回内容，请粘贴浏览器中显示的完整 JSON。',
   'newapi.displayType': '额度展示类型',
   'newapi.displayTypeHint': 'new-api 的 quota_display_type；「仅 Tokens」在计费上等同 USD。',
   'newapi.type.USD': '美元 ($)',
@@ -449,15 +448,14 @@ const ja: Messages = {
   'newapi.close': '閉じる',
   'newapi.customized': 'カスタム new-api デプロイ設定が有効',
   'newapi.description':
-    '式の係数はデプロイ先 new-api の「クォータ USD」建てです。new-api → 設定 → 価格と表示 の値を入力するか、公開されている /api/status から取り込んでください。このサイトの式は即時にその設定で生成されます。',
-  'newapi.importUrl': 'new-api サイト URL',
-  'newapi.import': '取り込む',
-  'newapi.importing': '取り込み中…',
+    '式の係数はデプロイ先 new-api の「クォータ USD」建てです。new-api → 設定 → 価格と表示 の値を入力するか、公開されている /api/status のレスポンスを貼り付けて取り込んでください。このサイトの式は即時にその設定で生成されます。',
+  'newapi.importTitle': 'new-api サイトから取り込む',
+  'newapi.importPlaceholder': 'https://your-new-api.example.com/api/status が返す JSON を貼り付け',
   'newapi.importHint':
-    '/api/status の quota_display_type、usd_exchange_rate と通貨設定を読み取ります。',
-  'newapi.imported': '{host} から取り込みました',
-  'newapi.importFailed': '/api/status を読み取れません（{reason}）',
-  'newapi.invalidUrl': 'http(s) の URL を入力してください',
+    'new-api は /api/status をクロスオリジンで公開していないため、このページから直接取得できません。新しいタブでその URL を開き、レスポンス全体をコピーしてここに貼り付けると、quota_display_type・為替レート・通貨設定が自動入力されます。',
+  'newapi.imported': '{source} の設定を取り込みました',
+  'newapi.importInvalid':
+    '/api/status のレスポンスではありません。ブラウザに表示された JSON 全体を貼り付けてください。',
   'newapi.displayType': 'クォータ表示タイプ',
   'newapi.displayTypeHint':
     'new-api の quota_display_type。「トークンのみ」は課金上 USD と同じ扱いです。',

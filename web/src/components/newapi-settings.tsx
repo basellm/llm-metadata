@@ -19,6 +19,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { Textarea } from '@/components/ui/textarea';
 import { CURRENCIES, type Currency } from '@billing/currencies';
 import {
   QUOTA_DISPLAY_TYPES,
@@ -40,7 +41,6 @@ const BUTTON_PRIMARY = cn(
   BUTTON,
   'bg-primary text-primary-foreground border-primary hover:opacity-90',
 );
-const IMPORT_TIMEOUT_MS = 10_000;
 
 /** 表单草稿：数值以原始字符串保存，允许输入过程中的中间状态 */
 interface Draft {
@@ -108,8 +108,19 @@ function validateDraft(
   };
 }
 
+type StatusData = Record<string, unknown>;
+
+/** /api/status 中与计费换算相关的字段；至少出现其一才视为该接口的响应 */
+const STATUS_BILLING_KEYS = [
+  'quota_display_type',
+  'usd_exchange_rate',
+  'custom_currency_symbol',
+  'custom_currency_exchange_rate',
+  'usd_settlement_rate',
+];
+
 /** 把 new-api 公开的 /api/status 字段映射为部署配置（TOKENS 展示在计费上等同 USD） */
-function deploymentFromStatus(data: Record<string, unknown>): Partial<NewApiDeployment> {
+function deploymentFromStatus(data: StatusData): Partial<NewApiDeployment> {
   const type = data.quota_display_type;
   return {
     quotaDisplayType:
@@ -125,18 +136,36 @@ function deploymentFromStatus(data: Record<string, unknown>): Partial<NewApiDepl
   };
 }
 
-/** new-api 站点地址 → /api/status 地址；仅接受 http(s)，保留子路径部署 */
-function statusEndpoint(input: string): URL | null {
+/**
+ * 解析用户粘贴的 /api/status 响应：接受完整信封 { success, data } 或裸 data 对象；
+ * 非法 JSON 或不含任何计费字段时返回 null。
+ */
+function parseStatusPayload(text: string): StatusData | null {
+  let parsed: unknown;
   try {
-    const url = new URL(input.trim());
-    if (url.protocol !== 'http:' && url.protocol !== 'https:') return null;
-    url.pathname = `${url.pathname.replace(/\/+$/, '')}/api/status`;
-    url.search = '';
-    url.hash = '';
-    return url;
+    parsed = JSON.parse(text);
   } catch {
     return null;
   }
+  if (typeof parsed !== 'object' || parsed === null) return null;
+  const { data } = parsed as { data?: unknown };
+  const record = (typeof data === 'object' && data !== null ? data : parsed) as StatusData;
+  return STATUS_BILLING_KEYS.some((key) => key in record) ? record : null;
+}
+
+/** 导入来源展示名：站点名称，其次 server_address 的主机名 */
+function statusSource(data: StatusData): string | undefined {
+  if (typeof data.system_name === 'string' && data.system_name.trim()) {
+    return data.system_name.trim();
+  }
+  if (typeof data.server_address === 'string') {
+    try {
+      return new URL(data.server_address).host;
+    } catch {
+      // 非法地址不作为来源展示
+    }
+  }
+  return undefined;
 }
 
 function Field({
@@ -167,85 +196,49 @@ function typeLabel(type: QuotaDisplayType, t: Translator): string {
   return t(`newapi.type.${type}`);
 }
 
-/** 站点导入：读取 new-api 公开的 /api/status 填充草稿 */
-function ImportRow({ onImport }: { onImport: (partial: Partial<NewApiDeployment>) => void }) {
+/**
+ * 站点导入：粘贴 /api/status 的响应填充草稿。
+ * new-api 只对 /v1 与 token 鉴权的 /api/usage、/api/log 开放 CORS，/api/status 无法由本页跨域读取，
+ * 因此由用户在新标签页打开该地址后复制粘贴；解析成功即导入并清空输入。
+ */
+function StatusImport({ onImport }: { onImport: (partial: Partial<NewApiDeployment>) => void }) {
   const { t } = useI18n();
-  const [url, setUrl] = useState('');
+  const [text, setText] = useState('');
   const [state, setState] = useState<
-    | { status: 'idle' | 'loading' }
-    | { status: 'ok'; host: string }
-    | { status: 'error'; message: string }
+    { status: 'idle' | 'invalid' } | { status: 'ok'; source: string | undefined }
   >({ status: 'idle' });
 
-  const run = async () => {
-    const endpoint = statusEndpoint(url);
-    if (!endpoint) {
-      setState({ status: 'error', message: t('newapi.invalidUrl') });
+  const handleChange = (value: string) => {
+    const data = parseStatusPayload(value);
+    if (data) {
+      onImport(deploymentFromStatus(data));
+      setText('');
+      setState({ status: 'ok', source: statusSource(data) });
       return;
     }
-    setState({ status: 'loading' });
-    try {
-      const response = await fetch(endpoint, {
-        headers: { accept: 'application/json' },
-        signal: AbortSignal.timeout(IMPORT_TIMEOUT_MS),
-      });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const payload = (await response.json()) as { data?: unknown };
-      if (typeof payload.data !== 'object' || payload.data === null) {
-        throw new Error('missing data');
-      }
-      onImport(deploymentFromStatus(payload.data as Record<string, unknown>));
-      setState({ status: 'ok', host: endpoint.host });
-    } catch (error) {
-      setState({
-        status: 'error',
-        message: t('newapi.importFailed', {
-          reason: error instanceof Error ? error.message : String(error),
-        }),
-      });
-    }
+    setText(value);
+    setState({ status: value.trim() ? 'invalid' : 'idle' });
   };
 
   return (
-    <div className="flex flex-col gap-1.5">
-      <span className="text-sm font-medium">{t('newapi.importUrl')}</span>
-      <div className="flex gap-2">
-        <Input
-          type="url"
-          inputMode="url"
-          value={url}
-          onChange={(e) => setUrl(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') {
-              e.preventDefault();
-              void run();
-            }
-          }}
-          placeholder="https://your-new-api.example.com"
-          aria-label={t('newapi.importUrl')}
-        />
-        <button
-          type="button"
-          onClick={() => void run()}
-          disabled={state.status === 'loading' || !url.trim()}
-          className={cn(BUTTON_GHOST, 'h-9 shrink-0')}
-        >
-          {state.status === 'loading' ? t('newapi.importing') : t('newapi.import')}
-        </button>
-      </div>
-      <span
-        className={cn(
-          'text-xs leading-relaxed',
-          state.status === 'error' ? 'text-warning' : 'text-muted-foreground',
-        )}
-      >
-        {state.status === 'ok'
-          ? t('newapi.imported', { host: state.host })
-          : state.status === 'error'
-            ? state.message
-            : t('newapi.importHint')}
-      </span>
-    </div>
+    <Field
+      label={t('newapi.importTitle')}
+      hint={
+        state.status === 'ok'
+          ? t('newapi.imported', { source: state.source ?? 'new-api' })
+          : t('newapi.importHint')
+      }
+      error={state.status === 'invalid' ? t('newapi.importInvalid') : undefined}
+    >
+      <Textarea
+        rows={3}
+        value={text}
+        onChange={(e) => handleChange(e.target.value)}
+        placeholder={t('newapi.importPlaceholder')}
+        spellCheck={false}
+        className="resize-y font-mono text-xs"
+      />
+    </Field>
   );
 }
 
@@ -335,7 +328,7 @@ export function NewApiSettings() {
         </DialogHeader>
 
         <DialogBody>
-          <ImportRow onImport={handleImport} />
+          <StatusImport onImport={handleImport} />
 
           <div className="grid gap-4 sm:grid-cols-2">
             <Field label={t('newapi.displayType')} hint={t('newapi.displayTypeHint')}>

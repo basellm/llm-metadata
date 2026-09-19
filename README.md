@@ -113,7 +113,7 @@ Deployments that sell quota in another unit need different coefficients — most
 | USD settlement rate `S`      | `USDSettlementRate` (0 = unset)               | 1 real USD = `S / D` quota USD; unset means quota USD is a real dollar                              |
 | Preferred price list         | —                                             | When a model publishes several official lists (`cost.currency_options`), use this currency's list  |
 
-The dialog can import these values from a deployment's public `GET /api/status` (`quota_display_type`, `usd_exchange_rate`, `custom_currency_*`, `usd_settlement_rate`), persists them in the browser, and labels every expression with its unit ("1 quota USD = ¥1"). Each provider page offers **Copy ratio_config** for that provider, and the dialog can download the aggregated `ratio_config` for all providers, ready to be hosted and added as an upstream in new-api's ratio sync. `QuotaPerUnit` and group ratios are applied by new-api after the expression and need no configuration.
+The dialog can import these values from a deployment's public `GET /api/status` (`quota_display_type`, `usd_exchange_rate`, `custom_currency_*`, `usd_settlement_rate`): new-api does not serve that endpoint cross-origin, so open it in a browser tab and paste the JSON into the dialog. The values persist in the browser, and every expression is labelled with its unit ("1 quota USD = ¥1"). Each provider page offers **Copy ratio_config** for that provider, and the dialog can download the aggregated `ratio_config` for all providers, ready to be hosted and added as an upstream in new-api's ratio sync. `QuotaPerUnit` and group ratios are applied by new-api after the expression and need no configuration.
 
 ## Internationalization (API)
 

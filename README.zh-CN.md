@@ -113,7 +113,7 @@ new-api 按 `quota = 表达式结果 / 1e6 × QuotaPerUnit × 分组倍率` 结�
 | 美元结算汇率 `S`       | `USDSettlementRate`（0 = 未设置）             | 1 真实美元 = `S / D` 额度美元；未设置表示额度美元即真实美元                    |
 | 优先采用的价目货币     | —                                             | 模型公布多份官方价目（`cost.currency_options`）时优先采用该货币的价目          |
 
-对话框可从部署公开的 `GET /api/status`（`quota_display_type`、`usd_exchange_rate`、`custom_currency_*`、`usd_settlement_rate`）导入这些值，保存在浏览器本地，并为每条表达式标注单位（“1 额度美元 = ¥1”）。每个供应商页提供 **复制 ratio_config**，对话框还可下载全部供应商的聚合 `ratio_config`，托管后即可作为 new-api 倍率同步的上游。`QuotaPerUnit` 与分组倍率由 new-api 在表达式之后应用，无需配置。
+对话框可从部署公开的 `GET /api/status`（`quota_display_type`、`usd_exchange_rate`、`custom_currency_*`、`usd_settlement_rate`）导入这些值：new-api 未对该接口开放跨域访问，因此在浏览器中打开该地址后把 JSON 粘贴到对话框即可。配置保存在浏览器本地，每条表达式都会标注单位（“1 额度美元 = ¥1”）。每个供应商页提供 **复制 ratio_config**，对话框还可下载全部供应商的聚合 `ratio_config`，托管后即可作为 new-api 倍率同步的上游。`QuotaPerUnit` 与分组倍率由 new-api 在表达式之后应用，无需配置。
 
 ## 国际化（API）
 
