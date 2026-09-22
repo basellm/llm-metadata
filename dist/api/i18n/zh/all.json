@@ -3317,12 +3317,23 @@
       "qwen3-max": {
         "attachment": false,
         "cost": {
-          "input": 1.291,
-          "output": 7.749,
+          "input": 0.359,
+          "output": 1.434,
+          "reasoning": 1.434,
           "tiers": [
             {
-              "input": 2.153,
-              "output": 12.915,
+              "input": 0.574,
+              "output": 2.294,
+              "reasoning": 2.294,
+              "tier": {
+                "size": 32000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 1.004,
+              "output": 4.014,
+              "reasoning": 4.014,
               "tier": {
                 "size": 128000,
                 "type": "context"
@@ -3333,8 +3344,11 @@
         "description": "Qwen 旗舰模型，面向复杂推理、编程与智能体工作流",
         "family": "qwen",
         "id": "qwen3-max",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "knowledge": "2025-04",
-        "last_updated": "2026-09-11",
+        "last_updated": "2026-09-22",
         "limit": {
           "context": 262144,
           "output": 65536
@@ -3349,8 +3363,18 @@
         },
         "name": "Qwen3 Max",
         "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-09-23",
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 81920,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-01-23",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -3658,19 +3682,23 @@
       "qwen3.5-flash": {
         "attachment": true,
         "cost": {
-          "context_over_200k": {
-            "input": 0.689,
-            "output": 4.133,
-            "reasoning": 4.133
-          },
-          "input": 0.172,
-          "output": 1.033,
-          "reasoning": 1.033,
+          "input": 0.029,
+          "output": 0.287,
+          "reasoning": 0.287,
           "tiers": [
             {
-              "input": 0.689,
-              "output": 4.133,
-              "reasoning": 4.133,
+              "input": 0.115,
+              "output": 1.147,
+              "reasoning": 1.147,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 0.172,
+              "output": 1.72,
+              "reasoning": 1.72,
               "tier": {
                 "size": 256000,
                 "type": "context"
@@ -3681,8 +3709,11 @@
         "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
         "family": "qwen",
         "id": "qwen3.5-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "knowledge": "2025-04",
-        "last_updated": "2026-09-11",
+        "last_updated": "2026-09-22",
         "limit": {
           "context": 1000000,
           "output": 65536
@@ -3715,21 +3746,25 @@
         "tool_call": true
       },
       "qwen3.5-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
-          "context_over_200k": {
-            "input": 1.148,
-            "output": 6.888,
-            "reasoning": 6.888
-          },
-          "input": 0.287,
-          "output": 1.722,
-          "reasoning": 1.722,
+          "input": 0.115,
+          "output": 0.688,
+          "reasoning": 0.688,
           "tiers": [
             {
-              "input": 1.148,
-              "output": 6.888,
-              "reasoning": 6.888,
+              "input": 0.287,
+              "output": 1.72,
+              "reasoning": 1.72,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 0.573,
+              "output": 3.44,
+              "reasoning": 3.44,
               "tier": {
                 "size": 256000,
                 "type": "context"
@@ -3740,8 +3775,11 @@
         "description": "Qwen 视觉语言模型，面向视觉推理、文档理解与智能体任务",
         "family": "qwen",
         "id": "qwen3.5-plus",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "knowledge": "2025-04",
-        "last_updated": "2026-09-11",
+        "last_updated": "2026-09-22",
         "limit": {
           "context": 1000000,
           "output": 65536
@@ -3769,6 +3807,7 @@
           }
         ],
         "release_date": "2026-02-16",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -7864,6 +7903,7 @@
           {
             "type": "effort",
             "values": [
+              "low",
               "high",
               "max"
             ]
@@ -16280,6 +16320,51 @@
         "temperature": true,
         "tool_call": true
       },
+      "step-5-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 1,
+          "output": 2.7
+        },
+        "description": "StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input and a 1M-token context window",
+        "id": "step-5-preview",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-20",
+        "limit": {
+          "context": 1000000,
+          "input": 1000000,
+          "output": 1000000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 5 Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-16",
+        "structured_output": true,
+        "tool_call": true
+      },
       "step-tts-2": {
         "attachment": false,
         "description": "语音生成模型，面向可控音色、旁白解说与音频交付",
@@ -16623,6 +16708,46 @@
         ],
         "release_date": "2026-05-29",
         "temperature": true,
+        "tool_call": true
+      },
+      "step-5-preview": {
+        "attachment": true,
+        "description": "StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input and a 1M-token context window",
+        "id": "step-5-preview",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-20",
+        "limit": {
+          "context": 1000000,
+          "input": 1000000,
+          "output": 1000000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 5 Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-16",
+        "structured_output": true,
         "tool_call": true
       },
       "step-router-v1": {
@@ -18733,6 +18858,67 @@
         "temperature": true,
         "tool_call": true
       },
+      "grok-4.7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "context_over_200k": {
+            "cache_read": 1,
+            "input": 4,
+            "output": 12
+          },
+          "input": 2,
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 4,
+              "output": 12,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "xAI 的前沿模型，面向长时运行的智能体、编程、知识工作与视觉项目",
+        "family": "grok",
+        "id": "grok-4.7",
+        "knowledge": "2026-05",
+        "last_updated": "2026-09-21",
+        "limit": {
+          "context": 500000,
+          "output": 500000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-09-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "grok-build-0.1": {
         "attachment": true,
         "cost": {
@@ -18808,6 +18994,34 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2026-01-28",
+        "temperature": false,
+        "tool_call": false
+      },
+      "grok-imagine-image-quality": {
+        "attachment": true,
+        "description": "Higher-fidelity Grok Imagine image model for prompt-driven generation, editing, and visual design workflows",
+        "family": "grok",
+        "id": "grok-imagine-image-quality",
+        "last_updated": "2026-04-03",
+        "limit": {
+          "context": 16000,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "image",
+            "pdf"
+          ]
+        },
+        "name": "Grok Imagine Image Quality",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-04-03",
         "temperature": false,
         "tool_call": false
       },
@@ -20113,6 +20327,44 @@
         "temperature": true,
         "tool_call": true
       },
+      "glm-4.6v-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Lightweight GLM vision model for visual reasoning, documents, and multimodal agents",
+        "family": "glm-flash",
+        "id": "glm-4.6v-flash",
+        "last_updated": "2025-12-08",
+        "limit": {
+          "context": 128000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.6V-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2025-12-08",
+        "temperature": true,
+        "tool_call": true
+      },
       "glm-4.7": {
         "attachment": false,
         "cost": {
@@ -21167,6 +21419,44 @@
           ]
         },
         "name": "GLM-4.6V",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2025-12-08",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-4.6v-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Lightweight GLM vision model for visual reasoning, documents, and multimodal agents",
+        "family": "glm-flash",
+        "id": "glm-4.6v-flash",
+        "last_updated": "2025-12-08",
+        "limit": {
+          "context": 128000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-4.6V-Flash",
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [

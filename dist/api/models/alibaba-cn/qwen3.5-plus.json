@@ -1,19 +1,23 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
-    "context_over_200k": {
-      "input": 1.148,
-      "output": 6.888,
-      "reasoning": 6.888
-    },
-    "input": 0.287,
-    "output": 1.722,
-    "reasoning": 1.722,
+    "input": 0.115,
+    "output": 0.688,
+    "reasoning": 0.688,
     "tiers": [
       {
-        "input": 1.148,
-        "output": 6.888,
-        "reasoning": 6.888,
+        "input": 0.287,
+        "output": 1.72,
+        "reasoning": 1.72,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      },
+      {
+        "input": 0.573,
+        "output": 3.44,
+        "reasoning": 3.44,
         "tier": {
           "size": 256000,
           "type": "context"
@@ -24,8 +28,11 @@
   "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
   "family": "qwen",
   "id": "qwen3.5-plus",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "knowledge": "2025-04",
-  "last_updated": "2026-09-11",
+  "last_updated": "2026-09-22",
   "limit": {
     "context": 1000000,
     "output": 65536
@@ -53,6 +60,7 @@
     }
   ],
   "release_date": "2026-02-16",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }
