@@ -1,0 +1,67 @@
+{
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.2,
+    "cache_write": 5,
+    "input": 4,
+    "output": 20
+  },
+  "description": "Claude model for long-running agentic coding and knowledge work",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.4,
+          "cache_write": 10,
+          "input": 8,
+          "output": 40
+        },
+        "provider": {
+          "body": {
+            "speed": "fast"
+          },
+          "headers": {
+            "anthropic-beta": "fast-mode-2026-02-01"
+          }
+        }
+      }
+    }
+  },
+  "family": "claude-opus",
+  "id": "claude-opus-5-5",
+  "knowledge": "2026-06",
+  "last_updated": "2026-09-22",
+  "limit": {
+    "context": 1000000,
+    "output": 128000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "pdf"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Claude Opus 5.5",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
+  "release_date": "2026-09-22",
+  "structured_output": true,
+  "temperature": false,
+  "tool_call": true
+}
