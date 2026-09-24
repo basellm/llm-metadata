@@ -1771,7 +1771,7 @@
         "last_updated": "2026-05-21",
         "limit": {
           "context": 1000000,
-          "output": 65536
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -1829,7 +1829,7 @@
         "last_updated": "2026-06-04",
         "limit": {
           "context": 1000000,
-          "output": 65536
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -7633,7 +7633,7 @@
         "last_updated": "2026-09-10",
         "limit": {
           "context": 1000000,
-          "output": 384000
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -7739,7 +7739,7 @@
         "last_updated": "2026-09-10",
         "limit": {
           "context": 1000000,
-          "output": 384000
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -7846,7 +7846,7 @@
         "last_updated": "2026-09-10",
         "limit": {
           "context": 1000000,
-          "output": 384000
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -7952,7 +7952,7 @@
         "last_updated": "2026-08-22",
         "limit": {
           "context": 1000000,
-          "output": 384000
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -8130,8 +8130,8 @@
         "knowledge": "2025-01",
         "last_updated": "2025-10-07",
         "limit": {
-          "context": 131072,
-          "output": 65536
+          "context": 128000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -8457,7 +8457,7 @@
         "knowledge": "2025-01",
         "last_updated": "2026-05-28",
         "limit": {
-          "context": 131072,
+          "context": 65536,
           "output": 32768
         },
         "modalities": {
@@ -8531,8 +8531,8 @@
         "knowledge": "2025-01",
         "last_updated": "2026-05-28",
         "limit": {
-          "context": 65536,
-          "output": 65536
+          "context": 131072,
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -8665,7 +8665,7 @@
         "last_updated": "2026-06-30",
         "limit": {
           "context": 65536,
-          "output": 65536
+          "output": 4096
         },
         "modalities": {
           "input": [
@@ -10505,7 +10505,7 @@
         "id": "MiniMax-M3",
         "last_updated": "2026-06-25",
         "limit": {
-          "context": 1048576,
+          "context": 1000000,
           "output": 512000
         },
         "modalities": {
@@ -10770,7 +10770,7 @@
         "id": "MiniMax-M3",
         "last_updated": "2026-06-25",
         "limit": {
-          "context": 1048576,
+          "context": 1000000,
           "output": 512000
         },
         "modalities": {
@@ -12572,7 +12572,7 @@
         "last_updated": "2026-07-16",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 1048576
         },
         "modalities": {
           "input": [
@@ -12761,7 +12761,7 @@
         "last_updated": "2026-07-16",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 1048576
         },
         "modalities": {
           "input": [
@@ -16289,6 +16289,51 @@
         "temperature": true,
         "tool_call": true
       },
+      "step-5-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.048,
+          "input": 0.959,
+          "output": 2.741
+        },
+        "description": "StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input and a 1M-token context window",
+        "id": "step-5-preview",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-20",
+        "limit": {
+          "context": 1000000,
+          "input": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 5 Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-16",
+        "structured_output": true,
+        "tool_call": true
+      },
       "step-tts-2": {
         "attachment": false,
         "description": "语音生成模型，面向可控音色、旁白解说与音频交付",
@@ -16589,9 +16634,9 @@
         },
         "last_updated": "2026-09-20",
         "limit": {
-          "context": 1000000,
-          "input": 1000000,
-          "output": 1000000
+          "context": 1024000,
+          "input": 1024000,
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -16828,6 +16873,46 @@
         "release_date": "2026-05-29",
         "temperature": true,
         "tool_call": true
+      },
+      "step-5-preview": {
+        "attachment": true,
+        "description": "StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input and a 1M-token context window",
+        "id": "step-5-preview",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-20",
+        "limit": {
+          "context": 1000000,
+          "input": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 5 Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-16",
+        "structured_output": true,
+        "tool_call": true
       }
     },
     "name": "StepFun Step Plan (Global)",
@@ -16976,7 +17061,7 @@
         "limit": {
           "context": 1000000,
           "input": 1000000,
-          "output": 1000000
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -19611,7 +19696,6 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "knowledge": "2026-09-22",
         "last_updated": "2026-09-22",
         "limit": {
           "context": 1048576,
@@ -19622,15 +19706,14 @@
             "text",
             "image",
             "audio",
-            "video",
-            "pdf"
+            "video"
           ],
           "output": [
             "text"
           ]
         },
         "name": "MiMo-V2.6-Flash",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -19654,7 +19737,6 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "knowledge": "2026-09-22",
         "last_updated": "2026-09-22",
         "limit": {
           "context": 1048576,
@@ -19665,15 +19747,14 @@
             "text",
             "image",
             "audio",
-            "video",
-            "pdf"
+            "video"
           ],
           "output": [
             "text"
           ]
         },
         "name": "MiMo-V2.6-Pro",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -19706,15 +19787,15 @@
           "input": [
             "text",
             "image",
-            "video",
-            "audio"
+            "audio",
+            "video"
           ],
           "output": [
             "text"
           ]
         },
         "name": "MiMo-V2.6-Pro-UltraSpeed",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -19985,7 +20066,6 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "knowledge": "2026-09-22",
         "last_updated": "2026-09-22",
         "limit": {
           "context": 1048576,
@@ -19996,15 +20076,14 @@
             "text",
             "image",
             "audio",
-            "video",
-            "pdf"
+            "video"
           ],
           "output": [
             "text"
           ]
         },
         "name": "MiMo-V2.6-Flash",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -20028,7 +20107,6 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "knowledge": "2026-09-22",
         "last_updated": "2026-09-22",
         "limit": {
           "context": 1048576,
@@ -20039,15 +20117,14 @@
             "text",
             "image",
             "audio",
-            "video",
-            "pdf"
+            "video"
           ],
           "output": [
             "text"
           ]
         },
         "name": "MiMo-V2.6-Pro",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -20320,7 +20397,6 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "knowledge": "2026-09-22",
         "last_updated": "2026-09-22",
         "limit": {
           "context": 1048576,
@@ -20331,15 +20407,14 @@
             "text",
             "image",
             "audio",
-            "video",
-            "pdf"
+            "video"
           ],
           "output": [
             "text"
           ]
         },
         "name": "MiMo-V2.6-Flash",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -20363,7 +20438,6 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "knowledge": "2026-09-22",
         "last_updated": "2026-09-22",
         "limit": {
           "context": 1048576,
@@ -20374,15 +20448,14 @@
             "text",
             "image",
             "audio",
-            "video",
-            "pdf"
+            "video"
           ],
           "output": [
             "text"
           ]
         },
         "name": "MiMo-V2.6-Pro",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -20654,7 +20727,6 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "knowledge": "2026-09-22",
         "last_updated": "2026-09-22",
         "limit": {
           "context": 1048576,
@@ -20665,15 +20737,14 @@
             "text",
             "image",
             "audio",
-            "video",
-            "pdf"
+            "video"
           ],
           "output": [
             "text"
           ]
         },
         "name": "MiMo-V2.6-Flash",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -20697,7 +20768,6 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "knowledge": "2026-09-22",
         "last_updated": "2026-09-22",
         "limit": {
           "context": 1048576,
@@ -20708,15 +20778,14 @@
             "text",
             "image",
             "audio",
-            "video",
-            "pdf"
+            "video"
           ],
           "output": [
             "text"
           ]
         },
         "name": "MiMo-V2.6-Pro",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
