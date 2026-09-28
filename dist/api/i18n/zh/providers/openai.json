@@ -1913,6 +1913,121 @@
       "temperature": false,
       "tool_call": true
     },
+    "gpt-daybreak-blue-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.4,
+        "cache_write": 5,
+        "context_over_200k": {
+          "cache_read": 0.8,
+          "cache_write": 10,
+          "input": 8,
+          "output": 30
+        },
+        "input": 4,
+        "output": 20,
+        "tiers": [
+          {
+            "cache_read": 0.8,
+            "cache_write": 10,
+            "input": 8,
+            "output": 30,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Alias for flagship general-purpose models with safeguards for defensive cybersecurity work",
+      "family": "gpt-sol",
+      "id": "gpt-daybreak-blue-latest",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-08-07",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Daybreak Blue",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-daybreak-red-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1.25,
+        "cache_write": 15.625,
+        "input": 12.5,
+        "output": 75
+      },
+      "description": "Alias for advanced cybersecurity models for authorized vulnerability research and security testing",
+      "family": "gpt",
+      "id": "gpt-daybreak-red-latest",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-08-07",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Daybreak Red",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "gpt-image-1": {
       "attachment": true,
       "description": "OpenAI 图像模型，面向生产级图像生成、编辑与品牌安全的视觉工作流",
