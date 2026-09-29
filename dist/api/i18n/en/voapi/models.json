@@ -1560,6 +1560,44 @@
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "firm": "alibaba",
       "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:qwen-color",
+      "id": "qwen3.5-flash",
+      "knowledge": null,
+      "lastUpdated": "2026-02-23",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 Flash",
+      "price": {
+        "cacheRead": 0.01,
+        "cacheWrite": 0.125,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "releaseDate": "2026-02-23",
+      "tags": []
+    },
+    {
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "firm": "alibaba",
+      "flags": {
         "attachment": false,
         "audio": false,
         "image": true,
@@ -1785,6 +1823,44 @@
       "tags": []
     },
     {
+      "description": "Lightweight multimodal Qwen model for high-throughput text, image, and video tasks",
+      "firm": "alibaba",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:qwen-color",
+      "id": "qwen3.7-flash",
+      "knowledge": null,
+      "lastUpdated": "2026-07-15",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.7 Flash",
+      "price": {
+        "cacheRead": 0.003,
+        "cacheWrite": 0.0375,
+        "input": 0.03,
+        "output": 0.13
+      },
+      "releaseDate": "2026-07-15",
+      "tags": []
+    },
+    {
       "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
       "firm": "alibaba",
       "flags": {
@@ -1824,7 +1900,7 @@
       "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
       "firm": "alibaba",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
         "image": true,
         "open_weights": false,
@@ -1850,10 +1926,10 @@
       },
       "name": "Qwen3.7 Plus",
       "price": {
-        "cacheRead": 0.05,
-        "cacheWrite": 0.625,
-        "input": 0.5,
-        "output": 3
+        "cacheRead": 0.04,
+        "cacheWrite": 0.5,
+        "input": 0.4,
+        "output": 1.6
       },
       "releaseDate": "2026-06-02",
       "tags": []
@@ -1933,6 +2009,45 @@
         "output": 6
       },
       "releaseDate": "2026-08-03",
+      "tags": []
+    },
+    {
+      "description": "Qwen omni model for text, vision, audio, and multimodal agent tasks",
+      "firm": "alibaba",
+      "flags": {
+        "attachment": true,
+        "audio": true,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:qwen-color",
+      "id": "qwen3.8-omni-flash",
+      "knowledge": null,
+      "lastUpdated": "2026-09-17",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Omni Flash",
+      "price": {
+        "cacheRead": 0.016,
+        "cacheWrite": null,
+        "input": 0.15,
+        "output": 0.47
+      },
+      "releaseDate": "2026-09-17",
       "tags": []
     },
     {
@@ -3897,7 +4012,7 @@
       "knowledge": null,
       "lastUpdated": "2026-07-15",
       "maxCtxTokens": 1000000,
-      "maxOutputTokens": 65536,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text",
@@ -4067,6 +4182,45 @@
         "output": 5.33231
       },
       "releaseDate": "2026-08-03",
+      "tags": []
+    },
+    {
+      "description": "Qwen omni model for text, vision, audio, and multimodal agent tasks",
+      "firm": "alibaba-cn",
+      "flags": {
+        "attachment": true,
+        "audio": true,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:qwen-color",
+      "id": "qwen3.8-omni-flash",
+      "knowledge": null,
+      "lastUpdated": "2026-09-17",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Omni Flash",
+      "price": {
+        "cacheRead": 0.014,
+        "cacheWrite": null,
+        "input": 0.113,
+        "output": 0.382
+      },
+      "releaseDate": "2026-09-17",
       "tags": []
     },
     {
@@ -4471,44 +4625,6 @@
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "firm": "alibaba-coding-plan",
       "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:qwen-color",
-      "id": "qwen3.6-flash",
-      "knowledge": null,
-      "lastUpdated": "2026-04-27",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 65536,
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.6 Flash",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": 0.234375,
-        "input": 0.1875,
-        "output": 1.125
-      },
-      "releaseDate": "2026-04-27",
-      "tags": []
-    },
-    {
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
-      "firm": "alibaba-coding-plan",
-      "flags": {
         "attachment": false,
         "audio": false,
         "image": true,
@@ -4541,42 +4657,6 @@
         "output": null
       },
       "releaseDate": "2026-04-02",
-      "tags": []
-    },
-    {
-      "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
-      "firm": "alibaba-coding-plan",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": false,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:qwen-color",
-      "id": "qwen3.7-max",
-      "knowledge": null,
-      "lastUpdated": "2026-05-21",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 65536,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.7 Max",
-      "price": {
-        "cacheRead": 0.5,
-        "cacheWrite": 3.125,
-        "input": 2.5,
-        "output": 7.5
-      },
-      "releaseDate": "2026-05-21",
       "tags": []
     },
     {
@@ -4766,44 +4846,6 @@
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "firm": "alibaba-coding-plan-cn",
       "flags": {
-        "attachment": true,
-        "audio": false,
-        "image": true,
-        "open_weights": false,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:qwen-color",
-      "id": "qwen3.6-flash",
-      "knowledge": null,
-      "lastUpdated": "2026-04-27",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 65536,
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.6 Flash",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": 0.234375,
-        "input": 0.1875,
-        "output": 1.125
-      },
-      "releaseDate": "2026-04-27",
-      "tags": []
-    },
-    {
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
-      "firm": "alibaba-coding-plan-cn",
-      "flags": {
         "attachment": false,
         "audio": false,
         "image": true,
@@ -4836,42 +4878,6 @@
         "output": null
       },
       "releaseDate": "2026-04-02",
-      "tags": []
-    },
-    {
-      "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
-      "firm": "alibaba-coding-plan-cn",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": false,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:qwen-color",
-      "id": "qwen3.7-max",
-      "knowledge": null,
-      "lastUpdated": "2026-05-21",
-      "maxCtxTokens": 1000000,
-      "maxOutputTokens": 65536,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.7 Max",
-      "price": {
-        "cacheRead": 0.5,
-        "cacheWrite": 3.125,
-        "input": 2.5,
-        "output": 7.5
-      },
-      "releaseDate": "2026-05-21",
       "tags": []
     },
     {
@@ -6518,6 +6524,44 @@
         "output": 10
       },
       "releaseDate": "2026-06-29",
+      "tags": []
+    },
+    {
+      "description": "Fast Claude model for everyday coding, agents, and knowledge work",
+      "firm": "anthropic",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:claude-color",
+      "id": "claude-sonnet-5-5",
+      "knowledge": "2026-06",
+      "lastUpdated": "2026-09-28",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 128000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 5.5",
+      "price": {
+        "cacheRead": 0.2,
+        "cacheWrite": 2.5,
+        "input": 2,
+        "output": 10
+      },
+      "releaseDate": "2026-09-28",
       "tags": []
     },
     {
@@ -10511,7 +10555,7 @@
       },
       "name": "Codestral (latest)",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.03,
         "cacheWrite": null,
         "input": 0.3,
         "output": 0.9
@@ -10809,42 +10853,6 @@
       "tags": []
     },
     {
-      "description": "Mistral reasoning model for transparent analysis, math, and complex decisions",
-      "firm": "mistral",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": true,
-        "reasoning": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:mistral-color",
-      "id": "magistral-small",
-      "knowledge": "2025-06",
-      "lastUpdated": "2025-03-17",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 128000,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Magistral Small",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 0.5,
-        "output": 1.5
-      },
-      "releaseDate": "2025-03-17",
-      "tags": []
-    },
-    {
       "description": "Compact Mistral model for edge, latency-sensitive, and cost-efficient workloads",
       "firm": "mistral",
       "flags": {
@@ -11017,7 +11025,7 @@
       },
       "name": "Mistral Large 3",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.05,
         "cacheWrite": null,
         "input": 0.5,
         "output": 1.5
@@ -11054,7 +11062,7 @@
       },
       "name": "Mistral Large (latest)",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.05,
         "cacheWrite": null,
         "input": 0.5,
         "output": 1.5
@@ -11165,7 +11173,7 @@
       },
       "name": "Mistral Medium 3.5",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.15,
         "cacheWrite": null,
         "input": 1.5,
         "output": 7.5
@@ -11202,7 +11210,7 @@
       },
       "name": "Mistral Medium (latest)",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.15,
         "cacheWrite": null,
         "input": 1.5,
         "output": 7.5
@@ -11312,7 +11320,7 @@
       },
       "name": "Mistral Small 4",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.015,
         "cacheWrite": null,
         "input": 0.15,
         "output": 0.6
@@ -11349,7 +11357,7 @@
       },
       "name": "Mistral Small (latest)",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.015,
         "cacheWrite": null,
         "input": 0.15,
         "output": 0.6

@@ -1811,6 +1811,7 @@
     },
     "qwen3.6-flash": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.6-flash",
       "cost": {
         "cache_write": 0.234375,
         "input": 0.1875,
@@ -1954,6 +1955,7 @@
     },
     "qwen3.7-flash": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.7-flash",
       "cost": {
         "cache_read": 0.002962,
         "cache_write": 0.03703,
@@ -1988,8 +1990,8 @@
       "last_updated": "2026-07-15",
       "limit": {
         "context": 1000000,
-        "input": 991000,
-        "output": 65536
+        "input": 991808,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -2020,6 +2022,7 @@
     },
     "qwen3.7-max": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3.7-max",
       "cost": {
         "cache_read": 0.5,
         "cache_write": 3.125,
@@ -2060,6 +2063,7 @@
     },
     "qwen3.7-plus": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.7-plus",
       "cost": {
         "cache_read": 0.05,
         "cache_write": 0.625,
@@ -2115,6 +2119,7 @@
     },
     "qwen3.8-flash": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.8-flash",
       "cost": {
         "cache_read": 0.01187,
         "cache_write": 0.14844,
@@ -2168,6 +2173,7 @@
     },
     "qwen3.8-max": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.8-max",
       "cost": {
         "cache_read": 0.22218,
         "cache_write": 2.22179,
@@ -2220,6 +2226,54 @@
       "release_date": "2026-08-03",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.8-omni-flash": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.8-omni-flash",
+      "cost": {
+        "cache_read": 0.014,
+        "input": 0.113,
+        "output": 0.382
+      },
+      "description": "テキスト、視覚、音声、マルチモーダルエージェントタスク向けの Qwen オムニモデル",
+      "family": "qwen",
+      "id": "qwen3.8-omni-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-09-17",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Omni Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-09-17",
+      "structured_output": true,
       "tool_call": true
     },
     "qwq-32b": {

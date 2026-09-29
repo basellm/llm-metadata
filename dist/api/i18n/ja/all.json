@@ -1493,6 +1493,53 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3.5-flash": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.5-flash",
+        "cost": {
+          "cache_read": 0.01,
+          "cache_write": 0.125,
+          "input": 0.1,
+          "output": 0.4
+        },
+        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
+        "family": "qwen",
+        "id": "qwen3.5-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-02-23",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 81920,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-02-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3.5-plus": {
         "attachment": false,
         "cost": {
@@ -1757,6 +1804,76 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3.7-flash": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.7-flash",
+        "cost": {
+          "cache_read": 0.003,
+          "cache_write": 0.0375,
+          "input": 0.03,
+          "output": 0.13,
+          "tiers": [
+            {
+              "cache_read": 0.01,
+              "cache_write": 0.125,
+              "input": 0.1,
+              "output": 0.4,
+              "tier": {
+                "size": 32000,
+                "type": "context"
+              }
+            },
+            {
+              "cache_read": 0.02,
+              "cache_write": 0.25,
+              "input": 0.2,
+              "output": 0.8,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "高スループットのテキスト、画像、動画タスク向けの軽量マルチモーダル Qwen モデル",
+        "family": "qwen",
+        "id": "qwen3.7-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-07-15",
+        "limit": {
+          "context": 1000000,
+          "input": 991808,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.7 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 262144,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-07-15",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3.7-max": {
         "attachment": false,
         "cost": {
@@ -1797,24 +1914,24 @@
         "tool_call": true
       },
       "qwen3.7-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
-          "cache_read": 0.05,
-          "cache_write": 0.625,
+          "cache_read": 0.04,
+          "cache_write": 0.5,
           "context_over_200k": {
-            "cache_read": 0.2,
-            "cache_write": 2.5,
-            "input": 2,
-            "output": 6
+            "cache_read": 0.12,
+            "cache_write": 1.5,
+            "input": 1.2,
+            "output": 4.8
           },
-          "input": 0.5,
-          "output": 3,
+          "input": 0.4,
+          "output": 1.6,
           "tiers": [
             {
-              "cache_read": 0.2,
-              "cache_write": 2.5,
-              "input": 2,
-              "output": 6,
+              "cache_read": 0.12,
+              "cache_write": 1.5,
+              "input": 1.2,
+              "output": 4.8,
               "tier": {
                 "size": 256000,
                 "type": "context"
@@ -1825,6 +1942,9 @@
         "description": "長文コンテキストエージェント、視覚入力、コーディング向けのマルチモーダル Qwen 主力モデル",
         "family": "qwen",
         "id": "qwen3.7-plus",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "knowledge": "2025-04",
         "last_updated": "2026-06-04",
         "limit": {
@@ -1853,11 +1973,13 @@
           }
         ],
         "release_date": "2026-06-02",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
       "qwen3.8-flash": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-flash",
         "cost": {
           "cache_read": 0.016,
           "cache_write": 0.2,
@@ -1911,6 +2033,7 @@
       },
       "qwen3.8-max": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-max",
         "cost": {
           "cache_read": 0.25,
           "cache_write": 2.5,
@@ -1963,6 +2086,54 @@
         "release_date": "2026-08-03",
         "structured_output": true,
         "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.8-omni-flash": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-omni-flash",
+        "cost": {
+          "cache_read": 0.016,
+          "input": 0.15,
+          "output": 0.47
+        },
+        "description": "テキスト、視覚、音声、マルチモーダルエージェントタスク向けの Qwen オムニモデル",
+        "family": "qwen",
+        "id": "qwen3.8-omni-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-17",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.8 Omni Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-09-17",
+        "structured_output": true,
         "tool_call": true
       },
       "qwq-plus": {
@@ -3813,6 +3984,7 @@
       },
       "qwen3.6-flash": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.6-flash",
         "cost": {
           "cache_write": 0.234375,
           "input": 0.1875,
@@ -3956,6 +4128,7 @@
       },
       "qwen3.7-flash": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.7-flash",
         "cost": {
           "cache_read": 0.002962,
           "cache_write": 0.03703,
@@ -3990,8 +4163,8 @@
         "last_updated": "2026-07-15",
         "limit": {
           "context": 1000000,
-          "input": 991000,
-          "output": 65536
+          "input": 991808,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -4022,6 +4195,7 @@
       },
       "qwen3.7-max": {
         "attachment": false,
+        "canonical_model_id": "alibaba/qwen3.7-max",
         "cost": {
           "cache_read": 0.5,
           "cache_write": 3.125,
@@ -4062,6 +4236,7 @@
       },
       "qwen3.7-plus": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.7-plus",
         "cost": {
           "cache_read": 0.05,
           "cache_write": 0.625,
@@ -4117,6 +4292,7 @@
       },
       "qwen3.8-flash": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-flash",
         "cost": {
           "cache_read": 0.01187,
           "cache_write": 0.14844,
@@ -4170,6 +4346,7 @@
       },
       "qwen3.8-max": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-max",
         "cost": {
           "cache_read": 0.22218,
           "cache_write": 2.22179,
@@ -4222,6 +4399,54 @@
         "release_date": "2026-08-03",
         "structured_output": true,
         "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.8-omni-flash": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-omni-flash",
+        "cost": {
+          "cache_read": 0.014,
+          "input": 0.113,
+          "output": 0.382
+        },
+        "description": "テキスト、視覚、音声、マルチモーダルエージェントタスク向けの Qwen オムニモデル",
+        "family": "qwen",
+        "id": "qwen3.8-omni-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-17",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.8 Omni Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-09-17",
+        "structured_output": true,
         "tool_call": true
       },
       "qwq-32b": {
@@ -4603,44 +4828,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3.6-flash": {
-        "attachment": true,
-        "cost": {
-          "cache_write": 0.234375,
-          "input": 0.1875,
-          "output": 1.125
-        },
-        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
-        "family": "qwen3.6",
-        "id": "qwen3.6-flash",
-        "last_updated": "2026-04-27",
-        "limit": {
-          "context": 1000000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.6 Flash",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-04-27",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen3.6-plus": {
         "attachment": false,
         "cost": {
@@ -4680,44 +4867,9 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3.7-max": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.5,
-          "cache_write": 3.125,
-          "input": 2.5,
-          "output": 7.5
-        },
-        "description": "エージェントフレームワーク、コーディングアシスタント、長期タスク向けに調整された Qwen フロンティアモデル",
-        "family": "qwen",
-        "id": "qwen3.7-max",
-        "last_updated": "2026-05-21",
-        "limit": {
-          "context": 1000000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.7 Max",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-05-21",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen3.7-plus": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.7-plus",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -4912,44 +5064,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3.6-flash": {
-        "attachment": true,
-        "cost": {
-          "cache_write": 0.234375,
-          "input": 0.1875,
-          "output": 1.125
-        },
-        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
-        "family": "qwen3.6",
-        "id": "qwen3.6-flash",
-        "last_updated": "2026-04-27",
-        "limit": {
-          "context": 1000000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.6 Flash",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-04-27",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen3.6-plus": {
         "attachment": false,
         "cost": {
@@ -4989,44 +5103,9 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3.7-max": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.5,
-          "cache_write": 3.125,
-          "input": 2.5,
-          "output": 7.5
-        },
-        "description": "エージェントフレームワーク、コーディングアシスタント、長期タスク向けに調整された Qwen フロンティアモデル",
-        "family": "qwen",
-        "id": "qwen3.7-max",
-        "last_updated": "2026-05-21",
-        "limit": {
-          "context": 1000000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.7 Max",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-05-21",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen3.7-plus": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.7-plus",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5232,6 +5311,7 @@
       },
       "qwen3.6-flash": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.6-flash",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5278,6 +5358,7 @@
       },
       "qwen3.6-plus": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.6-plus",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5325,6 +5406,7 @@
       },
       "qwen3.7-max": {
         "attachment": false,
+        "canonical_model_id": "alibaba/qwen3.7-max",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5369,6 +5451,7 @@
       },
       "qwen3.7-plus": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.7-plus",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5416,6 +5499,7 @@
       },
       "qwen3.8-flash": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-flash",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5469,6 +5553,7 @@
       },
       "qwen3.8-max": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-max",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5525,6 +5610,7 @@
       },
       "qwen3.8-max-preview": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-max-preview",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5801,6 +5887,7 @@
       },
       "qwen3.6-flash": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.6-flash",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5847,6 +5934,7 @@
       },
       "qwen3.6-plus": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.6-plus",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5894,6 +5982,7 @@
       },
       "qwen3.7-max": {
         "attachment": false,
+        "canonical_model_id": "alibaba/qwen3.7-max",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5938,6 +6027,7 @@
       },
       "qwen3.7-plus": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.7-plus",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5985,6 +6075,7 @@
       },
       "qwen3.8-flash": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-flash",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -6038,6 +6129,7 @@
       },
       "qwen3.8-max": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-max",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -6094,6 +6186,7 @@
       },
       "qwen3.8-max-preview": {
         "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-max-preview",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -6266,6 +6359,7 @@
       },
       "claude-fable-5-1": {
         "attachment": true,
+        "canonical_model_id": "anthropic/claude-fable-5-1",
         "cost": {
           "cache_read": 0.25,
           "cache_write": 12.5,
@@ -6313,6 +6407,7 @@
       },
       "claude-haiku-4-5": {
         "attachment": true,
+        "canonical_model_id": "anthropic/claude-haiku-4-5",
         "cost": {
           "cache_read": 0.1,
           "cache_write": 1.25,
@@ -6395,6 +6490,7 @@
       },
       "claude-opus-4-5": {
         "attachment": true,
+        "canonical_model_id": "anthropic/claude-opus-4-5",
         "cost": {
           "cache_read": 0.5,
           "cache_write": 6.25,
@@ -6657,6 +6753,7 @@
       },
       "claude-opus-5": {
         "attachment": true,
+        "canonical_model_id": "anthropic/claude-opus-5",
         "cost": {
           "cache_read": 0.5,
           "cache_write": 6.25,
@@ -6724,6 +6821,7 @@
       },
       "claude-opus-5-5": {
         "attachment": true,
+        "canonical_model_id": "anthropic/claude-opus-5-5",
         "cost": {
           "cache_read": 0.2,
           "cache_write": 5,
@@ -6791,6 +6889,7 @@
       },
       "claude-sonnet-4-5": {
         "attachment": true,
+        "canonical_model_id": "anthropic/claude-sonnet-4-5",
         "cost": {
           "cache_read": 0.3,
           "cache_write": 3.75,
@@ -6970,6 +7069,54 @@
         "structured_output": true,
         "temperature": false,
         "tool_call": true
+      },
+      "claude-sonnet-5-5": {
+        "attachment": true,
+        "canonical_model_id": "anthropic/claude-sonnet-5-5",
+        "cost": {
+          "cache_read": 0.2,
+          "cache_write": 2.5,
+          "input": 2,
+          "output": 10
+        },
+        "description": "Fast Claude model for everyday coding, agents, and knowledge work",
+        "family": "claude-sonnet",
+        "id": "claude-sonnet-5-5",
+        "knowledge": "2026-06",
+        "last_updated": "2026-09-28",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 5.5",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-28",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
       }
     },
     "name": "Anthropic",
@@ -6987,6 +7134,7 @@
     "models": {
       "trinity-large-thinking": {
         "attachment": false,
+        "canonical_model_id": "arcee-ai/trinity-large-thinking",
         "cost": {
           "cache_read": 0.06,
           "input": 0.25,
@@ -7025,7 +7173,7 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "bailing": {
-    "api": "https://api.tbox.cn/api/llm/v1/chat/completions",
+    "api": "https://api.tbox.cn/api/llm/v1",
     "currency": "CNY",
     "doc": "https://alipaytbox.yuque.com/sxs0ba/ling/intro",
     "env": [
@@ -7111,6 +7259,7 @@
     "models": {
       "c4ai-aya-expanse-32b": {
         "attachment": false,
+        "canonical_model_id": "cohere/c4ai-aya-expanse-32b",
         "description": "23 言語での生成に最適化されたオープン多言語モデル",
         "id": "c4ai-aya-expanse-32b",
         "last_updated": "2024-10-24",
@@ -7135,6 +7284,7 @@
       },
       "c4ai-aya-expanse-8b": {
         "attachment": false,
+        "canonical_model_id": "cohere/c4ai-aya-expanse-8b",
         "description": "23 言語での生成に最適化されたコンパクトなオープン多言語モデル",
         "id": "c4ai-aya-expanse-8b",
         "last_updated": "2024-10-24",
@@ -7159,6 +7309,7 @@
       },
       "c4ai-aya-vision-32b": {
         "attachment": true,
+        "canonical_model_id": "cohere/c4ai-aya-vision-32b",
         "description": "OCR、視覚推論、画像質問応答向けのオープン多言語ビジョンモデル",
         "id": "c4ai-aya-vision-32b",
         "last_updated": "2025-05-14",
@@ -7184,6 +7335,7 @@
       },
       "c4ai-aya-vision-8b": {
         "attachment": true,
+        "canonical_model_id": "cohere/c4ai-aya-vision-8b",
         "description": "OCR と視覚的質問応答向けのコンパクトなオープン多言語ビジョンモデル",
         "id": "c4ai-aya-vision-8b",
         "last_updated": "2025-05-14",
@@ -7209,6 +7361,7 @@
       },
       "command-a-03-2025": {
         "attachment": false,
+        "canonical_model_id": "cohere/command-a-03-2025",
         "cost": {
           "input": 2.5,
           "output": 10
@@ -7239,6 +7392,7 @@
       },
       "command-a-plus-05-2026": {
         "attachment": true,
+        "canonical_model_id": "cohere/command-a-plus-05-2026",
         "cost": {
           "input": 2.5,
           "output": 10
@@ -7280,6 +7434,7 @@
       },
       "command-a-reasoning-08-2025": {
         "attachment": false,
+        "canonical_model_id": "cohere/command-a-reasoning-08-2025",
         "cost": {
           "input": 2.5,
           "output": 10
@@ -7319,6 +7474,7 @@
       },
       "command-a-translate-08-2025": {
         "attachment": false,
+        "canonical_model_id": "cohere/command-a-translate-08-2025",
         "cost": {
           "input": 2.5,
           "output": 10
@@ -7349,6 +7505,7 @@
       },
       "command-a-vision-07-2025": {
         "attachment": true,
+        "canonical_model_id": "cohere/command-a-vision-07-2025",
         "cost": {
           "input": 2.5,
           "output": 10
@@ -7380,6 +7537,7 @@
       },
       "command-r-08-2024": {
         "attachment": false,
+        "canonical_model_id": "cohere/command-r-08-2024",
         "cost": {
           "input": 0.15,
           "output": 0.6
@@ -7410,6 +7568,7 @@
       },
       "command-r-plus-08-2024": {
         "attachment": false,
+        "canonical_model_id": "cohere/command-r-plus-08-2024",
         "cost": {
           "input": 2.5,
           "output": 10
@@ -7440,6 +7599,7 @@
       },
       "command-r7b-12-2024": {
         "attachment": false,
+        "canonical_model_id": "cohere/command-r7b-12-2024",
         "cost": {
           "input": 0.0375,
           "output": 0.15
@@ -7470,6 +7630,7 @@
       },
       "command-r7b-arabic-02-2025": {
         "attachment": false,
+        "canonical_model_id": "cohere/command-r7b-arabic-02-2025",
         "cost": {
           "input": 0.0375,
           "output": 0.15
@@ -7500,6 +7661,7 @@
       },
       "north-mini-code-1-0": {
         "attachment": false,
+        "canonical_model_id": "cohere/north-mini-code-1-0",
         "cost": {
           "input": 0,
           "output": 0
@@ -7561,6 +7723,7 @@
     "models": {
       "deepseek-flash": {
         "attachment": true,
+        "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
           "cache_read": 0.003,
           "currency_options": {
@@ -7667,6 +7830,7 @@
       },
       "deepseek-v4-flash": {
         "attachment": true,
+        "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
           "cache_read": 0.003,
           "currency_options": {
@@ -7774,6 +7938,7 @@
       },
       "deepseek-v4-flash-vision-exp": {
         "attachment": true,
+        "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
           "cache_read": 0.003,
           "currency_options": {
@@ -7881,6 +8046,7 @@
       },
       "deepseek-v4-pro": {
         "attachment": false,
+        "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
         "cost": {
           "cache_read": 0.022,
           "currency_options": {
@@ -8000,6 +8166,7 @@
     "models": {
       "deep-research-max-preview-04-2026": {
         "attachment": true,
+        "canonical_model_id": "google/deep-research-max-preview-04-2026",
         "cost": {
           "cache_read": 0.2,
           "context_over_200k": {
@@ -8053,6 +8220,7 @@
       },
       "deep-research-preview-04-2026": {
         "attachment": true,
+        "canonical_model_id": "google/deep-research-preview-04-2026",
         "cost": {
           "cache_read": 0.2,
           "context_over_200k": {
@@ -8106,6 +8274,7 @@
       },
       "gemini-2.5-computer-use-preview-10-2025": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-2.5-computer-use-preview-10-2025",
         "cost": {
           "context_over_200k": {
             "input": 2.5,
@@ -8152,6 +8321,7 @@
       },
       "gemini-2.5-flash": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-2.5-flash",
         "cost": {
           "cache_read": 0.03,
           "input": 0.3,
@@ -8199,6 +8369,7 @@
       },
       "gemini-2.5-flash-image": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-2.5-flash-image",
         "cost": {
           "cache_read": 0.075,
           "input": 0.3,
@@ -8310,6 +8481,7 @@
       },
       "gemini-2.5-pro": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-2.5-pro",
         "cost": {
           "cache_read": 0.125,
           "context_over_200k": {
@@ -8447,6 +8619,7 @@
       },
       "gemini-3-pro-image": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-3-pro-image",
         "cost": {
           "input": 2,
           "output": 120
@@ -8488,6 +8661,7 @@
       },
       "gemini-3-pro-image-preview": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-3-pro-image-preview",
         "cost": {
           "input": 2,
           "output": 120
@@ -8521,6 +8695,7 @@
       },
       "gemini-3.1-flash-image": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-3.1-flash-image",
         "cost": {
           "input": 0.5,
           "output": 60
@@ -8654,6 +8829,7 @@
       },
       "gemini-3.1-flash-lite-image": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-3.1-flash-lite-image",
         "cost": {
           "input": 0.25,
           "output": 30
@@ -8745,6 +8921,7 @@
       },
       "gemini-3.1-flash-live-preview": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-3.1-flash-live-preview",
         "cost": {
           "input": 0.75,
           "input_audio": 3,
@@ -8793,6 +8970,7 @@
       },
       "gemini-3.1-flash-tts-preview": {
         "attachment": false,
+        "canonical_model_id": "google/gemini-3.1-flash-tts-preview",
         "cost": {
           "input": 1,
           "output": 20
@@ -8996,6 +9174,7 @@
       },
       "gemini-3.5-flash-lite": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-3.5-flash-lite",
         "cost": {
           "cache_read": 0.03,
           "input": 0.3,
@@ -9043,6 +9222,7 @@
       },
       "gemini-3.5-live-translate-preview": {
         "attachment": false,
+        "canonical_model_id": "google/gemini-3.5-live-translate-preview",
         "cost": {
           "input": 3.5,
           "input_audio": 3.5,
@@ -9076,6 +9256,7 @@
       },
       "gemini-3.6-flash": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-3.6-flash",
         "cost": {
           "cache_read": 0.075,
           "input": 0.75,
@@ -9124,6 +9305,7 @@
       },
       "gemini-3.7-flash": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-3.7-flash",
         "cost": {
           "cache_read": 0.075,
           "input": 0.75,
@@ -9171,6 +9353,7 @@
       },
       "gemini-3.8-flash": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-3.8-flash",
         "cost": {
           "cache_read": 0.075,
           "input": 0.75,
@@ -9247,6 +9430,7 @@
       },
       "gemini-embedding-2": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-embedding-2",
         "cost": {
           "input": 0.2,
           "input_audio": 6.5,
@@ -9376,6 +9560,7 @@
       },
       "gemini-omni-flash-preview": {
         "attachment": true,
+        "canonical_model_id": "google/gemini-omni-flash-preview",
         "cost": {
           "input": 1.5,
           "output": 17.5
@@ -9472,6 +9657,7 @@
       },
       "lyria-3-clip-preview": {
         "attachment": true,
+        "canonical_model_id": "google/lyria-3-clip-preview",
         "cost": {
           "input": 0,
           "output": 0
@@ -9504,6 +9690,7 @@
       },
       "lyria-3-pro-preview": {
         "attachment": true,
+        "canonical_model_id": "google/lyria-3-pro-preview",
         "cost": {
           "input": 0,
           "output": 0
@@ -9536,6 +9723,7 @@
       },
       "veo-3.1-fast-generate-preview": {
         "attachment": true,
+        "canonical_model_id": "google/veo-3.1-fast-generate-preview",
         "description": "プロンプト誘導の生成、編集、モーションワークフロー向けの動画モデル",
         "family": "veo",
         "id": "veo-3.1-fast-generate-preview",
@@ -9563,6 +9751,7 @@
       },
       "veo-3.1-generate-preview": {
         "attachment": true,
+        "canonical_model_id": "google/veo-3.1-generate-preview",
         "description": "プロンプト誘導の生成、編集、モーションワークフロー向けの動画モデル",
         "family": "veo",
         "id": "veo-3.1-generate-preview",
@@ -9590,6 +9779,7 @@
       },
       "veo-3.1-lite-generate-preview": {
         "attachment": true,
+        "canonical_model_id": "google/veo-3.1-lite-generate-preview",
         "description": "プロンプト誘導の生成、編集、モーションワークフロー向けの動画モデル",
         "family": "veo",
         "id": "veo-3.1-lite-generate-preview",
@@ -9985,6 +10175,7 @@
     "models": {
       "LongCat-2.0": {
         "attachment": false,
+        "canonical_model_id": "meituan/longcat-2.0",
         "cost": {
           "cache_read": 0.015,
           "input": 0.75,
@@ -10037,6 +10228,7 @@
     "models": {
       "muse-spark-1.1": {
         "attachment": true,
+        "canonical_model_id": "meta/muse-spark-1.1",
         "cost": {
           "cache_read": 0.15,
           "input": 1.25,
@@ -10083,6 +10275,7 @@
       },
       "muse-spark-1.2": {
         "attachment": true,
+        "canonical_model_id": "meta/muse-spark-1.2",
         "cost": {
           "cache_read": 0.15,
           "input": 1.25,
@@ -10130,6 +10323,7 @@
       },
       "muse-spark-1.2-contributor": {
         "attachment": true,
+        "canonical_model_id": "meta/muse-spark-1.2",
         "cost": {
           "cache_read": 0.002,
           "input": 0.1,
@@ -10177,6 +10371,7 @@
       },
       "muse-spark-1.3": {
         "attachment": true,
+        "canonical_model_id": "meta/muse-spark-1.3",
         "cost": {
           "cache_read": 0.15,
           "input": 1.25,
@@ -10225,6 +10420,7 @@
       },
       "muse-spark-1.3-contributor": {
         "attachment": true,
+        "canonical_model_id": "meta/muse-spark-1.3",
         "cost": {
           "cache_read": 0.002,
           "input": 0.1,
@@ -11043,6 +11239,7 @@
       },
       "MiniMax-M3.1-Flash-Preview": {
         "attachment": true,
+        "canonical_model_id": "minimax/MiniMax-M3.1-Flash-Preview",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -11334,6 +11531,7 @@
       },
       "MiniMax-M3.1-Flash-Preview": {
         "attachment": true,
+        "canonical_model_id": "minimax/MiniMax-M3.1-Flash-Preview",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -11394,6 +11592,7 @@
       "codestral-latest": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.03,
           "input": 0.3,
           "output": 0.9
         },
@@ -11670,37 +11869,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "magistral-small": {
-        "attachment": false,
-        "cost": {
-          "input": 0.5,
-          "output": 1.5
-        },
-        "description": "透明性の高い分析、数学、複雑な意思決定向けの Mistral 推論モデル",
-        "family": "magistral-small",
-        "id": "magistral-small",
-        "knowledge": "2025-06",
-        "last_updated": "2025-03-17",
-        "limit": {
-          "context": 128000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Magistral Small",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-03-17",
-        "temperature": true,
-        "tool_call": true
-      },
       "ministral-3b-latest": {
         "attachment": false,
         "cost": {
@@ -11792,6 +11960,7 @@
       },
       "mistral-large-2411": {
         "attachment": false,
+        "canonical_model_id": "mistral/mistral-large-2411",
         "cost": {
           "input": 2,
           "output": 6
@@ -11823,6 +11992,7 @@
       "mistral-large-2512": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.05,
           "input": 0.5,
           "output": 1.5
         },
@@ -11854,6 +12024,7 @@
       "mistral-large-latest": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.05,
           "input": 0.5,
           "output": 1.5
         },
@@ -11947,6 +12118,7 @@
       "mistral-medium-2604": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.15,
           "input": 1.5,
           "output": 7.5
         },
@@ -11986,7 +12158,9 @@
       },
       "mistral-medium-latest": {
         "attachment": true,
+        "canonical_model_id": "mistral/mistral-medium-latest",
         "cost": {
+          "cache_read": 0.15,
           "input": 1.5,
           "output": 7.5
         },
@@ -12088,6 +12262,7 @@
       "mistral-small-2603": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.015,
           "input": 0.15,
           "output": 0.6
         },
@@ -12128,6 +12303,7 @@
       "mistral-small-latest": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.015,
           "input": 0.15,
           "output": 0.6
         },
@@ -12430,6 +12606,7 @@
       },
       "zai-glm-5-2": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.2",
         "cost": {
           "cache_read": 0.14,
           "input": 1.4,
@@ -12472,6 +12649,7 @@
       },
       "zai-glm-5-3": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.3",
         "cost": {
           "cache_read": 0.14,
           "input": 1.4,
@@ -12572,6 +12750,7 @@
       },
       "kimi-k2.7-code": {
         "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k2.7-code",
         "cost": {
           "cache_read": 0.19,
           "input": 0.95,
@@ -12610,6 +12789,7 @@
       },
       "kimi-k2.7-code-highspeed": {
         "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k2.7-code",
         "cost": {
           "cache_read": 0.38,
           "input": 1.9,
@@ -12648,6 +12828,7 @@
       },
       "kimi-k3": {
         "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3",
         "cost": {
           "cache_read": 0.3,
           "input": 3,
@@ -12758,6 +12939,7 @@
       },
       "kimi-k2.7-code": {
         "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k2.7-code",
         "cost": {
           "cache_read": 1.3,
           "currency": "CNY",
@@ -12797,6 +12979,7 @@
       },
       "kimi-k2.7-code-highspeed": {
         "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k2.7-code",
         "cost": {
           "cache_read": 2.6,
           "currency": "CNY",
@@ -12836,6 +13019,7 @@
       },
       "kimi-k3": {
         "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3",
         "cost": {
           "cache_read": 2,
           "currency": "CNY",
@@ -13489,6 +13673,7 @@
       },
       "gpt-5": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-5",
         "cost": {
           "cache_read": 0.125,
           "input": 1.25,
@@ -14350,6 +14535,7 @@
       },
       "gpt-5.6": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-5.6-sol",
         "cost": {
           "cache_read": 0.4,
           "cache_write": 5,
@@ -14443,6 +14629,7 @@
       },
       "gpt-5.6-luna": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-5.6-luna",
         "cost": {
           "cache_read": 0.02,
           "cache_write": 0.25,
@@ -14536,6 +14723,7 @@
       },
       "gpt-5.6-sol": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-5.6-sol",
         "cost": {
           "cache_read": 0.4,
           "cache_write": 5,
@@ -14629,6 +14817,7 @@
       },
       "gpt-5.6-terra": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-5.6-terra",
         "cost": {
           "cache_read": 0.2,
           "cache_write": 2.5,
@@ -14722,6 +14911,7 @@
       },
       "gpt-6-astra": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-6-astra",
         "cost": {
           "cache_read": 1,
           "cache_write": 12.5,
@@ -14814,6 +15004,7 @@
       },
       "gpt-6-luna": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-6-luna",
         "cost": {
           "cache_read": 0.01,
           "cache_write": 0.125,
@@ -14907,6 +15098,7 @@
       },
       "gpt-6-sol": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-6-sol",
         "cost": {
           "cache_read": 0.2,
           "cache_write": 2.5,
@@ -15000,6 +15192,7 @@
       },
       "gpt-daybreak-blue-latest": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-5.6-sol",
         "cost": {
           "cache_read": 0.4,
           "cache_write": 5,
@@ -15067,6 +15260,7 @@
       },
       "gpt-daybreak-red-latest": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-5.6-cyber",
         "cost": {
           "cache_read": 1.25,
           "cache_write": 15.625,
@@ -15115,6 +15309,7 @@
       },
       "gpt-image-1": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-image-1",
         "description": "本番品質の画像生成、編集、ブランドセーフなビジュアルワークフロー向けの OpenAI 画像モデル",
         "family": "gpt-image",
         "id": "gpt-image-1",
@@ -15171,6 +15366,7 @@
       },
       "gpt-image-1.5": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-image-1.5",
         "description": "プロンプト主導の生成、編集、ビジュアルデザインワークフロー向けの画像モデル",
         "family": "gpt-image",
         "id": "gpt-image-1.5",
@@ -15199,6 +15395,7 @@
       },
       "gpt-image-2": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-image-2",
         "cost": {
           "cache_read": 1.25,
           "input": 5,
@@ -15231,6 +15428,7 @@
       },
       "gpt-realtime-2.1": {
         "attachment": true,
+        "canonical_model_id": "openai/gpt-realtime-2.1",
         "cost": {
           "cache_read": 0.4,
           "input": 4,
@@ -15803,6 +16001,7 @@
     "models": {
       "poolside/laguna-m.1": {
         "attachment": false,
+        "canonical_model_id": "poolside/laguna-m.1",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -15843,6 +16042,7 @@
       },
       "poolside/laguna-s-2.1": {
         "attachment": false,
+        "canonical_model_id": "poolside/laguna-s-2.1",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -15883,6 +16083,7 @@
       },
       "poolside/laguna-xs-2.1": {
         "attachment": false,
+        "canonical_model_id": "poolside/laguna-xs-2.1",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -15936,6 +16137,7 @@
     "models": {
       "fugu": {
         "attachment": true,
+        "canonical_model_id": "sakana/fugu",
         "description": "複雑な分析タスクで専門エージェントを振り分けるマルチエージェントモデル",
         "family": "fugu",
         "id": "fugu",
@@ -15975,6 +16177,7 @@
       },
       "fugu-ultra": {
         "attachment": true,
+        "canonical_model_id": "sakana/fugu-ultra",
         "cost": {
           "cache_read": 0.5,
           "context_over_200k": {
@@ -16035,6 +16238,7 @@
       },
       "fugu-ultra-20260615": {
         "attachment": true,
+        "canonical_model_id": "sakana/fugu-ultra",
         "cost": {
           "cache_read": 0.5,
           "context_over_200k": {
@@ -16095,6 +16299,7 @@
       },
       "sakana-namazu": {
         "attachment": true,
+        "canonical_model_id": "sakana/sakana-namazu",
         "cost": {
           "cache_read": 0.15,
           "input": 0.95,
@@ -16449,6 +16654,7 @@
       },
       "step-3.7-flash": {
         "attachment": true,
+        "canonical_model_id": "stepfun/step-3.7-flash",
         "cost": {
           "cache_read": 0.27,
           "currency": "CNY",
@@ -16496,6 +16702,7 @@
       },
       "step-5-preview": {
         "attachment": true,
+        "canonical_model_id": "stepfun/step-5-preview",
         "cost": {
           "cache_read": 0.048,
           "input": 0.959,
@@ -16781,6 +16988,7 @@
       },
       "step-3.7-flash": {
         "attachment": true,
+        "canonical_model_id": "stepfun/step-3.7-flash",
         "cost": {
           "cache_read": 0.037,
           "input": 0.185,
@@ -16827,6 +17035,7 @@
       },
       "step-5-preview": {
         "attachment": true,
+        "canonical_model_id": "stepfun/step-5-preview",
         "cost": {
           "cache_read": 0.05,
           "input": 1,
@@ -16964,6 +17173,7 @@
     "models": {
       "step-3.5-flash": {
         "attachment": false,
+        "canonical_model_id": "stepfun/step-3.5-flash",
         "description": "素早いマルチモーダル推論とコーディング支援向けの StepFun Flash",
         "id": "step-3.5-flash",
         "interleaved": {
@@ -17002,6 +17212,7 @@
       },
       "step-3.5-flash-2603": {
         "attachment": false,
+        "canonical_model_id": "stepfun/step-3.5-flash-2603",
         "description": "効率的なマルチモーダル推論、コーディング、ツール利用向けの StepFun Flash モデル",
         "id": "step-3.5-flash-2603",
         "interleaved": {
@@ -17040,6 +17251,7 @@
       },
       "step-3.7-flash": {
         "attachment": true,
+        "canonical_model_id": "stepfun/step-3.7-flash",
         "description": "より高速なエージェント、コーディング、マルチモーダルプロンプト向けの StepFun 新世代 Flash モデル",
         "id": "step-3.7-flash",
         "interleaved": {
@@ -17081,6 +17293,7 @@
       },
       "step-5-preview": {
         "attachment": true,
+        "canonical_model_id": "stepfun/step-5-preview",
         "description": "StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input and a 1M-token context window",
         "id": "step-5-preview",
         "interleaved": {
@@ -17140,6 +17353,7 @@
     "models": {
       "step-3.5-flash": {
         "attachment": false,
+        "canonical_model_id": "stepfun/step-3.5-flash",
         "description": "素早いマルチモーダル推論とコーディング支援向けの StepFun Flash",
         "id": "step-3.5-flash",
         "interleaved": {
@@ -17178,6 +17392,7 @@
       },
       "step-3.5-flash-2603": {
         "attachment": false,
+        "canonical_model_id": "stepfun/step-3.5-flash-2603",
         "description": "効率的なマルチモーダル推論、コーディング、ツール利用向けの StepFun Flash モデル",
         "id": "step-3.5-flash-2603",
         "interleaved": {
@@ -17216,6 +17431,7 @@
       },
       "step-3.7-flash": {
         "attachment": true,
+        "canonical_model_id": "stepfun/step-3.7-flash",
         "description": "より高速なエージェント、コーディング、マルチモーダルプロンプト向けの StepFun 新世代 Flash モデル",
         "id": "step-3.7-flash",
         "interleaved": {
@@ -17257,6 +17473,7 @@
       },
       "step-5-preview": {
         "attachment": true,
+        "canonical_model_id": "stepfun/step-5-preview",
         "description": "StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input and a 1M-token context window",
         "id": "step-5-preview",
         "interleaved": {
@@ -17521,6 +17738,7 @@
     "models": {
       "hy3": {
         "attachment": false,
+        "canonical_model_id": "tencent/hy3",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -17565,6 +17783,7 @@
       },
       "hy4-preview": {
         "attachment": false,
+        "canonical_model_id": "tencent/hy4-preview",
         "cost": {
           "cache_read": 0.042,
           "input": 0.834,
@@ -17626,6 +17845,7 @@
     "models": {
       "hy3": {
         "attachment": false,
+        "canonical_model_id": "tencent/hy3",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -17670,6 +17890,7 @@
       },
       "hy3-preview": {
         "attachment": false,
+        "canonical_model_id": "tencent/hy3-preview",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -17714,6 +17935,7 @@
       },
       "hy4-preview": {
         "attachment": false,
+        "canonical_model_id": "tencent/hy4-preview",
         "cost": {
           "cache_read": 0.042,
           "input": 0.834,
@@ -17769,6 +17991,7 @@
     "models": {
       "thinkingmachines/Inkling": {
         "attachment": true,
+        "canonical_model_id": "thinkingmachines/inkling",
         "cost": {
           "cache_read": 0.374,
           "input": 1.87,
@@ -17815,6 +18038,7 @@
       },
       "thinkingmachines/Inkling:peft:262144": {
         "attachment": true,
+        "canonical_model_id": "thinkingmachines/inkling",
         "cost": {
           "cache_read": 0.748,
           "input": 3.74,
@@ -18154,6 +18378,7 @@
     "models": {
       "doubao-seed-1-6-251015": {
         "attachment": false,
+        "canonical_model_id": "bytedance-seed/seed-1-6",
         "cost": {
           "cache_read": 0.16,
           "currency": "CNY",
@@ -18221,6 +18446,7 @@
       },
       "doubao-seed-1-6-flash-250828": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-1-6-flash",
         "cost": {
           "cache_read": 0.03,
           "currency": "CNY",
@@ -18280,6 +18506,7 @@
       },
       "doubao-seed-1-6-vision-250815": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-1-6-vision",
         "cost": {
           "cache_read": 0.16,
           "currency": "CNY",
@@ -18339,6 +18566,7 @@
       },
       "doubao-seed-1-8-251228": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-1-8",
         "cost": {
           "cache_read": 0.16,
           "currency": "CNY",
@@ -18407,6 +18635,7 @@
       },
       "doubao-seed-2-0-code-preview-260215": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-2.0-code",
         "cost": {
           "cache_read": 0.64,
           "currency": "CNY",
@@ -18476,6 +18705,7 @@
       },
       "doubao-seed-2-0-lite-260428": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-2.0-lite",
         "cost": {
           "cache_read": 0.12,
           "currency": "CNY",
@@ -18545,6 +18775,7 @@
       },
       "doubao-seed-2-0-mini-260428": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-2.0-mini",
         "cost": {
           "cache_read": 0.04,
           "currency": "CNY",
@@ -18614,6 +18845,7 @@
       },
       "doubao-seed-2-0-pro-260215": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-2.0-pro",
         "cost": {
           "cache_read": 0.64,
           "currency": "CNY",
@@ -18683,6 +18915,7 @@
       },
       "doubao-seed-2-1-pro-260628": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-2.1-pro",
         "cost": {
           "cache_read": 1.2,
           "currency": "CNY",
@@ -18734,6 +18967,7 @@
       },
       "doubao-seed-2-1-turbo-260628": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-2.1-turbo",
         "cost": {
           "cache_read": 0.6,
           "currency": "CNY",
@@ -18785,6 +19019,7 @@
       },
       "doubao-seed-character-260628": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-character",
         "cost": {
           "cache_read": 0.16,
           "currency": "CNY",
@@ -18845,6 +19080,7 @@
       },
       "doubao-seed-evolving": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-evolving",
         "cost": {
           "cache_read": 1.2,
           "currency": "CNY",
@@ -18914,6 +19150,7 @@
     "models": {
       "doubao-seed-2.0-lite": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-2.0-lite",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -18960,6 +19197,7 @@
       },
       "doubao-seed-2.1-turbo": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-2.1-turbo",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -19006,6 +19244,7 @@
       },
       "doubao-seed-evolving": {
         "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-evolving",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -19285,6 +19524,7 @@
       },
       "grok-4.5": {
         "attachment": true,
+        "canonical_model_id": "xai/grok-4.5",
         "cost": {
           "cache_read": 0.3,
           "context_over_200k": {
@@ -19344,6 +19584,7 @@
       },
       "grok-4.6": {
         "attachment": true,
+        "canonical_model_id": "xai/grok-4.6",
         "cost": {
           "cache_read": 0.5,
           "context_over_200k": {
@@ -19405,6 +19646,7 @@
       },
       "grok-4.7": {
         "attachment": true,
+        "canonical_model_id": "xai/grok-4.7",
         "cost": {
           "cache_read": 0.5,
           "context_over_200k": {
@@ -19544,6 +19786,7 @@
       },
       "grok-imagine-image-quality": {
         "attachment": true,
+        "canonical_model_id": "xai/grok-imagine-image-quality",
         "description": "Higher-fidelity Grok Imagine image model for prompt-driven generation, editing, and visual design workflows",
         "family": "grok",
         "id": "grok-imagine-image-quality",
@@ -19600,6 +19843,7 @@
       },
       "grok-imagine-video-1.5": {
         "attachment": true,
+        "canonical_model_id": "xai/grok-imagine-video-1.5",
         "description": "image-to-video 生成、編集、延長ワークフロー向けの動画モデル",
         "family": "grok",
         "id": "grok-imagine-video-1.5",
@@ -20027,6 +20271,7 @@
     "models": {
       "mimo-v2-pro": {
         "attachment": false,
+        "canonical_model_id": "xiaomi/mimo-v2-pro",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20095,6 +20340,7 @@
       },
       "mimo-v2.5": {
         "attachment": true,
+        "canonical_model_id": "xiaomi/mimo-v2.5",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20137,6 +20383,7 @@
       },
       "mimo-v2.5-pro": {
         "attachment": false,
+        "canonical_model_id": "xiaomi/mimo-v2.5-pro",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20260,6 +20507,7 @@
       },
       "mimo-v2.6-flash": {
         "attachment": true,
+        "canonical_model_id": "xiaomi/mimo-v2.6-flash",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20301,6 +20549,7 @@
       },
       "mimo-v2.6-pro": {
         "attachment": true,
+        "canonical_model_id": "xiaomi/mimo-v2.6-pro",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20358,6 +20607,7 @@
     "models": {
       "mimo-v2-pro": {
         "attachment": false,
+        "canonical_model_id": "xiaomi/mimo-v2-pro",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20426,6 +20676,7 @@
       },
       "mimo-v2.5": {
         "attachment": true,
+        "canonical_model_id": "xiaomi/mimo-v2.5",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20468,6 +20719,7 @@
       },
       "mimo-v2.5-pro": {
         "attachment": false,
+        "canonical_model_id": "xiaomi/mimo-v2.5-pro",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20591,6 +20843,7 @@
       },
       "mimo-v2.6-flash": {
         "attachment": true,
+        "canonical_model_id": "xiaomi/mimo-v2.6-flash",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20632,6 +20885,7 @@
       },
       "mimo-v2.6-pro": {
         "attachment": true,
+        "canonical_model_id": "xiaomi/mimo-v2.6-pro",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20688,6 +20942,7 @@
     "models": {
       "mimo-v2-pro": {
         "attachment": false,
+        "canonical_model_id": "xiaomi/mimo-v2-pro",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20756,6 +21011,7 @@
       },
       "mimo-v2.5": {
         "attachment": true,
+        "canonical_model_id": "xiaomi/mimo-v2.5",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20798,6 +21054,7 @@
       },
       "mimo-v2.5-pro": {
         "attachment": false,
+        "canonical_model_id": "xiaomi/mimo-v2.5-pro",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20921,6 +21178,7 @@
       },
       "mimo-v2.6-flash": {
         "attachment": true,
+        "canonical_model_id": "xiaomi/mimo-v2.6-flash",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -20962,6 +21220,7 @@
       },
       "mimo-v2.6-pro": {
         "attachment": true,
+        "canonical_model_id": "xiaomi/mimo-v2.6-pro",
         "cost": {
           "cache_read": 0,
           "input": 0,
@@ -21243,6 +21502,7 @@
       },
       "glm-4.6v-flash": {
         "attachment": true,
+        "canonical_model_id": "zhipuai/glm-4.6v-flash",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -21395,6 +21655,7 @@
       },
       "glm-5": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5",
         "cost": {
           "cache_read": 0.2,
           "cache_write": 0,
@@ -21474,6 +21735,7 @@
       },
       "glm-5.1": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.1",
         "cost": {
           "cache_read": 0.26,
           "cache_write": 0,
@@ -21514,6 +21776,7 @@
       },
       "glm-5.2": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.2",
         "cost": {
           "cache_read": 0.26,
           "cache_write": 0,
@@ -21558,6 +21821,7 @@
       },
       "glm-5.3": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.3",
         "cost": {
           "cache_read": 0.26,
           "cache_write": 0,
@@ -21603,6 +21867,7 @@
       },
       "glm-5.3-flash": {
         "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.3-flash",
         "cost": {
           "cache_read": 0.03,
           "cache_write": 0,
@@ -21651,6 +21916,7 @@
       },
       "glm-5.3-flashx": {
         "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.3-flash",
         "cost": {
           "cache_read": 0.075,
           "cache_write": 0,
@@ -21838,6 +22104,7 @@
       },
       "glm-5.2": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.2",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -21882,6 +22149,7 @@
       },
       "glm-5.2-highspeed": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.2",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -21926,6 +22194,7 @@
       },
       "glm-5.3": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.3",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -21971,6 +22240,7 @@
       },
       "glm-5.3-flash": {
         "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.3-flash",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -22019,6 +22289,7 @@
       },
       "glm-5.3-highspeed": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.3",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -22346,6 +22617,7 @@
       },
       "glm-4.6v-flash": {
         "attachment": true,
+        "canonical_model_id": "zhipuai/glm-4.6v-flash",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -22660,6 +22932,7 @@
       },
       "glm-5.3": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.3",
         "cost": {
           "cache_read": 2,
           "cache_write": 0,
@@ -22706,6 +22979,7 @@
       },
       "glm-5.3-flash": {
         "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.3-flash",
         "cost": {
           "cache_read": 0.23,
           "cache_write": 0,
@@ -22755,6 +23029,7 @@
       },
       "glm-5.3-flashx": {
         "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.3-flash",
         "cost": {
           "cache_read": 0.57,
           "cache_write": 0,
@@ -22913,6 +23188,7 @@
       },
       "glm-5.3": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.3",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -22958,6 +23234,7 @@
       },
       "glm-5.3-flash": {
         "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.3-flash",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -23006,6 +23283,7 @@
       },
       "glm-5.3-highspeed": {
         "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.3",
         "cost": {
           "cache_read": 0,
           "cache_write": 0,

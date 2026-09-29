@@ -1,0 +1,70 @@
+{
+  "attachment": true,
+  "canonical_model_id": "alibaba/qwen3.7-flash",
+  "cost": {
+    "cache_read": 0.003,
+    "cache_write": 0.0375,
+    "input": 0.03,
+    "output": 0.13,
+    "tiers": [
+      {
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "input": 0.1,
+        "output": 0.4,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      },
+      {
+        "cache_read": 0.02,
+        "cache_write": 0.25,
+        "input": 0.2,
+        "output": 0.8,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "高スループットのテキスト、画像、動画タスク向けの軽量マルチモーダル Qwen モデル",
+  "family": "qwen",
+  "id": "qwen3.7-flash",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-07-15",
+  "limit": {
+    "context": 1000000,
+    "input": 991808,
+    "output": 131072
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.7 Flash",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "max": 262144,
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-07-15",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}
