@@ -6,6 +6,22 @@
     "output": 1.25
   },
   "description": "単純なルーティング、抽出、大量自動化向けの最安価 GPT-5.4",
+  "experimental": {
+    "modes": {
+      "flex": {
+        "cost": {
+          "cache_read": 0.01,
+          "input": 0.1,
+          "output": 0.625
+        },
+        "provider": {
+          "body": {
+            "service_tier": "flex"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt-nano",
   "id": "gpt-5.4-nano",
   "knowledge": "2025-08-31",

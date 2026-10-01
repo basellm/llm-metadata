@@ -6,6 +6,34 @@
     "output": 10
   },
   "description": "Sharper GPT-5 generation for coding, product work, and tool-assisted tasks",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 20
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      },
+      "flex": {
+        "cost": {
+          "cache_read": 0.0625,
+          "input": 0.625,
+          "output": 5
+        },
+        "provider": {
+          "body": {
+            "service_tier": "flex"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt",
   "id": "gpt-5.1",
   "knowledge": "2024-09-30",

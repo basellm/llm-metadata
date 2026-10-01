@@ -6,6 +6,22 @@
     "output": 0.4
   },
   "description": "Tiny GPT-5 lane for routing, extraction, classification, and bulk jobs",
+  "experimental": {
+    "modes": {
+      "flex": {
+        "cost": {
+          "cache_read": 0.0025,
+          "input": 0.025,
+          "output": 0.2
+        },
+        "provider": {
+          "body": {
+            "service_tier": "flex"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt-nano",
   "id": "gpt-5-nano",
   "knowledge": "2024-05-30",

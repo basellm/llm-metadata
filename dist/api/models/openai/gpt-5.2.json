@@ -6,6 +6,34 @@
     "output": 14
   },
   "description": "Reliable GPT generation for broad coding, writing, and tool-assisted product work",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.35,
+          "input": 3.5,
+          "output": 28
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      },
+      "flex": {
+        "cost": {
+          "cache_read": 0.0875,
+          "input": 0.875,
+          "output": 7
+        },
+        "provider": {
+          "body": {
+            "service_tier": "flex"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt",
   "id": "gpt-5.2",
   "knowledge": "2025-08-31",

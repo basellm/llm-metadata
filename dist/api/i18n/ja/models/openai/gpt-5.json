@@ -7,6 +7,34 @@
     "output": 10
   },
   "description": "推論、コーディング、文章作成、ツールワークフロー向けの初代 GPT-5 主力モデル",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 20
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      },
+      "flex": {
+        "cost": {
+          "cache_read": 0.0625,
+          "input": 0.625,
+          "output": 5
+        },
+        "provider": {
+          "body": {
+            "service_tier": "flex"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt",
   "id": "gpt-5",
   "knowledge": "2024-09-30",

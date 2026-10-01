@@ -6,6 +6,34 @@
     "output": 14
   },
   "description": "幅広いコーディング、文章作成、ツール支援のプロダクト開発向けの信頼性の高い GPT 世代",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.35,
+          "input": 3.5,
+          "output": 28
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      },
+      "flex": {
+        "cost": {
+          "cache_read": 0.0875,
+          "input": 0.875,
+          "output": 7
+        },
+        "provider": {
+          "body": {
+            "service_tier": "flex"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt",
   "id": "gpt-5.2",
   "knowledge": "2025-08-31",

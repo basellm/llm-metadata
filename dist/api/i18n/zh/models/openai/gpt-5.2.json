@@ -6,6 +6,34 @@
     "output": 14
   },
   "description": "可靠的 GPT 代际模型，面向广泛的编程、写作与工具辅助产品工作",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.35,
+          "input": 3.5,
+          "output": 28
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      },
+      "flex": {
+        "cost": {
+          "cache_read": 0.0875,
+          "input": 0.875,
+          "output": 7
+        },
+        "provider": {
+          "body": {
+            "service_tier": "flex"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt",
   "id": "gpt-5.2",
   "knowledge": "2025-08-31",

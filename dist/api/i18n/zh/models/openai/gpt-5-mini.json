@@ -6,6 +6,34 @@
     "output": 2
   },
   "description": "小型 GPT-5，面向即时响应的智能体、编程辅助与日常自动化",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.045,
+          "input": 0.45,
+          "output": 3.6
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      },
+      "flex": {
+        "cost": {
+          "cache_read": 0.0125,
+          "input": 0.125,
+          "output": 1
+        },
+        "provider": {
+          "body": {
+            "service_tier": "flex"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt-mini",
   "id": "gpt-5-mini",
   "knowledge": "2024-05-30",

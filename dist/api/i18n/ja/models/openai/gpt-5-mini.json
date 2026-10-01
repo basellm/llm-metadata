@@ -6,6 +6,34 @@
     "output": 2
   },
   "description": "応答性の高いエージェント、コーディング支援、日常の自動化向けの小型 GPT-5",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.045,
+          "input": 0.45,
+          "output": 3.6
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      },
+      "flex": {
+        "cost": {
+          "cache_read": 0.0125,
+          "input": 0.125,
+          "output": 1
+        },
+        "provider": {
+          "body": {
+            "service_tier": "flex"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt-mini",
   "id": "gpt-5-mini",
   "knowledge": "2024-05-30",

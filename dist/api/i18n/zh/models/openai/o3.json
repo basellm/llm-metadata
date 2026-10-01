@@ -6,6 +6,34 @@
     "output": 8
   },
   "description": "深思型 o 系列推理模型，面向高难度数学、编程与多步分析",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.875,
+          "input": 3.5,
+          "output": 14
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      },
+      "flex": {
+        "cost": {
+          "cache_read": 0.25,
+          "input": 1,
+          "output": 4
+        },
+        "provider": {
+          "body": {
+            "service_tier": "flex"
+          }
+        }
+      }
+    }
+  },
   "family": "o",
   "id": "o3",
   "knowledge": "2024-05",

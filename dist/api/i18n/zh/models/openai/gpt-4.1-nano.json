@@ -6,6 +6,22 @@
     "output": 0.4
   },
   "description": "超小型 GPT-4.1，适合分类、路由分发与超高吞吐任务",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.8
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt-nano",
   "id": "gpt-4.1-nano",
   "knowledge": "2024-04",

@@ -6,6 +6,22 @@
     "output": 0.4
   },
   "description": "分類、ルーティング、超大量タスク向けの超小型 GPT-4.1",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.2,
+          "output": 0.8
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt-nano",
   "id": "gpt-4.1-nano",
   "knowledge": "2024-04",

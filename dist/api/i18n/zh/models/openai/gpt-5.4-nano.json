@@ -6,6 +6,22 @@
     "output": 1.25
   },
   "description": "最低价的 GPT-5.4，适合简单路由、信息抽取与批量自动化",
+  "experimental": {
+    "modes": {
+      "flex": {
+        "cost": {
+          "cache_read": 0.01,
+          "input": 0.1,
+          "output": 0.625
+        },
+        "provider": {
+          "body": {
+            "service_tier": "flex"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt-nano",
   "id": "gpt-5.4-nano",
   "knowledge": "2025-08-31",

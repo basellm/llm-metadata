@@ -6,6 +6,22 @@
     "output": 0.6
   },
   "description": "Small omni GPT for cheap multimodal assistance and production-scale traffic",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.125,
+          "input": 0.25,
+          "output": 1
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt-mini",
   "id": "gpt-4o-mini",
   "knowledge": "2023-09",

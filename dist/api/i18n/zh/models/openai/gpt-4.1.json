@@ -6,6 +6,22 @@
     "output": 8
   },
   "description": "长期服役的 GPT 主力模型，面向编程、指令遵循与生产应用",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.875,
+          "input": 3.5,
+          "output": 14
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt",
   "id": "gpt-4.1",
   "knowledge": "2024-04",

@@ -6,6 +6,22 @@
     "output": 8
   },
   "description": "Long-lived GPT workhorse for coding, instruction following, and production apps",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.875,
+          "input": 3.5,
+          "output": 14
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt",
   "id": "gpt-4.1",
   "knowledge": "2024-04",

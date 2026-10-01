@@ -141,6 +141,22 @@
         "output": 8
       },
       "description": "Long-lived GPT workhorse for coding, instruction following, and production apps",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.875,
+              "input": 3.5,
+              "output": 14
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt",
       "id": "gpt-4.1",
       "knowledge": "2024-04",
@@ -175,6 +191,22 @@
         "output": 1.6
       },
       "description": "Affordable GPT-4.1 lane for fast coding help and structured extraction",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.175,
+              "input": 0.7,
+              "output": 2.8
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt-mini",
       "id": "gpt-4.1-mini",
       "knowledge": "2024-04",
@@ -209,6 +241,22 @@
         "output": 0.4
       },
       "description": "Tiny GPT-4.1 option for classification, routing, and very high-volume tasks",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.05,
+              "input": 0.2,
+              "output": 0.8
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt-nano",
       "id": "gpt-4.1-nano",
       "knowledge": "2024-04",
@@ -243,6 +291,22 @@
         "output": 10
       },
       "description": "Omni-era GPT for multimodal chat, practical coding, and general assistants",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 2.125,
+              "input": 4.25,
+              "output": 17
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt",
       "id": "gpt-4o",
       "knowledge": "2023-09",
@@ -276,6 +340,21 @@
         "output": 15
       },
       "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "input": 8.75,
+              "output": 26.25
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt",
       "id": "gpt-4o-2024-05-13",
       "knowledge": "2023-09",
@@ -376,6 +455,22 @@
         "output": 0.6
       },
       "description": "Small omni GPT for cheap multimodal assistance and production-scale traffic",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.125,
+              "input": 0.25,
+              "output": 1
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt-mini",
       "id": "gpt-4o-mini",
       "knowledge": "2023-09",
@@ -411,6 +506,34 @@
         "output": 10
       },
       "description": "Original GPT-5 workhorse for reasoning, coding, writing, and tool workflows",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.25,
+              "input": 2.5,
+              "output": 20
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          },
+          "flex": {
+            "cost": {
+              "cache_read": 0.0625,
+              "input": 0.625,
+              "output": 5
+            },
+            "provider": {
+              "body": {
+                "service_tier": "flex"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt",
       "id": "gpt-5",
       "knowledge": "2024-09-30",
@@ -456,6 +579,34 @@
         "output": 2
       },
       "description": "Small GPT-5 for responsive agents, coding help, and everyday automation",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.045,
+              "input": 0.45,
+              "output": 3.6
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          },
+          "flex": {
+            "cost": {
+              "cache_read": 0.0125,
+              "input": 0.125,
+              "output": 1
+            },
+            "provider": {
+              "body": {
+                "service_tier": "flex"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt-mini",
       "id": "gpt-5-mini",
       "knowledge": "2024-05-30",
@@ -501,6 +652,22 @@
         "output": 0.4
       },
       "description": "Tiny GPT-5 lane for routing, extraction, classification, and bulk jobs",
+      "experimental": {
+        "modes": {
+          "flex": {
+            "cost": {
+              "cache_read": 0.0025,
+              "input": 0.025,
+              "output": 0.2
+            },
+            "provider": {
+              "body": {
+                "service_tier": "flex"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt-nano",
       "id": "gpt-5-nano",
       "knowledge": "2024-05-30",
@@ -587,6 +754,34 @@
         "output": 10
       },
       "description": "Sharper GPT-5 generation for coding, product work, and tool-assisted tasks",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.25,
+              "input": 2.5,
+              "output": 20
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          },
+          "flex": {
+            "cost": {
+              "cache_read": 0.0625,
+              "input": 0.625,
+              "output": 5
+            },
+            "provider": {
+              "body": {
+                "service_tier": "flex"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt",
       "id": "gpt-5.1",
       "knowledge": "2024-09-30",
@@ -632,6 +827,34 @@
         "output": 14
       },
       "description": "Reliable GPT generation for broad coding, writing, and tool-assisted product work",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.35,
+              "input": 3.5,
+              "output": 28
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          },
+          "flex": {
+            "cost": {
+              "cache_read": 0.0875,
+              "input": 0.875,
+              "output": 7
+            },
+            "provider": {
+              "body": {
+                "service_tier": "flex"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt",
       "id": "gpt-5.2",
       "knowledge": "2025-08-31",
@@ -797,6 +1020,22 @@
         "output": 14
       },
       "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.35,
+              "input": 3.5,
+              "output": 28
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt-codex",
       "id": "gpt-5.3-codex",
       "knowledge": "2025-08-31",
@@ -983,6 +1222,18 @@
                 "service_tier": "priority"
               }
             }
+          },
+          "flex": {
+            "cost": {
+              "cache_read": 0.0375,
+              "input": 0.375,
+              "output": 2.25
+            },
+            "provider": {
+              "body": {
+                "service_tier": "flex"
+              }
+            }
           }
         }
       },
@@ -1032,6 +1283,22 @@
         "output": 1.25
       },
       "description": "Cheapest GPT-5.4 lane for simple routing, extraction, and bulk automation",
+      "experimental": {
+        "modes": {
+          "flex": {
+            "cost": {
+              "cache_read": 0.01,
+              "input": 0.1,
+              "output": 0.625
+            },
+            "provider": {
+              "body": {
+                "service_tier": "flex"
+              }
+            }
+          }
+        }
+      },
       "family": "gpt-nano",
       "id": "gpt-5.4-nano",
       "knowledge": "2025-08-31",
@@ -1689,6 +1956,19 @@
                 "reasoning": {
                   "mode": "pro"
                 }
+              }
+            }
+          },
+          "ultrafast": {
+            "cost": {
+              "cache_read": 6,
+              "cache_write": 75,
+              "input": 60,
+              "output": 300
+            },
+            "provider": {
+              "body": {
+                "service_tier": "ultrafast"
               }
             }
           }
@@ -2397,6 +2677,34 @@
         "output": 8
       },
       "description": "Deliberate o-series reasoner for hard math, coding, and multi-step analysis",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.875,
+              "input": 3.5,
+              "output": 14
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          },
+          "flex": {
+            "cost": {
+              "cache_read": 0.25,
+              "input": 1,
+              "output": 4
+            },
+            "provider": {
+              "body": {
+                "service_tier": "flex"
+              }
+            }
+          }
+        }
+      },
       "family": "o",
       "id": "o3",
       "knowledge": "2024-05",
@@ -2526,6 +2834,34 @@
         "output": 4.4
       },
       "description": "Fast o-series model for compact reasoning, coding, and tool use",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.5,
+              "input": 2,
+              "output": 8
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          },
+          "flex": {
+            "cost": {
+              "cache_read": 0.138,
+              "input": 0.55,
+              "output": 2.2
+            },
+            "provider": {
+              "body": {
+                "service_tier": "flex"
+              }
+            }
+          }
+        }
+      },
       "family": "o-mini",
       "id": "o4-mini",
       "knowledge": "2024-05",

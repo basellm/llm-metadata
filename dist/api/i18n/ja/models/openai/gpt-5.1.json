@@ -6,6 +6,34 @@
     "output": 10
   },
   "description": "コーディング、プロダクト開発、ツール支援タスク向けに研ぎ澄まされた GPT-5 世代",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 20
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      },
+      "flex": {
+        "cost": {
+          "cache_read": 0.0625,
+          "input": 0.625,
+          "output": 5
+        },
+        "provider": {
+          "body": {
+            "service_tier": "flex"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt",
   "id": "gpt-5.1",
   "knowledge": "2024-09-30",
