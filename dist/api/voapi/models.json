@@ -10963,9 +10963,9 @@
       "description": "Compact Mistral model for edge, latency-sensitive, and cost-efficient workloads",
       "firm": "mistral",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": true,
         "reasoning": false,
         "temperature": true,
@@ -10975,11 +10975,12 @@
       "id": "ministral-3b-latest",
       "knowledge": "2024-10",
       "lastUpdated": "2024-10-04",
-      "maxCtxTokens": 128000,
+      "maxCtxTokens": 131072,
       "maxOutputTokens": 128000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -10999,9 +11000,9 @@
       "description": "Compact Mistral model for edge, latency-sensitive, and cost-efficient workloads",
       "firm": "mistral",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": true,
         "reasoning": false,
         "temperature": true,
@@ -11011,11 +11012,12 @@
       "id": "ministral-8b-latest",
       "knowledge": "2024-10",
       "lastUpdated": "2024-10-04",
-      "maxCtxTokens": 128000,
+      "maxCtxTokens": 262144,
       "maxOutputTokens": 128000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -11138,6 +11140,43 @@
         "output": 1.5
       },
       "releaseDate": "2024-11-01",
+      "tags": []
+    },
+    {
+      "description": "Mistral's 1T-parameter multimodal MoE for reasoning, coding, and agentic work",
+      "firm": "mistral",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:mistral-color",
+      "id": "mistral-large-4",
+      "knowledge": null,
+      "lastUpdated": "2026-10-06",
+      "maxCtxTokens": 524288,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Large 4",
+      "price": {
+        "cacheRead": 0.07,
+        "cacheWrite": null,
+        "input": 0.68,
+        "output": 2.09
+      },
+      "releaseDate": "2026-10-06",
       "tags": []
     },
     {
@@ -11414,7 +11453,7 @@
       "id": "mistral-small-2603",
       "knowledge": "2025-06",
       "lastUpdated": "2026-03-16",
-      "maxCtxTokens": 256000,
+      "maxCtxTokens": 262144,
       "maxOutputTokens": 256000,
       "modalities": {
         "input": [
@@ -11451,7 +11490,7 @@
       "id": "mistral-small-latest",
       "knowledge": "2025-06",
       "lastUpdated": "2026-03-16",
-      "maxCtxTokens": 256000,
+      "maxCtxTokens": 262144,
       "maxOutputTokens": 256000,
       "modalities": {
         "input": [
@@ -11778,7 +11817,7 @@
       "id": "voxtral-small-latest",
       "knowledge": null,
       "lastUpdated": "2025-07-15",
-      "maxCtxTokens": 32000,
+      "maxCtxTokens": 32768,
       "maxOutputTokens": 32000,
       "modalities": {
         "input": [
@@ -11815,7 +11854,7 @@
       "id": "zai-glm-5-2",
       "knowledge": null,
       "lastUpdated": "2026-06-13",
-      "maxCtxTokens": 1000000,
+      "maxCtxTokens": 1048576,
       "maxOutputTokens": 131072,
       "modalities": {
         "input": [
@@ -11851,7 +11890,7 @@
       "id": "zai-glm-5-3",
       "knowledge": null,
       "lastUpdated": "2026-08-14",
-      "maxCtxTokens": 1000000,
+      "maxCtxTokens": 1048576,
       "maxOutputTokens": 131072,
       "modalities": {
         "input": [
