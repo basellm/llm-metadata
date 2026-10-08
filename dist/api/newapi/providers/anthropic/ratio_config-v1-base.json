@@ -5,6 +5,7 @@
       "claude-fable-5-1": "tier(\"standard\", p * 10 + cr * 0.25 + cc * 12.5 + cc1h * 20 + c * 50)",
       "claude-haiku-4-5": "tier(\"standard\", p * 1 + cr * 0.1 + cc * 1.25 + cc1h * 2 + c * 5)",
       "claude-haiku-4-5-20251001": "tier(\"standard\", p * 1 + cr * 0.1 + cc * 1.25 + cc1h * 2 + c * 5)",
+      "claude-haiku-5-5": "len <= 100000 ? tier(\"0_100k\", p * 0.1 + cr * 0.01 + cc * 0.125 + cc1h * 0.2 + c * 0.5) : tier(\"100k_plus\", p * 0.5 + cr * 0.05 + cc * 0.625 + cc1h * 1 + c * 2.5)",
       "claude-opus-4-5": "tier(\"standard\", p * 5 + cr * 0.5 + cc * 6.25 + cc1h * 10 + c * 25)",
       "claude-opus-4-5-20251101": "tier(\"standard\", p * 5 + cr * 0.5 + cc * 6.25 + cc1h * 10 + c * 25)",
       "claude-opus-4-6": "tier(\"standard\", p * 5 + cr * 0.5 + cc * 6.25 + cc1h * 10 + c * 25)",
@@ -16,13 +17,14 @@
       "claude-sonnet-4-5-20250929": "tier(\"standard\", p * 3 + cr * 0.3 + cc * 3.75 + cc1h * 6 + c * 15)",
       "claude-sonnet-4-6": "tier(\"standard\", p * 3 + cr * 0.3 + cc * 3.75 + cc1h * 6 + c * 15)",
       "claude-sonnet-5": "tier(\"standard\", p * 2 + cr * 0.2 + cc * 2.5 + cc1h * 4 + c * 10)",
-      "claude-sonnet-5-5": "tier(\"standard\", p * 2 + cr * 0.2 + cc * 2.5 + cc1h * 4 + c * 10)"
+      "claude-sonnet-5-5": "tier(\"standard\", p * 2 + cr * 0.1 + cc * 2.5 + cc1h * 4 + c * 10)"
     },
     "billing_mode": {
       "claude-fable-5": "tiered_expr",
       "claude-fable-5-1": "tiered_expr",
       "claude-haiku-4-5": "tiered_expr",
       "claude-haiku-4-5-20251001": "tiered_expr",
+      "claude-haiku-5-5": "tiered_expr",
       "claude-opus-4-5": "tiered_expr",
       "claude-opus-4-5-20251101": "tiered_expr",
       "claude-opus-4-6": "tiered_expr",

@@ -101,6 +101,16 @@
       "vendor_name": "Anthropic"
     },
     {
+      "description": "快速型 Claude 模型，面向即时响应辅助、分类与轻量智能体",
+      "endpoints": null,
+      "icon": "Claude.Color",
+      "model_name": "claude-haiku-5-5",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,文件,多模态,1M",
+      "vendor_name": "Anthropic"
+    },
+    {
       "description": "Claude 旗舰模型，面向深度推理、编程与长程智能体",
       "endpoints": null,
       "icon": "Claude.Color",
@@ -177,7 +187,7 @@
       "model_name": "claude-sonnet-4-5",
       "name_rule": 0,
       "status": 1,
-      "tags": "推理,工具,文件,多模态,1M",
+      "tags": "推理,工具,文件,多模态,200K",
       "vendor_name": "Anthropic"
     },
     {
@@ -187,7 +197,7 @@
       "model_name": "claude-sonnet-4-5-20250929",
       "name_rule": 0,
       "status": 1,
-      "tags": "推理,工具,文件,多模态,1M",
+      "tags": "推理,工具,文件,多模态,200K",
       "vendor_name": "Anthropic"
     },
     {
@@ -219,6 +229,16 @@
       "status": 1,
       "tags": "推理,工具,文件,多模态,1M",
       "vendor_name": "Anthropic"
+    },
+    {
+      "description": "Mistral code model for low-latency completion, fill-in-the-middle, and code generation",
+      "endpoints": null,
+      "icon": "Mistral.Color",
+      "model_name": "codestral-2508",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "工具,256K",
+      "vendor_name": "Mistral"
     },
     {
       "description": "Mistral 代码模型，面向代码补全、重构与开发者 IDE 工作流",
@@ -1041,6 +1061,16 @@
       "vendor_name": "Z.AI"
     },
     {
+      "description": "开源 GLM 旗舰模型，面向长程编程智能体与百万 token 上下文任务",
+      "endpoints": null,
+      "icon": "Mistral.Color",
+      "model_name": "glm-5-2",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,开源权重,已弃用,1M",
+      "vendor_name": "Mistral"
+    },
+    {
       "description": "更快的 GLM-5，适合需要更低延迟的编程智能体",
       "endpoints": null,
       "icon": "ZAI",
@@ -1851,6 +1881,16 @@
       "vendor_name": "Mistral"
     },
     {
+      "description": "An updated Lean 4 formal proof engineering model optimised for automated theorem proving and autoformalization. 119B total parameters, 6.5B active.",
+      "endpoints": null,
+      "icon": "Mistral.Color",
+      "model_name": "labs-leanstral-1-5-1",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,文件,开源权重,多模态,已弃用,262.1K",
+      "vendor_name": "Mistral"
+    },
+    {
       "description": "开放权重的指令模型，面向灵活适配的对话与自托管生产负载",
       "endpoints": null,
       "icon": "AntGroup.Color",
@@ -1937,7 +1977,7 @@
       "model_name": "magistral-medium-latest",
       "name_rule": 0,
       "status": 1,
-      "tags": "推理,工具,开源权重,128K",
+      "tags": "推理,工具,文件,开源权重,多模态,已弃用,262.1K",
       "vendor_name": "Mistral"
     },
     {
@@ -2181,6 +2221,26 @@
       "vendor_name": "MiniMax Token Plan (minimax.io)"
     },
     {
+      "description": "Open vision-language model for efficient local deployment, instruction following, and tool use",
+      "endpoints": null,
+      "icon": "Mistral.Color",
+      "model_name": "ministral-14b-2512",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "工具,文件,开源权重,多模态,262.1K",
+      "vendor_name": "Mistral"
+    },
+    {
+      "description": "Compact open vision-language model for edge deployment, instruction following, and tool use",
+      "endpoints": null,
+      "icon": "Mistral.Color",
+      "model_name": "ministral-3b-2512",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "工具,文件,开源权重,多模态,131.1K",
+      "vendor_name": "Mistral"
+    },
+    {
       "description": "紧凑型 Mistral 模型，适合边缘端、延迟敏感与成本敏感的负载",
       "endpoints": null,
       "icon": "Mistral.Color",
@@ -2188,6 +2248,16 @@
       "name_rule": 0,
       "status": 1,
       "tags": "工具,文件,开源权重,多模态,131.1K",
+      "vendor_name": "Mistral"
+    },
+    {
+      "description": "Compact open vision-language model for edge deployment, instruction following, and tool use",
+      "endpoints": null,
+      "icon": "Mistral.Color",
+      "model_name": "ministral-8b-2512",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "工具,文件,开源权重,多模态,262.1K",
       "vendor_name": "Mistral"
     },
     {
@@ -2217,7 +2287,7 @@
       "model_name": "mistral-large-2411",
       "name_rule": 0,
       "status": 1,
-      "tags": "工具,开源权重,131.1K",
+      "tags": "工具,开源权重,已弃用,131.1K",
       "vendor_name": "Mistral"
     },
     {
@@ -2257,7 +2327,7 @@
       "model_name": "mistral-medium-2505",
       "name_rule": 0,
       "status": 1,
-      "tags": "工具,文件,多模态,131.1K",
+      "tags": "工具,文件,多模态,已弃用,131.1K",
       "vendor_name": "Mistral"
     },
     {
@@ -2267,7 +2337,7 @@
       "model_name": "mistral-medium-2508",
       "name_rule": 0,
       "status": 1,
-      "tags": "工具,文件,多模态,262.1K",
+      "tags": "工具,文件,多模态,已弃用,262.1K",
       "vendor_name": "Mistral"
     },
     {
@@ -2297,7 +2367,7 @@
       "model_name": "mistral-nemo",
       "name_rule": 0,
       "status": 1,
-      "tags": "工具,开源权重,128K",
+      "tags": "工具,开源权重,已弃用,128K",
       "vendor_name": "Mistral"
     },
     {
@@ -2307,7 +2377,7 @@
       "model_name": "mistral-small-2506",
       "name_rule": 0,
       "status": 1,
-      "tags": "工具,开源权重,多模态,128K",
+      "tags": "工具,开源权重,多模态,已弃用,128K",
       "vendor_name": "Mistral"
     },
     {
@@ -2507,7 +2577,7 @@
       "model_name": "open-mistral-7b",
       "name_rule": 0,
       "status": 1,
-      "tags": "工具,开源权重,8K",
+      "tags": "工具,开源权重,已弃用,8K",
       "vendor_name": "Mistral"
     },
     {
@@ -2527,7 +2597,7 @@
       "model_name": "open-mixtral-8x22b",
       "name_rule": 0,
       "status": 1,
-      "tags": "工具,开源权重,64K",
+      "tags": "工具,开源权重,已弃用,64K",
       "vendor_name": "Mistral"
     },
     {
@@ -2537,7 +2607,7 @@
       "model_name": "open-mixtral-8x7b",
       "name_rule": 0,
       "status": 1,
-      "tags": "工具,开源权重,32K",
+      "tags": "工具,开源权重,已弃用,32K",
       "vendor_name": "Mistral"
     },
     {
@@ -2547,7 +2617,7 @@
       "model_name": "pixtral-12b",
       "name_rule": 0,
       "status": 1,
-      "tags": "工具,文件,开源权重,多模态,128K",
+      "tags": "工具,文件,开源权重,多模态,已弃用,128K",
       "vendor_name": "Mistral"
     },
     {
@@ -2557,7 +2627,7 @@
       "model_name": "pixtral-large-latest",
       "name_rule": 0,
       "status": 1,
-      "tags": "工具,文件,开源权重,多模态,128K",
+      "tags": "工具,文件,开源权重,多模态,已弃用,128K",
       "vendor_name": "Mistral"
     },
     {
@@ -3784,6 +3854,16 @@
       "description": "原生支持音频输入的指令模型，面向语音理解与工具调用",
       "endpoints": null,
       "icon": "Mistral.Color",
+      "model_name": "voxtral-small-2507",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "工具,文件,开源权重,音频,32.8K",
+      "vendor_name": "Mistral"
+    },
+    {
+      "description": "原生支持音频输入的指令模型，面向语音理解与工具调用",
+      "endpoints": null,
+      "icon": "Mistral.Color",
       "model_name": "voxtral-small-latest",
       "name_rule": 0,
       "status": 1,
@@ -3817,7 +3897,7 @@
       "model_name": "zai-glm-5-2",
       "name_rule": 0,
       "status": 1,
-      "tags": "推理,工具,开源权重,测试版,1M",
+      "tags": "推理,工具,开源权重,已弃用,1M",
       "vendor_name": "Mistral"
     },
     {

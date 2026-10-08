@@ -7,6 +7,38 @@
   "id": "mistral",
   "lobeIcon": "Mistral.Color",
   "models": {
+    "codestral-2508": {
+      "attachment": false,
+      "canonical_model_id": "mistral/codestral-2508",
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 0.9
+      },
+      "description": "Mistral code model for low-latency completion, fill-in-the-middle, and code generation",
+      "family": "codestral",
+      "id": "codestral-2508",
+      "last_updated": "2025-07-30",
+      "limit": {
+        "context": 256000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Codestral 25.08",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-07-30",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "codestral-latest": {
       "attachment": false,
       "cost": {
@@ -224,6 +256,49 @@
       "temperature": true,
       "tool_call": true
     },
+    "glm-5-2": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.2",
+      "cost": {
+        "cache_read": 0.14,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "开源 GLM 旗舰模型，面向长程编程智能体与百万 token 上下文任务",
+      "family": "glm",
+      "id": "glm-5-2",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "status": "deprecated",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "labs-devstral-small-2512": {
       "attachment": false,
       "cost": {
@@ -256,8 +331,49 @@
       "temperature": true,
       "tool_call": true
     },
+    "labs-leanstral-1-5-1": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "An updated Lean 4 formal proof engineering model optimised for automated theorem proving and autoformalization. 119B total parameters, 6.5B active.",
+      "family": "leanstral",
+      "id": "labs-leanstral-1-5-1",
+      "last_updated": "2026-06-30",
+      "limit": {
+        "context": 262144,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Leanstral 1.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-30",
+      "status": "deprecated",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "magistral-medium-latest": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "input": 2,
         "output": 5
@@ -268,12 +384,13 @@
       "knowledge": "2025-06",
       "last_updated": "2025-03-20",
       "limit": {
-        "context": 128000,
+        "context": 262144,
         "output": 16384
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -282,8 +399,83 @@
       "name": "Magistral Medium (latest)",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-03-17",
+      "status": "deprecated",
+      "temperature": true,
+      "tool_call": true
+    },
+    "ministral-14b-2512": {
+      "attachment": true,
+      "canonical_model_id": "mistral/ministral-3-14b-instruct-2512",
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.2,
+        "output": 0.2
+      },
+      "description": "Open vision-language model for efficient local deployment, instruction following, and tool use",
+      "family": "ministral",
+      "id": "ministral-14b-2512",
+      "last_updated": "2025-12-02",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ministral 3 14B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "ministral-3b-2512": {
+      "attachment": true,
+      "canonical_model_id": "mistral/ministral-3-3b-instruct-2512",
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.1,
+        "output": 0.1
+      },
+      "description": "Compact open vision-language model for edge deployment, instruction following, and tool use",
+      "family": "ministral",
+      "id": "ministral-3b-2512",
+      "last_updated": "2025-12-02",
+      "limit": {
+        "context": 131072,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ministral 3 3B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-02",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -315,6 +507,39 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-10-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "ministral-8b-2512": {
+      "attachment": true,
+      "canonical_model_id": "mistral/ministral-3-8b-instruct-2512",
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.15,
+        "output": 0.15
+      },
+      "description": "Compact open vision-language model for edge deployment, instruction following, and tool use",
+      "family": "ministral",
+      "id": "ministral-8b-2512",
+      "last_updated": "2025-12-02",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ministral 3 8B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-02",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -406,6 +631,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-11-18",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -544,6 +770,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-05-07",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -575,6 +802,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-08-12",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -688,6 +916,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-07-01",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -719,6 +948,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-06-20",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -831,6 +1061,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2023-09-27",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -892,6 +1123,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-04-17",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -922,6 +1154,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2023-12-11",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -953,6 +1186,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-09-01",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -984,6 +1218,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-11-01",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -1036,6 +1271,36 @@
       "release_date": "2026-03-01",
       "temperature": false,
       "tool_call": false
+    },
+    "voxtral-small-2507": {
+      "attachment": true,
+      "cost": {
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "原生支持音频输入的指令模型，面向语音理解与工具调用",
+      "family": "voxtral",
+      "id": "voxtral-small-2507",
+      "last_updated": "2025-07-15",
+      "limit": {
+        "context": 32768,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Voxtral Small",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-15",
+      "temperature": true,
+      "tool_call": true
     },
     "voxtral-small-latest": {
       "attachment": true,
@@ -1105,7 +1370,7 @@
         }
       ],
       "release_date": "2026-06-13",
-      "status": "beta",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

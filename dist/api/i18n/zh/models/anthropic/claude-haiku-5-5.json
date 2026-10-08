@@ -1,0 +1,63 @@
+{
+  "attachment": true,
+  "canonical_model_id": "anthropic/claude-haiku-5-5",
+  "cost": {
+    "cache_read": 0.01,
+    "cache_write": 0.125,
+    "input": 0.1,
+    "output": 0.5,
+    "tiers": [
+      {
+        "cache_read": 0.05,
+        "cache_write": 0.625,
+        "input": 0.5,
+        "output": 2.5,
+        "tier": {
+          "size": 100000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "快速型 Claude 模型，面向即时响应辅助、分类与轻量智能体",
+  "family": "claude-haiku",
+  "id": "claude-haiku-5-5",
+  "knowledge": "2026-06",
+  "last_updated": "2026-10-07",
+  "limit": {
+    "context": 1000000,
+    "output": 128000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "pdf"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Claude Haiku 5.5",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
+  "release_date": "2026-10-07",
+  "structured_output": true,
+  "temperature": false,
+  "tool_call": true
+}
