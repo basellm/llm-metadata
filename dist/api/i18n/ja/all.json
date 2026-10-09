@@ -12404,7 +12404,7 @@
         "id": "mistral-large-4",
         "last_updated": "2026-10-06",
         "limit": {
-          "context": 524288,
+          "context": 1048576,
           "output": 262144
         },
         "modalities": {
@@ -15968,6 +15968,19 @@
                   }
                 }
               }
+            },
+            "ultrafast": {
+              "cost": {
+                "cache_read": 0.6,
+                "cache_write": 15,
+                "input": 12,
+                "output": 60
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "ultrafast"
+                }
+              }
             }
           }
         },
@@ -19131,112 +19144,6 @@
     },
     "name": "Upstage",
     "npm": "@ai-sdk/openai-compatible"
-  },
-  "v0": {
-    "doc": "https://sdk.vercel.ai/providers/ai-sdk-providers/vercel",
-    "env": [
-      "V0_API_KEY"
-    ],
-    "iconURL": "https://models.dev/logos/v0.svg",
-    "id": "v0",
-    "lobeIcon": "V0",
-    "models": {
-      "v0-1.0-md": {
-        "attachment": true,
-        "cost": {
-          "input": 3,
-          "output": 15
-        },
-        "description": "視覚分析、計画、ツール利用向けのマルチモーダル推論モデル",
-        "family": "v0",
-        "id": "v0-1.0-md",
-        "last_updated": "2025-05-22",
-        "limit": {
-          "context": 128000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "v0-1.0-md",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-05-22",
-        "temperature": true,
-        "tool_call": true
-      },
-      "v0-1.5-lg": {
-        "attachment": true,
-        "cost": {
-          "input": 15,
-          "output": 75
-        },
-        "description": "視覚分析、計画、ツール利用向けのマルチモーダル推論モデル",
-        "family": "v0",
-        "id": "v0-1.5-lg",
-        "last_updated": "2025-06-09",
-        "limit": {
-          "context": 512000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "v0-1.5-lg",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-06-09",
-        "temperature": true,
-        "tool_call": true
-      },
-      "v0-1.5-md": {
-        "attachment": true,
-        "cost": {
-          "input": 3,
-          "output": 15
-        },
-        "description": "視覚分析、計画、ツール利用向けのマルチモーダル推論モデル",
-        "family": "v0",
-        "id": "v0-1.5-md",
-        "last_updated": "2025-06-09",
-        "limit": {
-          "context": 128000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "v0-1.5-md",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-06-09",
-        "temperature": true,
-        "tool_call": true
-      }
-    },
-    "name": "v0",
-    "npm": "@ai-sdk/vercel"
   },
   "volcengine": {
     "api": "https://ark.cn-beijing.volces.com/api/v3",
