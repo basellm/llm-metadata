@@ -1,0 +1,19 @@
+{
+  "$comment": "MiniMax (minimaxi.com) official CNY pay-as-you-go list (legacy models), https://platform.minimaxi.com/docs/guides/pricing-paygo: billed per 10,000 characters, one Chinese character counting as two. Text-to-speech via POST /v1/t2a_v2 (sync) and /v1/t2a_async_v2 (async); no Speech-02 entry in https://platform.minimaxi.com/docs/release-notes/models, so release_date is omitted.",
+  "name": "speech-02-turbo",
+  "description": "Earlier MiniMax Turbo text-to-speech model with stable rhythm, low latency, and enhanced multilingual support",
+  "family": "minimax",
+  "attachment": false,
+  "reasoning": false,
+  "tool_call": false,
+  "temperature": false,
+  "open_weights": false,
+  "modalities": {
+    "input": ["text"],
+    "output": ["audio"]
+  },
+  "cost": {
+    "currency": "CNY",
+    "per_10k_chars": 2
+  }
+}

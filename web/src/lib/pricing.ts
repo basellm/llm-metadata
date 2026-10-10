@@ -95,8 +95,7 @@ function unitLabel(key: string, t: Translator): string {
   if (key === 'per_image') return t('pricing.perImage');
   if (key === 'per_second') return t('pricing.perSecond');
   if (key.startsWith('per_second_')) {
-    const variant = key.slice('per_second_'.length).replace(/(\d)x(\d)/g, '$1×$2');
-    return t('pricing.perSecondVariant', { variant });
+    return t('pricing.perSecondVariant', { variant: formatSpec(key.slice('per_second_'.length)) });
   }
   return humanizeKey(key);
 }
@@ -109,12 +108,16 @@ function unitSuffix(key: string, t: Translator): string {
   return '';
 }
 
-/** 未知键兜底标签："foo_bar_128k" → "Foo bar 128K" */
-function humanizeKey(key: string): string {
-  const words = key
-    .replace(/_/g, ' ')
+/** 规格片段："1280x720" → "1280×720"，"128k" / "2k" → "128K" / "2K" */
+function formatSpec(text: string): string {
+  return text
     .replace(/(\d)x(\d)/g, '$1×$2')
     .replace(/\b(\d+(?:\.\d+)?)([km])\b/g, (_, n: string, u: string) => `${n}${u.toUpperCase()}`);
+}
+
+/** 未知键兜底标签："foo_bar_128k" → "Foo bar 128K" */
+function humanizeKey(key: string): string {
+  const words = formatSpec(key.replace(/_/g, ' '));
   return words.charAt(0).toUpperCase() + words.slice(1);
 }
 
@@ -263,7 +266,8 @@ export function parseModelPricing(
     }
 
     if (key.startsWith('per_')) {
-      unitRows.set(unitLabel(key, t), 'input', value);
+      // 构建产物按键名字母序输出（per_second_2k 先于 per_second_768p），故按价格升序排列分档
+      unitRows.set(unitLabel(key, t), 'input', value, value);
       const suffix = unitSuffix(key, t);
       if (value > 0 && (!summaryUnit || value < summaryUnit.value)) {
         summaryUnit = { value, suffix };

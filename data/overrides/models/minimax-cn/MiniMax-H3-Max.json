@@ -1,0 +1,20 @@
+{
+  "$comment": "MiniMax (minimaxi.com) official CNY pay-as-you-go list, https://platform.minimaxi.com/docs/guides/pricing-paygo: output billed per second by resolution; input materials (images beyond the free allowance, input video) are billed separately on the same page and not modelled here. Video generation V2 (POST /v2/video_generation) with text, first/last-frame image, and reference image/video/audio input, https://platform.minimaxi.com/docs/api-reference/video-generation-v2-create; post-trained by fal.ai on MiniMax H3, https://fal.ai/minimax-h3-max; no release date in https://platform.minimaxi.com/docs/release-notes/models.",
+  "name": "MiniMax-H3-Max",
+  "description": "MiniMax H3 variant post-trained by fal.ai for high-speed video generation up to 768P",
+  "family": "minimax",
+  "attachment": true,
+  "reasoning": false,
+  "tool_call": false,
+  "temperature": false,
+  "open_weights": false,
+  "modalities": {
+    "input": ["text", "image", "video", "audio"],
+    "output": ["video"]
+  },
+  "cost": {
+    "currency": "CNY",
+    "per_second_480p": 0.33,
+    "per_second_768p": 0.5
+  }
+}

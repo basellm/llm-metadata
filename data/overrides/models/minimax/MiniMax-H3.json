@@ -1,0 +1,20 @@
+{
+  "$comment": "MiniMax (minimax.io) official USD pay-as-you-go list, https://platform.minimax.io/docs/guides/pricing-paygo: output billed per second by resolution; input materials (images beyond the free allowance, input video) are billed separately on the same page and not modelled here. Video generation V2 (POST /v2/video_generation) with text, first/last-frame image, and reference image/video/audio input, https://platform.minimax.io/docs/api-reference/video-generation-v2-create; open weights at https://huggingface.co/MiniMaxAI/MiniMax-H3; release date from https://platform.minimax.io/docs/release-notes/models.",
+  "name": "MiniMax-H3",
+  "description": "Open general-purpose MiniMax video model for text-, image-, and multimodal reference-to-video generation up to 2K",
+  "family": "minimax",
+  "attachment": true,
+  "reasoning": false,
+  "tool_call": false,
+  "temperature": false,
+  "open_weights": true,
+  "release_date": "2026-07-31",
+  "modalities": {
+    "input": ["text", "image", "video", "audio"],
+    "output": ["video"]
+  },
+  "cost": {
+    "per_second_768p": 0.08,
+    "per_second_2k": 0.13
+  }
+}
