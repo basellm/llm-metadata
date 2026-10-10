@@ -195,10 +195,19 @@ function PriceBlock({
   hint: string;
 }) {
   const { t } = useI18n();
-  const cards = PRICE_CARDS.flatMap((card) => {
+  const tokenCards = PRICE_CARDS.flatMap((card) => {
     const value = pricing.base[card.column];
-    return value === null ? [] : [{ labelKey: card.labelKey, value }];
+    return value === null ? [] : [{ label: t(card.labelKey), value }];
   });
+  // 无 token 价（按图 / 按秒等）时按量费率即主价格：以卡片呈现，不再重复其明细表
+  const unitSection =
+    tokenCards.length === 0 ? pricing.sections.find((s) => s.kind === 'unit') : undefined;
+  const cards = unitSection
+    ? unitSection.rows.flatMap((row) =>
+        row.input === null ? [] : [{ label: row.label, value: row.input }],
+      )
+    : tokenCards;
+  const sections = pricing.sections.filter((section) => section !== unitSection);
   return (
     <div>
       <div className="flex items-baseline justify-between gap-3">
@@ -207,34 +216,29 @@ function PriceBlock({
       </div>
       <div className="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-4">
         {cards.map((card) => (
-          <div key={card.labelKey} className="bg-card rounded-lg border p-4">
-            <div className="text-muted-foreground text-xs">{t(card.labelKey)}</div>
+          <div key={card.label} className="bg-card rounded-lg border p-4">
+            <div className="text-muted-foreground text-xs">{card.label}</div>
             <div className="mt-1 font-mono text-xl font-semibold tabular-nums">
               {formatMoney(pricing.symbol, card.value)}
             </div>
           </div>
         ))}
-        {cards.length === 0 && pricing.unit && (
-          <div className="bg-card rounded-lg border p-4">
-            <div className="text-muted-foreground text-xs">{t('pricing.unitPricing')}</div>
-            <div className="mt-1 font-mono text-xl font-semibold tabular-nums">{pricing.unit}</div>
-          </div>
-        )}
       </div>
-      {pricing.sections.map((section) => (
-        <PricingSectionTable key={section.title} section={section} symbol={pricing.symbol} />
+      {sections.map((section) => (
+        <PricingSectionTable key={section.kind} section={section} symbol={pricing.symbol} />
       ))}
     </div>
   );
 }
 
+/** 价目是否含 token 价（否则为按图 / 按秒等按量计价） */
+function hasTokenPrices(pricing: ModelPricing): boolean {
+  return Object.values(pricing.base).some((v) => v !== null);
+}
+
 /** 价目是否有可展示的内容（基础价、按量摘要或明细分组） */
 function hasPrices(pricing: ModelPricing): boolean {
-  return (
-    Object.values(pricing.base).some((v) => v !== null) ||
-    pricing.unit !== null ||
-    pricing.sections.length > 0
-  );
+  return hasTokenPrices(pricing) || pricing.unit !== null || pricing.sections.length > 0;
 }
 
 export function ModelDetail({
@@ -281,10 +285,10 @@ export function ModelDetail({
     .filter((value): value is string | number => ['string', 'number'].includes(typeof value))
     .map(String);
 
-  const priceValue =
-    pricing.base.input === null && pricing.base.output === null
-      ? (pricing.unit ?? '—')
-      : `${formatTokenPrice(pricing.symbol, pricing.base.input)} · ${formatTokenPrice(pricing.symbol, pricing.base.output)}`;
+  const tokenPriced = hasTokenPrices(pricing);
+  const priceValue = tokenPriced
+    ? `${formatTokenPrice(pricing.symbol, pricing.base.input)} · ${formatTokenPrice(pricing.symbol, pricing.base.output)}`
+    : (pricing.unit ?? '—');
 
   const modalityStatus = (value: string): { text: string; active: boolean } => {
     const input = inputModalities.has(value);
@@ -341,7 +345,11 @@ export function ModelDetail({
         <StatCell
           label={t('detail.price')}
           value={priceValue}
-          sub={`${t('table.input')} · ${t('table.output')} · ${pricing.currency}`}
+          sub={
+            tokenPriced
+              ? `${t('table.input')} · ${t('table.output')} · ${pricing.currency}`
+              : pricing.currency
+          }
         />
         <StatCell
           label={t('table.context')}
@@ -443,8 +451,8 @@ export function ModelDetail({
             {hasPrices(pricing) && (
               <PriceBlock
                 pricing={pricing}
-                title={t('detail.textTokens')}
-                hint={`${t('detail.per1m')} · ${pricing.currency}`}
+                title={tokenPriced ? t('detail.textTokens') : t('pricing.unitPricing')}
+                hint={tokenPriced ? `${t('detail.per1m')} · ${pricing.currency}` : pricing.currency}
               />
             )}
             {pricing.alternates.map((alt) => (

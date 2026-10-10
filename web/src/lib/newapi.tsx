@@ -15,6 +15,7 @@ import {
   sanitizeDeployment,
   type NewApiDeployment,
 } from '@billing/deployment';
+import type { BillingExprUnit } from '@billing/expr';
 import {
   buildRatioConfig,
   type NewApiPriceConfig,
@@ -105,9 +106,10 @@ export function useNewApi(): NewApiContextValue {
   return context;
 }
 
-/** 单个模型在给定部署下的表达式及其采用的官方价目货币 */
+/** 单个模型在给定部署下的表达式、系数计价单位及其采用的官方价目货币 */
 export interface ModelExpr {
   expr: string;
+  unit: BillingExprUnit;
   sheetCurrency: Currency;
 }
 
@@ -120,7 +122,7 @@ export function modelExpr(
   const result = buildDeploymentBillingExpr(cost, billing ?? {}, deployment, exchangeRates);
   return result.expr === null
     ? undefined
-    : { expr: result.expr, sheetCurrency: result.sheetCurrency };
+    : { expr: result.expr, unit: result.unit, sheetCurrency: result.sheetCurrency };
 }
 
 /** 单个供应商的 /api/ratio_config 载荷（与托管文件同形，按当前部署生成） */

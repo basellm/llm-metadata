@@ -178,9 +178,7 @@ export function selectPriceSheet(
 }
 
 /** 面向部署生成的结果：附带实际采用的价目货币 */
-export interface DeploymentBillingExpr extends ModelBillingExprResult {
-  sheetCurrency: Currency;
-}
+export type DeploymentBillingExpr = ModelBillingExprResult & { sheetCurrency: Currency };
 
 /** 按部署配置为单个模型生成 new-api 表达式 */
 export function buildDeploymentBillingExpr(

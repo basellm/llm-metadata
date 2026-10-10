@@ -151,7 +151,7 @@ function DetailPricingRows({
         />
       )}
       {pricing.sections.map((section) => (
-        <Fragment key={section.title}>
+        <Fragment key={section.kind}>
           <DetailSectionHeader title={section.title} />
           {section.rows.map((row, index) => (
             <DetailPriceRow

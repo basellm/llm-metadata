@@ -16,7 +16,11 @@ export interface DetailRow extends PriceCells {
   active?: boolean;
 }
 
+/** 明细分组类别 */
+export type DetailSectionKind = 'schedule' | 'context' | 'thinking' | 'modality' | 'unit';
+
 export interface DetailSection {
+  kind: DetailSectionKind;
   title: string;
   rows: DetailRow[];
 }
@@ -341,16 +345,30 @@ export function parseModelPricing(
   const sections: DetailSection[] = [];
   if (schedule)
     sections.push({
+      kind: 'schedule',
       title: t('pricing.timeBased'),
       rows: buildScheduleRows(schedule, base, t, locale, now),
     });
   if (contextTiers.size > 0)
-    sections.push({ title: t('pricing.contextPricing'), rows: contextTiers.rows() });
+    sections.push({
+      kind: 'context',
+      title: t('pricing.contextPricing'),
+      rows: contextTiers.rows(),
+    });
   if (thinkingRows.size > 0)
-    sections.push({ title: t('pricing.thinkingMode'), rows: thinkingRows.rows() });
+    sections.push({
+      kind: 'thinking',
+      title: t('pricing.thinkingMode'),
+      rows: thinkingRows.rows(),
+    });
   if (modalityRows.size > 0)
-    sections.push({ title: t('pricing.modalityRates'), rows: modalityRows.rows() });
-  if (unitRows.size > 0) sections.push({ title: t('pricing.unitPricing'), rows: unitRows.rows() });
+    sections.push({
+      kind: 'modality',
+      title: t('pricing.modalityRates'),
+      rows: modalityRows.rows(),
+    });
+  if (unitRows.size > 0)
+    sections.push({ kind: 'unit', title: t('pricing.unitPricing'), rows: unitRows.rows() });
 
   // 主行摘要兜底：无通用输入价时回退到文本/嵌入价
   if (base.input === null) {

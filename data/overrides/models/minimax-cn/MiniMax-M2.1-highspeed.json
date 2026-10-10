@@ -1,0 +1,27 @@
+{
+  "$comment": "MiniMax (minimaxi.com) official CNY pay-as-you-go list (legacy models), https://platform.minimaxi.com/docs/guides/pricing-paygo. High-speed tier of MiniMax-M2.1 (~100 TPS, same 204,800 context), so capabilities and limits mirror it, https://platform.minimaxi.com/docs/guides/text-generation; release date from https://platform.minimaxi.com/docs/release-notes/models.",
+  "name": "MiniMax-M2.1-highspeed",
+  "description": "High-speed MiniMax model for low-latency coding and agent workflows",
+  "family": "minimax",
+  "attachment": false,
+  "reasoning": true,
+  "tool_call": true,
+  "temperature": true,
+  "open_weights": true,
+  "release_date": "2025-12-22",
+  "modalities": {
+    "input": ["text"],
+    "output": ["text"]
+  },
+  "limit": {
+    "context": 204800,
+    "output": 131072
+  },
+  "cost": {
+    "currency": "CNY",
+    "input": 4.2,
+    "output": 16.8,
+    "cache_read": 0.21,
+    "cache_write": 2.625
+  }
+}

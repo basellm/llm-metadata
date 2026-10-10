@@ -25,17 +25,19 @@ import type {
 } from './cost.js';
 import { normalizeCostToPlane, type PlaneRates } from './plane.js';
 
+/** 表达式系数的计价单位：token 为每 1M tokens 价，image 为 fixed() 每张价 */
+export type BillingExprUnit = 'token' | 'image';
+
 /** 生成结果：expr 为 null 表示该模型无法以表达式计费（原因见 warnings） */
-export interface BillingExprResult {
-  expr: string | null;
-  warnings: string[];
-}
+export type BillingExprResult =
+  | { expr: string; unit: BillingExprUnit; warnings: string[] }
+  | { expr: null; warnings: string[] };
 
 /** 含货币换算的生成结果 */
-export interface ModelBillingExprResult extends BillingExprResult {
+export type ModelBillingExprResult = BillingExprResult & {
   /** 价目货币缺少汇率：未生成表达式，warnings 亦为空（由调用方汇总） */
   unknownCurrency?: string;
-}
+};
 
 /** 价格段：lo 为生效起点 token 数（基础段 lo = 0） */
 interface PriceSegment {
@@ -355,6 +357,7 @@ export function buildBillingExpr(cost: ModelCost, options: BillingExprOptions): 
     if (perImage) {
       return {
         expr: `tier("image", fixed(${formatCoefficient(cost.per_image!)})) * image_count`,
+        unit: 'image',
         warnings,
       };
     }
@@ -367,7 +370,11 @@ export function buildBillingExpr(cost: ModelCost, options: BillingExprOptions): 
 
   const { schedule, ...base } = cost;
   if (schedule === undefined) {
-    return { expr: buildModeBranch(collectSegments(base), [], options, warnings), warnings };
+    return {
+      expr: buildModeBranch(collectSegments(base), [], options, warnings),
+      unit: 'token',
+      warnings,
+    };
   }
 
   try {
@@ -387,7 +394,7 @@ export function buildBillingExpr(cost: ModelCost, options: BillingExprOptions): 
     return `${windowCondition(window, schedule.timezone)} ? ${wrapBranch(branch)} : `;
   });
   const fallback = buildModeBranch(collectSegments(base), [schedule.fallback], options, warnings);
-  return { expr: branches.join('') + wrapBranch(fallback), warnings };
+  return { expr: branches.join('') + wrapBranch(fallback), unit: 'token', warnings };
 }
 
 /**

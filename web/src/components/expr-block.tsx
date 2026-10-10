@@ -1,7 +1,13 @@
 import { CopyButton } from '@/components/copy-button';
-import { useI18n } from '@/lib/i18n';
+import type { BillingExprUnit } from '@billing/expr';
+import { useI18n, type MessageKey } from '@/lib/i18n';
 import { quotaUsdDisplay, useNewApi, type ModelExpr } from '@/lib/newapi';
 import { cn } from '@/lib/utils';
+
+const UNIT_LABELS: Record<BillingExprUnit, MessageKey> = {
+  token: 'expr.unit',
+  image: 'expr.unitImage',
+};
 
 /**
  * new-api 计费表达式块（表格展开行与详情页共用）：标题 + 复制 + 系数单位说明 + 表达式。
@@ -27,7 +33,7 @@ export function ExprBlock({
       <div className="text-muted-foreground mb-1.5 flex flex-wrap items-center gap-x-1 gap-y-0.5 text-[11px]">
         <span className="font-medium tracking-wider uppercase">{t('table.expr')}</span>
         <CopyButton text={expr.expr} />
-        <span>· {t('expr.unit', { display: quotaUsdDisplay(deployment) })}</span>
+        <span>· {t(UNIT_LABELS[expr.unit], { display: quotaUsdDisplay(deployment) })}</span>
         {expr.sheetCurrency !== primaryCurrency && (
           <span>· {t('expr.sheet', { currency: expr.sheetCurrency })}</span>
         )}
