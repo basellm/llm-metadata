@@ -11,9 +11,64 @@
   "id": "minimax",
   "lobeIcon": "Minimax.Color",
   "models": {
+    "MiniMax-H3": {
+      "attachment": true,
+      "cost": {
+        "per_second_2k": 0.13,
+        "per_second_768p": 0.08
+      },
+      "description": "最大 2K の text-to-video、image-to-video、マルチモーダル参照からの動画生成に対応したオープンな汎用 MiniMax 動画モデル",
+      "family": "minimax",
+      "id": "MiniMax-H3",
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "MiniMax-H3",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-07-31",
+      "temperature": false,
+      "tool_call": false
+    },
+    "MiniMax-H3-Max": {
+      "attachment": true,
+      "cost": {
+        "per_second_480p": 0.05,
+        "per_second_768p": 0.08
+      },
+      "description": "fal.ai が MiniMax H3 をベースにポストトレーニングした、最大 768P の高速動画生成向けモデル",
+      "family": "minimax",
+      "id": "MiniMax-H3-Max",
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "MiniMax-H3-Max",
+      "open_weights": false,
+      "reasoning": false,
+      "temperature": false,
+      "tool_call": false
+    },
     "MiniMax-M2": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
         "input": 0.3,
         "output": 1.2
       },
@@ -69,7 +124,37 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2025-12-23",
+      "release_date": "2025-12-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "MiniMax-M2.1-highspeed": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
+        "input": 0.6,
+        "output": 2.4
+      },
+      "description": "低遅延のコーディングとエージェントワークフロー向けの高速 MiniMax モデル",
+      "family": "minimax",
+      "id": "MiniMax-M2.1-highspeed",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.1-highspeed",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-22",
       "temperature": true,
       "tool_call": true
     },
@@ -253,6 +338,168 @@
       "release_date": "2026-06-01",
       "temperature": true,
       "tool_call": true
+    },
+    "image-01": {
+      "attachment": true,
+      "cost": {
+        "per_image": 0.0035
+      },
+      "description": "精細なテキストからの画像生成と、被写体参照による画像からの画像生成向けの MiniMax 画像モデル",
+      "family": "minimax",
+      "id": "image-01",
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "image-01",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-02-15",
+      "temperature": false,
+      "tool_call": false
+    },
+    "speech-02-hd": {
+      "attachment": false,
+      "cost": {
+        "per_10k_chars": 1
+      },
+      "description": "安定した韻律と高い音声クローン再現度を備えた旧世代 MiniMax HD テキスト読み上げモデル",
+      "family": "minimax",
+      "id": "speech-02-hd",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-02-hd",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-02",
+      "temperature": false,
+      "tool_call": false
+    },
+    "speech-02-turbo": {
+      "attachment": false,
+      "cost": {
+        "per_10k_chars": 0.6
+      },
+      "description": "安定したリズム、低遅延、強化された多言語対応を備えた旧世代 MiniMax Turbo テキスト読み上げモデル",
+      "family": "minimax",
+      "id": "speech-02-turbo",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-02-turbo",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-02",
+      "temperature": false,
+      "tool_call": false
+    },
+    "speech-2.6-hd": {
+      "attachment": false,
+      "cost": {
+        "per_10k_chars": 1
+      },
+      "description": "高い音声再現度と音質を備えた前世代 MiniMax HD テキスト読み上げモデル",
+      "family": "minimax",
+      "id": "speech-2.6-hd",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.6-hd",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-10-29",
+      "temperature": false,
+      "tool_call": false
+    },
+    "speech-2.6-turbo": {
+      "attachment": false,
+      "cost": {
+        "per_10k_chars": 0.6
+      },
+      "description": "低遅延でコスト効率に優れた前世代 MiniMax Turbo テキスト読み上げモデル",
+      "family": "minimax",
+      "id": "speech-2.6-turbo",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.6-turbo",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-10-29",
+      "temperature": false,
+      "tool_call": false
+    },
+    "speech-2.8-hd": {
+      "attachment": false,
+      "cost": {
+        "per_10k_chars": 1
+      },
+      "description": "超リアルな音質と自然なサウンドタグを備えた MiniMax HD テキスト読み上げモデル",
+      "family": "minimax",
+      "id": "speech-2.8-hd",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.8-hd",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01-23",
+      "temperature": false,
+      "tool_call": false
+    },
+    "speech-2.8-turbo": {
+      "attachment": false,
+      "cost": {
+        "per_10k_chars": 0.6
+      },
+      "description": "高速で自然な音声を生成する MiniMax Turbo テキスト読み上げモデル",
+      "family": "minimax",
+      "id": "speech-2.8-turbo",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.8-turbo",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01-23",
+      "temperature": false,
+      "tool_call": false
     }
   },
   "name": "MiniMax (minimax.io)",

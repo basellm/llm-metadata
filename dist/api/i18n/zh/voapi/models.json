@@ -9581,6 +9581,121 @@
       "tags": []
     },
     {
+      "description": "MiniMax 图像模型，面向画面细腻的文生图与主体参考图生图",
+      "firm": "minimax",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "image-01",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "image-01",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2025-02-15",
+      "tags": []
+    },
+    {
+      "description": "开放通用 MiniMax 视频模型，支持文生视频、图生视频与多模态参考生视频，最高 2K",
+      "firm": "minimax",
+      "flags": {
+        "attachment": true,
+        "audio": true,
+        "image": true,
+        "open_weights": true,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "MiniMax-H3",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "MiniMax-H3",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-07-31",
+      "tags": []
+    },
+    {
+      "description": "由 fal.ai 基于 MiniMax H3 后训练的版本，面向最高 768P 的极速视频生成",
+      "firm": "minimax",
+      "flags": {
+        "attachment": true,
+        "audio": true,
+        "image": true,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "MiniMax-H3-Max",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "MiniMax-H3-Max",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": null,
+      "tags": []
+    },
+    {
       "description": "高效的开源 MiniMax 模型，为编程智能体与重度工具调用工作流打造",
       "firm": "minimax",
       "flags": {
@@ -9608,8 +9723,8 @@
       },
       "name": "MiniMax-M2",
       "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
+        "cacheRead": 0.03,
+        "cacheWrite": 0.375,
         "input": 0.3,
         "output": 1.2
       },
@@ -9649,7 +9764,43 @@
         "input": 0.3,
         "output": 1.2
       },
-      "releaseDate": "2025-12-23",
+      "releaseDate": "2025-12-22",
+      "tags": []
+    },
+    {
+      "description": "高速 MiniMax 模型，面向低延迟编程与智能体工作流",
+      "firm": "minimax",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:minimax-color",
+      "id": "MiniMax-M2.1-highspeed",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 204800,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.1-highspeed",
+      "price": {
+        "cacheRead": 0.03,
+        "cacheWrite": 0.375,
+        "input": 0.6,
+        "output": 2.4
+      },
+      "releaseDate": "2025-12-22",
       "tags": []
     },
     {
@@ -9835,6 +9986,374 @@
       "tags": []
     },
     {
+      "description": "早期版本的 MiniMax HD 文本转语音模型，韵律稳定，音色复刻相似度高",
+      "firm": "minimax",
+      "flags": {
+        "attachment": false,
+        "audio": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "speech-02-hd",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-02-hd",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2025-04-02",
+      "tags": []
+    },
+    {
+      "description": "早期版本的 MiniMax Turbo 文本转语音模型，节奏稳定、低延迟，小语种能力增强",
+      "firm": "minimax",
+      "flags": {
+        "attachment": false,
+        "audio": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "speech-02-turbo",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-02-turbo",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2025-04-02",
+      "tags": []
+    },
+    {
+      "description": "上一代 MiniMax HD 文本转语音模型，音色相似度高，音质出色",
+      "firm": "minimax",
+      "flags": {
+        "attachment": false,
+        "audio": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "speech-2.6-hd",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.6-hd",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2025-10-29",
+      "tags": []
+    },
+    {
+      "description": "上一代 MiniMax Turbo 文本转语音模型，低延迟、高性价比",
+      "firm": "minimax",
+      "flags": {
+        "attachment": false,
+        "audio": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "speech-2.6-turbo",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.6-turbo",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2025-10-29",
+      "tags": []
+    },
+    {
+      "description": "MiniMax HD 文本转语音模型，音质超逼真，支持自然语气词标签",
+      "firm": "minimax",
+      "flags": {
+        "attachment": false,
+        "audio": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "speech-2.8-hd",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.8-hd",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-01-23",
+      "tags": []
+    },
+    {
+      "description": "MiniMax Turbo 文本转语音模型，生成速度快，听感自然",
+      "firm": "minimax",
+      "flags": {
+        "attachment": false,
+        "audio": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "speech-2.8-turbo",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.8-turbo",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-01-23",
+      "tags": []
+    },
+    {
+      "description": "MiniMax 图像模型，面向画面细腻的文生图与主体参考图生图",
+      "firm": "minimax-cn",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "image-01",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "image-01",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2025-04-02",
+      "tags": []
+    },
+    {
+      "description": "MiniMax 图像模型，增强手绘、卡通等画风，支持画风预设",
+      "firm": "minimax-cn",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "image-01-live",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "image-01-live",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": null,
+      "tags": []
+    },
+    {
+      "description": "开放通用 MiniMax 视频模型，支持文生视频、图生视频与多模态参考生视频，最高 2K",
+      "firm": "minimax-cn",
+      "flags": {
+        "attachment": true,
+        "audio": true,
+        "image": true,
+        "open_weights": true,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "MiniMax-H3",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "MiniMax-H3",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-07-31",
+      "tags": []
+    },
+    {
+      "description": "由 fal.ai 基于 MiniMax H3 后训练的版本，面向最高 768P 的极速视频生成",
+      "firm": "minimax-cn",
+      "flags": {
+        "attachment": true,
+        "audio": true,
+        "image": true,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "MiniMax-H3-Max",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "MiniMax-H3-Max",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": null,
+      "tags": []
+    },
+    {
       "description": "MiniMax 模型，面向对话、编程、办公与智能体任务",
       "firm": "minimax-cn",
       "flags": {
@@ -9903,7 +10422,43 @@
         "input": 0.287671,
         "output": 1.15068
       },
-      "releaseDate": "2025-12-23",
+      "releaseDate": "2025-12-22",
+      "tags": []
+    },
+    {
+      "description": "高速 MiniMax 模型，面向低延迟编程与智能体工作流",
+      "firm": "minimax-cn",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:minimax-color",
+      "id": "MiniMax-M2.1-highspeed",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 204800,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.1-highspeed",
+      "price": {
+        "cacheRead": 0.0287671,
+        "cacheWrite": 0.359589,
+        "input": 0.575342,
+        "output": 2.30137
+      },
+      "releaseDate": "2025-12-22",
       "tags": []
     },
     {
@@ -10086,6 +10641,222 @@
         "output": 1.15068
       },
       "releaseDate": "2026-06-01",
+      "tags": []
+    },
+    {
+      "description": "早期版本的 MiniMax HD 文本转语音模型，韵律稳定，音色复刻相似度高",
+      "firm": "minimax-cn",
+      "flags": {
+        "attachment": false,
+        "audio": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "speech-02-hd",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-02-hd",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": null,
+      "tags": []
+    },
+    {
+      "description": "早期版本的 MiniMax Turbo 文本转语音模型，节奏稳定、低延迟，小语种能力增强",
+      "firm": "minimax-cn",
+      "flags": {
+        "attachment": false,
+        "audio": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "speech-02-turbo",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-02-turbo",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": null,
+      "tags": []
+    },
+    {
+      "description": "上一代 MiniMax HD 文本转语音模型，音色相似度高，音质出色",
+      "firm": "minimax-cn",
+      "flags": {
+        "attachment": false,
+        "audio": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "speech-2.6-hd",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.6-hd",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2025-10-29",
+      "tags": []
+    },
+    {
+      "description": "上一代 MiniMax Turbo 文本转语音模型，低延迟、高性价比",
+      "firm": "minimax-cn",
+      "flags": {
+        "attachment": false,
+        "audio": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "speech-2.6-turbo",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.6-turbo",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2025-10-29",
+      "tags": []
+    },
+    {
+      "description": "MiniMax HD 文本转语音模型，音质超逼真，支持自然语气词标签",
+      "firm": "minimax-cn",
+      "flags": {
+        "attachment": false,
+        "audio": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "speech-2.8-hd",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.8-hd",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-01-23",
+      "tags": []
+    },
+    {
+      "description": "MiniMax Turbo 文本转语音模型，生成速度快，听感自然",
+      "firm": "minimax-cn",
+      "flags": {
+        "attachment": false,
+        "audio": true,
+        "image": false,
+        "open_weights": false,
+        "reasoning": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "icon": "lb:minimax-color",
+      "id": "speech-2.8-turbo",
+      "knowledge": null,
+      "lastUpdated": null,
+      "maxCtxTokens": 0,
+      "maxOutputTokens": 0,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.8-turbo",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-01-23",
       "tags": []
     },
     {

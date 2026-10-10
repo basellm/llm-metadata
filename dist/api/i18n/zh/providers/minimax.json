@@ -11,9 +11,64 @@
   "id": "minimax",
   "lobeIcon": "Minimax.Color",
   "models": {
+    "MiniMax-H3": {
+      "attachment": true,
+      "cost": {
+        "per_second_2k": 0.13,
+        "per_second_768p": 0.08
+      },
+      "description": "开放通用 MiniMax 视频模型，支持文生视频、图生视频与多模态参考生视频，最高 2K",
+      "family": "minimax",
+      "id": "MiniMax-H3",
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "MiniMax-H3",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-07-31",
+      "temperature": false,
+      "tool_call": false
+    },
+    "MiniMax-H3-Max": {
+      "attachment": true,
+      "cost": {
+        "per_second_480p": 0.05,
+        "per_second_768p": 0.08
+      },
+      "description": "由 fal.ai 基于 MiniMax H3 后训练的版本，面向最高 768P 的极速视频生成",
+      "family": "minimax",
+      "id": "MiniMax-H3-Max",
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "MiniMax-H3-Max",
+      "open_weights": false,
+      "reasoning": false,
+      "temperature": false,
+      "tool_call": false
+    },
     "MiniMax-M2": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
         "input": 0.3,
         "output": 1.2
       },
@@ -69,7 +124,37 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2025-12-23",
+      "release_date": "2025-12-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "MiniMax-M2.1-highspeed": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
+        "input": 0.6,
+        "output": 2.4
+      },
+      "description": "高速 MiniMax 模型，面向低延迟编程与智能体工作流",
+      "family": "minimax",
+      "id": "MiniMax-M2.1-highspeed",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.1-highspeed",
+      "open_weights": true,
+      "reasoning": true,
+      "release_date": "2025-12-22",
       "temperature": true,
       "tool_call": true
     },
@@ -253,6 +338,168 @@
       "release_date": "2026-06-01",
       "temperature": true,
       "tool_call": true
+    },
+    "image-01": {
+      "attachment": true,
+      "cost": {
+        "per_image": 0.0035
+      },
+      "description": "MiniMax 图像模型，面向画面细腻的文生图与主体参考图生图",
+      "family": "minimax",
+      "id": "image-01",
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "image-01",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-02-15",
+      "temperature": false,
+      "tool_call": false
+    },
+    "speech-02-hd": {
+      "attachment": false,
+      "cost": {
+        "per_10k_chars": 1
+      },
+      "description": "早期版本的 MiniMax HD 文本转语音模型，韵律稳定，音色复刻相似度高",
+      "family": "minimax",
+      "id": "speech-02-hd",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-02-hd",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-02",
+      "temperature": false,
+      "tool_call": false
+    },
+    "speech-02-turbo": {
+      "attachment": false,
+      "cost": {
+        "per_10k_chars": 0.6
+      },
+      "description": "早期版本的 MiniMax Turbo 文本转语音模型，节奏稳定、低延迟，小语种能力增强",
+      "family": "minimax",
+      "id": "speech-02-turbo",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-02-turbo",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-02",
+      "temperature": false,
+      "tool_call": false
+    },
+    "speech-2.6-hd": {
+      "attachment": false,
+      "cost": {
+        "per_10k_chars": 1
+      },
+      "description": "上一代 MiniMax HD 文本转语音模型，音色相似度高，音质出色",
+      "family": "minimax",
+      "id": "speech-2.6-hd",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.6-hd",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-10-29",
+      "temperature": false,
+      "tool_call": false
+    },
+    "speech-2.6-turbo": {
+      "attachment": false,
+      "cost": {
+        "per_10k_chars": 0.6
+      },
+      "description": "上一代 MiniMax Turbo 文本转语音模型，低延迟、高性价比",
+      "family": "minimax",
+      "id": "speech-2.6-turbo",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.6-turbo",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-10-29",
+      "temperature": false,
+      "tool_call": false
+    },
+    "speech-2.8-hd": {
+      "attachment": false,
+      "cost": {
+        "per_10k_chars": 1
+      },
+      "description": "MiniMax HD 文本转语音模型，音质超逼真，支持自然语气词标签",
+      "family": "minimax",
+      "id": "speech-2.8-hd",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.8-hd",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01-23",
+      "temperature": false,
+      "tool_call": false
+    },
+    "speech-2.8-turbo": {
+      "attachment": false,
+      "cost": {
+        "per_10k_chars": 0.6
+      },
+      "description": "MiniMax Turbo 文本转语音模型，生成速度快，听感自然",
+      "family": "minimax",
+      "id": "speech-2.8-turbo",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "speech-2.8-turbo",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-01-23",
+      "temperature": false,
+      "tool_call": false
     }
   },
   "name": "MiniMax (minimax.io)",

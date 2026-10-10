@@ -44,9 +44,9 @@ export declare function planeRates(deployment: NewApiDeployment, fallbackFx?: Re
 /** 按优先货币选取价目：存在该货币的官方价目时采用之（货币由键决定），否则用主价目 */
 export declare function selectPriceSheet(cost: ModelCost | undefined, preferred: Currency): ModelCost | undefined;
 /** 面向部署生成的结果：附带实际采用的价目货币 */
-export interface DeploymentBillingExpr extends ModelBillingExprResult {
+export type DeploymentBillingExpr = ModelBillingExprResult & {
     sheetCurrency: Currency;
-}
+};
 /** 按部署配置为单个模型生成 new-api 表达式 */
 export declare function buildDeploymentBillingExpr(cost: ModelCost | undefined, options: BillingExprOptions, deployment: NewApiDeployment, fallbackFx?: Readonly<Record<string, number>>): DeploymentBillingExpr;
 //# sourceMappingURL=deployment.d.ts.map

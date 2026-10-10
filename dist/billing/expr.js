@@ -290,6 +290,7 @@ export function buildBillingExpr(cost, options) {
         if (perImage) {
             return {
                 expr: `tier("image", fixed(${formatCoefficient(cost.per_image)})) * image_count`,
+                unit: 'image',
                 warnings,
             };
         }
@@ -302,7 +303,11 @@ export function buildBillingExpr(cost, options) {
         warnings.push('per_image ignored in favour of token pricing');
     const { schedule, ...base } = cost;
     if (schedule === undefined) {
-        return { expr: buildModeBranch(collectSegments(base), [], options, warnings), warnings };
+        return {
+            expr: buildModeBranch(collectSegments(base), [], options, warnings),
+            unit: 'token',
+            warnings,
+        };
     }
     try {
         validateSchedule(schedule, base);
@@ -316,7 +321,7 @@ export function buildBillingExpr(cost, options) {
         return `${windowCondition(window, schedule.timezone)} ? ${wrapBranch(branch)} : `;
     });
     const fallback = buildModeBranch(collectSegments(base), [schedule.fallback], options, warnings);
-    return { expr: branches.join('') + wrapBranch(fallback), warnings };
+    return { expr: branches.join('') + wrapBranch(fallback), unit: 'token', warnings };
 }
 /**
  * 从任意货币的价目生成表达式：先按 rates 换算到计费平面，再生成。

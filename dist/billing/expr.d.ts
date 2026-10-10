@@ -16,16 +16,22 @@
  */
 import type { BillingExprOptions, ModelCost } from './cost.js';
 import { type PlaneRates } from './plane.js';
+/** 表达式系数的计价单位：token 为每 1M tokens 价，image 为 fixed() 每张价 */
+export type BillingExprUnit = 'token' | 'image';
 /** 生成结果：expr 为 null 表示该模型无法以表达式计费（原因见 warnings） */
-export interface BillingExprResult {
-    expr: string | null;
+export type BillingExprResult = {
+    expr: string;
+    unit: BillingExprUnit;
     warnings: string[];
-}
+} | {
+    expr: null;
+    warnings: string[];
+};
 /** 含货币换算的生成结果 */
-export interface ModelBillingExprResult extends BillingExprResult {
+export type ModelBillingExprResult = BillingExprResult & {
     /** 价目货币缺少汇率：未生成表达式，warnings 亦为空（由调用方汇总） */
     unknownCurrency?: string;
-}
+};
 /**
  * 从已换算到计费平面的价目生成 new-api 计费表达式。
  * 无 token 输入价时回退按图价（tier("image", fixed(每张价)) * image_count）；
