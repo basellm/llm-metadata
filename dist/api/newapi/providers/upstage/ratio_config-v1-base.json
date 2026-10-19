@@ -2,12 +2,14 @@
   "data": {
     "billing_expr": {
       "solar-mini": "tier(\"standard\", p * 0.15 + c * 0.15)",
+      "solar-mini4": "tier(\"standard\", p * 0.1 + cr * 0.01 + c * 0.4)",
       "solar-pro2": "tier(\"standard\", p * 0.25 + c * 0.25)",
       "solar-pro3": "tier(\"standard\", p * 0.25 + c * 0.25)",
       "solar-pro4": "tier(\"standard\", p * 0.3 + cr * 0.06 + c * 1.2)"
     },
     "billing_mode": {
       "solar-mini": "tiered_expr",
+      "solar-mini4": "tiered_expr",
       "solar-pro2": "tiered_expr",
       "solar-pro3": "tiered_expr",
       "solar-pro4": "tiered_expr"
