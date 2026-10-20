@@ -93,6 +93,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-10-27",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -125,6 +126,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-12-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -187,6 +189,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-02-12",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -219,6 +222,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-02-13",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -251,6 +255,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-03-18",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -283,6 +288,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-03-18",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -315,7 +321,7 @@
       "last_updated": "2026-06-25",
       "limit": {
         "context": 1000000,
-        "output": 512000
+        "output": 524288
       },
       "modalities": {
         "input": [
@@ -336,6 +342,53 @@
         }
       ],
       "release_date": "2026-06-01",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "MiniMax-M3.1-Flash": {
+      "attachment": true,
+      "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "1Mコンテキストウィンドウと調整可能な思考深度を備えた最先端のマルチモーダルコーディングモデル",
+      "family": "minimax",
+      "id": "MiniMax-M3.1-Flash",
+      "last_updated": "2026-10-19",
+      "limit": {
+        "context": 1000000,
+        "output": 524288
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3.1-Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-19",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },

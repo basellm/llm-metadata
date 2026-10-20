@@ -13,6 +13,7 @@
   "models": {
     "glm-4.5": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-4.5",
       "cost": {
         "cache_read": 0.11,
         "cache_write": 0,
@@ -22,6 +23,9 @@
       "description": "支持混合推理的 GLM 版本，让 4.5 系列具备了广泛实用性",
       "family": "glm",
       "id": "glm-4.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2025-07-28",
       "limit": {
@@ -50,6 +54,7 @@
     },
     "glm-4.5-air": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-4.5-air",
       "cost": {
         "cache_read": 0.03,
         "cache_write": 0,
@@ -59,6 +64,9 @@
       "description": "更轻量的 GLM-4.5 变体，面向快速编程辅助与更低成本的智能体",
       "family": "glm-air",
       "id": "glm-4.5-air",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2025-07-28",
       "limit": {
@@ -87,6 +95,7 @@
     },
     "glm-4.5-flash": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-4.5-flash",
       "cost": {
         "cache_read": 0,
         "cache_write": 0,
@@ -96,6 +105,9 @@
       "description": "高效的 GLM 模型，面向快速推理、编程与智能体工作流",
       "family": "glm-flash",
       "id": "glm-4.5-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2025-07-28",
       "limit": {
@@ -111,7 +123,7 @@
         ]
       },
       "name": "GLM-4.5-Flash",
-      "open_weights": true,
+      "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -124,14 +136,19 @@
     },
     "glm-4.5v": {
       "attachment": true,
+      "canonical_model_id": "zhipuai/glm-4.5v",
       "cost": {
         "cache_read": 0.11,
+        "cache_write": 0,
         "input": 0.6,
         "output": 1.8
       },
       "description": "GLM 视觉模型，面向视觉推理、文档理解与多模态智能体",
       "family": "glm",
       "id": "glm-4.5v",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2025-08-11",
       "limit": {
@@ -162,6 +179,7 @@
     },
     "glm-4.6": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-4.6",
       "cost": {
         "cache_read": 0.11,
         "cache_write": 0,
@@ -171,6 +189,9 @@
       "description": "GLM-4 后期主力模型，面向编程智能体、推理与结构化任务",
       "family": "glm",
       "id": "glm-4.6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2025-09-30",
       "limit": {
@@ -199,14 +220,19 @@
     },
     "glm-4.6v": {
       "attachment": true,
+      "canonical_model_id": "zhipuai/glm-4.6v",
       "cost": {
         "cache_read": 0.05,
+        "cache_write": 0,
         "input": 0.3,
         "output": 0.9
       },
       "description": "GLM 视觉模型，面向视觉推理、文档理解与多模态智能体",
       "family": "glm",
       "id": "glm-4.6v",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2025-12-08",
       "limit": {
@@ -247,6 +273,9 @@
       "description": "轻量级 GLM 视觉模型，适用于视觉推理、文档处理和多模态智能体",
       "family": "glm-flash",
       "id": "glm-4.6v-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2025-12-08",
       "limit": {
         "context": 128000,
@@ -276,6 +305,7 @@
     },
     "glm-4.7": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-4.7",
       "cost": {
         "cache_read": 0.11,
         "cache_write": 0,
@@ -316,6 +346,7 @@
     },
     "glm-4.7-flash": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-4.7-flash",
       "cost": {
         "cache_read": 0,
         "cache_write": 0,
@@ -325,6 +356,9 @@
       "description": "经济型 GLM，适合快速编程辅助、路由分发与日常自动化",
       "family": "glm-flash",
       "id": "glm-4.7-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2026-01-19",
       "limit": {
@@ -353,6 +387,7 @@
     },
     "glm-4.7-flashx": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-4.7-flashx",
       "cost": {
         "cache_read": 0.01,
         "cache_write": 0,
@@ -362,6 +397,9 @@
       "description": "高效的 GLM 模型，面向快速推理、编程与智能体工作流",
       "family": "glm-flash",
       "id": "glm-4.7-flashx",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-04",
       "last_updated": "2026-01-19",
       "limit": {
@@ -430,6 +468,7 @@
     },
     "glm-5-turbo": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5-turbo",
       "cost": {
         "cache_read": 0.24,
         "cache_write": 0,
@@ -541,6 +580,9 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -700,6 +742,7 @@
     },
     "glm-5v-turbo": {
       "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5v-turbo",
       "cost": {
         "cache_read": 0.24,
         "cache_write": 0,

@@ -217,7 +217,8 @@
             "none",
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh"
           ]
         }
       ],
@@ -277,7 +278,8 @@
           "values": [
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh"
           ]
         }
       ],
@@ -474,12 +476,10 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
-          "image",
-          "pdf"
+          "image"
         ]
       },
       "name": "Grok Imagine Image",
@@ -487,7 +487,8 @@
       "reasoning": false,
       "release_date": "2026-01-28",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "image"
     },
     "grok-imagine-image-quality": {
       "attachment": true,
@@ -503,20 +504,20 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
-          "image",
-          "pdf"
+          "image"
         ]
       },
       "name": "Grok Imagine Image Quality",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-04-03",
+      "status": "deprecated",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "image"
     },
     "grok-imagine-video": {
       "attachment": true,
@@ -532,8 +533,7 @@
         "input": [
           "text",
           "image",
-          "video",
-          "pdf"
+          "video"
         ],
         "output": [
           "video"
@@ -544,12 +544,13 @@
       "reasoning": false,
       "release_date": "2026-01-28",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "video"
     },
     "grok-imagine-video-1.5": {
       "attachment": true,
       "canonical_model_id": "xai/grok-imagine-video-1.5",
-      "description": "Video model for image-to-video generation, editing, and extension workflows",
+      "description": "Video model for text-to-video, image-to-video, and reference-to-video generation with optional voice references",
       "family": "grok",
       "id": "grok-imagine-video-1.5",
       "last_updated": "2026-05-30",
@@ -561,8 +562,7 @@
         "input": [
           "text",
           "image",
-          "audio",
-          "pdf"
+          "audio"
         ],
         "output": [
           "video"
@@ -573,7 +573,8 @@
       "reasoning": false,
       "release_date": "2026-05-30",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "video"
     },
     "grok-imagine-video-1.5-lite": {
       "attachment": true,
@@ -589,8 +590,7 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "video"
@@ -601,7 +601,8 @@
       "reasoning": false,
       "release_date": "2026-10-01",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "video"
     }
   },
   "name": "xAI",

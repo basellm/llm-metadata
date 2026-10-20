@@ -1,7 +1,7 @@
 {
   "attachment": true,
   "canonical_model_id": "xai/grok-imagine-video-1.5",
-  "description": "Video model for image-to-video generation, editing, and extension workflows",
+  "description": "Video model for text-to-video, image-to-video, and reference-to-video generation with optional voice references",
   "family": "grok",
   "id": "grok-imagine-video-1.5",
   "last_updated": "2026-05-30",
@@ -13,8 +13,7 @@
     "input": [
       "text",
       "image",
-      "audio",
-      "pdf"
+      "audio"
     ],
     "output": [
       "video"
@@ -25,5 +24,6 @@
   "reasoning": false,
   "release_date": "2026-05-30",
   "temperature": false,
-  "tool_call": false
+  "tool_call": false,
+  "type": "video"
 }

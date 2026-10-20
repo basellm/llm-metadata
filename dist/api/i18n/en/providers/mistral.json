@@ -8,7 +8,7 @@
   "lobeIcon": "Mistral.Color",
   "models": {
     "codestral-2508": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "mistral/codestral-2508",
       "cost": {
         "cache_read": 0.03,
@@ -25,7 +25,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "pdf"
         ],
         "output": [
           "text"
@@ -40,7 +41,7 @@
       "tool_call": true
     },
     "codestral-latest": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.03,
         "input": 0.3,
@@ -57,7 +58,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "pdf"
         ],
         "output": [
           "text"
@@ -67,6 +69,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-05-29",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -300,7 +303,7 @@
       "tool_call": true
     },
     "labs-devstral-small-2512": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "input": 0,
         "output": 0
@@ -432,7 +435,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -465,7 +469,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -482,8 +487,9 @@
     "ministral-3b-latest": {
       "attachment": true,
       "cost": {
-        "input": 0.04,
-        "output": 0.04
+        "cache_read": 0.01,
+        "input": 0.1,
+        "output": 0.1
       },
       "description": "Compact Mistral model for edge, latency-sensitive, and cost-efficient workloads",
       "family": "ministral",
@@ -497,7 +503,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -507,6 +514,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-10-01",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -529,7 +537,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -546,8 +555,9 @@
     "ministral-8b-latest": {
       "attachment": true,
       "cost": {
-        "input": 0.1,
-        "output": 0.1
+        "cache_read": 0.015,
+        "input": 0.15,
+        "output": 0.15
       },
       "description": "Compact Mistral model for edge, latency-sensitive, and cost-efficient workloads",
       "family": "ministral",
@@ -561,7 +571,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -571,6 +582,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-10-01",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -601,7 +613,8 @@
       "reasoning": false,
       "release_date": "2023-12-11",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "embedding"
     },
     "mistral-large-2411": {
       "attachment": false,
@@ -654,7 +667,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -664,6 +678,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-11-01",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -686,7 +701,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -729,7 +745,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -739,6 +756,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-11-01",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -824,7 +842,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -866,7 +885,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -921,7 +941,7 @@
       "tool_call": true
     },
     "mistral-small-2506": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "input": 0.1,
         "output": 0.3
@@ -971,7 +991,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -990,6 +1011,7 @@
         }
       ],
       "release_date": "2026-03-16",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -1012,7 +1034,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -1031,37 +1054,7 @@
         }
       ],
       "release_date": "2026-03-16",
-      "temperature": true,
-      "tool_call": true
-    },
-    "open-mistral-7b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.25,
-        "output": 0.25
-      },
-      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-      "family": "mistral",
-      "id": "open-mistral-7b",
-      "knowledge": "2023-12",
-      "last_updated": "2023-09-27",
-      "limit": {
-        "context": 8000,
-        "output": 8000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral 7B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2023-09-27",
-      "status": "deprecated",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -1092,68 +1085,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-07-01",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
-    "open-mixtral-8x22b": {
-      "attachment": false,
-      "cost": {
-        "input": 2,
-        "output": 6
-      },
-      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-      "family": "mixtral",
-      "id": "open-mixtral-8x22b",
-      "knowledge": "2024-04",
-      "last_updated": "2024-04-17",
-      "limit": {
-        "context": 64000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mixtral 8x22B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-04-17",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
-    "open-mixtral-8x7b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.7,
-        "output": 0.7
-      },
-      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-      "family": "mixtral",
-      "id": "open-mixtral-8x7b",
-      "knowledge": "2024-01",
-      "last_updated": "2023-12-11",
-      "limit": {
-        "context": 32000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mixtral 8x7B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2023-12-11",
       "status": "deprecated",
       "temperature": true,
       "tool_call": true
@@ -1227,7 +1158,7 @@
       "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
       "family": "voxtral",
       "id": "voxtral-mini-latest",
-      "last_updated": "2026-02-01",
+      "last_updated": "2026-02-04",
       "limit": {
         "context": 0,
         "output": 0
@@ -1243,16 +1174,17 @@
       "name": "Voxtral Mini (latest)",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-02-01",
+      "release_date": "2026-02-04",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "transcription"
     },
     "voxtral-mini-tts-latest": {
       "attachment": false,
       "description": "Multilingual text-to-speech model with zero-shot voice cloning",
       "family": "voxtral",
       "id": "voxtral-mini-tts-latest",
-      "last_updated": "2026-03-01",
+      "last_updated": "2026-03-23",
       "limit": {
         "context": 0,
         "output": 0
@@ -1266,11 +1198,12 @@
         ]
       },
       "name": "Voxtral Mini TTS (latest)",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2026-03-01",
+      "release_date": "2026-03-23",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "speech"
     },
     "voxtral-small-2507": {
       "attachment": true,
@@ -1289,7 +1222,8 @@
       "modalities": {
         "input": [
           "text",
-          "audio"
+          "audio",
+          "pdf"
         ],
         "output": [
           "text"
@@ -1299,6 +1233,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-07-15",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -1306,7 +1241,7 @@
       "attachment": true,
       "cost": {
         "input": 0.1,
-        "output": 0.3
+        "output": 0.4
       },
       "description": "Instruct model with native audio input for speech understanding and tool use",
       "family": "voxtral",
@@ -1319,7 +1254,8 @@
       "modalities": {
         "input": [
           "text",
-          "audio"
+          "audio",
+          "pdf"
         ],
         "output": [
           "text"
@@ -1329,6 +1265,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-07-15",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },

@@ -1,8 +1,9 @@
 {
   "attachment": true,
   "cost": {
-    "input": 0.04,
-    "output": 0.04
+    "cache_read": 0.01,
+    "input": 0.1,
+    "output": 0.1
   },
   "description": "Compact Mistral model for edge, latency-sensitive, and cost-efficient workloads",
   "family": "ministral",
@@ -16,7 +17,8 @@
   "modalities": {
     "input": [
       "text",
-      "image"
+      "image",
+      "pdf"
     ],
     "output": [
       "text"
@@ -26,6 +28,7 @@
   "open_weights": true,
   "reasoning": false,
   "release_date": "2024-10-01",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

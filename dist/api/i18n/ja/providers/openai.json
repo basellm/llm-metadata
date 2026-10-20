@@ -33,7 +33,8 @@
       "reasoning": false,
       "release_date": "2025-12-16",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "image"
     },
     "gpt-3.5-turbo": {
       "attachment": false,
@@ -69,7 +70,7 @@
       "tool_call": false
     },
     "gpt-4": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "input": 30,
         "output": 60
@@ -893,48 +894,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "gpt-5.2-chat-latest": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.175,
-        "input": 1.75,
-        "output": 14
-      },
-      "description": "会話支援、文章作成、ツールワークフロー向けにチャット調整された GPT モデル",
-      "family": "gpt-codex",
-      "id": "gpt-5.2-chat-latest",
-      "knowledge": "2025-08-31",
-      "last_updated": "2025-12-11",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.2 Chat",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "medium"
-          ]
-        }
-      ],
-      "release_date": "2025-12-11",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
     "gpt-5.2-pro": {
       "attachment": true,
       "cost": {
@@ -976,40 +935,6 @@
       "release_date": "2025-12-11",
       "structured_output": false,
       "temperature": false,
-      "tool_call": true
-    },
-    "gpt-5.3-chat-latest": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.175,
-        "input": 1.75,
-        "output": 14
-      },
-      "description": "会話支援、文章作成、ツールワークフロー向けにチャット調整された GPT モデル",
-      "family": "gpt",
-      "id": "gpt-5.3-chat-latest",
-      "knowledge": "2025-08-31",
-      "last_updated": "2026-03-03",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-5.3 Chat (latest)",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-03-03",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
       "tool_call": true
     },
     "gpt-5.3-codex": {
@@ -2451,7 +2376,8 @@
       "release_date": "2025-04-24",
       "status": "deprecated",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "image"
     },
     "gpt-image-1-mini": {
       "attachment": true,
@@ -2479,7 +2405,8 @@
       "reasoning": false,
       "release_date": "2025-09-26",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "image"
     },
     "gpt-image-1.5": {
       "attachment": true,
@@ -2508,7 +2435,8 @@
       "reasoning": false,
       "release_date": "2025-11-25",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "image"
     },
     "gpt-image-2": {
       "attachment": true,
@@ -2541,7 +2469,8 @@
       "reasoning": false,
       "release_date": "2026-04-21",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "image"
     },
     "gpt-realtime-2.1": {
       "attachment": true,
@@ -2592,7 +2521,8 @@
       "release_date": "2026-07-06",
       "structured_output": false,
       "temperature": false,
-      "tool_call": true
+      "tool_call": true,
+      "type": "realtime"
     },
     "o1": {
       "attachment": true,
@@ -2863,7 +2793,7 @@
           },
           "flex": {
             "cost": {
-              "cache_read": 0.138,
+              "cache_read": 0.1375,
               "input": 0.55,
               "output": 2.2
             },
@@ -2939,7 +2869,8 @@
       "reasoning": false,
       "release_date": "2024-01-25",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "embedding"
     },
     "text-embedding-3-small": {
       "attachment": false,
@@ -2969,7 +2900,8 @@
       "reasoning": false,
       "release_date": "2024-01-25",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "embedding"
     },
     "text-embedding-ada-002": {
       "attachment": false,
@@ -2999,7 +2931,8 @@
       "reasoning": false,
       "release_date": "2022-12-15",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "embedding"
     }
   },
   "name": "OpenAI",

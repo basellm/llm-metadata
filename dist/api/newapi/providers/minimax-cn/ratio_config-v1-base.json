@@ -9,6 +9,7 @@
       "MiniMax-M2.7": "tier(\"standard\", p * 0.287671 + cr * 0.0575342 + cc * 0.359589 + c * 1.15068)",
       "MiniMax-M2.7-highspeed": "tier(\"standard\", p * 0.575342 + cr * 0.0575342 + cc * 0.359589 + c * 2.30137)",
       "MiniMax-M3": "len <= 512000 ? tier(\"0_512k\", p * 0.287671 + cr * 0.0575342 + c * 1.15068) : tier(\"512k_plus\", p * 0.575342 + cr * 0.115068 + c * 2.30137)",
+      "MiniMax-M3.1-Flash": "tier(\"standard\", p * 0.1494 + cr * 0.0149 + c * 0.5976)",
       "image-01": "tier(\"image\", fixed(0.00342466)) * image_count",
       "image-01-live": "tier(\"image\", fixed(0.00342466)) * image_count"
     },
@@ -21,6 +22,7 @@
       "MiniMax-M2.7": "tiered_expr",
       "MiniMax-M2.7-highspeed": "tiered_expr",
       "MiniMax-M3": "tiered_expr",
+      "MiniMax-M3.1-Flash": "tiered_expr",
       "image-01": "tiered_expr",
       "image-01-live": "tiered_expr"
     }
