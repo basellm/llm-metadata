@@ -1,9 +1,26 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
     "input": 0.2,
     "output": 1.6,
-    "reasoning": 4.8
+    "tiers": [
+      {
+        "input": 0.3,
+        "output": 2.4,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      },
+      {
+        "input": 0.6,
+        "output": 4.8,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
   "family": "qwen",
@@ -35,6 +52,7 @@
     }
   ],
   "release_date": "2025-09-23",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

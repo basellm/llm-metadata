@@ -34,6 +34,7 @@
       "gemini-flash-latest": "tier(\"standard\", p * 0.75 + cr * 0.075 + ai * 0.75 + c * 3.75)",
       "gemini-flash-lite-latest": "tier(\"standard\", p * 0.3 + cr * 0.03 + c * 2.5)",
       "gemini-omni-flash-preview": "tier(\"standard\", p * 1.5 + c * 17.5)",
+      "gemini-pro-latest": "len <= 200000 ? tier(\"0_200k\", p * 2 + cr * 0.2 + c * 12) : tier(\"200k_plus\", p * 4 + cr * 0.4 + c * 18)",
       "lyria-3-clip-preview": "tier(\"standard\", p * 0 + c * 0)",
       "lyria-3-pro-preview": "tier(\"standard\", p * 0 + c * 0)"
     },
@@ -71,6 +72,7 @@
       "gemini-flash-latest": "tiered_expr",
       "gemini-flash-lite-latest": "tiered_expr",
       "gemini-omni-flash-preview": "tiered_expr",
+      "gemini-pro-latest": "tiered_expr",
       "lyria-3-clip-preview": "tiered_expr",
       "lyria-3-pro-preview": "tiered_expr"
     }

@@ -2,7 +2,33 @@
   "attachment": false,
   "cost": {
     "input": 0.3,
-    "output": 1.5
+    "output": 1.5,
+    "tiers": [
+      {
+        "input": 0.5,
+        "output": 2.5,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      },
+      {
+        "input": 0.8,
+        "output": 4,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      },
+      {
+        "input": 1.6,
+        "output": 9.6,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen coding model for software agents, repository edits, and code reasoning",
   "family": "qwen",
@@ -25,6 +51,7 @@
   "open_weights": false,
   "reasoning": false,
   "release_date": "2025-07-28",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

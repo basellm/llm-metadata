@@ -2,18 +2,24 @@
   "attachment": true,
   "canonical_model_id": "alibaba/qwen3.7-plus",
   "cost": {
-    "cache_read": 0.05,
-    "cache_write": 0.625,
-    "input": 0.5,
-    "output": 3,
+    "cache_read": 0.0276,
+    "cache_write": 0.345,
+    "context_over_200k": {
+      "cache_read": 0.0826,
+      "cache_write": 1.0325,
+      "input": 0.826,
+      "output": 3.301
+    },
+    "input": 0.276,
+    "output": 1.101,
     "tiers": [
       {
-        "cache_read": 0.2,
-        "cache_write": 2.5,
-        "input": 2,
-        "output": 6,
+        "cache_read": 0.0826,
+        "cache_write": 1.0325,
+        "input": 0.826,
+        "output": 3.301,
         "tier": {
-          "size": 128000,
+          "size": 256000,
           "type": "context"
         }
       }
@@ -51,6 +57,7 @@
     }
   ],
   "release_date": "2026-06-02",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

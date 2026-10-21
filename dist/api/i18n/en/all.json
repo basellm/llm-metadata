@@ -17,7 +17,7 @@
     "lobeIcon": "Qwen.Color",
     "models": {
       "qvq-max": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 1.2,
           "output": 4.8
@@ -45,14 +45,29 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-03-25",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen-flash": {
         "attachment": false,
         "cost": {
+          "context_over_200k": {
+            "input": 0.25,
+            "output": 2
+          },
           "input": 0.05,
-          "output": 0.4
+          "output": 0.4,
+          "tiers": [
+            {
+              "input": 0.25,
+              "output": 2,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Efficient Qwen model for fast chat, extraction, and high-volume workloads",
         "family": "qwen",
@@ -83,6 +98,7 @@
           }
         ],
         "release_date": "2025-07-28",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -113,6 +129,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-04-03",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -173,11 +190,12 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-01",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": false
       },
       "qwen-omni-turbo": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.07,
           "input_audio": 4.44,
@@ -209,11 +227,12 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-01-19",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen-omni-turbo-realtime": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.27,
           "input_audio": 4.44,
@@ -244,15 +263,33 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-05-08",
+        "status": "deprecated",
         "temperature": true,
-        "tool_call": true
+        "tool_call": true,
+        "type": "realtime"
       },
       "qwen-plus": {
         "attachment": false,
         "cost": {
+          "context_over_200k": {
+            "input": 1.2,
+            "output": 3.6,
+            "reasoning": 12
+          },
           "input": 0.4,
           "output": 1.2,
-          "reasoning": 4
+          "reasoning": 4,
+          "tiers": [
+            {
+              "input": 1.2,
+              "output": 3.6,
+              "reasoning": 12,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen",
@@ -283,6 +320,7 @@
           }
         ],
         "release_date": "2024-01-25",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -314,7 +352,7 @@
         "reasoning": false,
         "release_date": "2024-01",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "qwen-turbo": {
         "attachment": false,
@@ -352,11 +390,12 @@
           }
         ],
         "release_date": "2024-11-01",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen-vl-max": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.8,
           "output": 3.2
@@ -383,11 +422,12 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-04-08",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen-vl-ocr": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.07,
           "output": 0.16
@@ -418,7 +458,7 @@
         "tool_call": false
       },
       "qwen-vl-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.21,
           "output": 0.63
@@ -445,6 +485,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-01-25",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -475,6 +516,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -505,6 +547,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -535,6 +578,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -565,11 +609,12 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen2-5-omni-7b": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.1,
           "input_audio": 6.76,
@@ -600,11 +645,12 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-12",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen2-5-vl-72b-instruct": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 2.8,
           "output": 8.4
@@ -631,11 +677,12 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen2-5-vl-7b-instruct": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.35,
           "output": 1.05
@@ -662,6 +709,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -701,6 +749,7 @@
           }
         ],
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -740,6 +789,7 @@
           }
         ],
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -779,6 +829,7 @@
           }
         ],
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -818,6 +869,7 @@
           }
         ],
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -849,7 +901,8 @@
         "reasoning": false,
         "release_date": "2025-09-08",
         "temperature": false,
-        "tool_call": false
+        "tool_call": false,
+        "type": "transcription"
       },
       "qwen3-coder-30b-a3b-instruct": {
         "attachment": false,
@@ -896,6 +949,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -944,6 +998,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -951,7 +1006,33 @@
         "attachment": false,
         "cost": {
           "input": 0.3,
-          "output": 1.5
+          "output": 1.5,
+          "tiers": [
+            {
+              "input": 0.5,
+              "output": 2.5,
+              "tier": {
+                "size": 32000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 0.8,
+              "output": 4,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 1.6,
+              "output": 9.6,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen coding model for software agents, repository edits, and code reasoning",
         "family": "qwen",
@@ -974,6 +1055,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-07-28",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -1004,11 +1086,12 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-23",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen3-livetranslate-flash-realtime": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 10,
           "input_audio": 10,
@@ -1040,8 +1123,10 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-09-22",
+        "status": "deprecated",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "realtime"
       },
       "qwen3-max": {
         "attachment": false,
@@ -1070,6 +1155,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-09-23",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -1100,6 +1186,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -1135,11 +1222,12 @@
           }
         ],
         "release_date": "2025-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen3-omni-flash": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.43,
           "input_audio": 3.81,
@@ -1180,7 +1268,7 @@
         "tool_call": true
       },
       "qwen3-omni-flash-realtime": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.52,
           "input_audio": 4.57,
@@ -1212,11 +1300,13 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-09-15",
+        "status": "deprecated",
         "temperature": true,
-        "tool_call": true
+        "tool_call": true,
+        "type": "realtime"
       },
       "qwen3-vl-235b-a22b": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.7,
           "output": 2.8,
@@ -1249,11 +1339,12 @@
           }
         ],
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen3-vl-30b-a3b": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.2,
           "output": 0.8,
@@ -1282,6 +1373,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "budget_tokens"
           }
         ],
@@ -1290,11 +1384,28 @@
         "tool_call": true
       },
       "qwen3-vl-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.2,
           "output": 1.6,
-          "reasoning": 4.8
+          "tiers": [
+            {
+              "input": 0.3,
+              "output": 2.4,
+              "tier": {
+                "size": 32000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 0.6,
+              "output": 4.8,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -1326,6 +1437,7 @@
           }
         ],
         "release_date": "2025-09-23",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -1347,8 +1459,7 @@
           "input": [
             "text",
             "image",
-            "video",
-            "audio"
+            "video"
           ],
           "output": [
             "text"
@@ -1388,8 +1499,7 @@
           "input": [
             "text",
             "image",
-            "video",
-            "audio"
+            "video"
           ],
           "output": [
             "text"
@@ -1429,8 +1539,7 @@
           "input": [
             "text",
             "image",
-            "video",
-            "audio"
+            "video"
           ],
           "output": [
             "text"
@@ -1470,8 +1579,7 @@
           "input": [
             "text",
             "image",
-            "video",
-            "audio"
+            "video"
           ],
           "output": [
             "text"
@@ -1541,11 +1649,25 @@
         "tool_call": true
       },
       "qwen3.5-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
+          "context_over_200k": {
+            "input": 0.5,
+            "output": 3
+          },
           "input": 0.4,
           "output": 2.4,
-          "reasoning": 2.4
+          "reasoning": 2.4,
+          "tiers": [
+            {
+              "input": 0.5,
+              "output": 3,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -1578,6 +1700,7 @@
           }
         ],
         "release_date": "2026-02-16",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -1599,8 +1722,7 @@
           "input": [
             "text",
             "image",
-            "video",
-            "audio"
+            "video"
           ],
           "output": [
             "text"
@@ -1625,8 +1747,8 @@
       "qwen3.6-35b-a3b": {
         "attachment": true,
         "cost": {
-          "input": 0.248,
-          "output": 1.485
+          "input": 0.375,
+          "output": 2.25
         },
         "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
         "family": "qwen",
@@ -1640,8 +1762,7 @@
           "input": [
             "text",
             "image",
-            "video",
-            "audio"
+            "video"
           ],
           "output": [
             "text"
@@ -1666,9 +1787,28 @@
       "qwen3.6-flash": {
         "attachment": true,
         "cost": {
-          "cache_write": 0.234375,
-          "input": 0.1875,
-          "output": 1.125
+          "cache_read": 0.025,
+          "cache_write": 0.3125,
+          "context_over_200k": {
+            "cache_read": 0.1,
+            "cache_write": 1.25,
+            "input": 1,
+            "output": 4
+          },
+          "input": 0.25,
+          "output": 1.5,
+          "tiers": [
+            {
+              "cache_read": 0.1,
+              "cache_write": 1.25,
+              "input": 1,
+              "output": 4,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen3.6",
@@ -1741,11 +1881,12 @@
           }
         ],
         "release_date": "2026-04-20",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen3.6-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.05,
           "cache_write": 0.625,
@@ -1801,6 +1942,7 @@
           }
         ],
         "release_date": "2026-04-02",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -1910,6 +2052,7 @@
           }
         ],
         "release_date": "2026-05-21",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -2029,6 +2172,7 @@
         ],
         "release_date": "2026-08-26",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "qwen3.8-max": {
@@ -2134,6 +2278,7 @@
         ],
         "release_date": "2026-09-17",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "qwq-plus": {
@@ -2164,6 +2309,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-03-05",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       }
@@ -2190,7 +2336,7 @@
     "lobeIcon": "Qwen.Color",
     "models": {
       "qvq-max": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 1.147,
           "output": 4.588
@@ -2218,6 +2364,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-03-25",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -2285,7 +2432,25 @@
         "attachment": false,
         "cost": {
           "input": 0.022,
-          "output": 0.216
+          "output": 0.216,
+          "tiers": [
+            {
+              "input": 0.087,
+              "output": 0.861,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 0.173,
+              "output": 1.721,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Efficient Qwen model for fast chat, extraction, and high-volume workloads",
         "family": "qwen",
@@ -2317,6 +2482,7 @@
           }
         ],
         "release_date": "2025-07-28",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -2347,8 +2513,9 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-01-25",
+        "structured_output": true,
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "qwen-math-plus": {
         "attachment": false,
@@ -2377,6 +2544,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-08-16",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -2407,6 +2575,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-09-19",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -2437,6 +2606,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-04-03",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -2497,11 +2667,12 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-01",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": false
       },
       "qwen-omni-turbo": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.058,
           "input_audio": 3.584,
@@ -2533,11 +2704,12 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-01-19",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen-omni-turbo-realtime": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.23,
           "input_audio": 3.584,
@@ -2568,8 +2740,10 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-05-08",
+        "status": "deprecated",
         "temperature": true,
-        "tool_call": true
+        "tool_call": true,
+        "type": "realtime"
       },
       "qwen-plus": {
         "attachment": false,
@@ -2578,7 +2752,27 @@
           "cache_write": 0.144,
           "input": 0.115,
           "output": 0.287,
-          "reasoning": 1.147
+          "reasoning": 1.147,
+          "tiers": [
+            {
+              "input": 0.345,
+              "output": 2.868,
+              "reasoning": 3.441,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 0.689,
+              "output": 6.881,
+              "reasoning": 9.175,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen",
@@ -2610,6 +2804,7 @@
           }
         ],
         "release_date": "2024-01-25",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -2641,7 +2836,7 @@
         "reasoning": false,
         "release_date": "2024-01",
         "temperature": true,
-        "tool_call": true
+        "tool_call": false
       },
       "qwen-turbo": {
         "attachment": false,
@@ -2680,11 +2875,12 @@
           }
         ],
         "release_date": "2024-11-01",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen-vl-max": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.23,
           "output": 0.574
@@ -2711,11 +2907,12 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-04-08",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen-vl-ocr": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.043,
           "output": 0.072
@@ -2746,7 +2943,7 @@
         "tool_call": false
       },
       "qwen-vl-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.115,
           "output": 0.287
@@ -2773,6 +2970,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-01-25",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -2803,6 +3001,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -2833,6 +3032,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -2863,6 +3063,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -2893,6 +3094,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -2923,6 +3125,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-11",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -2953,6 +3156,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-11",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -2983,6 +3187,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -3013,11 +3218,12 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen2-5-omni-7b": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.087,
           "input_audio": 5.448,
@@ -3048,11 +3254,12 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-12",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen2-5-vl-72b-instruct": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 2.294,
           "output": 6.881
@@ -3079,11 +3286,12 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen2-5-vl-7b-instruct": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.287,
           "output": 0.717
@@ -3110,6 +3318,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -3150,6 +3359,7 @@
           }
         ],
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -3190,6 +3400,7 @@
           }
         ],
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -3230,6 +3441,7 @@
           }
         ],
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -3270,6 +3482,7 @@
           }
         ],
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -3301,7 +3514,8 @@
         "reasoning": false,
         "release_date": "2025-09-08",
         "temperature": false,
-        "tool_call": false
+        "tool_call": false,
+        "type": "transcription"
       },
       "qwen3-coder-30b-a3b-instruct": {
         "attachment": false,
@@ -3348,6 +3562,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -3396,6 +3611,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -3403,7 +3619,33 @@
         "attachment": false,
         "cost": {
           "input": 0.144,
-          "output": 0.574
+          "output": 0.574,
+          "tiers": [
+            {
+              "input": 0.216,
+              "output": 0.861,
+              "tier": {
+                "size": 32000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 0.359,
+              "output": 1.434,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 0.717,
+              "output": 3.584,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen coding model for software agents, repository edits, and code reasoning",
         "family": "qwen",
@@ -3426,6 +3668,7 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-07-28",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -3482,6 +3725,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-23",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -3545,6 +3789,7 @@
           }
         ],
         "release_date": "2026-01-23",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -3576,6 +3821,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -3611,16 +3857,17 @@
           }
         ],
         "release_date": "2025-09",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen3-omni-flash": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
-          "input": 0.058,
-          "input_audio": 3.584,
-          "output": 0.23,
-          "output_audio": 7.168
+          "input": 0.258,
+          "input_audio": 2.265,
+          "output": 0.989,
+          "output_audio": 8.974
         },
         "description": "Qwen omni model for text, vision, audio, and multimodal agent tasks",
         "family": "qwen",
@@ -3656,7 +3903,7 @@
         "tool_call": true
       },
       "qwen3-omni-flash-realtime": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.23,
           "input_audio": 3.584,
@@ -3687,11 +3934,13 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-09-15",
+        "status": "deprecated",
         "temperature": true,
-        "tool_call": true
+        "tool_call": true,
+        "type": "realtime"
       },
       "qwen3-vl-235b-a22b": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.286705,
           "output": 1.14682,
@@ -3720,11 +3969,12 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen3-vl-30b-a3b": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.108,
           "output": 0.431,
@@ -3753,15 +4003,33 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen3-vl-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.143353,
           "output": 1.433525,
-          "reasoning": 4.300576
+          "tiers": [
+            {
+              "input": 0.215,
+              "output": 2.15,
+              "tier": {
+                "size": 32000,
+                "type": "context"
+              }
+            },
+            {
+              "input": 0.43,
+              "output": 4.301,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -3794,11 +4062,12 @@
           }
         ],
         "release_date": "2025-09-23",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
       "qwen3.5-397b-a17b": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "input": 0.172,
           "output": 1.032,
@@ -3847,6 +4116,7 @@
           }
         ],
         "release_date": "2026-02-16",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -3986,9 +4256,28 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.6-flash",
         "cost": {
-          "cache_write": 0.234375,
-          "input": 0.1875,
-          "output": 1.125
+          "cache_read": 0.0165,
+          "cache_write": 0.20625,
+          "context_over_200k": {
+            "cache_read": 0.066,
+            "cache_write": 0.825,
+            "input": 0.66,
+            "output": 3.961
+          },
+          "input": 0.165,
+          "output": 0.99,
+          "tiers": [
+            {
+              "cache_read": 0.066,
+              "cache_write": 0.825,
+              "input": 0.66,
+              "output": 3.961,
+              "tier": {
+                "size": 256000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen3.6",
@@ -4061,29 +4350,30 @@
           }
         ],
         "release_date": "2026-04-20",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
       "qwen3.6-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
-          "cache_read": 0.05,
-          "cache_write": 0.625,
+          "cache_read": 0.0276,
+          "cache_write": 0.345,
           "context_over_200k": {
-            "cache_read": 0.2,
-            "cache_write": 2.5,
-            "input": 2,
-            "output": 6
+            "cache_read": 0.1101,
+            "cache_write": 1.37625,
+            "input": 1.101,
+            "output": 6.602
           },
-          "input": 0.5,
-          "output": 3,
+          "input": 0.276,
+          "output": 1.651,
           "tiers": [
             {
-              "cache_read": 0.2,
-              "cache_write": 2.5,
-              "input": 2,
-              "output": 6,
+              "cache_read": 0.1101,
+              "cache_write": 1.37625,
+              "input": 1.101,
+              "output": 6.602,
               "tier": {
                 "size": 256000,
                 "type": "context"
@@ -4123,6 +4413,7 @@
           }
         ],
         "release_date": "2026-04-02",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -4197,10 +4488,10 @@
         "attachment": false,
         "canonical_model_id": "alibaba/qwen3.7-max",
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 3.125,
-          "input": 2.5,
-          "output": 7.5
+          "cache_read": 0.33,
+          "cache_write": 2.0625,
+          "input": 1.65,
+          "output": 4.951
         },
         "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
         "family": "qwen",
@@ -4231,6 +4522,7 @@
           }
         ],
         "release_date": "2026-05-21",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -4238,18 +4530,24 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.7-plus",
         "cost": {
-          "cache_read": 0.05,
-          "cache_write": 0.625,
-          "input": 0.5,
-          "output": 3,
+          "cache_read": 0.0276,
+          "cache_write": 0.345,
+          "context_over_200k": {
+            "cache_read": 0.0826,
+            "cache_write": 1.0325,
+            "input": 0.826,
+            "output": 3.301
+          },
+          "input": 0.276,
+          "output": 1.101,
           "tiers": [
             {
-              "cache_read": 0.2,
-              "cache_write": 2.5,
-              "input": 2,
-              "output": 6,
+              "cache_read": 0.0826,
+              "cache_write": 1.0325,
+              "input": 0.826,
+              "output": 3.301,
               "tier": {
-                "size": 128000,
+                "size": 256000,
                 "type": "context"
               }
             }
@@ -4287,6 +4585,7 @@
           }
         ],
         "release_date": "2026-06-02",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -4342,6 +4641,7 @@
         ],
         "release_date": "2026-08-26",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "qwen3.8-max": {
@@ -4447,6 +4747,7 @@
         ],
         "release_date": "2026-09-17",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "qwq-32b": {
@@ -4477,6 +4778,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2024-12",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -4508,6 +4810,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-03-05",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -4721,6 +5024,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-02-03",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -4754,6 +5058,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-23",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -4786,11 +5091,12 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2026-01-23",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen3.5-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -4829,7 +5135,7 @@
         "tool_call": true
       },
       "qwen3.6-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -4958,6 +5264,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-02-03",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -4991,6 +5298,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-23",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -5023,11 +5331,12 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2026-01-23",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "qwen3.5-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5065,7 +5374,7 @@
         "tool_call": true
       },
       "qwen3.6-plus": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0,
           "cache_write": 0,
@@ -5192,7 +5501,8 @@
         "reasoning": false,
         "release_date": "2026-07-17",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "video"
       },
       "happyhorse-1.1-r2v": {
         "attachment": true,
@@ -5221,7 +5531,8 @@
         "reasoning": false,
         "release_date": "2026-07-17",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "video"
       },
       "happyhorse-1.1-t2v": {
         "attachment": false,
@@ -5249,7 +5560,8 @@
         "reasoning": false,
         "release_date": "2026-07-17",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "video"
       },
       "qwen-image-2.0": {
         "attachment": false,
@@ -5278,7 +5590,8 @@
         "reasoning": false,
         "release_date": "2026-03-03",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "image"
       },
       "qwen-image-2.0-pro": {
         "attachment": false,
@@ -5307,7 +5620,8 @@
         "reasoning": false,
         "release_date": "2026-03-03",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "image"
       },
       "qwen3.6-flash": {
         "attachment": true,
@@ -5549,6 +5863,7 @@
         ],
         "release_date": "2026-08-26",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "qwen3.8-max": {
@@ -5688,7 +6003,8 @@
         "reasoning": false,
         "release_date": "2026-05-29",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "image"
       },
       "wan2.7-image-pro": {
         "attachment": false,
@@ -5716,7 +6032,8 @@
         "reasoning": false,
         "release_date": "2026-05-29",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "image"
       }
     },
     "name": "Alibaba Token Plan",
@@ -5768,7 +6085,8 @@
         "reasoning": false,
         "release_date": "2026-07-17",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "video"
       },
       "happyhorse-1.1-r2v": {
         "attachment": true,
@@ -5797,7 +6115,8 @@
         "reasoning": false,
         "release_date": "2026-07-17",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "video"
       },
       "happyhorse-1.1-t2v": {
         "attachment": false,
@@ -5825,7 +6144,8 @@
         "reasoning": false,
         "release_date": "2026-07-17",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "video"
       },
       "qwen-image-2.0": {
         "attachment": false,
@@ -5854,7 +6174,8 @@
         "reasoning": false,
         "release_date": "2026-03-03",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "image"
       },
       "qwen-image-2.0-pro": {
         "attachment": false,
@@ -5883,7 +6204,8 @@
         "reasoning": false,
         "release_date": "2026-03-03",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "image"
       },
       "qwen3.6-flash": {
         "attachment": true,
@@ -6125,6 +6447,7 @@
         ],
         "release_date": "2026-08-26",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "qwen3.8-max": {
@@ -6264,7 +6587,8 @@
         "reasoning": false,
         "release_date": "2026-05-29",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "image"
       },
       "wan2.7-image-pro": {
         "attachment": false,
@@ -6292,7 +6616,8 @@
         "reasoning": false,
         "release_date": "2026-05-29",
         "temperature": true,
-        "tool_call": false
+        "tool_call": false,
+        "type": "image"
       }
     },
     "name": "Alibaba Token Plan (China)",
@@ -7323,6 +7648,10 @@
       "c4ai-aya-expanse-32b": {
         "attachment": false,
         "canonical_model_id": "cohere/c4ai-aya-expanse-32b",
+        "cost": {
+          "input": 0.5,
+          "output": 1.5
+        },
         "description": "Open multilingual model optimized for generation across 23 languages",
         "id": "c4ai-aya-expanse-32b",
         "last_updated": "2024-10-24",
@@ -7342,6 +7671,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-10-24",
+        "structured_output": false,
         "temperature": true,
         "tool_call": false
       },
@@ -7368,6 +7698,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-03-04",
+        "structured_output": false,
         "temperature": true,
         "tool_call": false
       },
@@ -7399,6 +7730,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-03-13",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -7481,6 +7813,7 @@
           }
         ],
         "release_date": "2025-08-21",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -7512,6 +7845,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-08-28",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -7544,6 +7878,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-31",
+        "structured_output": true,
         "temperature": true,
         "tool_call": false
       },
@@ -7575,6 +7910,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-08-30",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -7606,6 +7942,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-08-30",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -7620,7 +7957,7 @@
         "family": "command-r",
         "id": "command-r7b-12-2024",
         "knowledge": "2024-06-01",
-        "last_updated": "2024-12-02",
+        "last_updated": "2024-12-13",
         "limit": {
           "context": 128000,
           "output": 4000
@@ -7636,7 +7973,8 @@
         "name": "Command R7B",
         "open_weights": true,
         "reasoning": false,
-        "release_date": "2024-12-02",
+        "release_date": "2024-12-13",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -7668,6 +8006,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-02-27",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -7715,7 +8054,7 @@
           }
         ],
         "release_date": "2026-06-09",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -7746,6 +8085,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-09-09",
+        "structured_output": false,
         "temperature": true,
         "tool_call": false
       },
@@ -7771,6 +8111,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-02-17",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -7796,6 +8137,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-02-17",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -7821,6 +8163,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-02-17",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -7846,6 +8189,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-02-17",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       }
@@ -9795,6 +10139,69 @@
         "tool_call": false,
         "type": "video"
       },
+      "gemini-pro-latest": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-3.1-pro-preview",
+        "cost": {
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18
+          },
+          "input": 2,
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Reasoning-first Gemini preview for agentic coding and complex problem solving",
+        "family": "gemini-pro",
+        "id": "gemini-pro-latest",
+        "knowledge": "2025-01",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini Pro Latest",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-02-19",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gemma-4-26b-a4b-it": {
         "attachment": true,
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
@@ -10109,6 +10516,47 @@
         "temperature": true,
         "tool_call": true
       },
+      "mercury-3": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.01,
+          "input": 0.1,
+          "output": 0.35
+        },
+        "description": "Inception's diffusion reasoning model for chat, multi-step problem solving, and tool use",
+        "family": "mercury",
+        "id": "mercury-3",
+        "last_updated": "2026-10-20",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mercury 3",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-10-16",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "mercury-edit-2": {
         "attachment": false,
         "cost": {
@@ -10408,7 +10856,7 @@
           ]
         },
         "name": "LongCat-2.0",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -18359,6 +18807,7 @@
         ],
         "release_date": "2026-09-16",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "step-tts-2": {
@@ -18692,6 +19141,7 @@
         ],
         "release_date": "2026-09-16",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "step-tts-2": {
@@ -18945,6 +19395,7 @@
         ],
         "release_date": "2026-09-16",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       }
     },
@@ -19125,6 +19576,7 @@
         ],
         "release_date": "2026-09-16",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "step-router-v1": {
@@ -20465,7 +20917,7 @@
         ],
         "release_date": "2026-02-14",
         "structured_output": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "doubao-seed-2-1-pro-260628": {

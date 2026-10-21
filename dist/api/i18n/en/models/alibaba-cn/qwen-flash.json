@@ -2,7 +2,25 @@
   "attachment": false,
   "cost": {
     "input": 0.022,
-    "output": 0.216
+    "output": 0.216,
+    "tiers": [
+      {
+        "input": 0.087,
+        "output": 0.861,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      },
+      {
+        "input": 0.173,
+        "output": 1.721,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Efficient Qwen model for fast chat, extraction, and high-volume workloads",
   "family": "qwen",
@@ -34,6 +52,7 @@
     }
   ],
   "release_date": "2025-07-28",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }
