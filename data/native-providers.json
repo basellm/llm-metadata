@@ -73,8 +73,19 @@
       "excludeModels": ["^deepseek", "^glm", "^kimi", "^llama", "^meta-llama", "^minimax", "^moonshot", "^abab"],
       "thinkingToggle": { "param": "enable_thinking", "value": true }
     },
-    "moonshotai": { "priority": 20, "lobeIcon": "Moonshot" },
-    "moonshotai-cn": { "priority": 10, "lobeIcon": "Moonshot", "currency": "CNY" },
+    "moonshotai": {
+      "priority": 20,
+      "lobeIcon": "Moonshot",
+      "cacheWrite1h": 2,
+      "notes": "kimi-k3 1-hour prompt cache writes cost 2x base input (5-minute writes are the cache_write price). new-api splits out 1-hour writes only from Anthropic-format usage."
+    },
+    "moonshotai-cn": {
+      "priority": 10,
+      "lobeIcon": "Moonshot",
+      "currency": "CNY",
+      "cacheWrite1h": 2,
+      "notes": "kimi-k3 1-hour prompt cache writes cost 2x base input (5-minute writes are the cache_write price). new-api splits out 1-hour writes only from Anthropic-format usage."
+    },
     "kimi-for-coding": { "priority": 5, "lobeIcon": "Kimi.Color", "subscription": true },
     "zai": { "priority": 20, "lobeIcon": "ZAI", "notes": "Z.AI international endpoint; preferred USD pricing for GLM models." },
     "zhipuai": { "priority": 10, "lobeIcon": "Zhipu.Color", "currency": "CNY" },

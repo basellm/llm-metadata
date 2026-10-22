@@ -65,7 +65,7 @@ npm run build
 - `priority`、`thinkingToggle`、`cacheWrite1h`、`cacheWrite12h` 还会合并为 `billing` 字段输出到供应商 JSON 与 `providers.json`，使客户端（包括 Web UI）能自行重新生成 new-api 表达式。
 - `exchangeRates`——每 1 USD 对应的货币数量，用于将非美元价格（如人民币）换算为 NewAPI 计费表达式中的美元系数与 VoAPI 价格。缺少汇率的货币会跳过价格输出并给出构建警告。
 - `thinkingToggle`——该供应商混合推理模型切换到思考模式的请求体字段（gjson 路径）与取值。当模型 `cost.reasoning` 与 `cost.output` 不同时，表达式以 `param("<param>") == <value>` 为条件按 reasoning 价计输出 tokens；未配置时按 output 价计费并给出构建警告。
-- `cacheWrite1h` / `cacheWrite12h`——长效提示缓存写入价相对同档输入价的倍数（Anthropic 1 小时 TTL 为 2；OpenAI GPT-5.6+ 12 小时 TTL 为 2.5）。对含 `cache_write` 价（models.dev 的短效写入价：Anthropic 5 分钟、OpenAI 30 分钟）的模型，在 `cc` 旁额外输出 `cc1h` / `cc12h` 项，使每种 TTL 都显式计价、不依赖 new-api 内置的兜底倍数；模型页在缓存写价旁列出这些价格。`cc12h` 需要支持该变量的 new-api 版本。
+- `cacheWrite1h` / `cacheWrite12h`——长效提示缓存写入价相对同档输入价的倍数（Anthropic 与 Kimi 1 小时 TTL 为 2；OpenAI GPT-5.6+ 12 小时 TTL 为 2.5）。对含 `cache_write` 价（短效写入价：Anthropic 与 Kimi 5 分钟、OpenAI 30 分钟）的模型，在 `cc` 旁额外输出 `cc1h` / `cc12h` 项，使每种 TTL 都显式计价、不依赖 new-api 内置的兜底倍数；模型页在缓存写价旁列出这些价格。`cc12h` 需要支持该变量的 new-api 版本；new-api 仅从 Anthropic 格式的用量中拆出 `cc1h`，故 Kimi 的 1 小时写入只在其 Anthropic 兼容端点上单独计价。
 - `lobeIcon`——[@lobehub/icons](https://github.com/lobehub/lobe-icons) 的导出名（如 `Claude.Color`），作为 NewAPI `vendors.json` 中的厂商图标。
 - 若该文件缺失，过滤将被禁用并输出构建警告。
 

@@ -65,7 +65,7 @@ npm run build
 - `priority`、`thinkingToggle`、`cacheWrite1h`、`cacheWrite12h` はまとめて `billing` としてプロバイダー JSON と `providers.json` にも出力され、クライアント（Web UI を含む）が new-api の式を自ら再生成できます。
 - `exchangeRates` — 1 USD あたりの通貨単位。非 USD 価格（例: 人民元）を NewAPI 課金式の USD 係数および VoAPI 価格へ正規化するために使用します。レート未設定の通貨は価格出力からスキップされ、ビルド警告が出ます。
 - `thinkingToggle` — そのプロバイダーのハイブリッド推論モデルを思考モードに切り替えるリクエストボディのフィールド（gjson パス）と値。モデルの `cost.reasoning` が `cost.output` と異なる場合、式は `param("<param>") == <value>` を条件に出力トークンを reasoning 価格で課金します。未設定なら output 価格が適用され、ビルド警告が出ます。
-- `cacheWrite1h` / `cacheWrite12h` — 長期プロンプトキャッシュ書き込み価格を同じ段階の入力価格の倍率で指定（Anthropic の 1 時間 TTL は 2、OpenAI GPT-5.6+ の 12 時間 TTL は 2.5）。`cache_write` 価格（models.dev の短期書き込み価格：Anthropic は 5 分、OpenAI は 30 分）を持つモデルでは `cc` の隣に `cc1h` / `cc12h` 項を出力し、new-api 組み込みのフォールバック倍率に頼らずすべての TTL を明示的に課金します。モデルページではキャッシュ書込価格の横にこれらの価格を表示します。`cc12h` には対応する new-api バージョンが必要です。
+- `cacheWrite1h` / `cacheWrite12h` — 長期プロンプトキャッシュ書き込み価格を同じ段階の入力価格の倍率で指定（Anthropic と Kimi の 1 時間 TTL は 2、OpenAI GPT-5.6+ の 12 時間 TTL は 2.5）。`cache_write` 価格（短期書き込み価格：Anthropic と Kimi は 5 分、OpenAI は 30 分）を持つモデルでは `cc` の隣に `cc1h` / `cc12h` 項を出力し、new-api 組み込みのフォールバック倍率に頼らずすべての TTL を明示的に課金します。モデルページではキャッシュ書込価格の横にこれらの価格を表示します。`cc12h` には対応する new-api バージョンが必要です。new-api は Anthropic 形式の使用量からのみ `cc1h` を取り出すため、Kimi の 1 時間書き込みは Anthropic 互換エンドポイントでのみ個別に課金されます。
 - `lobeIcon` — [@lobehub/icons](https://github.com/lobehub/lobe-icons) のエクスポート名（例: `Claude.Color`）。NewAPI `vendors.json` のベンダーアイコンとして使用されます。
 - このファイルが存在しない場合、フィルタリングは無効になり、ビルド警告が出力されます。
 
