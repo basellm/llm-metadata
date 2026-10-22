@@ -63,7 +63,22 @@ export interface BillingExprOptions {
     thinkingToggle?: ThinkingToggle;
     /** 1 小时 TTL 缓存写入价相对 input 价的倍数（Anthropic 为 2）；缺省不输出 cc1h 项 */
     cacheWrite1h?: number;
+    /** 12 小时 TTL 缓存写入价相对 input 价的倍数（OpenAI 为 2.5）；缺省不输出 cc12h 项 */
+    cacheWrite12h?: number;
 }
+/**
+ * 长效缓存写入档：供应商规则字段 → new-api 表达式变量。
+ * 价格 = 同档 input × 倍数，仅对定义了 cache_write（短效写入价）的模型生效。
+ */
+export declare const LONG_CACHE_WRITES: readonly [{
+    readonly option: "cacheWrite1h";
+    readonly variable: "cc1h";
+    readonly ttl: "1h";
+}, {
+    readonly option: "cacheWrite12h";
+    readonly variable: "cc12h";
+    readonly ttl: "12h";
+}];
 /**
  * 供应商级计费规则（native-providers.json），随供应商数据以 provider.billing 输出，
  * 使浏览器端能按任意 new-api 部署重新生成表达式与聚合价格配置。

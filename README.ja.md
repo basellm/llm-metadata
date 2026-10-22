@@ -43,7 +43,7 @@ npm run build
   "version": 1,
   "exchangeRates": { "CNY": 7.3, "EUR": 0.92 },
   "providers": {
-    "openai": { "lobeIcon": "OpenAI" },
+    "openai": { "lobeIcon": "OpenAI", "cacheWrite12h": 2.5 },
     "anthropic": { "lobeIcon": "Claude.Color", "cacheWrite1h": 2 },
     "zai": { "priority": 20, "lobeIcon": "ZAI" },
     "zai-coding-plan": { "priority": 5, "lobeIcon": "ZAI", "subscription": true },
@@ -62,10 +62,10 @@ npm run build
 - `priority` — 同一ベンダーの複数エンドポイント（例: `zai` と `zhipuai`）間で同名モデルが競合した場合の解決に使用。集約 NewAPI 出力では値が大きい方が優先され、同値の場合はプロバイダー ID 順になります。`/api/newapi/providers/<id>/` 配下のプロバイダー別ファイルには常にそのプロバイダー自身の価格が保持されます。
 - `currency` — エンドポイントの請求通貨（既定 `USD`）。プロバイダー JSON と `providers.json` に `currency` として出力されます。モデル価格との関係は [請求通貨](#請求通貨) を参照。
 - `subscription` — 前払いプラン型エンドポイント（Token Plan / Coding Plan）を示します。利用量はサブスクリプションのクォータから差し引かれるため、上流のトークン単価は `0` で情報を持ちません。プロバイダー JSON と `providers.json` に `subscription: true` として出力され、Web UI はこれらのエンドポイントを一覧に表示しません（JSON API と NewAPI/VoAPI の出力には残ります）。
-- `priority`、`thinkingToggle`、`cacheWrite1h` はまとめて `billing` としてプロバイダー JSON と `providers.json` にも出力され、クライアント（Web UI を含む）が new-api の式を自ら再生成できます。
+- `priority`、`thinkingToggle`、`cacheWrite1h`、`cacheWrite12h` はまとめて `billing` としてプロバイダー JSON と `providers.json` にも出力され、クライアント（Web UI を含む）が new-api の式を自ら再生成できます。
 - `exchangeRates` — 1 USD あたりの通貨単位。非 USD 価格（例: 人民元）を NewAPI 課金式の USD 係数および VoAPI 価格へ正規化するために使用します。レート未設定の通貨は価格出力からスキップされ、ビルド警告が出ます。
 - `thinkingToggle` — そのプロバイダーのハイブリッド推論モデルを思考モードに切り替えるリクエストボディのフィールド（gjson パス）と値。モデルの `cost.reasoning` が `cost.output` と異なる場合、式は `param("<param>") == <value>` を条件に出力トークンを reasoning 価格で課金します。未設定なら output 価格が適用され、ビルド警告が出ます。
-- `cacheWrite1h` — 1 時間 TTL のプロンプトキャッシュ書き込み価格を入力価格の倍率で指定（Anthropic は 2）。`cc`（models.dev の `cache_write` 価格）の隣に `cc1h` 項を出力します。未設定の場合、new-api は Claude 形式の 1h キャッシュ書き込みを課金しません。
+- `cacheWrite1h` / `cacheWrite12h` — 長期プロンプトキャッシュ書き込み価格を同じ段階の入力価格の倍率で指定（Anthropic の 1 時間 TTL は 2、OpenAI GPT-5.6+ の 12 時間 TTL は 2.5）。`cache_write` 価格（models.dev の短期書き込み価格：Anthropic は 5 分、OpenAI は 30 分）を持つモデルでは `cc` の隣に `cc1h` / `cc12h` 項を出力し、new-api 組み込みのフォールバック倍率に頼らずすべての TTL を明示的に課金します。モデルページではキャッシュ書込価格の横にこれらの価格を表示します。`cc12h` には対応する new-api バージョンが必要です。
 - `lobeIcon` — [@lobehub/icons](https://github.com/lobehub/lobe-icons) のエクスポート名（例: `Claude.Color`）。NewAPI `vendors.json` のベンダーアイコンとして使用されます。
 - このファイルが存在しない場合、フィルタリングは無効になり、ビルド警告が出力されます。
 
@@ -92,6 +92,7 @@ models.dev には通貨の概念がなく、すべての価格が USD の数値�
 | 価格形態                                    | 元フィールド                                                | 式                                                                                                                     |
 | ------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | 単一価格                                    | `input`, `output`, `cache_read`, `cache_write`, `*_audio`   | `tier("standard", p * 3 + cr * 0.3 + cc * 3.75 + cc1h * 6 + c * 15)`                                                   |
+| 長期キャッシュ書き込み（`cacheWrite12h`）   | `cache_write` + プロバイダー倍率 × `input`                  | `tier("standard", p * 2 + cr * 0.1 + cc * 2.5 + cc12h * 5 + c * 10)`                                                   |
 | コンテキスト段階                            | `tiers[]`（`context_over_200k` はレガシーのフォールバック） | `len <= 200000 ? tier("0_200k", …) : tier("200k_plus", …)`                                                             |
 | 思考モード（プロバイダーの `thinkingToggle`）| `reasoning` ≠ `output`                                      | `param("enable_thinking") == true ? tier("thinking", p * 0.4 + c * 4) : tier("standard", p * 0.4 + c * 1.2)`            |
 | 時間帯別（ピーク/オフピーク）               | `schedule`（上書き拡張、下記参照）                          | `weekday("UTC") >= 1 && weekday("UTC") <= 5 && ((hour("UTC") >= 1 && hour("UTC") < 4) \|\| …) ? tier("peak", …) : tier("off_peak", …)` |

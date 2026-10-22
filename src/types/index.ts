@@ -66,7 +66,7 @@ export interface ProviderBase {
   currency?: Currency;
   /** 订阅套餐端点（Token Plan / Coding Plan）：用量从预付额度抵扣，上游 0 价不具信息量；仅为 true 时输出 */
   subscription?: boolean;
-  /** new-api 计费规则（优先级、思考开关、1h 缓存写倍数）；无规则时省略 */
+  /** new-api 计费规则（优先级、思考开关、长效缓存写倍数）；无规则时省略 */
   billing?: ProviderBillingRule;
 }
 

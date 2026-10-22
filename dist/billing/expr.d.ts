@@ -14,7 +14,7 @@
  * - 时段条件采用 new-api 前端可结构化展示的形状：
  *   weekday(tz) >= a && weekday(tz) <= b && ((hour(tz) >= s && hour(tz) < e) || …)。
  */
-import type { BillingExprOptions, ModelCost } from './cost.js';
+import { type BillingExprOptions, type ModelCost } from './cost.js';
 import { type PlaneRates } from './plane.js';
 /** 表达式系数的计价单位：token 为每 1M tokens 价，image 为 fixed() 每张价 */
 export type BillingExprUnit = 'token' | 'image';

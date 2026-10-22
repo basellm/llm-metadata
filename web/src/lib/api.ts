@@ -46,7 +46,7 @@ export interface Provider {
   currency?: string;
   /** 订阅套餐端点（Token Plan / Coding Plan）：用量从预付额度抵扣，逐 token 价目不适用 */
   subscription?: boolean;
-  /** new-api 计费规则（思考开关、1h 缓存写倍数、聚合优先级） */
+  /** new-api 计费规则（思考开关、长效缓存写倍数、聚合优先级） */
   billing?: ProviderBillingRule;
   models: Record<string, Model>;
 }

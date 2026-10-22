@@ -43,7 +43,7 @@ Catalog: `data/native-providers.json`
   "version": 1,
   "exchangeRates": { "CNY": 7.3, "EUR": 0.92 },
   "providers": {
-    "openai": { "lobeIcon": "OpenAI" },
+    "openai": { "lobeIcon": "OpenAI", "cacheWrite12h": 2.5 },
     "anthropic": { "lobeIcon": "Claude.Color", "cacheWrite1h": 2 },
     "zai": { "priority": 20, "lobeIcon": "ZAI" },
     "zai-coding-plan": { "priority": 5, "lobeIcon": "ZAI", "subscription": true },
@@ -62,10 +62,10 @@ Catalog: `data/native-providers.json`
 - `priority` — resolves model-ID conflicts across regional/plan endpoints of the same vendor (e.g., `zai` vs `zhipuai`) in the aggregated NewAPI outputs; the highest value wins, ties break by provider ID. Per-provider files under `/api/newapi/providers/<id>/` always keep that provider's own prices.
 - `currency` — the endpoint's billing currency (default `USD`); emitted as `currency` on the provider JSON and in `providers.json`. See [Billing currencies](#billing-currencies) for how it interacts with model prices.
 - `subscription` — marks a prepaid-plan endpoint (Token Plan / Coding Plan): usage is drawn down from a subscription quota, so the upstream per-token prices are `0` and carry no information. Emitted as `subscription: true` on the provider JSON and in `providers.json`; the web UI does not list these endpoints, while the JSON API and the NewAPI/VoAPI outputs keep them.
-- `priority`, `thinkingToggle`, `cacheWrite1h` are also emitted together as `billing` on the provider JSON and in `providers.json`, so clients (including the web UI) can regenerate new-api expressions themselves.
+- `priority`, `thinkingToggle`, `cacheWrite1h`, `cacheWrite12h` are also emitted together as `billing` on the provider JSON and in `providers.json`, so clients (including the web UI) can regenerate new-api expressions themselves.
 - `exchangeRates` — currency units per 1 USD, used to normalize non-USD costs (e.g., CNY) into the USD coefficients of NewAPI billing expressions and VoAPI prices. Models with an unknown currency are skipped from pricing outputs with a build warning.
 - `thinkingToggle` — request-body field (gjson path) and value that switch the provider's hybrid models into thinking mode. When a model's `cost.reasoning` differs from `cost.output`, the expression bills completion tokens at the reasoning price behind `param("<param>") == <value>`. Without it the output price applies and the build warns.
-- `cacheWrite1h` — 1-hour-TTL prompt-cache write price as a multiple of the input price (Anthropic: 2). Emits a `cc1h` term next to `cc` (the models.dev `cache_write` price); new-api otherwise leaves 1h cache writes unpriced for Claude-format usage.
+- `cacheWrite1h` / `cacheWrite12h` — long-lived prompt-cache write price as a multiple of the same tier's input price (Anthropic 1-hour TTL: 2; OpenAI GPT-5.6+ 12-hour TTL: 2.5). On models with a `cache_write` price (the models.dev short-lived write: Anthropic 5 minutes, OpenAI 30 minutes) a `cc1h` / `cc12h` term is emitted next to `cc`, so every TTL is priced explicitly instead of through new-api's built-in fallback multiple; the model page lists these prices next to the cache write price. `cc12h` needs a new-api build that supports it.
 - `lobeIcon` — [@lobehub/icons](https://github.com/lobehub/lobe-icons) export name (e.g., `Claude.Color`) used as the vendor icon in NewAPI `vendors.json`.
 - If the file is missing, filtering is disabled and the build emits a warning.
 
@@ -92,6 +92,7 @@ Every priced model is published as a new-api billing expression (`billing_mode: 
 | Pricing shape                              | Source fields                                                | Expression                                                                                                           |
 | ------------------------------------------ | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
 | Flat                                       | `input`, `output`, `cache_read`, `cache_write`, `*_audio`    | `tier("standard", p * 3 + cr * 0.3 + cc * 3.75 + cc1h * 6 + c * 15)`                                                 |
+| Long-lived cache writes (`cacheWrite12h`)  | `cache_write` + provider multiple × `input`                  | `tier("standard", p * 2 + cr * 0.1 + cc * 2.5 + cc12h * 5 + c * 10)`                                                 |
 | Context tiers                              | `tiers[]` (`context_over_200k` as legacy fallback)           | `len <= 200000 ? tier("0_200k", …) : tier("200k_plus", …)`                                                           |
 | Thinking mode (provider `thinkingToggle`)  | `reasoning` ≠ `output`                                       | `param("enable_thinking") == true ? tier("thinking", p * 0.4 + c * 4) : tier("standard", p * 0.4 + c * 1.2)`          |
 | Time-of-day windows                        | `schedule` (override extension, see below)                   | `weekday("UTC") >= 1 && weekday("UTC") <= 5 && ((hour("UTC") >= 1 && hour("UTC") < 4) \|\| …) ? tier("peak", …) : tier("off_peak", …)` |

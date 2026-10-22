@@ -1,6 +1,7 @@
+import { LONG_CACHE_WRITES } from '@billing/cost';
 import { isCurrency } from '@billing/currencies';
 
-import type { ModelCost } from './api';
+import type { ModelCost, ProviderBillingRule } from './api';
 import { currencySymbol, formatContext, formatMoney, formatTokenPrice } from './format';
 import type { Locale, MessageKey, Translator } from './i18n';
 import { describeWindow, isSchedule, isWindowActive, type Schedule } from './schedule';
@@ -415,6 +416,24 @@ export function parseModelPricing(
     sections,
     alternates,
   };
+}
+
+/** 供应商定义的长效缓存写入档（如 OpenAI 12h：input × 2.5） */
+export interface LongCacheWrite {
+  ttl: string;
+  multiplier: number;
+}
+
+export function longCacheWrites(billing: ProviderBillingRule | undefined): LongCacheWrite[] {
+  return LONG_CACHE_WRITES.flatMap(({ option, ttl }) => {
+    const multiplier = billing?.[option];
+    return multiplier === undefined ? [] : [{ ttl, multiplier }];
+  });
+}
+
+/** 长效缓存写入价：与计费表达式一致，仅当该档有短效写入价时按同档 input 价换算 */
+export function longCacheWritePrice(cells: PriceCells, multiplier: number): number | null {
+  return cells.cacheWrite === null || cells.input === null ? null : cells.input * multiplier;
 }
 
 /** 主行 / 卡片的价格单元格文案：输入列无 token 价时回退为按量摘要（如 "¥0.08/s"） */

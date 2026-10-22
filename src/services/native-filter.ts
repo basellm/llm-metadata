@@ -1,4 +1,5 @@
 import { COST_FAMILIES } from '../billing/cost-families.js';
+import { LONG_CACHE_WRITES } from '../billing/cost.js';
 import { isCurrency, type Currency } from '../billing/currencies.js';
 import type {
   CurrencyOptions,
@@ -110,10 +111,11 @@ export class NativeFilter {
         sanitized.thinkingToggle = { param, value };
       } else warn('thinkingToggle', 'needs a non-empty param and a boolean/string/number value');
     }
-    if (rule.cacheWrite1h !== undefined) {
-      if (typeof rule.cacheWrite1h === 'number' && rule.cacheWrite1h > 0) {
-        sanitized.cacheWrite1h = rule.cacheWrite1h;
-      } else warn('cacheWrite1h', 'must be a positive number');
+    for (const { option } of LONG_CACHE_WRITES) {
+      const multiplier = rule[option];
+      if (multiplier === undefined) continue;
+      if (typeof multiplier === 'number' && multiplier > 0) sanitized[option] = multiplier;
+      else warn(option, 'must be a positive number');
     }
     return sanitized;
   }

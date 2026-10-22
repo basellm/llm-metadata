@@ -43,7 +43,7 @@ npm run build
   "version": 1,
   "exchangeRates": { "CNY": 7.3, "EUR": 0.92 },
   "providers": {
-    "openai": { "lobeIcon": "OpenAI" },
+    "openai": { "lobeIcon": "OpenAI", "cacheWrite12h": 2.5 },
     "anthropic": { "lobeIcon": "Claude.Color", "cacheWrite1h": 2 },
     "zai": { "priority": 20, "lobeIcon": "ZAI" },
     "zai-coding-plan": { "priority": 5, "lobeIcon": "ZAI", "subscription": true },
@@ -62,10 +62,10 @@ npm run build
 - `priority`——解决同一厂商多端点（如 `zai` 与 `zhipuai`）在聚合 NewAPI 输出中的同名模型冲突；数值大者胜出，相同时按供应商 ID 排序。`/api/newapi/providers/<id>/` 下的按供应商文件始终保留该供应商自己的价格。
 - `currency`——端点的结算货币（默认 `USD`），会作为 `currency` 字段输出到供应商 JSON 与 `providers.json`。与模型价格的关系见[结算货币](#结算货币)。
 - `subscription`——标记预付套餐端点（Token Plan / Coding Plan）：用量从订阅额度中抵扣，上游逐 token 价格均为 `0`、不具信息量。会作为 `subscription: true` 输出到供应商 JSON 与 `providers.json`；Web UI 不列出这些端点，JSON API 与 NewAPI/VoAPI 输出仍保留。
-- `priority`、`thinkingToggle`、`cacheWrite1h` 还会合并为 `billing` 字段输出到供应商 JSON 与 `providers.json`，使客户端（包括 Web UI）能自行重新生成 new-api 表达式。
+- `priority`、`thinkingToggle`、`cacheWrite1h`、`cacheWrite12h` 还会合并为 `billing` 字段输出到供应商 JSON 与 `providers.json`，使客户端（包括 Web UI）能自行重新生成 new-api 表达式。
 - `exchangeRates`——每 1 USD 对应的货币数量，用于将非美元价格（如人民币）换算为 NewAPI 计费表达式中的美元系数与 VoAPI 价格。缺少汇率的货币会跳过价格输出并给出构建警告。
 - `thinkingToggle`——该供应商混合推理模型切换到思考模式的请求体字段（gjson 路径）与取值。当模型 `cost.reasoning` 与 `cost.output` 不同时，表达式以 `param("<param>") == <value>` 为条件按 reasoning 价计输出 tokens；未配置时按 output 价计费并给出构建警告。
-- `cacheWrite1h`——1 小时 TTL 提示缓存写入价相对输入价的倍数（Anthropic 为 2）。在 `cc`（models.dev 的 `cache_write` 价）旁额外输出 `cc1h` 项；否则 new-api 对 Claude 格式用量的 1h 缓存写入不计费。
+- `cacheWrite1h` / `cacheWrite12h`——长效提示缓存写入价相对同档输入价的倍数（Anthropic 1 小时 TTL 为 2；OpenAI GPT-5.6+ 12 小时 TTL 为 2.5）。对含 `cache_write` 价（models.dev 的短效写入价：Anthropic 5 分钟、OpenAI 30 分钟）的模型，在 `cc` 旁额外输出 `cc1h` / `cc12h` 项，使每种 TTL 都显式计价、不依赖 new-api 内置的兜底倍数；模型页在缓存写价旁列出这些价格。`cc12h` 需要支持该变量的 new-api 版本。
 - `lobeIcon`——[@lobehub/icons](https://github.com/lobehub/lobe-icons) 的导出名（如 `Claude.Color`），作为 NewAPI `vendors.json` 中的厂商图标。
 - 若该文件缺失，过滤将被禁用并输出构建警告。
 
@@ -92,6 +92,7 @@ models.dev 没有货币概念：所有价格都是美元数字，包括官方以
 | 定价形态                              | 来源字段                                                    | 表达式                                                                                                                 |
 | ------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | 单一价                                | `input`、`output`、`cache_read`、`cache_write`、`*_audio`   | `tier("standard", p * 3 + cr * 0.3 + cc * 3.75 + cc1h * 6 + c * 15)`                                                   |
+| 长效缓存写入（`cacheWrite12h`）       | `cache_write` + 供应商倍数 × `input`                        | `tier("standard", p * 2 + cr * 0.1 + cc * 2.5 + cc12h * 5 + c * 10)`                                                   |
 | 上下文阶梯                            | `tiers[]`（`context_over_200k` 为遗留回退）                 | `len <= 200000 ? tier("0_200k", …) : tier("200k_plus", …)`                                                             |
 | 思考模式（供应商 `thinkingToggle`）   | `reasoning` ≠ `output`                                      | `param("enable_thinking") == true ? tier("thinking", p * 0.4 + c * 4) : tier("standard", p * 0.4 + c * 1.2)`            |
 | 分时段（波峰/波谷）                   | `schedule`（覆写扩展，见下文）                              | `weekday("UTC") >= 1 && weekday("UTC") <= 5 && ((hour("UTC") >= 1 && hour("UTC") < 4) \|\| …) ? tier("peak", …) : tier("off_peak", …)` |

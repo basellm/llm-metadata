@@ -53,8 +53,11 @@ import { useI18n, type MessageKey } from '@/lib/i18n';
 import { CORE_MODALITIES, MODALITY_META, modalityLabel } from '@/lib/modalities';
 import { modelExpr, useNewApi } from '@/lib/newapi';
 import {
+  longCacheWritePrice,
+  longCacheWrites,
   parseModelPricing,
   type DetailSection as PricingSection,
+  type LongCacheWrite,
   type ModelPricing,
 } from '@/lib/pricing';
 import { cn } from '@/lib/utils';
@@ -87,6 +90,13 @@ const PRICE_CARDS = [
   { labelKey: 'table.cacheWrite', column: 'cacheWrite' },
   { labelKey: 'table.output', column: 'output' },
 ] as const;
+
+/** 基础价卡片；extras 为附在主价下方的长效缓存写入价 */
+interface PriceCard {
+  label: string;
+  value: number;
+  extras: Array<{ ttl: string; label: string; price: string }>;
+}
 
 /** 概览条单元格 */
 function StatCell({ label, value, sub }: { label: string; value: ReactNode; sub?: string }) {
@@ -138,8 +148,19 @@ function StatusItem({
 }
 
 /** 价格明细分组 → 迷你表格 */
-function PricingSectionTable({ section, symbol }: { section: PricingSection; symbol: string }) {
+function PricingSectionTable({
+  section,
+  symbol,
+  longWrites,
+}: {
+  section: PricingSection;
+  symbol: string;
+  longWrites: LongCacheWrite[];
+}) {
   const { t } = useI18n();
+  const columns = longWrites.filter(({ multiplier }) =>
+    section.rows.some((row) => longCacheWritePrice(row, multiplier) !== null),
+  );
   return (
     <div className="mt-4">
       <div className="text-muted-foreground mb-2 text-[11px] font-medium tracking-wider uppercase">
@@ -153,6 +174,11 @@ function PricingSectionTable({ section, symbol }: { section: PricingSection; sym
               <TableHead className="text-right">{t('table.input')}</TableHead>
               <TableHead className="text-right">{t('table.cacheRead')}</TableHead>
               <TableHead className="text-right">{t('table.cacheWrite')}</TableHead>
+              {columns.map(({ ttl }) => (
+                <TableHead key={ttl} className="text-right">
+                  {t('table.cacheWriteTtl', { ttl })}
+                </TableHead>
+              ))}
               <TableHead className="text-right">{t('table.output')}</TableHead>
             </TableRow>
           </TableHeader>
@@ -172,6 +198,11 @@ function PricingSectionTable({ section, symbol }: { section: PricingSection; sym
                 <TableCell className={cn(NUMERIC_CELL, 'text-muted-foreground')}>
                   {formatTokenPrice(symbol, row.cacheWrite)}
                 </TableCell>
+                {columns.map(({ ttl, multiplier }) => (
+                  <TableCell key={ttl} className={cn(NUMERIC_CELL, 'text-muted-foreground')}>
+                    {formatTokenPrice(symbol, longCacheWritePrice(row, multiplier))}
+                  </TableCell>
+                ))}
                 <TableCell className={NUMERIC_CELL}>
                   {formatTokenPrice(symbol, row.output)}
                 </TableCell>
@@ -189,22 +220,40 @@ function PriceBlock({
   pricing,
   title,
   hint,
+  longWrites,
 }: {
   pricing: ModelPricing;
   title: string;
   hint: string;
+  longWrites: LongCacheWrite[];
 }) {
   const { t } = useI18n();
-  const tokenCards = PRICE_CARDS.flatMap((card) => {
+  const tokenCards: PriceCard[] = PRICE_CARDS.flatMap((card) => {
     const value = pricing.base[card.column];
-    return value === null ? [] : [{ label: t(card.labelKey), value }];
+    if (value === null) return [];
+    const extras =
+      card.column === 'cacheWrite'
+        ? longWrites.flatMap(({ ttl, multiplier }) => {
+            const price = longCacheWritePrice(pricing.base, multiplier);
+            return price === null
+              ? []
+              : [
+                  {
+                    ttl,
+                    label: t('table.cacheWriteTtl', { ttl }),
+                    price: formatMoney(pricing.symbol, price),
+                  },
+                ];
+          })
+        : [];
+    return [{ label: t(card.labelKey), value, extras }];
   });
   // 无 token 价（按图 / 按秒等）时按量费率即主价格：以卡片呈现，不再重复其明细表
   const unitSection =
     tokenCards.length === 0 ? pricing.sections.find((s) => s.kind === 'unit') : undefined;
-  const cards = unitSection
+  const cards: PriceCard[] = unitSection
     ? unitSection.rows.flatMap((row) =>
-        row.input === null ? [] : [{ label: row.label, value: row.input }],
+        row.input === null ? [] : [{ label: row.label, value: row.input, extras: [] }],
       )
     : tokenCards;
   const sections = pricing.sections.filter((section) => section !== unitSection);
@@ -221,11 +270,26 @@ function PriceBlock({
             <div className="mt-1 font-mono text-xl font-semibold tabular-nums">
               {formatMoney(pricing.symbol, card.value)}
             </div>
+            {card.extras.map((extra) => (
+              <div
+                key={extra.ttl}
+                title={extra.label}
+                className="text-muted-foreground mt-1 font-mono text-xs whitespace-nowrap tabular-nums"
+              >
+                <span className="sr-only">{`${extra.label}: ${extra.price}`}</span>
+                <span aria-hidden>{`${extra.ttl} · ${extra.price}`}</span>
+              </div>
+            ))}
           </div>
         ))}
       </div>
       {sections.map((section) => (
-        <PricingSectionTable key={section.kind} section={section} symbol={pricing.symbol} />
+        <PricingSectionTable
+          key={section.kind}
+          section={section}
+          symbol={pricing.symbol}
+          longWrites={longWrites}
+        />
       ))}
     </div>
   );
@@ -261,6 +325,7 @@ export function ModelDetail({
     providerCurrency: provider.currency,
   });
   const expr = modelExpr(model.cost, provider.billing, deployment, exchangeRates);
+  const longWrites = longCacheWrites(provider.billing);
 
   // 详情页设置文档标题，返回列表时还原
   useEffect(() => {
@@ -453,6 +518,7 @@ export function ModelDetail({
                 pricing={pricing}
                 title={tokenPriced ? t('detail.textTokens') : t('pricing.unitPricing')}
                 hint={tokenPriced ? `${t('detail.per1m')} · ${pricing.currency}` : pricing.currency}
+                longWrites={longWrites}
               />
             )}
             {pricing.alternates.map((alt) => (
@@ -461,6 +527,7 @@ export function ModelDetail({
                 pricing={alt}
                 title={t('detail.priceList', { currency: alt.currency })}
                 hint={t('detail.priceListHint')}
+                longWrites={longWrites}
               />
             ))}
           </div>

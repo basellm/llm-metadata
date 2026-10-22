@@ -16,12 +16,13 @@
  */
 
 import { COST_FAMILIES, type CostFamily } from './cost-families.js';
-import type {
-  BillingExprOptions,
-  CostFamilyCells,
-  CostSchedule,
-  CostScheduleWindow,
-  ModelCost,
+import {
+  LONG_CACHE_WRITES,
+  type BillingExprOptions,
+  type CostFamilyCells,
+  type CostSchedule,
+  type CostScheduleWindow,
+  type ModelCost,
 } from './cost.js';
 import { normalizeCostToPlane, type PlaneRates } from './plane.js';
 
@@ -130,8 +131,11 @@ function buildLeafTerms(
   const cacheWrite = cellAt(segments, 'cache_write', start);
   if (cacheWrite !== undefined) {
     terms.push(`cc * ${formatCoefficient(cacheWrite)}`);
-    if (options.cacheWrite1h !== undefined) {
-      terms.push(`cc1h * ${formatCoefficient(scale(input, options.cacheWrite1h))}`);
+    for (const { option, variable } of LONG_CACHE_WRITES) {
+      const multiplier = options[option];
+      if (multiplier !== undefined) {
+        terms.push(`${variable} * ${formatCoefficient(scale(input, multiplier))}`);
+      }
     }
   }
 

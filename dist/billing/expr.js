@@ -15,6 +15,7 @@
  *   weekday(tz) >= a && weekday(tz) <= b && ((hour(tz) >= s && hour(tz) < e) || …)。
  */
 import { COST_FAMILIES } from './cost-families.js';
+import { LONG_CACHE_WRITES, } from './cost.js';
 import { normalizeCostToPlane } from './plane.js';
 const MINUTES_PER_DAY = 24 * 60;
 const HOUR_RANGE_RE = /^(\d{2}):(\d{2})-(\d{2}):(\d{2})$/;
@@ -96,8 +97,11 @@ function buildLeafTerms(segments, start, thinking, options) {
     const cacheWrite = cellAt(segments, 'cache_write', start);
     if (cacheWrite !== undefined) {
         terms.push(`cc * ${formatCoefficient(cacheWrite)}`);
-        if (options.cacheWrite1h !== undefined) {
-            terms.push(`cc1h * ${formatCoefficient(scale(input, options.cacheWrite1h))}`);
+        for (const { option, variable } of LONG_CACHE_WRITES) {
+            const multiplier = options[option];
+            if (multiplier !== undefined) {
+                terms.push(`${variable} * ${formatCoefficient(scale(input, multiplier))}`);
+            }
         }
     }
     const audioIn = cellAt(segments, 'input_audio', start);
