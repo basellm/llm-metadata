@@ -1,0 +1,47 @@
+{
+  "attachment": true,
+  "canonical_model_id": "thinkingmachines/inkling-small",
+  "cost": {
+    "cache_read": 0.06,
+    "input": 0.3,
+    "output": 1.2
+  },
+  "description": "Multimodal MoE reasoning model (276B total, 12B active) for text, image, and audio",
+  "family": "ling",
+  "id": "thinkingmachines/Inkling-Small:peft:262144:sampling-nvfp4",
+  "last_updated": "2026-07-30",
+  "limit": {
+    "context": 262144,
+    "output": 262144
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Inkling Small",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
+  "release_date": "2026-07-30",
+  "temperature": true,
+  "tool_call": true
+}

@@ -1,12 +1,18 @@
 {
   "attachment": false,
+  "canonical_model_id": "sarvam/sarvam-105b",
+  "cost": {
+    "cache_read": 0.05263423,
+    "input": 0.15790269,
+    "output": 0.63161075
+  },
   "description": "Flagship Indian-language reasoning model for enterprise multilingual applications",
   "family": "sarvam",
   "id": "sarvam-105b",
   "interleaved": {
     "field": "reasoning_content"
   },
-  "last_updated": "2026-03-06",
+  "last_updated": "2026-02-18",
   "limit": {
     "context": 131072,
     "output": 131072
@@ -24,9 +30,11 @@
   "reasoning": true,
   "reasoning_options": [
     {
+      "type": "toggle"
+    },
+    {
       "type": "effort",
       "values": [
-        null,
         "low",
         "medium",
         "high"

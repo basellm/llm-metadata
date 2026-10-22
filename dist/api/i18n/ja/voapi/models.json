@@ -885,7 +885,7 @@
       "description": "正確な音声書き起こしと字幕ワークフロー向けの音声認識モデル",
       "firm": "alibaba",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": true,
         "image": false,
         "open_weights": false,
@@ -911,8 +911,8 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.035,
-        "output": 0.035
+        "input": null,
+        "output": null
       },
       "releaseDate": "2025-09-08",
       "tags": []
@@ -3289,7 +3289,7 @@
       "description": "正確な音声書き起こしと字幕ワークフロー向けの音声認識モデル",
       "firm": "alibaba-cn",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": true,
         "image": false,
         "open_weights": false,
@@ -3315,8 +3315,8 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.032,
-        "output": 0.032
+        "input": null,
+        "output": null
       },
       "releaseDate": "2025-09-08",
       "tags": []
@@ -6613,7 +6613,7 @@
       "knowledge": null,
       "lastUpdated": "2026-05-28",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 262144,
+      "maxOutputTokens": 80000,
       "modalities": {
         "input": [
           "text"
@@ -8368,7 +8368,7 @@
       "description": "70 以上の言語に対応したリアルタイム音声翻訳向けの低遅延 audio-to-audio モデル",
       "firm": "google",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": true,
         "image": false,
         "open_weights": false,
@@ -9108,7 +9108,7 @@
       "icon": "lb:inception",
       "id": "mercury-2.5",
       "knowledge": "2025-11-01",
-      "lastUpdated": "2026-09-10",
+      "lastUpdated": "2026-09-08",
       "maxCtxTokens": 260000,
       "maxOutputTokens": 65536,
       "modalities": {
@@ -9121,10 +9121,10 @@
       },
       "name": "Mercury 2.5",
       "price": {
-        "cacheRead": 0.004,
+        "cacheRead": 0.02,
         "cacheWrite": null,
-        "input": 0.04,
-        "output": 0.15
+        "input": 0.2,
+        "output": 0.75
       },
       "releaseDate": "2026-09-08",
       "tags": []
@@ -9205,7 +9205,7 @@
       "description": "強力な推論と高速応答を備えたオープンマルチモーダル Llama モデル",
       "firm": "llama",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
         "image": false,
         "open_weights": true,
@@ -9241,7 +9241,7 @@
       "description": "長文コンテキスト分析と効率的なエージェント向けのオープンマルチモーダル Llama モデル",
       "firm": "llama",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
         "image": false,
         "open_weights": true,
@@ -9277,7 +9277,7 @@
       "description": "強力な推論と高速応答を備えたオープンマルチモーダル Llama モデル",
       "firm": "llama",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
         "image": false,
         "open_weights": true,
@@ -9313,7 +9313,7 @@
       "description": "多言語チャット、推論、コーディング向けのオープン Llama 指示追従モデル",
       "firm": "llama",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
         "image": false,
         "open_weights": true,
@@ -9349,7 +9349,7 @@
       "description": "多言語チャット、推論、コーディング向けのオープン Llama 指示追従モデル",
       "firm": "llama",
       "flags": {
-        "attachment": true,
+        "attachment": false,
         "audio": false,
         "image": false,
         "open_weights": true,
@@ -9464,14 +9464,14 @@
         "image": false,
         "open_weights": true,
         "reasoning": true,
-        "temperature": true,
+        "temperature": false,
         "tool_call": true
       },
       "icon": "lb:longcat-color",
       "id": "LongCat-2.0",
       "knowledge": null,
       "lastUpdated": "2026-06-30",
-      "maxCtxTokens": 1000000,
+      "maxCtxTokens": 1048576,
       "maxOutputTokens": 131072,
       "modalities": {
         "input": [
@@ -9483,12 +9483,49 @@
       },
       "name": "LongCat-2.0",
       "price": {
-        "cacheRead": 0.015,
+        "cacheRead": 0.006,
         "cacheWrite": null,
-        "input": 0.75,
-        "output": 2.95
+        "input": 0.3,
+        "output": 1.2
       },
       "releaseDate": "2026-06-30",
+      "tags": []
+    },
+    {
+      "description": "Meituan's multimodal reasoning model for coding and agent tasks, with image understanding and a 1M-token context window",
+      "firm": "longcat",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:longcat-color",
+      "id": "LongCat-2.5-Preview",
+      "knowledge": null,
+      "lastUpdated": "2026-09-25",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LongCat-2.5-Preview",
+      "price": {
+        "cacheRead": 0.006,
+        "cacheWrite": null,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "releaseDate": "2026-09-25",
       "tags": []
     },
     {
@@ -12971,7 +13008,7 @@
       "description": "正確な音声書き起こしと字幕ワークフロー向けの音声認識モデル",
       "firm": "mistral",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": true,
         "image": false,
         "open_weights": false,
@@ -13613,8 +13650,8 @@
       },
       "icon": "lb:nova-color",
       "id": "nova-2-lite-v1",
-      "knowledge": null,
-      "lastUpdated": "2025-12-01",
+      "knowledge": "2025-10",
+      "lastUpdated": "2025-12-02",
       "maxCtxTokens": 1000000,
       "maxOutputTokens": 64000,
       "modalities": {
@@ -13635,7 +13672,7 @@
         "input": null,
         "output": null
       },
-      "releaseDate": "2025-12-01",
+      "releaseDate": "2025-12-02",
       "tags": []
     },
     {
@@ -16001,7 +16038,7 @@
       "icon": "",
       "id": "sarvam-105b",
       "knowledge": null,
-      "lastUpdated": "2026-03-06",
+      "lastUpdated": "2026-02-18",
       "maxCtxTokens": 131072,
       "maxOutputTokens": 131072,
       "modalities": {
@@ -16014,10 +16051,10 @@
       },
       "name": "Sarvam-105B",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.05263423,
         "cacheWrite": null,
-        "input": null,
-        "output": null
+        "input": 0.15790269,
+        "output": 0.63161075
       },
       "releaseDate": "2026-02-18",
       "tags": []
@@ -16037,7 +16074,7 @@
       "icon": "",
       "id": "sarvam-30b",
       "knowledge": null,
-      "lastUpdated": "2026-03-06",
+      "lastUpdated": "2026-02-18",
       "maxCtxTokens": 65536,
       "maxOutputTokens": 65536,
       "modalities": {
@@ -16182,7 +16219,7 @@
       "icon": "lb:stepfun",
       "id": "step-3.5-flash",
       "knowledge": "2025-01",
-      "lastUpdated": "2026-06-15",
+      "lastUpdated": "2026-02-13",
       "maxCtxTokens": 256000,
       "maxOutputTokens": 256000,
       "modalities": {
@@ -16254,7 +16291,7 @@
       "icon": "lb:stepfun",
       "id": "step-3.7-flash",
       "knowledge": "2026-03-01",
-      "lastUpdated": "2026-06-29",
+      "lastUpdated": "2026-05-29",
       "maxCtxTokens": 256000,
       "maxOutputTokens": 256000,
       "modalities": {
@@ -16307,10 +16344,10 @@
       },
       "name": "Step 5 Preview",
       "price": {
-        "cacheRead": 0.048,
+        "cacheRead": 0.10461,
         "cacheWrite": null,
-        "input": 0.959,
-        "output": 2.741
+        "input": 1.04613,
+        "output": 2.98895
       },
       "releaseDate": "2026-09-16",
       "tags": []
@@ -16355,7 +16392,7 @@
       "description": "正確な音声書き起こしと字幕ワークフロー向けの音声認識モデル",
       "firm": "stepfun",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": true,
         "image": false,
         "open_weights": false,
@@ -16510,7 +16547,7 @@
       "icon": "lb:stepfun",
       "id": "step-3.5-flash",
       "knowledge": "2025-01",
-      "lastUpdated": "2026-06-15",
+      "lastUpdated": "2026-02-13",
       "maxCtxTokens": 256000,
       "maxOutputTokens": 256000,
       "modalities": {
@@ -16582,7 +16619,7 @@
       "icon": "lb:stepfun",
       "id": "step-3.7-flash",
       "knowledge": "2026-03-01",
-      "lastUpdated": "2026-06-29",
+      "lastUpdated": "2026-05-29",
       "maxCtxTokens": 256000,
       "maxOutputTokens": 256000,
       "modalities": {
@@ -16597,10 +16634,10 @@
       },
       "name": "Step 3.7 Flash",
       "price": {
-        "cacheRead": 0.037,
+        "cacheRead": 0.04,
         "cacheWrite": null,
-        "input": 0.185,
-        "output": 1.11
+        "input": 0.2,
+        "output": 1.15
       },
       "releaseDate": "2026-05-29",
       "tags": []
@@ -16635,7 +16672,7 @@
       },
       "name": "Step 5 Preview",
       "price": {
-        "cacheRead": 0.05,
+        "cacheRead": 0.1,
         "cacheWrite": null,
         "input": 1,
         "output": 2.7
@@ -16683,7 +16720,7 @@
       "description": "正確な音声書き起こしと字幕ワークフロー向けの音声認識モデル",
       "firm": "stepfun-ai",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": true,
         "image": false,
         "open_weights": false,
@@ -17444,6 +17481,1100 @@
       "tags": []
     },
     {
+      "description": "Hybrid-reasoning DeepSeek model with thinking and non-thinking modes",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "deepseek-ai/DeepSeek-V3.1",
+      "knowledge": null,
+      "lastUpdated": "2025-08-21",
+      "maxCtxTokens": 32768,
+      "maxOutputTokens": 32768,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek-V3.1",
+      "price": {
+        "cacheRead": 0.339,
+        "cacheWrite": null,
+        "input": 1.695,
+        "output": 4.215
+      },
+      "releaseDate": "2025-08-21",
+      "tags": []
+    },
+    {
+      "description": "10月17日更新版のDeepSeek V4.1 Flash。推論、コーディング、エージェントタスク、視覚理解が向上",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017:peft:262144",
+      "knowledge": "2025-05",
+      "lastUpdated": "2026-10-17",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017",
+      "price": {
+        "cacheRead": 0.12,
+        "cacheWrite": null,
+        "input": 0.6,
+        "output": 3.6
+      },
+      "releaseDate": "2026-10-17",
+      "tags": []
+    },
+    {
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash:peft:262144",
+      "knowledge": "2025-05",
+      "lastUpdated": "2026-09-10",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash",
+      "price": {
+        "cacheRead": 0.12,
+        "cacheWrite": null,
+        "input": 0.6,
+        "output": 3.6
+      },
+      "releaseDate": "2026-09-10",
+      "tags": []
+    },
+    {
+      "description": "エージェントループ、コーディングタスク、視覚コンテキスト向けのマルチモーダル Kimi 主力モデル",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "moonshotai/Kimi-K2.6",
+      "knowledge": "2025-01",
+      "lastUpdated": "2026-04-20",
+      "maxCtxTokens": 32768,
+      "maxOutputTokens": 32768,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "price": {
+        "cacheRead": 0.441,
+        "cacheWrite": null,
+        "input": 2.205,
+        "output": 5.49
+      },
+      "releaseDate": "2026-04-20",
+      "tags": []
+    },
+    {
+      "description": "エージェントループ、コーディングタスク、視覚コンテキスト向けのマルチモーダル Kimi 主力モデル",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "moonshotai/Kimi-K2.6:peft:131072",
+      "knowledge": "2025-01",
+      "lastUpdated": "2026-04-20",
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "price": {
+        "cacheRead": 0.441,
+        "cacheWrite": null,
+        "input": 2.205,
+        "output": 5.49
+      },
+      "releaseDate": "2026-04-20",
+      "tags": []
+    },
+    {
+      "description": "Small Nemotron 3 MoE for efficient coding, math, and long-context agents",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+      "knowledge": "2025-06-25",
+      "lastUpdated": "2025-12-15",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Nano 30B A3B",
+      "price": {
+        "cacheRead": 0.039,
+        "cacheWrite": null,
+        "input": 0.195,
+        "output": 0.495
+      },
+      "releaseDate": "2025-12-15",
+      "tags": []
+    },
+    {
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+      "knowledge": "2025-06",
+      "lastUpdated": "2026-03-11",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Super 120B A12B",
+      "price": {
+        "cacheRead": 0.114,
+        "cacheWrite": null,
+        "input": 0.57,
+        "output": 1.44
+      },
+      "releaseDate": "2026-03-11",
+      "tags": []
+    },
+    {
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16:peft:262144",
+      "knowledge": "2025-06",
+      "lastUpdated": "2026-03-11",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Super 120B A12B",
+      "price": {
+        "cacheRead": 0.114,
+        "cacheWrite": null,
+        "input": 0.57,
+        "output": 1.44
+      },
+      "releaseDate": "2026-03-11",
+      "tags": []
+    },
+    {
+      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "knowledge": "2025-09",
+      "lastUpdated": "2026-06-04",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "price": {
+        "cacheRead": 0.36,
+        "cacheWrite": null,
+        "input": 1.8,
+        "output": 6.225
+      },
+      "releaseDate": "2026-06-04",
+      "tags": []
+    },
+    {
+      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16:peft:262144",
+      "knowledge": "2025-09",
+      "lastUpdated": "2026-06-04",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "price": {
+        "cacheRead": 0.36,
+        "cacheWrite": null,
+        "input": 1.8,
+        "output": 6.225
+      },
+      "releaseDate": "2026-06-04",
+      "tags": []
+    },
+    {
+      "description": "Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise workloads",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "knowledge": "2025-09",
+      "lastUpdated": "2026-08-11",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Lightning 30B A3B",
+      "price": {
+        "cacheRead": 0.0368,
+        "cacheWrite": null,
+        "input": 0.184,
+        "output": 0.495
+      },
+      "releaseDate": "2026-08-11",
+      "tags": []
+    },
+    {
+      "description": "Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise workloads",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16:peft:262144",
+      "knowledge": "2025-09",
+      "lastUpdated": "2026-08-11",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Lightning 30B A3B",
+      "price": {
+        "cacheRead": 0.0368,
+        "cacheWrite": null,
+        "input": 0.184,
+        "output": 0.495
+      },
+      "releaseDate": "2026-08-11",
+      "tags": []
+    },
+    {
+      "description": "NVIDIA vision-language reasoning model for text, image, and video understanding and agentic tool use",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "knowledge": null,
+      "lastUpdated": "2026-10-15",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Super VL 120B A12B",
+      "price": {
+        "cacheRead": 0.114,
+        "cacheWrite": null,
+        "input": 0.57,
+        "output": 1.44
+      },
+      "releaseDate": "2026-10-15",
+      "tags": []
+    },
+    {
+      "description": "NVIDIA vision-language reasoning model for text, image, and video understanding and agentic tool use",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16:peft:262144",
+      "knowledge": null,
+      "lastUpdated": "2026-10-15",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Super VL 120B A12B",
+      "price": {
+        "cacheRead": 0.114,
+        "cacheWrite": null,
+        "input": 0.57,
+        "output": 1.44
+      },
+      "releaseDate": "2026-10-15",
+      "tags": []
+    },
+    {
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "openai/gpt-oss-120b",
+      "knowledge": "2024-06",
+      "lastUpdated": "2025-08-05",
+      "maxCtxTokens": 32768,
+      "maxOutputTokens": 32768,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "price": {
+        "cacheRead": 0.066,
+        "cacheWrite": null,
+        "input": 0.33,
+        "output": 0.84
+      },
+      "releaseDate": "2025-08-05",
+      "tags": []
+    },
+    {
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "openai/gpt-oss-120b:peft:131072",
+      "knowledge": "2024-06",
+      "lastUpdated": "2025-08-05",
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "price": {
+        "cacheRead": 0.066,
+        "cacheWrite": null,
+        "input": 0.33,
+        "output": 0.84
+      },
+      "releaseDate": "2025-08-05",
+      "tags": []
+    },
+    {
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "openai/gpt-oss-20b",
+      "knowledge": "2024-06",
+      "lastUpdated": "2025-08-05",
+      "maxCtxTokens": 32768,
+      "maxOutputTokens": 32768,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 20B",
+      "price": {
+        "cacheRead": 0.036,
+        "cacheWrite": null,
+        "input": 0.18,
+        "output": 0.45
+      },
+      "releaseDate": "2025-08-05",
+      "tags": []
+    },
+    {
+      "description": "Dense 8B Qwen3 model with switchable thinking for chat, reasoning, and tool use",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3-8B",
+      "knowledge": null,
+      "lastUpdated": "2025-04-29",
+      "maxCtxTokens": 32768,
+      "maxOutputTokens": 32768,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 8B",
+      "price": {
+        "cacheRead": 0.039,
+        "cacheWrite": null,
+        "input": 0.195,
+        "output": 0.6
+      },
+      "releaseDate": "2025-04-29",
+      "tags": []
+    },
+    {
+      "description": "Pre-trained Qwen3.5 base checkpoint for fine-tuning and research, without instruction tuning",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": false
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3.5-35B-A3B-Base",
+      "knowledge": null,
+      "lastUpdated": "2026-02-24",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 35B-A3B Base",
+      "price": {
+        "cacheRead": 0.108,
+        "cacheWrite": null,
+        "input": 0.54,
+        "output": 1.335
+      },
+      "releaseDate": "2026-02-24",
+      "tags": []
+    },
+    {
+      "description": "ビジュアルエージェントと長期の技術タスク向けの大規模オープン Qwen マルチモーダル MoE モデル",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3.5-397B-A17B",
+      "knowledge": null,
+      "lastUpdated": "2026-02-15",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 397B-A17B",
+      "price": {
+        "cacheRead": 0.33,
+        "cacheWrite": null,
+        "input": 1.65,
+        "output": 7.5
+      },
+      "releaseDate": "2026-02-15",
+      "tags": []
+    },
+    {
+      "description": "ビジュアルエージェントと長期の技術タスク向けの大規模オープン Qwen マルチモーダル MoE モデル",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3.5-397B-A17B:peft:262144",
+      "knowledge": null,
+      "lastUpdated": "2026-02-15",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 397B-A17B",
+      "price": {
+        "cacheRead": 0.33,
+        "cacheWrite": null,
+        "input": 1.65,
+        "output": 7.5
+      },
+      "releaseDate": "2026-02-15",
+      "tags": []
+    },
+    {
+      "description": "Small Qwen3.5 multimodal model for low-cost chat, reasoning, and tool use",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3.5-4B",
+      "knowledge": null,
+      "lastUpdated": "2026-03-02",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 4B",
+      "price": {
+        "cacheRead": 0.066,
+        "cacheWrite": null,
+        "input": 0.33,
+        "output": 1.005
+      },
+      "releaseDate": "2026-03-02",
+      "tags": []
+    },
+    {
+      "description": "Small Qwen3.5 multimodal model for low-cost chat, reasoning, and tool use",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3.5-4B:peft:262144",
+      "knowledge": null,
+      "lastUpdated": "2026-03-02",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 4B",
+      "price": {
+        "cacheRead": 0.066,
+        "cacheWrite": null,
+        "input": 0.33,
+        "output": 1.005
+      },
+      "releaseDate": "2026-03-02",
+      "tags": []
+    },
+    {
+      "description": "多言語チャット、推論、ツール利用向けの Qwen 指示追従モデル",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3.5-9B",
+      "knowledge": null,
+      "lastUpdated": "2026-02-23",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 9B",
+      "price": {
+        "cacheRead": 0.06,
+        "cacheWrite": null,
+        "input": 0.3,
+        "output": 0.807
+      },
+      "releaseDate": "2026-02-23",
+      "tags": []
+    },
+    {
+      "description": "Pre-trained Qwen3.5 base checkpoint for fine-tuning and research, without instruction tuning",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": false
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3.5-9B-Base",
+      "knowledge": null,
+      "lastUpdated": "2026-02-26",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 9B Base",
+      "price": {
+        "cacheRead": 0.06,
+        "cacheWrite": null,
+        "input": 0.3,
+        "output": 0.807
+      },
+      "releaseDate": "2026-02-26",
+      "tags": []
+    },
+    {
+      "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3.6-27B",
+      "knowledge": null,
+      "lastUpdated": "2026-04-22",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 27B",
+      "price": {
+        "cacheRead": 0.372,
+        "cacheWrite": null,
+        "input": 1.86,
+        "output": 5.595
+      },
+      "releaseDate": "2026-04-22",
+      "tags": []
+    },
+    {
+      "description": "視覚、音声、コード能力を必要とするローカルエージェント向けのオープンマルチモーダル Qwen MoE モデル",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3.6-35B-A3B",
+      "knowledge": null,
+      "lastUpdated": "2026-04-17",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B-A3B",
+      "price": {
+        "cacheRead": 0.09,
+        "cacheWrite": null,
+        "input": 0.45,
+        "output": 1.335
+      },
+      "releaseDate": "2026-04-17",
+      "tags": []
+    },
+    {
+      "description": "視覚、音声、コード能力を必要とするローカルエージェント向けのオープンマルチモーダル Qwen MoE モデル",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3.6-35B-A3B:peft:262144",
+      "knowledge": null,
+      "lastUpdated": "2026-04-17",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B-A3B",
+      "price": {
+        "cacheRead": 0.09,
+        "cacheWrite": null,
+        "input": 0.45,
+        "output": 1.335
+      },
+      "releaseDate": "2026-04-17",
+      "tags": []
+    },
+    {
+      "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3.8-27B",
+      "knowledge": null,
+      "lastUpdated": "2026-08-14",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 27B",
+      "price": {
+        "cacheRead": 0.1395,
+        "cacheWrite": null,
+        "input": 0.6975,
+        "output": 5.595
+      },
+      "releaseDate": "2026-08-14",
+      "tags": []
+    },
+    {
+      "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "Qwen/Qwen3.8-27B:peft:262144",
+      "knowledge": null,
+      "lastUpdated": "2026-08-14",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 27B",
+      "price": {
+        "cacheRead": 0.1395,
+        "cacheWrite": null,
+        "input": 0.6975,
+        "output": 5.595
+      },
+      "releaseDate": "2026-08-14",
+      "tags": []
+    },
+    {
       "description": "テキスト、画像、音声に対応したマルチモーダル MoE 推論モデル（総パラメータ 975B、アクティブ 41B）",
       "firm": "thinkingmachines",
       "flags": {
@@ -17481,6 +18612,117 @@
       "tags": []
     },
     {
+      "description": "Multimodal MoE reasoning model (276B total, 12B active) for text, image, and audio",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "thinkingmachines/Inkling-Small",
+      "knowledge": null,
+      "lastUpdated": "2026-07-30",
+      "maxCtxTokens": 65536,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling Small",
+      "price": {
+        "cacheRead": 0.116,
+        "cacheWrite": null,
+        "input": 0.58,
+        "output": 1.44
+      },
+      "releaseDate": "2026-07-30",
+      "tags": []
+    },
+    {
+      "description": "Multimodal MoE reasoning model (276B total, 12B active) for text, image, and audio",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "thinkingmachines/Inkling-Small:peft:262144",
+      "knowledge": null,
+      "lastUpdated": "2026-07-30",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling Small",
+      "price": {
+        "cacheRead": 0.116,
+        "cacheWrite": null,
+        "input": 0.58,
+        "output": 1.44
+      },
+      "releaseDate": "2026-07-30",
+      "tags": []
+    },
+    {
+      "description": "Multimodal MoE reasoning model (276B total, 12B active) for text, image, and audio",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "thinkingmachines/Inkling-Small:peft:262144:sampling-nvfp4",
+      "knowledge": null,
+      "lastUpdated": "2026-07-30",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling Small",
+      "price": {
+        "cacheRead": 0.06,
+        "cacheWrite": null,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "releaseDate": "2026-07-30",
+      "tags": []
+    },
+    {
       "description": "テキスト、画像、音声に対応したマルチモーダル MoE 推論モデル（総パラメータ 975B、アクティブ 41B）",
       "firm": "thinkingmachines",
       "flags": {
@@ -17509,12 +18751,121 @@
       },
       "name": "Inkling (256K)",
       "price": {
-        "cacheRead": 0.748,
+        "cacheRead": 0.374,
         "cacheWrite": null,
-        "input": 3.74,
-        "output": 9.36
+        "input": 1.87,
+        "output": 4.68
       },
       "releaseDate": "2026-07-15",
+      "tags": []
+    },
+    {
+      "description": "テキスト、画像、音声に対応したマルチモーダル MoE 推論モデル（総パラメータ 975B、アクティブ 41B）",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "thinkingmachines/Inkling:peft:262144:sampling-nvfp4",
+      "knowledge": null,
+      "lastUpdated": "2026-07-15",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling",
+      "price": {
+        "cacheRead": 0.17,
+        "cacheWrite": null,
+        "input": 1,
+        "output": 4.05
+      },
+      "releaseDate": "2026-07-15",
+      "tags": []
+    },
+    {
+      "description": "効率的なコーディングと長期エージェントタスク向けのネイティブマルチモーダル GLM モデル",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "zai-org/GLM-5.3-Flash:peft:262144",
+      "knowledge": null,
+      "lastUpdated": "2026-08-26",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-Flash",
+      "price": {
+        "cacheRead": 0.168,
+        "cacheWrite": null,
+        "input": 0.84,
+        "output": 2.11
+      },
+      "releaseDate": "2026-08-26",
+      "tags": []
+    },
+    {
+      "description": "長期コーディング、エージェント、複雑なプロジェクト遂行向けの GLM フラッグシップモデル",
+      "firm": "thinkingmachines",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "",
+      "id": "zai-org/GLM-5.3:peft:262144",
+      "knowledge": null,
+      "lastUpdated": "2026-08-14",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3",
+      "price": {
+        "cacheRead": 0.756,
+        "cacheWrite": null,
+        "input": 3.78,
+        "output": 12.15
+      },
+      "releaseDate": "2026-08-14",
       "tags": []
     },
     {
@@ -17640,7 +18991,7 @@
       "icon": "lb:upstage-color",
       "id": "solar-pro3",
       "knowledge": "2025-03",
-      "lastUpdated": "2026-01",
+      "lastUpdated": "2026-03-23",
       "maxCtxTokens": 131072,
       "maxOutputTokens": 8192,
       "modalities": {
@@ -17658,7 +19009,7 @@
         "input": 0.25,
         "output": 0.25
       },
-      "releaseDate": "2026-01",
+      "releaseDate": "2026-01-26",
       "tags": []
     },
     {
@@ -17701,9 +19052,9 @@
       "description": "長文コンテキスト推論、指示追従、ツール支援タスク向けの ByteDance Seed モデル",
       "firm": "volcengine",
       "flags": {
-        "attachment": false,
+        "attachment": true,
         "audio": false,
-        "image": false,
+        "image": true,
         "open_weights": false,
         "reasoning": true,
         "temperature": true,
@@ -17717,7 +19068,9 @@
       "maxOutputTokens": 64000,
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -17754,7 +19107,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -18768,7 +20122,7 @@
       "icon": "lb:xiaomimimo",
       "id": "mimo-v2-flash",
       "knowledge": "2024-12-01",
-      "lastUpdated": "2026-06-24",
+      "lastUpdated": "2026-02-04",
       "maxCtxTokens": 262144,
       "maxOutputTokens": 65536,
       "modalities": {
@@ -18804,7 +20158,7 @@
       "icon": "lb:xiaomimimo",
       "id": "mimo-v2-omni",
       "knowledge": "2024-12",
-      "lastUpdated": "2026-06-24",
+      "lastUpdated": "2026-03-18",
       "maxCtxTokens": 262144,
       "maxOutputTokens": 131072,
       "modalities": {
@@ -18844,7 +20198,7 @@
       "icon": "lb:xiaomimimo",
       "id": "mimo-v2-pro",
       "knowledge": "2024-12",
-      "lastUpdated": "2026-06-24",
+      "lastUpdated": "2026-03-18",
       "maxCtxTokens": 1048576,
       "maxOutputTokens": 131072,
       "modalities": {
@@ -18880,7 +20234,7 @@
       "icon": "lb:xiaomimimo",
       "id": "mimo-v2.5",
       "knowledge": "2024-12",
-      "lastUpdated": "2026-06-24",
+      "lastUpdated": "2026-04-22",
       "maxCtxTokens": 1048576,
       "maxOutputTokens": 131072,
       "modalities": {
@@ -18919,7 +20273,7 @@
       "icon": "lb:xiaomimimo",
       "id": "mimo-v2.5-pro",
       "knowledge": "2024-12",
-      "lastUpdated": "2026-06-24",
+      "lastUpdated": "2026-04-22",
       "maxCtxTokens": 1048576,
       "maxOutputTokens": 131072,
       "modalities": {
@@ -19136,7 +20490,7 @@
         "attachment": false,
         "audio": true,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": false,
         "tool_call": false
@@ -19247,7 +20601,7 @@
         "attachment": false,
         "audio": true,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": false,
         "tool_call": false
@@ -19283,7 +20637,7 @@
         "attachment": false,
         "audio": true,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": false,
         "tool_call": false
@@ -19319,7 +20673,7 @@
         "attachment": false,
         "audio": true,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": false,
         "tool_call": false
@@ -19469,7 +20823,7 @@
         "attachment": false,
         "audio": true,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": false,
         "tool_call": false
@@ -19580,7 +20934,7 @@
         "attachment": false,
         "audio": true,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": false,
         "tool_call": false
@@ -19616,7 +20970,7 @@
         "attachment": false,
         "audio": true,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": false,
         "tool_call": false
@@ -19652,7 +21006,7 @@
         "attachment": false,
         "audio": true,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": false,
         "tool_call": false
@@ -19802,7 +21156,7 @@
         "attachment": false,
         "audio": true,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": false,
         "tool_call": false
@@ -19913,7 +21267,7 @@
         "attachment": false,
         "audio": true,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": false,
         "tool_call": false
@@ -19949,7 +21303,7 @@
         "attachment": false,
         "audio": true,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": false,
         "tool_call": false
@@ -19985,7 +21339,7 @@
         "attachment": false,
         "audio": true,
         "image": false,
-        "open_weights": true,
+        "open_weights": false,
         "reasoning": false,
         "temperature": false,
         "tool_call": false

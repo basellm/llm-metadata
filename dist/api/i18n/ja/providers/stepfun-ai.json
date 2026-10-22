@@ -39,6 +39,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-01-01",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -70,23 +71,26 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-01-01",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
     "step-3.5-flash": {
       "attachment": false,
+      "canonical_model_id": "stepfun/step-3.5-flash",
       "cost": {
         "cache_read": 0.02,
         "input": 0.1,
         "output": 0.3
       },
       "description": "素早いマルチモーダル推論とコーディング支援向けの StepFun Flash",
+      "family": "step",
       "id": "step-3.5-flash",
       "interleaved": {
         "field": "reasoning_content"
       },
       "knowledge": "2025-01",
-      "last_updated": "2026-06-15",
+      "last_updated": "2026-02-13",
       "limit": {
         "context": 256000,
         "input": 256000,
@@ -113,17 +117,20 @@
         }
       ],
       "release_date": "2026-01-29",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "step-3.5-flash-2603": {
       "attachment": false,
+      "canonical_model_id": "stepfun/step-3.5-flash-2603",
       "cost": {
         "cache_read": 0.02,
         "input": 0.1,
         "output": 0.3
       },
       "description": "効率的なマルチモーダル推論、コーディング、ツール利用向けの StepFun Flash モデル",
+      "family": "step",
       "id": "step-3.5-flash-2603",
       "interleaved": {
         "field": "reasoning_content"
@@ -156,6 +163,7 @@
         }
       ],
       "release_date": "2026-04-02",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -163,9 +171,9 @@
       "attachment": true,
       "canonical_model_id": "stepfun/step-3.7-flash",
       "cost": {
-        "cache_read": 0.037,
-        "input": 0.185,
-        "output": 1.11
+        "cache_read": 0.04,
+        "input": 0.2,
+        "output": 1.15
       },
       "description": "より高速なエージェント、コーディング、マルチモーダルプロンプト向けの StepFun 新世代 Flash モデル",
       "id": "step-3.7-flash",
@@ -173,7 +181,7 @@
         "field": "reasoning_content"
       },
       "knowledge": "2026-03-01",
-      "last_updated": "2026-06-29",
+      "last_updated": "2026-05-29",
       "limit": {
         "context": 256000,
         "input": 256000,
@@ -203,6 +211,7 @@
         }
       ],
       "release_date": "2026-05-29",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -210,7 +219,7 @@
       "attachment": true,
       "canonical_model_id": "stepfun/step-5-preview",
       "cost": {
-        "cache_read": 0.05,
+        "cache_read": 0.1,
         "input": 1,
         "output": 2.7
       },
@@ -276,10 +285,11 @@
       "reasoning": false,
       "release_date": "2026-03-01",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "speech"
     },
     "stepaudio-2.5-asr": {
-      "attachment": false,
+      "attachment": true,
       "description": "正確な音声書き起こしと字幕ワークフロー向けの音声認識モデル",
       "family": "step",
       "id": "stepaudio-2.5-asr",
@@ -301,7 +311,8 @@
       "reasoning": false,
       "release_date": "2026-04-24",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "transcription"
     },
     "stepaudio-2.5-tts": {
       "attachment": false,
@@ -326,7 +337,8 @@
       "reasoning": false,
       "release_date": "2026-04-16",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "speech"
     }
   },
   "name": "StepFun (Global)",

@@ -7,6 +7,1104 @@
   "iconURL": "https://models.dev/logos/thinkingmachines.svg",
   "id": "thinkingmachines",
   "models": {
+    "Qwen/Qwen3-8B": {
+      "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-8b",
+      "cost": {
+        "cache_read": 0.039,
+        "input": 0.195,
+        "output": 0.6
+      },
+      "description": "Dense 8B Qwen3 model with switchable thinking for chat, reasoning, and tool use",
+      "family": "qwen",
+      "id": "Qwen/Qwen3-8B",
+      "last_updated": "2025-04-29",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 8B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-04-29",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.5-35B-A3B-Base": {
+      "attachment": false,
+      "canonical_model_id": "alibaba/qwen3.5-35b-a3b-base",
+      "cost": {
+        "cache_read": 0.108,
+        "input": 0.54,
+        "output": 1.335
+      },
+      "description": "Pre-trained Qwen3.5 base checkpoint for fine-tuning and research, without instruction tuning",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.5-35B-A3B-Base",
+      "last_updated": "2026-02-24",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 35B-A3B Base",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-02-24",
+      "temperature": true,
+      "tool_call": false
+    },
+    "Qwen/Qwen3.5-397B-A17B": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-397b-a17b",
+      "cost": {
+        "cache_read": 0.33,
+        "input": 1.65,
+        "output": 7.5
+      },
+      "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.5-397B-A17B",
+      "last_updated": "2026-02-15",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 397B-A17B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.5-397B-A17B:peft:262144": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-397b-a17b",
+      "cost": {
+        "cache_read": 0.33,
+        "input": 1.65,
+        "output": 7.5
+      },
+      "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.5-397B-A17B:peft:262144",
+      "last_updated": "2026-02-15",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 397B-A17B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.5-4B": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-4b",
+      "cost": {
+        "cache_read": 0.066,
+        "input": 0.33,
+        "output": 1.005
+      },
+      "description": "Small Qwen3.5 multimodal model for low-cost chat, reasoning, and tool use",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.5-4B",
+      "last_updated": "2026-03-02",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 4B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-03-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.5-4B:peft:262144": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-4b",
+      "cost": {
+        "cache_read": 0.066,
+        "input": 0.33,
+        "output": 1.005
+      },
+      "description": "Small Qwen3.5 multimodal model for low-cost chat, reasoning, and tool use",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.5-4B:peft:262144",
+      "last_updated": "2026-03-02",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 4B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-03-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.5-9B": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-9b",
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 0.807
+      },
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.5-9B",
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 9B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.5-9B-Base": {
+      "attachment": false,
+      "canonical_model_id": "alibaba/qwen3.5-9b-base",
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 0.807
+      },
+      "description": "Pre-trained Qwen3.5 base checkpoint for fine-tuning and research, without instruction tuning",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.5-9B-Base",
+      "last_updated": "2026-02-26",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 9B Base",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-02-26",
+      "temperature": true,
+      "tool_call": false
+    },
+    "Qwen/Qwen3.6-27B": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.6-27b",
+      "cost": {
+        "cache_read": 0.372,
+        "input": 1.86,
+        "output": 5.595
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.6-27B",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.6-35B-A3B": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.6-35b-a3b",
+      "cost": {
+        "cache_read": 0.09,
+        "input": 0.45,
+        "output": 1.335
+      },
+      "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.6-35B-A3B",
+      "last_updated": "2026-04-17",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B-A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.6-35B-A3B:peft:262144": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.6-35b-a3b",
+      "cost": {
+        "cache_read": 0.09,
+        "input": 0.45,
+        "output": 1.335
+      },
+      "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.6-35B-A3B:peft:262144",
+      "last_updated": "2026-04-17",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.6 35B-A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.8-27B": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.8-27b",
+      "cost": {
+        "cache_read": 0.1395,
+        "input": 0.6975,
+        "output": 5.595
+      },
+      "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.8-27B",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-08-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.8-27B:peft:262144": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.8-27b",
+      "cost": {
+        "cache_read": 0.1395,
+        "input": 0.6975,
+        "output": 5.595
+      },
+      "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.8-27B:peft:262144",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-08-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-ai/DeepSeek-V3.1": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v3.1",
+      "cost": {
+        "cache_read": 0.339,
+        "input": 1.695,
+        "output": 4.215
+      },
+      "description": "Hybrid-reasoning DeepSeek model with thinking and non-thinking modes",
+      "family": "deepseek",
+      "id": "deepseek-ai/DeepSeek-V3.1",
+      "last_updated": "2025-08-21",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek-V3.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-08-21",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017:peft:262144": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.12,
+        "input": 0.6,
+        "output": 3.6
+      },
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "family": "deepseek-flash",
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017:peft:262144",
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-10-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash:peft:262144": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash",
+      "cost": {
+        "cache_read": 0.12,
+        "input": 0.6,
+        "output": 3.6
+      },
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash:peft:262144",
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-09-10",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.6": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.6",
+      "cost": {
+        "cache_read": 0.441,
+        "input": 2.205,
+        "output": 5.49
+      },
+      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
+      "family": "kimi-k2",
+      "id": "moonshotai/Kimi-K2.6",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-20",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/Kimi-K2.6:peft:131072": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.6",
+      "cost": {
+        "cache_read": 0.441,
+        "input": 2.205,
+        "output": 5.49
+      },
+      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
+      "family": "kimi-k2",
+      "id": "moonshotai/Kimi-K2.6:peft:131072",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-20",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-20",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-nano-30b-a3b",
+      "cost": {
+        "cache_read": 0.039,
+        "input": 0.195,
+        "output": 0.495
+      },
+      "description": "Small Nemotron 3 MoE for efficient coding, math, and long-context agents",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+      "knowledge": "2025-06-25",
+      "last_updated": "2025-12-15",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Nano 30B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-12-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-super-120b-a12b",
+      "cost": {
+        "cache_read": 0.114,
+        "input": 0.57,
+        "output": 1.44
+      },
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+      "knowledge": "2025-06",
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Super 120B A12B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-03-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16:peft:262144": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-super-120b-a12b",
+      "cost": {
+        "cache_read": 0.114,
+        "input": 0.57,
+        "output": 1.44
+      },
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16:peft:262144",
+      "knowledge": "2025-06",
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Super 120B A12B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-03-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "cost": {
+        "cache_read": 0.36,
+        "input": 1.8,
+        "output": 6.225
+      },
+      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "knowledge": "2025-09",
+      "last_updated": "2026-06-04",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-04",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16:peft:262144": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "cost": {
+        "cache_read": 0.36,
+        "input": 1.8,
+        "output": 6.225
+      },
+      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16:peft:262144",
+      "knowledge": "2025-09",
+      "last_updated": "2026-06-04",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-04",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3.5-lightning",
+      "cost": {
+        "cache_read": 0.0368,
+        "input": 0.184,
+        "output": 0.495
+      },
+      "description": "Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise workloads",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "knowledge": "2025-09",
+      "last_updated": "2026-08-11",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Lightning 30B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-08-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16:peft:262144": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3.5-lightning",
+      "cost": {
+        "cache_read": 0.0368,
+        "input": 0.184,
+        "output": 0.495
+      },
+      "description": "Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise workloads",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16:peft:262144",
+      "knowledge": "2025-09",
+      "last_updated": "2026-08-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Lightning 30B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-08-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16": {
+      "attachment": true,
+      "canonical_model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "cost": {
+        "cache_read": 0.114,
+        "input": 0.57,
+        "output": 1.44
+      },
+      "description": "NVIDIA vision-language reasoning model for text, image, and video understanding and agentic tool use",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "last_updated": "2026-10-15",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Super VL 120B A12B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-10-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16:peft:262144": {
+      "attachment": true,
+      "canonical_model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "cost": {
+        "cache_read": 0.114,
+        "input": 0.57,
+        "output": 1.44
+      },
+      "description": "NVIDIA vision-language reasoning model for text, image, and video understanding and agentic tool use",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16:peft:262144",
+      "last_updated": "2026-10-15",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Super VL 120B A12B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-10-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-120b": {
+      "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-120b",
+      "cost": {
+        "cache_read": 0.066,
+        "input": 0.33,
+        "output": 0.84
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-120b",
+      "knowledge": "2024-06",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-120b:peft:131072": {
+      "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-120b",
+      "cost": {
+        "cache_read": 0.066,
+        "input": 0.33,
+        "output": 0.84
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-120b:peft:131072",
+      "knowledge": "2024-06",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-oss-20b": {
+      "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-20b",
+      "cost": {
+        "cache_read": 0.036,
+        "input": 0.18,
+        "output": 0.45
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-20b",
+      "knowledge": "2024-06",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 20B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
     "thinkingmachines/Inkling": {
       "attachment": true,
       "canonical_model_id": "thinkingmachines/inkling",
@@ -54,13 +1152,154 @@
       "temperature": true,
       "tool_call": true
     },
+    "thinkingmachines/Inkling-Small": {
+      "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling-small",
+      "cost": {
+        "cache_read": 0.116,
+        "input": 0.58,
+        "output": 1.44
+      },
+      "description": "Multimodal MoE reasoning model (276B total, 12B active) for text, image, and audio",
+      "family": "ling",
+      "id": "thinkingmachines/Inkling-Small",
+      "last_updated": "2026-07-30",
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling Small",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/Inkling-Small:peft:262144": {
+      "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling-small",
+      "cost": {
+        "cache_read": 0.116,
+        "input": 0.58,
+        "output": 1.44
+      },
+      "description": "Multimodal MoE reasoning model (276B total, 12B active) for text, image, and audio",
+      "family": "ling",
+      "id": "thinkingmachines/Inkling-Small:peft:262144",
+      "last_updated": "2026-07-30",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling Small",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-30",
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/Inkling-Small:peft:262144:sampling-nvfp4": {
+      "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling-small",
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Multimodal MoE reasoning model (276B total, 12B active) for text, image, and audio",
+      "family": "ling",
+      "id": "thinkingmachines/Inkling-Small:peft:262144:sampling-nvfp4",
+      "last_updated": "2026-07-30",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling Small",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-30",
+      "temperature": true,
+      "tool_call": true
+    },
     "thinkingmachines/Inkling:peft:262144": {
       "attachment": true,
       "canonical_model_id": "thinkingmachines/inkling",
       "cost": {
-        "cache_read": 0.748,
-        "input": 3.74,
-        "output": 9.36
+        "cache_read": 0.374,
+        "input": 1.87,
+        "output": 4.68
       },
       "description": "Multimodal MoE reasoning model (975B total, 41B active) for text, image, and audio",
       "family": "ling",
@@ -98,6 +1337,125 @@
         }
       ],
       "release_date": "2026-07-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/Inkling:peft:262144:sampling-nvfp4": {
+      "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling",
+      "cost": {
+        "cache_read": 0.17,
+        "input": 1,
+        "output": 4.05
+      },
+      "description": "Multimodal MoE reasoning model (975B total, 41B active) for text, image, and audio",
+      "family": "ling",
+      "id": "thinkingmachines/Inkling:peft:262144:sampling-nvfp4",
+      "last_updated": "2026-07-15",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.3-Flash:peft:262144": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3-flash",
+      "cost": {
+        "cache_read": 0.168,
+        "input": 0.84,
+        "output": 2.11
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "zai-org/GLM-5.3-Flash:peft:262144",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-08-26",
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.3:peft:262144": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
+      "cost": {
+        "cache_read": 0.756,
+        "input": 3.78,
+        "output": 12.15
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "zai-org/GLM-5.3:peft:262144",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-08-14",
       "temperature": true,
       "tool_call": true
     }

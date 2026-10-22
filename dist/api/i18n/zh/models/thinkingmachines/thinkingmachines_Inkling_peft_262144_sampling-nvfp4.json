@@ -1,0 +1,47 @@
+{
+  "attachment": true,
+  "canonical_model_id": "thinkingmachines/inkling",
+  "cost": {
+    "cache_read": 0.17,
+    "input": 1,
+    "output": 4.05
+  },
+  "description": "多模态 MoE 推理模型（总参数 975B，激活 41B），支持文本、图像与音频",
+  "family": "ling",
+  "id": "thinkingmachines/Inkling:peft:262144:sampling-nvfp4",
+  "last_updated": "2026-07-15",
+  "limit": {
+    "context": 262144,
+    "output": 262144
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Inkling",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
+  "release_date": "2026-07-15",
+  "temperature": true,
+  "tool_call": true
+}

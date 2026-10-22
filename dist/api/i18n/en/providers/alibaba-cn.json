@@ -419,6 +419,9 @@
       },
       "name": "Qwen-Omni Turbo Realtime",
       "open_weights": false,
+      "provider": {
+        "api": "wss://dashscope.aliyuncs.com/api-ws/v1/realtime"
+      },
       "reasoning": false,
       "release_date": "2025-05-08",
       "status": "deprecated",
@@ -1168,11 +1171,7 @@
       "tool_call": true
     },
     "qwen3-asr-flash": {
-      "attachment": false,
-      "cost": {
-        "input": 0.032,
-        "output": 0.032
-      },
+      "attachment": true,
       "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
       "family": "qwen",
       "id": "qwen3-asr-flash",
@@ -1613,6 +1612,9 @@
       },
       "name": "Qwen3-Omni Flash Realtime",
       "open_weights": false,
+      "provider": {
+        "api": "wss://dashscope.aliyuncs.com/api-ws/v1/realtime"
+      },
       "reasoning": false,
       "release_date": "2025-09-15",
       "status": "deprecated",
