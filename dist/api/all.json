@@ -52,7 +52,11 @@
       "qwen-flash": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.01,
+          "cache_write": 0.0625,
           "context_over_200k": {
+            "cache_read": 0.05,
+            "cache_write": 0.3125,
             "input": 0.25,
             "output": 2
           },
@@ -60,6 +64,8 @@
           "output": 0.4,
           "tiers": [
             {
+              "cache_read": 0.05,
+              "cache_write": 0.3125,
               "input": 0.25,
               "output": 2,
               "tier": {
@@ -274,7 +280,11 @@
       "qwen-plus": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.08,
+          "cache_write": 0.5,
           "context_over_200k": {
+            "cache_read": 0.24,
+            "cache_write": 1.5,
             "input": 1.2,
             "output": 3.6,
             "reasoning": 12
@@ -284,6 +294,8 @@
           "reasoning": 4,
           "tiers": [
             {
+              "cache_read": 0.24,
+              "cache_write": 1.5,
               "input": 1.2,
               "output": 3.6,
               "reasoning": 12,
@@ -816,10 +828,14 @@
       "qwen3-coder-flash": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.06,
+          "cache_write": 0.375,
           "input": 0.3,
           "output": 1.5,
           "tiers": [
             {
+              "cache_read": 0.1,
+              "cache_write": 0.625,
               "input": 0.5,
               "output": 2.5,
               "tier": {
@@ -828,6 +844,8 @@
               }
             },
             {
+              "cache_read": 0.16,
+              "cache_write": 1,
               "input": 0.8,
               "output": 4,
               "tier": {
@@ -836,6 +854,8 @@
               }
             },
             {
+              "cache_read": 0.32,
+              "cache_write": 2,
               "input": 1.6,
               "output": 9.6,
               "tier": {
@@ -1203,10 +1223,14 @@
       "qwen3-vl-plus": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.04,
+          "cache_write": 0.25,
           "input": 0.2,
           "output": 1.6,
           "tiers": [
             {
+              "cache_read": 0.06,
+              "cache_write": 0.375,
               "input": 0.3,
               "output": 2.4,
               "tier": {
@@ -1215,6 +1239,8 @@
               }
             },
             {
+              "cache_read": 0.12,
+              "cache_write": 0.75,
               "input": 0.6,
               "output": 4.8,
               "tier": {
@@ -1767,13 +1793,13 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.7-flash",
         "cost": {
-          "cache_read": 0.003,
+          "cache_read": 0.006,
           "cache_write": 0.0375,
           "input": 0.03,
           "output": 0.13,
           "tiers": [
             {
-              "cache_read": 0.01,
+              "cache_read": 0.02,
               "cache_write": 0.125,
               "input": 0.1,
               "output": 0.4,
@@ -1783,7 +1809,7 @@
               }
             },
             {
-              "cache_read": 0.02,
+              "cache_read": 0.04,
               "cache_write": 0.25,
               "input": 0.2,
               "output": 0.8,
@@ -1876,10 +1902,10 @@
       "qwen3.7-plus": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.04,
+          "cache_read": 0.08,
           "cache_write": 0.5,
           "context_over_200k": {
-            "cache_read": 0.12,
+            "cache_read": 0.24,
             "cache_write": 1.5,
             "input": 1.2,
             "output": 4.8
@@ -1888,7 +1914,7 @@
           "output": 1.6,
           "tiers": [
             {
-              "cache_read": 0.12,
+              "cache_read": 0.24,
               "cache_write": 1.5,
               "input": 1.2,
               "output": 4.8,
@@ -2248,10 +2274,14 @@
       "qwen-flash": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.0044,
+          "cache_write": 0.0275,
           "input": 0.022,
           "output": 0.216,
           "tiers": [
             {
+              "cache_read": 0.0174,
+              "cache_write": 0.10875,
               "input": 0.087,
               "output": 0.861,
               "tier": {
@@ -2260,6 +2290,8 @@
               }
             },
             {
+              "cache_read": 0.0346,
+              "cache_write": 0.21625,
               "input": 0.173,
               "output": 1.721,
               "tier": {
@@ -2568,13 +2600,15 @@
       "qwen-plus": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.012,
+          "cache_read": 0.023,
           "cache_write": 0.144,
           "input": 0.115,
           "output": 0.287,
           "reasoning": 1.147,
           "tiers": [
             {
+              "cache_read": 0.069,
+              "cache_write": 0.43125,
               "input": 0.345,
               "output": 2.868,
               "reasoning": 3.441,
@@ -2584,6 +2618,8 @@
               }
             },
             {
+              "cache_read": 0.1378,
+              "cache_write": 0.86125,
               "input": 0.689,
               "output": 6.881,
               "reasoning": 9.175,
@@ -3122,10 +3158,14 @@
       "qwen3-coder-flash": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.0288,
+          "cache_write": 0.18,
           "input": 0.144,
           "output": 0.574,
           "tiers": [
             {
+              "cache_read": 0.0432,
+              "cache_write": 0.27,
               "input": 0.216,
               "output": 0.861,
               "tier": {
@@ -3134,6 +3174,8 @@
               }
             },
             {
+              "cache_read": 0.0718,
+              "cache_write": 0.44875,
               "input": 0.359,
               "output": 1.434,
               "tier": {
@@ -3142,6 +3184,8 @@
               }
             },
             {
+              "cache_read": 0.1434,
+              "cache_write": 0.89625,
               "input": 0.717,
               "output": 3.584,
               "tier": {
@@ -3517,10 +3561,14 @@
       "qwen3-vl-plus": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.028671,
+          "cache_write": 0.179191,
           "input": 0.143353,
           "output": 1.433525,
           "tiers": [
             {
+              "cache_read": 0.043,
+              "cache_write": 0.26875,
               "input": 0.215,
               "output": 2.15,
               "tier": {
@@ -3529,6 +3577,8 @@
               }
             },
             {
+              "cache_read": 0.086,
+              "cache_write": 0.5375,
               "input": 0.43,
               "output": 4.301,
               "tier": {
@@ -3928,13 +3978,13 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.7-flash",
         "cost": {
-          "cache_read": 0.002962,
+          "cache_read": 0.005924,
           "cache_write": 0.03703,
           "input": 0.02962,
           "output": 0.1185,
           "tiers": [
             {
-              "cache_read": 0.008887,
+              "cache_read": 0.017774,
               "cache_write": 0.11109,
               "input": 0.08887,
               "output": 0.35549,
@@ -3944,7 +3994,7 @@
               }
             },
             {
-              "cache_read": 0.017774,
+              "cache_read": 0.035548,
               "cache_write": 0.22218,
               "input": 0.17774,
               "output": 0.71098,
@@ -4037,10 +4087,10 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.7-plus",
         "cost": {
-          "cache_read": 0.0276,
+          "cache_read": 0.0552,
           "cache_write": 0.345,
           "context_over_200k": {
-            "cache_read": 0.0826,
+            "cache_read": 0.1652,
             "cache_write": 1.0325,
             "input": 0.826,
             "output": 3.301
@@ -4049,7 +4099,7 @@
           "output": 1.101,
           "tiers": [
             {
-              "cache_read": 0.0826,
+              "cache_read": 0.1652,
               "cache_write": 1.0325,
               "input": 0.826,
               "output": 3.301,
@@ -4100,8 +4150,8 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.8-flash",
         "cost": {
-          "cache_read": 0.01187,
-          "cache_write": 0.14844,
+          "cache_read": 0.014844,
+          "cache_write": 0.185547,
           "input": 0.11875,
           "output": 0.40073
         },
@@ -13677,6 +13727,102 @@
         "structured_output": true,
         "temperature": false,
         "tool_call": true
+      },
+      "kimi-k3.1-pro": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+        "cost": {
+          "cache_read": 0.2,
+          "cache_write": 2,
+          "input": 2,
+          "output": 10
+        },
+        "description": "Multimodal Kimi model with 1M context and always-on reasoning for coding, 3D creation, financial research, and agentic work",
+        "family": "kimi-k3",
+        "id": "kimi-k3.1-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-10-23",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3.1 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-23",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k3.1-pro-highspeed": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+        "cost": {
+          "cache_read": 0.2,
+          "cache_write": 4,
+          "input": 4,
+          "output": 20
+        },
+        "description": "Multimodal Kimi model with 1M context and always-on reasoning for coding, 3D creation, financial research, and agentic work",
+        "family": "kimi-k3",
+        "id": "kimi-k3.1-pro-highspeed",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-10-23",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3.1 Pro Highspeed",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-23",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
       }
     },
     "name": "Moonshot AI",
@@ -13866,6 +14012,102 @@
           }
         ],
         "release_date": "2026-07-16",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k3.1-pro": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+        "cost": {
+          "cache_read": 0.1944,
+          "cache_write": 1.9437,
+          "input": 1.9437,
+          "output": 10.1671
+        },
+        "description": "Multimodal Kimi model with 1M context and always-on reasoning for coding, 3D creation, financial research, and agentic work",
+        "family": "kimi-k3",
+        "id": "kimi-k3.1-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-10-23",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3.1 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-23",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k3.1-pro-highspeed": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+        "cost": {
+          "cache_read": 0.1944,
+          "cache_write": 3.8874,
+          "input": 3.8874,
+          "output": 20.3342
+        },
+        "description": "Multimodal Kimi model with 1M context and always-on reasoning for coding, 3D creation, financial research, and agentic work",
+        "family": "kimi-k3",
+        "id": "kimi-k3.1-pro-highspeed",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-10-23",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3.1 Pro Highspeed",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-23",
         "structured_output": true,
         "temperature": false,
         "tool_call": true

@@ -51,7 +51,11 @@
     "qwen-flash": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0.0625,
         "context_over_200k": {
+          "cache_read": 0.05,
+          "cache_write": 0.3125,
           "input": 0.25,
           "output": 2
         },
@@ -59,6 +63,8 @@
         "output": 0.4,
         "tiers": [
           {
+            "cache_read": 0.05,
+            "cache_write": 0.3125,
             "input": 0.25,
             "output": 2,
             "tier": {
@@ -273,7 +279,11 @@
     "qwen-plus": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.08,
+        "cache_write": 0.5,
         "context_over_200k": {
+          "cache_read": 0.24,
+          "cache_write": 1.5,
           "input": 1.2,
           "output": 3.6,
           "reasoning": 12
@@ -283,6 +293,8 @@
         "reasoning": 4,
         "tiers": [
           {
+            "cache_read": 0.24,
+            "cache_write": 1.5,
             "input": 1.2,
             "output": 3.6,
             "reasoning": 12,
@@ -815,10 +827,14 @@
     "qwen3-coder-flash": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.06,
+        "cache_write": 0.375,
         "input": 0.3,
         "output": 1.5,
         "tiers": [
           {
+            "cache_read": 0.1,
+            "cache_write": 0.625,
             "input": 0.5,
             "output": 2.5,
             "tier": {
@@ -827,6 +843,8 @@
             }
           },
           {
+            "cache_read": 0.16,
+            "cache_write": 1,
             "input": 0.8,
             "output": 4,
             "tier": {
@@ -835,6 +853,8 @@
             }
           },
           {
+            "cache_read": 0.32,
+            "cache_write": 2,
             "input": 1.6,
             "output": 9.6,
             "tier": {
@@ -1202,10 +1222,14 @@
     "qwen3-vl-plus": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.04,
+        "cache_write": 0.25,
         "input": 0.2,
         "output": 1.6,
         "tiers": [
           {
+            "cache_read": 0.06,
+            "cache_write": 0.375,
             "input": 0.3,
             "output": 2.4,
             "tier": {
@@ -1214,6 +1238,8 @@
             }
           },
           {
+            "cache_read": 0.12,
+            "cache_write": 0.75,
             "input": 0.6,
             "output": 4.8,
             "tier": {
@@ -1766,13 +1792,13 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.7-flash",
       "cost": {
-        "cache_read": 0.003,
+        "cache_read": 0.006,
         "cache_write": 0.0375,
         "input": 0.03,
         "output": 0.13,
         "tiers": [
           {
-            "cache_read": 0.01,
+            "cache_read": 0.02,
             "cache_write": 0.125,
             "input": 0.1,
             "output": 0.4,
@@ -1782,7 +1808,7 @@
             }
           },
           {
-            "cache_read": 0.02,
+            "cache_read": 0.04,
             "cache_write": 0.25,
             "input": 0.2,
             "output": 0.8,
@@ -1875,10 +1901,10 @@
     "qwen3.7-plus": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.04,
+        "cache_read": 0.08,
         "cache_write": 0.5,
         "context_over_200k": {
-          "cache_read": 0.12,
+          "cache_read": 0.24,
           "cache_write": 1.5,
           "input": 1.2,
           "output": 4.8
@@ -1887,7 +1913,7 @@
         "output": 1.6,
         "tiers": [
           {
-            "cache_read": 0.12,
+            "cache_read": 0.24,
             "cache_write": 1.5,
             "input": 1.2,
             "output": 4.8,
