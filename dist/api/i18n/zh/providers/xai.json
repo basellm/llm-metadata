@@ -412,6 +412,29 @@
       "temperature": true,
       "tool_call": true
     },
+    "grok-4.7-build-fast": {
+      "cost": {
+        "cache_read": 1,
+        "currency": "USD",
+        "input": 4,
+        "output": 12,
+        "tiers": [
+          {
+            "cache_read": 1.5,
+            "input": 6,
+            "output": 18,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "运行在更快基础设施上的 Grok 4.7，供 Grok Build 使用；不在公开的 xAI API 上提供。",
+      "family": "grok",
+      "id": "grok-4.7-build-fast",
+      "name": "Grok 4.7 Build Fast"
+    },
     "grok-build-0.1": {
       "attachment": true,
       "cost": {
