@@ -6303,6 +6303,71 @@
         "temperature": false,
         "tool_call": true
       },
+      "claude-fable-5-2": {
+        "attachment": true,
+        "canonical_model_id": "anthropic/claude-fable-5-2",
+        "cost": {
+          "cache_read": 0.2,
+          "cache_write": 10,
+          "input": 8,
+          "output": 40
+        },
+        "description": "高度な推論と長期エージェント作業向けの Claude モデル",
+        "experimental": {
+          "modes": {
+            "fast": {
+              "cost": {
+                "cache_read": 0.4,
+                "cache_write": 20,
+                "input": 16,
+                "output": 80
+              },
+              "provider": {
+                "body": {
+                  "speed": "fast"
+                }
+              }
+            }
+          }
+        },
+        "family": "claude-fable",
+        "id": "claude-fable-5-2",
+        "knowledge": "2026-06",
+        "last_updated": "2026-11-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Fable 5.2",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "claude-haiku-4-5": {
         "attachment": true,
         "canonical_model_id": "anthropic/claude-haiku-4-5",
@@ -8253,7 +8318,7 @@
         "knowledge": "2025-01",
         "last_updated": "2026-04-21",
         "limit": {
-          "context": 131072,
+          "context": 1048576,
           "output": 65536
         },
         "modalities": {
@@ -8307,7 +8372,7 @@
         "knowledge": "2025-01",
         "last_updated": "2026-04-21",
         "limit": {
-          "context": 131072,
+          "context": 1048576,
           "output": 65536
         },
         "modalities": {
@@ -10108,6 +10173,71 @@
     "id": "meta",
     "lobeIcon": "Meta.Color",
     "models": {
+      "muse-ember-1.0": {
+        "attachment": true,
+        "canonical_model_id": "meta/muse-ember-1.0",
+        "cost": {
+          "cache_read": 0.004,
+          "context_over_200k": {
+            "cache_read": 0.012,
+            "input": 0.3,
+            "output": 1.5
+          },
+          "input": 0.1,
+          "output": 0.5,
+          "tiers": [
+            {
+              "cache_read": 0.012,
+              "input": 0.3,
+              "output": 1.5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Muse EmberはMeta最小かつ最も効率的な推論モデルで、ツール呼び出し、コーディングのサブタスク、ルーティング、抽出、長文書の解析など、エージェントが日々繰り返す作業向けに構築されています。Muse WonderまたはMuse Sparkと組み合わせることで、これらが計画を立てる一方、Muse Emberが大量処理を担います。",
+        "family": "muse",
+        "id": "muse-ember-1.0",
+        "last_updated": "2026-11-09",
+        "limit": {
+          "context": 1048576,
+          "output": 524288
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Muse Ember",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-09",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "muse-spark-1.1": {
         "attachment": true,
         "canonical_model_id": "meta/muse-spark-1.1",
@@ -13750,7 +13880,7 @@
           "input": 2,
           "output": 10
         },
-        "description": "コーディング、3D制作、金融リサーチ、エージェント業務向けの、100万コンテキストと常時推論を備えたマルチモーダルKimiモデル",
+        "description": "100万トークンのコンテキストウィンドウと常時推論を備え、コーディング、3D制作、金融リサーチに対応するマルチモーダルKimiモデル",
         "family": "kimi-k3",
         "id": "kimi-k3.1-pro",
         "interleaved": {
@@ -13798,7 +13928,7 @@
           "input": 4,
           "output": 20
         },
-        "description": "コーディング、3D制作、金融リサーチ、エージェント業務向けの、100万コンテキストと常時推論を備えたマルチモーダルKimiモデル",
+        "description": "100万トークンのコンテキストウィンドウと常時推論を備え、コーディング、3D制作、金融リサーチに対応するマルチモーダルKimiモデル",
         "family": "kimi-k3",
         "id": "kimi-k3.1-pro-highspeed",
         "interleaved": {
@@ -14038,7 +14168,7 @@
           "input": 1.9437,
           "output": 10.1671
         },
-        "description": "コーディング、3D制作、金融リサーチ、エージェント業務向けの、100万コンテキストと常時推論を備えたマルチモーダルKimiモデル",
+        "description": "100万トークンのコンテキストウィンドウと常時推論を備え、コーディング、3D制作、金融リサーチに対応するマルチモーダルKimiモデル",
         "family": "kimi-k3",
         "id": "kimi-k3.1-pro",
         "interleaved": {
@@ -14086,7 +14216,7 @@
           "input": 3.8874,
           "output": 20.3342
         },
-        "description": "コーディング、3D制作、金融リサーチ、エージェント業務向けの、100万コンテキストと常時推論を備えたマルチモーダルKimiモデル",
+        "description": "100万トークンのコンテキストウィンドウと常時推論を備え、コーディング、3D制作、金融リサーチに対応するマルチモーダルKimiモデル",
         "family": "kimi-k3",
         "id": "kimi-k3.1-pro-highspeed",
         "interleaved": {
@@ -14553,7 +14683,7 @@
           "input": 2.5,
           "output": 14
         },
-        "description": "コーディング、3D制作、金融リサーチ、エージェント業務向けの、100万コンテキストと常時推論を備えたマルチモーダルKimiモデル",
+        "description": "100万トークンのコンテキストウィンドウと常時推論を備え、コーディング、3D制作、金融リサーチに対応するマルチモーダルKimiモデル",
         "family": "kimi-k3",
         "id": "morph-kimik31",
         "interleaved": {

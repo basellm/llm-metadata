@@ -3,6 +3,7 @@
     "billing_expr": {
       "claude-fable-5": "tier(\"standard\", p * 10 + cr * 1 + cc * 12.5 + cc1h * 20 + c * 50)",
       "claude-fable-5-1": "tier(\"standard\", p * 10 + cr * 0.25 + cc * 12.5 + cc1h * 20 + c * 50)",
+      "claude-fable-5-2": "tier(\"standard\", p * 8 + cr * 0.2 + cc * 10 + cc1h * 16 + c * 40)",
       "claude-haiku-4-5": "tier(\"standard\", p * 1 + cr * 0.1 + cc * 1.25 + cc1h * 2 + c * 5)",
       "claude-haiku-4-5-20251001": "tier(\"standard\", p * 1 + cr * 0.1 + cc * 1.25 + cc1h * 2 + c * 5)",
       "claude-haiku-5-5": "len <= 100000 ? tier(\"0_100k\", p * 0.1 + cr * 0.01 + cc * 0.125 + cc1h * 0.2 + c * 0.5) : tier(\"100k_plus\", p * 0.5 + cr * 0.05 + cc * 0.625 + cc1h * 1 + c * 2.5)",
@@ -22,6 +23,7 @@
     "billing_mode": {
       "claude-fable-5": "tiered_expr",
       "claude-fable-5-1": "tiered_expr",
+      "claude-fable-5-2": "tiered_expr",
       "claude-haiku-4-5": "tiered_expr",
       "claude-haiku-4-5-20251001": "tiered_expr",
       "claude-haiku-5-5": "tiered_expr",
