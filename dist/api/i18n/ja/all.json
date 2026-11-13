@@ -8402,22 +8402,8 @@
         "attachment": true,
         "canonical_model_id": "google/gemini-2.5-computer-use-preview-10-2025",
         "cost": {
-          "context_over_200k": {
-            "input": 2.5,
-            "output": 15
-          },
           "input": 1.25,
-          "output": 10,
-          "tiers": [
-            {
-              "input": 2.5,
-              "output": 15,
-              "tier": {
-                "size": 200000,
-                "type": "context"
-              }
-            }
-          ]
+          "output": 10
         },
         "description": "UI タスクを自動化するブラウザ操作エージェント向けの特化型 Gemini 2.5 モデル",
         "family": "gemini-pro",
@@ -9553,6 +9539,55 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-4-hydrogen": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-4-hydrogen",
+        "cost": {
+          "cache_read": 0.075,
+          "input": 1.5,
+          "input_audio": 1.5,
+          "output": 7.5
+        },
+        "description": "日常的なコーディングとエージェント型ワークフロー向けのGoogleのGemini 4モデルで、4段階の思考レベルと1Mトークンのコンテキストウィンドウを備える",
+        "family": "gemini",
+        "id": "gemini-4-hydrogen",
+        "knowledge": "2026-03",
+        "last_updated": "2026-11-12",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 4 Hydrogen",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-12",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gemini-embedding-001": {
         "attachment": false,
         "cost": {
@@ -9715,40 +9750,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "gemini-omni-flash-preview": {
-        "attachment": true,
-        "canonical_model_id": "google/gemini-omni-flash-preview",
-        "cost": {
-          "input": 1.5,
-          "output": 17.5
-        },
-        "description": "高速で対話的な text-to-video および image-to-video ワークフロー向けの動画生成・編集モデル",
-        "family": "gemini",
-        "id": "gemini-omni-flash-preview",
-        "last_updated": "2026-06-30",
-        "limit": {
-          "context": 131072,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "video"
-          ]
-        },
-        "name": "Gemini Omni Flash Preview",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-06-30",
-        "temperature": true,
-        "tool_call": false,
-        "type": "video"
-      },
       "gemini-pro-latest": {
         "attachment": true,
         "canonical_model_id": "google/gemini-3.1-pro-preview",
@@ -9814,6 +9815,10 @@
       },
       "gemma-4-26b-a4b-it": {
         "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
         "description": "効率的なチャットとセルフホスト展開向けのオープン Gemma 指示追従モデル",
         "family": "gemma",
         "id": "gemma-4-26b-a4b-it",
@@ -9846,6 +9851,10 @@
       },
       "gemma-4-31b-it": {
         "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
         "description": "オープンでセルフホスト可能なチャットと推論向けの最大規模 Gemma 4 指示追従モデル",
         "family": "gemma",
         "id": "gemma-4-31b-it",
@@ -14945,6 +14954,11 @@
     "models": {
       "chatgpt-image-latest": {
         "attachment": true,
+        "cost": {
+          "cache_read": 1.25,
+          "input": 5,
+          "output": 10
+        },
         "description": "プロンプト主導の生成、編集、ビジュアルデザインワークフロー向けの画像モデル",
         "family": "gpt-image",
         "id": "chatgpt-image-latest",
@@ -17413,6 +17427,11 @@
       "gpt-image-1.5": {
         "attachment": true,
         "canonical_model_id": "openai/gpt-image-1.5",
+        "cost": {
+          "cache_read": 1.25,
+          "input": 5,
+          "output": 10
+        },
         "description": "プロンプト主導の生成、編集、ビジュアルデザインワークフロー向けの画像モデル",
         "family": "gpt-image",
         "id": "gpt-image-1.5",
