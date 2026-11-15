@@ -1,14 +1,32 @@
 {
   "data": {
     "billing_expr": {
+      "deepseek/deepseek-flash": "tier(\"standard\", p * 0.15013085 + cr * 0.00300262 + c * 0.60052342)",
+      "glm-5-3": "tier(\"standard\", p * 1.20104683 + cr * 0.30026171 + c * 4.20366391)",
+      "glm-5.3": "tier(\"standard\", p * 1.20104683 + cr * 0.30026171 + c * 4.20366391)",
+      "glm-5.3-flash": "tier(\"standard\", p * 0.12010468 + cr * 0.0345301 + c * 0.42036639)",
       "hy3": "tier(\"standard\", p * 0 + cr * 0 + cc * 0 + c * 0)",
       "hy4": "tier(\"standard\", p * 0.834 + cr * 0.042 + c * 2.501)",
-      "hy4-preview": "tier(\"standard\", p * 0.834 + cr * 0.042 + c * 2.501)"
+      "hy4-preview": "tier(\"standard\", p * 0.90078512 + cr * 0.04503926 + c * 2.70235537)",
+      "kimi-k2.7-code": "tier(\"standard\", p * 0.97585055 + cr * 0.19517011 + c * 4.05353306)",
+      "kimi-k3": "tier(\"standard\", p * 3.00261708 + cr * 0.30026171 + c * 15.01308541)",
+      "mimo-v2.6-flash": "tier(\"standard\", p * 0.15013085 + cr * 0.00300262 + c * 0.30026171)",
+      "minimax-m-3-0": "len <= 512000 ? tier(\"0_512k\", p * 0.31527479 + cr * 0.06305496 + c * 1.26109917) : tier(\"512k_plus\", p * 0.63054959 + cr * 0.12610992 + c * 2.52219835)",
+      "minimax-m3": "len <= 512000 ? tier(\"0_512k\", p * 0.31527479 + cr * 0.06305496 + c * 1.26109917) : tier(\"512k_plus\", p * 0.63054959 + cr * 0.12610992 + c * 2.52219835)"
     },
     "billing_mode": {
+      "deepseek/deepseek-flash": "tiered_expr",
+      "glm-5-3": "tiered_expr",
+      "glm-5.3": "tiered_expr",
+      "glm-5.3-flash": "tiered_expr",
       "hy3": "tiered_expr",
       "hy4": "tiered_expr",
-      "hy4-preview": "tiered_expr"
+      "hy4-preview": "tiered_expr",
+      "kimi-k2.7-code": "tiered_expr",
+      "kimi-k3": "tiered_expr",
+      "mimo-v2.6-flash": "tiered_expr",
+      "minimax-m-3-0": "tiered_expr",
+      "minimax-m3": "tiered_expr"
     }
   },
   "message": "",

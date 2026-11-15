@@ -1,7 +1,7 @@
 {
-  "api": "https://api.tbox.cn/api/llm/v1",
+  "api": "https://api.ant-ling.com/v1",
   "currency": "CNY",
-  "doc": "https://alipaytbox.yuque.com/sxs0ba/ling/intro",
+  "doc": "https://developer.ant-ling.com/zh-CN/docs",
   "env": [
     "BAILING_API_TOKEN"
   ],
@@ -9,20 +9,21 @@
   "id": "bailing",
   "lobeIcon": "AntGroup.Color",
   "models": {
-    "Ling-1T": {
+    "Ling-3.0-flash": {
       "attachment": false,
+      "canonical_model_id": "inclusionai/ling-3.0-flash",
       "cost": {
-        "input": 0.57,
-        "output": 2.29
+        "cache_read": 0.015,
+        "input": 0.075,
+        "output": 0.224
       },
-      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
+      "description": "Hybrid-linear MoE reasoning model with 124B total and 5.1B active parameters for efficient agents",
       "family": "ling",
-      "id": "Ling-1T",
-      "knowledge": "2024-06",
-      "last_updated": "2025-10",
+      "id": "Ling-3.0-flash",
+      "last_updated": "2026-07-23",
       "limit": {
-        "context": 128000,
-        "output": 32000
+        "context": 262144,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -32,27 +33,68 @@
           "text"
         ]
       },
-      "name": "Ling-1T",
+      "name": "Ling 3.0 Flash",
       "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-10",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-07-23",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "Ring-1T": {
-      "attachment": false,
+    "Ling-3.0-flash-VL": {
+      "attachment": true,
+      "canonical_model_id": "inclusionai/ling-3.0-flash-vl",
       "cost": {
-        "input": 0.57,
-        "output": 2.29
+        "cache_read": 0.015,
+        "input": 0.075,
+        "output": 0.224
       },
-      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
-      "family": "ring",
-      "id": "Ring-1T",
-      "knowledge": "2024-06",
-      "last_updated": "2025-10",
+      "description": "Native multimodal hybrid MoE model for image and video understanding, reasoning, and visual agents",
+      "family": "ling",
+      "id": "Ling-3.0-flash-VL",
+      "last_updated": "2026-09-10",
       "limit": {
-        "context": 128000,
-        "output": 32000
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.0 Flash VL",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-09-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Ling-3.0-tiny": {
+      "attachment": false,
+      "canonical_model_id": "inclusionai/ling-3.0-tiny",
+      "description": "Lightweight hybrid-linear MoE reasoning model with 7.9B total and 1.3B active parameters for on-device deployment and offline agents",
+      "family": "ling",
+      "id": "Ling-3.0-tiny",
+      "last_updated": "2026-08-07",
+      "limit": {
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -62,13 +104,89 @@
           "text"
         ]
       },
-      "name": "Ring-1T",
+      "name": "Ling 3.0 Tiny",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2025-10",
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-08-07",
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
+    },
+    "Ling-3.1-flash": {
+      "attachment": false,
+      "canonical_model_id": "inclusionai/ling-3.1-flash",
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 0.9
+      },
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "family": "ling",
+      "id": "Ling-3.1-flash",
+      "last_updated": "2026-09-29",
+      "limit": {
+        "context": 1000000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.1 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-09-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Ling-3.2-flash": {
+      "attachment": true,
+      "canonical_model_id": "inclusionai/ling-3.2-flash",
+      "description": "Native multimodal MoE model with 560B total and 25B active parameters for complex visual understanding, multimodal agents, 3D interaction, and medical imaging",
+      "family": "ling",
+      "id": "Ling-3.2-flash",
+      "last_updated": "2026-11-05",
+      "limit": {
+        "context": 1000000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.2 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-11-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     }
   },
   "name": "Bailing",

@@ -6055,43 +6055,7 @@
       "tags": []
     },
     {
-      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
-      "firm": "bailing",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": true,
-        "reasoning": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "icon": "lb:antgroup-color",
-      "id": "Ling-1T",
-      "knowledge": "2024-06",
-      "lastUpdated": "2025-10",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 32000,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Ling-1T",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": 0.57,
-        "output": 2.29
-      },
-      "releaseDate": "2025-10",
-      "tags": []
-    },
-    {
-      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+      "description": "Hybrid-linear MoE reasoning model with 124B total and 5.1B active parameters for efficient agents",
       "firm": "bailing",
       "flags": {
         "attachment": false,
@@ -6100,14 +6064,14 @@
         "open_weights": true,
         "reasoning": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "icon": "lb:antgroup-color",
-      "id": "Ring-1T",
-      "knowledge": "2024-06",
-      "lastUpdated": "2025-10",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 32000,
+      "id": "Ling-3.0-flash",
+      "knowledge": null,
+      "lastUpdated": "2026-07-23",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 32768,
       "modalities": {
         "input": [
           "text"
@@ -6116,14 +6080,162 @@
           "text"
         ]
       },
-      "name": "Ring-1T",
+      "name": "Ling 3.0 Flash",
+      "price": {
+        "cacheRead": 0.015,
+        "cacheWrite": null,
+        "input": 0.075,
+        "output": 0.224
+      },
+      "releaseDate": "2026-07-23",
+      "tags": []
+    },
+    {
+      "description": "Native multimodal hybrid MoE model for image and video understanding, reasoning, and visual agents",
+      "firm": "bailing",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:antgroup-color",
+      "id": "Ling-3.0-flash-VL",
+      "knowledge": null,
+      "lastUpdated": "2026-09-10",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 32768,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.0 Flash VL",
+      "price": {
+        "cacheRead": 0.015,
+        "cacheWrite": null,
+        "input": 0.075,
+        "output": 0.224
+      },
+      "releaseDate": "2026-09-10",
+      "tags": []
+    },
+    {
+      "description": "Lightweight hybrid-linear MoE reasoning model with 7.9B total and 1.3B active parameters for on-device deployment and offline agents",
+      "firm": "bailing",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:antgroup-color",
+      "id": "Ling-3.0-tiny",
+      "knowledge": null,
+      "lastUpdated": "2026-08-07",
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 32768,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.0 Tiny",
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.57,
-        "output": 2.29
+        "input": null,
+        "output": null
       },
-      "releaseDate": "2025-10",
+      "releaseDate": "2026-08-07",
+      "tags": []
+    },
+    {
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "firm": "bailing",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:antgroup-color",
+      "id": "Ling-3.1-flash",
+      "knowledge": null,
+      "lastUpdated": "2026-09-29",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 32768,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.1 Flash",
+      "price": {
+        "cacheRead": 0.06,
+        "cacheWrite": null,
+        "input": 0.3,
+        "output": 0.9
+      },
+      "releaseDate": "2026-09-29",
+      "tags": []
+    },
+    {
+      "description": "Native multimodal MoE model with 560B total and 25B active parameters for complex visual understanding, multimodal agents, 3D interaction, and medical imaging",
+      "firm": "bailing",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:antgroup-color",
+      "id": "Ling-3.2-flash",
+      "knowledge": null,
+      "lastUpdated": "2026-11-05",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 32768,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.2 Flash",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-11-05",
       "tags": []
     },
     {
@@ -7726,7 +7838,7 @@
       "knowledge": "2025-01",
       "lastUpdated": "2026-06-09",
       "maxCtxTokens": 16384,
-      "maxOutputTokens": 32768,
+      "maxOutputTokens": 16384,
       "modalities": {
         "input": [
           "audio"
@@ -8140,6 +8252,44 @@
         "output": 2.5
       },
       "releaseDate": "2026-07-21",
+      "tags": []
+    },
+    {
+      "description": "Video generation and editing model for fast, conversational text- and image-to-video workflows",
+      "firm": "google",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": false
+      },
+      "icon": "lb:gemini-color",
+      "id": "gemini-omni-flash-preview",
+      "knowledge": null,
+      "lastUpdated": "2026-06-30",
+      "maxCtxTokens": 131072,
+      "maxOutputTokens": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Gemini Omni Flash Preview",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 1.5,
+        "output": 17.5
+      },
+      "releaseDate": "2026-06-30",
       "tags": []
     },
     {
@@ -11264,7 +11414,7 @@
       "knowledge": null,
       "lastUpdated": "2025-12-02",
       "maxCtxTokens": 131072,
-      "maxOutputTokens": 262144,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text",
@@ -16599,6 +16749,262 @@
       "tags": []
     },
     {
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "deepseek/deepseek-flash",
+      "knowledge": "2025-05",
+      "lastUpdated": "2026-10-17",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 384000,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017",
+      "price": {
+        "cacheRead": 0.00300262,
+        "cacheWrite": null,
+        "input": 0.15013085,
+        "output": 0.60052342
+      },
+      "releaseDate": "2026-10-17",
+      "tags": []
+    },
+    {
+      "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "deepseek/deepseek-v4-pro",
+      "knowledge": null,
+      "lastUpdated": "2026-08-22",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 384000,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro 0813",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-08-13",
+      "tags": []
+    },
+    {
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "glm-5-2",
+      "knowledge": null,
+      "lastUpdated": "2026-06-13",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-06-13",
+      "tags": []
+    },
+    {
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "glm-5-3",
+      "knowledge": null,
+      "lastUpdated": "2026-08-14",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3",
+      "price": {
+        "cacheRead": 0.30026171,
+        "cacheWrite": null,
+        "input": 1.20104683,
+        "output": 4.20366391
+      },
+      "releaseDate": "2026-08-14",
+      "tags": []
+    },
+    {
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "glm-5.2",
+      "knowledge": null,
+      "lastUpdated": "2026-06-13",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-06-13",
+      "tags": []
+    },
+    {
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "glm-5.3",
+      "knowledge": null,
+      "lastUpdated": "2026-08-14",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3",
+      "price": {
+        "cacheRead": 0.30026171,
+        "cacheWrite": null,
+        "input": 1.20104683,
+        "output": 4.20366391
+      },
+      "releaseDate": "2026-08-14",
+      "tags": []
+    },
+    {
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "glm-5.3-flash",
+      "knowledge": null,
+      "lastUpdated": "2026-08-26",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-Flash",
+      "price": {
+        "cacheRead": 0.0345301,
+        "cacheWrite": null,
+        "input": 0.12010468,
+        "output": 0.42036639
+      },
+      "releaseDate": "2026-08-26",
+      "tags": []
+    },
+    {
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "firm": "tencent-token-plan",
       "flags": {
@@ -16699,12 +17105,202 @@
       },
       "name": "Hy4 preview",
       "price": {
-        "cacheRead": 0.042,
+        "cacheRead": 0.04503926,
         "cacheWrite": null,
-        "input": 0.834,
-        "output": 2.501
+        "input": 0.90078512,
+        "output": 2.70235537
       },
       "releaseDate": "2026-08-28",
+      "tags": []
+    },
+    {
+      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "kimi-k2.7-code",
+      "knowledge": "2025-01",
+      "lastUpdated": "2026-06-12",
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "price": {
+        "cacheRead": 0.19517011,
+        "cacheWrite": null,
+        "input": 0.97585055,
+        "output": 4.05353306
+      },
+      "releaseDate": "2026-06-12",
+      "tags": []
+    },
+    {
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "kimi-k3",
+      "knowledge": null,
+      "lastUpdated": "2026-07-16",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 1048576,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "price": {
+        "cacheRead": 0.30026171,
+        "cacheWrite": null,
+        "input": 3.00261708,
+        "output": 15.01308541
+      },
+      "releaseDate": "2026-07-16",
+      "tags": []
+    },
+    {
+      "description": "MiMo Flash model for multimodal coding agents and long-context automation",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "mimo-v2.6-flash",
+      "knowledge": null,
+      "lastUpdated": "2026-09-22",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.6-Flash",
+      "price": {
+        "cacheRead": 0.00300262,
+        "cacheWrite": null,
+        "input": 0.15013085,
+        "output": 0.30026171
+      },
+      "releaseDate": "2026-09-22",
+      "tags": []
+    },
+    {
+      "description": "MiniMax multimodal model for long-context coding, perception, and agent planning",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "minimax-m-3-0",
+      "knowledge": null,
+      "lastUpdated": "2026-06-01",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 512000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3",
+      "price": {
+        "cacheRead": 0.06305496,
+        "cacheWrite": null,
+        "input": 0.31527479,
+        "output": 1.26109917
+      },
+      "releaseDate": "2026-06-01",
+      "tags": []
+    },
+    {
+      "description": "MiniMax multimodal model for long-context coding, perception, and agent planning",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "minimax-m3",
+      "knowledge": null,
+      "lastUpdated": "2026-06-01",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 512000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3",
+      "price": {
+        "cacheRead": 0.06305496,
+        "cacheWrite": null,
+        "input": 0.31527479,
+        "output": 1.26109917
+      },
+      "releaseDate": "2026-06-01",
       "tags": []
     },
     {
@@ -18738,7 +19334,7 @@
       "id": "doubao-seed-2-1-pro-260628",
       "knowledge": null,
       "lastUpdated": "2026-06-23",
-      "maxCtxTokens": 256000,
+      "maxCtxTokens": 1024000,
       "maxOutputTokens": 256000,
       "modalities": {
         "input": [
@@ -18852,7 +19448,7 @@
       "id": "doubao-seed-evolving",
       "knowledge": null,
       "lastUpdated": "2026-06-23",
-      "maxCtxTokens": 256000,
+      "maxCtxTokens": 1024000,
       "maxOutputTokens": 256000,
       "modalities": {
         "input": [
@@ -18913,6 +19509,121 @@
       "tags": []
     },
     {
+      "description": "Lightweight ByteDance Seed 2.0 model for low-latency multimodal reasoning and high-volume tasks",
+      "firm": "volcengine-coding-plan",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:doubao-color",
+      "id": "doubao-seed-2.0-mini",
+      "knowledge": null,
+      "lastUpdated": "2026-02-14",
+      "maxCtxTokens": 256000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.0 Mini",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-02-14",
+      "tags": []
+    },
+    {
+      "description": "Omnimodal ByteDance Seed 2.1 model with native text, vision, and audio understanding, 1M context, and improved coding and agent task completion",
+      "firm": "volcengine-coding-plan",
+      "flags": {
+        "attachment": true,
+        "audio": true,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:doubao-color",
+      "id": "doubao-seed-2.1-lite",
+      "knowledge": null,
+      "lastUpdated": "2026-09-15",
+      "maxCtxTokens": 1024000,
+      "maxOutputTokens": 256000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.1 Lite",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-09-15",
+      "tags": []
+    },
+    {
+      "description": "Flagship ByteDance Seed 2.1 model for complex multimodal reasoning, coding, and agents",
+      "firm": "volcengine-coding-plan",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:doubao-color",
+      "id": "doubao-seed-2.1-pro",
+      "knowledge": null,
+      "lastUpdated": "2026-06-23",
+      "maxCtxTokens": 1024000,
+      "maxOutputTokens": 256000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.1 Pro",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": null,
+        "output": null
+      },
+      "releaseDate": "2026-06-23",
+      "tags": []
+    },
+    {
       "description": "Faster ByteDance Seed 2.1 model for multimodal reasoning and latency-sensitive agent workflows",
       "firm": "volcengine-coding-plan",
       "flags": {
@@ -18966,7 +19677,7 @@
       "id": "doubao-seed-evolving",
       "knowledge": null,
       "lastUpdated": "2026-06-23",
-      "maxCtxTokens": 256000,
+      "maxCtxTokens": 1024000,
       "maxOutputTokens": 256000,
       "modalities": {
         "input": [

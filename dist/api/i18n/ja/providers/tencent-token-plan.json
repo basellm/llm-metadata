@@ -1,5 +1,5 @@
 {
-  "api": "https://api.lkeap.cloud.tencent.com/plan/v3",
+  "api": "https://tokenhub.tencentmaas.com/plan/v3",
   "billing": {
     "priority": 10
   },
@@ -12,6 +12,321 @@
   "id": "tencent-token-plan",
   "lobeIcon": "Hunyuan.Color",
   "models": {
+    "deepseek/deepseek-flash": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.00300262,
+        "input": 0.15013085,
+        "output": 0.60052342
+      },
+      "description": "10月17日更新版のDeepSeek V4.1 Flash。推論、コーディング、エージェントタスク、視覚理解が向上",
+      "family": "deepseek-flash",
+      "id": "deepseek/deepseek-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v4-pro": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
+      "description": "100 万トークンのコンテキストと思考／非思考モードに対応した DeepSeek V4 Pro のスナップショット",
+      "family": "deepseek-thinking",
+      "id": "deepseek/deepseek-v4-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-22",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro 0813",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5-2": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.2",
+      "description": "長期コーディングエージェントと 100 万トークンコンテキスト作業向けのオープン GLM フラッグシップモデル",
+      "family": "glm",
+      "id": "glm-5-2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5-3": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
+      "cost": {
+        "cache_read": 0.30026171,
+        "input": 1.20104683,
+        "output": 4.20366391
+      },
+      "description": "長期コーディング、エージェント、複雑なプロジェクト遂行向けの GLM フラッグシップモデル",
+      "family": "glm",
+      "id": "glm-5-3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.2",
+      "description": "長期コーディングエージェントと 100 万トークンコンテキスト作業向けのオープン GLM フラッグシップモデル",
+      "family": "glm",
+      "id": "glm-5.2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.3": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
+      "cost": {
+        "cache_read": 0.30026171,
+        "input": 1.20104683,
+        "output": 4.20366391
+      },
+      "description": "長期コーディング、エージェント、複雑なプロジェクト遂行向けの GLM フラッグシップモデル",
+      "family": "glm",
+      "id": "glm-5.3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.3-flash": {
+      "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flash",
+      "cost": {
+        "cache_read": 0.0345301,
+        "input": 0.12010468,
+        "output": 0.42036639
+      },
+      "description": "効率的なコーディングと長期エージェントタスク向けのネイティブマルチモーダル GLM モデル",
+      "family": "glm-flash",
+      "id": "glm-5.3-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "hy3": {
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
@@ -103,9 +418,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.04503926,
+        "input": 0.90078512,
+        "output": 2.70235537
       },
       "description": "Agent 能力と複雑なタスク実行能力を大幅に強化した次世代の生産性モデル。",
       "family": "Hy",
@@ -139,6 +454,248 @@
         }
       ],
       "release_date": "2026-08-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.7-code": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.7-code",
+      "cost": {
+        "cache_read": 0.19517011,
+        "input": 0.97585055,
+        "output": 4.05353306
+      },
+      "description": "コーディング特化の Kimi モデル。長期のリポジトリ作業に強く、過度な思考を抑制",
+      "family": "kimi-k2",
+      "id": "kimi-k2.7-code",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k3": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3",
+      "cost": {
+        "cache_read": 0.30026171,
+        "input": 3.00261708,
+        "output": 15.01308541
+      },
+      "description": "100 万トークンのコンテキストと切り替え可能な最大強度の思考モードを備えた、長期エージェント作業向けマルチモーダル Kimi モデル",
+      "family": "kimi-k3",
+      "id": "kimi-k3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "mimo-v2.6-flash": {
+      "attachment": true,
+      "canonical_model_id": "xiaomi/mimo-v2.6-flash",
+      "cost": {
+        "cache_read": 0.00300262,
+        "input": 0.15013085,
+        "output": 0.30026171
+      },
+      "description": "マルチモーダルコーディングエージェントと長文脈自動化向けのMiMo Flashモデル",
+      "family": "mimo",
+      "id": "mimo-v2.6-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.6-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m-3-0": {
+      "attachment": true,
+      "canonical_model_id": "minimax/MiniMax-M3",
+      "cost": {
+        "cache_read": 0.06305496,
+        "context_over_200k": {
+          "cache_read": 0.12610992,
+          "input": 0.63054959,
+          "output": 2.52219835
+        },
+        "input": 0.31527479,
+        "output": 1.26109917,
+        "tiers": [
+          {
+            "cache_read": 0.12610992,
+            "input": 0.63054959,
+            "output": 2.52219835,
+            "tier": {
+              "size": 512000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "長文コンテキストのコーディング、知覚、エージェント計画向けの MiniMax マルチモーダルモデル",
+      "family": "minimax",
+      "id": "minimax-m-3-0",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-01",
+      "limit": {
+        "context": 1048576,
+        "output": 512000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m3": {
+      "attachment": true,
+      "canonical_model_id": "minimax/MiniMax-M3",
+      "cost": {
+        "cache_read": 0.06305496,
+        "context_over_200k": {
+          "cache_read": 0.12610992,
+          "input": 0.63054959,
+          "output": 2.52219835
+        },
+        "input": 0.31527479,
+        "output": 1.26109917,
+        "tiers": [
+          {
+            "cache_read": 0.12610992,
+            "input": 0.63054959,
+            "output": 2.52219835,
+            "tier": {
+              "size": 512000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "長文コンテキストのコーディング、知覚、エージェント計画向けの MiniMax マルチモーダルモデル",
+      "family": "minimax",
+      "id": "minimax-m3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-01",
+      "limit": {
+        "context": 1048576,
+        "output": 512000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-01",
       "temperature": true,
       "tool_call": true
     }

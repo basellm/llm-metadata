@@ -999,7 +999,7 @@
       "last_updated": "2026-06-09",
       "limit": {
         "context": 16384,
-        "output": 32768
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -1468,6 +1468,40 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
+    },
+    "gemini-omni-flash-preview": {
+      "attachment": true,
+      "canonical_model_id": "google/gemini-omni-flash-preview",
+      "cost": {
+        "input": 1.5,
+        "output": 17.5
+      },
+      "description": "用于快速对话式文本生成视频和图像生成视频工作流的视频生成与编辑模型",
+      "family": "gemini",
+      "id": "gemini-omni-flash-preview",
+      "last_updated": "2026-06-30",
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Gemini Omni Flash Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-30",
+      "temperature": true,
+      "tool_call": false,
+      "type": "video"
     },
     "gemini-pro-latest": {
       "attachment": true,

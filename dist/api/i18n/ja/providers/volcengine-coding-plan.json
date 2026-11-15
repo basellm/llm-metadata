@@ -60,6 +60,148 @@
       "temperature": true,
       "tool_call": true
     },
+    "doubao-seed-2.0-mini": {
+      "attachment": true,
+      "canonical_model_id": "bytedance-seed/seed-2.0-mini",
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "低遅延のマルチモーダル推論と大量タスク向けの軽量 ByteDance Seed 2.0 モデル",
+      "family": "seed",
+      "id": "doubao-seed-2.0-mini",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-14",
+      "limit": {
+        "context": 256000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.0 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-02-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "doubao-seed-2.1-lite": {
+      "attachment": true,
+      "canonical_model_id": "bytedance-seed/seed-2.1-lite",
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "テキスト、ビジョン、オーディオをネイティブに理解し、1Mコンテキストに対応、コーディングとエージェントタスクの完了能力を向上させたOmnimodal ByteDance Seed 2.1モデル",
+      "family": "seed",
+      "id": "doubao-seed-2.1-lite",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-09-15",
+      "limit": {
+        "context": 1024000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.1 Lite",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "doubao-seed-2.1-pro": {
+      "attachment": true,
+      "canonical_model_id": "bytedance-seed/seed-2.1-pro",
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "複雑なマルチモーダル推論、コーディング、エージェント向けの ByteDance Seed 2.1 フラッグシップモデル",
+      "family": "seed",
+      "id": "doubao-seed-2.1-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-23",
+      "limit": {
+        "context": 1024000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.1 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "doubao-seed-2.1-turbo": {
       "attachment": true,
       "canonical_model_id": "bytedance-seed/seed-2.1-turbo",
@@ -124,7 +266,7 @@
       },
       "last_updated": "2026-06-23",
       "limit": {
-        "context": 256000,
+        "context": 1024000,
         "output": 256000
       },
       "modalities": {

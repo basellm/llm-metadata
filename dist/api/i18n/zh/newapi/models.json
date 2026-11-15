@@ -431,6 +431,26 @@
       "vendor_name": "DeepSeek"
     },
     {
+      "description": "10月17日更新的 DeepSeek V4.1 Flash，在推理、编程、agentic 任务和视觉理解方面有所改进",
+      "endpoints": null,
+      "icon": "Hunyuan.Color",
+      "model_name": "deepseek/deepseek-flash",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,文件,开源权重,多模态,1M",
+      "vendor_name": "Tencent Token Plan"
+    },
+    {
+      "description": "DeepSeek V4 Pro 快照版本，支持百万 token 上下文以及思考与非思考模式",
+      "endpoints": null,
+      "icon": "Hunyuan.Color",
+      "model_name": "deepseek/deepseek-v4-pro",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,开源权重,1M",
+      "vendor_name": "Tencent Token Plan"
+    },
+    {
       "description": "Mistral 的编程智能体模型，面向代码仓库工作、终端任务与软件修复",
       "endpoints": null,
       "icon": "Mistral.Color",
@@ -547,7 +567,7 @@
       "model_name": "doubao-seed-2-1-pro-260628",
       "name_rule": 0,
       "status": 1,
-      "tags": "推理,工具,文件,多模态,256K",
+      "tags": "推理,工具,文件,多模态,1M",
       "vendor_name": "Volcengine Ark"
     },
     {
@@ -568,6 +588,36 @@
       "name_rule": 0,
       "status": 1,
       "tags": "推理,工具,文件,多模态,已弃用,256K",
+      "vendor_name": "Volcengine Ark Coding Plan"
+    },
+    {
+      "description": "轻量级字节跳动 Seed 2.0 模型，面向低延迟多模态推理与高吞吐任务",
+      "endpoints": null,
+      "icon": "Doubao.Color",
+      "model_name": "doubao-seed-2.0-mini",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,文件,多模态,256K",
+      "vendor_name": "Volcengine Ark Coding Plan"
+    },
+    {
+      "description": "Omnimodal ByteDance Seed 2.1 模型，原生支持文本、视觉和音频理解，具备 1M 上下文，并提升编码和智能体任务完成能力",
+      "endpoints": null,
+      "icon": "Doubao.Color",
+      "model_name": "doubao-seed-2.1-lite",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,文件,多模态,音频,1M",
+      "vendor_name": "Volcengine Ark Coding Plan"
+    },
+    {
+      "description": "字节跳动 Seed 2.1 旗舰模型，面向复杂多模态推理、编程与智能体",
+      "endpoints": null,
+      "icon": "Doubao.Color",
+      "model_name": "doubao-seed-2.1-pro",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,文件,多模态,1M",
       "vendor_name": "Volcengine Ark Coding Plan"
     },
     {
@@ -597,7 +647,7 @@
       "model_name": "doubao-seed-evolving",
       "name_rule": 0,
       "status": 1,
-      "tags": "推理,工具,文件,多模态,256K",
+      "tags": "推理,工具,文件,多模态,1M",
       "vendor_name": "Volcengine Ark"
     },
     {
@@ -931,6 +981,16 @@
       "vendor_name": "Google"
     },
     {
+      "description": "用于快速对话式文本生成视频和图像生成视频工作流的视频生成与编辑模型",
+      "endpoints": null,
+      "icon": "Gemini.Color",
+      "model_name": "gemini-omni-flash-preview",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,文件,多模态,131.1K",
+      "vendor_name": "Google"
+    },
+    {
       "description": "以推理为先的 Gemini 预览版，面向智能体编程与复杂问题求解",
       "endpoints": null,
       "icon": "Gemini.Color",
@@ -1073,12 +1133,22 @@
     {
       "description": "开源 GLM 旗舰模型，面向长程编程智能体与百万 token 上下文任务",
       "endpoints": null,
-      "icon": "Mistral.Color",
+      "icon": "Hunyuan.Color",
       "model_name": "glm-5-2",
       "name_rule": 0,
       "status": 1,
-      "tags": "推理,工具,开源权重,已弃用,1M",
-      "vendor_name": "Mistral"
+      "tags": "推理,工具,开源权重,1M",
+      "vendor_name": "Tencent Token Plan"
+    },
+    {
+      "description": "GLM 旗舰模型，面向长程编程、智能体与复杂项目交付",
+      "endpoints": null,
+      "icon": "Hunyuan.Color",
+      "model_name": "glm-5-3",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,开源权重,1M",
+      "vendor_name": "Tencent Token Plan"
     },
     {
       "description": "更快的 GLM-5，适合需要更低延迟的编程智能体",
@@ -1921,13 +1991,53 @@
       "vendor_name": "Mistral"
     },
     {
-      "description": "开放权重的指令模型，面向灵活适配的对话与自托管生产负载",
+      "description": "用于高效智能体的混合线性 MoE 推理模型，总参数量 124B，激活参数量 5.1B",
       "endpoints": null,
       "icon": "AntGroup.Color",
-      "model_name": "Ling-1T",
+      "model_name": "Ling-3.0-flash",
       "name_rule": 0,
       "status": 1,
-      "tags": "工具,开源权重,128K",
+      "tags": "推理,工具,开源权重,262.1K",
+      "vendor_name": "Bailing"
+    },
+    {
+      "description": "用于图像和视频理解、推理及视觉智能体的原生多模态混合 MoE 模型",
+      "endpoints": null,
+      "icon": "AntGroup.Color",
+      "model_name": "Ling-3.0-flash-VL",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,文件,开源权重,多模态,262.1K",
+      "vendor_name": "Bailing"
+    },
+    {
+      "description": "用于设备端部署和离线智能体的轻量级混合线性 MoE 推理模型，总参数量 7.9B，激活参数量 1.3B",
+      "endpoints": null,
+      "icon": "AntGroup.Color",
+      "model_name": "Ling-3.0-tiny",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,开源权重,131.1K",
+      "vendor_name": "Bailing"
+    },
+    {
+      "description": "高效模型，面向低延迟辅助、信息抽取与日常自动化",
+      "endpoints": null,
+      "icon": "AntGroup.Color",
+      "model_name": "Ling-3.1-flash",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,开源权重,1M",
+      "vendor_name": "Bailing"
+    },
+    {
+      "description": "用于复杂视觉理解、多模态智能体、3D 交互和医学影像的原生多模态 MoE 模型，总参数量 560B，激活参数量 25B",
+      "endpoints": null,
+      "icon": "AntGroup.Color",
+      "model_name": "Ling-3.2-flash",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,文件,多模态,1M",
       "vendor_name": "Bailing"
     },
     {
@@ -2131,6 +2241,16 @@
       "vendor_name": "MiniMax (minimax.io)"
     },
     {
+      "description": "MiniMax 多模态模型，面向长上下文编程、感知与智能体规划",
+      "endpoints": null,
+      "icon": "Hunyuan.Color",
+      "model_name": "minimax-m-3-0",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,文件,开源权重,多模态,1M",
+      "vendor_name": "Tencent Token Plan"
+    },
+    {
       "description": "高效的开源 MiniMax 模型，为编程智能体与重度工具调用工作流打造",
       "endpoints": null,
       "icon": "Minimax.Color",
@@ -2199,6 +2319,16 @@
       "status": 1,
       "tags": "推理,工具,开源权重,已弃用,204.8K",
       "vendor_name": "MiniMax (minimax.io)"
+    },
+    {
+      "description": "MiniMax 多模态模型，面向长上下文编程、感知与智能体规划",
+      "endpoints": null,
+      "icon": "Hunyuan.Color",
+      "model_name": "minimax-m3",
+      "name_rule": 0,
+      "status": 1,
+      "tags": "推理,工具,文件,开源权重,多模态,1M",
+      "vendor_name": "Tencent Token Plan"
     },
     {
       "description": "MiniMax 多模态模型，面向长上下文编程、感知与智能体规划",
@@ -3609,16 +3739,6 @@
       "status": 1,
       "tags": "推理,工具,已弃用,131.1K",
       "vendor_name": "Alibaba"
-    },
-    {
-      "description": "推理模型，面向深思型分析、多步问题求解与工具调用",
-      "endpoints": null,
-      "icon": "AntGroup.Color",
-      "model_name": "Ring-1T",
-      "name_rule": 0,
-      "status": 1,
-      "tags": "推理,开源权重,128K",
-      "vendor_name": "Bailing"
     },
     {
       "description": "基于 Kimi K2.6 的日语专精推理模型，针对日语、日本文化与商务工作流调优",
