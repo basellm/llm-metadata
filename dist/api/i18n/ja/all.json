@@ -19022,21 +19022,251 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "sarvam": {
-    "api": "https://api.sarvam.ai/v1",
-    "doc": "https://docs.sarvam.ai/api-reference-docs/getting-started/models",
+    "api": "https://api.sarvam.ai/v2",
+    "doc": "https://docs.sarvam.ai/api/token-factory/models",
     "env": [
       "SARVAM_API_KEY"
     ],
     "iconURL": "https://models.dev/logos/sarvam.svg",
     "id": "sarvam",
     "models": {
+      "deepseekv4.1-flash-1017": {
+        "attachment": true,
+        "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+        "cost": {
+          "cache_read": 0.00265957,
+          "input": 0.14893617,
+          "output": 0.58510638
+        },
+        "description": "10月17日更新版のDeepSeek V4.1 Flash。推論、コーディング、エージェントタスク、視覚理解が向上",
+        "family": "deepseek-flash",
+        "id": "deepseekv4.1-flash-1017",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-10-17",
+        "limit": {
+          "context": 1048576,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash 1017",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseekv4.1-flash-1017-interactive": {
+        "attachment": true,
+        "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+        "cost": {
+          "cache_read": 0.00531915,
+          "input": 0.26595745,
+          "output": 1.11702128
+        },
+        "description": "10月17日更新版のDeepSeek V4.1 Flash。推論、コーディング、エージェントタスク、視覚理解が向上",
+        "family": "deepseek-flash",
+        "id": "deepseekv4.1-flash-1017-interactive",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-10-17",
+        "limit": {
+          "context": 1048576,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash 1017 Interactive",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemma4": {
+        "attachment": true,
+        "canonical_model_id": "google/gemma-4-31b-it",
+        "cost": {
+          "cache_read": 0.10638298,
+          "input": 0.37234043,
+          "output": 0.95744681
+        },
+        "description": "オープンでセルフホスト可能なチャットと推論向けの最大規模 Gemma 4 指示追従モデル",
+        "family": "gemma",
+        "id": "gemma4",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 31B IT",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-04-02",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm5.3": {
+        "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.3",
+        "cost": {
+          "cache_read": 0.21276596,
+          "input": 1.34042553,
+          "output": 4.14893617
+        },
+        "description": "長期コーディング、エージェント、複雑なプロジェクト遂行向けの GLM フラッグシップモデル",
+        "family": "glm",
+        "id": "glm5.3",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-14",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-14",
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm5.3-flash": {
+        "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.3-flash",
+        "cost": {
+          "cache_read": 0.02659574,
+          "input": 0.14361702,
+          "output": 0.4787234
+        },
+        "description": "効率的なコーディングと長期エージェントタスク向けのネイティブマルチモーダル GLM モデル",
+        "family": "glm-flash",
+        "id": "glm5.3-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-26",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-26",
+        "temperature": true,
+        "tool_call": true
+      },
       "sarvam-105b": {
         "attachment": false,
         "canonical_model_id": "sarvam/sarvam-105b",
         "cost": {
-          "cache_read": 0.05263423,
-          "input": 0.15790269,
-          "output": 0.63161075
+          "cache_read": 0.00265957,
+          "input": 0.10638298,
+          "output": 0.26595745
         },
         "description": "エンタープライズ多言語アプリケーション向けのインド諸語推論フラッグシップモデル",
         "family": "sarvam",
@@ -19046,8 +19276,8 @@
         },
         "last_updated": "2026-02-18",
         "limit": {
-          "context": 131072,
-          "output": 131072
+          "context": 128000,
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -19077,19 +19307,21 @@
         "temperature": true,
         "tool_call": true
       },
-      "sarvam-30b": {
+      "sarvam-105b-conversations": {
         "attachment": false,
-        "canonical_model_id": "sarvam/sarvam-30b",
-        "description": "チャット、コーディング、多言語業務向けの効率的なインド諸語推論モデル",
-        "family": "sarvam",
-        "id": "sarvam-30b",
-        "interleaved": {
-          "field": "reasoning_content"
+        "canonical_model_id": "sarvam/sarvam-105b",
+        "cost": {
+          "cache_read": 0.00265957,
+          "input": 0.10638298,
+          "output": 0.26595745
         },
+        "description": "エンタープライズ多言語アプリケーション向けのインド諸語推論フラッグシップモデル",
+        "family": "sarvam",
+        "id": "sarvam-105b-conversations",
         "last_updated": "2026-02-18",
         "limit": {
-          "context": 65536,
-          "output": 65536
+          "context": 32000,
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -19099,24 +19331,10 @@
             "text"
           ]
         },
-        "name": "Sarvam-30B",
+        "name": "Sarvam-105B Conversations",
         "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high"
-            ]
-          }
-        ],
+        "reasoning": false,
         "release_date": "2026-02-18",
-        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       }
@@ -26805,6 +27023,55 @@
         "structured_output": true,
         "temperature": true,
         "tool_call": true
+      },
+      "glm-5.4": {
+        "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.4",
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "コーディング、エージェント、複雑なプロジェクト遂行向けのマルチモーダルGLMフラッグシップモデル",
+        "family": "glm",
+        "id": "glm-5.4",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-11-23",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.4",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Z.AI Coding Plan",
@@ -27846,6 +28113,55 @@
           }
         ],
         "release_date": "2026-08-14",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.4": {
+        "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.4",
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "コーディング、エージェント、複雑なプロジェクト遂行向けのマルチモーダルGLMフラッグシップモデル",
+        "family": "glm",
+        "id": "glm-5.4",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-11-23",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.4",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-23",
         "structured_output": true,
         "temperature": true,
         "tool_call": true

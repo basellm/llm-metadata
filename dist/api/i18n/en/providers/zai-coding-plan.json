@@ -333,6 +333,55 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
+    },
+    "glm-5.4": {
+      "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.4",
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Multimodal GLM flagship model for coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "glm-5.4",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-11-23",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.4",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     }
   },
   "name": "Z.AI Coding Plan",
