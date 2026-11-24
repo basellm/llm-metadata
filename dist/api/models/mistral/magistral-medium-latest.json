@@ -1,8 +1,9 @@
 {
   "attachment": true,
   "cost": {
-    "input": 2,
-    "output": 5
+    "cache_read": 0.15,
+    "input": 1.5,
+    "output": 7.5
   },
   "description": "Mistral reasoning model for transparent analysis, math, and complex decisions",
   "family": "magistral-medium",
@@ -11,12 +12,13 @@
   "last_updated": "2025-03-20",
   "limit": {
     "context": 262144,
-    "output": 16384
+    "output": 262144
   },
   "modalities": {
     "input": [
       "text",
-      "image"
+      "image",
+      "pdf"
     ],
     "output": [
       "text"
@@ -36,6 +38,7 @@
   ],
   "release_date": "2025-03-17",
   "status": "deprecated",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

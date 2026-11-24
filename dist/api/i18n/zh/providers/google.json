@@ -117,39 +117,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "gemini-2.5-computer-use-preview-10-2025": {
-      "attachment": true,
-      "canonical_model_id": "google/gemini-2.5-computer-use-preview-10-2025",
-      "cost": {
-        "input": 1.25,
-        "output": 10
-      },
-      "description": "专用 Gemini 2.5 模型，面向自动执行界面任务的浏览器控制智能体",
-      "family": "gemini-computer-use",
-      "id": "gemini-2.5-computer-use-preview-10-2025",
-      "knowledge": "2025-01",
-      "last_updated": "2025-10-07",
-      "limit": {
-        "context": 128000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 2.5 Computer Use Preview 10-2025",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2025-10-07",
-      "temperature": true,
-      "tool_call": true
-    },
     "gemini-2.5-flash": {
       "attachment": true,
       "canonical_model_id": "google/gemini-2.5-flash",
@@ -194,6 +161,7 @@
         }
       ],
       "release_date": "2025-06-17",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -308,6 +276,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-05-01",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": false,
       "type": "speech"
@@ -368,6 +337,7 @@
         }
       ],
       "release_date": "2025-06-17",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -399,6 +369,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-05-01",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": false,
       "type": "speech"
@@ -535,6 +506,7 @@
         }
       ],
       "release_date": "2026-05-28",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": false,
       "type": "image"
@@ -583,6 +555,7 @@
         }
       ],
       "release_date": "2026-05-07",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -630,55 +603,6 @@
       "temperature": true,
       "tool_call": true,
       "type": "image"
-    },
-    "gemini-3.1-flash-lite-preview": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.025,
-        "input": 0.25,
-        "input_audio": 0.5,
-        "output": 1.5
-      },
-      "description": "为兼容旧版集成而保留的历史模型",
-      "family": "gemini-flash-lite",
-      "id": "gemini-3.1-flash-lite-preview",
-      "knowledge": "2025-01",
-      "last_updated": "2026-03-03",
-      "limit": {
-        "context": 1048576,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video",
-          "audio",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemini 3.1 Flash Lite Preview",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "minimal",
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-03-03",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
     },
     "gemini-3.1-flash-live-preview": {
       "attachment": true,
@@ -759,6 +683,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-04-15",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": false,
       "type": "speech"
@@ -931,6 +856,7 @@
         }
       ],
       "release_date": "2026-05-19",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1111,6 +1037,7 @@
         }
       ],
       "release_date": "2026-08-13",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1383,6 +1310,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-05-20",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": false,
       "type": "embedding"
@@ -1432,11 +1360,10 @@
         "input_audio": 0.75,
         "output": 3.75
       },
-      "description": "高效率的 Gemini 模型，面向智能体工作流、编程与多模态推理",
+      "description": "Google 最智能的 Flash 模型，为长程软件工程、自主智能体与复杂企业工作流打造",
       "family": "gemini-flash",
       "id": "gemini-flash-latest",
-      "knowledge": "2026-03",
-      "last_updated": "2026-08-13",
+      "last_updated": "2026-09-02",
       "limit": {
         "context": 1048576,
         "output": 65536
@@ -1466,7 +1393,7 @@
           ]
         }
       ],
-      "release_date": "2026-08-13",
+      "release_date": "2026-09-02",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1517,40 +1444,6 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
-    },
-    "gemini-omni-flash-preview": {
-      "attachment": true,
-      "canonical_model_id": "google/gemini-omni-flash-preview",
-      "cost": {
-        "input": 1.5,
-        "output": 17.5
-      },
-      "description": "用于快速对话式文本生成视频和图像生成视频工作流的视频生成与编辑模型",
-      "family": "gemini-omni-flash",
-      "id": "gemini-omni-flash-preview",
-      "last_updated": "2026-06-30",
-      "limit": {
-        "context": 131072,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "name": "Gemini Omni Flash Preview",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-06-30",
-      "temperature": true,
-      "tool_call": false,
-      "type": "video"
     },
     "gemini-pro-latest": {
       "attachment": true,

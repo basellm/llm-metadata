@@ -118,99 +118,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "devstral-2512": {
-      "attachment": false,
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "リポジトリ作業、ターミナルタスク、ソフトウェア修正向けの Mistral コーディングエージェントモデル",
-      "family": "devstral",
-      "id": "devstral-2512",
-      "knowledge": "2025-12",
-      "last_updated": "2025-12-09",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Devstral 2",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-09",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
-    "devstral-latest": {
-      "attachment": false,
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "旧来の統合との互換性維持のために残されたレガシーモデル",
-      "family": "devstral",
-      "id": "devstral-latest",
-      "knowledge": "2025-12",
-      "last_updated": "2025-12-09",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Devstral 2",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-09",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
-    "devstral-medium-latest": {
-      "attachment": false,
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "旧来の統合との互換性維持のために残されたレガシーモデル",
-      "family": "devstral-medium",
-      "id": "devstral-medium-latest",
-      "knowledge": "2025-12",
-      "last_updated": "2025-12-02",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Devstral 2 (latest)",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-02",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
     "glm-5-2": {
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
@@ -254,84 +161,12 @@
       "temperature": true,
       "tool_call": true
     },
-    "labs-devstral-small-2512": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "旧来の統合との互換性維持のために残されたレガシーモデル",
-      "family": "devstral-small",
-      "id": "labs-devstral-small-2512",
-      "knowledge": "2025-12",
-      "last_updated": "2025-12-09",
-      "limit": {
-        "context": 256000,
-        "output": 256000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Devstral Small 2",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-09",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
-    "labs-leanstral-1-5-1": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "自動定理証明と自動形式化に最適化された、更新版のLean 4形式証明エンジニアリングモデル。総パラメータ数119B、アクティブパラメータ数6.5B。",
-      "family": "leanstral",
-      "id": "labs-leanstral-1-5-1",
-      "last_updated": "2026-06-30",
-      "limit": {
-        "context": 262144,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Leanstral 1.5",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-06-30",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "magistral-medium-latest": {
       "attachment": true,
       "cost": {
-        "input": 2,
-        "output": 5
+        "cache_read": 0.15,
+        "input": 1.5,
+        "output": 7.5
       },
       "description": "透明性の高い分析、数学、複雑な意思決定向けの Mistral 推論モデル",
       "family": "magistral-medium",
@@ -340,12 +175,13 @@
       "last_updated": "2025-03-20",
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 262144
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -365,6 +201,7 @@
       ],
       "release_date": "2025-03-17",
       "status": "deprecated",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -395,6 +232,40 @@
         ]
       },
       "name": "Ministral 3 14B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "ministral-14b-latest": {
+      "attachment": true,
+      "canonical_model_id": "mistral/ministral-3-14b-instruct-2512",
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.2,
+        "output": 0.2
+      },
+      "description": "効率的なローカル展開、指示追従、ツール利用向けのオープン vision-language model",
+      "family": "ministral",
+      "id": "ministral-14b-latest",
+      "last_updated": "2025-12-02",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ministral 3 14B (latest)",
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-12-02",
@@ -438,19 +309,19 @@
     },
     "ministral-3b-latest": {
       "attachment": true,
+      "canonical_model_id": "mistral/ministral-3-3b-instruct-2512",
       "cost": {
         "cache_read": 0.01,
         "input": 0.1,
         "output": 0.1
       },
-      "description": "エッジ、低遅延要件、コスト効率重視のワークロード向けのコンパクトな Mistral モデル",
+      "description": "エッジ展開、指示追従、ツール利用向けのコンパクトなオープン vision-language model",
       "family": "ministral",
       "id": "ministral-3b-latest",
-      "knowledge": "2024-10",
-      "last_updated": "2024-10-04",
+      "last_updated": "2025-12-02",
       "limit": {
         "context": 131072,
-        "output": 128000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -462,10 +333,10 @@
           "text"
         ]
       },
-      "name": "Ministral 3B (latest)",
+      "name": "Ministral 3 3B (latest)",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-10-01",
+      "release_date": "2025-12-02",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -506,19 +377,19 @@
     },
     "ministral-8b-latest": {
       "attachment": true,
+      "canonical_model_id": "mistral/ministral-3-8b-instruct-2512",
       "cost": {
         "cache_read": 0.015,
         "input": 0.15,
         "output": 0.15
       },
-      "description": "エッジ、低遅延要件、コスト効率重視のワークロード向けのコンパクトな Mistral モデル",
+      "description": "エッジ展開、指示追従、ツール利用向けのコンパクトなオープン vision-language model",
       "family": "ministral",
       "id": "ministral-8b-latest",
-      "knowledge": "2024-10",
-      "last_updated": "2024-10-04",
+      "last_updated": "2025-12-02",
       "limit": {
         "context": 262144,
-        "output": 128000
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -530,10 +401,10 @@
           "text"
         ]
       },
-      "name": "Ministral 8B (latest)",
+      "name": "Ministral 3 8B (latest)",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-10-01",
+      "release_date": "2025-12-02",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -541,6 +412,7 @@
     "mistral-embed": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.01,
         "input": 0.1,
         "output": 0
       },
@@ -570,6 +442,7 @@
     },
     "mistral-large-2512": {
       "attachment": true,
+      "canonical_model_id": "mistral/mistral-large-2512",
       "cost": {
         "cache_read": 0.05,
         "input": 0.5,
@@ -578,7 +451,7 @@
       "description": "エンタープライズエージェント、コーディング、多言語推論向けの Mistral 最大規模汎用モデル",
       "family": "mistral-large",
       "id": "mistral-large-2512",
-      "knowledge": "2024-11",
+      "knowledge": "2023-10",
       "last_updated": "2025-12-02",
       "limit": {
         "context": 262144,
@@ -597,7 +470,8 @@
       "name": "Mistral Large 3",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-11-01",
+      "release_date": "2025-12-02",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -642,52 +516,6 @@
         }
       ],
       "release_date": "2026-10-06",
-      "status": "beta",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistral-large-4-0-8": {
-      "attachment": true,
-      "canonical_model_id": "mistral/mistral-large-4",
-      "cost": {
-        "cache_read": 0.07,
-        "input": 0.7,
-        "output": 2.1
-      },
-      "description": "推論、コーディング、エージェント型業務向けのMistralの1Tパラメータ・マルチモーダルMoE",
-      "family": "mistral-large",
-      "id": "mistral-large-4-0-8",
-      "last_updated": "2026-10-06",
-      "limit": {
-        "context": 1048576,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Large 4.0.8",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-10-06",
-      "status": "beta",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -732,72 +560,7 @@
         }
       ],
       "release_date": "2026-10-06",
-      "status": "beta",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistral-medium-2505": {
-      "attachment": true,
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "多言語チャット、推論、ツール支援ワークフロー向けの Mistral モデル",
-      "family": "mistral-medium",
-      "id": "mistral-medium-2505",
-      "knowledge": "2025-05",
-      "last_updated": "2025-05-07",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Medium 3",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-05-07",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistral-medium-2508": {
-      "attachment": true,
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "多言語チャット、推論、ツール支援ワークフロー向けの Mistral モデル",
-      "family": "mistral-medium",
-      "id": "mistral-medium-2508",
-      "knowledge": "2025-05",
-      "last_updated": "2025-08-12",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Medium 3.1",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-08-12",
-      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -839,6 +602,7 @@
         }
       ],
       "release_date": "2026-04-29",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -882,39 +646,8 @@
         }
       ],
       "release_date": "2026-04-29",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistral-small-2506": {
-      "attachment": true,
-      "cost": {
-        "input": 0.1,
-        "output": 0.3
-      },
-      "description": "高速なチャット、抽出、本番アシスタント向けの効率的な Mistral モデル",
-      "family": "mistral-small",
-      "id": "mistral-small-2506",
-      "knowledge": "2025-03",
-      "last_updated": "2025-06-20",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Small 3.2",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-06-20",
       "status": "deprecated",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -1004,69 +737,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "open-mistral-nemo": {
-      "attachment": false,
-      "cost": {
-        "input": 0.15,
-        "output": 0.15
-      },
-      "description": "旧来の統合との互換性維持のために残されたレガシーモデル",
-      "family": "mistral-nemo",
-      "id": "open-mistral-nemo",
-      "knowledge": "2024-07",
-      "last_updated": "2024-07-01",
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Open Mistral Nemo",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-07-01",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
-    "pixtral-12b": {
-      "attachment": true,
-      "cost": {
-        "input": 0.15,
-        "output": 0.15
-      },
-      "description": "画像理解とマルチモーダルチャット向けの Mistral 視覚言語モデル",
-      "family": "pixtral",
-      "id": "pixtral-12b",
-      "knowledge": "2024-09",
-      "last_updated": "2024-09-01",
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Pixtral 12B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-09-01",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
     "voxtral-mini-latest": {
       "attachment": true,
       "description": "正確な音声書き起こしと字幕ワークフロー向けの音声認識モデル",
@@ -1089,6 +759,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-02-04",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": false,
       "type": "transcription"
@@ -1115,6 +786,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-03-23",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": false,
       "type": "speech"
@@ -1288,7 +960,6 @@
         "input": [
           "text",
           "image",
-          "video",
           "pdf"
         ],
         "output": [
