@@ -16,39 +16,6 @@
     "id": "alibaba",
     "lobeIcon": "Qwen.Color",
     "models": {
-      "qvq-max": {
-        "attachment": true,
-        "cost": {
-          "input": 1.2,
-          "output": 4.8
-        },
-        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
-        "family": "qvq",
-        "id": "qvq-max",
-        "knowledge": "2024-04",
-        "last_updated": "2025-03-25",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "QVQ Max",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-03-25",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen-flash": {
         "attachment": false,
         "cost": {
@@ -111,6 +78,7 @@
       "qwen-max": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.32,
           "input": 1.6,
           "output": 6.4
         },
@@ -168,114 +136,6 @@
         "release_date": "2025-01",
         "temperature": true,
         "tool_call": false
-      },
-      "qwen-mt-turbo": {
-        "attachment": false,
-        "cost": {
-          "input": 0.16,
-          "output": 0.49
-        },
-        "description": "多言語変換、ローカライズ、言語横断ワークフロー向けの翻訳モデル",
-        "family": "qwen-mt-turbo",
-        "id": "qwen-mt-turbo",
-        "knowledge": "2024-04",
-        "last_updated": "2025-01",
-        "limit": {
-          "context": 16384,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen-MT Turbo",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-01",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": false
-      },
-      "qwen-omni-turbo": {
-        "attachment": true,
-        "cost": {
-          "input": 0.07,
-          "input_audio": 4.44,
-          "output": 0.27,
-          "output_audio": 8.89
-        },
-        "description": "テキスト、視覚、音声、マルチモーダルエージェントタスク向けの Qwen オムニモデル",
-        "family": "qwen-omni",
-        "id": "qwen-omni-turbo",
-        "knowledge": "2024-04",
-        "last_updated": "2025-03-26",
-        "limit": {
-          "context": 32768,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text",
-            "audio"
-          ]
-        },
-        "name": "Qwen-Omni Turbo",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-01-19",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen-omni-turbo-realtime": {
-        "attachment": true,
-        "cost": {
-          "input": 0.27,
-          "input_audio": 4.44,
-          "output": 1.07,
-          "output_audio": 8.89
-        },
-        "description": "テキスト、視覚、音声、マルチモーダルエージェントタスク向けの Qwen オムニモデル",
-        "family": "qwen-omni-realtime",
-        "id": "qwen-omni-turbo-realtime",
-        "knowledge": "2024-04",
-        "last_updated": "2025-05-08",
-        "limit": {
-          "context": 32768,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio"
-          ],
-          "output": [
-            "text",
-            "audio"
-          ]
-        },
-        "name": "Qwen-Omni Turbo Realtime",
-        "open_weights": false,
-        "provider": {
-          "api": "wss://dashscope-intl.aliyuncs.com/api-ws/v1/realtime"
-        },
-        "reasoning": false,
-        "release_date": "2025-05-08",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true,
-        "type": "realtime"
       },
       "qwen-plus": {
         "attachment": false,
@@ -342,6 +202,7 @@
       "qwen-plus-character-ja": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.1,
           "input": 0.5,
           "output": 1.4
         },
@@ -368,78 +229,6 @@
         "release_date": "2024-01",
         "temperature": true,
         "tool_call": false
-      },
-      "qwen-turbo": {
-        "attachment": false,
-        "cost": {
-          "input": 0.05,
-          "output": 0.2,
-          "reasoning": 0.5
-        },
-        "description": "高速なチャット、抽出、大量ワークロード向けの効率的な Qwen モデル",
-        "family": "qwen-turbo",
-        "id": "qwen-turbo",
-        "knowledge": "2024-04",
-        "last_updated": "2025-04-28",
-        "limit": {
-          "context": 1000000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen Turbo",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2024-11-01",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen-vl-max": {
-        "attachment": true,
-        "cost": {
-          "input": 0.8,
-          "output": 3.2
-        },
-        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
-        "family": "qwen-vl-max",
-        "id": "qwen-vl-max",
-        "knowledge": "2024-04",
-        "last_updated": "2025-08-13",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen-VL Max",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-04-08",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
       },
       "qwen-vl-ocr": {
         "attachment": true,
@@ -472,234 +261,6 @@
         "temperature": true,
         "tool_call": false
       },
-      "qwen-vl-plus": {
-        "attachment": true,
-        "cost": {
-          "input": 0.21,
-          "output": 0.63
-        },
-        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
-        "family": "qwen-vl-plus",
-        "id": "qwen-vl-plus",
-        "knowledge": "2024-04",
-        "last_updated": "2025-08-15",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen-VL Plus",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-01-25",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen2-5-omni-7b": {
-        "attachment": true,
-        "cost": {
-          "input": 0.1,
-          "input_audio": 6.76,
-          "output": 0.4
-        },
-        "description": "テキスト、視覚、音声、マルチモーダルエージェントタスク向けの Qwen オムニモデル",
-        "family": "qwen-omni",
-        "id": "qwen2-5-omni-7b",
-        "knowledge": "2024-04",
-        "last_updated": "2024-12",
-        "limit": {
-          "context": 32768,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text",
-            "audio"
-          ]
-        },
-        "name": "Qwen2.5-Omni 7B",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-12",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-14b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.35,
-          "output": 1.4,
-          "reasoning": 4.2
-        },
-        "description": "多言語チャット、推論、ツール利用向けの Qwen 指示追従モデル",
-        "family": "qwen",
-        "id": "qwen3-14b",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 14B",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-235b-a22b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.7,
-          "output": 2.8,
-          "reasoning": 8.4
-        },
-        "description": "多言語推論、コーディング、ツール利用向けの大規模オープン Qwen MoE モデル",
-        "family": "qwen",
-        "id": "qwen3-235b-a22b",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 131072,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 235B-A22B",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-32b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.7,
-          "output": 2.8,
-          "reasoning": 8.4
-        },
-        "description": "セルフホストのチャット、推論、コーディング向けの Dense 構成オープン Qwen モデル",
-        "family": "qwen",
-        "id": "qwen3-32b",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 131072,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 32B",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-8b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.18,
-          "output": 0.7,
-          "reasoning": 2.1
-        },
-        "description": "多言語チャット、推論、ツール利用向けの Qwen 指示追従モデル",
-        "family": "qwen",
-        "id": "qwen3-8b",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 8B",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen3-asr-flash": {
         "attachment": true,
         "description": "正確な音声書き起こしと字幕ワークフロー向けの音声認識モデル",
@@ -726,104 +287,6 @@
         "temperature": false,
         "tool_call": false,
         "type": "transcription"
-      },
-      "qwen3-coder-30b-a3b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.45,
-          "output": 2.25,
-          "tiers": [
-            {
-              "input": 0.75,
-              "output": 3.75,
-              "tier": {
-                "size": 32000,
-                "type": "context"
-              }
-            },
-            {
-              "input": 1.2,
-              "output": 6,
-              "tier": {
-                "size": 128000,
-                "type": "context"
-              }
-            }
-          ]
-        },
-        "description": "効率的なローカルエージェントとリポジトリ単位の修正向けの小型 Qwen コーディングモデル",
-        "family": "qwen-coder",
-        "id": "qwen3-coder-30b-a3b-instruct",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3-Coder 30B-A3B Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-coder-480b-a35b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 1.5,
-          "output": 7.5,
-          "tiers": [
-            {
-              "input": 2.7,
-              "output": 13.5,
-              "tier": {
-                "size": 32000,
-                "type": "context"
-              }
-            },
-            {
-              "input": 4.5,
-              "output": 22.5,
-              "tier": {
-                "size": 128000,
-                "type": "context"
-              }
-            }
-          ]
-        },
-        "description": "リポジトリ推論とエージェント型エンジニアリング向けの大規模オープン Qwen コーディングモデル",
-        "family": "qwen-coder",
-        "id": "qwen3-coder-480b-a35b-instruct",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3-Coder 480B-A35B Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
       },
       "qwen3-coder-flash": {
         "attachment": false,
@@ -890,176 +353,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3-coder-plus": {
-        "attachment": false,
-        "cost": {
-          "input": 1,
-          "output": 5
-        },
-        "description": "ソフトウェアエージェント、リポジトリ編集、長文コンテキストのコード向けのホスト版 Qwen コーディングモデル",
-        "family": "qwen-coder-plus",
-        "id": "qwen3-coder-plus",
-        "knowledge": "2025-04",
-        "last_updated": "2025-07-23",
-        "limit": {
-          "context": 1048576,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 Coder Plus",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-07-23",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-livetranslate-flash-realtime": {
-        "attachment": true,
-        "cost": {
-          "input": 10,
-          "input_audio": 10,
-          "output": 10,
-          "output_audio": 38
-        },
-        "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
-        "family": "qwen-livetranslate",
-        "id": "qwen3-livetranslate-flash-realtime",
-        "knowledge": "2024-04",
-        "last_updated": "2025-09-22",
-        "limit": {
-          "context": 53248,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text",
-            "audio"
-          ]
-        },
-        "name": "Qwen3-LiveTranslate Flash Realtime",
-        "open_weights": false,
-        "provider": {
-          "api": "wss://dashscope-intl.aliyuncs.com/api-ws/v1/realtime"
-        },
-        "reasoning": false,
-        "release_date": "2025-09-22",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": false,
-        "type": "realtime"
-      },
-      "qwen3-max": {
-        "attachment": false,
-        "cost": {
-          "input": 1.2,
-          "output": 6
-        },
-        "description": "コーディングエージェント、複雑な推論、ツール利用向けの Qwen3 フラッグシップモデル",
-        "family": "qwen-max",
-        "id": "qwen3-max",
-        "knowledge": "2025-04",
-        "last_updated": "2025-09-23",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 Max",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-09-23",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-next-80b-a3b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.5,
-          "output": 2
-        },
-        "description": "多言語チャット、推論、ツール利用向けの Qwen 指示追従モデル",
-        "family": "qwen",
-        "id": "qwen3-next-80b-a3b-instruct",
-        "knowledge": "2025-04",
-        "last_updated": "2025-09",
-        "limit": {
-          "context": 131072,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3-Next 80B-A3B Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-09",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-next-80b-a3b-thinking": {
-        "attachment": false,
-        "cost": {
-          "input": 0.5,
-          "output": 6
-        },
-        "description": "ローカルでの推論、数学、コーディングエージェント向けの効率的な Qwen 思考モデル",
-        "family": "qwen",
-        "id": "qwen3-next-80b-a3b-thinking",
-        "knowledge": "2025-04",
-        "last_updated": "2025-09",
-        "limit": {
-          "context": 131072,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3-Next 80B-A3B (Thinking)",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-09",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen3-omni-flash": {
         "attachment": true,
         "cost": {
@@ -1101,85 +394,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3-omni-flash-realtime": {
-        "attachment": true,
-        "cost": {
-          "input": 0.52,
-          "input_audio": 4.57,
-          "output": 1.99,
-          "output_audio": 18.13
-        },
-        "description": "テキスト、視覚、音声、マルチモーダルエージェントタスク向けの Qwen オムニモデル",
-        "family": "qwen-omni-realtime-flash",
-        "id": "qwen3-omni-flash-realtime",
-        "knowledge": "2024-04",
-        "last_updated": "2025-09-15",
-        "limit": {
-          "context": 65536,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text",
-            "audio"
-          ]
-        },
-        "name": "Qwen3-Omni Flash Realtime",
-        "open_weights": false,
-        "provider": {
-          "api": "wss://dashscope-intl.aliyuncs.com/api-ws/v1/realtime"
-        },
-        "reasoning": false,
-        "release_date": "2025-09-15",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true,
-        "type": "realtime"
-      },
-      "qwen3-vl-235b-a22b": {
-        "attachment": true,
-        "cost": {
-          "input": 0.7,
-          "output": 2.8,
-          "reasoning": 8.4
-        },
-        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
-        "family": "qwen-vl",
-        "id": "qwen3-vl-235b-a22b",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 131072,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3-VL 235B-A22B",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen3-vl-30b-a3b": {
         "attachment": true,
         "cost": {
@@ -1217,6 +431,7 @@
           }
         ],
         "release_date": "2025-04",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -1441,6 +656,7 @@
           }
         ],
         "release_date": "2026-02-15",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -1495,7 +711,9 @@
       "qwen3.5-plus": {
         "attachment": true,
         "cost": {
+          "cache_write": 0.5,
           "context_over_200k": {
+            "cache_write": 0.625,
             "input": 0.5,
             "output": 3
           },
@@ -1504,6 +722,7 @@
           "reasoning": 2.4,
           "tiers": [
             {
+              "cache_write": 0.625,
               "input": 0.5,
               "output": 3,
               "tier": {
@@ -1544,6 +763,7 @@
           }
         ],
         "release_date": "2026-02-16",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -1685,47 +905,6 @@
         ],
         "release_date": "2026-04-27",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3.6-max-preview": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.13,
-          "cache_write": 1.625,
-          "input": 1.3,
-          "output": 7.8
-        },
-        "description": "複雑な推論、コーディング、エージェントワークフロー向けの Qwen フラッグシップモデル",
-        "family": "qwen-max",
-        "id": "qwen3.6-max-preview",
-        "knowledge": "2025-04",
-        "last_updated": "2026-04-20",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.6 Max Preview",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2026-04-20",
-        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -2125,35 +1304,58 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwq-plus": {
-        "attachment": false,
+      "qwen4-max": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen4-max",
         "cost": {
-          "input": 0.8,
-          "output": 2.4
+          "cache_read": 0.075,
+          "cache_write": 1.875,
+          "input": 1.5,
+          "output": 4.5
         },
-        "description": "熟考型の問題解決、数学、コーディング向けの Qwen 推論モデル",
-        "family": "qwq",
-        "id": "qwq-plus",
-        "knowledge": "2024-04",
-        "last_updated": "2025-03-05",
+        "description": "コーディング、オフィス業務、フロントエンド設計、複雑なエージェントタスク向けのフラッグシップマルチモーダルモデル",
+        "family": "qwen-max",
+        "id": "qwen4-max",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-11-16",
         "limit": {
-          "context": 131072,
-          "output": 8192
+          "context": 1000000,
+          "output": 262144
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image",
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "QwQ Plus",
+        "name": "Qwen4 Max",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-03-05",
-        "status": "deprecated",
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "xhigh"
+            ]
+          },
+          {
+            "max": 262144,
+            "min": 1,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-11-16",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       }
@@ -2179,39 +1381,6 @@
     "id": "alibaba-cn",
     "lobeIcon": "Qwen.Color",
     "models": {
-      "qvq-max": {
-        "attachment": true,
-        "cost": {
-          "input": 1.147,
-          "output": 4.588
-        },
-        "description": "視覚分析、計画、ツール利用向けのマルチモーダル推論モデル",
-        "family": "qvq",
-        "id": "qvq-max",
-        "knowledge": "2024-04",
-        "last_updated": "2025-03-25",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "QVQ Max",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-03-25",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen-deep-research": {
         "attachment": false,
         "cost": {
@@ -2367,37 +1536,6 @@
         "temperature": true,
         "tool_call": false
       },
-      "qwen-math-plus": {
-        "attachment": false,
-        "cost": {
-          "input": 0.574,
-          "output": 1.721
-        },
-        "description": "多言語チャット、推論、ツール利用向けの Qwen 指示追従モデル",
-        "family": "qwen-math-plus",
-        "id": "qwen-math-plus",
-        "knowledge": "2024-04",
-        "last_updated": "2024-09-19",
-        "limit": {
-          "context": 4096,
-          "output": 3072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen Math Plus",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-08-16",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen-math-turbo": {
         "attachment": false,
         "cost": {
@@ -2489,114 +1627,6 @@
         "release_date": "2025-01",
         "temperature": true,
         "tool_call": false
-      },
-      "qwen-mt-turbo": {
-        "attachment": false,
-        "cost": {
-          "input": 0.101,
-          "output": 0.28
-        },
-        "description": "多言語変換、ローカライズ、言語横断ワークフロー向けの翻訳モデル",
-        "family": "qwen-mt-turbo",
-        "id": "qwen-mt-turbo",
-        "knowledge": "2024-04",
-        "last_updated": "2025-01",
-        "limit": {
-          "context": 16384,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen-MT Turbo",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-01",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": false
-      },
-      "qwen-omni-turbo": {
-        "attachment": true,
-        "cost": {
-          "input": 0.058,
-          "input_audio": 3.584,
-          "output": 0.23,
-          "output_audio": 7.168
-        },
-        "description": "テキスト、視覚、音声、マルチモーダルエージェントタスク向けの Qwen オムニモデル",
-        "family": "qwen-omni",
-        "id": "qwen-omni-turbo",
-        "knowledge": "2024-04",
-        "last_updated": "2025-03-26",
-        "limit": {
-          "context": 32768,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text",
-            "audio"
-          ]
-        },
-        "name": "Qwen-Omni Turbo",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-01-19",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen-omni-turbo-realtime": {
-        "attachment": true,
-        "cost": {
-          "input": 0.23,
-          "input_audio": 3.584,
-          "output": 0.918,
-          "output_audio": 7.168
-        },
-        "description": "テキスト、視覚、音声、マルチモーダルエージェントタスク向けの Qwen オムニモデル",
-        "family": "qwen-omni-realtime",
-        "id": "qwen-omni-turbo-realtime",
-        "knowledge": "2024-04",
-        "last_updated": "2025-05-08",
-        "limit": {
-          "context": 32768,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio"
-          ],
-          "output": [
-            "text",
-            "audio"
-          ]
-        },
-        "name": "Qwen-Omni Turbo Realtime",
-        "open_weights": false,
-        "provider": {
-          "api": "wss://dashscope.aliyuncs.com/api-ws/v1/realtime"
-        },
-        "reasoning": false,
-        "release_date": "2025-05-08",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true,
-        "type": "realtime"
       },
       "qwen-plus": {
         "attachment": false,
@@ -2695,79 +1725,6 @@
         "temperature": true,
         "tool_call": false
       },
-      "qwen-turbo": {
-        "attachment": false,
-        "cost": {
-          "input": 0.044,
-          "output": 0.087,
-          "reasoning": 0.431
-        },
-        "description": "高速なチャット、抽出、大量ワークロード向けの効率的な Qwen モデル",
-        "family": "qwen-turbo",
-        "id": "qwen-turbo",
-        "knowledge": "2024-04",
-        "last_updated": "2025-07-15",
-        "limit": {
-          "context": 1000000,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen Turbo",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "max": 38912,
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2024-11-01",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen-vl-max": {
-        "attachment": true,
-        "cost": {
-          "input": 0.23,
-          "output": 0.574
-        },
-        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
-        "family": "qwen-vl-max",
-        "id": "qwen-vl-max",
-        "knowledge": "2024-04",
-        "last_updated": "2025-08-13",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen-VL Max",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-04-08",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen-vl-ocr": {
         "attachment": true,
         "cost": {
@@ -2799,238 +1756,6 @@
         "temperature": true,
         "tool_call": false
       },
-      "qwen-vl-plus": {
-        "attachment": true,
-        "cost": {
-          "input": 0.115,
-          "output": 0.287
-        },
-        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
-        "family": "qwen-vl-plus",
-        "id": "qwen-vl-plus",
-        "knowledge": "2024-04",
-        "last_updated": "2025-08-15",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen-VL Plus",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-01-25",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen2-5-omni-7b": {
-        "attachment": true,
-        "cost": {
-          "input": 0.087,
-          "input_audio": 5.448,
-          "output": 0.345
-        },
-        "description": "テキスト、視覚、音声、マルチモーダルエージェントタスク向けの Qwen オムニモデル",
-        "family": "qwen-omni",
-        "id": "qwen2-5-omni-7b",
-        "knowledge": "2024-04",
-        "last_updated": "2024-12",
-        "limit": {
-          "context": 32768,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text",
-            "audio"
-          ]
-        },
-        "name": "Qwen2.5-Omni 7B",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-12",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-14b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.144,
-          "output": 0.574,
-          "reasoning": 1.434
-        },
-        "description": "多言語チャット、推論、ツール利用向けの Qwen 指示追従モデル",
-        "family": "qwen",
-        "id": "qwen3-14b",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 14B",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "max": 38912,
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-235b-a22b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.287,
-          "output": 1.147,
-          "reasoning": 2.868
-        },
-        "description": "多言語チャット、推論、ツール利用向けの Qwen 指示追従モデル",
-        "family": "qwen",
-        "id": "qwen3-235b-a22b",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 131072,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 235B-A22B",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "max": 38912,
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-32b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.287,
-          "output": 1.147,
-          "reasoning": 2.868
-        },
-        "description": "多言語チャット、推論、ツール利用向けの Qwen 指示追従モデル",
-        "family": "qwen",
-        "id": "qwen3-32b",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 131072,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 32B",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "max": 38912,
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-8b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.072,
-          "output": 0.287,
-          "reasoning": 0.717
-        },
-        "description": "多言語チャット、推論、ツール利用向けの Qwen 指示追従モデル",
-        "family": "qwen",
-        "id": "qwen3-8b",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 131072,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 8B",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "max": 38912,
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen3-asr-flash": {
         "attachment": true,
         "description": "正確な音声書き起こしと字幕ワークフロー向けの音声認識モデル",
@@ -3057,104 +1782,6 @@
         "temperature": false,
         "tool_call": false,
         "type": "transcription"
-      },
-      "qwen3-coder-30b-a3b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.216,
-          "output": 0.861,
-          "tiers": [
-            {
-              "input": 0.323,
-              "output": 1.291,
-              "tier": {
-                "size": 32000,
-                "type": "context"
-              }
-            },
-            {
-              "input": 0.538,
-              "output": 2.151,
-              "tier": {
-                "size": 128000,
-                "type": "context"
-              }
-            }
-          ]
-        },
-        "description": "ソフトウェアエージェント、リポジトリ編集、コード推論向けの Qwen コーディングモデル",
-        "family": "qwen-coder",
-        "id": "qwen3-coder-30b-a3b-instruct",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3-Coder 30B-A3B Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-coder-480b-a35b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.861,
-          "output": 3.441,
-          "tiers": [
-            {
-              "input": 1.291,
-              "output": 5.161,
-              "tier": {
-                "size": 32000,
-                "type": "context"
-              }
-            },
-            {
-              "input": 2.151,
-              "output": 8.602,
-              "tier": {
-                "size": 128000,
-                "type": "context"
-              }
-            }
-          ]
-        },
-        "description": "ソフトウェアエージェント、リポジトリ編集、コード推論向けの Qwen コーディングモデル",
-        "family": "qwen-coder",
-        "id": "qwen3-coder-480b-a35b-instruct",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3-Coder 480B-A35B Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-04",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
       },
       "qwen3-coder-flash": {
         "attachment": false,
@@ -3221,195 +1848,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3-coder-plus": {
-        "attachment": false,
-        "cost": {
-          "input": 0.574,
-          "output": 2.296,
-          "tiers": [
-            {
-              "input": 0.861,
-              "output": 3.444,
-              "tier": {
-                "size": 32000,
-                "type": "context"
-              }
-            },
-            {
-              "input": 1.435,
-              "output": 5.74,
-              "tier": {
-                "size": 128000,
-                "type": "context"
-              }
-            },
-            {
-              "input": 2.87,
-              "output": 28.7,
-              "tier": {
-                "size": 256000,
-                "type": "context"
-              }
-            }
-          ]
-        },
-        "description": "ソフトウェアエージェント、リポジトリ編集、長文コンテキストのコード向けのホスト版 Qwen コーディングモデル",
-        "family": "qwen-coder-plus",
-        "id": "qwen3-coder-plus",
-        "knowledge": "2025-04",
-        "last_updated": "2026-09-11",
-        "limit": {
-          "context": 1048576,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 Coder Plus",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-07-23",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-max": {
-        "attachment": false,
-        "cost": {
-          "input": 0.359,
-          "output": 1.434,
-          "reasoning": 1.434,
-          "tiers": [
-            {
-              "input": 0.574,
-              "output": 2.294,
-              "reasoning": 2.294,
-              "tier": {
-                "size": 32000,
-                "type": "context"
-              }
-            },
-            {
-              "input": 1.004,
-              "output": 4.014,
-              "reasoning": 4.014,
-              "tier": {
-                "size": 128000,
-                "type": "context"
-              }
-            }
-          ]
-        },
-        "description": "複雑な推論、コーディング、エージェントワークフロー向けの Qwen フラッグシップモデル",
-        "family": "qwen-max",
-        "id": "qwen3-max",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2025-04",
-        "last_updated": "2026-09-22",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 Max",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "max": 81920,
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2026-01-23",
-        "status": "deprecated",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-next-80b-a3b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.144,
-          "output": 0.574
-        },
-        "description": "多言語チャット、推論、ツール利用向けの Qwen 指示追従モデル",
-        "family": "qwen",
-        "id": "qwen3-next-80b-a3b-instruct",
-        "knowledge": "2025-04",
-        "last_updated": "2025-09",
-        "limit": {
-          "context": 131072,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3-Next 80B-A3B Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-09",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-next-80b-a3b-thinking": {
-        "attachment": false,
-        "cost": {
-          "input": 0.144,
-          "output": 1.434
-        },
-        "description": "熟考型の問題解決、数学、コーディング向けの Qwen 推論モデル",
-        "family": "qwen",
-        "id": "qwen3-next-80b-a3b-thinking",
-        "knowledge": "2025-04",
-        "last_updated": "2025-09",
-        "limit": {
-          "context": 131072,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3-Next 80B-A3B (Thinking)",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-09",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen3-omni-flash": {
         "attachment": true,
         "cost": {
@@ -3448,80 +1886,6 @@
           }
         ],
         "release_date": "2025-09-15",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-omni-flash-realtime": {
-        "attachment": true,
-        "cost": {
-          "input": 0.23,
-          "input_audio": 3.584,
-          "output": 0.918,
-          "output_audio": 7.168
-        },
-        "description": "テキスト、視覚、音声、マルチモーダルエージェントタスク向けの Qwen オムニモデル",
-        "family": "qwen-omni-realtime-flash",
-        "id": "qwen3-omni-flash-realtime",
-        "knowledge": "2024-04",
-        "last_updated": "2025-09-15",
-        "limit": {
-          "context": 65536,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio"
-          ],
-          "output": [
-            "text",
-            "audio"
-          ]
-        },
-        "name": "Qwen3-Omni Flash Realtime",
-        "open_weights": false,
-        "provider": {
-          "api": "wss://dashscope.aliyuncs.com/api-ws/v1/realtime"
-        },
-        "reasoning": false,
-        "release_date": "2025-09-15",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true,
-        "type": "realtime"
-      },
-      "qwen3-vl-235b-a22b": {
-        "attachment": true,
-        "cost": {
-          "input": 0.286705,
-          "output": 1.14682,
-          "reasoning": 2.867051
-        },
-        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
-        "family": "qwen-vl",
-        "id": "qwen3-vl-235b-a22b",
-        "knowledge": "2025-04",
-        "last_updated": "2025-04",
-        "limit": {
-          "context": 131072,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3-VL 235B-A22B",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-04",
-        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -3625,6 +1989,162 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3.5-122b-a10b": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.5-122b-a10b",
+        "cost": {
+          "input": 0.119773,
+          "output": 0.958184,
+          "tiers": [
+            {
+              "input": 0.299433,
+              "output": 2.395461,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
+        "family": "qwen",
+        "id": "qwen3.5-122b-a10b",
+        "last_updated": "2026-02-23",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 122B-A10B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 81920,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-02-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.5-27b": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.5-27b",
+        "cost": {
+          "input": 0.08983,
+          "output": 0.718638,
+          "tiers": [
+            {
+              "input": 0.269489,
+              "output": 2.155915,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
+        "family": "qwen",
+        "id": "qwen3.5-27b",
+        "last_updated": "2026-02-23",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 27B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 81920,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-02-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.5-35b-a3b": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.5-35b-a3b",
+        "cost": {
+          "input": 0.059887,
+          "output": 0.479092,
+          "tiers": [
+            {
+              "input": 0.239546,
+              "output": 1.916369,
+              "tier": {
+                "size": 128000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
+        "family": "qwen",
+        "id": "qwen3.5-35b-a3b",
+        "last_updated": "2026-02-23",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 35B-A3B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 81920,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-02-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3.5-397b-a17b": {
         "attachment": true,
         "cost": {
@@ -3675,6 +2195,7 @@
           }
         ],
         "release_date": "2026-02-16",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -3807,6 +2328,90 @@
           }
         ],
         "release_date": "2026-02-16",
+        "status": "deprecated",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.6-27b": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.6-27b",
+        "cost": {
+          "input": 0.449149,
+          "output": 2.694894
+        },
+        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
+        "family": "qwen",
+        "id": "qwen3.6-27b",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 27B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-04-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.6-35b-a3b": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.6-35b-a3b",
+        "cost": {
+          "input": 0.269489,
+          "output": 1.616936
+        },
+        "description": "視覚、音声、コード能力を必要とするローカルエージェント向けのオープンマルチモーダル Qwen MoE モデル",
+        "family": "qwen",
+        "id": "qwen3.6-35b-a3b",
+        "last_updated": "2026-04-17",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 35B-A3B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 131072,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-04-17",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -3869,47 +2474,6 @@
           }
         ],
         "release_date": "2026-04-27",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3.6-max-preview": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.132,
-          "input": 1.32,
-          "output": 7.9
-        },
-        "description": "複雑な推論、コーディング、エージェントワークフロー向けの Qwen フラッグシップモデル",
-        "family": "qwen-max",
-        "id": "qwen3.6-max-preview",
-        "last_updated": "2026-04-21",
-        "limit": {
-          "context": 245800,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.6 Max Preview",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "max": 131072,
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2026-04-20",
-        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -4309,35 +2873,58 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwq-plus": {
-        "attachment": false,
+      "qwen4-max": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen4-max",
         "cost": {
-          "input": 0.23,
-          "output": 0.574
+          "cache_read": 0.074858,
+          "cache_write": 1.871454,
+          "input": 1.497163,
+          "output": 4.491489
         },
-        "description": "熟考型の問題解決、数学、コーディング向けの Qwen 推論モデル",
-        "family": "qwq",
-        "id": "qwq-plus",
-        "knowledge": "2024-04",
-        "last_updated": "2025-03-05",
+        "description": "コーディング、オフィス業務、フロントエンド設計、複雑なエージェントタスク向けのフラッグシップマルチモーダルモデル",
+        "family": "qwen-max",
+        "id": "qwen4-max",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-11-16",
         "limit": {
-          "context": 131072,
-          "output": 8192
+          "context": 1000000,
+          "output": 262144
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image",
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "QwQ Plus",
+        "name": "Qwen4 Max",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-03-05",
-        "status": "deprecated",
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "xhigh"
+            ]
+          },
+          {
+            "max": 262144,
+            "min": 1,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-11-16",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -4523,105 +3110,6 @@
     "id": "alibaba-coding-plan",
     "lobeIcon": "Qwen.Color",
     "models": {
-      "qwen3-coder-next": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "ソフトウェアエージェント、リポジトリ編集、コード推論向けの Qwen コーディングモデル",
-        "family": "qwen-coder",
-        "id": "qwen3-coder-next",
-        "last_updated": "2026-02-03",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 Coder Next",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2026-02-03",
-        "status": "deprecated",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-coder-plus": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "ソフトウェアエージェント、リポジトリ編集、コード推論向けの Qwen コーディングモデル",
-        "family": "qwen-coder-plus",
-        "id": "qwen3-coder-plus",
-        "knowledge": "2025-04",
-        "last_updated": "2025-07-23",
-        "limit": {
-          "context": 1000000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 Coder Plus",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-07-23",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-max-2026-01-23": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "複雑な推論、コーディング、エージェントワークフロー向けの Qwen フラッグシップモデル",
-        "family": "qwen-max",
-        "id": "qwen3-max-2026-01-23",
-        "knowledge": "2025-04",
-        "last_updated": "2026-01-23",
-        "limit": {
-          "context": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 Max",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-01-23",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen3.5-plus": {
         "attachment": true,
         "cost": {
@@ -4658,6 +3146,7 @@
           }
         ],
         "release_date": "2026-02-16",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -4763,105 +3252,6 @@
     "id": "alibaba-coding-plan-cn",
     "lobeIcon": "Qwen.Color",
     "models": {
-      "qwen3-coder-next": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "ソフトウェアエージェント、リポジトリ編集、コード推論向けの Qwen コーディングモデル",
-        "family": "qwen-coder",
-        "id": "qwen3-coder-next",
-        "last_updated": "2026-02-03",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 Coder Next",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2026-02-03",
-        "status": "deprecated",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-coder-plus": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "ソフトウェアエージェント、リポジトリ編集、コード推論向けの Qwen コーディングモデル",
-        "family": "qwen-coder-plus",
-        "id": "qwen3-coder-plus",
-        "knowledge": "2025-04",
-        "last_updated": "2025-07-23",
-        "limit": {
-          "context": 1000000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 Coder Plus",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-07-23",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3-max-2026-01-23": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "複雑な推論、コーディング、エージェントワークフロー向けの Qwen フラッグシップモデル",
-        "family": "qwen-max",
-        "id": "qwen3-max-2026-01-23",
-        "knowledge": "2025-04",
-        "last_updated": "2026-01-23",
-        "limit": {
-          "context": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 Max",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-01-23",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen3.5-plus": {
         "attachment": true,
         "cost": {
@@ -4897,6 +3287,7 @@
           }
         ],
         "release_date": "2026-02-16",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -5468,56 +3859,55 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3.8-max-preview": {
+      "qwen4-max": {
         "attachment": true,
-        "canonical_model_id": "alibaba/qwen3.8-max-preview",
+        "canonical_model_id": "alibaba/qwen4-max",
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0,
           "output": 0
         },
-        "description": "100 万トークンのマルチモーダル推論と長期エージェントワークフロー向けの Qwen フラッグシップ プレビュー版",
+        "description": "コーディング、オフィス業務、フロントエンド設計、複雑なエージェントタスク向けのフラッグシップマルチモーダルモデル",
         "family": "qwen-max",
-        "id": "qwen3.8-max-preview",
+        "id": "qwen4-max",
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2026-07-19",
+        "last_updated": "2026-11-16",
         "limit": {
           "context": 1000000,
-          "output": 131072
+          "output": 262144
         },
         "modalities": {
           "input": [
             "text",
             "image",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "Qwen3.8 Max Preview",
+        "name": "Qwen4 Max",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
           {
             "type": "effort",
             "values": [
+              "none",
               "low",
-              "medium",
+              "high",
               "xhigh"
             ]
           },
           {
             "max": 262144,
-            "min": 0,
+            "min": 1,
             "type": "budget_tokens"
           }
         ],
-        "release_date": "2026-07-19",
-        "status": "deprecated",
+        "release_date": "2026-11-16",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -6076,56 +4466,55 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen3.8-max-preview": {
+      "qwen4-max": {
         "attachment": true,
-        "canonical_model_id": "alibaba/qwen3.8-max-preview",
+        "canonical_model_id": "alibaba/qwen4-max",
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
           "input": 0,
           "output": 0
         },
-        "description": "100 万トークンのマルチモーダル推論と長期エージェントワークフロー向けの Qwen フラッグシップ プレビュー版",
+        "description": "コーディング、オフィス業務、フロントエンド設計、複雑なエージェントタスク向けのフラッグシップマルチモーダルモデル",
         "family": "qwen-max",
-        "id": "qwen3.8-max-preview",
+        "id": "qwen4-max",
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2026-07-19",
+        "last_updated": "2026-11-16",
         "limit": {
           "context": 1000000,
-          "output": 131072
+          "output": 262144
         },
         "modalities": {
           "input": [
             "text",
             "image",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "Qwen3.8 Max Preview",
+        "name": "Qwen4 Max",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
           {
             "type": "effort",
             "values": [
+              "none",
               "low",
-              "medium",
+              "high",
               "xhigh"
             ]
           },
           {
             "max": 262144,
-            "min": 0,
+            "min": 1,
             "type": "budget_tokens"
           }
         ],
-        "release_date": "2026-07-19",
-        "status": "deprecated",
+        "release_date": "2026-11-16",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -6222,6 +4611,7 @@
         "description": "創作、分析、制御されたエージェントワークフロー向けの Claude モデル",
         "family": "claude-fable",
         "id": "claude-fable-5",
+        "knowledge": "2026-01-31",
         "last_updated": "2026-06-09",
         "limit": {
           "context": 1000000,
@@ -6588,7 +4978,7 @@
         "family": "claude-opus",
         "id": "claude-opus-4-5-20251101",
         "knowledge": "2025-05",
-        "last_updated": "2025-11-01",
+        "last_updated": "2025-11-24",
         "limit": {
           "context": 200000,
           "output": 64000
@@ -7532,8 +5922,8 @@
         "attachment": true,
         "canonical_model_id": "cohere/command-a-plus-05-2026",
         "cost": {
-          "input": 2.5,
-          "output": 10
+          "input": 0,
+          "output": 0
         },
         "description": "多言語エージェントとエンタープライズワークフロー向けの、より強力な Cohere Command モデル",
         "family": "command-a-plus",
@@ -7852,6 +6242,54 @@
         "temperature": true,
         "tool_call": true
       },
+      "north-mini-code-1.0": {
+        "attachment": false,
+        "canonical_model_id": "cohere/north-mini-code-1-0",
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "実践的なソフトウェアエンジニアリングとエージェント型編集向けの Cohere コーディングモデル",
+        "family": "north-mini",
+        "id": "north-mini-code-1.0",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-09-23",
+        "last_updated": "2026-06-09",
+        "limit": {
+          "context": 256000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "North Mini Code",
+        "open_weights": true,
+        "provider": {
+          "api": "https://api.cohere.ai/compatibility/v1",
+          "npm": "@ai-sdk/openai-compatible"
+        },
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-06-09",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "north-small-translate-09-2026": {
         "attachment": false,
         "canonical_model_id": "cohere/north-small-translate-1-0",
@@ -7862,6 +6300,37 @@
         "description": "50以上の言語とロケールバリアントに対応するオープンウェイト翻訳モデル",
         "family": "north-small",
         "id": "north-small-translate-09-2026",
+        "last_updated": "2026-09-09",
+        "limit": {
+          "context": 32768,
+          "output": 16000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "North Small Translate",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-09-09",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
+      },
+      "north-small-translate-1.0": {
+        "attachment": false,
+        "canonical_model_id": "cohere/north-small-translate-1-0",
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "50以上の言語とロケールバリアントに対応するオープンウェイト翻訳モデル",
+        "family": "north-small",
+        "id": "north-small-translate-1.0",
         "last_updated": "2026-09-09",
         "limit": {
           "context": 32768,
@@ -8619,7 +7088,7 @@
         "knowledge": "2024-06",
         "last_updated": "2025-08-26",
         "limit": {
-          "context": 32768,
+          "context": 65536,
           "output": 32768
         },
         "modalities": {
@@ -9018,7 +7487,9 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "video",
+            "pdf"
           ],
           "output": [
             "text",
@@ -9306,6 +7777,7 @@
         "cost": {
           "cache_read": 0.03,
           "input": 0.3,
+          "input_audio": 0.3,
           "output": 2.5
         },
         "description": "マルチモーダル推論、ツール利用、コストのバランスを取った高速 Gemini モデル",
@@ -9842,6 +8314,7 @@
         "cost": {
           "cache_read": 0.03,
           "input": 0.3,
+          "input_audio": 0.3,
           "output": 2.5
         },
         "description": "マルチモーダル推論、ツール利用、コストのバランスを取った高速 Gemini モデル",
@@ -10022,16 +8495,12 @@
       "lyria-3-clip-preview": {
         "attachment": true,
         "canonical_model_id": "google/lyria-3-clip-preview",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
         "description": "テキストや画像のプロンプトから 30 秒の短いクリップ、ループ、プレビューを生成する音楽生成モデル",
         "family": "lyria-clip",
         "id": "lyria-3-clip-preview",
         "last_updated": "2026-03-25",
         "limit": {
-          "context": 1048576,
+          "context": 131072,
           "output": 65536
         },
         "modalities": {
@@ -10055,16 +8524,12 @@
       "lyria-3-pro-preview": {
         "attachment": true,
         "canonical_model_id": "google/lyria-3-pro-preview",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
         "description": "テキストや画像からボーカルと楽曲構成を備えたフル尺の楽曲を生成する音楽生成モデル",
         "family": "lyria-pro",
         "id": "lyria-3-pro-preview",
         "last_updated": "2026-03-25",
         "limit": {
-          "context": 1048576,
+          "context": 131072,
           "output": 65536
         },
         "modalities": {
@@ -10350,46 +8815,6 @@
           }
         ],
         "release_date": "2026-11-02",
-        "temperature": false,
-        "tool_call": true
-      },
-      "LongCat-2.5-Preview": {
-        "attachment": true,
-        "canonical_model_id": "meituan/longcat-2.5-preview",
-        "cost": {
-          "cache_read": 0.006,
-          "input": 0.3,
-          "output": 1.2
-        },
-        "description": "コーディングとエージェントタスク向けで、画像理解と1Mトークンのコンテキストウィンドウを備えたMeituanのマルチモーダル推論モデル",
-        "family": "longcat",
-        "id": "LongCat-2.5-Preview",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-09-25",
-        "limit": {
-          "context": 1048576,
-          "output": 262144
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "LongCat-2.5-Preview",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-09-25",
         "temperature": false,
         "tool_call": true
       }
@@ -12732,6 +11157,7 @@
           }
         ],
         "release_date": "2026-10-17",
+        "status": "beta",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -13105,7 +11531,7 @@
         "description": "推論、コーディング、エージェント型業務向けのMistralの1Tパラメータ・マルチモーダルMoE",
         "family": "mistral-large",
         "id": "mistral-large-4",
-        "last_updated": "2026-10-06",
+        "last_updated": "2026-10-05",
         "limit": {
           "context": 1048576,
           "output": 262144
@@ -13121,7 +11547,7 @@
           ]
         },
         "name": "Mistral Large 4",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -13133,7 +11559,7 @@
             ]
           }
         ],
-        "release_date": "2026-10-06",
+        "release_date": "2026-10-05",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -13149,7 +11575,7 @@
         "description": "推論、コーディング、エージェント型業務向けのMistralの1Tパラメータ・マルチモーダルMoE",
         "family": "mistral-large",
         "id": "mistral-large-latest",
-        "last_updated": "2026-10-06",
+        "last_updated": "2026-10-05",
         "limit": {
           "context": 1048576,
           "output": 262144
@@ -13165,7 +11591,7 @@
           ]
         },
         "name": "Mistral Large (latest)",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -13177,7 +11603,7 @@
             ]
           }
         ],
-        "release_date": "2026-10-06",
+        "release_date": "2026-10-05",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -13192,7 +11618,7 @@
         "description": "エンタープライズアシスタント、多言語業務、ツール利用向けのバランス型 Mistral モデル",
         "family": "mistral-medium",
         "id": "mistral-medium-2604",
-        "last_updated": "2026-04-29",
+        "last_updated": "2026-04-28",
         "limit": {
           "context": 262144,
           "output": 262144
@@ -13219,7 +11645,7 @@
             ]
           }
         ],
-        "release_date": "2026-04-29",
+        "release_date": "2026-04-28",
         "status": "deprecated",
         "structured_output": true,
         "temperature": true,
@@ -13236,7 +11662,7 @@
         "description": "エンタープライズアシスタント、多言語業務、ツール利用向けのバランス型 Mistral モデル",
         "family": "mistral-medium",
         "id": "mistral-medium-latest",
-        "last_updated": "2026-04-29",
+        "last_updated": "2026-04-28",
         "limit": {
           "context": 262144,
           "output": 262144
@@ -13263,7 +11689,7 @@
             ]
           }
         ],
-        "release_date": "2026-04-29",
+        "release_date": "2026-04-28",
         "status": "deprecated",
         "structured_output": true,
         "temperature": true,
@@ -13750,7 +12176,7 @@
           "input": 3,
           "output": 15
         },
-        "description": "100 万トークンのコンテキストと切り替え可能な最大強度の思考モードを備えた、長期エージェント作業向けマルチモーダル Kimi モデル",
+        "description": "1Mコンテキストと常時思考機能を備え、長期的なエージェント業務に対応するマルチモーダルKimiモデル",
         "family": "kimi",
         "id": "kimi-k3",
         "interleaved": {
@@ -14038,7 +12464,7 @@
           "input": 20,
           "output": 100
         },
-        "description": "100 万トークンのコンテキストと切り替え可能な最大強度の思考モードを備えた、長期エージェント作業向けマルチモーダル Kimi モデル",
+        "description": "1Mコンテキストと常時思考機能を備え、長期的なエージェント業務に対応するマルチモーダルKimiモデル",
         "family": "kimi",
         "id": "kimi-k3",
         "interleaved": {
@@ -14508,7 +12934,7 @@
           "input": 2.5,
           "output": 14
         },
-        "description": "100 万トークンのコンテキストと切り替え可能な最大強度の思考モードを備えた、長期エージェント作業向けマルチモーダル Kimi モデル",
+        "description": "1Mコンテキストと常時思考機能を備え、長期的なエージェント業務に対応するマルチモーダルKimiモデル",
         "family": "kimi",
         "id": "morph-kimik3",
         "interleaved": {
@@ -14555,7 +12981,7 @@
           "input": 6,
           "output": 22.5
         },
-        "description": "100 万トークンのコンテキストと切り替え可能な最大強度の思考モードを備えた、長期エージェント作業向けマルチモーダル Kimi モデル",
+        "description": "1Mコンテキストと常時思考機能を備え、長期的なエージェント業務に対応するマルチモーダルKimiモデル",
         "family": "kimi",
         "id": "morph-kimik3-fast",
         "interleaved": {
@@ -18569,6 +16995,39 @@
     "id": "stepfun",
     "lobeIcon": "Stepfun",
     "models": {
+      "step-1o-turbo-vision": {
+        "attachment": true,
+        "canonical_model_id": "stepfun/step-1o-turbo-vision",
+        "cost": {
+          "cache_read": 0.074858,
+          "input": 0.37429,
+          "output": 1.1977
+        },
+        "description": "画像と動画の理解、テキスト出力に対応した高速なStepFun visionモデル",
+        "family": "step-vision",
+        "id": "step-1o-turbo-vision",
+        "last_updated": "2025-01-21",
+        "limit": {
+          "context": 32768,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step-1o Turbo Vision",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-01-21",
+        "temperature": true,
+        "tool_call": true
+      },
       "step-3.5-flash": {
         "attachment": false,
         "canonical_model_id": "stepfun/step-3.5-flash",
@@ -18819,6 +17278,38 @@
         "tool_call": false,
         "type": "transcription"
       },
+      "stepaudio-2.5-chat": {
+        "attachment": true,
+        "canonical_model_id": "stepfun/stepaudio-2.5-chat",
+        "cost": {
+          "cache_read": 0.44915,
+          "input": 1.9463,
+          "output": 4.7909
+        },
+        "description": "音声入力から声のトーン、ためらい、笑いを読み取り、テキストで応答する音声理解チャットモデル",
+        "family": "step-audio",
+        "id": "stepaudio-2.5-chat",
+        "last_updated": "2026-05-09",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "StepAudio 2.5 Chat",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-05-09",
+        "temperature": true,
+        "tool_call": false
+      },
       "stepaudio-2.5-tts": {
         "attachment": false,
         "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
@@ -18865,6 +17356,39 @@
     "id": "stepfun-ai",
     "lobeIcon": "Stepfun",
     "models": {
+      "step-1o-turbo-vision": {
+        "attachment": true,
+        "canonical_model_id": "stepfun/step-1o-turbo-vision",
+        "cost": {
+          "cache_read": 0.07,
+          "input": 0.36,
+          "output": 1.15
+        },
+        "description": "画像と動画の理解、テキスト出力に対応した高速なStepFun visionモデル",
+        "family": "step-vision",
+        "id": "step-1o-turbo-vision",
+        "last_updated": "2025-01-21",
+        "limit": {
+          "context": 32768,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step-1o Turbo Vision",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-01-21",
+        "temperature": true,
+        "tool_call": true
+      },
       "step-3.5-flash": {
         "attachment": false,
         "canonical_model_id": "stepfun/step-3.5-flash",
@@ -19054,35 +17578,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "step-tts-2": {
-        "attachment": false,
-        "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
-        "family": "step-tts",
-        "id": "step-tts-2",
-        "last_updated": "2026-07-02",
-        "limit": {
-          "context": 0,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "Step TTS 2",
-        "open_weights": false,
-        "provider": {
-          "npm": "@ai-sdk/openai"
-        },
-        "reasoning": false,
-        "release_date": "2026-03-01",
-        "temperature": false,
-        "tool_call": false,
-        "type": "speech"
-      },
       "stepaudio-2.5-asr": {
         "attachment": true,
         "description": "正確な音声書き起こしと字幕ワークフロー向けの音声認識モデル",
@@ -19108,6 +17603,38 @@
         "temperature": false,
         "tool_call": false,
         "type": "transcription"
+      },
+      "stepaudio-2.5-chat": {
+        "attachment": true,
+        "canonical_model_id": "stepfun/stepaudio-2.5-chat",
+        "cost": {
+          "cache_read": 0.3,
+          "input": 1.5,
+          "output": 3.5
+        },
+        "description": "音声入力から声のトーン、ためらい、笑いを読み取り、テキストで応答する音声理解チャットモデル",
+        "family": "step-audio",
+        "id": "stepaudio-2.5-chat",
+        "last_updated": "2026-05-09",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "StepAudio 2.5 Chat",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-05-09",
+        "temperature": true,
+        "tool_call": false
       },
       "stepaudio-2.5-tts": {
         "attachment": false,
@@ -19518,7 +18045,7 @@
         "limit": {
           "context": 256000,
           "input": 256000,
-          "output": 256000
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -19534,6 +18061,33 @@
         "release_date": "2026-05-29",
         "temperature": true,
         "tool_call": true
+      },
+      "stepaudio-2.5-chat": {
+        "attachment": true,
+        "canonical_model_id": "stepfun/stepaudio-2.5-chat",
+        "description": "音声入力から声のトーン、ためらい、笑いを読み取り、テキストで応答する音声理解チャットモデル",
+        "family": "step-audio",
+        "id": "stepaudio-2.5-chat",
+        "last_updated": "2026-05-09",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "StepAudio 2.5 Chat",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-05-09",
+        "temperature": true,
+        "tool_call": false
       }
     },
     "name": "StepFun Step Plan (China)",
@@ -19551,142 +18105,6 @@
     "id": "tencent-coding-plan",
     "lobeIcon": "Hunyuan.Color",
     "models": {
-      "hunyuan-2.0-instruct": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "コーディング、指示追従、エージェントタスク向けの Tencent Hy 推論モデル",
-        "family": "hunyuan",
-        "id": "hunyuan-2.0-instruct",
-        "last_updated": "2026-03-08",
-        "limit": {
-          "context": 131072,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Tencent HY 2.0 Instruct",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-03-08",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "hunyuan-2.0-thinking": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "コーディング、指示追従、エージェントタスク向けの Tencent Hy 推論モデル",
-        "family": "hunyuan",
-        "id": "hunyuan-2.0-thinking",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-03-08",
-        "limit": {
-          "context": 131072,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Tencent HY 2.0 Think",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-03-08",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "hunyuan-t1": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "コーディング、指示追従、エージェントタスク向けの Tencent Hy 推論モデル",
-        "family": "hunyuan",
-        "id": "hunyuan-t1",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-03-08",
-        "limit": {
-          "context": 131072,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Hunyuan-T1",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-03-08",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "hunyuan-turbos": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "コーディング、指示追従、エージェントタスク向けの Tencent Hy 推論モデル",
-        "family": "hunyuan",
-        "id": "hunyuan-turbos",
-        "last_updated": "2026-03-08",
-        "limit": {
-          "context": 131072,
-          "output": 16384
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Hunyuan-TurboS",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-03-08",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "tc-code-latest": {
         "attachment": false,
         "cost": {
@@ -19737,6 +18155,104 @@
     "id": "tencent-token-plan",
     "lobeIcon": "Hunyuan.Color",
     "models": {
+      "deepseek-v4-pro-0813": {
+        "attachment": false,
+        "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
+        "cost": {
+          "cache_read": 0.022457,
+          "input": 0.673723,
+          "output": 2.02117
+        },
+        "description": "100 万トークンのコンテキストと思考／非思考モードに対応した DeepSeek V4 Pro のスナップショット",
+        "family": "deepseek-pro",
+        "id": "deepseek-v4-pro-0813",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-22",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro 0813",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4.1-flash-1017": {
+        "attachment": true,
+        "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+        "cost": {
+          "cache_read": 0.002994,
+          "input": 0.149716,
+          "output": 0.598865
+        },
+        "description": "10月17日更新版のDeepSeek V4.1 Flash。推論、コーディング、エージェントタスク、視覚理解が向上",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4.1-flash-1017",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-10-17",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash 1017",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "deepseek/deepseek-flash": {
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
@@ -20055,15 +18571,12 @@
       "hy3": {
         "attachment": false,
         "canonical_model_id": "tencent/hy3",
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
         "description": "コーディング、指示追従、エージェントタスク向けの Tencent Hy 推論モデル",
         "family": "hy",
         "id": "hy3",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-07-06",
         "limit": {
           "context": 256000,
@@ -20083,17 +18596,62 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
-          },
-          {
             "type": "effort",
             "values": [
               "none",
+              "low",
               "high"
             ]
           }
         ],
         "release_date": "2026-07-06",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "hy3-202608": {
+        "attachment": false,
+        "canonical_model_id": "tencent/hy3",
+        "cost": {
+          "cache_read": 0.037429,
+          "input": 0.149716,
+          "output": 0.598865
+        },
+        "description": "コーディング、指示追従、エージェントタスク向けの Tencent Hy 推論モデル",
+        "family": "hy",
+        "id": "hy3-202608",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-07-06",
+        "limit": {
+          "context": 256000,
+          "input": 192000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hy3 (202608)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-06",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -20101,17 +18659,20 @@
         "attachment": true,
         "canonical_model_id": "tencent/hy4",
         "cost": {
-          "cache_read": 0.042,
-          "input": 0.834,
-          "output": 2.501
+          "cache_read": 0.044915,
+          "input": 0.898298,
+          "output": 2.694894
         },
         "description": "Agentと複雑なタスク実行能力を大幅に強化した、次世代のマルチモーダル生産性モデル。",
         "family": "hy",
         "id": "hy4",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-11-04",
         "limit": {
           "context": 1048576,
-          "input": 983010,
+          "input": 983040,
           "output": 65536
         },
         "modalities": {
@@ -20124,7 +18685,7 @@
           ]
         },
         "name": "Hy4",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -20136,6 +18697,53 @@
           }
         ],
         "release_date": "2026-11-04",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "hy4-flash": {
+        "attachment": true,
+        "canonical_model_id": "tencent/hy4-flash",
+        "cost": {
+          "cache_read": 0.002994,
+          "input": 0.074858,
+          "output": 0.299433
+        },
+        "description": "Tencentの低コストなHy4ティア。画像理解と1Mトークンのコンテキストウィンドウを備え、日常的なエージェントタスクや生産性向上タスクに対応。",
+        "family": "hy-flash",
+        "id": "hy4-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1048576,
+          "input": 983040,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hy4 flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -20143,17 +18751,21 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.04503926,
-          "input": 0.90078512,
-          "output": 2.70235537
+          "cache_read": 0.044915,
+          "input": 0.898298,
+          "output": 2.694894
         },
         "description": "Agent 能力と複雑なタスク実行能力を大幅に強化した次世代の生産性モデル。",
         "family": "hy",
         "id": "hy4-preview",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-08-28",
         "limit": {
-          "context": 1024000,
-          "output": 64000
+          "context": 1048576,
+          "input": 983040,
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -20168,9 +18780,6 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
-          },
-          {
             "type": "effort",
             "values": [
               "none",
@@ -20179,6 +18788,8 @@
           }
         ],
         "release_date": "2026-08-28",
+        "status": "deprecated",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -20225,11 +18836,12 @@
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k3",
         "cost": {
-          "cache_read": 0.30026171,
-          "input": 3.00261708,
-          "output": 15.01308541
+          "cache_read": 0.299433,
+          "cache_write": 2.994326,
+          "input": 2.994326,
+          "output": 14.971631
         },
-        "description": "100 万トークンのコンテキストと切り替え可能な最大強度の思考モードを備えた、長期エージェント作業向けマルチモーダル Kimi モデル",
+        "description": "1Mコンテキストと常時思考機能を備え、長期的なエージェント業務に対応するマルチモーダルKimiモデル",
         "family": "kimi",
         "id": "kimi-k3",
         "interleaved": {
@@ -20443,18 +19055,453 @@
     "id": "tencent-tokenhub",
     "lobeIcon": "Hunyuan.Color",
     "models": {
+      "deepseek-v4-pro": {
+        "attachment": false,
+        "canonical_model_id": "deepseek/deepseek-v4-pro",
+        "cost": {
+          "cache_read": 0.145,
+          "input": 1.74,
+          "output": 3.48
+        },
+        "description": "コーディングと長時間のエージェント実行向け、100万トークンのコンテキストを備えたオープンなMoEフラッグシップ",
+        "family": "deepseek-pro",
+        "id": "deepseek-v4-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4-pro-0813": {
+        "attachment": false,
+        "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
+        "cost": {
+          "cache_read": 0.022,
+          "input": 0.66,
+          "output": 1.98
+        },
+        "description": "100 万トークンのコンテキストと思考／非思考モードに対応した DeepSeek V4 Pro のスナップショット",
+        "family": "deepseek-pro",
+        "id": "deepseek-v4-pro-0813",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-22",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro 0813",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4.1-flash": {
+        "attachment": true,
+        "canonical_model_id": "deepseek/deepseek-v4.1-flash",
+        "cost": {
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "推論とエージェント型コーディング向けのDeepSeek V4.1 Flashモデル",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4.1-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4.1-flash-1017": {
+        "attachment": true,
+        "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+        "cost": {
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "10月17日更新版のDeepSeek V4.1 Flash。推論、コーディング、エージェントタスク、視覚理解が向上",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4.1-flash-1017",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-10-17",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash 1017",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-flash": {
+        "attachment": true,
+        "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+        "cost": {
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "10月17日更新版のDeepSeek V4.1 Flash。推論、コーディング、エージェントタスク、視覚理解が向上",
+        "family": "deepseek-flash",
+        "id": "deepseek/deepseek-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-10-17",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash 1017",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-v4-pro": {
+        "attachment": false,
+        "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
+        "cost": {
+          "cache_read": 0.022,
+          "input": 0.66,
+          "output": 1.98
+        },
+        "description": "100 万トークンのコンテキストと思考／非思考モードに対応した DeepSeek V4 Pro のスナップショット",
+        "family": "deepseek-pro",
+        "id": "deepseek/deepseek-v4-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-22",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro 0813",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.2": {
+        "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.2",
+        "cost": {
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "長期コーディングエージェントと 100 万トークンコンテキスト作業向けのオープン GLM フラッグシップモデル",
+        "family": "glm",
+        "id": "glm-5.2",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.2",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-06-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3": {
+        "attachment": false,
+        "canonical_model_id": "zhipuai/glm-5.3",
+        "cost": {
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "長期コーディング、エージェント、複雑なプロジェクト遂行向けの GLM フラッグシップモデル",
+        "family": "glm",
+        "id": "glm-5.3",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-14",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-14",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3-flash": {
+        "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.3-flash",
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.15,
+          "output": 0.5
+        },
+        "description": "効率的なコーディングと長期エージェントタスク向けのネイティブマルチモーダル GLM モデル",
+        "family": "glm-flash",
+        "id": "glm-5.3-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-26",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-26",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "hy3": {
         "attachment": false,
         "canonical_model_id": "tencent/hy3",
         "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
+          "cache_read": 0.033,
+          "input": 0.132,
+          "output": 0.528
         },
         "description": "コーディング、指示追従、エージェントタスク向けの Tencent Hy 推論モデル",
         "family": "hy",
         "id": "hy3",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-07-06",
         "limit": {
           "context": 256000,
@@ -20474,62 +19521,16 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
-          },
-          {
             "type": "effort",
             "values": [
               "none",
+              "low",
               "high"
             ]
           }
         ],
         "release_date": "2026-07-06",
-        "temperature": true,
-        "tool_call": true
-      },
-      "hy3-preview": {
-        "attachment": false,
-        "canonical_model_id": "tencent/hy3-preview",
-        "cost": {
-          "cache_read": 0,
-          "cache_write": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "コーディング、指示追従、エージェントタスク向けの Tencent Hy 推論モデル",
-        "family": "hy",
-        "id": "hy3-preview",
-        "last_updated": "2026-04-20",
-        "limit": {
-          "context": 256000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Hy3 preview",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2026-04-20",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -20544,10 +19545,13 @@
         "description": "Agentと複雑なタスク実行能力を大幅に強化した、次世代のマルチモーダル生産性モデル。",
         "family": "hy",
         "id": "hy4",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-11-04",
         "limit": {
           "context": 1048576,
-          "input": 983010,
+          "input": 983040,
           "output": 65536
         },
         "modalities": {
@@ -20560,7 +19564,7 @@
           ]
         },
         "name": "Hy4",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -20572,6 +19576,53 @@
           }
         ],
         "release_date": "2026-11-04",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "hy4-flash": {
+        "attachment": true,
+        "canonical_model_id": "tencent/hy4-flash",
+        "cost": {
+          "cache_read": 0.003,
+          "input": 0.07,
+          "output": 0.281
+        },
+        "description": "Tencentの低コストなHy4ティア。画像理解と1Mトークンのコンテキストウィンドウを備え、日常的なエージェントタスクや生産性向上タスクに対応。",
+        "family": "hy-flash",
+        "id": "hy4-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1048576,
+          "input": 983040,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hy4 flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -20586,10 +19637,14 @@
         "description": "Agent 能力と複雑なタスク実行能力を大幅に強化した次世代の生産性モデル。",
         "family": "hy",
         "id": "hy4-preview",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-08-28",
         "limit": {
-          "context": 1024000,
-          "output": 64000
+          "context": 1048576,
+          "input": 983040,
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -20604,9 +19659,6 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
-          },
-          {
             "type": "effort",
             "values": [
               "none",
@@ -20615,6 +19667,510 @@
           }
         ],
         "release_date": "2026-08-28",
+        "status": "deprecated",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2.6": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k2.6",
+        "cost": {
+          "cache_read": 0.145,
+          "input": 0.858,
+          "output": 3.566
+        },
+        "description": "エージェントループ、コーディングタスク、視覚コンテキスト向けのマルチモーダル Kimi 主力モデル",
+        "family": "kimi",
+        "id": "kimi-k2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-20",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-04-20",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2.7-code": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k2.7-code",
+        "cost": {
+          "cache_read": 0.19,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "コーディング特化の Kimi モデル。長期のリポジトリ作業に強く、過度な思考を抑制",
+        "family": "kimi-code",
+        "id": "kimi-k2.7-code",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-06-12",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.7 Code",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-06-12",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k2.7-code-highspeed": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k2.7-code-highspeed",
+        "cost": {
+          "cache_read": 0.38,
+          "input": 1.9,
+          "output": 8
+        },
+        "description": "インタラクティブな編集とコーディングエージェントのループ向けにレイテンシを低減したKimi Codeバリアント",
+        "family": "kimi-code",
+        "id": "kimi-k2.7-code-highspeed",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-06-12",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.7 Code Highspeed",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-06-12",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k2.8-preview": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k2.8-preview",
+        "cost": {
+          "cache_read": 0.25,
+          "input": 1,
+          "output": 4
+        },
+        "description": "より効率的な思考と最大1Mコンテキストを備え、Kimi Codeから利用できるKimiのコーディングモデル",
+        "family": "kimi",
+        "id": "kimi-k2.8-preview",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-11",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.8 Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-11",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k3": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3",
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3,
+          "input": 3,
+          "output": 15
+        },
+        "description": "1Mコンテキストと常時思考機能を備え、長期的なエージェント業務に対応するマルチモーダルKimiモデル",
+        "family": "kimi",
+        "id": "kimi-k3",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-07-16",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-16",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k3.1-pro": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+        "cost": {
+          "cache_read": 0.2,
+          "cache_write": 2,
+          "input": 2,
+          "output": 10
+        },
+        "description": "100万トークンのコンテキストウィンドウと常時推論を備え、コーディング、3D制作、金融リサーチに対応するマルチモーダルKimiモデル",
+        "family": "kimi-pro",
+        "id": "kimi-k3.1-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-10-23",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3.1 Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-23",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "mimo-v2.6-flash": {
+        "attachment": true,
+        "canonical_model_id": "xiaomi/mimo-v2.6-flash",
+        "cost": {
+          "cache_read": 0.0028,
+          "input": 0.14,
+          "output": 0.28
+        },
+        "description": "マルチモーダルコーディングエージェントと長文脈自動化向けのMiMo Flashモデル",
+        "family": "mimo-flash",
+        "id": "mimo-v2.6-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.6-pro": {
+        "attachment": true,
+        "canonical_model_id": "xiaomi/mimo-v2.6-pro",
+        "cost": {
+          "cache_read": 0.0036,
+          "input": 0.435,
+          "output": 0.87
+        },
+        "description": "マルチモーダル推論とコーディングエージェント実行向けの、より強力な MiMo Pro ティア",
+        "family": "mimo-pro",
+        "id": "mimo-v2.6-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m3": {
+        "attachment": true,
+        "canonical_model_id": "minimax/MiniMax-M3",
+        "cost": {
+          "cache_read": 0.06,
+          "context_over_200k": {
+            "cache_read": 0.12,
+            "input": 0.6,
+            "output": 2.4
+          },
+          "input": 0.3,
+          "output": 1.2,
+          "tiers": [
+            {
+              "cache_read": 0.12,
+              "input": 0.6,
+              "output": 2.4,
+              "tier": {
+                "size": 512000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "長文コンテキストのコーディング、知覚、エージェント計画向けの MiniMax マルチモーダルモデル",
+        "family": "minimax-m",
+        "id": "minimax-m3",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-06-01",
+        "limit": {
+          "context": 1048576,
+          "output": 512000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-06-01",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m3.1-flash": {
+        "attachment": true,
+        "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
+        "cost": {
+          "cache_read": 0.015,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "1Mコンテキストウィンドウと調整可能な思考深度を備えた最先端のマルチモーダルコーディングモデル",
+        "family": "minimax-m-flash",
+        "id": "minimax-m3.1-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-10-19",
+        "limit": {
+          "context": 1000000,
+          "output": 512000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M3.1-Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-19",
+        "temperature": true,
+        "tool_call": true
+      },
+      "step-5-preview": {
+        "attachment": true,
+        "canonical_model_id": "stepfun/step-5-preview",
+        "cost": {
+          "cache_read": 0.05,
+          "input": 1,
+          "output": 2.7
+        },
+        "description": "ネイティブなテキスト、画像、動画入力と1M-tokenコンテキストウィンドウを備えた、コーディングおよび専門知識業務向けStepFunの次世代フラッグシップベースモデル",
+        "family": "step",
+        "id": "step-5-preview",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-20",
+        "limit": {
+          "context": 1000000,
+          "input": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 5 Preview",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-16",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       }
@@ -20699,7 +20255,7 @@
         "tool_call": false
       },
       "Qwen/Qwen3.5-397B-A17B": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "alibaba/qwen3.5-397b-a17b",
         "cost": {
           "cache_read": 0.33,
@@ -20716,8 +20272,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -20736,7 +20291,7 @@
         "tool_call": true
       },
       "Qwen/Qwen3.5-397B-A17B:peft:262144": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "alibaba/qwen3.5-397b-a17b",
         "cost": {
           "cache_read": 0.33,
@@ -20753,8 +20308,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -20773,7 +20327,7 @@
         "tool_call": true
       },
       "Qwen/Qwen3.5-4B": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "alibaba/qwen3.5-4b",
         "cost": {
           "cache_read": 0.066,
@@ -20790,8 +20344,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -20810,7 +20363,7 @@
         "tool_call": true
       },
       "Qwen/Qwen3.5-4B:peft:262144": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "alibaba/qwen3.5-4b",
         "cost": {
           "cache_read": 0.066,
@@ -20827,8 +20380,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -20847,7 +20399,7 @@
         "tool_call": true
       },
       "Qwen/Qwen3.5-9B": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "alibaba/qwen3.5-9b",
         "cost": {
           "cache_read": 0.06,
@@ -20864,8 +20416,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -20914,45 +20465,8 @@
         "temperature": true,
         "tool_call": false
       },
-      "Qwen/Qwen3.6-27B": {
-        "attachment": true,
-        "canonical_model_id": "alibaba/qwen3.6-27b",
-        "cost": {
-          "cache_read": 0.372,
-          "input": 1.86,
-          "output": 5.595
-        },
-        "description": "視覚推論、文書理解、エージェントタスク向けの Qwen 視覚言語モデル",
-        "family": "qwen",
-        "id": "Qwen/Qwen3.6-27B",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 65536,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.6 27B",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-04-22",
-        "temperature": true,
-        "tool_call": true
-      },
       "Qwen/Qwen3.6-35B-A3B": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "alibaba/qwen3.6-35b-a3b",
         "cost": {
           "cache_read": 0.09,
@@ -20969,8 +20483,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -20989,7 +20502,7 @@
         "tool_call": true
       },
       "Qwen/Qwen3.6-35B-A3B:peft:262144": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "alibaba/qwen3.6-35b-a3b",
         "cost": {
           "cache_read": 0.09,
@@ -21006,8 +20519,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -21026,7 +20538,7 @@
         "tool_call": true
       },
       "Qwen/Qwen3.8-27B": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "alibaba/qwen3.8-27b",
         "cost": {
           "cache_read": 0.1395,
@@ -21043,8 +20555,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -21063,7 +20574,7 @@
         "tool_call": true
       },
       "Qwen/Qwen3.8-27B:peft:262144": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "alibaba/qwen3.8-27b",
         "cost": {
           "cache_read": 0.1395,
@@ -21080,8 +20591,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -21096,42 +20606,6 @@
           }
         ],
         "release_date": "2026-08-14",
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek-ai/DeepSeek-V3.1": {
-        "attachment": false,
-        "canonical_model_id": "deepseek/deepseek-v3.1",
-        "cost": {
-          "cache_read": 0.339,
-          "input": 1.695,
-          "output": 4.215
-        },
-        "description": "思考モードと非思考モードを備えたハイブリッド推論型DeepSeekモデル",
-        "family": "deepseek",
-        "id": "deepseek-ai/DeepSeek-V3.1",
-        "last_updated": "2025-08-21",
-        "limit": {
-          "context": 32768,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek-V3.1",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2025-08-21",
         "temperature": true,
         "tool_call": true
       },
@@ -21210,7 +20684,7 @@
         "tool_call": true
       },
       "moonshotai/Kimi-K2.6": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "moonshotai/kimi-k2.6",
         "cost": {
           "cache_read": 0.441,
@@ -21228,8 +20702,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -21248,7 +20721,7 @@
         "tool_call": true
       },
       "moonshotai/Kimi-K2.6:peft:131072": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "moonshotai/kimi-k2.6",
         "cost": {
           "cache_read": 0.441,
@@ -21266,8 +20739,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -21285,22 +20757,21 @@
         "temperature": true,
         "tool_call": true
       },
-      "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16": {
+      "moonshotai/Kimi-K3.1-Pro:peft:262144": {
         "attachment": false,
-        "canonical_model_id": "nvidia/nemotron-3-nano-30b-a3b",
+        "canonical_model_id": "moonshotai/kimi-k3.1-pro",
         "cost": {
-          "cache_read": 0.039,
-          "input": 0.195,
-          "output": 0.495
+          "cache_read": 1.2,
+          "input": 6,
+          "output": 25
         },
-        "description": "効率的なコーディング、数学、長いコンテキストのエージェント向けの小型Nemotron 3 MoE",
-        "family": "nemotron-nano",
-        "id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
-        "knowledge": "2025-06-25",
-        "last_updated": "2025-12-15",
+        "description": "100万トークンのコンテキストウィンドウと常時推論を備え、コーディング、3D制作、金融リサーチに対応するマルチモーダルKimiモデル",
+        "family": "kimi-pro",
+        "id": "moonshotai/Kimi-K3.1-Pro:peft:262144",
+        "last_updated": "2026-10-23",
         "limit": {
-          "context": 65536,
-          "output": 65536
+          "context": 262144,
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -21310,7 +20781,7 @@
             "text"
           ]
         },
-        "name": "Nemotron 3 Nano 30B A3B",
+        "name": "Kimi K3.1 Pro",
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
@@ -21318,8 +20789,8 @@
             "type": "toggle"
           }
         ],
-        "release_date": "2025-12-15",
-        "temperature": true,
+        "release_date": "2026-10-23",
+        "temperature": false,
         "tool_call": true
       },
       "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16": {
@@ -21545,7 +21016,7 @@
         "tool_call": true
       },
       "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
         "cost": {
           "cache_read": 0.114,
@@ -21562,8 +21033,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -21582,7 +21052,7 @@
         "tool_call": true
       },
       "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16:peft:262144": {
-        "attachment": true,
+        "attachment": false,
         "canonical_model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
         "cost": {
           "cache_read": 0.114,
@@ -21599,8 +21069,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -21773,6 +21242,194 @@
           }
         ],
         "release_date": "2026-07-15",
+        "temperature": true,
+        "tool_call": true
+      },
+      "thinkingmachines/Inkling-2-Mini": {
+        "attachment": true,
+        "canonical_model_id": "thinkingmachines/inkling-2-mini",
+        "cost": {
+          "cache_read": 0.015,
+          "input": 0.15,
+          "output": 0.5
+        },
+        "description": "エージェント型コーディング、vision、ナレッジワーク向けのLooped MoE推論モデル（総パラメータ数26.4B、アクティブ3.4B）",
+        "family": "inkling-mini",
+        "id": "thinkingmachines/Inkling-2-Mini",
+        "last_updated": "2026-11-20",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Inkling 2 Mini",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "thinkingmachines/Inkling-2-Mini:peft:262144": {
+        "attachment": true,
+        "canonical_model_id": "thinkingmachines/inkling-2-mini",
+        "cost": {
+          "cache_read": 0.015,
+          "input": 0.15,
+          "output": 0.5
+        },
+        "description": "エージェント型コーディング、vision、ナレッジワーク向けのLooped MoE推論モデル（総パラメータ数26.4B、アクティブ3.4B）",
+        "family": "inkling-mini",
+        "id": "thinkingmachines/Inkling-2-Mini:peft:262144",
+        "last_updated": "2026-11-20",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Inkling 2 Mini",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-20",
+        "temperature": true,
+        "tool_call": true
+      },
+      "thinkingmachines/Inkling-2-Small": {
+        "attachment": true,
+        "canonical_model_id": "thinkingmachines/inkling-2-small",
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 1
+        },
+        "description": "エージェント型コーディング、vision、ナレッジワーク向けのマルチモーダルMoE推論モデル（総パラメータ数594B、アクティブ17B）",
+        "family": "inkling-small",
+        "id": "thinkingmachines/Inkling-2-Small",
+        "last_updated": "2026-11-12",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Inkling 2 Small",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "thinkingmachines/Inkling-2-Small:peft:262144": {
+        "attachment": true,
+        "canonical_model_id": "thinkingmachines/inkling-2-small",
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 1
+        },
+        "description": "エージェント型コーディング、vision、ナレッジワーク向けのマルチモーダルMoE推論モデル（総パラメータ数594B、アクティブ17B）",
+        "family": "inkling-small",
+        "id": "thinkingmachines/Inkling-2-Small:peft:262144",
+        "last_updated": "2026-11-12",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Inkling 2 Small",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-05",
         "temperature": true,
         "tool_call": true
       },
@@ -22321,8 +21978,6 @@
     "lobeIcon": "Doubao.Color",
     "models": {
       "doubao-seed-1-6-251015": {
-        "attachment": true,
-        "canonical_model_id": "bytedance-seed/seed-1-6",
         "cost": {
           "cache_read": 0.16,
           "currency": "CNY",
@@ -22347,53 +22002,11 @@
             }
           ]
         },
-        "description": "長文コンテキスト推論、指示追従、ツール支援タスク向けの ByteDance Seed モデル",
-        "family": "seed",
+        "description": "doubao-seed-1-6-251015 は volcengine によって提供される AI モデルです。",
         "id": "doubao-seed-1-6-251015",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2025-10-15",
-        "limit": {
-          "context": 256000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Seed 1.6",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "effort",
-            "values": [
-              "minimal",
-              "low",
-              "medium",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2025-10-15",
-        "status": "deprecated",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
+        "name": "doubao-seed-1-6-251015"
       },
       "doubao-seed-1-6-flash-250828": {
-        "attachment": true,
-        "canonical_model_id": "bytedance-seed/seed-1-6-flash",
         "cost": {
           "cache_read": 0.03,
           "currency": "CNY",
@@ -22418,44 +22031,11 @@
             }
           ]
         },
-        "description": "高スループットのチャット、抽出、軽量ツール利用向けの低遅延 ByteDance Seed モデル",
-        "family": "seed-flash",
+        "description": "doubao-seed-1-6-flash-250828 は volcengine によって提供される AI モデルです。",
         "id": "doubao-seed-1-6-flash-250828",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2025-08-28",
-        "limit": {
-          "context": 256000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Seed 1.6 Flash",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2025-08-28",
-        "status": "deprecated",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
+        "name": "doubao-seed-1-6-flash-250828"
       },
       "doubao-seed-1-6-vision-250815": {
-        "attachment": true,
-        "canonical_model_id": "bytedance-seed/seed-1-6-vision",
         "cost": {
           "cache_read": 0.16,
           "currency": "CNY",
@@ -22480,43 +22060,11 @@
             }
           ]
         },
-        "description": "画像理解、視覚推論、ツール支援タスク向けの ByteDance Seed マルチモーダルモデル",
-        "family": "seed",
+        "description": "doubao-seed-1-6-vision-250815 は volcengine によって提供される AI モデルです。",
         "id": "doubao-seed-1-6-vision-250815",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2025-08-15",
-        "limit": {
-          "context": 256000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Seed 1.6 Vision",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2025-08-15",
-        "status": "deprecated",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
+        "name": "doubao-seed-1-6-vision-250815"
       },
       "doubao-seed-1-8-251228": {
-        "attachment": true,
-        "canonical_model_id": "bytedance-seed/seed-1-8",
         "cost": {
           "cache_read": 0.16,
           "currency": "CNY",
@@ -22541,52 +22089,11 @@
             }
           ]
         },
-        "description": "マルチモーダル推論、長文コンテキスト分析、エージェントワークフロー向けの ByteDance Seed モデル",
-        "family": "seed",
+        "description": "doubao-seed-1-8-251228 は volcengine によって提供される AI モデルです。",
         "id": "doubao-seed-1-8-251228",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2025-12-28",
-        "limit": {
-          "context": 256000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Seed 1.8",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "minimal",
-              "low",
-              "medium",
-              "high",
-              "xhigh",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2025-12-28",
-        "status": "deprecated",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
+        "name": "doubao-seed-1-8-251228"
       },
       "doubao-seed-2-0-code-preview-260215": {
-        "attachment": true,
-        "canonical_model_id": "bytedance-seed/seed-2.0-code",
         "cost": {
           "cache_read": 0.64,
           "currency": "CNY",
@@ -22611,49 +22118,9 @@
             }
           ]
         },
-        "description": "マルチモーダルなソフトウェアエンジニアリングと長時間稼働エージェント向けの ByteDance Seed コーディングモデル",
-        "family": "seed-code",
+        "description": "doubao-seed-2-0-code-preview-260215 は volcengine によって提供される AI モデルです。",
         "id": "doubao-seed-2-0-code-preview-260215",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-02-14",
-        "limit": {
-          "context": 262144,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Seed 2.0 Code",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "minimal",
-              "low",
-              "medium",
-              "high",
-              "xhigh",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-02-14",
-        "status": "deprecated",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
+        "name": "doubao-seed-2-0-code-preview-260215"
       },
       "doubao-seed-2-0-lite-260428": {
         "attachment": true,
@@ -22697,6 +22164,7 @@
           "input": [
             "text",
             "image",
+            "audio",
             "video"
           ],
           "output": [
@@ -22711,12 +22179,9 @@
             "type": "effort",
             "values": [
               "none",
-              "minimal",
               "low",
               "medium",
-              "high",
-              "xhigh",
-              "max"
+              "high"
             ]
           }
         ],
@@ -22767,6 +22232,7 @@
           "input": [
             "text",
             "image",
+            "audio",
             "video"
           ],
           "output": [
@@ -22781,12 +22247,9 @@
             "type": "effort",
             "values": [
               "none",
-              "minimal",
               "low",
               "medium",
-              "high",
-              "xhigh",
-              "max"
+              "high"
             ]
           }
         ],
@@ -22851,12 +22314,9 @@
             "type": "effort",
             "values": [
               "none",
-              "minimal",
               "low",
               "medium",
-              "high",
-              "xhigh",
-              "max"
+              "high"
             ]
           }
         ],
@@ -22864,6 +22324,56 @@
         "status": "deprecated",
         "structured_output": true,
         "temperature": false,
+        "tool_call": true
+      },
+      "doubao-seed-2-1-lite-260915": {
+        "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-2.1-lite",
+        "cost": {
+          "cache_read": 0.02395,
+          "input": 0.11977,
+          "input_audio": 1.7966,
+          "output": 0.40423
+        },
+        "description": "テキスト、ビジョン、オーディオをネイティブに理解し、1Mコンテキストに対応、コーディングとエージェントタスクの完了能力を向上させたOmnimodal ByteDance Seed 2.1モデル",
+        "family": "seed-lite",
+        "id": "doubao-seed-2-1-lite-260915",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 1024000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Seed 2.1 Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-15",
+        "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "doubao-seed-2-1-pro-260628": {
@@ -22878,6 +22388,55 @@
         "description": "複雑なマルチモーダル推論、コーディング、エージェント向けの ByteDance Seed 2.1 フラッグシップモデル",
         "family": "seed-pro",
         "id": "doubao-seed-2-1-pro-260628",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-06-23",
+        "limit": {
+          "context": 256000,
+          "input": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Seed 2.1 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-06-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "doubao-seed-2-1-pro-260915": {
+        "attachment": true,
+        "canonical_model_id": "bytedance-seed/seed-2.1-pro",
+        "cost": {
+          "cache_read": 0.17966,
+          "input": 0.8983,
+          "output": 4.49149
+        },
+        "description": "複雑なマルチモーダル推論、コーディング、エージェント向けの ByteDance Seed 2.1 フラッグシップモデル",
+        "family": "seed-pro",
+        "id": "doubao-seed-2-1-pro-260915",
         "interleaved": {
           "field": "reasoning_content"
         },
@@ -22904,12 +22463,9 @@
             "type": "effort",
             "values": [
               "none",
-              "minimal",
               "low",
               "medium",
-              "high",
-              "xhigh",
-              "max"
+              "high"
             ]
           }
         ],
@@ -22956,12 +22512,9 @@
             "type": "effort",
             "values": [
               "none",
-              "minimal",
               "low",
               "medium",
-              "high",
-              "xhigh",
-              "max"
+              "high"
             ]
           }
         ],
@@ -22997,8 +22550,9 @@
         },
         "last_updated": "2026-06-23",
         "limit": {
-          "context": 256000,
-          "output": 256000
+          "context": 128000,
+          "input": 128000,
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -23015,13 +22569,11 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
-          },
-          {
             "type": "effort",
             "values": [
-              "minimal",
+              "none",
               "low",
+              "medium",
               "high"
             ]
           }
@@ -23069,18 +22621,62 @@
             "type": "effort",
             "values": [
               "none",
-              "minimal",
               "low",
               "medium",
-              "high",
-              "xhigh",
-              "max"
+              "high"
             ]
           }
         ],
         "release_date": "2026-06-23",
         "structured_output": true,
         "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k3-1-pro-261024": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+        "cost": {
+          "cache_read": 0.19463,
+          "input": 1.94631,
+          "output": 10.18071
+        },
+        "description": "100万トークンのコンテキストウィンドウと常時推論を備え、コーディング、3D制作、金融リサーチに対応するマルチモーダルKimiモデル",
+        "family": "kimi-pro",
+        "id": "kimi-k3-1-pro-261024",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-10-23",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3.1 Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-23",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       }
     },
@@ -23101,54 +22697,6 @@
     "id": "volcengine-coding-plan",
     "lobeIcon": "Doubao.Color",
     "models": {
-      "doubao-seed-2.0-lite": {
-        "attachment": true,
-        "canonical_model_id": "bytedance-seed/seed-2.0-lite",
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "本番環境のチャット、分析、構造化生成向けのコスト効率に優れた ByteDance Seed 2.0 モデル",
-        "family": "seed-lite",
-        "id": "doubao-seed-2.0-lite",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-02-14",
-        "limit": {
-          "context": 256000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Seed 2.0 Lite",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "low",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2026-02-14",
-        "status": "deprecated",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "doubao-seed-2.0-mini": {
         "attachment": true,
         "canonical_model_id": "bytedance-seed/seed-2.0-mini",
@@ -23172,6 +22720,7 @@
           "input": [
             "text",
             "image",
+            "audio",
             "video"
           ],
           "output": [
@@ -23287,54 +22836,6 @@
           }
         ],
         "release_date": "2026-06-23",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "doubao-seed-2.1-turbo": {
-        "attachment": true,
-        "canonical_model_id": "bytedance-seed/seed-2.1-turbo",
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "マルチモーダル推論と低遅延要件のエージェントワークフロー向けの高速版 ByteDance Seed 2.1 モデル",
-        "family": "seed-turbo",
-        "id": "doubao-seed-2.1-turbo",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-06-23",
-        "limit": {
-          "context": 256000,
-          "output": 256000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Seed 2.1 Turbo",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "low",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2026-06-23",
-        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -23958,132 +23459,6 @@
     "id": "xiaomi",
     "lobeIcon": "XiaomiMiMo",
     "models": {
-      "mimo-v2.5": {
-        "attachment": true,
-        "canonical_model_id": "xiaomi/mimo-v2.5",
-        "cost": {
-          "cache_read": 0.0028,
-          "input": 0.14,
-          "output": 0.28
-        },
-        "description": "マルチモーダルコーディングエージェントと長文コンテキスト自動化向けのオープン MiMo モデル",
-        "family": "mimo",
-        "id": "mimo-v2.5",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2.5",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-04-22",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mimo-v2.5-pro": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-pro",
-        "cost": {
-          "cache_read": 0.0036,
-          "input": 0.435,
-          "output": 0.87
-        },
-        "description": "マルチモーダル推論とコーディングエージェント実行向けの、より強力な MiMo Pro ティア",
-        "family": "mimo-pro",
-        "id": "mimo-v2.5-pro",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2.5-Pro",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-04-22",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mimo-v2.5-pro-ultraspeed": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-pro-ultraspeed",
-        "cost": {
-          "cache_read": 0.0108,
-          "input": 1.305,
-          "output": 2.61
-        },
-        "description": "強力なマルチモーダル推論とエージェント実行向けの MiMo Pro モデル",
-        "family": "mimo-pro",
-        "id": "mimo-v2.5-pro-ultraspeed",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-06-09",
-        "limit": {
-          "context": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2.5-Pro-UltraSpeed",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-06-08",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "mimo-v2.6-flash": {
         "attachment": true,
         "canonical_model_id": "xiaomi/mimo-v2.6-flash",
@@ -24184,7 +23559,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2026-09-21",
+        "last_updated": "2026-09-22",
         "limit": {
           "context": 1048576,
           "output": 131072
@@ -24208,7 +23583,7 @@
             "type": "toggle"
           }
         ],
-        "release_date": "2026-09-21",
+        "release_date": "2026-09-22",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -24227,184 +23602,6 @@
     "id": "xiaomi-token-plan-ams",
     "lobeIcon": "XiaomiMiMo",
     "models": {
-      "mimo-v2.5": {
-        "attachment": true,
-        "canonical_model_id": "xiaomi/mimo-v2.5",
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "マルチモーダルコーディングエージェントと長文コンテキスト自動化向けのオープン MiMo モデル",
-        "family": "mimo",
-        "id": "mimo-v2.5",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2.5",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-04-22",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mimo-v2.5-pro": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-pro",
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "マルチモーダル推論とコーディングエージェント実行向けの、より強力な MiMo Pro ティア",
-        "family": "mimo-pro",
-        "id": "mimo-v2.5-pro",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2.5-Pro",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-04-22",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mimo-v2.5-tts": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-tts",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
-        "family": "mimo-tts",
-        "id": "mimo-v2.5-tts",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 8192,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "MiMo-V2.5-TTS",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-04-22",
-        "temperature": false,
-        "tool_call": false,
-        "type": "speech"
-      },
-      "mimo-v2.5-tts-voiceclone": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-tts-voiceclone",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
-        "family": "mimo-tts",
-        "id": "mimo-v2.5-tts-voiceclone",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 8192,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "MiMo-V2.5-TTS-VoiceClone",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-04-22",
-        "temperature": false,
-        "tool_call": false,
-        "type": "speech"
-      },
-      "mimo-v2.5-tts-voicedesign": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-tts-voicedesign",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
-        "family": "mimo-tts",
-        "id": "mimo-v2.5-tts-voicedesign",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 8192,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "MiMo-V2.5-TTS-VoiceDesign",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-04-22",
-        "temperature": false,
-        "tool_call": false,
-        "type": "speech"
-      },
       "mimo-v2.6-flash": {
         "attachment": true,
         "canonical_model_id": "xiaomi/mimo-v2.6-flash",
@@ -24507,184 +23704,6 @@
     "id": "xiaomi-token-plan-cn",
     "lobeIcon": "XiaomiMiMo",
     "models": {
-      "mimo-v2.5": {
-        "attachment": true,
-        "canonical_model_id": "xiaomi/mimo-v2.5",
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "マルチモーダルコーディングエージェントと長文コンテキスト自動化向けのオープン MiMo モデル",
-        "family": "mimo",
-        "id": "mimo-v2.5",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2.5",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-04-22",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mimo-v2.5-pro": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-pro",
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "マルチモーダル推論とコーディングエージェント実行向けの、より強力な MiMo Pro ティア",
-        "family": "mimo-pro",
-        "id": "mimo-v2.5-pro",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2.5-Pro",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-04-22",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mimo-v2.5-tts": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-tts",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
-        "family": "mimo-tts",
-        "id": "mimo-v2.5-tts",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 8192,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "MiMo-V2.5-TTS",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-04-22",
-        "temperature": false,
-        "tool_call": false,
-        "type": "speech"
-      },
-      "mimo-v2.5-tts-voiceclone": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-tts-voiceclone",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
-        "family": "mimo-tts",
-        "id": "mimo-v2.5-tts-voiceclone",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 8192,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "MiMo-V2.5-TTS-VoiceClone",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-04-22",
-        "temperature": false,
-        "tool_call": false,
-        "type": "speech"
-      },
-      "mimo-v2.5-tts-voicedesign": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-tts-voicedesign",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
-        "family": "mimo-tts",
-        "id": "mimo-v2.5-tts-voicedesign",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 8192,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "MiMo-V2.5-TTS-VoiceDesign",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-04-22",
-        "temperature": false,
-        "tool_call": false,
-        "type": "speech"
-      },
       "mimo-v2.6-flash": {
         "attachment": true,
         "canonical_model_id": "xiaomi/mimo-v2.6-flash",
@@ -24786,184 +23805,6 @@
     "id": "xiaomi-token-plan-sgp",
     "lobeIcon": "XiaomiMiMo",
     "models": {
-      "mimo-v2.5": {
-        "attachment": true,
-        "canonical_model_id": "xiaomi/mimo-v2.5",
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "マルチモーダルコーディングエージェントと長文コンテキスト自動化向けのオープン MiMo モデル",
-        "family": "mimo",
-        "id": "mimo-v2.5",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2.5",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-04-22",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mimo-v2.5-pro": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-pro",
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "マルチモーダル推論とコーディングエージェント実行向けの、より強力な MiMo Pro ティア",
-        "family": "mimo-pro",
-        "id": "mimo-v2.5-pro",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2.5-Pro",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-04-22",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mimo-v2.5-tts": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-tts",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
-        "family": "mimo-tts",
-        "id": "mimo-v2.5-tts",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 8192,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "MiMo-V2.5-TTS",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-04-22",
-        "temperature": false,
-        "tool_call": false,
-        "type": "speech"
-      },
-      "mimo-v2.5-tts-voiceclone": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-tts-voiceclone",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
-        "family": "mimo-tts",
-        "id": "mimo-v2.5-tts-voiceclone",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 8192,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "MiMo-V2.5-TTS-VoiceClone",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-04-22",
-        "temperature": false,
-        "tool_call": false,
-        "type": "speech"
-      },
-      "mimo-v2.5-tts-voicedesign": {
-        "attachment": false,
-        "canonical_model_id": "xiaomi/mimo-v2.5-tts-voicedesign",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
-        "family": "mimo-tts",
-        "id": "mimo-v2.5-tts-voicedesign",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 8192,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "MiMo-V2.5-TTS-VoiceDesign",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-04-22",
-        "temperature": false,
-        "tool_call": false,
-        "type": "speech"
-      },
       "mimo-v2.6-flash": {
         "attachment": true,
         "canonical_model_id": "xiaomi/mimo-v2.6-flash",
@@ -25793,6 +24634,55 @@
           }
         ],
         "release_date": "2026-09-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3-flashx-legal": {
+        "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.3-flashx-legal",
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 0,
+          "input": 0.37,
+          "output": 1.25
+        },
+        "description": "法律調査、契約レビュー、文書作成などの法務ワークフロー向けに調整されたGLM-5.3-FlashX",
+        "family": "glm-flash-legal",
+        "id": "glm-5.3-flashx-legal",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-11-02",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3-FlashX-Legal",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-02",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -27011,6 +25901,55 @@
           }
         ],
         "release_date": "2026-09-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3-flashx-legal": {
+        "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.3-flashx-legal",
+        "cost": {
+          "cache_read": 0.08534,
+          "cache_write": 0,
+          "input": 0.29943,
+          "output": 1.04801
+        },
+        "description": "法律調査、契約レビュー、文書作成などの法務ワークフロー向けに調整されたGLM-5.3-FlashX",
+        "family": "glm-flash-legal",
+        "id": "glm-5.3-flashx-legal",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-11-02",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3-FlashX-Legal",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-02",
         "structured_output": true,
         "temperature": true,
         "tool_call": true

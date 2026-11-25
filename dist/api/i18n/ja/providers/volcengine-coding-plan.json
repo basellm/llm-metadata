@@ -12,54 +12,6 @@
   "id": "volcengine-coding-plan",
   "lobeIcon": "Doubao.Color",
   "models": {
-    "doubao-seed-2.0-lite": {
-      "attachment": true,
-      "canonical_model_id": "bytedance-seed/seed-2.0-lite",
-      "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
-      },
-      "description": "本番環境のチャット、分析、構造化生成向けのコスト効率に優れた ByteDance Seed 2.0 モデル",
-      "family": "seed-lite",
-      "id": "doubao-seed-2.0-lite",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-02-14",
-      "limit": {
-        "context": 256000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Seed 2.0 Lite",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-02-14",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "doubao-seed-2.0-mini": {
       "attachment": true,
       "canonical_model_id": "bytedance-seed/seed-2.0-mini",
@@ -83,6 +35,7 @@
         "input": [
           "text",
           "image",
+          "audio",
           "video"
         ],
         "output": [
@@ -198,54 +151,6 @@
         }
       ],
       "release_date": "2026-06-23",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "doubao-seed-2.1-turbo": {
-      "attachment": true,
-      "canonical_model_id": "bytedance-seed/seed-2.1-turbo",
-      "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
-      },
-      "description": "マルチモーダル推論と低遅延要件のエージェントワークフロー向けの高速版 ByteDance Seed 2.1 モデル",
-      "family": "seed-turbo",
-      "id": "doubao-seed-2.1-turbo",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-06-23",
-      "limit": {
-        "context": 256000,
-        "output": 256000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Seed 2.1 Turbo",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-06-23",
-      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

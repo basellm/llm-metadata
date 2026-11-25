@@ -1,0 +1,46 @@
+{
+  "attachment": true,
+  "canonical_model_id": "tencent/hy4-flash",
+  "cost": {
+    "cache_read": 0.003,
+    "input": 0.07,
+    "output": 0.281
+  },
+  "description": "Tencent 成本更低的 Hy4 层级，适用于日常智能体和生产力任务，支持图像理解和 1M token 上下文窗口.",
+  "family": "hy-flash",
+  "id": "hy4-flash",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-11-16",
+  "limit": {
+    "context": 1048576,
+    "input": 983040,
+    "output": 65536
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Hy4 flash",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
+    }
+  ],
+  "release_date": "2026-11-16",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

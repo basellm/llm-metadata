@@ -483,56 +483,55 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen3.8-max-preview": {
+    "qwen4-max": {
       "attachment": true,
-      "canonical_model_id": "alibaba/qwen3.8-max-preview",
+      "canonical_model_id": "alibaba/qwen4-max",
       "cost": {
-        "cache_read": 0,
-        "cache_write": 0,
         "input": 0,
         "output": 0
       },
-      "description": "100 万トークンのマルチモーダル推論と長期エージェントワークフロー向けの Qwen フラッグシップ プレビュー版",
+      "description": "コーディング、オフィス業務、フロントエンド設計、複雑なエージェントタスク向けのフラッグシップマルチモーダルモデル",
       "family": "qwen-max",
-      "id": "qwen3.8-max-preview",
+      "id": "qwen4-max",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-07-19",
+      "last_updated": "2026-11-16",
       "limit": {
         "context": 1000000,
-        "output": 131072
+        "output": 262144
       },
       "modalities": {
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Qwen3.8 Max Preview",
+      "name": "Qwen4 Max",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
-            "medium",
+            "high",
             "xhigh"
           ]
         },
         {
           "max": 262144,
-          "min": 0,
+          "min": 1,
           "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-07-19",
-      "status": "deprecated",
+      "release_date": "2026-11-16",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

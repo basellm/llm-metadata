@@ -2,17 +2,20 @@
   "attachment": true,
   "canonical_model_id": "tencent/hy4",
   "cost": {
-    "cache_read": 0.042,
-    "input": 0.834,
-    "output": 2.501
+    "cache_read": 0.044915,
+    "input": 0.898298,
+    "output": 2.694894
   },
   "description": "新一代多模态生产力模型，Agent 和复杂任务执行能力显著增强。",
   "family": "hy",
   "id": "hy4",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "last_updated": "2026-11-04",
   "limit": {
     "context": 1048576,
-    "input": 983010,
+    "input": 983040,
     "output": 65536
   },
   "modalities": {
@@ -25,7 +28,7 @@
     ]
   },
   "name": "Hy4",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
@@ -37,6 +40,7 @@
     }
   ],
   "release_date": "2026-11-04",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

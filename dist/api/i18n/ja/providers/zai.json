@@ -740,6 +740,55 @@
       "temperature": true,
       "tool_call": true
     },
+    "glm-5.3-flashx-legal": {
+      "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flashx-legal",
+      "cost": {
+        "cache_read": 0.075,
+        "cache_write": 0,
+        "input": 0.37,
+        "output": 1.25
+      },
+      "description": "法律調査、契約レビュー、文書作成などの法務ワークフロー向けに調整されたGLM-5.3-FlashX",
+      "family": "glm-flash-legal",
+      "id": "glm-5.3-flashx-legal",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-11-02",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-FlashX-Legal",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "glm-5v-turbo": {
       "attachment": true,
       "canonical_model_id": "zhipuai/glm-5v-turbo",

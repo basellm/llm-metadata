@@ -180,7 +180,7 @@
       "knowledge": "2024-06",
       "last_updated": "2025-08-26",
       "limit": {
-        "context": 32768,
+        "context": 65536,
         "output": 32768
       },
       "modalities": {
@@ -579,7 +579,9 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video",
+          "pdf"
         ],
         "output": [
           "text",
@@ -867,6 +869,7 @@
       "cost": {
         "cache_read": 0.03,
         "input": 0.3,
+        "input_audio": 0.3,
         "output": 2.5
       },
       "description": "在多模态推理、工具调用与成本之间取得平衡的快速型 Gemini 模型",
@@ -1403,6 +1406,7 @@
       "cost": {
         "cache_read": 0.03,
         "input": 0.3,
+        "input_audio": 0.3,
         "output": 2.5
       },
       "description": "在多模态推理、工具调用与成本之间取得平衡的快速型 Gemini 模型",
@@ -1583,16 +1587,12 @@
     "lyria-3-clip-preview": {
       "attachment": true,
       "canonical_model_id": "google/lyria-3-clip-preview",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
       "description": "音乐生成模型，可根据文本或图像提示生成 30 秒短片段、循环乐段与预览",
       "family": "lyria-clip",
       "id": "lyria-3-clip-preview",
       "last_updated": "2026-03-25",
       "limit": {
-        "context": 1048576,
+        "context": 131072,
         "output": 65536
       },
       "modalities": {
@@ -1616,16 +1616,12 @@
     "lyria-3-pro-preview": {
       "attachment": true,
       "canonical_model_id": "google/lyria-3-pro-preview",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
       "description": "音乐生成模型，可根据文本或图像生成带人声与完整结构的整曲",
       "family": "lyria-pro",
       "id": "lyria-3-pro-preview",
       "last_updated": "2026-03-25",
       "limit": {
-        "context": 1048576,
+        "context": 131072,
         "output": 65536
       },
       "modalities": {

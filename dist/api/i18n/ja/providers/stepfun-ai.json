@@ -11,6 +11,39 @@
   "id": "stepfun-ai",
   "lobeIcon": "Stepfun",
   "models": {
+    "step-1o-turbo-vision": {
+      "attachment": true,
+      "canonical_model_id": "stepfun/step-1o-turbo-vision",
+      "cost": {
+        "cache_read": 0.07,
+        "input": 0.36,
+        "output": 1.15
+      },
+      "description": "画像と動画の理解、テキスト出力に対応した高速なStepFun visionモデル",
+      "family": "step-vision",
+      "id": "step-1o-turbo-vision",
+      "last_updated": "2025-01-21",
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step-1o Turbo Vision",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-01-21",
+      "temperature": true,
+      "tool_call": true
+    },
     "step-3.5-flash": {
       "attachment": false,
       "canonical_model_id": "stepfun/step-3.5-flash",
@@ -200,35 +233,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "step-tts-2": {
-      "attachment": false,
-      "description": "制御可能な音声、ナレーション、音声配信向けの音声生成モデル",
-      "family": "step-tts",
-      "id": "step-tts-2",
-      "last_updated": "2026-07-02",
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "audio"
-        ]
-      },
-      "name": "Step TTS 2",
-      "open_weights": false,
-      "provider": {
-        "npm": "@ai-sdk/openai"
-      },
-      "reasoning": false,
-      "release_date": "2026-03-01",
-      "temperature": false,
-      "tool_call": false,
-      "type": "speech"
-    },
     "stepaudio-2.5-asr": {
       "attachment": true,
       "description": "正確な音声書き起こしと字幕ワークフロー向けの音声認識モデル",
@@ -254,6 +258,38 @@
       "temperature": false,
       "tool_call": false,
       "type": "transcription"
+    },
+    "stepaudio-2.5-chat": {
+      "attachment": true,
+      "canonical_model_id": "stepfun/stepaudio-2.5-chat",
+      "cost": {
+        "cache_read": 0.3,
+        "input": 1.5,
+        "output": 3.5
+      },
+      "description": "音声入力から声のトーン、ためらい、笑いを読み取り、テキストで応答する音声理解チャットモデル",
+      "family": "step-audio",
+      "id": "stepaudio-2.5-chat",
+      "last_updated": "2026-05-09",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "StepAudio 2.5 Chat",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-05-09",
+      "temperature": true,
+      "tool_call": false
     },
     "stepaudio-2.5-tts": {
       "attachment": false,

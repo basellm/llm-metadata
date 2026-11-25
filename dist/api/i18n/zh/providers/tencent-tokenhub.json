@@ -12,18 +12,453 @@
   "id": "tencent-tokenhub",
   "lobeIcon": "Hunyuan.Color",
   "models": {
+    "deepseek-v4-pro": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-pro",
+      "cost": {
+        "cache_read": 0.145,
+        "input": 1.74,
+        "output": 3.48
+      },
+      "description": "具备百万 token 上下文、用于编程和长时间智能体运行的开放 MoE 旗舰模型",
+      "family": "deepseek-pro",
+      "id": "deepseek-v4-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v4-pro-0813": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
+      "cost": {
+        "cache_read": 0.022,
+        "input": 0.66,
+        "output": 1.98
+      },
+      "description": "DeepSeek V4 Pro 快照版本，支持百万 token 上下文以及思考与非思考模式",
+      "family": "deepseek-pro",
+      "id": "deepseek-v4-pro-0813",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-22",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro 0813",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v4.1-flash": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash",
+      "cost": {
+        "cache_read": 0.003,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "用于推理和智能体编程的 DeepSeek V4.1 Flash 模型",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4.1-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v4.1-flash-1017": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.003,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "10月17日更新的 DeepSeek V4.1 Flash，在推理、编程、agentic 任务和视觉理解方面有所改进",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4.1-flash-1017",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-flash": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.003,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "10月17日更新的 DeepSeek V4.1 Flash，在推理、编程、agentic 任务和视觉理解方面有所改进",
+      "family": "deepseek-flash",
+      "id": "deepseek/deepseek-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v4-pro": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
+      "cost": {
+        "cache_read": 0.022,
+        "input": 0.66,
+        "output": 1.98
+      },
+      "description": "DeepSeek V4 Pro 快照版本，支持百万 token 上下文以及思考与非思考模式",
+      "family": "deepseek-pro",
+      "id": "deepseek/deepseek-v4-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-22",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro 0813",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.2": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.2",
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "开源 GLM 旗舰模型，面向长程编程智能体与百万 token 上下文任务",
+      "family": "glm",
+      "id": "glm-5.2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.3": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "GLM 旗舰模型，面向长程编程、智能体与复杂项目交付",
+      "family": "glm",
+      "id": "glm-5.3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.3-flash": {
+      "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flash",
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "原生多模态 GLM 模型，面向高效编程与长程智能体任务",
+      "family": "glm-flash",
+      "id": "glm-5.3-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "hy3": {
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0,
-        "cache_write": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.033,
+        "input": 0.132,
+        "output": 0.528
       },
       "description": "腾讯 Hy 推理模型，面向编程、指令遵循与智能体任务",
       "family": "hy",
       "id": "hy3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-07-06",
       "limit": {
         "context": 256000,
@@ -43,62 +478,16 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "none",
+            "low",
             "high"
           ]
         }
       ],
       "release_date": "2026-07-06",
-      "temperature": true,
-      "tool_call": true
-    },
-    "hy3-preview": {
-      "attachment": false,
-      "canonical_model_id": "tencent/hy3-preview",
-      "cost": {
-        "cache_read": 0,
-        "cache_write": 0,
-        "input": 0,
-        "output": 0
-      },
-      "description": "腾讯 Hy 推理模型，面向编程、指令遵循与智能体任务",
-      "family": "hy",
-      "id": "hy3-preview",
-      "last_updated": "2026-04-20",
-      "limit": {
-        "context": 256000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Hy3 preview",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-04-20",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -113,10 +502,13 @@
       "description": "新一代多模态生产力模型，Agent 和复杂任务执行能力显著增强。",
       "family": "hy",
       "id": "hy4",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-11-04",
       "limit": {
         "context": 1048576,
-        "input": 983010,
+        "input": 983040,
         "output": 65536
       },
       "modalities": {
@@ -129,7 +521,7 @@
         ]
       },
       "name": "Hy4",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -141,6 +533,53 @@
         }
       ],
       "release_date": "2026-11-04",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "hy4-flash": {
+      "attachment": true,
+      "canonical_model_id": "tencent/hy4-flash",
+      "cost": {
+        "cache_read": 0.003,
+        "input": 0.07,
+        "output": 0.281
+      },
+      "description": "Tencent 成本更低的 Hy4 层级，适用于日常智能体和生产力任务，支持图像理解和 1M token 上下文窗口.",
+      "family": "hy-flash",
+      "id": "hy4-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-11-16",
+      "limit": {
+        "context": 1048576,
+        "input": 983040,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hy4 flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-16",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -155,10 +594,14 @@
       "description": "新一代生产力模型，Agent 能力与复杂任务执行能力显著增强。",
       "family": "hy",
       "id": "hy4-preview",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-08-28",
       "limit": {
-        "context": 1024000,
-        "output": 64000
+        "context": 1048576,
+        "input": 983040,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -173,9 +616,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "none",
@@ -184,6 +624,510 @@
         }
       ],
       "release_date": "2026-08-28",
+      "status": "deprecated",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.6": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.6",
+      "cost": {
+        "cache_read": 0.145,
+        "input": 0.858,
+        "output": 3.566
+      },
+      "description": "多模态 Kimi 主力模型，面向智能体循环、编程任务与视觉上下文",
+      "family": "kimi",
+      "id": "kimi-k2.6",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-20",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k2.7-code": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.7-code",
+      "cost": {
+        "cache_read": 0.19,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "专注编程的 Kimi 模型，更擅长长程代码仓库任务，且减少过度思考",
+      "family": "kimi-code",
+      "id": "kimi-k2.7-code",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k2.7-code-highspeed": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.7-code-highspeed",
+      "cost": {
+        "cache_read": 0.38,
+        "input": 1.9,
+        "output": 8
+      },
+      "description": "面向交互式编辑和编程智能体循环的低延迟 Kimi Code 版本",
+      "family": "kimi-code",
+      "id": "kimi-k2.7-code-highspeed",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code Highspeed",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k2.8-preview": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.8-preview",
+      "cost": {
+        "cache_read": 0.25,
+        "input": 1,
+        "output": 4
+      },
+      "description": "具备更高效思考能力、上下文长度最高达 1M 的 Kimi 编程模型，可通过 Kimi Code 使用",
+      "family": "kimi",
+      "id": "kimi-k2.8-preview",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-09-11",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.8 Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k3": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3",
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3,
+        "input": 3,
+        "output": 15
+      },
+      "description": "具备 1M 上下文和持续思考能力、用于长周期智能体工作的多模态 Kimi 模型",
+      "family": "kimi",
+      "id": "kimi-k3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k3.1-pro": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 2,
+        "input": 2,
+        "output": 10
+      },
+      "description": "具备 1M-token 上下文窗口和始终开启推理能力的多模态 Kimi 模型，适用于编程、3D 创作和金融研究",
+      "family": "kimi-pro",
+      "id": "kimi-k3.1-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-10-23",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3.1 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "mimo-v2.6-flash": {
+      "attachment": true,
+      "canonical_model_id": "xiaomi/mimo-v2.6-flash",
+      "cost": {
+        "cache_read": 0.0028,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "description": "面向多模态编码智能体和长上下文自动化的 MiMo Flash 模型",
+      "family": "mimo-flash",
+      "id": "mimo-v2.6-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.6-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mimo-v2.6-pro": {
+      "attachment": true,
+      "canonical_model_id": "xiaomi/mimo-v2.6-pro",
+      "cost": {
+        "cache_read": 0.0036,
+        "input": 0.435,
+        "output": 0.87
+      },
+      "description": "更强的 MiMo Pro 档位，面向多模态推理与编程智能体执行",
+      "family": "mimo-pro",
+      "id": "mimo-v2.6-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.6-Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m3": {
+      "attachment": true,
+      "canonical_model_id": "minimax/MiniMax-M3",
+      "cost": {
+        "cache_read": 0.06,
+        "context_over_200k": {
+          "cache_read": 0.12,
+          "input": 0.6,
+          "output": 2.4
+        },
+        "input": 0.3,
+        "output": 1.2,
+        "tiers": [
+          {
+            "cache_read": 0.12,
+            "input": 0.6,
+            "output": 2.4,
+            "tier": {
+              "size": 512000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "MiniMax 多模态模型，面向长上下文编程、感知与智能体规划",
+      "family": "minimax-m",
+      "id": "minimax-m3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-01",
+      "limit": {
+        "context": 1048576,
+        "output": 512000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m3.1-flash": {
+      "attachment": true,
+      "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "前沿多模态编码模型，支持 1M 上下文窗口和可调节的思考深度",
+      "family": "minimax-m-flash",
+      "id": "minimax-m3.1-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-10-19",
+      "limit": {
+        "context": 1000000,
+        "output": 512000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3.1-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-19",
+      "temperature": true,
+      "tool_call": true
+    },
+    "step-5-preview": {
+      "attachment": true,
+      "canonical_model_id": "stepfun/step-5-preview",
+      "cost": {
+        "cache_read": 0.05,
+        "input": 1,
+        "output": 2.7
+      },
+      "description": "StepFun 面向下一代的旗舰基础模型，适用于编码和专业知识工作，原生支持文本、图像和视频输入，并具备 1M token 上下文窗口",
+      "family": "step",
+      "id": "step-5-preview",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-09-20",
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 5 Preview",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-16",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     }

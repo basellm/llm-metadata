@@ -180,7 +180,7 @@
       "knowledge": "2024-06",
       "last_updated": "2025-08-26",
       "limit": {
-        "context": 32768,
+        "context": 65536,
         "output": 32768
       },
       "modalities": {
@@ -579,7 +579,9 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video",
+          "pdf"
         ],
         "output": [
           "text",
@@ -867,6 +869,7 @@
       "cost": {
         "cache_read": 0.03,
         "input": 0.3,
+        "input_audio": 0.3,
         "output": 2.5
       },
       "description": "マルチモーダル推論、ツール利用、コストのバランスを取った高速 Gemini モデル",
@@ -1403,6 +1406,7 @@
       "cost": {
         "cache_read": 0.03,
         "input": 0.3,
+        "input_audio": 0.3,
         "output": 2.5
       },
       "description": "マルチモーダル推論、ツール利用、コストのバランスを取った高速 Gemini モデル",
@@ -1583,16 +1587,12 @@
     "lyria-3-clip-preview": {
       "attachment": true,
       "canonical_model_id": "google/lyria-3-clip-preview",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
       "description": "テキストや画像のプロンプトから 30 秒の短いクリップ、ループ、プレビューを生成する音楽生成モデル",
       "family": "lyria-clip",
       "id": "lyria-3-clip-preview",
       "last_updated": "2026-03-25",
       "limit": {
-        "context": 1048576,
+        "context": 131072,
         "output": 65536
       },
       "modalities": {
@@ -1616,16 +1616,12 @@
     "lyria-3-pro-preview": {
       "attachment": true,
       "canonical_model_id": "google/lyria-3-pro-preview",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
       "description": "テキストや画像からボーカルと楽曲構成を備えたフル尺の楽曲を生成する音楽生成モデル",
       "family": "lyria-pro",
       "id": "lyria-3-pro-preview",
       "last_updated": "2026-03-25",
       "limit": {
-        "context": 1048576,
+        "context": 131072,
         "output": 65536
       },
       "modalities": {

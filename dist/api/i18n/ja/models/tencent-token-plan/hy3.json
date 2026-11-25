@@ -1,15 +1,12 @@
 {
   "attachment": false,
   "canonical_model_id": "tencent/hy3",
-  "cost": {
-    "cache_read": 0,
-    "cache_write": 0,
-    "input": 0,
-    "output": 0
-  },
   "description": "コーディング、指示追従、エージェントタスク向けの Tencent Hy 推論モデル",
   "family": "hy",
   "id": "hy3",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "last_updated": "2026-07-06",
   "limit": {
     "context": 256000,
@@ -29,17 +26,16 @@
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
-    },
-    {
       "type": "effort",
       "values": [
         "none",
+        "low",
         "high"
       ]
     }
   ],
   "release_date": "2026-07-06",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

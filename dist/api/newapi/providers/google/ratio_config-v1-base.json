@@ -19,7 +19,7 @@
       "gemini-3.1-pro-preview": "len <= 200000 ? tier(\"0_200k\", p * 2 + cr * 0.2 + c * 12) : tier(\"200k_plus\", p * 4 + cr * 0.4 + c * 18)",
       "gemini-3.1-pro-preview-customtools": "len <= 200000 ? tier(\"0_200k\", p * 2 + cr * 0.2 + c * 12) : tier(\"200k_plus\", p * 4 + cr * 0.4 + c * 18)",
       "gemini-3.5-flash": "tier(\"standard\", p * 1.5 + cr * 0.15 + ai * 1.5 + c * 9)",
-      "gemini-3.5-flash-lite": "tier(\"standard\", p * 0.3 + cr * 0.03 + c * 2.5)",
+      "gemini-3.5-flash-lite": "tier(\"standard\", p * 0.3 + cr * 0.03 + ai * 0.3 + c * 2.5)",
       "gemini-3.5-live-translate-preview": "tier(\"standard\", p * 3.5 + ai * 3.5 + c * 21 + ao * 21)",
       "gemini-3.6-flash": "tier(\"standard\", p * 0.75 + cr * 0.075 + ai * 0.75 + c * 3.75)",
       "gemini-3.7-flash": "tier(\"standard\", p * 0.75 + cr * 0.075 + ai * 0.75 + c * 3.75)",
@@ -31,12 +31,10 @@
       "gemini-embedding-001": "tier(\"standard\", p * 0.15 + c * 0)",
       "gemini-embedding-2": "tier(\"standard\", p * 0.2 + ai * 6.5 + c * 0)",
       "gemini-flash-latest": "tier(\"standard\", p * 0.75 + cr * 0.075 + ai * 0.75 + c * 3.75)",
-      "gemini-flash-lite-latest": "tier(\"standard\", p * 0.3 + cr * 0.03 + c * 2.5)",
+      "gemini-flash-lite-latest": "tier(\"standard\", p * 0.3 + cr * 0.03 + ai * 0.3 + c * 2.5)",
       "gemini-pro-latest": "len <= 200000 ? tier(\"0_200k\", p * 2 + cr * 0.2 + c * 12) : tier(\"200k_plus\", p * 4 + cr * 0.4 + c * 18)",
       "gemma-4-26b-a4b-it": "tier(\"standard\", p * 0 + c * 0)",
-      "gemma-4-31b-it": "tier(\"standard\", p * 0 + c * 0)",
-      "lyria-3-clip-preview": "tier(\"standard\", p * 0 + c * 0)",
-      "lyria-3-pro-preview": "tier(\"standard\", p * 0 + c * 0)"
+      "gemma-4-31b-it": "tier(\"standard\", p * 0 + c * 0)"
     },
     "billing_mode": {
       "deep-research-max-preview-04-2026": "tiered_expr",
@@ -72,9 +70,7 @@
       "gemini-flash-lite-latest": "tiered_expr",
       "gemini-pro-latest": "tiered_expr",
       "gemma-4-26b-a4b-it": "tiered_expr",
-      "gemma-4-31b-it": "tiered_expr",
-      "lyria-3-clip-preview": "tiered_expr",
-      "lyria-3-pro-preview": "tiered_expr"
+      "gemma-4-31b-it": "tiered_expr"
     }
   },
   "message": "",

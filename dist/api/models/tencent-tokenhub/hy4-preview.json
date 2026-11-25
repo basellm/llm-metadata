@@ -9,10 +9,14 @@
   "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
   "family": "hy",
   "id": "hy4-preview",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "last_updated": "2026-08-28",
   "limit": {
-    "context": 1024000,
-    "output": 64000
+    "context": 1048576,
+    "input": 983040,
+    "output": 65536
   },
   "modalities": {
     "input": [
@@ -27,9 +31,6 @@
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
-    },
-    {
       "type": "effort",
       "values": [
         "none",
@@ -38,6 +39,8 @@
     }
   ],
   "release_date": "2026-08-28",
+  "status": "deprecated",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

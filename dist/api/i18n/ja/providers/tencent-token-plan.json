@@ -12,6 +12,104 @@
   "id": "tencent-token-plan",
   "lobeIcon": "Hunyuan.Color",
   "models": {
+    "deepseek-v4-pro-0813": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
+      "cost": {
+        "cache_read": 0.022457,
+        "input": 0.673723,
+        "output": 2.02117
+      },
+      "description": "100 万トークンのコンテキストと思考／非思考モードに対応した DeepSeek V4 Pro のスナップショット",
+      "family": "deepseek-pro",
+      "id": "deepseek-v4-pro-0813",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-22",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro 0813",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v4.1-flash-1017": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.002994,
+        "input": 0.149716,
+        "output": 0.598865
+      },
+      "description": "10月17日更新版のDeepSeek V4.1 Flash。推論、コーディング、エージェントタスク、視覚理解が向上",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4.1-flash-1017",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepseek/deepseek-flash": {
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
@@ -330,15 +428,12 @@
     "hy3": {
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
-      "cost": {
-        "cache_read": 0,
-        "cache_write": 0,
-        "input": 0,
-        "output": 0
-      },
       "description": "コーディング、指示追従、エージェントタスク向けの Tencent Hy 推論モデル",
       "family": "hy",
       "id": "hy3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-07-06",
       "limit": {
         "context": 256000,
@@ -358,17 +453,62 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "none",
+            "low",
             "high"
           ]
         }
       ],
       "release_date": "2026-07-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "hy3-202608": {
+      "attachment": false,
+      "canonical_model_id": "tencent/hy3",
+      "cost": {
+        "cache_read": 0.037429,
+        "input": 0.149716,
+        "output": 0.598865
+      },
+      "description": "コーディング、指示追従、エージェントタスク向けの Tencent Hy 推論モデル",
+      "family": "hy",
+      "id": "hy3-202608",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-06",
+      "limit": {
+        "context": 256000,
+        "input": 192000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hy3 (202608)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-06",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -376,17 +516,20 @@
       "attachment": true,
       "canonical_model_id": "tencent/hy4",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.044915,
+        "input": 0.898298,
+        "output": 2.694894
       },
       "description": "Agentと複雑なタスク実行能力を大幅に強化した、次世代のマルチモーダル生産性モデル。",
       "family": "hy",
       "id": "hy4",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-11-04",
       "limit": {
         "context": 1048576,
-        "input": 983010,
+        "input": 983040,
         "output": 65536
       },
       "modalities": {
@@ -399,7 +542,7 @@
         ]
       },
       "name": "Hy4",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -411,6 +554,53 @@
         }
       ],
       "release_date": "2026-11-04",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "hy4-flash": {
+      "attachment": true,
+      "canonical_model_id": "tencent/hy4-flash",
+      "cost": {
+        "cache_read": 0.002994,
+        "input": 0.074858,
+        "output": 0.299433
+      },
+      "description": "Tencentの低コストなHy4ティア。画像理解と1Mトークンのコンテキストウィンドウを備え、日常的なエージェントタスクや生産性向上タスクに対応。",
+      "family": "hy-flash",
+      "id": "hy4-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-11-16",
+      "limit": {
+        "context": 1048576,
+        "input": 983040,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hy4 flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-16",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -418,17 +608,21 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.04503926,
-        "input": 0.90078512,
-        "output": 2.70235537
+        "cache_read": 0.044915,
+        "input": 0.898298,
+        "output": 2.694894
       },
       "description": "Agent 能力と複雑なタスク実行能力を大幅に強化した次世代の生産性モデル。",
       "family": "hy",
       "id": "hy4-preview",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-08-28",
       "limit": {
-        "context": 1024000,
-        "output": 64000
+        "context": 1048576,
+        "input": 983040,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -443,9 +637,6 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "none",
@@ -454,6 +645,8 @@
         }
       ],
       "release_date": "2026-08-28",
+      "status": "deprecated",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -500,11 +693,12 @@
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k3",
       "cost": {
-        "cache_read": 0.30026171,
-        "input": 3.00261708,
-        "output": 15.01308541
+        "cache_read": 0.299433,
+        "cache_write": 2.994326,
+        "input": 2.994326,
+        "output": 14.971631
       },
-      "description": "100 万トークンのコンテキストと切り替え可能な最大強度の思考モードを備えた、長期エージェント作業向けマルチモーダル Kimi モデル",
+      "description": "1Mコンテキストと常時思考機能を備え、長期的なエージェント業務に対応するマルチモーダルKimiモデル",
       "family": "kimi",
       "id": "kimi-k3",
       "interleaved": {

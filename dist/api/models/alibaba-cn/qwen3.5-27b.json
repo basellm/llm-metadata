@@ -1,0 +1,52 @@
+{
+  "attachment": true,
+  "canonical_model_id": "alibaba/qwen3.5-27b",
+  "cost": {
+    "input": 0.08983,
+    "output": 0.718638,
+    "tiers": [
+      {
+        "input": 0.269489,
+        "output": 2.155915,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+  "family": "qwen",
+  "id": "qwen3.5-27b",
+  "last_updated": "2026-02-23",
+  "limit": {
+    "context": 262144,
+    "output": 65536
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.5 27B",
+  "open_weights": true,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "max": 81920,
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-02-23",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}
