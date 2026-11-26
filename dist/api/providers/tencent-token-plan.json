@@ -199,6 +199,7 @@
         }
       ],
       "release_date": "2026-08-13",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -421,6 +422,51 @@
         }
       ],
       "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.4": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.4",
+      "cost": {
+        "cache_read": 0.299433,
+        "input": 1.19773,
+        "output": 4.192057
+      },
+      "description": "Multimodal GLM flagship model for coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "glm-5.4",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-11-23",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.4",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-23",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -737,6 +783,54 @@
       "temperature": false,
       "tool_call": true
     },
+    "kimi-k3.1-pro": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+      "cost": {
+        "cache_read": 0.194631,
+        "cache_write": 1.946312,
+        "input": 1.946312,
+        "output": 10.180709
+      },
+      "description": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
+      "family": "kimi-pro",
+      "id": "kimi-k3.1-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-10-23",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3.1 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "mimo-v2.6-flash": {
       "attachment": true,
       "canonical_model_id": "xiaomi/mimo-v2.6-flash",
@@ -890,6 +984,54 @@
         }
       ],
       "release_date": "2026-06-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m3.1-flash": {
+      "attachment": true,
+      "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
+      "cost": {
+        "cache_read": 0.014972,
+        "input": 0.149716,
+        "output": 0.598865
+      },
+      "description": "Frontier multimodal coding model with 1M context window and tunable thinking depth",
+      "family": "minimax-m-flash",
+      "id": "minimax-m3.1-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-10-19",
+      "limit": {
+        "context": 1000000,
+        "output": 512000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3.1-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-19",
       "temperature": true,
       "tool_call": true
     }

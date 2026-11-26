@@ -1793,6 +1793,86 @@
       "temperature": false,
       "tool_call": true
     },
+    "gpt-6-astra-healthcare": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6-astra-healthcare",
+      "cost": {
+        "cache_read": 1,
+        "context_over_200k": {
+          "cache_read": 2,
+          "input": 20,
+          "output": 75
+        },
+        "input": 10,
+        "output": 50,
+        "tiers": [
+          {
+            "cache_read": 2,
+            "input": 20,
+            "output": 75,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "GPT-6 Astra paired with a harness tailored to clinical questions; its web search uses a dedicated index of medical sources.",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 2,
+              "input": 20,
+              "output": 100
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
+      "family": "gpt-astra",
+      "id": "gpt-6-astra-healthcare",
+      "knowledge": "2026-04-30",
+      "last_updated": "2026-11-24",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Astra Healthcare",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-24",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "gpt-6-luna": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-6-luna",
@@ -2126,6 +2206,86 @@
       "temperature": false,
       "tool_call": true
     },
+    "gpt-6.1-sol-healthcare": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.1-sol-healthcare",
+      "cost": {
+        "cache_read": 0.1,
+        "context_over_200k": {
+          "cache_read": 0.2,
+          "input": 4,
+          "output": 15
+        },
+        "input": 2,
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.2,
+            "input": 4,
+            "output": 15,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "GPT-6.1 Sol paired with a harness tailored to clinical questions; its web search uses a dedicated index of medical sources.",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.2,
+              "input": 4,
+              "output": 20
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
+      "family": "gpt-sol",
+      "id": "gpt-6.1-sol-healthcare",
+      "knowledge": "2026-04-30",
+      "last_updated": "2026-11-24",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.1 Sol Healthcare",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-24",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "gpt-6.1-terra": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-6.1-terra",
@@ -2333,6 +2493,90 @@
       "temperature": false,
       "tool_call": true
     },
+    "gpt-6.2-astra-healthcare": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-astra-healthcare",
+      "cost": {
+        "cache_read": 0.4,
+        "cache_write": 10,
+        "context_over_200k": {
+          "cache_read": 0.8,
+          "cache_write": 20,
+          "input": 16,
+          "output": 60
+        },
+        "input": 8,
+        "output": 40,
+        "tiers": [
+          {
+            "cache_read": 0.8,
+            "cache_write": 20,
+            "input": 16,
+            "output": 60,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "GPT-6.2 Astra paired with a harness tailored to clinical questions; its web search uses a dedicated index of medical sources.",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.8,
+              "cache_write": 20,
+              "input": 16,
+              "output": 80
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
+      "family": "gpt-astra",
+      "id": "gpt-6.2-astra-healthcare",
+      "knowledge": "2026-05-18",
+      "last_updated": "2026-11-24",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.2 Astra Healthcare",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-24",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "gpt-6.2-sol": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-6.2-sol",
@@ -2429,6 +2673,90 @@
         }
       ],
       "release_date": "2026-11-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-6.2-sol-healthcare": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-sol-healthcare",
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 2.5,
+        "context_over_200k": {
+          "cache_read": 0.2,
+          "cache_write": 5,
+          "input": 4,
+          "output": 15
+        },
+        "input": 2,
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.2,
+            "cache_write": 5,
+            "input": 4,
+            "output": 15,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "GPT-6.2 Sol paired with a harness tailored to clinical questions; its web search uses a dedicated index of medical sources.",
+      "experimental": {
+        "modes": {
+          "fast": {
+            "cost": {
+              "cache_read": 0.2,
+              "cache_write": 5,
+              "input": 4,
+              "output": 20
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
+      "family": "gpt-sol",
+      "id": "gpt-6.2-sol-healthcare",
+      "knowledge": "2026-06-01",
+      "last_updated": "2026-11-24",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.2 Sol Healthcare",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-24",
       "structured_output": true,
       "temperature": false,
       "tool_call": true

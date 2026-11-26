@@ -196,8 +196,8 @@
       "id": "qwen-vl-ocr",
       "knowledge": "2024-04",
       "lastUpdated": "2025-04-13",
-      "maxCtxTokens": 34096,
-      "maxOutputTokens": 4096,
+      "maxCtxTokens": 38192,
+      "maxOutputTokens": 8192,
       "modalities": {
         "input": [
           "text",
@@ -2070,7 +2070,7 @@
       "knowledge": "2025-04",
       "lastUpdated": "2026-06-02",
       "maxCtxTokens": 1000000,
-      "maxOutputTokens": 64000,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text",
@@ -2519,7 +2519,7 @@
       "knowledge": "2025-04",
       "lastUpdated": "2026-06-02",
       "maxCtxTokens": 1000000,
-      "maxOutputTokens": 64000,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text",
@@ -2632,7 +2632,7 @@
       "knowledge": "2025-04",
       "lastUpdated": "2026-06-02",
       "maxCtxTokens": 1000000,
-      "maxOutputTokens": 64000,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text",
@@ -4201,7 +4201,7 @@
       },
       "icon": "lb:claude-color",
       "id": "claude-sonnet-4-5",
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-01-31",
       "lastUpdated": "2025-09-29",
       "maxCtxTokens": 200000,
       "maxOutputTokens": 64000,
@@ -4239,7 +4239,7 @@
       },
       "icon": "lb:claude-color",
       "id": "claude-sonnet-4-5-20250929",
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-01-31",
       "lastUpdated": "2025-09-29",
       "maxCtxTokens": 200000,
       "maxOutputTokens": 64000,
@@ -5567,8 +5567,8 @@
       },
       "icon": "lb:gemini-color",
       "id": "gemini-2.5-flash-image",
-      "knowledge": "2024-06",
-      "lastUpdated": "2025-08-26",
+      "knowledge": "2025-06",
+      "lastUpdated": "2025-10-02",
       "maxCtxTokens": 65536,
       "maxOutputTokens": 32768,
       "modalities": {
@@ -5583,12 +5583,12 @@
       },
       "name": "Nano Banana",
       "price": {
-        "cacheRead": 0.075,
+        "cacheRead": null,
         "cacheWrite": null,
         "input": 0.3,
         "output": 2.5
       },
-      "releaseDate": "2025-08-26",
+      "releaseDate": "2025-10-02",
       "tags": []
     },
     {
@@ -5606,7 +5606,7 @@
       "icon": "lb:gemini-color",
       "id": "gemini-2.5-flash-lite",
       "knowledge": "2025-01",
-      "lastUpdated": "2025-06-17",
+      "lastUpdated": "2025-07-22",
       "maxCtxTokens": 1048576,
       "maxOutputTokens": 65536,
       "modalities": {
@@ -5628,7 +5628,7 @@
         "input": 0.1,
         "output": 0.4
       },
-      "releaseDate": "2025-06-17",
+      "releaseDate": "2025-07-22",
       "tags": []
     },
     {
@@ -6509,7 +6509,7 @@
       "icon": "lb:gemini-color",
       "id": "gemini-embedding-001",
       "knowledge": "2025-05",
-      "lastUpdated": "2025-05-20",
+      "lastUpdated": "2025-07-14",
       "maxCtxTokens": 2048,
       "maxOutputTokens": 1,
       "modalities": {
@@ -6527,7 +6527,7 @@
         "input": 0.15,
         "output": null
       },
-      "releaseDate": "2025-05-20",
+      "releaseDate": "2025-07-14",
       "tags": []
     },
     {
@@ -7027,7 +7027,7 @@
         "attachment": true,
         "audio": false,
         "image": true,
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "temperature": false,
         "tool_call": true
@@ -12276,6 +12276,44 @@
       "tags": []
     },
     {
+      "description": "GPT-6 Astra paired with a harness tailored to clinical questions; its web search uses a dedicated index of medical sources.",
+      "firm": "openai",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:openai",
+      "id": "gpt-6-astra-healthcare",
+      "knowledge": "2026-04-30",
+      "lastUpdated": "2026-11-24",
+      "maxCtxTokens": 1050000,
+      "maxOutputTokens": 128000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Astra Healthcare",
+      "price": {
+        "cacheRead": 1,
+        "cacheWrite": null,
+        "input": 10,
+        "output": 50
+      },
+      "releaseDate": "2026-11-24",
+      "tags": []
+    },
+    {
       "description": "OpenAI's most efficient model for focused, high-volume tasks",
       "firm": "openai",
       "flags": {
@@ -12390,6 +12428,44 @@
       "tags": []
     },
     {
+      "description": "GPT-6.1 Sol paired with a harness tailored to clinical questions; its web search uses a dedicated index of medical sources.",
+      "firm": "openai",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:openai",
+      "id": "gpt-6.1-sol-healthcare",
+      "knowledge": "2026-04-30",
+      "lastUpdated": "2026-11-24",
+      "maxCtxTokens": 1050000,
+      "maxOutputTokens": 128000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.1 Sol Healthcare",
+      "price": {
+        "cacheRead": 0.1,
+        "cacheWrite": null,
+        "input": 2,
+        "output": 10
+      },
+      "releaseDate": "2026-11-24",
+      "tags": []
+    },
+    {
       "description": "Fast, efficient model for visual reasoning, precise computer use, and clear, natural writing.",
       "firm": "openai",
       "flags": {
@@ -12466,6 +12542,44 @@
       "tags": []
     },
     {
+      "description": "GPT-6.2 Astra paired with a harness tailored to clinical questions; its web search uses a dedicated index of medical sources.",
+      "firm": "openai",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:openai",
+      "id": "gpt-6.2-astra-healthcare",
+      "knowledge": "2026-05-18",
+      "lastUpdated": "2026-11-24",
+      "maxCtxTokens": 1050000,
+      "maxOutputTokens": 128000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.2 Astra Healthcare",
+      "price": {
+        "cacheRead": 0.4,
+        "cacheWrite": 10,
+        "input": 8,
+        "output": 40
+      },
+      "releaseDate": "2026-11-24",
+      "tags": []
+    },
+    {
       "description": "An efficient reasoning model for everyday work, multistep agentic workflows, and coding.",
       "firm": "openai",
       "flags": {
@@ -12501,6 +12615,44 @@
         "output": 10
       },
       "releaseDate": "2026-11-17",
+      "tags": []
+    },
+    {
+      "description": "GPT-6.2 Sol paired with a harness tailored to clinical questions; its web search uses a dedicated index of medical sources.",
+      "firm": "openai",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:openai",
+      "id": "gpt-6.2-sol-healthcare",
+      "knowledge": "2026-06-01",
+      "lastUpdated": "2026-11-24",
+      "maxCtxTokens": 1050000,
+      "maxOutputTokens": 128000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.2 Sol Healthcare",
+      "price": {
+        "cacheRead": 0.1,
+        "cacheWrite": 2.5,
+        "input": 2,
+        "output": 10
+      },
+      "releaseDate": "2026-11-24",
       "tags": []
     },
     {
@@ -14931,6 +15083,42 @@
       "tags": []
     },
     {
+      "description": "Multimodal GLM flagship model for coding, agents, and complex project delivery",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "glm-5.4",
+      "knowledge": null,
+      "lastUpdated": "2026-11-23",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.4",
+      "price": {
+        "cacheRead": 0.299433,
+        "cacheWrite": null,
+        "input": 1.19773,
+        "output": 4.192057
+      },
+      "releaseDate": "2026-11-23",
+      "tags": []
+    },
+    {
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "firm": "tencent-token-plan",
       "flags": {
@@ -15189,6 +15377,44 @@
       "tags": []
     },
     {
+      "description": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "kimi-k3.1-pro",
+      "knowledge": null,
+      "lastUpdated": "2026-10-23",
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 1048576,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3.1 Pro",
+      "price": {
+        "cacheRead": 0.194631,
+        "cacheWrite": 1.946312,
+        "input": 1.946312,
+        "output": 10.180709
+      },
+      "releaseDate": "2026-10-23",
+      "tags": []
+    },
+    {
       "description": "MiMo Flash model for multimodal coding agents and long-context automation",
       "firm": "tencent-token-plan",
       "flags": {
@@ -15300,6 +15526,44 @@
         "output": 1.26109917
       },
       "releaseDate": "2026-06-01",
+      "tags": []
+    },
+    {
+      "description": "Frontier multimodal coding model with 1M context window and tunable thinking depth",
+      "firm": "tencent-token-plan",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:hunyuan-color",
+      "id": "minimax-m3.1-flash",
+      "knowledge": null,
+      "lastUpdated": "2026-10-19",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 512000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3.1-Flash",
+      "price": {
+        "cacheRead": 0.014972,
+        "cacheWrite": null,
+        "input": 0.149716,
+        "output": 0.598865
+      },
+      "releaseDate": "2026-10-19",
       "tags": []
     },
     {
@@ -19344,6 +19608,42 @@
         "output": null
       },
       "releaseDate": "2026-09-22",
+      "tags": []
+    },
+    {
+      "description": "32B GLM-4 foundation model tuned for instruction following, code generation, function calling and search-based Q&A",
+      "firm": "zai",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:zai",
+      "id": "glm-4-32b-0414-128k",
+      "knowledge": null,
+      "lastUpdated": "2025-04-14",
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 16384,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4-32B-0414-128K",
+      "price": {
+        "cacheRead": null,
+        "cacheWrite": null,
+        "input": 0.1,
+        "output": 0.1
+      },
+      "releaseDate": "2025-04-14",
       "tags": []
     },
     {
