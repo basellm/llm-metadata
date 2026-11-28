@@ -1,6 +1,10 @@
 {
   "data": {
     "billing_expr": {
+      "mindlab/macaron-v1-tall": "tier(\"standard\", p * 0.45 + cr * 0.08 + cc * 0.08 + c * 2.6)",
+      "mindlab/macaron-v1.1-coding-venti": "tier(\"standard\", p * 1.19 + cr * 0.22 + cc * 0.22 + c * 3.74)",
+      "mindlab/macaron-v1.1-venti": "tier(\"standard\", p * 1.19 + cr * 0.22 + cc * 0.22 + c * 3.74)",
+      "mindlab/macaron-v1.1-venti-pro": "tier(\"standard\", p * 2 + cr * 0.1 + cc * 0.1 + c * 10)",
       "qwen-flash": "len <= 256000 ? tier(\"0_256k\", p * 0.05 + cr * 0.01 + cc * 0.0625 + c * 0.4) : tier(\"256k_plus\", p * 0.25 + cr * 0.05 + cc * 0.3125 + c * 2)",
       "qwen-max": "tier(\"standard\", p * 1.6 + cr * 0.32 + c * 6.4)",
       "qwen-mt-plus": "tier(\"standard\", p * 2.46 + c * 7.37)",
@@ -30,6 +34,10 @@
       "qwen4-max": "tier(\"standard\", p * 1.5 + cr * 0.075 + cc * 1.875 + c * 4.5)"
     },
     "billing_mode": {
+      "mindlab/macaron-v1-tall": "tiered_expr",
+      "mindlab/macaron-v1.1-coding-venti": "tiered_expr",
+      "mindlab/macaron-v1.1-venti": "tiered_expr",
+      "mindlab/macaron-v1.1-venti-pro": "tiered_expr",
       "qwen-flash": "tiered_expr",
       "qwen-max": "tiered_expr",
       "qwen-mt-plus": "tiered_expr",

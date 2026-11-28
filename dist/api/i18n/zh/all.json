@@ -16,6 +16,197 @@
     "id": "alibaba",
     "lobeIcon": "Qwen.Color",
     "models": {
+      "mindlab/macaron-v1-tall": {
+        "attachment": false,
+        "canonical_model_id": "mindlab/macaron-v1-tall",
+        "cost": {
+          "cache_read": 0.08,
+          "cache_write": 0.08,
+          "input": 0.45,
+          "output": 2.6
+        },
+        "description": "基于 Qwen3.6 的 Mixture-of-LoRA 模型，配备聊天、个人代理、编程和生成式 UI 专家",
+        "family": "macaron-tall",
+        "id": "mindlab/macaron-v1-tall",
+        "last_updated": "2026-07-21",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Macaron V1 Tall",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "mindlab/macaron-v1.1-coding-venti": {
+        "attachment": true,
+        "canonical_model_id": "mindlab/macaron-v1.1-venti",
+        "cost": {
+          "cache_read": 0.22,
+          "cache_write": 0.22,
+          "input": 1.19,
+          "output": 3.74
+        },
+        "description": "基于 GLM-5.3 的 Mixture-of-LoRA 模型，配备聊天、个人代理、编程和生成式 UI 专家",
+        "family": "macaron-venti",
+        "id": "mindlab/macaron-v1.1-coding-venti",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Macaron V1.1 Coding Venti",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "mindlab/macaron-v1.1-venti": {
+        "attachment": false,
+        "canonical_model_id": "mindlab/macaron-v1.1-venti",
+        "cost": {
+          "cache_read": 0.22,
+          "cache_write": 0.22,
+          "input": 1.19,
+          "output": 3.74
+        },
+        "description": "基于 GLM-5.3 的 Mixture-of-LoRA 模型，配备聊天、个人代理、编程和生成式 UI 专家",
+        "family": "macaron-venti",
+        "id": "mindlab/macaron-v1.1-venti",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Macaron V1.1 Venti",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "mindlab/macaron-v1.1-venti-pro": {
+        "attachment": true,
+        "canonical_model_id": "mindlab/macaron-v1.1-venti",
+        "cost": {
+          "cache_read": 0.1,
+          "cache_write": 0.1,
+          "input": 2,
+          "output": 10
+        },
+        "description": "基于 GLM-5.3 的 Mixture-of-LoRA 模型，配备聊天、个人代理、编程和生成式 UI 专家",
+        "family": "macaron-venti",
+        "id": "mindlab/macaron-v1.1-venti-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Macaron V1.1 Venti Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen-flash": {
         "attachment": false,
         "cost": {
